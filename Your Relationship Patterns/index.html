@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Your Relationship Patterns: Insights for Growth & Repair</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        @media print {
+            body { background: white; padding: 0; margin: 0; }
+            .container { max-width: none; box-shadow: none; border-radius: 0; }
+            .content { padding: 0.5in; }
+            .section { page-break-inside: avoid; break-inside: avoid; }
+            .page-break { page-break-before: always; break-before: page; }
+            @page { size: 8.5in 11in; margin: 0.75in; }
+        }
+        
+        @media screen {
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                line-height: 1.6;
+                color: #4A4A4A;
+                background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+                min-height: 100vh;
+                padding: 20px;
+            }
+            .container {
+                max-width: 8.5in;
+                margin: 0 auto;
+                background: #E8DFD6;
+                border-radius: 20px;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+                overflow: hidden;
+            }
+            .content { padding: 40px; }
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #4A4A4A;
+        }
+        .header {
+            background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+            color: #E8DFD6;
+            padding: 40px;
+            text-align: center;
+        }
+        .header h1 { font-size: 2.5em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        .header p { font-size: 1.2em; opacity: 0.9; }
+        .section {
+            margin-bottom: 50px;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 15px;
+            border-left: 5px solid #D67B4A;
+        }
+        .section h2 { color: #6B2C3A; font-size: 2em; margin-bottom: 20px; }
+        .section h3 { color: #D67B4A; font-size: 1.5em; margin: 25px 0 15px 0; border-bottom: 2px solid #B8B8B8; padding-bottom: 10px; }
+        .key-quote {
+            background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+            color: #E8DFD6;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+            font-size: 1.3em;
+            font-style: italic;
+            text-align: center;
+            box-shadow: 0 8px 15px rgba(107,44,58,0.3);
+        }
+        .insight-box {
+            background: linear-gradient(135deg, #E8DFD6 0%, #B8B8B8 100%);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-left: 5px solid #D67B4A;
+        }
+        .insight-box strong { color: #6B2C3A; font-size: 1.1em; }
+        .workflow-step {
+            background: white;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 12px;
+            border-left: 5px solid #D67B4A;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .workflow-step h4 { color: #6B2C3A; font-size: 1.3em; margin-bottom: 15px; }
+        .step-number {
+            display: inline-block;
+            background: #6B2C3A;
+            color: #E8DFD6;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        .cycle-box {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+        .cycle-box h4 { color: #856404; margin-bottom: 15px; }
+        .needs-pyramid {
+            background: #f8f9fa;
+            border: 3px solid #6B2C3A;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 20px 0;
+        }
+        .needs-level {
+            background: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 5px solid #D67B4A;
+        }
+        .score-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 3fr;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .score-header {
+            background: #6B2C3A;
+            color: #E8DFD6;
+            padding: 15px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .score-cell {
+            background: #f8f9fa;
+            padding: 15px;
+            border: 1px solid #ddd;
+        }
+        .warning-box {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+        .warning-box h4 { color: #856404; margin-bottom: 15px; }
+        @media (max-width: 768px) {
+            .header h1 { font-size: 2em; }
+            .score-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>Understanding Your Relationship Patterns</h1>
+        <p>Insights for Growth & Repair</p>
+    </div>
+
+    <div class="content">
+
+        <!-- SECTION 1: PURPOSE & CONTEXT -->
+        <div class="section">
+            <h2>📋 Purpose of This Document</h2>
+
+            <div class="insight-box">
+                <strong>What this is:</strong> A structured, neutral summary of patterns, themes, strengths, and areas of strain that have emerged through your couples therapy process.
+                <br><br>
+                <strong>What this provides:</strong> Organized insights over time, clarity about relational dynamics, shared understanding of how individual traits and experiences interact within your marriage.
+                <br><br>
+                <strong>What this is NOT:</strong> This is not intended to assign blame, determine fault, or diagnose the relationship. Rather, it identifies recurring interaction patterns and developmental opportunities contributing to both connection and disconnection.
+            </div>
+
+            <div class="workflow-step">
+                <h4>Clinical Context</h4>
+                <p><strong>Observations derived from:</strong></p>
+                <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li>Clinical interviews</li>
+                    <li>Individual sessions with both partners</li>
+                    <li>Joint couples sessions</li>
+                    <li>Structured therapeutic discussions focused on:
+                        <ul style="margin: 5px 0 0 30px;">
+                            <li>Communication patterns</li>
+                            <li>Intimacy and connection</li>
+                            <li>Emotional safety</li>
+                            <li>Partnership alignment</li>
+                            <li>Personal growth within relationship</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="warning-box">
+                <h4>⚠️ Important Disclaimer</h4>
+                <p><strong>This document is NOT:</strong></p>
+                <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li>A legal record</li>
+                    <li>A formal psychological evaluation</li>
+                    <li>A substitute for medical, financial, or legal advice</li>
+                </ul>
+                <p style="margin-top:15px;"><strong>This document IS:</strong> Intended solely for therapeutic reflection and collaborative growth</p>
+            </div>
+
+            <div class="workflow-step">
+                <h4>The Relationship Trajectory</h4>
+                <p><strong>Early relationship:</strong> Partnership-oriented, shared engagement</p>
+                <p style="margin-top:10px;"><strong>Over time:</strong> Shift toward reduced emotional and physical intimacy, parallel functioning, recurring tension</p>
+                <p style="margin-top:10px;"><strong>Current state:</strong> Both partners describe feeling unmet in different but complementary ways</p>
+                <p style="margin-top:10px;"><strong>Why therapy now:</strong> Not due to singular crisis event, but because longstanding patterns of disconnection began to feel unsustainable and required structured examination</p>
+            </div>
+        </div>
+
+        <!-- SECTION 2: YOUR CORE CONCERNS -->
+        <div class="section page-break">
+            <h2>🎯 Your Core Concerns: What Brings Distress</h2>
+
+            <div class="key-quote">
+                "For you, distress has centered primarily around intimacy reduction, visible partnership alignment, and perceived respect discrepancies."
+            </div>
+
+            <h3>The Three Primary Areas of Concern</h3>
+
+            <div class="workflow-step">
+                <h4>1. Ambiguity of Alignment (Family-of-Origin Context)</h4>
+                <p><strong>The pattern:</strong> Difficulty discerning Kate's authentic preferences in situations involving her parents or extended family</p>
+                <p style="margin-top:10px;"><strong>What you observe:</strong> She may "go along to get along," particularly to avoid conflict</p>
+                <p style="margin-top:10px;"><strong>Example - Wedding planning:</strong></p>
+                <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li>Her parents expressed strong preferences</li>
+                    <li>Kate agreed to their preferences</li>
+                    <li>You experienced uncertainty: Was this Kate's true wish or conflict avoidance?</li>
+                    <li>This ambiguity contributed to feeling unsupported in a significant life moment</li>
+                </ul>
+                <p style="margin-top:15px;"><strong>Why this matters to you:</strong> Visible alignment signals partnership cohesion. When alignment feels unclear, psychological safety decreases.</p>
+            </div>
+
+            <div class="workflow-step">
+                <h4>2. Decline in Shared Leisure Engagement</h4>
+                <p><strong>Earlier in relationship:</strong> You invited Kate into social, recreational, "free" environments that felt energizing to you</p>
+                <p style="margin-top:10px;"><strong>What you observed over time:</strong> Limited engagement, early withdrawal, lack of visible enjoyment</p>
+                <p style="margin-top:10px;"><strong>Your protective response:</strong> Gradually reduced invitations</p>
+                <p style="margin-top:10px;"><strong>Unintended consequence:</strong> This decreased shared experiences and connection opportunities</p>
+                <p style="margin-top:10px;"><strong>Why this matters to you:</strong> Watching your partner feel socially free, relaxed, and engaged is a KEY bonding mechanism. <strong>Shared enjoyment equals belonging.</strong></p>
+                <p style="margin-top:10px;"><strong>Result:</strong> Reduced leisure integration has contributed to emotional distance</p>
+            </div>
+
+            <div class="workflow-step">
+                <h4>3. Standards & Interpretation of Respect</h4>
+                <p><strong>Your pattern:</strong> Tend to form internal standards regarding parenting structure, household management, environmental organization</p>
+                <p style="margin-top:10px;"><strong>The issue:</strong> These expectations are often established internally rather than collaboratively negotiated from the outset</p>
+                <p style="margin-top:10px;"><strong>What happens:</strong> When tasks are completed differently than anticipated, you may interpret the deviation as lack of follow-through or respect</p>
+                <p style="margin-top:10px;"><strong>When you address differences:</strong> Kate may experience the feedback as criticism and withdraw</p>
+            </div>
+
+            <div class="cycle-box">
+                <h4>🔄 The Recurring Respect Cycle</h4>
+                <p style="font-size:1.1em; line-height:2; margin-top:15px;">
+                    <strong>Expectation</strong> (set internally) →<br>
+                    <strong>Deviation</strong> (task done differently) →<br>
+                    <strong>Interpretation of Disrespect</strong> →<br>
+                    <strong>Direct Correction</strong> →<br>
+                    <strong>Withdrawal</strong> (Kate) →<br>
+                    <strong>Reinforced Misalignment</strong>
+                </p>
+                <p style="margin-top:20px;"><strong>Important insight:</strong> This pattern appears rooted in <em>safety and predictability needs</em> rather than control.</p>
+            </div>
+
+            <div class="insight-box">
+                <strong>What connects all three concerns:</strong> They all relate to fundamental needs for safety, belonging, and esteem within the relationship.
+                <br><br>
+                <strong>As responsibilities increased</strong> — particularly parenting and professional demands — opportunities for shared integration, leisure engagement, and relational vitality decreased.
+                <br><br>
+                <strong>These shifts:</strong> Appear gradual rather than crisis-driven, but have accumulated to create current distress.
+            </div>
+        </div>
+
+        <!-- SECTION 3: YOUR NEEDS HIERARCHY -->
+        <div class="section page-break">
+            <h2>🏔️ Your Needs Hierarchy: Understanding What Drives Your Experience</h2>
+
+            <div class="key-quote">
+                "Respect functions as a gateway variable in your relational hierarchy. When respect feels threatened, the nervous system interprets instability."
+            </div>
+
+            <h3>Maslow's Framework Applied to Your Relationship</h3>
+
+            <div class="needs-pyramid">
+                
+                <div class="needs-level">
+                    <h4 style="color: #6B2C3A; margin-bottom: 10px;">Level 5: Self-Actualization Needs</h4>
+                    <p><strong>What you value:</strong></p>
+                    <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                        <li>Structured partnership</li>
+                        <li>Integrated family functioning</li>
+                        <li>Relational vitality</li>
+                        <li>Sexual and emotional cohesion</li>
+                        <li>Functional harmony</li>
+                    </ul>
+                    <p style="margin-top:15px;"><strong>When disrupted:</strong> You experience dissatisfaction when the relationship feels parallel rather than unified</p>
+                </div>
+
+                <div class="needs-level">
+                    <h4 style="color: #6B2C3A; margin-bottom: 10px;">Level 4: Esteem Needs</h4>
+                    <p><strong>What you need:</strong></p>
+                    <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                        <li>Validation of effort</li>
+                        <li>Respect in parenting collaboration</li>
+                        <li>Being considered in decisions</li>
+                        <li>Acknowledgment of contribution</li>
+                    </ul>
+                    <p style="margin-top:15px;"><strong>When destabilized:</strong> Communication may intensify around perceived deficits. Underneath dissatisfaction is often a need for reassurance of value</p>
+                </div>
+
+                <div class="needs-level">
+                    <h4 style="color: #6B2C3A; margin-bottom: 10px;">Level 3: Love & Belonging Needs</h4>
+                    <p><strong>What belonging means for you:</strong></p>
+                    <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                        <li>Physical intimacy and sexual connection</li>
+                        <li>Integration of daily lives</li>
+                        <li>Shared leisure engagement</li>
+                        <li>Visible enjoyment together</li>
+                        <li>Feeling chosen in family contexts</li>
+                    </ul>
+                    <p style="margin-top:15px;"><strong>When diminished:</strong> You may interpret this as rejection or emotional distance</p>
+                    <p style="margin-top:10px;"><strong>Critical insight:</strong> Intimacy and integration directly influence your felt sense of connection</p>
+                </div>
+
+                <div class="needs-level" style="background: linear-gradient(135deg, #E8DFD6 0%, #B8B8B8 100%);">
+                    <h4 style="color: #6B2C3A; margin-bottom: 10px;">Level 2: Safety Needs ⚠️ PRIMARY ACTIVATION LAYER</h4>
+                    <p><strong>For you, psychological safety is closely tied to:</strong></p>
+                    <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                        <li>Feeling respected in identity and role</li>
+                        <li>Being visibly prioritized within the marriage</li>
+                        <li>Consistency and follow-through</li>
+                        <li>Clear partnership alignment</li>
+                        <li>Predictable standards</li>
+                    </ul>
+                    <p style="margin-top:15px;"><strong>When safety feels compromised:</strong></p>
+                    <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                        <li>Communication becomes more direct or corrective</li>
+                        <li>Dissatisfaction is emphasized</li>
+                        <li>Urgency to restore stability increases</li>
+                    </ul>
+                    <p style="margin-top:15px;"><strong style="color: #6B2C3A; font-size: 1.1em;">CRITICAL UNDERSTANDING: "Respect functions as a gateway variable in your relational hierarchy. When respect feels threatened, the nervous system interprets instability."</strong></p>
+                </div>
+
+                <div class="needs-level">
+                    <h4 style="color: #6B2C3A; margin-bottom: 10px;">Level 1: Physiological Needs</h4>
+                    <p><strong>Status:</strong> Stable. No major relational activation at this level.</p>
+                    <p style="margin-top:10px;"><strong>Note:</strong> However, ADHD-related executive strain, professional demands, and chronic relational tension may contribute to cognitive fatigue and reduced emotional flexibility under stress</p>
+                </div>
+
+            </div>
+
+            <div class="insight-box">
+                <strong>Why this hierarchy matters:</strong> Understanding which needs are activated helps explain your emotional responses and communication patterns.
+                <br><br>
+                <strong>The sequence:</strong> When Safety (Level 2) is threatened, you can't access higher levels (Belonging, Esteem, Self-Actualization) effectively.
+                <br><br>
+                <strong>Your pattern:</strong> Respect threats → Safety destabilization → Protective communication strategies → Attempt to restore stability
+                <br><br>
+                <strong>Not about control:</strong> This is about fundamental human need for psychological safety, not about controlling your partner.
+            </div>
+        </div>
+
+        <!-- SECTION 4: RELATIONSHIP FOUNDATION ASSESSMENT -->
+        <div class="section page-break">
+            <h2>📊 Healthy Relationship Foundation Assessment</h2>
+
+            <div class="key-quote">
+                "Overall Foundation Score: 3 / 5 (Moderate but Unstable)"
+            </div>
+
+            <h3>Scoring Scale</h3>
+            <div class="workflow-step">
+                <p><strong>1</strong> = Severely strained</p>
+                <p><strong>2</strong> = Weak</p>
+                <p><strong>3</strong> = Moderate but unstable</p>
+                <p><strong>4</strong> = Strong with strain</p>
+                <p><strong>5</strong> = Strong and stable</p>
+            </div>
+
+            <h3>Domain Scores & Clinical Summaries</h3>
+
+            <div class="score-grid">
+                <div class="score-header">Domain</div>
+                <div class="score-header">Score</div>
+                <div class="score-header">Clinical Summary</div>
+
+                <div class="score-cell"><strong>Communication</strong></div>
+                <div class="score-cell" style="text-align: center;"><strong>3</strong></div>
+                <div class="score-cell">Direct and clear; may become problem-focused under stress. Emotional attunement fluctuates during conflict.</div>
+
+                <div class="score-cell"><strong>Emotional Safety</strong></div>
+                <div class="score-cell" style="text-align: center;"><strong>2.5</strong></div>
+                <div class="score-cell">Safety tied to perceived respect and alignment; destabilizes when intimacy decreases.</div>
+
+                <div class="score-cell"><strong>Trust & Honesty</strong></div>
+                <div class="score-cell" style="text-align: center;"><strong>4</strong></div>
+                <div class="score-cell">Structural trust intact; no deception patterns.</div>
+
+                <div class="score-cell"><strong>Shared Values & Vision</strong></div>
+                <div class="score-cell" style="text-align: center;"><strong>3.5</strong></div>
+                <div class="score-cell">Commitment aligned; divergence in integration expectations.</div>
+
+                <div class="score-cell"><strong>Independence & Growth</strong></div>
+                <div class="score-cell" style="text-align: center;"><strong>3</strong></div>
+                <div class="score-cell">Preference for unity; tension with differing autonomy needs.</div>
+
+                <div class="score-cell"><strong>Emotional Intelligence</strong></div>
+                <div class="score-cell" style="text-align: center;"><strong>3</strong></div>
+                <div class="score-cell">Insight present; reactivity increases under perceived disrespect.</div>
+
+                <div class="score-cell"><strong>Reciprocity</strong></div>
+                <div class="score-cell" style="text-align: center;"><strong>3</strong></div>
+                <div class="score-cell">Emotional reciprocity perceived as inconsistent; behavioral investment present.</div>
+
+                <div class="score-cell"><strong>Physical & Sexual Connection</strong></div>
+                <div class="score-cell" style="text-align: center;"><strong>2</strong></div>
+                <div class="score-cell">Primary strain domain; strongly influences belonging.</div>
+
+                <div class="score-cell"><strong>Conflict as Growth</strong></div>
+                <div class="score-cell" style="text-align: center;"><strong>2.5</strong></div>
+                <div class="score-cell">Pushes toward resolution; may intensify rather than regulate.</div>
+
+                <div class="score-cell"><strong>Joy & Play</strong></div>
+                <div class="score-cell" style="text-align: center;"><strong>2.5</strong></div>
+                <div class="score-cell">Present historically; reduced under stress.</div>
+            </div>
+
+            <div class="insight-box">
+                <strong>Relationship Strengths:</strong>
+                <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li>Commitment to marriage (both partners)</li>
+                    <li>Transparency and honesty - no deception patterns</li>
+                    <li>Desire for cohesion and connection</li>
+                    <li>Engagement in therapy process</li>
+                </ul>
+            </div>
+
+            <div class="cycle-box">
+                <h4>⚠️ Primary Strain Areas</h4>
+                <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li><strong>Physical & Sexual Connection (Score: 2)</strong> - Primary strain domain that strongly influences sense of belonging</li>
+                    <li><strong>Emotional Safety (Score: 2.5)</strong> - Destabilizes when intimacy decreases or respect feels threatened</li>
+                    <li><strong>Conflict as Growth (Score: 2.5)</strong> - Tendency to intensify rather than regulate during conflict</li>
+                    <li><strong>Joy & Play (Score: 2.5)</strong> - Reduced under current stress</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SECTION 5: DISCONNECTION PATTERNS -->
+        <div class="section page-break">
+            <h2>🔄 The Four Real-World Disconnection Patterns</h2>
+
+            <div class="key-quote">
+                "These cycles appear driven by unmet safety and belonging needs rather than intentional harm."
+            </div>
+
+            <div class="cycle-box">
+                <h4>Pattern 1: Alignment Ambiguity Cycle</h4>
+                <p style="font-size:1.1em; line-height:2; margin-top:15px;">
+                    Kate defers (to family/others) →<br>
+                    You question alignment ("Is this what YOU want?") →<br>
+                    You press for clarity →<br>
+                    She withdraws (feels pressured/criticized) →<br>
+                    You feel unsupported →<br>
+                    [Cycle reinforces]
+                </p>
+                <p style="margin-top:20px;"><strong>Your need:</strong> Clear partnership alignment signals safety</p>
+                <p style="margin-top:5px;"><strong>Her experience:</strong> Pressure when questioned, leading to withdrawal</p>
+                <p style="margin-top:5px;"><strong>Result:</strong> Both feel more disconnected</p>
+            </div>
+
+            <div class="cycle-box">
+                <h4>Pattern 2: Leisure Disengagement Cycle</h4>
+                <p style="font-size:1.1em; line-height:2; margin-top:15px;">
+                    You invite Kate to social/recreational activities →<br>
+                    She appears disengaged or withdraws early →<br>
+                    You stop inviting (protective response) →<br>
+                    Shared vitality decreases →<br>
+                    Belonging weakens →<br>
+                    [Cycle reinforces]
+                </p>
+                <p style="margin-top:20px;"><strong>Your need:</strong> Shared enjoyment = bonding and belonging</p>
+                <p style="margin-top:5px;"><strong>What happens:</strong> When she appears disengaged, you interpret this as lack of connection</p>
+                <p style="margin-top:5px;"><strong>Result:</strong> Fewer shared experiences, less connection</p>
+            </div>
+
+            <div class="cycle-box">
+                <h4>Pattern 3: Standards & Respect Cycle</h4>
+                <p style="font-size:1.1em; line-height:2; margin-top:15px;">
+                    Internal standard set (not collaboratively negotiated) →<br>
+                    Task done differently than expected →<br>
+                    Interpreted as disrespect or lack of follow-through →<br>
+                    Direct correction delivered →<br>
+                    Withdrawal (Kate experiences as criticism) →<br>
+                    Reinforced perception of misalignment →<br>
+                    [Cycle reinforces]
+                </p>
+                <p style="margin-top:20px;"><strong>Your need:</strong> Consistency and predictability = safety</p>
+                <p style="margin-top:5px;"><strong>What happens:</strong> Deviation from unspoken expectation feels like disrespect</p>
+                <p style="margin-top:5px;"><strong>Result:</strong> Correction → withdrawal → reinforced misalignment</p>
+            </div>
+
+            <div class="cycle-box">
+                <h4>Pattern 4: Intimacy Reduction Cycle</h4>
+                <p style="font-size:1.1em; line-height:2; margin-top:15px;">
+                    Reduced physical closeness →<br>
+                    Belonging destabilizes (for you) →<br>
+                    Focus on intimacy concern increases →<br>
+                    Partner perceives pressure →<br>
+                    Further withdrawal →<br>
+                    Further reduction in intimacy →<br>
+                    [Cycle reinforces]
+                </p>
+                <p style="margin-top:20px;"><strong>Your need:</strong> Physical intimacy = belonging and connection</p>
+                <p style="margin-top:5px;"><strong>What happens:</strong> When intimacy decreases, belonging need activates</p>
+                <p style="margin-top:5px;"><strong>Result:</strong> Increased focus → perceived pressure → more withdrawal</p>
+            </div>
+
+            <div class="insight-box">
+                <strong>Critical understanding:</strong> These cycles appear driven by unmet safety and belonging needs rather than intentional harm from either partner.
+                <br><br>
+                <strong>No one is the villain:</strong> Both partners are responding to their own needs and protection systems.
+                <br><br>
+                <strong>The patterns are the problem,</strong> not the people. Recognizing these cycles is the first step to interrupting them.
+            </div>
+        </div>
+
+        <!-- SECTION 6: CYCLE OF REPAIR -->
+        <div class="section page-break">
+            <h2>🔧 The Cycle of Repair: Clinical Interruption Model</h2>
+
+            <div class="key-quote">
+                "When vulnerability replaces dissatisfaction (e.g., 'When we feel distant, I start worrying I'm not important'), tone shifts from criticism to attachment need. This reduces withdrawal and increases safety."
+            </div>
+
+            <h3>Understanding Your Protective Response</h3>
+
+            <div class="workflow-step">
+                <h4>What Happens When Safety Feels Threatened</h4>
+                <p><strong>When respect, prioritization, or alignment feel threatened, your nervous system activates protective strategies.</strong></p>
+                <p style="margin-top:15px;"><strong>For you, this often manifests as:</strong></p>
+                <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li>Increased directness</li>
+                    <li>Urgency in communication</li>
+                    <li>Correction of perceived issues</li>
+                    <li>Intensification of dissatisfaction</li>
+                </ul>
+                <p style="margin-top:15px;"><strong>Important insight:</strong> This is not about being difficult or controlling — this is your nervous system trying to restore safety and stability</p>
+            </div>
+
+            <h3>The Cognitive Interruption</h3>
+
+            <div class="workflow-step">
+                <h4>The Repair Requires Intentional Cognitive Interruption</h4>
+                <p><strong>Two critical reframes to practice:</strong></p>
+                <div style="background: linear-gradient(135deg, #E8DFD6 0%, #B8B8B8 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
+                    <p style="font-size: 1.2em; font-style: italic; color: #6B2C3A;">
+                        <strong>1.</strong> "My partner is not attempting to harm, disrespect, or undermine me."
+                    </p>
+                    <p style="font-size: 1.2em; font-style: italic; color: #6B2C3A; margin-top: 15px;">
+                        <strong>2.</strong> "Her long-term commitment and investment demonstrate care."
+                    </p>
+                </div>
+                <p style="margin-top:20px;"><strong>Critical note:</strong> This reframing does NOT invalidate your emotional experience</p>
+                <p style="margin-top:10px;"><strong>What it does:</strong> Prevents escalation driven by perceived threat rather than actual threat</p>
+            </div>
+
+            <h3>Structured Repair Sequence</h3>
+
+            <div class="needs-pyramid">
+                <div style="text-align: center; padding: 30px;">
+                    <p style="font-size:1.3em; line-height:2.5; color: #4A4A4A;">
+                        <strong style="color: #6B2C3A;">Trigger</strong><br>
+                        (Something feels disrespectful, misaligned, or dismissive)<br>
+                        ↓<br><br>
+                        
+                        <strong style="color: #D67B4A;">Recognition of Activation</strong><br>
+                        "I'm feeling activated. My safety system is responding."<br>
+                        ↓<br><br>
+                        
+                        <strong style="color: #6B2C3A;">Intentional Assumption of Benevolent Intent</strong><br>
+                        "She is not trying to harm me. This is a sequencing issue, not malice."<br>
+                        ↓<br><br>
+                        
+                        <strong style="color: #D67B4A;">Expression of Underlying Vulnerability</strong><br>
+                        "When we feel distant, I start worrying I'm not important to you."<br>
+                        (Instead of: "You never prioritize me.")<br>
+                        ↓<br><br>
+                        
+                        <strong style="color: #6B2C3A;">Partner Validation</strong><br>
+                        Kate hears attachment need rather than criticism<br>
+                        ↓<br><br>
+                        
+                        <strong style="color: #D67B4A;">Collaborative Clarification</strong><br>
+                        Both partners work together on solution<br>
+                        ↓<br><br>
+                        
+                        <strong style="color: #6B2C3A; font-size: 1.2em;">Connection Stabilized ✓</strong>
+                    </p>
+                </div>
+            </div>
+
+            <h3>The Power of Vulnerability Over Dissatisfaction</h3>
+
+            <div class="workflow-step">
+                <h4>Language Shifts That Change Everything</h4>
+                
+                <p style="margin-top:20px;"><strong>❌ Dissatisfaction Language (Activates Defense):</strong></p>
+                <ul style="margin: 10px 0 0 20px; line-height: 2; background: #ffebee; padding: 20px; border-radius: 8px;">
+                    <li>"You never prioritize me."</li>
+                    <li>"You don't respect what I'm trying to do here."</li>
+                    <li>"Why can't you just follow through?"</li>
+                    <li>"You always defer to your parents."</li>
+                </ul>
+                
+                <p style="margin-top:20px;"><strong>✓ Vulnerability Language (Invites Connection):</strong></p>
+                <ul style="margin: 10px 0 0 20px; line-height: 2; background: #e8f5e9; padding: 20px; border-radius: 8px;">
+                    <li>"When we feel distant, I start worrying I'm not important to you."</li>
+                    <li>"When I can't tell what you really want, I feel unsure if we're a team."</li>
+                    <li>"When things feel unpredictable, I get anxious and it comes out as frustration."</li>
+                    <li>"I miss feeling close to you. I don't know how to make that happen right now."</li>
+                </ul>
+            </div>
+
+            <div class="insight-box">
+                <strong>Why this matters:</strong> When vulnerability replaces dissatisfaction, the tone shifts from criticism to attachment need.
+                <br><br>
+                <strong>What happens:</strong> This reduces withdrawal and increases safety for BOTH partners.
+                <br><br>
+                <strong>Kate's experience:</strong> Hears "I need you" instead of "You're failing" — makes her want to move toward you, not away.
+                <br><br>
+                <strong>Your experience:</strong> Expressing the underlying vulnerability (fear of not being important) is more accurate than expressing dissatisfaction — and gets better results.
+            </div>
+        </div>
+
+        <!-- SECTION 7: CLINICAL FORMULATION -->
+        <div class="section page-break">
+            <h2>🩺 Clinical Formulation Summary</h2>
+
+            <div class="key-quote">
+                "Your relational distress appears primarily associated with unmet needs for respect, prioritization, integration, and intimacy."
+            </div>
+
+            <div class="workflow-step">
+                <h4>Primary Clinical Understanding</h4>
+                <p><strong>Relational distress stems from:</strong></p>
+                <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li>Unmet needs for respect</li>
+                    <li>Unmet needs for prioritization</li>
+                    <li>Unmet needs for integration (vs. parallel functioning)</li>
+                    <li>Unmet needs for intimacy (physical and emotional)</li>
+                </ul>
+                <p style="margin-top:20px;"><strong>Important reframe:</strong> Intensification during conflict reflects attempts to restore stability rather than diminish your partner</p>
+                <p style="margin-top:10px;"><strong>You are trying to fix the problem, not hurt Kate</strong> — but the protective strategies sometimes create more disconnection</p>
+            </div>
+
+            <div class="workflow-step">
+                <h4>Relationship Strengths (Clinical Assessment)</h4>
+                <p><strong>The relationship demonstrates:</strong></p>
+                <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li>Intact structural trust (no deception, dishonesty, or betrayal patterns)</li>
+                    <li>Shared commitment to the marriage</li>
+                    <li>Both partners engaged in therapy process</li>
+                    <li>Willingness to examine difficult patterns</li>
+                    <li>Love still present, even amid strain</li>
+                </ul>
+            </div>
+
+            <div class="workflow-step">
+                <h4>Source of Instability</h4>
+                <p><strong>Instability arises from:</strong> Sequencing mismatches in how safety and intimacy are restored</p>
+                <p style="margin-top:15px;"><strong>What this means:</strong></p>
+                <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li>You may need safety restored first (through respect, alignment, predictability)</li>
+                    <li>Kate may need emotional safety first (less criticism, more warmth)</li>
+                    <li>When you each try to restore your own safety, you can inadvertently destabilize the other's</li>
+                    <li>This is a SEQUENCING issue, not a fundamental incompatibility</li>
+                </ul>
+            </div>
+
+            <div class="insight-box">
+                <strong>Treatment will continue to focus on:</strong>
+                <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li><strong>Differentiating vulnerability from dissatisfaction</strong> — learning to express "I'm scared I'm not important" instead of "You don't prioritize me"</li>
+                    <li><strong>Slowing escalation during perceived disrespect</strong> — pausing to reframe before correcting</li>
+                    <li><strong>Increasing validation exchanges</strong> — building safety for both partners</li>
+                    <li><strong>Rebuilding intimacy through emotional stabilization</strong> — safety first, then intimacy</li>
+                    <li><strong>Reinforcing assumption of non-malicious intent</strong> — "She is not trying to hurt me"</li>
+                </ul>
+            </div>
+
+            <div class="workflow-step">
+                <h4>Clinical Prognosis</h4>
+                <p style="font-size:1.2em; color: #6B2C3A;"><strong>With consistent repair practice and improved clarity around alignment, relational stabilization remains clinically achievable.</strong></p>
+                <p style="margin-top:20px;"><strong>What this means:</strong> The relationship CAN heal and stabilize</p>
+                <p style="margin-top:10px;"><strong>What's required:</strong></p>
+                <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li>Continued therapy engagement</li>
+                    <li>Practice of repair sequences</li>
+                    <li>Vulnerability over dissatisfaction</li>
+                    <li>Assumption of benevolent intent</li>
+                    <li>Collaborative negotiation of expectations</li>
+                    <li>Patience with the process</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SECTION 8: KEY PRACTICES -->
+        <div class="section page-break">
+            <h2>🛠️ Key Practices for You</h2>
+
+            <h3>Daily Practices</h3>
+
+            <div class="workflow-step">
+                <h4>Practice #1: The Cognitive Interrupt</h4>
+                <p><strong>When you notice activation (frustration, urgency, dissatisfaction):</strong></p>
+                <ol style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li><strong>Pause</strong> — Before speaking or correcting</li>
+                    <li><strong>Name the need</strong> — "I'm feeling unsafe because alignment feels unclear"</li>
+                    <li><strong>Reframe intent</strong> — "She is not trying to disrespect me"</li>
+                    <li><strong>Express vulnerability</strong> — "When I can't tell what you want, I feel unsure we're a team"</li>
+                </ol>
+            </div>
+
+            <div class="workflow-step">
+                <h4>Practice #2: Collaborative Expectation Setting</h4>
+                <p><strong>Before forming internal standards:</strong></p>
+                <ol style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li>Discuss expectations explicitly with Kate</li>
+                    <li>Negotiate what "good enough" looks like together</li>
+                    <li>Create shared standards rather than internal ones</li>
+                    <li>Build in flexibility for different approaches</li>
+                </ol>
+            </div>
+
+            <div class="workflow-step">
+                <h4>Practice #3: Rebuild Leisure Connection</h4>
+                <p><strong>To restore shared enjoyment:</strong></p>
+                <ol style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li>Ask what types of activities she finds energizing</li>
+                    <li>Try activities she suggests, not just ones you invite her into</li>
+                    <li>Focus on connection, not performance of enjoyment</li>
+                    <li>Start small — short, low-pressure outings</li>
+                </ol>
+            </div>
+
+            <div class="workflow-step">
+                <h4>Practice #4: Assumption of Care</h4>
+                <p><strong>Daily reminder to yourself:</strong></p>
+                <div style="background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%); color: #E8DFD6; padding: 25px; border-radius: 12px; margin: 15px 0; text-align: center;">
+                    <p style="font-size: 1.3em; font-style: italic;">
+                        "Kate's long-term commitment and investment demonstrate care. When we have conflict, it's about sequencing needs differently — not about her wanting to hurt me."
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- BOTTOM LINE -->
+        <div class="section page-break" style="background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%); color: #E8DFD6; border: none;">
+            <h2 style="color: #E8DFD6;">💑 The Bottom Line</h2>
+            <p style="font-size:1.2em; line-height:2; margin-top:20px;">
+                <strong>This report summarizes the patterns, needs, and disconnection cycles that have emerged in your couples therapy process.</strong>
+                <br><br>
+                <strong style="font-size:1.3em;">"Your relational distress appears primarily associated with unmet needs for respect, prioritization, integration, and intimacy."</strong>
+                <br><br>
+                The relationship has shifted from early partnership toward reduced intimacy, parallel functioning, and recurring tension. Both you and Kate feel unmet in different but complementary ways.
+                <br><br>
+                <strong>Your three core concerns:</strong>
+                <br><br>
+                1. <strong>Ambiguity of Alignment</strong> — Difficulty discerning Kate's authentic preferences, especially with family. Visible alignment = psychological safety for you.
+                <br><br>
+                2. <strong>Decline in Shared Leisure</strong> — Observed limited engagement led to reducing invitations. Shared enjoyment = belonging for you.
+                <br><br>
+                3. <strong>Standards & Interpretation of Respect</strong> — Internal expectations set → different completion → interpreted as disrespect → correction → withdrawal cycle.
+                <br><br>
+                <strong>Your needs hierarchy (Maslow):</strong>
+                <br><br>
+                <strong>Safety needs</strong> are primary activation layer. When respect, prioritization, or alignment feel threatened → nervous system activates → communication becomes direct/corrective/urgent.
+                <br><br>
+                "Respect functions as a gateway variable. When respect feels threatened, the nervous system interprets instability."
+                <br><br>
+                <strong>Four disconnection patterns identified:</strong> Alignment Ambiguity, Leisure Disengagement, Standards & Respect, Intimacy Reduction.
+                <br><br>
+                <strong>Critical insight: "These cycles appear driven by unmet safety and belonging needs rather than intentional harm."</strong>
+                <br><br>
+                <strong>The Cycle of Repair:</strong>
+                <br><br>
+                When activated → recognize activation → assume benevolent intent → express vulnerability (not dissatisfaction) → partner validation → collaborative clarification → connection stabilized.
+                <br><br>
+                <strong>"When vulnerability replaces dissatisfaction, tone shifts from criticism to attachment need. This reduces withdrawal and increases safety."</strong>
+                <br><br>
+                Language shifts:<br>
+                ❌ "You never prioritize me" → ✓ "When we feel distant, I start worrying I'm not important to you"
+                <br><br>
+                <strong>Relationship Foundation Score: 3/5 (Moderate but Unstable)</strong>
+                <br><br>
+                <strong>Strengths:</strong> Intact structural trust, shared commitment, therapy engagement, no deception patterns
+                <br><br>
+                <strong>Strains:</strong> Physical & Sexual Connection (2), Emotional Safety (2.5), Conflict as Growth (2.5), Joy & Play (2.5)
+                <br><br>
+                <strong>Clinical formulation:</strong> Intensification during conflict reflects attempts to restore stability rather than diminish partner. Instability arises from sequencing mismatches in how safety and intimacy are restored — this is a SEQUENCING issue, not fundamental incompatibility.
+                <br><br>
+                <strong>Treatment focus:</strong> Differentiating vulnerability from dissatisfaction, slowing escalation, increasing validation, rebuilding intimacy through emotional stabilization, reinforcing assumption of non-malicious intent.
+                <br><br>
+                <strong style="font-size:1.3em;">"With consistent repair practice and improved clarity around alignment, relational stabilization remains clinically achievable."</strong>
+                <br><br>
+                The relationship CAN heal. What's required: Continued therapy, practice of repair sequences, vulnerability over dissatisfaction, assumption of benevolent intent, collaborative negotiation, patience with process.
+                <br><br>
+                <strong>Daily reminder:</strong> "My partner is not attempting to harm, disrespect, or undermine me. Her long-term commitment and investment demonstrate care." 💑
+            </p>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
