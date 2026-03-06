@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Managing Medication, Anxiety, and Self-Perception: Building Awareness and Resilience</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        @media print {
+            body { background: white; padding: 0; margin: 0; }
+            .container { max-width: none; box-shadow: none; border-radius: 0; }
+            .content { padding: 0.5in; }
+            .section { page-break-inside: avoid; break-inside: avoid; }
+            .page-break { page-break-before: always; break-before: page; }
+            @page { size: 8.5in 11in; margin: 0.75in; }
+        }
+        
+        @media screen {
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                line-height: 1.6;
+                color: #4A4A4A;
+                background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+                min-height: 100vh;
+                padding: 20px;
+            }
+            .container {
+                max-width: 8.5in;
+                margin: 0 auto;
+                background: #E8DFD6;
+                border-radius: 20px;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+                overflow: hidden;
+            }
+            .content { padding: 40px; }
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #4A4A4A;
+        }
+        .header {
+            background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+            color: #E8DFD6;
+            padding: 40px;
+            text-align: center;
+        }
+        .header h1 { font-size: 2.5em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        .header p { font-size: 1.2em; opacity: 0.9; }
+        .section {
+            margin-bottom: 50px;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 15px;
+            border-left: 5px solid #D67B4A;
+        }
+        .section h2 { color: #6B2C3A; font-size: 2em; margin-bottom: 20px; }
+        .section h3 { color: #D67B4A; font-size: 1.5em; margin: 25px 0 15px 0; border-bottom: 2px solid #B8B8B8; padding-bottom: 10px; }
+        .key-quote {
+            background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+            color: #E8DFD6;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+            font-size: 1.3em;
+            font-style: italic;
+            text-align: center;
+            box-shadow: 0 8px 15px rgba(107,44,58,0.3);
+        }
+        .insight-box {
+            background: linear-gradient(135deg, #E8DFD6 0%, #B8B8B8 100%);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-left: 5px solid #D67B4A;
+        }
+        .insight-box strong { color: #6B2C3A; font-size: 1.1em; }
+        .workflow-step {
+            background: white;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 12px;
+            border-left: 5px solid #D67B4A;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .workflow-step h4 { color: #6B2C3A; font-size: 1.3em; margin-bottom: 15px; }
+        .step-number {
+            display: inline-block;
+            background: #6B2C3A;
+            color: #E8DFD6;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        .med-box {
+            background: #e3f2fd;
+            border-left: 5px solid #2196F3;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+        .med-box h4 { color: #1565C0; margin-bottom: 15px; }
+        .strength-box {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+        .strength-box h4 { color: #155724; margin-bottom: 15px; }
+        @media (max-width: 768px) {
+            .header h1 { font-size: 2em; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>🧠 Managing Medication, Anxiety, and Self-Perception</h1>
+        <p>Building Awareness and Resilience</p>
+    </div>
+
+    <div class="content">
+
+        <!-- SECTION 1: THE SITUATION -->
+        <div class="section">
+            <h2>📍 The Situation: Adjusting to Medication and Managing Anxiety</h2>
+
+            <div class="key-quote">
+                "Brain does a thing that makes things issues that aren't issues if you make it a issue."
+            </div>
+
+            <div class="workflow-step">
+                <h4>What You're Currently Navigating</h4>
+                <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li>Adjusting to ADHD medication</li>
+                    <li>Experiencing some side effects (particularly changes in appetite and anxiety)</li>
+                    <li>Managing daily life stressors and relationships</li>
+                    <li>Ongoing process of finding the right medication dosage</li>
+                </ul>
+            </div>
+
+            <div class="workflow-step">
+                <h4>Your Thinking Pattern</h4>
+                <p><strong>What happens:</strong> You tend to overthink bodily sensations and symptoms</p>
+                <p style="margin-top:10px;"><strong>The result:</strong> This leads to increased anxiety</p>
+                <p style="margin-top:10px;"><strong>The cycle:</strong> Hyper-focus on sensations → interpretation as potential problems → amplified anxiety</p>
+            </div>
+
+            <div class="workflow-step">
+                <h4>Underlying Self-Perception Issues</h4>
+                <p><strong>What you experience:</strong> History of self-critical thinking and uncertainty about self-worth</p>
+                <p style="margin-top:10px;"><strong>Possible roots:</strong> Past experiences in sports and academics</p>
+            </div>
+
+            <div class="insight-box">
+                <strong>The core problem:</strong> Tendency to over-attend to bodily sensations and symptoms, interpreting minor or expected side effects as potential problems.
+                <br><br>
+                <strong>How this amplifies anxiety:</strong> Hyper-focus makes normal sensations feel problematic, leading to unnecessary worry.
+                <br><br>
+                <strong>The underlying pattern:</strong> Self-doubt and negative self-perception, possibly reinforced by past experiences and current stressors.
+                <br><br>
+                <strong>The mismatch:</strong> Your perception that every sensation could signal a problem vs. reality that many are normal or manageable.
+            </div>
+        </div>
+
+        <!-- FRAMEWORK 1: SYMPTOM ASSESSMENT -->
+        <div class="section page-break">
+            <h2>🔍 Framework #1: Symptom Assessment Framework</h2>
+
+            <div class="key-quote">
+                "Don't worry about the medication unless it is redundant and painful or uncomfortable."
+            </div>
+
+            <h3>The Five-Step Process</h3>
+
+            <div class="workflow-step">
+                <h4><span class="step-number">1</span> Notice the Symptom or Sensation</h4>
+                <p><strong>What to do:</strong> Simply acknowledge what you're experiencing</p>
+                <p style="margin-top:10px;"><strong>Examples:</strong> Appetite changes, dry mouth, feeling different</p>
+            </div>
+
+            <div class="workflow-step">
+                <h4><span class="step-number">2</span> Ask: Is It Redundant/Repetitive, Painful, or Uncomfortable?</h4>
+                <p><strong>Three key questions:</strong></p>
+                <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li><strong>Redundant/repetitive:</strong> Is this happening over and over?</li>
+                    <li><strong>Painful:</strong> Does this actually hurt?</li>
+                    <li><strong>Uncomfortable:</strong> Is this genuinely disrupting your life?</li>
+                </ul>
+            </div>
+
+            <div class="workflow-step">
+                <h4><span class="step-number">3</span> Determine If It Is Abnormal or Irregular for You</h4>
+                <p><strong>Ask yourself:</strong> Is this completely out of the ordinary for my body?</p>
+                <p style="margin-top:10px;"><strong>Or:</strong> Is this a known side effect of my medication?</p>
+            </div>
+
+            <div class="workflow-step">
+                <h4><span class="step-number">4</span> If Not Severe or Disruptive, Acknowledge It and Move On</h4>
+                <p><strong>The therapist's guidance:</strong> "If it is not a thing that is redundant, repetitive, or absolutely a problem, then paying attention to it is like most people notice things when they're not in a problem."</p>
+                
+                <p style="margin-top:15px;"><strong>What this means:</strong> Notice it, acknowledge it, then let it go</p>
+                <p style="margin-top:10px;"><strong>Don't:</strong> Dwell on it, analyze it, worry about it</p>
+            </div>
+
+            <div class="workflow-step">
+                <h4><span class="step-number">5</span> If Severe, Persistent, or Causes Significant Distress, Report It</h4>
+                <p><strong>Report symptoms that are:</strong></p>
+                <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li>Severe (really impacting your functioning)</li>
+                    <li>Persistent (won't go away, keep coming back)</li>
+                    <li>Painful or very uncomfortable</li>
+                    <li>Causing significant distress</li>
+                </ul>
+
+                <p style="margin-top:15px;"><strong>Example threshold:</strong> "If you have a panic attack or just can't get rid of your anxiety, that's probably around the threshold."</p>
+            </div>
+
+            <div class="strength-box">
+                <h4>✓ Why This Framework Matters</h4>
+                <p><strong>Helps distinguish between normal medication side effects and symptoms requiring attention</strong></p>
+                <p style="margin-top:10px;"><strong>Reduces unnecessary anxiety</strong></p>
+                <p style="margin-top:10px;"><strong>Promotes self-efficacy — you can assess and manage on your own</strong></p>
+            </div>
+        </div>
+
+        <!-- FRAMEWORK 2: MANAGING ANXIOUS THINKING -->
+        <div class="section page-break">
+            <h2>💭 Framework #2: Managing Anxious Thinking</h2>
+
+            <div class="key-quote">
+                "Try not to make it more than what it is because that's what you're used to sort of thinking."
+            </div>
+
+            <h3>The Four-Step Process</h3>
+
+            <div class="workflow-step">
+                <h4><span class="step-number">1</span> Notice When You Are Focusing on a Sensation or Worry</h4>
+                <p><strong>Catch yourself in the act:</strong> "Oh, I'm dwelling on this sensation"</p>
+                <p style="margin-top:10px;"><strong>Awareness is the first step</strong></p>
+            </div>
+
+            <div class="workflow-step">
+                <h4><span class="step-number">2</span> Ask Yourself If You Are Making It a Bigger Issue Than It Is</h4>
+                <p><strong>The key question:</strong> "Am I making this into a problem when it's actually normal?"</p>
+                
+                <p style="margin-top:15px;"><strong>Your pattern:</strong> "Brain does a thing that makes things issues that aren't issues if you make it a issue."</p>
+            </div>
+
+            <div class="workflow-step">
+                <h4><span class="step-number">3</span> Practice Letting Go of Thoughts That Are Not Urgent or Problematic</h4>
+                <p><strong>What to tell yourself:</strong> "This is just a sensation. It's not an emergency. I can let this go."</p>
+                <p style="margin-top:10px;"><strong>Remember:</strong> Not every sensation or thought needs to be analyzed</p>
+            </div>
+
+            <div class="workflow-step">
+                <h4><span class="step-number">4</span> Redirect Attention to the Present or Something Constructive</h4>
+                <p><strong>Shift focus to:</strong></p>
+                <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li>What you're doing right now</li>
+                    <li>A task at hand</li>
+                    <li>Something engaging or enjoyable</li>
+                    <li>Your breath or surroundings</li>
+                </ul>
+            </div>
+
+            <div class="strength-box">
+                <h4>✓ Why This Process Matters</h4>
+                <p><strong>Interrupts the cycle of anxious rumination</strong></p>
+                <p style="margin-top:10px;"><strong>Helps develop more balanced perspective on bodily sensations and daily experiences</strong></p>
+                <p style="margin-top:10px;"><strong>Reduces overthinking that amplifies anxiety</strong></p>
+            </div>
+        </div>
+
+        <!-- FRAMEWORK 3: SELF-REFLECTION -->
+        <div class="section page-break">
+            <h2>🪞 Framework #3: Self-Reflection and Identity Building</h2>
+
+            <div class="key-quote">
+                "It's better to have a running list on your phone. Anytime you think about, 'Oh, I'm really nice,' then you can pull it out and just kind of write it down."
+            </div>
+
+            <h3>The Four-Step Process</h3>
+
+            <div class="workflow-step">
+                <h4><span class="step-number">1</span> Regularly Note Characteristics About Yourself</h4>
+                <p><strong>What to capture:</strong> Any trait, quality, or characteristic you notice</p>
+                <p style="margin-top:10px;"><strong>When:</strong> Whenever something comes to mind</p>
+            </div>
+
+            <div class="workflow-step">
+                <h4><span class="step-number">2</span> Include Both Your Own Perceptions and What Others Say About You</h4>
+                <p><strong>Two sources of information:</strong></p>
+                <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li><strong>Your observations:</strong> "I notice I'm patient with people"</li>
+                    <li><strong>Others' feedback:</strong> "My friend said I'm a good listener"</li>
+                </ul>
+            </div>
+
+            <div class="workflow-step">
+                <h4><span class="step-number">3</span> Be Specific, Noting Both Positive and Negative Traits</h4>
+                <p><strong>Include everything:</strong> Not just the good stuff</p>
+                
+                <p style="margin-top:15px;"><strong>Examples:</strong></p>
+                <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li>"I'm creative when solving problems"</li>
+                    <li>"I sometimes get defensive when criticized"</li>
+                    <li>"People say I'm reliable"</li>
+                    <li>"I tend to overthink things"</li>
+                </ul>
+
+                <p style="margin-top:15px;"><strong>Why include negatives:</strong> Builds balanced, realistic self-view</p>
+            </div>
+
+            <div class="workflow-step">
+                <h4><span class="step-number">4</span> Keep a Running List</h4>
+                <p><strong>Where to keep it:</strong> Your phone or a journal</p>
+                <p style="margin-top:10px;"><strong>How to use it:</strong> Add to it whenever something occurs to you, review periodically</p>
+                
+                <p style="margin-top:15px;"><strong>The therapist's suggestion:</strong> "Get a journal so you can kinda talk to yourself."</p>
+            </div>
+
+            <div class="strength-box">
+                <h4>✓ Why This Exercise Matters</h4>
+                <p><strong>Builds self-awareness</strong></p>
+                <p style="margin-top:10px;"><strong>Challenges negative self-perceptions</strong></p>
+                <p style="margin-top:10px;"><strong>Provides resource for future reflection and growth</strong></p>
+                <p style="margin-top:10px;"><strong>Counteracts old patterns of self-doubt</strong></p>
+            </div>
+        </div>
+
+        <!-- MEDICATION GUIDANCE -->
+        <div class="section page-break">
+            <h2>💊 Understanding Your ADHD Medication</h2>
+
+            <div class="med-box">
+                <h4>Current Status</h4>
+                <p><strong>Current dosage:</strong> 10mg</p>
+                <p style="margin-top:10px;"><strong>Possible range:</strong> Up to 30mg as needed</p>
+                <p style="margin-top:10px;"><strong>Timing:</strong> Take as prescribed, monitor effects throughout the day</p>
+            </div>
+
+            <div class="med-box">
+                <h4>Purpose and Expected Benefits</h4>
+                <p><strong>Purpose:</strong> Improve focus and reduce ADHD symptoms</p>
+                <p style="margin-top:10px;"><strong>Expected benefits:</strong> Improved focus, reduced anxiety during the day</p>
+            </div>
+
+            <div class="med-box">
+                <h4>Common Side Effects to Expect</h4>
+                <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li><strong>Appetite changes:</strong> Common and usually not problematic</li>
+                    <li><strong>Dry mouth:</strong> Actually a good indicator the medication is active</li>
+                </ul>
+
+                <p style="margin-top:15px;"><strong>What to monitor:</strong> Any severe or persistent symptoms</p>
+            </div>
+
+            <div class="med-box">
+                <h4>Understanding How Medication Should Feel</h4>
+                <p><strong>The therapist's explanation:</strong> "You should not feel like you first took it. You should start to get used to it, but you should still get... well, dry mouth is a really good indicator of that."</p>
+                
+                <p style="margin-top:15px;"><strong>What this means:</strong></p>
+                <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li>You won't feel the same "first dose" sensation over time</li>
+                    <li>You should get used to being on it</li>
+                    <li>Dry mouth is a good sign it's working</li>
+                    <li>If dry mouth disappears AND you don't feel effects, discuss with provider</li>
+                </ul>
+            </div>
+
+            <div class="med-box">
+                <h4>About Tolerance and Dosage</h4>
+                <p><strong>Important clarification:</strong> Not feeling the medication's effects does NOT mean you're developing tolerance this early</p>
+                <p style="margin-top:10px;"><strong>More likely:</strong> The dose may need adjustment</p>
+                
+                <p style="margin-top:15px;"><strong>The therapist's reminder:</strong> "Everybody's body is different. Ten milligrams is... that's why it goes all the way up to thirty milligrams per tablet."</p>
+
+                <p style="margin-top:15px;"><strong>Dosage is individualized:</strong> What works for someone else may not be your perfect dose</p>
+            </div>
+
+            <div class="med-box">
+                <h4>Safety Warnings</h4>
+                <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li>Do not increase dose without consulting the provider</li>
+                    <li>Report any severe, persistent, or painful side effects</li>
+                    <li>Addiction is not expected to be an issue at this stage</li>
+                </ul>
+            </div>
+
+            <div class="med-box">
+                <h4>Communication with Your Provider</h4>
+                <p><strong>The approach:</strong> "Trial and error, and you tell me."</p>
+                
+                <p style="margin-top:15px;"><strong>What to communicate:</strong></p>
+                <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li>If effects wear off during the day</li>
+                    <li>If you're not noticing effects (and dry mouth is gone)</li>
+                    <li>If side effects become severe or disruptive</li>
+                </ul>
+
+                <p style="margin-top:15px;"><strong>Remember:</strong> Your feedback is essential for finding the right dose</p>
+            </div>
+        </div>
+
+        <!-- HOMEWORK -->
+        <div class="section">
+            <h2>📝 Your Assignment</h2>
+
+            <div class="workflow-step">
+                <h4>Begin a Running List of Your Characteristics</h4>
+                
+                <p style="margin-top:15px;"><strong>What to include:</strong></p>
+                <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li>Your own observations about yourself</li>
+                    <li>What people say about you</li>
+                    <li>Both positive and negative traits</li>
+                    <li>Be as specific as possible</li>
+                </ul>
+
+                <p style="margin-top:15px;"><strong>Where to keep it:</strong> Use your phone or a journal to record these thoughts as they come up</p>
+
+                <p style="margin-top:15px;"><strong>How to complete:</strong></p>
+                <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li>Each time you notice a trait or receive feedback, write it down</li>
+                    <li>Review the list periodically</li>
+                </ul>
+
+                <p style="margin-top:15px;"><strong>Purpose:</strong> To build self-awareness and challenge negative self-perceptions</p>
+
+                <p style="margin-top:15px;"><strong>What to bring next time:</strong> Your list or be ready to discuss what you've noticed</p>
+
+                <p style="margin-top:10px;"><strong>Timeline:</strong> Start immediately and continue until next session</p>
+            </div>
+        </div>
+
+        <!-- QUOTES AND BOTTOM LINE -->
+        <div class="section page-break">
+            <h2>💬 Key Quotes to Remember</h2>
+            <div class="workflow-step">
+                <p style="font-size:1.2em; line-height:2; font-style:italic;">
+                    1. "Try not to make it more than what it is because that's what you're used to sort of thinking."
+                    <br><br>
+                    2. "Brain does a thing that makes things issues that aren't issues if you make it a issue."
+                    <br><br>
+                    3. "If it is not a thing that is redundant, repetitive, or absolutely a problem, then paying attention to it is like most people notice things when they're not in a problem."
+                    <br><br>
+                    4. "If you have a panic attack or just can't get rid of your anxiety, that's probably around the threshold."
+                    <br><br>
+                    5. "You should not feel like you first took it. You should start to get used to it, but you should still get... well, dry mouth is a really good indicator of that."
+                    <br><br>
+                    6. "Everybody's body is different. Ten milligrams is... that's why it goes all the way up to thirty milligrams per tablet."
+                    <br><br>
+                    7. "It's better to have a running list on your phone. Anytime you think about, 'Oh, I'm really nice,' then you can pull it out and just kind of write it down."
+                    <br><br>
+                    8. "Don't worry about the medication unless it is redundant and painful or uncomfortable."
+                    <br><br>
+                    9. "Trial and error, and you tell me."
+                    <br><br>
+                    10. "Get a journal so you can kinda talk to yourself."
+                </p>
+            </div>
+        </div>
+
+        <div class="section" style="background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%); color: #E8DFD6; border: none;">
+            <h2 style="color: #E8DFD6;">🧠 The Bottom Line</h2>
+            <p style="font-size:1.2em; line-height:2; margin-top:20px;">
+                <strong>This session focused on helping you distinguish between normal and problematic experiences as you adjust to ADHD medication and manage anxiety.</strong>
+                <br><br>
+                <strong>"Brain does a thing that makes things issues that aren't issues if you make it a issue."</strong>
+                <br><br>
+                The therapist emphasized that not every sensation or side effect needs to be analyzed or worried about — most are manageable unless they become severe or disruptive.
+                <br><br>
+                <strong>Three frameworks taught:</strong>
+                <br><br>
+                <strong>1. Symptom Assessment Framework (5 steps)</strong> — Notice the symptom or sensation. Ask: Is it redundant/repetitive, painful, or uncomfortable? Determine if it is abnormal or irregular for you. If it is not severe or disruptive, acknowledge it and move on. If it is severe, persistent, or causes significant distress, report it. Helps distinguish between normal medication side effects and symptoms requiring attention. Reduces unnecessary anxiety. Promotes self-efficacy.
+                <br><br>
+                <strong>"Don't worry about the medication unless it is redundant and painful or uncomfortable."</strong>
+                <br><br>
+                <strong>"If it is not a thing that is redundant, repetitive, or absolutely a problem, then paying attention to it is like most people notice things when they're not in a problem."</strong>
+                <br><br>
+                <strong>2. Managing Anxious Thinking (4 steps)</strong> — Notice when you are focusing on a sensation or worry. Ask yourself if you are making it a bigger issue than it is. Practice letting go of thoughts that are not urgent or problematic. Redirect attention to the present or to something constructive. Interrupts cycle of anxious rumination. Helps develop more balanced perspective on bodily sensations and daily experiences.
+                <br><br>
+                <strong>"Try not to make it more than what it is because that's what you're used to sort of thinking."</strong>
+                <br><br>
+                <strong>3. Self-Reflection and Identity Building (4 steps)</strong> — Regularly note characteristics about yourself. Include both your own perceptions and what others say about you. Be specific, noting both positive and negative traits. Keep a running list (on phone or in journal). Builds self-awareness. Challenges negative self-perceptions. Provides resource for future reflection and growth. Counteracts old patterns of self-doubt.
+                <br><br>
+                <strong>"It's better to have a running list on your phone. Anytime you think about, 'Oh, I'm really nice,' then you can pull it out and just kind of write it down."</strong>
+                <br><br>
+                <strong>"Get a journal so you can kinda talk to yourself."</strong>
+                <br><br>
+                <strong>The situation:</strong> Currently adjusting to ADHD medication. Experiencing some side effects (particularly appetite changes and anxiety). Tend to overthink bodily sensations and symptoms, leading to increased anxiety. History of self-critical thinking and uncertainty about self-worth, possibly rooted in past experiences in sports and academics. Managing daily life stressors, relationships, ongoing process of finding right medication dosage.
+                <br><br>
+                <strong>Core problem:</strong> Tendency to over-attend to bodily sensations and symptoms, interpreting minor or expected side effects as potential problems. Hyper-focus amplifies anxiety and leads to unnecessary worry. Underlying pattern of self-doubt and negative self-perception, possibly reinforced by past experiences and current stressors. Mismatch: perception that every sensation could signal problem vs. reality that many are normal or manageable.
+                <br><br>
+                <strong>Medication guidance:</strong> Current dosage 10mg, possible range up to 30mg as needed. Purpose: improve focus, reduce ADHD symptoms. Expected benefits: improved focus, reduced anxiety during day. Common side effects: appetite changes (common, usually not problematic), dry mouth (actually good indicator medication is active). 
+                <br><br>
+                <strong>"You should not feel like you first took it. You should start to get used to it, but you should still get... well, dry mouth is a really good indicator of that."</strong>
+                <br><br>
+                <strong>About tolerance:</strong> Not feeling medication's effects does NOT mean developing tolerance this early. More likely: dose may need adjustment. "Everybody's body is different. Ten milligrams is... that's why it goes all the way up to thirty milligrams per tablet." Dosage is individualized.
+                <br><br>
+                <strong>"Trial and error, and you tell me."</strong> Your feedback is essential for finding the right dose.
+                <br><br>
+                <strong>Homework:</strong> Begin running list of your characteristics and what people say about you. Be as specific as possible, including both positive and negative traits. Use phone or journal to record thoughts as they come up. Each time you notice a trait or receive feedback, write it down. Review list periodically. Purpose: build self-awareness and challenge negative self-perceptions. Bring list or be ready to discuss what you've noticed. Timeline: start immediately and continue until next session.
+                <br><br>
+                By using clear framework for assessing symptoms and practicing letting go of anxious thoughts, you can reduce unnecessary worry and focus on what truly matters.
+                <br><br>
+                You were encouraged to begin process of self-reflection, noting your own characteristics and what others say about you. This exercise is designed to help you build more balanced and compassionate view of yourself, counteracting old patterns of self-doubt.
+                <br><br>
+                <strong>Remember: Finding the right medication and strategies is a process of trial and error, and your feedback is essential.</strong>
+                <br><br>
+                <strong>Keep tracking your experiences, bring your insights to next session, and know that you are making meaningful progress.</strong> 🧠
+            </p>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
