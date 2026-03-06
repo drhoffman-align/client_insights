@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Structure Amidst Chaos: Time Blocking, Mood Management, and Self-Compassion</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        @media print {
+            body { background: white; padding: 0; margin: 0; }
+            .container { max-width: none; box-shadow: none; border-radius: 0; }
+            .content { padding: 0.5in; }
+            .section { page-break-inside: avoid; break-inside: avoid; }
+            .page-break { page-break-before: always; break-before: page; }
+            @page { size: 8.5in 11in; margin: 0.75in; }
+        }
+        
+        @media screen {
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                line-height: 1.6;
+                color: #4A4A4A;
+                background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+                min-height: 100vh;
+                padding: 20px;
+            }
+            .container {
+                max-width: 8.5in;
+                margin: 0 auto;
+                background: #E8DFD6;
+                border-radius: 20px;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+                overflow: hidden;
+            }
+            .content { padding: 40px; }
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #4A4A4A;
+        }
+        .header {
+            background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+            color: #E8DFD6;
+            padding: 40px;
+            text-align: center;
+        }
+        .header h1 { font-size: 2.5em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        .header p { font-size: 1.2em; opacity: 0.9; }
+        .section {
+            margin-bottom: 50px;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 15px;
+            border-left: 5px solid #D67B4A;
+        }
+        .section h2 { color: #6B2C3A; font-size: 2em; margin-bottom: 20px; }
+        .section h3 { color: #D67B4A; font-size: 1.5em; margin: 25px 0 15px 0; border-bottom: 2px solid #B8B8B8; padding-bottom: 10px; }
+        .key-quote {
+            background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+            color: #E8DFD6;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+            font-size: 1.3em;
+            font-style: italic;
+            text-align: center;
+            box-shadow: 0 8px 15px rgba(107,44,58,0.3);
+        }
+        .insight-box {
+            background: linear-gradient(135deg, #E8DFD6 0%, #B8B8B8 100%);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-left: 5px solid #D67B4A;
+        }
+        .insight-box strong { color: #6B2C3A; font-size: 1.1em; }
+        .workflow-step {
+            background: white;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 12px;
+            border-left: 5px solid #D67B4A;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .workflow-step h4 { color: #6B2C3A; font-size: 1.3em; margin-bottom: 15px; }
+        .step-number {
+            display: inline-block;
+            background: #6B2C3A;
+            color: #E8DFD6;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        .med-box {
+            background: #e3f2fd;
+            border-left: 5px solid #2196F3;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+        .med-box h4 { color: #1565C0; margin-bottom: 15px; }
+        .strength-box {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+        .strength-box h4 { color: #155724; margin-bottom: 15px; }
+        .comparison-box {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+        .comparison-box h4 { color: #856404; margin-bottom: 15px; }
+        @media (max-width: 768px) {
+            .header h1 { font-size: 2em; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>🗓️ Building Structure Amidst Chaos</h1>
+        <p>Time Blocking, Mood Management, and Self-Compassion</p>
+    </div>
+
+    <div class="content">
+
+        <!-- SECTION 1: THE SITUATION -->
+        <div class="section">
+            <h2>📍 The Situation: Overwhelm and Lack of Sustainable Structure</h2>
+
+            <div class="key-quote">
+                "Validation: It's normal to feel overwhelmed when you're juggling so much."
+            </div>
+
+            <div class="workflow-step">
+                <h4>What You're Experiencing Emotionally</h4>
+                <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li>Recurring loneliness, especially when daughter is away</li>
+                    <li>Depressive moods</li>
+                    <li>Sense of being overwhelmed by daily responsibilities</li>
+                    <li>Feeling isolated and "stuck" due to lack of transportation and social connection</li>
+                </ul>
+            </div>
+
+            <div class="workflow-step">
+                <h4>Your Current Coping Patterns</h4>
+                <p><strong>What you've been doing:</strong> Throwing yourself into work as a coping mechanism</p>
+                <p style="margin-top:10px;"><strong>The positive:</strong> Helps you feel more productive</p>
+                <p style="margin-top:10px;"><strong>The limitation:</strong> Has not fully addressed your emotional needs</p>
+            </div>
+
+            <div class="workflow-step">
+                <h4>Your Organizational Struggles</h4>
+                <p><strong>Current approach:</strong> Managing responsibilities with to-do lists and journals</p>
+                
+                <p style="margin-top:15px;"><strong>The problem:</strong></p>
+                <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li>Become paralyzed when lists grow too long</li>
+                    <li>Get stuck when you fall behind</li>
+                    <li>Mismatch between desire for order and ability to implement it consistently</li>
+                </ul>
+            </div>
+
+            <div class="workflow-step">
+                <h4>Sleep and Physical Challenges</h4>
+                <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li>Ongoing sleep disturbances</li>
+                    <li>Sleepwalking</li>
+                    <li>Fragmented sleep</li>
+                    <li>Managing complex medication regimen</li>
+                </ul>
+            </div>
+
+            <div class="workflow-step">
+                <h4>Additional Stressors</h4>
+                <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li>Daughter may have ADHD — actively supporting her with organizational tools</li>
+                    <li>Living environment feels cluttered and embarrassing</li>
+                    <li>Struggles with motivation for household tasks</li>
+                </ul>
+            </div>
+
+            <div class="workflow-step">
+                <h4>The Nature of Your Mood Swings</h4>
+                <p><strong>Important clarification:</strong> "A lot of your ups and downs are driven by how you're feeling, not by random mood swings."</p>
+                
+                <p style="margin-top:15px;"><strong>What this means:</strong> Your mood swings are reactive to life events rather than random</p>
+                <p style="margin-top:10px;"><strong>This fits with:</strong> BPD (Borderline Personality Disorder), not bipolar disorder</p>
+            </div>
+
+            <div class="workflow-step">
+                <h4>Intrusive Thoughts</h4>
+                <p><strong>What you experience:</strong> Intrusive, argumentative thoughts</p>
+                <p style="margin-top:10px;"><strong>When they increase:</strong> With stress</p>
+                
+                <p style="margin-top:15px;"><strong>Important clarification:</strong> These are internal arguments, not external hallucinations — likely magnified by stress and anxiety, not a sign of psychosis</p>
+                
+                <p style="margin-top:15px;"><strong>The therapist's reassurance:</strong> "Your thoughts don't always listen to you. The work is intentionally done to counter them."</p>
+            </div>
+
+            <div class="insight-box">
+                <strong>The core problem:</strong> Lack of sustainable structure in your daily life, leading to cycles of overwhelm, avoidance, and emotional dysregulation.
+                <br><br>
+                <strong>The mismatch:</strong> Desire for order vs. current ability to implement it consistently, compounded by sleep issues and medication side effects.
+            </div>
+        </div>
+
+        <!-- FRAMEWORK 1: TIME BLOCKING -->
+        <div class="section page-break">
+            <h2>🗓️ Framework #1: Time Blocking for Life Management</h2>
+
+            <div class="key-quote">
+                "Time blocking is not just blocking off for current work, but blocking off basically your day."
+            </div>
+
+            <h3>The Five-Step Process</h3>
+
+            <div class="workflow-step">
+                <h4><span class="step-number">1</span> Identify Life Domains</h4>
+                <p><strong>What to do:</strong> List all areas needing regular attention</p>
+                
+                <p style="margin-top:15px;"><strong>Your life domains:</strong></p>
+                <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li>Work</li>
+                    <li>Cleaning/household tasks</li>
+                    <li>Daughter time</li>
+                    <li>Self-care</li>
+                    <li>Personal business (YouTube content)</li>
+                    <li>Sleep</li>
+                    <li>Meals</li>
+                </ul>
+
+                <p style="margin-top:15px;"><strong>Why this matters:</strong> Prevents neglecting important areas and reduces overwhelm by clarifying priorities</p>
+            </div>
+
+            <div class="workflow-step">
+                <h4><span class="step-number">2</span> Assign Time Blocks</h4>
+                <p><strong>What to do:</strong> Allocate specific, recurring time slots for each domain</p>
+                
+                <p style="margin-top:15px;"><strong>Examples for you:</strong></p>
+                <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li><strong>3-6pm Mondays:</strong> Work admin</li>
+                    <li><strong>Saturday mornings:</strong> Cleaning</li>
+                    <li><strong>Sunday afternoons:</strong> YouTube content creation</li>
+                    <li><strong>Wednesday 7-8pm:</strong> Daughter date</li>
+                    <li><strong>Daily 10-11pm:</strong> Me-time (consider moving to mornings)</li>
+                </ul>
+
+                <p style="margin-top:15px;"><strong>Why this matters:</strong> Creates predictability and routine, making tasks feel more manageable</p>
+            </div>
+
+            <div class="workflow-step">
+                <h4><span class="step-number">3</span> Treat Time Blocks as Non-Negotiable</h4>
+                <p><strong>The mindset shift:</strong> "Treat these blocks like executive meetings — they are sacred and not to be rescheduled."</p>
+                
+                <p style="margin-top:15px;"><strong>What this means:</strong></p>
+                <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li>These appointments are with yourself</li>
+                    <li>They're as important as any work meeting</li>
+                    <li>Don't cancel or move them unless absolutely necessary</li>
+                </ul>
+
+                <p style="margin-top:15px;"><strong>Why this matters:</strong> Increases follow-through and reduces temptation to procrastinate or multitask</p>
+            </div>
+
+            <div class="workflow-step">
+                <h4><span class="step-number">4</span> Adjust for Realism</h4>
+                <p><strong>What to do:</strong> Start with manageable goals and adjust as needed to avoid overwhelm</p>
+                
+                <p style="margin-top:15px;"><strong>Examples:</strong></p>
+                <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li><strong>Shorter to-do lists:</strong> Limit to 3-5 items daily</li>
+                    <li><strong>Realistic cleaning schedules:</strong> One room per week vs. entire house</li>
+                    <li><strong>Smaller time blocks:</strong> 30 minutes instead of 2 hours</li>
+                </ul>
+
+                <p style="margin-top:15px;"><strong>The therapist's guidance:</strong> "Start with manageable goals and adjust as needed to avoid overwhelm."</p>
+
+                <p style="margin-top:15px;"><strong>Why this matters:</strong> Prevents discouragement and shutdown when tasks feel insurmountable</p>
+            </div>
+
+            <div class="workflow-step">
+                <h4><span class="step-number">5</span> Review and Refine</h4>
+                <p><strong>What to do:</strong> Regularly assess what's working and tweak the schedule or block sizes as needed</p>
+                
+                <p style="margin-top:15px;"><strong>When to review:</strong> Weekly or biweekly</p>
+                
+                <p style="margin-top:15px;"><strong>Why this matters:</strong> Ensures the system evolves with your needs and remains effective</p>
+            </div>
+
+            <div class="comparison-box">
+                <h4>📊 Before vs. After Time Blocking</h4>
+                <p><strong>Before:</strong> Overwhelmed by endless lists, paralyzed by missed tasks</p>
+                <p style="margin-top:10px;"><strong>After:</strong> Predictable routine, smaller achievable goals, less guilt for unfinished items</p>
+            </div>
+
+            <div class="strength-box">
+                <h4>✓ You Already Use This Successfully at Work!</h4>
+                <p>You already use time blocking at work with success, treating certain hours as untouchable for specific tasks. The therapist encouraged you to extend this approach to your personal life.</p>
+            </div>
+        </div>
+
+        <!-- FRAMEWORK 2: FOREST VS TREE VIEW -->
+        <div class="section page-break">
+            <h2>🌲 Framework #2: Forest View vs. Tree View</h2>
+
+            <div class="key-quote">
+                "You need a forest view, not a tree view. Zoom out and look at all the things you want to do."
+            </div>
+
+            <h3>The Two-Step Approach</h3>
+
+            <div class="workflow-step">
+                <h4><span class="step-number">1</span> Zoom Out (Forest View)</h4>
+                <p><strong>What this means:</strong> Periodically step back to see the big picture of your life and goals</p>
+                
+                <p style="margin-top:15px;"><strong>What to ask yourself:</strong></p>
+                <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li>What are my overall goals for stability and well-being?</li>
+                    <li>Am I neglecting any major life domain?</li>
+                    <li>Are my daily efforts aligned with what truly matters?</li>
+                </ul>
+
+                <p style="margin-top:15px;"><strong>Tools for maintaining forest view:</strong></p>
+                <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li>Wall calendars</li>
+                    <li>Post-it notes</li>
+                    <li>Vision boards</li>
+                </ul>
+
+                <p style="margin-top:15px;"><strong>Why this matters:</strong> Prevents getting lost in details and helps prioritize what truly matters</p>
+            </div>
+
+            <div class="workflow-step">
+                <h4><span class="step-number">2</span> Zoom In (Tree View)</h4>
+                <p><strong>What this means:</strong> Focus on specific tasks or problems only after clarifying their place in the bigger picture</p>
+                
+                <p style="margin-top:15px;"><strong>Your tendency:</strong> You get bogged down in daily chaos ("tree view"), losing sight of broader goals</p>
+
+                <p style="margin-top:15px;"><strong>The balance:</strong> Zoom in to handle specific tasks, but only after you've zoomed out to see where they fit</p>
+
+                <p style="margin-top:15px;"><strong>Why this matters:</strong> Increases efficiency and reduces wasted effort on low-priority tasks</p>
+            </div>
+        </div>
+
+        <!-- PRACTICAL TOOLS -->
+        <div class="section page-break">
+            <h2>🛠️ Practical Instructions</h2>
+
+            <div class="workflow-step">
+                <h4>Implement Time Blocking</h4>
+                <ol style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li>List all major life domains (work, cleaning, self, daughter, business, sleep, meals)</li>
+                    <li>Assign specific, recurring time blocks for each domain on weekly calendar</li>
+                    <li>Treat these blocks as non-negotiable appointments</li>
+                    <li>Start with small, realistic blocks and adjust as needed</li>
+                    <li>Use visual aids (wall calendar, post-its) to keep big picture in view</li>
+                </ol>
+            </div>
+
+            <div class="workflow-step">
+                <h4>Refine To-Do Lists</h4>
+                <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li>Limit daily tasks to 3-5 items</li>
+                    <li>Prioritize based on urgency and importance</li>
+                    <li>Schedule breaks and "me time" intentionally</li>
+                </ul>
+            </div>
+
+            <div class="workflow-step">
+                <h4>Sleep Hygiene Practices</h4>
+                <p><strong>To try:</strong></p>
+                <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li>Wind down with calming activities (journaling, fairy lights) instead of TV</li>
+                    <li>Gradually shift "me time" to mornings if evening journaling disrupts sleep</li>
+                    <li>Maintain consistent bedtime (aim for midnight or earlier)</li>
+                </ul>
+
+                <p style="margin-top:15px;"><strong>The therapist's encouragement:</strong> "Keep trying — intentionally cut the TV off and do all the things for sleep hygiene."</p>
+            </div>
+
+            <div class="workflow-step">
+                <h4>Track Mood and Sleep</h4>
+                <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li>Use mood tracker to monitor emotional patterns</li>
+                    <li>Note any changes after medication adjustments</li>
+                </ul>
+            </div>
+
+            <div class="workflow-step">
+                <h4>Process Intrusive Thoughts</h4>
+                <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li>Write down persistent thoughts during "me time"</li>
+                    <li>Reflect on their content and possible triggers</li>
+                    <li>Avoid engaging with them late at night if it disrupts sleep</li>
+                </ul>
+            </div>
+
+            <div class="workflow-step">
+                <h4>Support Your Daughter's Organization</h4>
+                <p>Continue using tools like whiteboards and checklists to help her</p>
+            </div>
+
+            <div class="workflow-step">
+                <h4>Decompression Time After Work</h4>
+                <p><strong>Why this matters:</strong> Essential for mental health</p>
+                <p style="margin-top:10px;"><strong>Include in your time blocks:</strong> Transition time between work and other responsibilities</p>
+            </div>
+        </div>
+
+        <!-- HOMEWORK -->
+        <div class="section">
+            <h2>📝 Your Assignments</h2>
+
+            <div class="workflow-step">
+                <h4>Assignment #1: Create Weekly Time-Blocked Schedule</h4>
+                <p><strong>What to do:</strong> Draft a weekly schedule covering all major life domains</p>
+                <p style="margin-top:10px;"><strong>Time needed:</strong> One hour this week</p>
+            </div>
+
+            <div class="workflow-step">
+                <h4>Assignment #2: Use Visual Aids</h4>
+                <p><strong>What to do:</strong> Use wall calendar or post-it notes to visualize the schedule</p>
+                <p style="margin-top:10px;"><strong>Where:</strong> Place somewhere visible</p>
+            </div>
+
+            <div class="workflow-step">
+                <h4>Assignment #3: Limit Daily To-Do Lists</h4>
+                <p><strong>What to do:</strong> Keep daily tasks to 3-5 items</p>
+            </div>
+
+            <div class="workflow-step">
+                <h4>Assignment #4: Track Mood Daily</h4>
+                <p><strong>What to do:</strong> Fill out the mood tracker every day</p>
+            </div>
+
+            <div class="workflow-step">
+                <h4>Assignment #5: Experiment with "Me Time" Timing</h4>
+                <p><strong>What to do:</strong> Move "me time" to mornings and note effects on sleep</p>
+            </div>
+
+            <div class="workflow-step">
+                <h4>What to Bring Next Time</h4>
+                <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li>Completed time-blocked schedule</li>
+                    <li>Filled out mood tracker</li>
+                </ul>
+
+                <p style="margin-top:15px;"><strong>Timeline:</strong> Complete before next session (in one to two weeks)</p>
+            </div>
+        </div>
+
+        <!-- MEDICATION PLAN -->
+        <div class="section page-break">
+            <h2>💊 Medication Plan</h2>
+
+            <div class="med-box">
+                <h4>Vraylar (Cariprazine) - DOSAGE INCREASE</h4>
+                <p><strong>New dosage:</strong> Increase to 3mg (from current dose)</p>
+                <p style="margin-top:10px;"><strong>Important:</strong> Not all at once — titrate as directed</p>
+                <p style="margin-top:10px;"><strong>Timing:</strong> Once daily, as prescribed (at same time each day)</p>
+                
+                <p style="margin-top:15px;"><strong>Purpose:</strong> Mood stabilization — reduce intensity of emotional highs and lows</p>
+                
+                <p style="margin-top:15px;"><strong>How to take:</strong> With or without food</p>
+                
+                <p style="margin-top:15px;"><strong>Expected benefits:</strong></p>
+                <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li>Smoother mood</li>
+                    <li>Less emotional reactivity</li>
+                    <li>Possible improvement in sleep</li>
+                </ul>
+
+                <p style="margin-top:15px;"><strong>Important clarification:</strong> "It's not about eliminating emotion, but about blunting the highs and lows."</p>
+
+                <p style="margin-top:15px;"><strong>Side effects to monitor:</strong></p>
+                <ul style="margin: 10px 0 0 20px; line-height: 2;">
+                    <li>Drowsiness</li>
+                    <li>Restlessness</li>
+                    <li>Changes in appetite</li>
+                    <li>Unusual movements</li>
+                    <li>Worsening mood</li>
+                </ul>
+
+                <p style="margin-top:15px;"><strong>Safety warnings:</strong> Report any severe side effects or sudden mood changes. Do not stop abruptly.</p>
+                
+                <p style="margin-top:15px;"><strong>Rationale:</strong> Current dose not adequately controlling mood swings; higher dose may provide better stabilization</p>
+            </div>
+
+            <div class="med-box">
+                <h4>Temazepam - ONGOING</h4>
+                <p><strong>Timing:</strong> At bedtime as needed for sleep</p>
+                
+                <p style="margin-top:15px;"><strong>Purpose:</strong> Aid in falling asleep</p>
+                
+                <p style="margin-top:15px;"><strong>How to take:</strong> Shortly before bedtime</p>
+                
+                <p style="margin-top:15px;"><strong>Expected benefits:</strong> Easier time falling asleep</p>
+                
+                <p style="margin-top:15px;"><strong>Side effects to monitor:</strong> Next-day drowsiness, confusion, sleepwalking</p>
+                
+                <p style="margin-top:15px;"><strong>Safety warnings:</strong> Use caution due to history of sleepwalking. Do not combine with alcohol or other sedatives.</p>
+                
+                <p style="margin-top:15px;"><strong>Rationale:</strong> Helps initiate sleep, but does not maintain sleep</p>
+            </div>
+
+            <div class="med-box">
+                <h4>Xanax (Alprazolam) - EMERGENCIES ONLY</h4>
+                <p><strong>Dosage:</strong> 50 pills/month as needed</p>
+                
+                <p style="margin-top:15px;"><strong>Purpose:</strong> Acute anxiety relief</p>
+                
+                <p style="margin-top:15px;"><strong>How to take:</strong> As needed for severe anxiety or panic</p>
+                
+                <p style="margin-top:15px;"><strong>Expected benefits:</strong> Rapid reduction in anxiety</p>
+                
+                <p style="margin-top:15px;"><strong>Side effects to monitor:</strong> Drowsiness, dependence, confusion</p>
+                
+                <p style="margin-top:15px;"><strong>Safety warnings:</strong> Use only as directed; risk of dependence</p>
+                
+                <p style="margin-top:15px;"><strong>Rationale:</strong> For emergency use only, not for daily management</p>
+            </div>
+        </div>
+
+        <!-- QUOTES AND BOTTOM LINE -->
+        <div class="section page-break">
+            <h2>💬 Key Quotes to Remember</h2>
+            <div class="workflow-step">
+                <p style="font-size:1.2em; line-height:2; font-style:italic;">
+                    1. "Time blocking is not just blocking off for current work, but blocking off basically your day."
+                    <br><br>
+                    2. "Treat these blocks like executive meetings — they are sacred and not to be rescheduled."
+                    <br><br>
+                    3. "You need a forest view, not a tree view. Zoom out and look at all the things you want to do."
+                    <br><br>
+                    4. "Your thoughts don't always listen to you. The work is intentionally done to counter them."
+                    <br><br>
+                    5. "A lot of your ups and downs are driven by how you're feeling, not by random mood swings."
+                    <br><br>
+                    6. "It's not about eliminating emotion, but about blunting the highs and lows."
+                    <br><br>
+                    7. "Start with manageable goals and adjust as needed to avoid overwhelm."
+                    <br><br>
+                    8. "Keep trying — intentionally cut the TV off and do all the things for sleep hygiene."
+                    <br><br>
+                    9. "If you're feeling stuck, it's okay to chip away at it one tip at a time."
+                    <br><br>
+                    10. "Validation: It's normal to feel overwhelmed when you're juggling so much."
+                </p>
+            </div>
+        </div>
+
+        <div class="section" style="background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%); color: #E8DFD6; border: none;">
+            <h2 style="color: #E8DFD6;">🗓️ The Bottom Line</h2>
+            <p style="font-size:1.2em; line-height:2; margin-top:20px;">
+                <strong>This session focused on helping you build sustainable structure for your life by introducing time blocking and encouraging shift from detail-obsessed "tree view" to big-picture "forest view."</strong>
+                <br><br>
+                <strong>"Validation: It's normal to feel overwhelmed when you're juggling so much."</strong>
+                <br><br>
+                <strong>Two frameworks taught:</strong>
+                <br><br>
+                <strong>1. Time Blocking for Life Management (5 steps)</strong> — Identify Life Domains (all areas needing regular attention: work, cleaning, daughter, self-care, business, sleep, meals). Assign Time Blocks (specific, recurring time slots for each domain — e.g., 3-6pm Mondays for work admin, Saturday mornings for cleaning, daily me-time). Treat Time Blocks as Non-Negotiable ("Treat these blocks like executive meetings — they are sacred"). Adjust for Realism (start with manageable goals, limit to-do lists to 3-5 items, avoid overwhelm). Review and Refine (regularly assess what's working and tweak as needed). Prevents neglecting important areas, creates predictability and routine, increases follow-through, prevents discouragement, ensures system evolves with needs.
+                <br><br>
+                <strong>"Time blocking is not just blocking off for current work, but blocking off basically your day."</strong>
+                <br><br>
+                You already use time blocking at work successfully. Extend this approach to personal life.
+                <br><br>
+                <strong>2. Forest View vs. Tree View (2 steps)</strong> — Zoom Out (Forest View): Periodically step back to see big picture of life and goals. Use wall calendars, post-its to visualize. Prevents getting lost in details, helps prioritize what truly matters. Zoom In (Tree View): Focus on specific tasks only after clarifying their place in bigger picture. You tend to get bogged down in daily chaos (tree view), losing sight of broader goals. Increases efficiency, reduces wasted effort on low-priority tasks.
+                <br><br>
+                <strong>"You need a forest view, not a tree view. Zoom out and look at all the things you want to do."</strong>
+                <br><br>
+                <strong>Before vs. After:</strong> Before time blocking: overwhelmed by endless lists, paralyzed by missed tasks. After: predictable routine, smaller achievable goals, less guilt for unfinished items.
+                <br><br>
+                <strong>The situation:</strong> Experiencing recurring loneliness, depressive moods, overwhelm by daily responsibilities. Feeling isolated when daughter away, struggles with motivation for household tasks, "stuck" due to lack of transportation/social connection. Thrown yourself into work (helps productivity but doesn't fully address emotional needs). Attempts to manage with to-do lists/journals but become paralyzed when lists grow too long or fall behind. Ongoing sleep disturbances (sleepwalking, fragmented sleep), managing complex medication regimen. Daughter may have ADHD, actively supporting her with organizational tools. Living environment feels cluttered and embarrassing.
+                <br><br>
+                <strong>Core problem:</strong> Lack of sustainable structure in daily life, leading to cycles of overwhelm, avoidance, emotional dysregulation. Mismatch between desire for order and current ability to implement it consistently, compounded by sleep issues and medication side effects.
+                <br><br>
+                <strong>Mood swings clarification:</strong> "A lot of your ups and downs are driven by how you're feeling, not by random mood swings." Your mood swings are reactive to life events rather than random. This fits with BPD (Borderline Personality Disorder), not bipolar disorder.
+                <br><br>
+                <strong>Intrusive thoughts:</strong> Experience intrusive, argumentative thoughts that increase with stress. These are internal arguments, not external hallucinations. Likely magnified by stress/anxiety, not sign of psychosis. "Your thoughts don't always listen to you. The work is intentionally done to counter them."
+                <br><br>
+                <strong>Medication adjustments:</strong> Vraylar increase to 3mg (titrate gradually) for better mood stabilization. "It's not about eliminating emotion, but about blunting the highs and lows." Current dose not adequately controlling mood swings. Monitor for drowsiness, restlessness, appetite changes, unusual movements, worsening mood. Temazepam ongoing for sleep initiation (caution due to sleepwalking history). Xanax for emergencies only (50 pills/month as needed, not for daily management).
+                <br><br>
+                <strong>Homework:</strong> (1) Create weekly time-blocked schedule covering all major life domains (one hour this week). (2) Use wall calendar or post-it notes to visualize schedule somewhere visible. (3) Limit daily to-do lists to 3-5 items. (4) Track mood daily using new mood tracker. (5) Experiment with moving "me time" to mornings and note effects on sleep. Bring completed schedule and mood tracker to next session (one to two weeks).
+                <br><br>
+                <strong>Practical guidance:</strong> Sleep hygiene crucial — reduce stimulation before bed, experiment with calming lights. Decompression time after work essential. Support daughter's organization with tools. Track mood to monitor medication effects. Process intrusive thoughts by writing during me-time, avoid engaging late at night. Be realistic about what you can accomplish.
+                <br><br>
+                <strong>"Start with manageable goals and adjust as needed to avoid overwhelm."</strong>
+                <br><br>
+                <strong>"If you're feeling stuck, it's okay to chip away at it one tip at a time."</strong>
+                <br><br>
+                By identifying your key life domains and assigning them regular, protected time blocks, you can reduce overwhelm, increase motivation, and make steady progress on your goals.
+                <br><br>
+                The therapist validated your struggles with mood swings, intrusive thoughts, and sleep, clarifying that these are understandable responses to stress and not signs of more severe disorder.
+                <br><br>
+                <strong>Remember: Progress is incremental — chipping away at your goals one step at a time is not only acceptable, it's expected.</strong>
+                <br><br>
+                <strong>You are not alone in feeling overwhelmed, and with these new strategies, you are building a foundation for greater stability and self-compassion.</strong> 🗓️
+            </p>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
