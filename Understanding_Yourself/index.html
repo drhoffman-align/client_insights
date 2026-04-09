@@ -1,0 +1,1469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Understanding Yourself — A Personal Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --burg: #5C1A2E;
+    --burg-l: #7A2440;
+    --burg-pale: #F7EFEF;
+    --gold: #B8952A;
+    --gold-l: #D4AF5A;
+    --gold-pale: #FBF5E8;
+    --navy: #1B2A3B;
+    --navy-l: #243547;
+    --charcoal: #2C2C2C;
+    --mid: #4A4A4A;
+    --slate: #6B7280;
+    --slate-l: #9CA3AF;
+    --cream: #FAF7F2;
+    --cream-d: #F0EBE0;
+    --line: #E8DDD0;
+    --sage: #EEF4EE;
+    --sage-d: #D4E8D4;
+    --sky: #EEF3F9;
+    --white: #FFFFFF;
+    --radius: 10px;
+    --shadow: 0 4px 24px rgba(92,26,46,0.06);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--charcoal);
+    font-size: 15px;
+    line-height: 1.75;
+    overflow-x: hidden;
+  }
+
+  /* ── SCROLLBAR ── */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--cream-d); }
+  ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(250,247,242,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
+    padding: 0 40px;
+    height: 56px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+  }
+  .nav-links {
+    display: flex; gap: 28px; list-style: none;
+  }
+  .nav-links a {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--slate);
+    text-decoration: none;
+    transition: color 0.2s;
+    font-weight: 400;
+  }
+  .nav-links a:hover { color: var(--burg); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: var(--navy);
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 80px 80px 60px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; top: -180px; right: -180px;
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    border: 1px solid rgba(184,149,42,0.12);
+    animation: pulse-ring 8s ease-in-out infinite;
+  }
+  .hero::after {
+    content: '';
+    position: absolute; top: -100px; right: -100px;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    border: 1px solid rgba(184,149,42,0.08);
+    animation: pulse-ring 8s ease-in-out infinite 2s;
+  }
+  .hero-accent {
+    position: absolute; top: 0; left: 0; right: 0; height: 4px;
+    background: linear-gradient(90deg, var(--burg), var(--gold), var(--burg-l));
+  }
+  @keyframes pulse-ring {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.04); opacity: 0.6; }
+  }
+  .hero-eyebrow {
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+    font-weight: 500;
+    opacity: 0;
+    animation: fade-up 0.8s ease forwards 0.2s;
+  }
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(42px, 6vw, 72px);
+    color: var(--white);
+    font-weight: 300;
+    line-height: 1.1;
+    max-width: 700px;
+    opacity: 0;
+    animation: fade-up 0.8s ease forwards 0.4s;
+  }
+  .hero-title em {
+    font-style: italic;
+    color: var(--gold-l);
+  }
+  .hero-rule {
+    width: 56px; height: 2px;
+    background: var(--gold);
+    margin: 32px 0;
+    opacity: 0;
+    animation: fade-up 0.8s ease forwards 0.6s;
+  }
+  .hero-sub {
+    font-size: 15px;
+    color: rgba(255,255,255,0.55);
+    max-width: 500px;
+    line-height: 1.8;
+    opacity: 0;
+    animation: fade-up 0.8s ease forwards 0.8s;
+  }
+  .hero-meta {
+    margin-top: 64px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(184,149,42,0.2);
+    display: flex; gap: 48px;
+    opacity: 0;
+    animation: fade-up 0.8s ease forwards 1s;
+  }
+  .hero-meta-item label {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 5px;
+  }
+  .hero-meta-item span {
+    font-size: 13px;
+    color: rgba(255,255,255,0.65);
+  }
+  .hero-scroll {
+    position: absolute; bottom: 36px; left: 50%;
+    transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    opacity: 0; animation: fade-up 0.8s ease forwards 1.4s;
+  }
+  .hero-scroll span { font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.3); }
+  .hero-scroll-line {
+    width: 1px; height: 40px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.3), transparent);
+    animation: scroll-line 1.8s ease-in-out infinite;
+  }
+  @keyframes scroll-line { 0%,100%{opacity:0.3;transform:scaleY(1)} 50%{opacity:1;transform:scaleY(0.6)} }
+  @keyframes fade-up { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+
+  /* ── PAGE WRAPPER ── */
+  .page {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  /* ── LETTER SECTION ── */
+  .letter {
+    padding: 96px 0 80px;
+    text-align: center;
+  }
+  .letter-ornament {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    color: var(--gold);
+    opacity: 0.4;
+    margin-bottom: 16px;
+  }
+  .letter h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    color: var(--burg);
+    font-weight: 400;
+    margin-bottom: 36px;
+  }
+  .letter-body {
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  .letter-body p {
+    font-size: 15px;
+    color: var(--mid);
+    line-height: 1.85;
+    margin-bottom: 18px;
+  }
+  .letter-body p strong { color: var(--charcoal); font-weight: 500; }
+
+  /* ── SECTION STRUCTURE ── */
+  .section {
+    padding: 80px 0;
+    border-top: 1px solid var(--line);
+  }
+  .section-banner {
+    display: flex; align-items: center; gap: 20px;
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 24px 32px;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .section-banner::before {
+    content: '';
+    position: absolute; right: -40px; top: -40px;
+    width: 120px; height: 120px;
+    border-radius: 50%;
+    background: rgba(184,149,42,0.08);
+  }
+  .section-banner.burg { background: var(--burg); }
+  .section-banner.warm { background: #3B2A1A; }
+  .section-banner.deep { background: #2A1A2E; }
+  .section-banner.green { background: #1A2A1A; }
+  .section-banner.gold-bg { background: #2A2010; }
+
+  .banner-num {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.25);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px; font-weight: 500; color: var(--white);
+    flex-shrink: 0;
+  }
+  .banner-text h2 {
+    font-size: 18px; font-weight: 500; color: var(--white); margin-bottom: 3px;
+  }
+  .banner-text p {
+    font-size: 12px; color: rgba(212,175,90,0.8); font-style: italic;
+  }
+
+  /* ── CALLOUT ── */
+  .callout {
+    background: var(--gold-pale);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: 20px 24px;
+    margin: 28px 0;
+    font-style: italic;
+    font-size: 14.5px;
+    color: var(--charcoal);
+    line-height: 1.75;
+  }
+  .callout.sage {
+    background: var(--sage);
+    border-left-color: #3B6B4A;
+    color: var(--mid);
+  }
+  .callout.sky {
+    background: var(--sky);
+    border-left-color: var(--navy);
+  }
+
+  /* ── DIAGNOSTIC CARDS ── */
+  .dx-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 28px 32px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow);
+    border-left: 4px solid var(--burg);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .dx-card:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(92,26,46,0.1); }
+  .dx-card.navy { border-left-color: var(--navy); }
+  .dx-label { font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--burg); margin-bottom: 6px; font-weight: 500; }
+  .dx-card.navy .dx-label { color: var(--navy); }
+  .dx-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px; color: var(--burg); font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .dx-card.navy .dx-name { color: var(--navy); }
+  .dx-desc { font-size: 14px; color: var(--mid); line-height: 1.75; margin-bottom: 16px; }
+  .dx-bullets { list-style: none; }
+  .dx-bullets li {
+    font-size: 13.5px; color: var(--mid);
+    padding: 5px 0 5px 20px;
+    position: relative;
+    border-bottom: 1px solid var(--line);
+  }
+  .dx-bullets li:last-child { border-bottom: none; }
+  .dx-bullets li::before {
+    content: '·';
+    position: absolute; left: 4px;
+    color: var(--gold); font-size: 18px; line-height: 1.3;
+  }
+
+  /* ── CLUSTER CARDS ── */
+  .cluster-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+  .cluster-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+  .cluster-card:hover { transform: translateY(-3px); box-shadow: 0 10px 36px rgba(92,26,46,0.1); }
+  .cluster-badge {
+    padding: 10px 16px;
+    font-size: 9px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--white); font-weight: 500;
+  }
+  .cluster-body { padding: 18px 20px; }
+  .cluster-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px; color: var(--charcoal); font-weight: 600;
+    margin-bottom: 14px; line-height: 1.3;
+  }
+  .trait-group { margin-bottom: 12px; }
+  .trait-group-label {
+    font-size: 8.5px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--slate-l); margin-bottom: 6px; display: block;
+  }
+  .trait-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+  .trait-tag {
+    font-size: 11px;
+    padding: 3px 9px;
+    border-radius: 20px;
+    background: var(--sage);
+    color: #2D5A3D;
+    font-weight: 400;
+  }
+  .trait-tag.shadow {
+    background: var(--burg-pale);
+    color: var(--burg);
+  }
+  .cluster-insight {
+    font-size: 12px; font-style: italic;
+    color: var(--slate);
+    border-top: 1px solid var(--line);
+    padding-top: 12px; margin-top: 12px;
+    line-height: 1.65;
+  }
+  .cluster-full {
+    background: var(--gold-pale);
+    border: 1px solid rgba(184,149,42,0.2);
+    border-radius: var(--radius);
+    padding: 24px 28px;
+  }
+  .cluster-full .cluster-badge-inline {
+    display: inline-block;
+    font-size: 9px; letter-spacing: 2px; text-transform: uppercase;
+    color: #7A6010; font-weight: 500; margin-bottom: 8px;
+  }
+  .cluster-full h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px; color: var(--charcoal); font-weight: 600; margin-bottom: 10px;
+  }
+
+  /* ── CYCLE STEPS ── */
+  .cycle-steps { display: flex; flex-direction: column; gap: 0; }
+  .cycle-step {
+    display: flex; align-items: flex-start; gap: 20px;
+    padding: 18px 0;
+    border-bottom: 1px dashed var(--line);
+    position: relative;
+    opacity: 0;
+    transform: translateX(-16px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  .cycle-step.visible { opacity: 1; transform: translateX(0); }
+  .cycle-step:last-child { border-bottom: none; }
+  .step-connector {
+    position: absolute; left: 20px; top: 54px; bottom: -18px;
+    width: 1px; background: var(--line);
+  }
+  .cycle-step:last-child .step-connector { display: none; }
+  .step-circle {
+    width: 40px; height: 40px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 15px; font-weight: 500; color: var(--white);
+    flex-shrink: 0;
+  }
+  .step-content { flex: 1; padding-top: 8px; }
+  .step-title { font-size: 14px; font-weight: 500; color: var(--charcoal); margin-bottom: 5px; }
+  .step-body { font-size: 13px; color: var(--mid); line-height: 1.7; }
+
+  /* ── TRUST BAR ── */
+  .trust-formula {
+    display: flex; align-items: stretch; gap: 0;
+    border-radius: var(--radius); overflow: hidden;
+    box-shadow: var(--shadow);
+    margin: 28px 0;
+  }
+  .trust-piece {
+    flex: 1; padding: 18px 12px;
+    text-align: center; background: var(--cream-d);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    transition: background 0.2s;
+  }
+  .trust-piece:hover { background: var(--cream); }
+  .trust-piece.op {
+    flex: 0 0 36px; background: var(--white);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px; color: var(--gold); font-weight: 300;
+  }
+  .trust-piece.highlight { background: var(--burg); }
+  .trust-piece.result { background: var(--gold-pale); border: 1px solid rgba(184,149,42,0.3); }
+  .trust-sym {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px; font-weight: 600;
+    color: var(--burg); margin-bottom: 4px;
+  }
+  .trust-piece.highlight .trust-sym { color: var(--white); }
+  .trust-piece.result .trust-sym { color: var(--burg); }
+  .trust-lbl { font-size: 8.5px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--slate-l); }
+  .trust-piece.highlight .trust-lbl { color: rgba(212,175,90,0.7); }
+  .trust-piece.result .trust-lbl { color: var(--gold); }
+
+  .trust-rows { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+  .trust-row {
+    display: grid; grid-template-columns: 130px 1fr;
+    border-bottom: 1px solid var(--line);
+  }
+  .trust-row:last-child { border-bottom: none; }
+  .trust-row-label {
+    padding: 16px 20px;
+    font-size: 13px; font-weight: 500; color: var(--charcoal);
+    display: flex; align-items: center;
+    border-right: 1px solid var(--line);
+  }
+  .trust-row-desc { padding: 16px 20px; font-size: 13px; color: var(--mid); display: flex; align-items: center; }
+  .trust-row.gold-row { background: var(--gold-pale); }
+  .trust-row.gold-row .trust-row-label { color: var(--burg); font-weight: 500; }
+
+  /* ── GOAL CARDS ── */
+  .goals-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+  .goal-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 22px 22px 22px 20px;
+    box-shadow: var(--shadow);
+    border-left: 3px solid var(--burg);
+    transition: transform 0.2s;
+  }
+  .goal-card:hover { transform: translateY(-2px); }
+  .goal-card.navy { border-left-color: var(--navy); }
+  .goal-card.green { border-left-color: #3B6B4A; }
+  .goal-card.gold { border-left-color: var(--gold); }
+  .goal-card.violet { border-left-color: #6B4E9A; }
+  .goal-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px; color: var(--gold); font-weight: 300; line-height: 1;
+    margin-bottom: 8px;
+  }
+  .goal-title { font-size: 13px; font-weight: 500; color: var(--charcoal); margin-bottom: 8px; }
+  .goal-desc { font-size: 12.5px; color: var(--mid); line-height: 1.7; }
+
+  /* ── REFRAME CARDS ── */
+  .reframe-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 28px 0; }
+  .reframe-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 28px 20px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+  .reframe-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(92,26,46,0.1); }
+  .reframe-icon { font-size: 30px; color: var(--gold); margin-bottom: 12px; display: block; }
+  .reframe-title { font-size: 13px; font-weight: 500; color: var(--charcoal); margin-bottom: 10px; }
+  .reframe-divider { width: 30px; height: 1px; background: var(--line); margin: 10px auto; }
+  .reframe-desc { font-size: 12px; color: var(--mid); line-height: 1.7; }
+
+  /* ── CLOSING BLOCK ── */
+  .closing {
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 48px 52px;
+    margin: 48px 0 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .closing::before {
+    content: '';
+    position: absolute; top: -60px; right: -60px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: rgba(184,149,42,0.06);
+  }
+  .closing-label {
+    font-size: 9px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 20px;
+  }
+  .closing-rule { width: 48px; height: 1px; background: rgba(184,149,42,0.3); margin: 0 auto 28px; }
+  .closing p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px; font-style: italic;
+    color: rgba(224,216,204,0.9); line-height: 1.8;
+    max-width: 580px; margin: 0 auto 20px;
+  }
+  .closing-sig {
+    font-size: 12px; color: var(--gold); margin-top: 28px;
+    font-style: normal; font-family: 'DM Sans', sans-serif;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--charcoal);
+    padding: 20px 40px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .footer-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--gold);
+  }
+  .footer-note { font-size: 11px; color: rgba(255,255,255,0.3); }
+
+  /* ── PROSE ── */
+  .lead {
+    font-size: 16px; color: var(--charcoal); line-height: 1.8;
+    margin-bottom: 20px;
+  }
+  .body-text {
+    font-size: 14.5px; color: var(--mid); line-height: 1.8;
+    margin-bottom: 16px;
+  }
+  .body-text strong { color: var(--charcoal); font-weight: 500; }
+  .body-text em { font-style: italic; color: var(--charcoal); }
+
+  /* ── ORNAMENTAL DIVIDER ── */
+  .ornament {
+    display: flex; align-items: center; gap: 14px;
+    margin: 36px 0; color: var(--line);
+  }
+  .ornament::before, .ornament::after {
+    content: ''; flex: 1; height: 1px; background: var(--line);
+  }
+  .ornament span { font-size: 16px; color: var(--gold); opacity: 0.5; }
+
+  /* ── SCROLL ANIMATIONS ── */
+  .reveal {
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 700px) {
+    nav { padding: 0 20px; }
+    .nav-links { display: none; }
+    .hero { padding: 80px 28px 60px; }
+    .page { padding: 0 24px; }
+    .cluster-grid { grid-template-columns: 1fr; }
+    .goals-grid { grid-template-columns: 1fr; }
+    .reframe-grid { grid-template-columns: 1fr; }
+    .trust-formula { flex-wrap: wrap; }
+    .trust-row { grid-template-columns: 1fr; }
+    .closing { padding: 36px 28px; }
+    footer { flex-direction: column; gap: 8px; text-align: center; }
+    .hero-meta { flex-direction: column; gap: 20px; }
+  }
+
+  /* ── FRAMEWORK SUB-SECTIONS ── */
+  .framework-sub {
+    margin: 44px 0 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--line);
+  }
+  .framework-sub-label {
+    font-size: 9px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 6px; font-weight: 500;
+  }
+  .framework-sub-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px; font-weight: 400; color: var(--burg);
+    margin-bottom: 5px; line-height: 1.2;
+  }
+  .framework-sub-sub {
+    font-size: 13px; color: var(--slate); font-style: italic;
+  }
+
+  /* ── PERSPECTIVE CALLOUT ── */
+  .framework-perspective {
+    margin: 24px 0;
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 2px;
+  }
+  .framework-perspective-inner {
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 28px 32px;
+    position: relative;
+  }
+  .framework-perspective-icon {
+    display: block;
+    font-size: 22px; color: var(--gold);
+    margin-bottom: 12px; opacity: 0.7;
+  }
+  .framework-perspective-inner p {
+    font-size: 14px; color: rgba(224,216,204,0.85);
+    line-height: 1.8; font-style: italic;
+  }
+
+  /* ── KNOWLEDGE vs EXPERIENCE CARDS ── */
+  .ke-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
+    margin: 24px 0;
+  }
+  .ke-card {
+    border-radius: var(--radius); padding: 24px;
+    box-shadow: var(--shadow);
+  }
+  .ke-belief { background: var(--burg-pale); border-top: 3px solid var(--burg); }
+  .ke-exp    { background: var(--sage);      border-top: 3px solid #3B6B4A; }
+  .ke-card-label {
+    font-size: 8.5px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--slate); margin-bottom: 6px;
+  }
+  .ke-belief .ke-card-label { color: var(--burg); }
+  .ke-exp    .ke-card-label { color: #3B6B4A; }
+  .ke-card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px; font-weight: 600; color: var(--charcoal);
+    margin-bottom: 14px;
+  }
+  .ke-list { list-style: none; margin-bottom: 16px; }
+  .ke-list li {
+    font-size: 13px; color: var(--mid);
+    padding: 5px 0 5px 18px; position: relative;
+    border-bottom: 1px solid var(--line);
+    line-height: 1.6;
+  }
+  .ke-list li:last-child { border-bottom: none; }
+  .ke-list li::before {
+    content: '·'; position: absolute; left: 4px;
+    color: var(--gold); font-size: 16px; line-height: 1.4;
+  }
+  .ke-card-note {
+    font-size: 11.5px; color: var(--slate); font-style: italic;
+    padding-top: 10px; border-top: 1px solid var(--line);
+  }
+
+  /* ── IMBALANCE VISUAL ── */
+  .ke-imbalance {
+    background: var(--white); border-radius: var(--radius);
+    padding: 24px 28px; margin: 24px 0;
+    box-shadow: var(--shadow);
+  }
+  .ke-imbalance-row { margin-bottom: 16px; }
+  .ke-imbalance-row:last-of-type { margin-bottom: 0; }
+  .ke-imb-label {
+    font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--slate); margin-bottom: 7px; font-weight: 500;
+  }
+  .ke-imb-bar-wrap { display: flex; height: 32px; border-radius: 6px; overflow: hidden; }
+  .ke-imb-bar {
+    display: flex; align-items: center; padding: 0 12px;
+    font-size: 11px; font-weight: 500; white-space: nowrap;
+    transition: width 1s ease;
+  }
+  .ke-imb-belief     { background: rgba(92,26,46,0.12); color: var(--burg); }
+  .ke-imb-exp        { background: rgba(59,107,74,0.15); color: #2D5A3D; }
+  .ke-imb-exp-neg    { background: rgba(59,107,74,0.12); color: #2D5A3D; }
+  .ke-imb-belief-neg { background: rgba(92,26,46,0.18); color: var(--burg); }
+  .ke-imbalance-note {
+    font-size: 12px; font-style: italic; color: var(--slate);
+    margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line);
+  }
+
+  /* ── SHIFT BLOCK ── */
+  .shift-block {
+    background: var(--white); border-radius: var(--radius);
+    padding: 28px 32px; margin: 24px 0;
+    box-shadow: var(--shadow);
+  }
+  .shift-row {
+    display: grid; grid-template-columns: 1fr 32px 1fr;
+    align-items: center; gap: 12px;
+    padding: 12px 0; border-bottom: 1px solid var(--line);
+  }
+  .shift-row:last-child { border-bottom: none; }
+  .shift-from {
+    font-size: 13px; color: var(--slate);
+    font-style: italic; text-align: right;
+    padding-right: 8px;
+  }
+  .shift-arrow {
+    font-size: 16px; color: var(--gold);
+    text-align: center; font-weight: 300;
+  }
+  .shift-to {
+    font-size: 13px; color: var(--charcoal);
+    font-weight: 500; padding-left: 8px;
+  }
+
+  /* ── SELF-TRUST GRID ── */
+  .trust-self-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+    margin: 24px 0;
+  }
+  .trust-self-card {
+    background: var(--white); border-radius: var(--radius);
+    padding: 20px 22px; box-shadow: var(--shadow);
+    border-top: 3px solid var(--line);
+    transition: transform 0.2s;
+  }
+  .trust-self-card:hover { transform: translateY(-2px); }
+  .ts-block:nth-child(1) { border-top-color: var(--burg); }
+  .ts-block:nth-child(2) { border-top-color: var(--navy); }
+  .ts-block:nth-child(3) { border-top-color: #3B6B4A; }
+  .ts-time { border-top-color: var(--gold) !important; background: var(--gold-pale) !important; }
+  .ts-variable {
+    font-size: 11px; font-weight: 500; letter-spacing: 1px;
+    text-transform: uppercase; color: var(--slate);
+    margin-bottom: 10px;
+  }
+  .ts-block:nth-child(1) .ts-variable { color: var(--burg); }
+  .ts-block:nth-child(2) .ts-variable { color: var(--navy); }
+  .ts-block:nth-child(3) .ts-variable { color: #3B6B4A; }
+  .ts-time .ts-variable { color: var(--gold) !important; }
+  .ts-desc { font-size: 12.5px; color: var(--mid); line-height: 1.7; }
+
+  /* ── GAP BLOCK ── */
+  .gap-block {
+    margin: 28px 0;
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-l) 100%);
+    border-radius: var(--radius); padding: 2px;
+  }
+  .gap-block-inner {
+    background: var(--navy);
+    border-radius: calc(var(--radius) - 2px);
+    padding: 32px 36px;
+  }
+  .gap-label {
+    font-size: 9px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 16px;
+  }
+  .gap-block-inner p {
+    font-size: 14px; color: rgba(224,216,204,0.88);
+    line-height: 1.8;
+  }
+  .gap-block-inner strong { color: var(--gold-l); font-weight: 500; }
+
+  /* ── RESPONSIVE ADDITIONS ── */
+  @media (max-width: 700px) {
+    .ke-grid { grid-template-columns: 1fr; }
+    .trust-self-grid { grid-template-columns: 1fr; }
+    .shift-row { grid-template-columns: 1fr; gap: 4px; }
+    .shift-from { text-align: left; }
+    .ke-imb-bar { font-size: 10px; }
+    .framework-perspective-inner { padding: 20px; }
+    .gap-block-inner { padding: 24px 20px; }
+  }
+
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">Alignment Psychiatry</div>
+  <ul class="nav-links">
+    <li><a href="#what-we-found">What We Found</a></li>
+    <li><a href="#who-you-are">Who You Are</a></li>
+    <li><a href="#the-pattern">The Pattern</a></li>
+    <li><a href="#frameworks">Frameworks</a></li>
+    <li><a href="#next-steps">Next Steps</a></li>
+    <li><a href="#reframe">A Different Story</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-accent"></div>
+  <div class="hero-eyebrow">A Personal Guide · Alignment Psychiatry</div>
+  <h1 class="hero-title">
+    Understanding<br><em>Yourself</em>
+  </h1>
+  <div class="hero-rule"></div>
+  <p class="hero-sub">A warm, plain-language summary of your psychological formulation — written for you, not about you.</p>
+  <div class="hero-meta">
+    <div class="hero-meta-item">
+      <label>Prepared By</label>
+      <span>Christopher J. Hoffman, MD</span>
+    </div>
+    <div class="hero-meta-item">
+      <label>Practice</label>
+      <span>Alignment Psychiatry</span>
+    </div>
+    <div class="hero-meta-item">
+      <label>For</label>
+      <span>Your eyes only</span>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="hero-scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- LETTER -->
+<div class="page">
+  <section class="letter reveal">
+    <div class="letter-ornament">✦</div>
+    <h2>A Letter to You</h2>
+    <div class="letter-body">
+      <p>What you're reading is not a diagnosis report. It's not a list of what's wrong with you. It's a map — one that we hope helps you make sense of some of the patterns you've been living inside of, perhaps for a long time.</p>
+      <p>The insights in this guide came from careful, honest reflection — yours and ours together. What we've found is not a broken person who needs fixing. What we've found is a <strong>deeply feeling, highly capable person</strong> whose nervous system learned to survive in conditions that didn't always give you what you needed.</p>
+      <p>Everything in this guide is written to be understood — not interpreted by another clinician, but read by <em>you</em>, on your couch, with a cup of tea, at whatever pace feels right.</p>
+      <p>You deserve to understand yourself. This is a step toward that.</p>
+    </div>
+  </section>
+</div>
+
+<!-- SECTION 1: WHAT WE FOUND -->
+<div class="page">
+  <section class="section" id="what-we-found">
+    <div class="section-banner reveal">
+      <div class="banner-num">1</div>
+      <div class="banner-text">
+        <h2>What We Found</h2>
+        <p>Understanding your patterns in plain language</p>
+      </div>
+    </div>
+
+    <p class="lead reveal">Two patterns showed up clearly in your history and your experience. We want to walk you through what they actually mean — because the clinical names can sound more alarming than the reality.</p>
+
+    <div class="dx-card reveal">
+      <div class="dx-label">Pattern One</div>
+      <div class="dx-name">Quiet Borderline Traits</div>
+      <p class="dx-desc">This is a pattern that develops when early emotional support was <strong>inconsistent or unpredictable</strong>. The "quiet" part is important — it means you tend to hold your distress <em>inward</em> rather than expressing it outward. You may look completely composed while something inside is churning.</p>
+      <ul class="dx-bullets">
+        <li>You attach deeply and quickly to people who feel safe</li>
+        <li>You tend to blame yourself when things go wrong in relationships</li>
+        <li>You can feel emotions very intensely, but often hold them in until they overflow</li>
+        <li>You may see people as "all good" or "all bad" at different times</li>
+        <li>Fear of losing connection quietly shapes many of your decisions</li>
+      </ul>
+    </div>
+
+    <div class="dx-card navy reveal">
+      <div class="dx-label">Pattern Two</div>
+      <div class="dx-name">ADHD</div>
+      <p class="dx-desc">ADHD is not just about attention or focus — it deeply affects how your brain handles <strong>emotions, impulses, and time.</strong> It's why you can have full insight into a pattern and still repeat it. It's why feelings hit you fast and hard. It's why the gap between knowing and doing can feel enormous.</p>
+      <ul class="dx-bullets">
+        <li>Emotions feel immediate and intense in the moment</li>
+        <li>Decisions made under stress, sadness, or excitement can happen very quickly</li>
+        <li>It can be hard to use past experiences to slow down current reactions</li>
+        <li>Focus and follow-through can be inconsistent — not because of effort, because of wiring</li>
+      </ul>
+    </div>
+
+    <div class="callout reveal">
+      Here is the important thing: these two patterns don't just exist side by side — they <strong>amplify each other</strong>. One creates deep emotional sensitivity. The other makes it harder to regulate those emotions in real time. Together, they create a loop that can feel exhausting. And it makes complete sense that it does.
+    </div>
+  </section>
+</div>
+
+<!-- SECTION 2: WHO YOU ARE -->
+<div class="page">
+  <section class="section" id="who-you-are">
+    <div class="section-banner warm reveal">
+      <div class="banner-num">2</div>
+      <div class="banner-text">
+        <h2>Who You Are</h2>
+        <p>Your five core identity clusters</p>
+      </div>
+    </div>
+
+    <p class="body-text reveal">We organized your self-described traits into five clusters — each one contains real strengths <em>and</em> the ways those same strengths can work against you under stress. Neither side cancels out the other.</p>
+
+    <div class="cluster-grid">
+
+      <div class="cluster-card reveal">
+        <div class="cluster-badge" style="background:var(--burg);">Cluster 1 — Your Superpower</div>
+        <div class="cluster-body">
+          <div class="cluster-name">Emotional Depth &amp; Relational Intelligence</div>
+          <div class="trait-group">
+            <span class="trait-group-label">Your Strengths</span>
+            <div class="trait-tags">
+              <span class="trait-tag">Empathetic</span>
+              <span class="trait-tag">Gentle</span>
+              <span class="trait-tag">Attentive</span>
+              <span class="trait-tag">Loyal</span>
+              <span class="trait-tag">Generous</span>
+              <span class="trait-tag">Inspiring</span>
+              <span class="trait-tag">Romantic</span>
+              <span class="trait-tag">Self-aware</span>
+            </div>
+          </div>
+          <div class="trait-group">
+            <span class="trait-group-label">Growth Edges</span>
+            <div class="trait-tags">
+              <span class="trait-tag shadow">Slow to trust</span>
+              <span class="trait-tag shadow">Quick to attach</span>
+              <span class="trait-tag shadow">Can be resentful</span>
+              <span class="trait-tag shadow">Inconsistent availability</span>
+            </div>
+          </div>
+          <div class="cluster-insight">You don't do surface-level. You feel deeply, invest deeply — and get hurt deeply when it's not reciprocated or safe.</div>
+        </div>
+      </div>
+
+      <div class="cluster-card reveal">
+        <div class="cluster-badge" style="background:#6B4E1A;">Cluster 2 — Your Energy</div>
+        <div class="cluster-body">
+          <div class="cluster-name">Creative &amp; Expressive Mind</div>
+          <div class="trait-group">
+            <span class="trait-group-label">Your Strengths</span>
+            <div class="trait-tags">
+              <span class="trait-tag">Creative</span>
+              <span class="trait-tag">Witty</span>
+              <span class="trait-tag">Humorous</span>
+              <span class="trait-tag">Sophisticated</span>
+              <span class="trait-tag">Motivational</span>
+              <span class="trait-tag">Intelligent</span>
+              <span class="trait-tag">Resourceful</span>
+            </div>
+          </div>
+          <div class="trait-group">
+            <span class="trait-group-label">Growth Edges</span>
+            <div class="trait-tags">
+              <span class="trait-tag shadow">Silly at wrong moments</span>
+              <span class="trait-tag shadow">Argumentative</span>
+              <span class="trait-tag shadow">Can disengage under pressure</span>
+            </div>
+          </div>
+          <div class="cluster-insight">You shine early — your mind is interesting. Stress or boredom can make you pull back or destabilize.</div>
+        </div>
+      </div>
+
+      <div class="cluster-card reveal">
+        <div class="cluster-badge" style="background:var(--navy);">Cluster 3 — Your Engine</div>
+        <div class="cluster-body">
+          <div class="cluster-name">High Standards &amp; Internal Pressure</div>
+          <div class="trait-group">
+            <span class="trait-group-label">Your Strengths</span>
+            <div class="trait-tags">
+              <span class="trait-tag">Dedicated</span>
+              <span class="trait-tag">Thorough</span>
+              <span class="trait-tag">Independent</span>
+              <span class="trait-tag">Brave</span>
+              <span class="trait-tag">Resilient</span>
+              <span class="trait-tag">Optimistic</span>
+            </div>
+          </div>
+          <div class="trait-group">
+            <span class="trait-group-label">Growth Edges</span>
+            <div class="trait-tags">
+              <span class="trait-tag shadow">Perfectionist</span>
+              <span class="trait-tag shadow">Harsh toward yourself</span>
+              <span class="trait-tag shadow">Low confidence under pressure</span>
+              <span class="trait-tag shadow">Impulsive reactions</span>
+            </div>
+          </div>
+          <div class="cluster-insight">You expect a lot from yourself. Those standards become self-criticism when there's no structure to hold them.</div>
+        </div>
+      </div>
+
+      <div class="cluster-card reveal">
+        <div class="cluster-badge" style="background:var(--slate);">Cluster 4 — Your Armor</div>
+        <div class="cluster-body">
+          <div class="cluster-name">Protection &amp; Safety Strategies</div>
+          <div class="trait-group">
+            <span class="trait-group-label">Your Strengths</span>
+            <div class="trait-tags">
+              <span class="trait-tag">Private</span>
+              <span class="trait-tag">Independent</span>
+              <span class="trait-tag">Calm</span>
+              <span class="trait-tag">Non-confrontational</span>
+            </div>
+          </div>
+          <div class="trait-group">
+            <span class="trait-group-label">Growth Edges</span>
+            <div class="trait-tags">
+              <span class="trait-tag shadow">Explosive when pushed</span>
+              <span class="trait-tag shadow">Can become cold</span>
+              <span class="trait-tag shadow">Controlling when insecure</span>
+            </div>
+          </div>
+          <div class="cluster-insight">You protect yourself by keeping things in — until you can't anymore. Then it comes out sideways.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="cluster-full reveal">
+      <span class="cluster-badge-inline">Cluster 5 — The Real Bottleneck</span>
+      <h3>Regulation &amp; Consistency</h3>
+      <p class="body-text">This cluster is <strong>not a personality flaw</strong>. It is a wiring issue. Worrisome thinking, difficulty focusing, moodiness, impulsive moments, emotional eating, escapism — these are all <em>symptoms of a regulation system under strain</em>, not character defects. This is the most directly connected to your ADHD, and also the most directly treatable.</p>
+      <div class="trait-tags" style="margin-top:8px;">
+        <span class="trait-tag shadow">Worrisome</span>
+        <span class="trait-tag shadow">Forgetful</span>
+        <span class="trait-tag shadow">Difficulty focusing</span>
+        <span class="trait-tag shadow">Impulsive under stress</span>
+        <span class="trait-tag shadow">Moody</span>
+        <span class="trait-tag shadow">Escapist</span>
+        <span class="trait-tag shadow">Impatient</span>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- SECTION 3: THE PATTERN -->
+<div class="page">
+  <section class="section" id="the-pattern">
+    <div class="section-banner deep reveal">
+      <div class="banner-num">3</div>
+      <div class="banner-text">
+        <h2>The Pattern</h2>
+        <p>What happens when a need goes unmet</p>
+      </div>
+    </div>
+
+    <p class="body-text reveal">There is a cycle that tends to happen when you don't get what you need — connection, safety, consistency, validation. Recognizing the steps doesn't mean you'll stop them immediately. But it gives you somewhere to <em>intervene</em>.</p>
+
+    <div class="cycle-steps">
+
+      <div class="cycle-step">
+        <div class="step-connector"></div>
+        <div class="step-circle" style="background:#5C1A2E;">1</div>
+        <div class="step-content">
+          <div class="step-title">Something goes unmet</div>
+          <div class="step-body">A need for connection, safety, or consistency isn't met. It creates a quiet but persistent tension — not always something you can name right away.</div>
+        </div>
+      </div>
+
+      <div class="cycle-step">
+        <div class="step-connector"></div>
+        <div class="step-circle" style="background:#6B2A3E;">2</div>
+        <div class="step-content">
+          <div class="step-title">You adapt and give more</div>
+          <div class="step-body">The learned response: try harder, give more, be more flexible. This was the survival strategy that made sense when you were younger. It still kicks in automatically.</div>
+        </div>
+      </div>
+
+      <div class="cycle-step">
+        <div class="step-connector"></div>
+        <div class="step-circle" style="background:#7A3A4E;">3</div>
+        <div class="step-content">
+          <div class="step-title">Your feelings go underground</div>
+          <div class="step-body">Your own needs get pushed aside. You tell yourself you're fine, or that what you're feeling isn't valid, or that bringing it up would cause problems.</div>
+        </div>
+      </div>
+
+      <div class="cycle-step">
+        <div class="step-connector"></div>
+        <div class="step-circle" style="background:#3B4A6E;">4</div>
+        <div class="step-content">
+          <div class="step-title">Tension builds</div>
+          <div class="step-body">Because your brain struggles to regulate emotions in real time (ADHD), even small amounts accumulate quickly. The internal weight grows larger than the external situation warrants.</div>
+        </div>
+      </div>
+
+      <div class="cycle-step">
+        <div class="step-connector"></div>
+        <div class="step-circle" style="background:#2A3A5E;">5</div>
+        <div class="step-content">
+          <div class="step-title">It comes out — often intensely</div>
+          <div class="step-body">Emotions release, sometimes in a way that feels too big for the moment. That's because it isn't just about the moment — it's carrying everything that built up.</div>
+        </div>
+      </div>
+
+      <div class="cycle-step">
+        <div class="step-circle" style="background:#1B2A4E;">6</div>
+        <div class="step-content">
+          <div class="step-title">You blame yourself</div>
+          <div class="step-body">The intensity of the release becomes proof of the old story: "I overreacted. I should have known better. This is my fault." And the cycle quietly resets.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="callout sage reveal" style="margin-top:28px;">
+      You can interrupt this cycle at any step. The goal of our work together is to give you more moments of choice inside it — starting with simply noticing where you are.
+    </div>
+  </section>
+</div>
+
+<!-- SECTION 4: KEY PSYCHOLOGICAL FRAMEWORKS -->
+<div class="page">
+  <section class="section" id="frameworks">
+    <div class="section-banner green reveal">
+      <div class="banner-num">4</div>
+      <div class="banner-text">
+        <h2>Key Psychological Frameworks</h2>
+        <p>Two ideas that can change how you understand yourself</p>
+      </div>
+    </div>
+
+    <p class="body-text reveal">Before we talk about where we go from here, there are two frameworks worth sitting with. Not because they're complicated — but because once you really understand them, a lot of things start to make a different kind of sense.</p>
+
+    <!-- SUB-SECTION A -->
+    <div class="framework-sub reveal">
+      <div class="framework-sub-label">Section A</div>
+      <h3 class="framework-sub-title">Knowledge vs. Experience</h3>
+      <p class="framework-sub-sub">The difference between what you believe and what you actually know</p>
+    </div>
+
+    <p class="body-text reveal">Here is a question worth sitting with: <em>How much of what you "know" about yourself was actually taught to you by someone else?</em></p>
+
+    <p class="body-text reveal">Most of what we call knowledge is actually information we absorbed — from other people, from culture, from how things were explained to us when we were young, from what we concluded after painful experiences. We accepted it. We built our inner world around it. But we never personally tested it.</p>
+
+    <p class="body-text reveal">That's not unusual. That's how humans are wired. But it matters — because much of what we accept as truth about ourselves is, if we're honest, <strong>unverified belief</strong>. It feels like fact. It functions like fact. But it was never proven.</p>
+
+    <div class="framework-perspective reveal">
+      <div class="framework-perspective-inner">
+        <span class="framework-perspective-icon">◎</span>
+        <p>To put this in perspective: humans have explored less than 1% of the deep ocean. We've likely uncovered only a fraction of the fundamental laws of existence. If that's true of the world around us, consider how much of what you believe <em>about yourself</em> might also be incomplete — built on interpretation, not evidence.</p>
+        <p style="margin-top:12px;font-weight:500;color:var(--charcoal);">No one has complete knowledge. Including the version of you that "should have known better."</p>
+      </div>
+    </div>
+
+    <div class="ke-grid reveal">
+      <div class="ke-card ke-belief">
+        <div class="ke-card-label">Knowledge (Belief)</div>
+        <div class="ke-card-title">What we accept as true</div>
+        <ul class="ke-list">
+          <li>Things we were told by others</li>
+          <li>Cultural and social expectations</li>
+          <li>Interpretations of our own experiences</li>
+          <li>Standards we absorbed without questioning</li>
+        </ul>
+        <div class="ke-card-note">Often feels like absolute truth — but hasn't been personally verified</div>
+      </div>
+      <div class="ke-card ke-exp">
+        <div class="ke-card-label">Experience (Verified Understanding)</div>
+        <div class="ke-card-title">What we've actually lived</div>
+        <ul class="ke-list">
+          <li>What we observed, felt, and processed directly</li>
+          <li>Patterns noticed across real situations over time</li>
+          <li>Emotions and physical responses to actual events</li>
+          <li>Outcomes we witnessed firsthand</li>
+        </ul>
+        <div class="ke-card-note">The most reliable form of learning — because it can't be handed to you</div>
+      </div>
+    </div>
+
+    <div class="callout reveal">
+      Here is the clinical pattern that showed up clearly for you: when it comes to <strong>other people</strong>, you've tended to extend trust and positive belief before having enough experience to support it. When it comes to <strong>yourself</strong>, you've done the opposite — even when experience supported something good about you, you found reasons it didn't count.
+    </div>
+
+    <div class="ke-imbalance reveal">
+      <div class="ke-imbalance-row">
+        <div class="ke-imb-label">Others</div>
+        <div class="ke-imb-bar-wrap">
+          <div class="ke-imb-bar ke-imb-belief" style="width:75%;">Belief extended freely</div>
+          <div class="ke-imb-bar ke-imb-exp" style="width:25%;">Experience gathered slowly</div>
+        </div>
+      </div>
+      <div class="ke-imbalance-row">
+        <div class="ke-imb-label">Yourself</div>
+        <div class="ke-imb-bar-wrap">
+          <div class="ke-imb-bar ke-imb-exp-neg" style="width:30%;">Evidence often dismissed</div>
+          <div class="ke-imb-bar ke-imb-belief-neg" style="width:70%;">Negative belief held tightly</div>
+        </div>
+      </div>
+      <p class="ke-imbalance-note">You trust beliefs about others more than the evidence. You distrust evidence about yourself more than beliefs.</p>
+    </div>
+
+    <p class="body-text reveal">This matters because <strong>you have been holding yourself to a set of standards built largely on unverified beliefs</strong> — what you believe you should have known, what you assumed others expected, what you concluded was the "correct" way to be. Those standards were never tested. They were absorbed. And when you fell short of them, you interpreted that gap not as incomplete information, but as personal failure.</p>
+
+    <div class="shift-block reveal">
+      <div class="shift-row">
+        <div class="shift-from">"I should have known"</div>
+        <div class="shift-arrow">→</div>
+        <div class="shift-to">"I acted on the information and experience I had at the time"</div>
+      </div>
+      <div class="shift-row">
+        <div class="shift-from">Seeking certainty</div>
+        <div class="shift-arrow">→</div>
+        <div class="shift-to">Building understanding through experience</div>
+      </div>
+      <div class="shift-row">
+        <div class="shift-from">"I failed"</div>
+        <div class="shift-arrow">→</div>
+        <div class="shift-to">"I was working with incomplete information"</div>
+      </div>
+    </div>
+
+    <div class="callout sage reveal">
+      Growth doesn't come from being right. It comes from living, observing, adjusting — and meeting yourself with grace along the way.
+    </div>
+
+    <!-- SUB-SECTION B -->
+    <div class="framework-sub reveal" style="margin-top:52px;">
+      <div class="framework-sub-label">Section B</div>
+      <h3 class="framework-sub-title">How Trust Works</h3>
+      <p class="framework-sub-sub">And why the most important relationship — with yourself — has been the hardest</p>
+    </div>
+
+    <p class="body-text reveal">You've heard about the trust formula. But before we talk about how it applies to other people, we need to talk about something more fundamental: <em>the person you spend the most time with.</em></p>
+
+    <p class="body-text reveal">That person is you. You are with yourself in every quiet moment, every anxious thought, every decision, every doubt. And yet, for much of your life, you have trusted yourself least of all.</p>
+
+    <div class="trust-formula reveal">
+      <div class="trust-piece">
+        <div class="trust-sym">T</div>
+        <div class="trust-lbl">Transparency</div>
+      </div>
+      <div class="trust-piece op">+</div>
+      <div class="trust-piece">
+        <div class="trust-sym">E</div>
+        <div class="trust-lbl">Empathy</div>
+      </div>
+      <div class="trust-piece op">+</div>
+      <div class="trust-piece">
+        <div class="trust-sym">E</div>
+        <div class="trust-lbl">Experience</div>
+      </div>
+      <div class="trust-piece op">+</div>
+      <div class="trust-piece highlight">
+        <div class="trust-sym">T</div>
+        <div class="trust-lbl">Time</div>
+      </div>
+      <div class="trust-piece op">=</div>
+      <div class="trust-piece result">
+        <div class="trust-sym">Trust</div>
+        <div class="trust-lbl">Outcome</div>
+      </div>
+    </div>
+
+    <p class="body-text reveal">This formula works in every relationship. But look at what happens when you apply it to the relationship with yourself.</p>
+
+    <div class="trust-self-grid reveal">
+      <div class="trust-self-card ts-block">
+        <div class="ts-variable">Transparency</div>
+        <div class="ts-desc">Requires being able to see reality clearly. But all-or-nothing thinking — the "always," the "never," the "I should have known" — distorts the lens. Neutral situations start to look like evidence of failure. It becomes very hard to see yourself accurately when your inner eye is already set to confirm the worst.</div>
+      </div>
+      <div class="trust-self-card ts-block">
+        <div class="ts-variable">Empathy</div>
+        <div class="ts-desc">Requires believing you deserve understanding. But perfectionism and shame make self-compassion feel unearned. You extend empathy to others with remarkable ease — turning it inward feels almost impossible, because some part of you believes you have to earn it first. And the bar for earning it keeps moving.</div>
+      </div>
+      <div class="trust-self-card ts-block">
+        <div class="ts-variable">Experience</div>
+        <div class="ts-desc">Is supposed to be your teacher. But when nearly all difficulty gets attributed to personal incapability — "I just don't know how," "I should have been better" — experience stops teaching. Instead of becoming data, it becomes proof of inadequacy. The learning loop closes before it can begin.</div>
+      </div>
+      <div class="trust-self-card ts-block ts-time">
+        <div class="ts-variable">Time ✦</div>
+        <div class="ts-desc">Requires believing that growth is possible — that you are not fixed in place, that who you are today is not the final version. That belief is hard to hold when the inner voice is consistently unkind.</div>
+      </div>
+    </div>
+
+    <div class="gap-block reveal">
+      <div class="gap-block-inner">
+        <div class="gap-label">The Gap That Matters Most</div>
+        <p>You have a remarkably accurate picture of who you are. Your self-awareness is genuine and deep. And yet that self-awareness hasn't translated into self-trust — because there's a painful distance between <strong>who you know yourself to be</strong> and <strong>who you believe you should be.</strong></p>
+        <p style="margin-top:14px;">That "should" is not entirely yours. It was built from external expectations, absorbed beliefs, and a developmental experience that taught you your inner world needed correction rather than understanding. As long as that gap exists — as long as the standard is a version of you that never struggles, never misreads, never needs — there is no room for grace. No room for the kind of honest, patient self-observation that actually builds trust over time.</p>
+      </div>
+    </div>
+
+    <p class="body-text reveal">Rebuilding self-trust doesn't start with confidence. It starts with <strong>accuracy</strong> — looking at your experience through the lens of what was actually happening, what you had available to you, and what any reasonable person might have done in the same situation.</p>
+
+    <p class="body-text reveal">Your emotions are not liabilities. They are information. They are often the most accurate information you have — and learning to listen to them, rather than override them with what you're "supposed" to feel, is one of the most important things this work will build.</p>
+
+    <div class="trust-rows reveal">
+      <div class="trust-row" style="background:var(--burg-pale);">
+        <div class="trust-row-label">Transparency</div>
+        <div class="trust-row-desc">Seeing yourself clearly — not through distortion or shame, but with honest, steady eyes.</div>
+      </div>
+      <div class="trust-row" style="background:var(--sky);">
+        <div class="trust-row-label">Empathy</div>
+        <div class="trust-row-desc">Offering yourself the same understanding you freely give to everyone else.</div>
+      </div>
+      <div class="trust-row" style="background:var(--sage);">
+        <div class="trust-row-label">Experience</div>
+        <div class="trust-row-desc">Letting your lived experience be data — not just about others, but about you.</div>
+      </div>
+      <div class="trust-row gold-row">
+        <div class="trust-row-label">Time ✦</div>
+        <div class="trust-row-desc">Being patient enough to let yourself grow — trusting that you are not finished yet.</div>
+      </div>
+    </div>
+
+    <div class="callout reveal" style="margin-top:28px;">
+      The person you've been hardest on is also the person who has shown up, every single day, doing the best she could with what she had. That person deserves the same benefit of the doubt you've so freely given to everyone else.
+    </div>
+
+  </section>
+</div>
+
+<!-- SECTION 5: NEXT STEPS -->
+<div class="page">
+  <section class="section" id="next-steps">
+    <div class="section-banner reveal" style="background:var(--navy-l);">
+      <div class="banner-num">5</div>
+      <div class="banner-text">
+        <h2>Where We Go From Here</h2>
+        <p>Your five growth areas — in your language</p>
+      </div>
+    </div>
+
+    <p class="body-text reveal">None of this is about changing who you are. It's about giving you more tools than you currently have. Here are the five areas where we'll focus our work together — and what each one will actually feel like.</p>
+
+    <div class="goals-grid">
+
+      <div class="goal-card reveal">
+        <div class="goal-num">1</div>
+        <div class="goal-title">Learning to feel it in real time</div>
+        <div class="goal-desc">Right now, emotions tend to build quietly and release all at once. The goal is to start catching them earlier — smaller, more manageable, before they become floods. This is the work that changes everything else.</div>
+      </div>
+
+      <div class="goal-card navy reveal">
+        <div class="goal-num">2</div>
+        <div class="goal-title">Slowing down relationship decisions</div>
+        <div class="goal-desc">Not pulling back — just pausing. Letting the warmth and connection you feel be the beginning of trust, not the conclusion. Giving experience and time a chance to confirm what your heart already sensed.</div>
+      </div>
+
+      <div class="goal-card green reveal">
+        <div class="goal-num">3</div>
+        <div class="goal-title">Loosening the all-or-nothing grip</div>
+        <div class="goal-desc">"Always," "never," "I should have known" — these feel true in the moment, but they flatten reality. The work here is building tolerance for the gray: both things can be true, you can be good and still make a mistake.</div>
+      </div>
+
+      <div class="goal-card gold reveal">
+        <div class="goal-num">4</div>
+        <div class="goal-title">Learning to trust what you feel</div>
+        <div class="goal-desc">Your perceptions are data. Your needs are valid. This area is about rebuilding trust in your own inner voice — which has often been drowned out by self-doubt or the need to adapt to others.</div>
+      </div>
+
+    </div>
+
+    <div class="goal-card violet reveal" style="margin-bottom:0;">
+      <div class="goal-num">5</div>
+      <div class="goal-title">Turning the past into information</div>
+      <div class="goal-desc">Instead of carrying past experiences as evidence of failure, we learn to use them as data. ADHD makes this hard naturally — so we build systems to make it easier. The past becomes a teacher, not a verdict.</div>
+    </div>
+  </section>
+</div>
+
+<!-- SECTION 6: A DIFFERENT STORY -->
+<div class="page">
+  <section class="section" id="reframe">
+    <div class="section-banner deep reveal">
+      <div class="banner-num">6</div>
+      <div class="banner-text">
+        <h2>A Different Story</h2>
+        <p>How to understand your past behavior</p>
+      </div>
+    </div>
+
+    <p class="body-text reveal">The story most of us tell about our past behavior is usually the harshest possible version. We call our choices "bad decisions." We call our reactions "overreactions." We call ourselves "too much."</p>
+    <p class="lead reveal">Here is a more accurate story:</p>
+
+    <div class="reframe-grid">
+
+      <div class="reframe-card reveal">
+        <span class="reframe-icon">↺</span>
+        <div class="reframe-title">Attempts at Regulation</div>
+        <div class="reframe-divider"></div>
+        <div class="reframe-desc">You were trying to manage emotions that felt too big, without enough tools to do it. That's not weakness — that's a person doing the best they could with what they had.</div>
+      </div>
+
+      <div class="reframe-card reveal">
+        <span class="reframe-icon">⬡</span>
+        <div class="reframe-title">Reaching for Connection</div>
+        <div class="reframe-divider"></div>
+        <div class="reframe-desc">The drive to attach, to belong, to be held safely by another person — that is one of the most human things there is. The speed at which you reach for it is not a flaw. It is evidence of how deeply you need and value love.</div>
+      </div>
+
+      <div class="reframe-card reveal">
+        <span class="reframe-icon">◈</span>
+        <div class="reframe-title">Under-Resourced Decisions</div>
+        <div class="reframe-divider"></div>
+        <div class="reframe-desc">You did not have all the tools, the developmental support, or the self-knowledge you have now. Judging those decisions by today's standards isn't fair — to you or to the truth.</div>
+      </div>
+
+    </div>
+
+    <div class="ornament"><span>✦</span></div>
+
+    <blockquote style="font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;color:var(--burg);text-align:center;line-height:1.7;max-width:580px;margin:0 auto 40px;padding:0 20px;">
+      "You are not too much. You are not broken. You are a person with enormous emotional capacity whose regulation tools didn't keep up with your sensitivity. That gap is closeable."
+    </blockquote>
+
+    <div class="closing reveal">
+      <div class="closing-label">A Note From Your Clinician</div>
+      <div class="closing-rule"></div>
+      <p>Progress in this work will not look like never feeling overwhelmed again. It will look like noticing it sooner. Staying in it a little longer without acting out. Coming back to yourself a little faster.</p>
+      <p>You already have the emotional depth. You already have the intelligence. You already have the self-awareness — you proved that just by showing up and doing this work.</p>
+      <p>What comes next is practice. Not perfection. Not transformation overnight. Just small, repeated choices to respond differently — and the growing knowledge that you are worth that effort.</p>
+      <div class="closing-sig">— Dr. Christopher J. Hoffman, MD &nbsp;·&nbsp; Alignment Psychiatry</div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="footer-brand">Alignment Psychiatry</div>
+  <div class="footer-note">Confidential — For Your Eyes Only &nbsp;·&nbsp; Hoffman Mental Health Services PLLC</div>
+</footer>
+
+<script>
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 60);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  reveals.forEach(el => observer.observe(el));
+
+  // Cycle steps stagger
+  const cycleSteps = document.querySelectorAll('.cycle-step');
+  const cycleObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const steps = entry.target.closest('.cycle-steps').querySelectorAll('.cycle-step');
+        steps.forEach((step, i) => {
+          setTimeout(() => step.classList.add('visible'), i * 120);
+        });
+        cycleObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  const firstStep = document.querySelector('.cycle-step');
+  if (firstStep) cycleObserver.observe(firstStep);
+
+  // Nav active link
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(sec => {
+      if (window.scrollY >= sec.offsetTop - 120) current = sec.getAttribute('id');
+    });
+    navLinks.forEach(link => {
+      link.style.color = link.getAttribute('href') === '#' + current ? 'var(--burg)' : '';
+    });
+  });
+</script>
+</body>
+</html>
