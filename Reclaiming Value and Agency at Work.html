@@ -1,0 +1,404 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Insights - Alignment Psychiatry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #f5f5dc;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        
+        .subtitle {
+            color: #f5f5dc;
+            font-size: 1.1em;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        section {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            color: #800020;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #800020;
+        }
+        
+        h3 {
+            color: #800020;
+            font-size: 1.3em;
+            margin: 25px 0 15px 0;
+        }
+        
+        p, li {
+            margin-bottom: 12px;
+            color: #444;
+        }
+        
+        .quote-box {
+            background: linear-gradient(135deg, #fff5e6 0%, #ffe6cc 100%);
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+            border-left: 5px solid #ff8c00;
+            font-style: italic;
+            color: #555;
+        }
+        
+        .insight-box {
+            background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border-left: 5px solid #800020;
+        }
+        
+        .white-section {
+            background: white;
+            padding: 25px;
+            margin: 20px 0;
+            border-left: 5px solid #ff8c00;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .framework {
+            margin: 30px 0;
+        }
+        
+        .steps {
+            margin: 20px 0;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin: 20px 0;
+        }
+        
+        .step-number {
+            background-color: #800020;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+            margin-right: 15px;
+            font-size: 1.1em;
+        }
+        
+        .step-content {
+            flex: 1;
+            padding-top: 8px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        .bottom-line {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 30px 40px;
+            margin-top: 40px;
+            text-align: center;
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
+        
+        .clinical-concept {
+            margin: 15px 0;
+        }
+        
+        .concept-term {
+            font-weight: bold;
+            color: #800020;
+        }
+        
+        .takeaways-list {
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .takeaways-list li {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 15px;
+        }
+        
+        .takeaways-list li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #ff8c00;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            .container {
+                box-shadow: none;
+            }
+            section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            .content {
+                padding: 20px;
+            }
+            .bottom-line {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Therapeutic Insights</h1>
+            <div class="subtitle">Alignment Psychiatry</div>
+        </header>
+        
+        <div class="content">
+            <section>
+                <h2>The Situation</h2>
+                <p>Cameron works in a technical Salesforce role at a nonprofit, feeling undervalued despite consistently going above and beyond his job description. He faces unresponsive colleagues, must document contributions to defend his performance, and fears extra work will be absorbed without recognition or advancement. Cameron seeks higher-level challenges, greater financial security, and is considering entrepreneurship while navigating the tension between supporting the nonprofit's mission and prioritizing his own growth.</p>
+            </section>
+            
+            <section>
+                <h2>Core Problem</h2>
+                <div class="quote-box">
+                    "Cameron's contributions exceed what his organization values or compensates. He repeatedly extends himself without appropriate recognition, leading to frustration and exploitation risk while his desire for advancement remains unmet."
+                </div>
+            </section>
+            
+            <section>
+                <h2>Clinical Concepts</h2>
+                
+                <div class="clinical-concept">
+                    <span class="concept-term">Boundary Setting:</span> Defining what you will and won't do regarding extra work without clear benefit. This is about protecting your time, energy, and professional growth by establishing clear limits on what falls within your responsibilities.
+                </div>
+                
+                <div class="clinical-concept">
+                    <span class="concept-term">Value Recognition:</span> Understanding and asserting your worth to demand fair compensation. This involves recognizing your contributions and confidently communicating your value to others.
+                </div>
+                
+                <div class="clinical-concept">
+                    <span class="concept-term">Role Creep:</span> Job expansion beyond original responsibilities without additional compensation. This gradual increase in duties can lead to burnout and resentment when not acknowledged or rewarded.
+                </div>
+                
+                <div class="clinical-concept">
+                    <span class="concept-term">Surviving vs. Thriving:</span> Moving from merely getting by to advancing with fulfillment and freedom. Thriving means not just meeting basic needs, but experiencing growth, satisfaction, and autonomy in your professional life.
+                </div>
+            </section>
+            
+            <section>
+                <h2>Therapeutic Frameworks</h2>
+                
+                <div class="framework">
+                    <h3>You-Specific vs. Job-Specific Goals</h3>
+                    <p>This framework helps you evaluate whether opportunities truly serve your personal growth or simply benefit your current employer. Use these steps to make strategic decisions about where to invest your energy:</p>
+                    
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <strong>Clarify the goal:</strong> Identify exactly what the project or task is asking of you and what it aims to accomplish.
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <strong>Assess the benefit:</strong> Determine whether this opportunity builds your skills, marketability, and career trajectory beyond your current role.
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <strong>Invest in yourself:</strong> Prioritize activities that enhance your value in the broader job market, not just within your current organization.
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <strong>Evaluate recognition:</strong> Consider whether the extra work comes with appropriate compensation, advancement, or acknowledgment.
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <strong>Set boundaries:</strong> Decline or negotiate when opportunities don't serve your personal goals or come without fair recognition.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="framework">
+                    <h3>The Value Mindset Shift</h3>
+                    <p>This framework empowers you to advocate for yourself and ensure your contributions are appropriately valued. It's about moving from passive acceptance to active negotiation:</p>
+                    
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <strong>Know your value:</strong> Understand your skills, contributions, and what you bring to the table. Document your achievements and impact.
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <strong>Assert your needs:</strong> Communicate clearly and confidently about what you require for advancement, compensation, and professional satisfaction.
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <strong>Negotiate, don't overextend:</strong> Before taking on additional responsibilities, discuss what you'll receive in return. Don't give away your expertise hoping for future recognition.
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <strong>Be willing to walk away:</strong> If your value isn't recognized after clear communication and negotiation, be prepared to seek opportunities elsewhere that align with your worth.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Practical Instructions</h2>
+                
+                <div class="white-section">
+                    <h3>When Approached with New Projects</h3>
+                    <ul>
+                        <li>Pause before automatically saying yes</li>
+                        <li>Ask yourself: Is this you-specific (builds my skills/marketability) or job-specific (only benefits current employer)?</li>
+                        <li>Request clarity on how this work connects to advancement opportunities</li>
+                        <li>Negotiate for recognition, compensation, or professional development before committing</li>
+                    </ul>
+                </div>
+                
+                <div class="white-section">
+                    <h3>Setting Boundaries</h3>
+                    <ul>
+                        <li>Practice saying: "I'd be happy to take this on. Let's discuss how it fits with my current workload and what support or recognition would come with it."</li>
+                        <li>Document instances where you're asked to exceed your role</li>
+                        <li>Track your responses and their outcomes</li>
+                        <li>Be consistent in your boundary-setting to establish new expectations</li>
+                    </ul>
+                </div>
+                
+                <div class="white-section">
+                    <h3>Preparing for Advancement Conversations</h3>
+                    <ul>
+                        <li>Create talking points that highlight your contributions and value</li>
+                        <li>Be specific about what advancement looks like to you (title, compensation, responsibilities)</li>
+                        <li>Prepare to discuss your career goals and how they align with organizational needs</li>
+                        <li>Have a timeline in mind for when you expect to see progress</li>
+                        <li>Be ready to escalate or explore other opportunities if needs aren't met</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Homework</h2>
+                <div class="insight-box">
+                    <ul>
+                        <li><strong>Project Evaluation:</strong> For each new project or request, document: Is this you-specific or job-specific? What direct benefit does this provide to my career? What would make it worthwhile?</li>
+                        <li><strong>Conversation Preparation:</strong> Prepare talking points for boundary and advancement discussions with your manager. Include specific examples of your contributions and clear requests for what you need.</li>
+                        <li><strong>Tracking Exercise:</strong> Track instances of being asked to exceed your role and document your responses. Note what worked, what didn't, and how you felt about each interaction.</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Key Takeaways</h2>
+                <ul class="takeaways-list">
+                    <li>Prioritize actions that build your marketability beyond your current employer</li>
+                    <li>Negotiate for recognition before taking on extra work</li>
+                    <li>Set boundaries around uncompensated responsibilities</li>
+                    <li>Assert your value confidently without apology</li>
+                    <li>Escalate unresolved issues or consider moving on</li>
+                    <li>Use your current role for personal growth, not just organizational benefit</li>
+                    <li>Document contributions and defend your performance when needed</li>
+                    <li>Avoid overextending yourself hoping for future recognition</li>
+                    <li>Regularly assess if your job serves your long-term goals</li>
+                    <li>Seek environments that value you if your current one doesn't</li>
+                    <li>Aim for thriving—advancement and fulfillment—not just surviving</li>
+                </ul>
+            </section>
+        </div>
+        
+        <div class="bottom-line">
+            <strong>Bottom Line:</strong> Your contributions have value, and you deserve to work in an environment that recognizes and rewards that value. Don't wait for permission to prioritize your own growth. Set clear boundaries, negotiate confidently, and be willing to seek opportunities that align with your worth. You're not being selfish—you're being strategic about building a career that allows you to thrive, not just survive.
+        </div>
+    </div>
+</body>
+</html>
+```
