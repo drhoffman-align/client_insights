@@ -1,0 +1,353 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Insights - Alignment Psychiatry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #f5f5dc;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .subtitle {
+            color: #f5f5dc;
+            font-size: 1.1em;
+            font-weight: 300;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            color: #800020;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .quote-box {
+            background: linear-gradient(135deg, #800020 0%, #a64253 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+            font-style: italic;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        .white-section {
+            background-color: white;
+            border-left: 4px solid #ff8c00;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .insight-box {
+            background: linear-gradient(135deg, #fff5e6 0%, #ffe6cc 100%);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #ff8c00;
+        }
+        
+        .framework {
+            margin: 30px 0;
+        }
+        
+        .framework-title {
+            color: #800020;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .steps {
+            list-style: none;
+            counter-reset: step-counter;
+        }
+        
+        .steps li {
+            counter-increment: step-counter;
+            margin: 15px 0;
+            padding-left: 60px;
+            position: relative;
+            line-height: 1.8;
+        }
+        
+        .steps li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: #800020;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .takeaways-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .takeaways-list li {
+            padding: 12px 0 12px 30px;
+            position: relative;
+            line-height: 1.7;
+        }
+        
+        .takeaways-list li::before {
+            content: "•";
+            color: #ff8c00;
+            font-size: 1.5em;
+            position: absolute;
+            left: 0;
+            top: 8px;
+        }
+        
+        .bottom-line {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 40px;
+            font-size: 1.15em;
+            line-height: 1.8;
+        }
+        
+        .bottom-line-title {
+            color: #f5f5dc;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .clinical-concept {
+            margin: 15px 0;
+        }
+        
+        .concept-term {
+            color: #800020;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .section-title {
+                font-size: 1.5em;
+            }
+            
+            .steps li {
+                padding-left: 50px;
+            }
+            
+            .steps li::before {
+                width: 35px;
+                height: 35px;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Therapeutic Insights</h1>
+            <div class="subtitle">Alignment Psychiatry - Breaking the Cycle of Social Isolation</div>
+        </header>
+        
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">The Situation</h2>
+                <div class="white-section">
+                    <p>Naomi experiences profound loneliness and social isolation, particularly during weekends and unstructured time. She avoids public spaces due to intense anxiety and fear of judgment, relying on delivery services despite financial strain. While she has acquaintances through work and school, she lacks close friendships and sometimes seeks instant connection through apps, leading to unsatisfying or unhealthy interactions that amplify her distress.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Core Problem</h2>
+                <div class="quote-box">
+                    "Naomi is trapped in a self-reinforcing cycle where social anxiety drives avoidance, which intensifies her isolation and confirms her belief that she's unworthy."
+                </div>
+                <div class="white-section">
+                    <p>This pattern prevents her from gaining real-world experiences needed to challenge distorted thoughts about being judged. The cycle perpetuates itself: anxiety leads to avoidance, avoidance reinforces the fear, and the fear grows stronger with each missed opportunity for connection.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Clinical Concepts</h2>
+                <div class="insight-box">
+                    <div class="clinical-concept">
+                        <span class="concept-term">Exposure Therapy:</span> Gradually facing feared situations to reduce anxiety over time. Through repeated, controlled exposure to anxiety-provoking situations, the emotional response naturally decreases.
+                    </div>
+                    <div class="clinical-concept">
+                        <span class="concept-term">Desensitization:</span> Repeated exposure that decreases emotional response to feared stimuli. What once felt overwhelming becomes manageable through consistent practice.
+                    </div>
+                    <div class="clinical-concept">
+                        <span class="concept-term">Cognitive Reframing:</span> Changing interpretation of situations and automatic negative thoughts. By questioning and replacing distorted thinking patterns, we can shift our emotional experience.
+                    </div>
+                    <div class="clinical-concept">
+                        <span class="concept-term">Disinhibition:</span> Medication-induced reduction of social anxiety making interactions easier. Strategic use of medication can lower the barrier to initial exposures, allowing therapeutic progress to begin.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Therapeutic Frameworks</h2>
+                
+                <div class="framework">
+                    <h3 class="framework-title">Exposure Therapy</h3>
+                    <ol class="steps">
+                        <li>Identify a manageable exposure that feels challenging but not overwhelming</li>
+                        <li>Schedule the activity at a specific time to create commitment</li>
+                        <li>Use medication if needed to reduce initial anxiety barrier</li>
+                        <li>Prepare mentally by setting realistic expectations</li>
+                        <li>Engage in the activity for as long as tolerable</li>
+                        <li>Reflect on the experience and notice changes in anxiety</li>
+                    </ol>
+                </div>
+                
+                <div class="framework">
+                    <h3 class="framework-title">Cognitive Reframing</h3>
+                    <ol class="steps">
+                        <li>Notice negative self-talk and automatic thoughts as they arise</li>
+                        <li>Challenge these thoughts with realistic alternatives</li>
+                        <li>Use specific, believable reminders rather than broad affirmations</li>
+                        <li>Test predictions in real life to gather evidence</li>
+                    </ol>
+                </div>
+                
+                <div class="framework">
+                    <h3 class="framework-title">Self-Compassion Practice</h3>
+                    <ol class="steps">
+                        <li>Decide to prioritize yourself and your wellbeing</li>
+                        <li>Make decisions that serve your long-term health</li>
+                        <li>Journal about why these decisions are beneficial</li>
+                        <li>Allow yourself to set boundaries without guilt</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Practical Instructions</h2>
+                <div class="white-section">
+                    <p><strong>Starting Small:</strong> Begin with manageable exposures that feel achievable. The goal is not perfection but practice. Even brief moments in public spaces count as progress.</p>
+                    
+                    <p><strong>Using Medication Strategically:</strong> Take Xanax or clonazepam 30 minutes before planned exposures to reduce the initial anxiety barrier. This is not about daily use, but strategic support for therapeutic work.</p>
+                    
+                    <p><strong>Comfort Items:</strong> Bring a book, phone, or other comfort item to make the experience less intimidating. Having something familiar provides a sense of security.</p>
+                    
+                    <p><strong>Realistic Expectations:</strong> Remember that most people are focused on themselves, not judging you. This isn't just positive thinking—it's a realistic assessment of human behavior.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Homework</h2>
+                <div class="insight-box">
+                    <ul class="takeaways-list">
+                        <li>Schedule one outing to sit on the courtyard bench this week</li>
+                        <li>Take Xanax or clonazepam 30 minutes before if needed</li>
+                        <li>Bring a book or comfort item with you</li>
+                        <li>Stay as long as tolerable; any amount of time counts</li>
+                        <li>Journal about the experience and notice any changes in anxiety</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Key Takeaways</h2>
+                <ul class="takeaways-list">
+                    <li>Avoidance reinforces anxiety; real-world experience challenges distorted beliefs</li>
+                    <li>Most people are focused on themselves, not judging you</li>
+                    <li>Use medication strategically for exposures, not as a daily crutch</li>
+                    <li>Any progress counts; perfection isn't required</li>
+                    <li>Instant connections through apps provide temporary relief but create unhealthy patterns</li>
+                    <li>Self-compassion means making decisions good for you, even if uncomfortable</li>
+                    <li>Realistic, specific self-talk is more effective than broad affirmations</li>
+                    <li>Bringing comfort items makes exposures less intimidating</li>
+                    <li>Building real connections requires gradual, repeated practice</li>
+                    <li>Journal to reinforce positive changes and track progress</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <div class="bottom-line">
+                    <h2 class="bottom-line-title">Bottom Line</h2>
+                    <p>Breaking free from social isolation requires courage to face discomfort gradually. The cycle of anxiety and avoidance can only be interrupted through real-world experience, not through thinking or waiting for anxiety to disappear on its own. Each small exposure—even sitting on a bench for five minutes—provides evidence that challenges distorted beliefs and builds confidence. With strategic medication support, self-compassion, and realistic expectations, you can begin to reclaim your life from isolation. Progress isn't linear, and setbacks are part of the process. What matters is consistent practice and the willingness to show up for yourself, one small step at a time.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+```
