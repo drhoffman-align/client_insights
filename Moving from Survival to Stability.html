@@ -1,0 +1,363 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Insights - Alignment Psychiatry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #f5f5dc;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        
+        .subtitle {
+            color: #f5f5dc;
+            font-size: 1.1em;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        section {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            color: #800020;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #800020;
+        }
+        
+        h3 {
+            color: #800020;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            margin-top: 25px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .quote-box {
+            background: linear-gradient(135deg, #fff5e6 0%, #ffe6cc 100%);
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+            border-left: 5px solid #ff8c00;
+            font-style: italic;
+            color: #555;
+        }
+        
+        .insight-box {
+            background: linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%);
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+            border-left: 5px solid #4682b4;
+        }
+        
+        .white-section {
+            background-color: white;
+            padding: 25px;
+            margin: 25px 0;
+            border-left: 5px solid #ff8c00;
+            border-radius: 5px;
+        }
+        
+        .framework-steps {
+            margin: 30px 0;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+            padding: 20px;
+            background-color: #fafafa;
+            border-radius: 8px;
+        }
+        
+        .step-number {
+            background-color: #800020;
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3em;
+            font-weight: bold;
+            flex-shrink: 0;
+            margin-right: 20px;
+        }
+        
+        .step-content {
+            flex: 1;
+        }
+        
+        .step-title {
+            font-weight: bold;
+            color: #800020;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+        }
+        
+        .step-description {
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        ul {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+        
+        .clinical-concept {
+            margin-bottom: 20px;
+        }
+        
+        .concept-title {
+            font-weight: bold;
+            color: #800020;
+            display: inline;
+        }
+        
+        .bottom-line {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 40px;
+            margin-top: 50px;
+            text-align: center;
+            font-size: 1.2em;
+            line-height: 1.8;
+            border-radius: 8px;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            
+            section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+            }
+            
+            header {
+                padding: 40px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+            
+            .step {
+                flex-direction: column;
+            }
+            
+            .step-number {
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Therapeutic Insights</h1>
+            <div class="subtitle">Alignment Psychiatry</div>
+        </header>
+        
+        <div class="content">
+            <section>
+                <h2>The Situation</h2>
+                <p>Maria is navigating significant stress as the primary functioning adult in her household while her husband remains unemployed for over a year. Financial instability and recent job disappointments have intensified her sense of hopelessness. She's exploring virtual assistant and interpreting work but feels uncertain about achieving stability and concerned about her husband's accountability and their relationship's future.</p>
+            </section>
+            
+            <section>
+                <h2>Core Problem</h2>
+                <div class="white-section">
+                    <p>Maria operates in "survival mode," driven by anxiety and fear, which causes avoidance of strategic planning and self-advocacy. This reactive mindset keeps her focused on immediate crises, preventing her from leveraging her full skill set or thinking strategically about her future.</p>
+                </div>
+            </section>
+            
+            <div class="quote-box">
+                "Survival mode is exhausting and limits growth; it cannot be permanent."
+            </div>
+            
+            <section>
+                <h2>Clinical Concepts</h2>
+                
+                <div class="clinical-concept">
+                    <span class="concept-title">Survival Mode:</span> Operating with focus on immediate threats at the expense of long-term planning. When we're in survival mode, our brain prioritizes crisis management over strategic thinking, keeping us reactive rather than proactive.
+                </div>
+                
+                <div class="clinical-concept">
+                    <span class="concept-title">Avoidance:</span> Not planning for difficult possibilities because they feel overwhelming, preventing crisis preparation. While avoidance provides temporary relief from anxiety, it ultimately keeps us stuck and unprepared for challenges.
+                </div>
+                
+                <div class="clinical-concept">
+                    <span class="concept-title">Strategic Thinking:</span> Proactive problem-solving and planning rather than reactive responses. This involves using our cognitive strengths intentionally to create pathways forward rather than simply responding to immediate pressures.
+                </div>
+            </section>
+            
+            <div class="quote-box">
+                "Avoidance keeps you stuck; facing worries builds resilience and preparedness."
+            </div>
+            
+            <section>
+                <h2>Therapeutic Frameworks</h2>
+                <h3>From Survival to Thriving: A Three-Stage Journey</h3>
+                <p>Understanding where you are in this progression helps you recognize what you need and where you're headed. Each stage requires different strategies and mindsets.</p>
+                
+                <div class="framework-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <div class="step-title">Survival</div>
+                            <div class="step-description">Focus on immediate safety and basic needs; crisis management driven by anxiety. In this stage, you're responding to threats and managing day-to-day challenges without the capacity for long-term planning.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <div class="step-title">Stabilization</div>
+                            <div class="step-description">Maintain consistency and predictability; develop reliable routines and systems. This stage involves creating structure that allows you to catch your breath and begin thinking beyond immediate crises.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <div class="step-title">Building/Thriving</div>
+                            <div class="step-description">Pursue long-term goals; invest in growth, creativity, and fulfillment. With stability established, you can now leverage your strengths and pursue meaningful objectives that align with your values.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <div class="insight-box">
+                <strong>Clinical Insight:</strong> The goal is to move from Stage 1 (Survival) to Stage 2 (Stabilization) through intentional planning and self-reflection. You cannot skip stages, but you can accelerate progress by facing avoided concerns and using your strategic thinking abilities deliberately.
+            </div>
+            
+            <section>
+                <h2>Practical Instructions</h2>
+                <div class="white-section">
+                    <p>Breaking the survival cycle requires dedicated time and space for reflection. These practices create the mental and emotional capacity needed to transition from reactive to proactive living.</p>
+                    
+                    <h3>Creating Space for Strategic Thinking</h3>
+                    <ul>
+                        <li>Choose a neutral environment like a coffee shop where you can think clearly without home distractions</li>
+                        <li>Commit to this practice consistently—regularity matters more than perfection</li>
+                        <li>Bring a notebook or device for capturing thoughts, worries, and potential solutions</li>
+                        <li>Allow yourself to face the concerns you've been avoiding; write them down and explore them</li>
+                        <li>Use this time to tap into your strategic thinking abilities intentionally</li>
+                    </ul>
+                    
+                    <h3>Documentation and Safety Planning</h3>
+                    <ul>
+                        <li>If relationship concerns or safety issues arise, document them with written records</li>
+                        <li>Keep notes organized and accessible for your own reference and clarity</li>
+                        <li>This documentation serves both as emotional processing and practical preparation</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <div class="quote-box">
+                "Strategic thinking is your strength—use it intentionally for planning."
+            </div>
+            
+            <section>
+                <h2>Homework</h2>
+                <div class="white-section">
+                    <ul>
+                        <li>Set aside 1 hour, 3-4 times weekly, at a coffee shop or neutral space for focused self-reflection</li>
+                        <li>Write thoughts, worries, and solutions; face avoided concerns during this time</li>
+                        <li>Document relationship issues or safety concerns with written records if needed</li>
+                        <li>Email therapist with questions, notes, or plan drafts for feedback</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Key Takeaways</h2>
+                <ul>
+                    <li>Survival mode is exhausting and limits growth; it cannot be permanent</li>
+                    <li>Avoidance keeps you stuck; facing worries builds resilience and preparedness</li>
+                    <li>Strategic thinking is your strength—use it intentionally for planning</li>
+                    <li>Dedicated self-reflection time breaks the survival cycle</li>
+                    <li>Fear-based decisions lead to mediocrity; courage opens possibilities</li>
+                    <li>You possess more skills and resources than you recognize</li>
+                    <li>Small, consistent efforts create significant change over time</li>
+                    <li>The interpreter job aids survival but may not provide long-term stability</li>
+                    <li>Planning next steps is essential for moving toward stability</li>
+                    <li>Therapist support is available between sessions</li>
+                </ul>
+            </section>
+            
+            <div class="bottom-line">
+                <strong>Bottom Line:</strong> You are currently in survival mode, which is unsustainable long-term. The path forward requires facing avoided concerns through dedicated reflection time and strategic planning. You have the skills and intelligence needed—now it's about creating the space to use them intentionally. Small, consistent steps toward stabilization will break the reactive cycle and open possibilities for building the future you deserve. You don't have to do this alone; support is available.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+```
