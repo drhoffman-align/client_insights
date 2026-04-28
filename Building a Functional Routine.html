@@ -1,0 +1,369 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Insights - Alignment Psychiatry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #f5f5dc;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .subtitle {
+            color: #f5f5dc;
+            font-size: 1.1em;
+            font-weight: 300;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            color: #800020;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .quote-box {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+            font-style: italic;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        .white-section {
+            background-color: white;
+            border-left: 5px solid #ff8c00;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .insight-box {
+            background: linear-gradient(135deg, #fff5e6 0%, #ffe6cc 100%);
+            padding: 25px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 5px solid #ff8c00;
+        }
+        
+        .framework {
+            margin: 30px 0;
+        }
+        
+        .framework-title {
+            color: #800020;
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .steps {
+            list-style: none;
+            counter-reset: step-counter;
+        }
+        
+        .steps li {
+            counter-increment: step-counter;
+            margin-bottom: 20px;
+            padding-left: 70px;
+            position: relative;
+            line-height: 1.8;
+        }
+        
+        .steps li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: #800020;
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .homework-list, .takeaways-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .homework-list li, .takeaways-list li {
+            padding: 12px 0 12px 30px;
+            position: relative;
+            line-height: 1.7;
+        }
+        
+        .homework-list li::before, .takeaways-list li::before {
+            content: "•";
+            color: #ff8c00;
+            font-size: 1.5em;
+            position: absolute;
+            left: 0;
+            top: 8px;
+        }
+        
+        .bottom-line {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 40px;
+            font-size: 1.15em;
+            line-height: 1.8;
+            text-align: center;
+        }
+        
+        .concept-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .concept-card {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #800020;
+        }
+        
+        .concept-term {
+            color: #800020;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .section-title {
+                font-size: 1.5em;
+            }
+            
+            .steps li {
+                padding-left: 60px;
+            }
+            
+            .steps li::before {
+                width: 40px;
+                height: 40px;
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Therapeutic Insights</h1>
+            <div class="subtitle">Alignment Psychiatry</div>
+        </header>
+        
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">The Situation</h2>
+                <div class="white-section">
+                    <p>Ashley struggles with maintaining a consistent routine due to fluctuating energy levels, a demanding 7am-5:30pm work schedule, and requiring 9-11 hours of sleep nightly. She has ADHD managed with stimulant medication and finds it difficult to balance chores, meal prep, and self-care, often accomplishing only one major task per day. Weekends become catch-up periods rather than restful breaks, and she experiences difficulty transitioning between work and home life.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Core Problem</h2>
+                <div class="quote-box">
+                    "Ashley's current routines don't match her energy and attention patterns, causing inefficiency, overwhelm, and inconsistent self-care."
+                </div>
+                <div class="white-section">
+                    <p>She over-identifies with sleep as part of her personality, which reinforces excessive sleep and avoidance of morning productivity, while attempting too much at once leads to burnout.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Clinical Concepts</h2>
+                <div class="concept-grid">
+                    <div class="concept-card">
+                        <div class="concept-term">Time-Blocking</div>
+                        <p>Divides your day into set periods for specific activities to reduce overwhelm.</p>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-term">Sleep Hygiene</div>
+                        <p>Creates routines promoting consistent, restorative sleep.</p>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-term">Habit Formation</div>
+                        <p>Requires three months of consistent practice to establish new patterns.</p>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-term">Reframing</div>
+                        <p>Changes how you think about something to shift perspective.</p>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-term">Decision Fatigue</div>
+                        <p>Mental exhaustion from too many choices throughout the day.</p>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-term">Medication Titration</div>
+                        <p>Adjusts medication types and timing to match energy needs.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Therapeutic Frameworks</h2>
+                
+                <div class="framework">
+                    <h3 class="framework-title">Time-Blocking and Prioritization Framework</h3>
+                    <ol class="steps">
+                        <li>Identify fixed commitments and anchor points in your schedule</li>
+                        <li>Reserve time blocks for psychological needs and self-care</li>
+                        <li>Prioritize one major task daily to prevent overwhelm</li>
+                        <li>Schedule non-negotiable sleep blocks to protect rest</li>
+                        <li>Use visual cues and reminders to reinforce your routine</li>
+                    </ol>
+                </div>
+                
+                <div class="framework">
+                    <h3 class="framework-title">Sleep Reframing and Habit Formation</h3>
+                    <ol class="steps">
+                        <li>Set a specific start date for your new routine</li>
+                        <li>Mentally rehearse the new routine in advance for 1-2 weeks</li>
+                        <li>Focus on hours of sleep rather than clock time</li>
+                        <li>Reframe sleep as a functional tool, not part of your identity</li>
+                        <li>Remove all waking barriers by preparing the night before</li>
+                        <li>Commit to three months of consistent practice for lasting change</li>
+                    </ol>
+                </div>
+                
+                <div class="framework">
+                    <h3 class="framework-title">Meal Prep Efficiency</h3>
+                    <ol class="steps">
+                        <li>Create a list of 5-10 easy, go-to meals</li>
+                        <li>Use batch cooking and ready-made options without guilt</li>
+                        <li>Order groceries online for pickup to save time and energy</li>
+                        <li>Accept that meals don't need to be elaborate to be nourishing</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Practical Instructions</h2>
+                <div class="insight-box">
+                    <p><strong>Medication Plan:</strong> Long-acting Ritalin 40mg upon waking provides sustained workday focus. Short-acting methylphenidate 20mg taken 4-6 hours later as needed for additional focus. Take long-acting immediately upon waking (pre-set by bedside). Monitor for increased heart rate, anxiety, and appetite changes. Adjust timing if overlap causes discomfort.</p>
+                </div>
+                <div class="white-section">
+                    <p><strong>Daily Structure:</strong> Complete 20 minutes of daily chores before relaxing after work. This creates a transition buffer between work and home life while preventing weekend catch-up overwhelm. Use time-blocking to structure both evenings and mornings, maintaining a consistent seven-day routine including weekends.</p>
+                </div>
+                <div class="quote-box">
+                    "Reframe sleep as an energy tool, not your identity. Focus on sleep hours, not clock time."
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Homework</h2>
+                <ul class="homework-list">
+                    <li>Set specific date to start new sleep/wake routine</li>
+                    <li>Mentally rehearse new routine nightly for 1-2 weeks</li>
+                    <li>Create/re-post time cards around home as activity cues</li>
+                    <li>Make list of 5-10 go-to meals</li>
+                    <li>Begin ordering groceries online and batch prepping meals</li>
+                    <li>Complete 20 minutes of daily chores before relaxing after work</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Key Takeaways</h2>
+                <ul class="takeaways-list">
+                    <li>Prioritize one major task daily to prevent overwhelm</li>
+                    <li>Use time-blocking to structure evenings and mornings</li>
+                    <li>Reframe sleep as energy tool, not identity</li>
+                    <li>Set specific start date—don't change everything at once</li>
+                    <li>Remove all barriers to medication and waking</li>
+                    <li>Focus on sleep hours, not clock time</li>
+                    <li>Batch-cook meals and use ready-made options</li>
+                    <li>Complete 20 minutes of daily chores before relaxing</li>
+                    <li>Maintain consistent seven-day routine including weekends</li>
+                    <li>Commit to three months for habit formation</li>
+                    <li>Use visual cues to reinforce schedule</li>
+                    <li>Adjust medication timing to match energy needs</li>
+                </ul>
+            </div>
+            
+            <div class="bottom-line">
+                <strong>Bottom Line:</strong> Your routines need to match your energy patterns, not fight against them. By prioritizing one task daily, reframing sleep as a tool rather than an identity, and removing barriers to success, you can create sustainable habits that support your wellbeing. Remember: consistency over three months creates lasting change, and progress matters more than perfection.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+```
