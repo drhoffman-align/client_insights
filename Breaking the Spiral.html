@@ -1,0 +1,391 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Insights - Alignment Psychiatry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            padding: 60px 40px;
+            text-align: center;
+            color: #f5f5dc;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            color: #f5f5dc;
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            color: #f5f5dc;
+            font-weight: 300;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            font-size: 1.8em;
+            color: #800020;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #800020;
+        }
+        
+        .white-section {
+            background-color: white;
+            padding: 25px;
+            border-left: 5px solid #ff8c00;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .gradient-box {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+            font-style: italic;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        .insight-box {
+            background: linear-gradient(to right, #fff5e6 0%, #ffe6cc 100%);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #ff8c00;
+        }
+        
+        .frameworks {
+            margin: 30px 0;
+        }
+        
+        .framework-item {
+            margin-bottom: 30px;
+        }
+        
+        .framework-title {
+            font-size: 1.3em;
+            color: #800020;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .steps {
+            list-style: none;
+            counter-reset: step-counter;
+        }
+        
+        .steps li {
+            counter-increment: step-counter;
+            margin-bottom: 15px;
+            padding-left: 60px;
+            position: relative;
+            line-height: 1.8;
+        }
+        
+        .steps li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: #800020;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .clinical-concepts {
+            display: grid;
+            gap: 15px;
+        }
+        
+        .concept {
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            border-left: 4px solid #800020;
+        }
+        
+        .concept-term {
+            font-weight: 700;
+            color: #800020;
+            font-size: 1.1em;
+        }
+        
+        .concept-definition {
+            margin-top: 5px;
+            color: #555;
+        }
+        
+        .homework-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .homework-list li {
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            background-color: #fff5e6;
+            border-left: 4px solid #ff8c00;
+            border-radius: 3px;
+        }
+        
+        .homework-list li::before {
+            content: "✓ ";
+            color: #ff8c00;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        
+        .takeaways {
+            list-style: none;
+            counter-reset: takeaway-counter;
+        }
+        
+        .takeaways li {
+            counter-increment: takeaway-counter;
+            padding: 12px 15px 12px 45px;
+            margin-bottom: 12px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            position: relative;
+        }
+        
+        .takeaways li::before {
+            content: counter(takeaway-counter);
+            position: absolute;
+            left: 12px;
+            top: 12px;
+            color: #800020;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        .bottom-line {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 40px;
+            text-align: center;
+            font-size: 1.3em;
+            line-height: 1.8;
+            margin-top: 40px;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .section-title {
+                font-size: 1.5em;
+            }
+            
+            .steps li {
+                padding-left: 55px;
+            }
+            
+            .steps li::before {
+                width: 35px;
+                height: 35px;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Therapeutic Insights</h1>
+            <div class="subtitle">Alignment Psychiatry</div>
+        </header>
+        
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">The Situation</h2>
+                <div class="white-section">
+                    <p>Mosley is processing the emotional aftermath of ending a business relationship with a former client (Kayla) due to disrespect and unclear contractual terms. Despite acting ethically and professionally, she experiences intense anxiety, guilt, and fear about reputation damage and future opportunities, particularly within interconnected social justice circles.</p>
+                    <p style="margin-top: 15px;">She struggles with a lifelong pattern of feeling she must overperform to prove her worth, compounded by pressures faced as a Black woman in professional spaces.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Core Problem</h2>
+                <div class="gradient-box">
+                    "A significant mismatch exists between actual professional conduct and internal narrative dominated by guilt, shame, and fear of judgment."
+                </div>
+                <div class="white-section">
+                    <p>Persistent negative self-talk and self-doubt emerge whenever Mosley prioritizes her own well-being. Despite her ethical conduct, over-delivering on commitments, and respected professional standing, her internal narrative remains dominated by feelings of inadequacy and fear of being judged.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Clinical Concepts</h2>
+                <div class="clinical-concepts">
+                    <div class="concept">
+                        <div class="concept-term">Spiral Mode</div>
+                        <div class="concept-definition">Negative thoughts and emotions feeding each other, escalating anxiety and self-doubt.</div>
+                    </div>
+                    <div class="concept">
+                        <div class="concept-term">Self-Abandonment</div>
+                        <div class="concept-definition">Neglecting one's needs and boundaries to please others or avoid conflict.</div>
+                    </div>
+                    <div class="concept">
+                        <div class="concept-term">Over-Functioning</div>
+                        <div class="concept-definition">Taking excessive responsibility to prove worth or avoid criticism.</div>
+                    </div>
+                    <div class="concept">
+                        <div class="concept-term">Reality-Checking</div>
+                        <div class="concept-definition">Comparing emotional reactions to objective facts to gain perspective.</div>
+                    </div>
+                    <div class="concept">
+                        <div class="concept-term">Imposter Syndrome</div>
+                        <div class="concept-definition">Feeling fraudulent despite clear evidence of competence and accomplishment.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Therapeutic Frameworks</h2>
+                <div class="frameworks">
+                    <div class="framework-item">
+                        <div class="framework-title">Reality-Checking and Counter-Argument Practice</div>
+                        <ol class="steps">
+                            <li>Pause the spiral when you notice negative thoughts escalating</li>
+                            <li>State the objective situation without emotional interpretation</li>
+                            <li>Identify the feelings and beliefs you've attached to the situation</li>
+                            <li>Construct fact-based counter-arguments to challenge negative beliefs</li>
+                            <li>Compare your emotional narrative to the factual narrative side-by-side</li>
+                            <li>Practice this process repeatedly to build new mental pathways</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="framework-item">
+                        <div class="framework-title">Self-Abandonment Awareness</div>
+                        <ol class="steps">
+                            <li>Notice when you're prioritizing others' needs over your own well-being</li>
+                            <li>Name it explicitly as self-abandonment in the moment</li>
+                            <li>Reflect on the origins of this pattern in your life</li>
+                            <li>Practice choosing self-protection and boundary-setting instead</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="framework-item">
+                        <div class="framework-title">Intentional Self-Talk Rewiring</div>
+                        <ol class="steps">
+                            <li>Catch negative self-talk as it happens</li>
+                            <li>Ask yourself: "Would I say this to someone I care about?"</li>
+                            <li>Replace harsh statements with compassionate, supportive ones</li>
+                            <li>Repeat this practice consistently to rewire thought patterns</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Practical Instructions</h2>
+                <div class="insight-box">
+                    <p><strong>When you notice yourself spiraling:</strong> Stop and write down what's happening. Separate the facts from your feelings. Ask yourself what evidence contradicts your negative thoughts. Practice speaking to yourself with the same compassion you'd offer a friend.</p>
+                </div>
+                <div class="white-section">
+                    <p>These frameworks work best when practiced daily, even when you're not in crisis. The goal is to build new neural pathways that automatically challenge negative self-talk before it spirals. Start small—even one reality-check per day creates momentum.</p>
+                    <p style="margin-top: 15px;">Remember that your internal narrative has been shaped over years. Changing it requires patience, repetition, and self-compassion. Progress isn't linear, and setbacks are part of the process.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Homework</h2>
+                <ul class="homework-list">
+                    <li>Practice reality-checking daily when spirals occur</li>
+                    <li>Write down the situation, your feelings, and the objective facts</li>
+                    <li>Create counter-arguments for each negative belief that arises</li>
+                    <li>Keep a daily log of these exercises and your observations</li>
+                    <li>Bring your log and insights to the next session for discussion</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Key Takeaways</h2>
+                <ol class="takeaways">
+                    <li>Your guilt and fear contradict the facts of your ethical, professional actions</li>
+                    <li>Negative self-talk is a learned pattern, not reality</li>
+                    <li>Self-abandonment has been a survival strategy requiring change</li>
+                    <li>You have a strong professional reputation with positive peer feedback</li>
+                    <li>Fear of being "the bad guy" stems from old beliefs, not current evidence</li>
+                    <li>Over-functioning isn't required to prove your worth</li>
+                    <li>Your internal narrative lags behind your actual accomplishments</li>
+                    <li>You're allowed to protect yourself and set boundaries without guilt</li>
+                    <li>Most people aren't judging you as harshly as you judge yourself</li>
+                    <li>Progress requires time and repeated practice—be patient with yourself</li>
+                </ol>
+            </div>
+        </div>
+        
+        <div class="bottom-line">
+            <strong>Bottom Line:</strong> Your feelings of guilt and inadequacy don't match the reality of your professional conduct and accomplishments. The work ahead involves consistently challenging the old narrative with facts, practicing self-compassion, and recognizing that protecting your boundaries is not only acceptable—it's necessary. You deserve the same kindness and understanding you readily offer others.
+        </div>
+    </div>
+</body>
+</html>
+```
