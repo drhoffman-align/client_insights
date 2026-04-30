@@ -1,0 +1,433 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Insights - Alignment Psychiatry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            padding: 60px 40px;
+            text-align: center;
+            color: #f5f5dc;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        section {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            color: #800020;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #800020;
+        }
+        
+        h3 {
+            color: #800020;
+            font-size: 1.3em;
+            margin: 25px 0 15px 0;
+        }
+        
+        p, li {
+            margin-bottom: 12px;
+            font-size: 1.05em;
+        }
+        
+        .quote-box {
+            background: linear-gradient(135deg, #fff5e6 0%, #ffe6cc 100%);
+            border-left: 5px solid #ff8c00;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 5px;
+            font-style: italic;
+            font-size: 1.1em;
+            color: #555;
+        }
+        
+        .insight-box {
+            background: linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%);
+            border-left: 5px solid #800020;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 5px;
+        }
+        
+        .white-section {
+            background: white;
+            border-left: 5px solid #ff8c00;
+            padding: 25px;
+            margin: 25px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .framework {
+            margin: 30px 0;
+        }
+        
+        .framework-steps {
+            margin: 20px 0;
+        }
+        
+        .step {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+        
+        .step-number {
+            background-color: #800020;
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.3em;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        .step-content {
+            flex: 1;
+            font-size: 1.05em;
+        }
+        
+        ul {
+            margin-left: 25px;
+            margin-top: 15px;
+        }
+        
+        ul li {
+            margin-bottom: 10px;
+            padding-left: 5px;
+        }
+        
+        .homework-list {
+            background: #fffaf0;
+            padding: 25px;
+            border-radius: 5px;
+            border: 2px solid #ff8c00;
+        }
+        
+        .homework-list ul {
+            margin-left: 20px;
+        }
+        
+        .takeaways-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .takeaway-item {
+            background: white;
+            border-left: 5px solid #ff8c00;
+            padding: 15px 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .takeaway-item strong {
+            color: #800020;
+        }
+        
+        .bottom-line {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 40px;
+            margin-top: 50px;
+            text-align: center;
+            font-size: 1.2em;
+            line-height: 1.8;
+            border-radius: 5px;
+        }
+        
+        .bottom-line strong {
+            font-size: 1.3em;
+            display: block;
+            margin-bottom: 15px;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            
+            section {
+                page-break-inside: avoid;
+            }
+            
+            header {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+            
+            header h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+            
+            .step {
+                flex-direction: row;
+            }
+            
+            .step-number {
+                width: 40px;
+                height: 40px;
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Therapeutic Insights</h1>
+            <p>Alignment Psychiatry - Building Internal Structure and Purpose</p>
+        </header>
+        
+        <div class="content">
+            <section>
+                <h2>The Situation</h2>
+                <p>Hudson recently relocated from Atlanta to a rural farm seeking mental health improvement and a slower pace. The transition has brought unexpected fatigue, isolation, and overwhelming responsibility for farm operations and animal care while living alone until a partner arrives in June.</p>
+                <p>This move followed burnout, financial instability, and a mental health crisis requiring rehab. Hudson now struggles with motivation, energy, and maintaining daily routines without the external structure of city life.</p>
+                
+                <div class="quote-box">
+                    "The transition has brought unexpected fatigue, isolation, and overwhelming responsibility... Hudson now struggles with motivation, energy, and maintaining daily routines without the external structure of city life."
+                </div>
+            </section>
+            
+            <section>
+                <h2>Core Problem</h2>
+                <div class="white-section">
+                    <p>Hudson has difficulty generating internal purpose and motivation after years of relying on external structures, people, and anxiety to drive action.</p>
+                    <p>There is a mismatch between expectations that rural life would automatically bring healing and the reality that self-connection requires active, intentional effort without external validation.</p>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Clinical Concepts</h2>
+                <div class="insight-box">
+                    <h3>ADHD</h3>
+                    <p>Difficulty with focus, organization, and motivation, especially in unstructured environments. The lack of external structure in rural farm life compounds these challenges, making it harder to initiate and maintain daily routines.</p>
+                    
+                    <h3>Time-Blocking</h3>
+                    <p>Dividing the day into set periods for specific activities to counteract inertia. This technique creates artificial structure that compensates for the absence of external demands and helps manage ADHD-related executive function challenges.</p>
+                    
+                    <h3>Narrative Therapy</h3>
+                    <p>Examining and rewriting self-stories to move from failure narratives to resilience and agency. The stories we tell ourselves about our experiences shape our reality and influence our capacity for action and self-compassion.</p>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Therapeutic Frameworks</h2>
+                
+                <div class="framework">
+                    <h3>Self-Care as Self-Generated Purpose</h3>
+                    <div class="framework-steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">Identify personal responsibilities - Recognize that you are now responsible for your own well-being, structure, and daily care without relying on external forces.</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">Recognize motivation must come from within - Accept that anxiety, other people, and external demands can no longer be the primary drivers of your actions.</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">Accept self-care is a learnable skill - Understand that generating internal motivation and caring for yourself are skills that can be developed with practice and patience.</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="framework">
+                    <h3>Time-Blocking for Structure</h3>
+                    <div class="framework-steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">Create daily schedule with specific blocks - Divide your day into designated time periods for farm work, meals, self-care, and rest.</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">Include journaling time - Schedule 15-30 minutes daily for processing emotions and experiences through writing.</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">Limit unstructured bed time to actual sleep - Avoid spending excessive time in bed outside of sleep hours; limit naps to 30 minutes maximum.</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="framework">
+                    <h3>Narrative Reframing</h3>
+                    <div class="framework-steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">Write the true story of what happened - Document the facts of your recent life changes, including the burnout, crisis, rehab, and relocation.</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">Identify and challenge narratives rooted in pity/guilt/shame - Recognize when your self-talk is driven by these emotions and question their validity.</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">Replace with action-oriented compassionate self-talk - Reframe your story to emphasize resilience, lessons learned, and concrete steps forward.</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="quote-box">
+                    "Purpose must now come from within, not from others or anxiety... The story you tell yourself shapes your reality—be intentional about it."
+                </div>
+            </section>
+            
+            <section>
+                <h2>Practical Instructions</h2>
+                <div class="white-section">
+                    <h3>Daily Structure</h3>
+                    <ul>
+                        <li>Take Adderall 20mg upon waking to support focus and motivation</li>
+                        <li>Follow your time-blocked schedule with specific periods for farm tasks, meals, and self-care</li>
+                        <li>Limit time in bed to actual sleep hours; get up when you wake</li>
+                        <li>If napping is necessary, set a timer for 30 minutes maximum</li>
+                        <li>Use additional 5-10mg Adderall as needed for afternoon tasks</li>
+                    </ul>
+                    
+                    <h3>Journaling Practice</h3>
+                    <ul>
+                        <li>Set aside 15-30 minutes daily at a consistent time</li>
+                        <li>Write about your emotions, experiences, and observations</li>
+                        <li>Process what's happening without judgment</li>
+                        <li>Notice patterns in your thoughts and feelings</li>
+                        <li>Reframe negative narratives with compassionate, action-oriented language</li>
+                    </ul>
+                    
+                    <h3>Managing Difficult Emotions</h3>
+                    <ul>
+                        <li>When pity, guilt, or shame arise, pause and acknowledge them</li>
+                        <li>Ask yourself: "Is this emotion helping me move forward?"</li>
+                        <li>Redirect to action: "What is one small thing I can do right now?"</li>
+                        <li>Practice self-compassion: speak to yourself as you would a friend</li>
+                        <li>Remember: you have evidence of past organizational success—apply those skills to yourself now</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Homework</h2>
+                <div class="homework-list">
+                    <ul>
+                        <li><strong>Create time-blocked daily schedule</strong> using provided template - Include specific times for waking, medication, farm work, meals, journaling, and sleep</li>
+                        <li><strong>Journal 15-30 minutes daily</strong> - Process emotions and experiences, notice patterns, practice narrative reframing</li>
+                        <li><strong>Write true narrative</strong> of recent life changes - Focus on facts, feelings, and lessons learned; identify where pity, guilt, and shame show up</li>
+                        <li><strong>Develop plan for moving out of pity, guilt, and shame</strong> when they arise - Create specific strategies and self-talk phrases</li>
+                        <li><strong>Bring written schedule and journal entry</strong> to next session for review and refinement</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Key Takeaways</h2>
+                <div class="takeaways-grid">
+                    <div class="takeaway-item">
+                        <strong>1.</strong> Fatigue stems from loss of external structure; self-reliance is a new skill to learn
+                    </div>
+                    <div class="takeaway-item">
+                        <strong>2.</strong> ADHD and unstructured time worsen inertia—structure is essential
+                    </div>
+                    <div class="takeaway-item">
+                        <strong>3.</strong> Time-blocking builds routine and counteracts overwhelm
+                    </div>
+                    <div class="takeaway-item">
+                        <strong>4.</strong> Avoid excessive bed time outside actual sleep; limit naps to 30 minutes
+                    </div>
+                    <div class="takeaway-item">
+                        <strong>5.</strong> Purpose must now come from within, not from others or anxiety
+                    </div>
+                    <div class="takeaway-item">
+                        <strong>6.</strong> Old narratives of shame keep you stuck—replace with action and self-compassion
+                    </div>
+                    <div class="takeaway-item">
+                        <strong>7.</strong> Journaling processes emotions and reframes your narrative
+                    </div>
+                    <div class="takeaway-item">
+                        <strong>8.</strong> You have past evidence of being organized—apply those skills to yourself now
+                    </div>
+                    <div class="takeaway-item">
+                        <strong>9.</strong> Medication supports activation, but mindset and routine are equally important
+                    </div>
+                    <div class="takeaway-item">
+                        <strong>10.</strong> The story you tell yourself shapes your reality—be intentional about it
+                    </div>
+                </div>
+            </section>
+            
+            <div class="bottom-line">
+                <strong>Bottom Line</strong>
+                <p>You've made a courageous move toward healing, but the work of building internal structure and purpose is just beginning. The fatigue and overwhelm you're experiencing aren't signs of failure—they're signals that you're learning to operate in a fundamentally different way. After years of being driven by external demands and anxiety, generating motivation from within is unfamiliar territory.</p>
+                <p>Your ADHD makes unstructured time particularly challenging, which is why time-blocking and routine are essential tools, not optional extras. The medication supports your brain's ability to focus and initiate, but sustainable change comes from the daily practice of showing up for yourself with structure, compassion, and intentionality.</p>
+                <p>The narratives of pity, guilt, and shame are old stories that no longer serve you. You have the capacity to rewrite them—not by denying what happened, but by choosing how you interpret and respond to your experiences. You've demonstrated organizational skills and resilience before; now it's time to direct those strengths inward. Small, consistent actions build the internal foundation you're seeking. Trust the process, be patient with yourself, and remember: healing isn't passive—it's an active, daily choice.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+```
