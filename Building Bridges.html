@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Insights - Alignment Psychiatry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #f5f5dc;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .subtitle {
+            color: #f5f5dc;
+            font-size: 1.1em;
+            font-weight: 300;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            color: #800020;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .white-section {
+            background-color: white;
+            padding: 25px;
+            border-left: 5px solid #ff8c00;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .gradient-box {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+            font-style: italic;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        .insight-box {
+            background: linear-gradient(to right, #fff5e6 0%, #ffe6cc 100%);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #ff8c00;
+        }
+        
+        .framework {
+            margin: 30px 0;
+        }
+        
+        .framework-title {
+            color: #800020;
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .steps {
+            list-style: none;
+            counter-reset: step-counter;
+        }
+        
+        .steps li {
+            counter-increment: step-counter;
+            margin-bottom: 20px;
+            padding-left: 60px;
+            position: relative;
+            line-height: 1.8;
+        }
+        
+        .steps li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: #800020;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .key-takeaways {
+            list-style: none;
+            counter-reset: takeaway-counter;
+        }
+        
+        .key-takeaways li {
+            counter-increment: takeaway-counter;
+            margin-bottom: 15px;
+            padding-left: 35px;
+            position: relative;
+        }
+        
+        .key-takeaways li::before {
+            content: counter(takeaway-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #800020;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        .homework-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .homework-list li {
+            padding: 12px 0 12px 30px;
+            position: relative;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .homework-list li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #ff8c00;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+        
+        .bottom-line {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 40px;
+            text-align: center;
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-top: 40px;
+        }
+        
+        .clinical-concept {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #fafafa;
+            border-radius: 5px;
+        }
+        
+        .concept-term {
+            color: #800020;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+        
+        .concept-definition {
+            margin-top: 8px;
+            color: #555;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            
+            .container {
+                box-shadow: none;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .section-title {
+                font-size: 1.5em;
+            }
+            
+            .steps li {
+                padding-left: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Therapeutic Insights</h1>
+            <div class="subtitle">Alignment Psychiatry</div>
+        </header>
+        
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">The Situation</h2>
+                <div class="white-section">
+                    <p>You're navigating uncertainty at your primary job in addiction services, with potential layoffs expected by spring semester's end. While you've wisely maintained financial backup through adjunct teaching and EMT work, the worry about finding fulfilling, well-compensated work weighs on you. At the same time, your marriage—though stable—is experiencing strain from frequent miscommunications and emotional disconnect, particularly around how conflict is processed and emotions are expressed.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Core Problem</h2>
+                <div class="white-section">
+                    <p>A recurring pattern of emotional misattunement exists in your marriage. When you express hurt, your spouse responds with explanations or defensiveness rather than acknowledgment. This leaves you feeling unheard and invalidated, which escalates arguments and creates emotional distance between you both.</p>
+                </div>
+                <div class="gradient-box">
+                    "When the client expresses hurt, his spouse responds with explanations or defensiveness rather than acknowledgment, leaving him feeling unheard and invalidated."
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Clinical Concepts</h2>
+                
+                <div class="clinical-concept">
+                    <div class="concept-term">Defensiveness</div>
+                    <div class="concept-definition">Responding to feedback with explanations or excuses rather than acknowledgment. This protective response often prevents genuine connection and resolution.</div>
+                </div>
+                
+                <div class="clinical-concept">
+                    <div class="concept-term">Emotional Validation</div>
+                    <div class="concept-definition">Acknowledging and accepting another's feelings as real and understandable. This doesn't mean agreeing, but recognizing the legitimacy of their emotional experience.</div>
+                </div>
+                
+                <div class="clinical-concept">
+                    <div class="concept-term">Accountability</div>
+                    <div class="concept-definition">Taking responsibility for actions and their impact without deflecting. This involves owning your part in a situation before offering context or explanation.</div>
+                </div>
+                
+                <div class="clinical-concept">
+                    <div class="concept-term">Circle of Control</div>
+                    <div class="concept-definition">Focusing on changeable factors while releasing what cannot be controlled. This framework helps reduce anxiety by directing energy toward actionable areas.</div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Therapeutic Frameworks</h2>
+                
+                <div class="framework">
+                    <div class="framework-title">Circle of Control</div>
+                    <ol class="steps">
+                        <li>Identify controllable factors in your situation (your performance, relationships, job search efforts)</li>
+                        <li>Accept uncontrollable ones (final layoff decisions, organizational changes)</li>
+                        <li>Focus your energy on the controllable areas where you can make a difference</li>
+                    </ol>
+                </div>
+                
+                <div class="framework">
+                    <div class="framework-title">Emotional Validation and Accountability</div>
+                    <ol class="steps">
+                        <li>Pause before responding to your partner's concerns or hurt feelings</li>
+                        <li>Reflect back what you heard to ensure understanding</li>
+                        <li>Take accountability for your impact, even if unintentional</li>
+                        <li>Avoid immediate justifications or explanations that can feel dismissive</li>
+                    </ol>
+                </div>
+                
+                <div class="framework">
+                    <div class="framework-title">Mindset Shift Before Communication</div>
+                    <ol class="steps">
+                        <li>Remind yourself the person isn't trying to harm you</li>
+                        <li>Approach with curiosity rather than defensiveness</li>
+                        <li>Ask open-ended questions to understand their perspective</li>
+                    </ol>
+                </div>
+                
+                <div class="insight-box">
+                    <strong>Clinical Insight:</strong> Your spouse's explanatory responses stem from family background and discomfort with intense emotions. Understanding this pattern helps you approach conflicts with compassion rather than frustration.
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Practical Instructions</h2>
+                <div class="white-section">
+                    <p><strong>Before emotionally charged conversations:</strong></p>
+                    <ul style="margin-top: 15px; margin-left: 20px;">
+                        <li style="margin-bottom: 10px;">Take several deep breaths when you notice frustration building</li>
+                        <li style="margin-bottom: 10px;">Consciously remind yourself: "She isn't trying to harm me"</li>
+                        <li style="margin-bottom: 10px;">Approach with calm questions or feeling statements rather than accusations</li>
+                        <li style="margin-bottom: 10px;">If defensiveness arises, gently redirect or suggest taking a break</li>
+                        <li style="margin-bottom: 10px;">Allow time to cool off before re-engaging for more productive conversations</li>
+                    </ul>
+                </div>
+                
+                <div class="gradient-box">
+                    "Approaching conflict assuming goodwill reduces reactivity and creates space for genuine connection."
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Homework</h2>
+                <div class="white-section">
+                    <ul class="homework-list">
+                        <li>Practice "pause and mindset shift" before emotionally charged conversations</li>
+                        <li>Take deep breaths when noticing frustration rising</li>
+                        <li>Remind yourself: "She isn't trying to harm me"</li>
+                        <li>Approach with calm questions or feeling statements</li>
+                        <li>Gently redirect defensiveness or take breaks when needed</li>
+                        <li>Report 1-2 examples at next session of how these strategies worked</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Key Takeaways</h2>
+                <ol class="key-takeaways">
+                    <li>Focus on controllable work factors (performance, relationships) while accepting layoff decisions are beyond control</li>
+                    <li>Spouse's explanatory responses stem from family background and discomfort with intense emotions</li>
+                    <li>Validation and accountability are essential for feeling connected</li>
+                    <li>Approaching conflict assuming goodwill reduces reactivity</li>
+                    <li>Cooling off before re-engaging leads to productive conversations</li>
+                    <li>Both partners must meet each other emotionally, even when unnatural</li>
+                    <li>Small communication changes create significant relationship improvements</li>
+                    <li>Self-awareness and openness to feedback are key strengths</li>
+                    <li>Neutral third parties help when partners are stuck</li>
+                    <li>Consistent practice of new strategies builds connection over time</li>
+                </ol>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Medication Information</h2>
+                <div class="white-section">
+                    <p><strong>Clinical Rationale:</strong> Low-dose patch medication (pending prior authorization) supports mood and anxiety symptoms with minimal side effects and flexibility for adjustment if needed.</p>
+                    
+                    <p style="margin-top: 20px;"><strong>Side Effects to Monitor:</strong> Report any new or unusual symptoms to your provider.</p>
+                    
+                    <p style="margin-top: 20px;"><strong>Safety Warnings:</strong> Follow provider instructions carefully. Do not adjust dose without consultation.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-line">
+            <strong>Bottom Line:</strong> You're facing real challenges with work uncertainty and marital communication, but you have the insight and tools to navigate both. By focusing on what you can control at work and practicing validation and mindset shifts at home, you're building resilience and connection. Small, consistent changes in how you approach conflict will strengthen your marriage over time. Your self-awareness and willingness to grow are powerful assets in this journey.
+        </div>
+    </div>
+</body>
+</html>
