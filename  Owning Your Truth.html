@@ -1,0 +1,394 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Insights - Alignment Psychiatry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #f5f5dc;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .subtitle {
+            color: #f5f5dc;
+            font-size: 1.1em;
+            font-weight: 300;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            color: #800020;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .quote-box {
+            background: linear-gradient(135deg, #800020 0%, #a64253 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+            font-style: italic;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        .white-section {
+            background-color: white;
+            border-left: 5px solid #ff8c00;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .insight-box {
+            background: linear-gradient(135deg, #f5f5dc 0%, #e8e8d0 100%);
+            padding: 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+            border-left: 5px solid #800020;
+        }
+        
+        .framework {
+            margin: 30px 0;
+        }
+        
+        .framework-title {
+            color: #800020;
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin: 20px 0;
+        }
+        
+        .step-number {
+            background-color: #800020;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            flex-shrink: 0;
+            margin-right: 20px;
+        }
+        
+        .step-content {
+            flex: 1;
+            padding-top: 8px;
+        }
+        
+        .concept {
+            margin: 15px 0;
+        }
+        
+        .concept-term {
+            color: #800020;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+        
+        .concept-definition {
+            margin-left: 20px;
+            margin-top: 5px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        
+        li {
+            margin: 10px 0;
+            line-height: 1.8;
+        }
+        
+        .bottom-line {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 30px;
+            text-align: center;
+            font-size: 1.2em;
+            line-height: 1.8;
+            font-weight: 500;
+        }
+        
+        .medication-section {
+            background-color: #fff9f0;
+            border: 2px solid #ff8c00;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .warning-box {
+            background-color: #fff0f0;
+            border-left: 5px solid #dc143c;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        strong {
+            color: #800020;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            .container {
+                box-shadow: none;
+            }
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            .content {
+                padding: 20px;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Therapeutic Insights</h1>
+            <div class="subtitle">Alignment Psychiatry - Session Summary</div>
+        </header>
+        
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">The Situation</h2>
+                <div class="white-section">
+                    <p>You are navigating a painful marital separation marked by high anxiety, disrupted sleep, and feelings of abandonment. You have provided materially and emotionally for your wife but face accusations, deflection, and lack of reciprocal care. You are managing anxiety and ADHD medications while preparing for couples therapy tonight.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Core Problem</h2>
+                <div class="insight-box">
+                    <p>You struggle to set boundaries and protect yourself emotionally due to deep fear of abandonment and a pattern of prioritizing your partner's needs over your own. This self-sacrifice leaves you vulnerable to manipulation and prevents you from asserting your truth and worth.</p>
+                </div>
+            </div>
+            
+            <div class="quote-box">
+                "Your worth isn't defined by your wife's inability to recognize it."
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Clinical Concepts</h2>
+                <div class="white-section">
+                    <div class="concept">
+                        <div class="concept-term">Gaslighting</div>
+                        <div class="concept-definition">Manipulation causing you to doubt your own reality or memories</div>
+                    </div>
+                    <div class="concept">
+                        <div class="concept-term">Boundaries</div>
+                        <div class="concept-definition">Limits protecting your emotional well-being</div>
+                    </div>
+                    <div class="concept">
+                        <div class="concept-term">Deflection</div>
+                        <div class="concept-definition">Shifting blame away from oneself to avoid accountability</div>
+                    </div>
+                    <div class="concept">
+                        <div class="concept-term">Self-Assertion</div>
+                        <div class="concept-definition">Communicating needs and truth directly and confidently</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Therapeutic Frameworks</h2>
+                
+                <div class="framework">
+                    <div class="framework-title">Evidence-Based Self-Assertion</div>
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">Gather concrete evidence of your contributions - specific actions, dates, and examples of what you've provided</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">Articulate your truth with specific examples rather than generalizations</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">Anticipate deflection by requesting evidence in return when faced with vague accusations</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">Maintain composure - self-assertion without anger demonstrates true confidence</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">Set boundaries based on your personal values, not based on her reactions</div>
+                    </div>
+                </div>
+                
+                <div class="framework">
+                    <div class="framework-title">"Start Low, Go Slow" Medication Adjustment</div>
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">Begin with low dose increases to assess tolerance</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">Monitor effects carefully over several days</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">Gradually increase as tolerated to find optimal balance</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">Track symptoms and side effects for provider communication</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="quote-box">
+                "Use concrete evidence to reclaim your narrative and counter manipulation."
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Practical Instructions</h2>
+                <div class="white-section">
+                    <h3 style="color: #800020; margin-bottom: 15px;">For Tonight's Couples Therapy</h3>
+                    <ul>
+                        <li>Write a clear statement listing your specific contributions and actions</li>
+                        <li>Contrast what you provided versus what you received</li>
+                        <li>State clear boundaries and expectations</li>
+                        <li>Practice calm delivery aloud before the session</li>
+                        <li>Enter with confidence, not self-doubt</li>
+                        <li>When faced with vague accusations, ask for specifics</li>
+                    </ul>
+                </div>
+                
+                <div class="medication-section">
+                    <h3 style="color: #ff8c00; margin-bottom: 15px;">Medication Adjustments</h3>
+                    <p><strong>Clonazepam:</strong> Increase to 1mg (two 0.5mg pills) at bedtime for anxiety and sleep support.</p>
+                    <p style="margin-top: 15px;"><strong>Adderall:</strong> Increase to one-and-a-half pills. Monitor effects before considering two pills.</p>
+                    <p style="margin-top: 15px;"><strong>Clinical Rationale:</strong> Your high tolerance and persistent symptoms require gradual dose increases to find optimal balance between symptom relief and side effects while ensuring safety.</p>
+                </div>
+                
+                <div class="warning-box">
+                    <h3 style="color: #dc143c; margin-bottom: 15px;">Safety Warnings</h3>
+                    <ul>
+                        <li>Avoid alcohol with clonazepam</li>
+                        <li>Don't drive if drowsy</li>
+                        <li>Monitor for dependence risk with benzodiazepines</li>
+                        <li>Don't exceed prescribed Adderall dose</li>
+                        <li>Watch for heart symptoms (rapid heartbeat, chest pain)</li>
+                    </ul>
+                </div>
+                
+                <div class="white-section">
+                    <h3 style="color: #800020; margin-bottom: 15px;">Side Effects to Monitor</h3>
+                    <p><strong>Clonazepam:</strong> Drowsiness, next-day grogginess, tolerance development</p>
+                    <p style="margin-top: 10px;"><strong>Adderall:</strong> Insomnia, jitteriness, appetite suppression, mood changes</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Homework</h2>
+                <div class="insight-box">
+                    <ul>
+                        <li>Write statement for couples therapy listing specific contributions and actions</li>
+                        <li>Contrast what you provided versus what you received</li>
+                        <li>State clear boundaries and expectations</li>
+                        <li>Practice calm delivery aloud</li>
+                        <li>Complete before tonight's session</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="quote-box">
+                "Set boundaries protecting your well-being, not based on her reactions."
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Key Takeaways</h2>
+                <div class="white-section">
+                    <ul>
+                        <li>Use concrete evidence to reclaim your narrative and counter manipulation</li>
+                        <li>Ask for specifics when faced with vague accusations</li>
+                        <li>Your worth isn't defined by your wife's inability to recognize it</li>
+                        <li>Set boundaries protecting your well-being, not based on her reactions</li>
+                        <li>Enter couples therapy with confidence, not self-doubt</li>
+                        <li>Medication adjustments are stepwise to ensure safety and effectiveness</li>
+                        <li>Past abandonment patterns influence current relationship struggles</li>
+                        <li>Self-assertion without anger demonstrates true confidence</li>
+                        <li>You've provided more than enough; honor that truth</li>
+                        <li>Decide whether to fight for what works or release what doesn't</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="quote-box">
+                "You've provided more than enough; honor that truth."
+            </div>
+        </div>
+        
+        <div class="bottom-line">
+            <strong>Bottom Line:</strong> You have the right to assert your truth with evidence, set boundaries that protect your well-being, and enter therapy with confidence rather than self-doubt. Your worth exists independent of recognition, and you deserve reciprocal care in your relationships.
+        </div>
+    </div>
+</body>
+</html>
+```
