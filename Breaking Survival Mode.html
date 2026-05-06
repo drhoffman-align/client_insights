@@ -1,0 +1,373 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Insights - Alignment Psychiatry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #f5f5dc;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .subtitle {
+            color: #f5f5dc;
+            font-size: 1.1em;
+            font-weight: 300;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            color: #800020;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .quote-box {
+            background: linear-gradient(135deg, #800020 0%, #a64253 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+            font-style: italic;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        .white-section {
+            background-color: white;
+            border-left: 4px solid #ff8c00;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .insight-box {
+            background: linear-gradient(135deg, #f5f5dc 0%, #e8e8d0 100%);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #800020;
+        }
+        
+        .framework {
+            margin: 30px 0;
+        }
+        
+        .framework-title {
+            color: #800020;
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin: 15px 0;
+            padding: 10px 0;
+        }
+        
+        .step-number {
+            background-color: #800020;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            flex-shrink: 0;
+            margin-right: 15px;
+        }
+        
+        .step-content {
+            flex: 1;
+            padding-top: 8px;
+        }
+        
+        .homework-list, .takeaway-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .homework-list li, .takeaway-list li {
+            padding: 12px 0 12px 30px;
+            position: relative;
+            line-height: 1.6;
+        }
+        
+        .homework-list li:before {
+            content: "→";
+            color: #ff8c00;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 1.3em;
+        }
+        
+        .takeaway-list li:before {
+            content: "•";
+            color: #800020;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 1.5em;
+        }
+        
+        .bottom-line {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 40px;
+            font-size: 1.15em;
+            line-height: 1.8;
+        }
+        
+        .medication-section {
+            background-color: #fff9f0;
+            border: 2px solid #ff8c00;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .medication-title {
+            color: #ff8c00;
+            font-weight: 600;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        
+        .warning-box {
+            background-color: #fff0f0;
+            border-left: 4px solid #d32f2f;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            .container {
+                box-shadow: none;
+            }
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            .content {
+                padding: 20px;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Therapeutic Insights</h1>
+            <div class="subtitle">Alignment Psychiatry</div>
+        </header>
+        
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">The Situation</h2>
+                <div class="white-section">
+                    <p>You are experiencing chronic anxiety, financial stress, and relationship strain while navigating work, school, and significant debt. Your partner owes you money, your quality time together has diminished due to conflicting schedules, and you feel trapped in "survival mode." Despite having actual stability—you are not at immediate risk of homelessness—your nervous system perceives constant threat, blocking your ability to plan for the future or enjoy life.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Core Problem</h2>
+                <div class="quote-box">
+                    "You are stuck in a self-perpetuating survival mode cycle: anxiety about finances and instability triggers fight-or-flight responses, which drain motivation and hope, leading to withdrawal and isolation that further reinforces hopelessness and relationship disconnection."
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Clinical Concepts</h2>
+                <div class="insight-box">
+                    <p><strong>Survival Mode:</strong> A brain state focused on immediate threats that blocks long-term thinking, hope, and connection. When your nervous system is in survival mode, it diverts all resources to managing perceived danger rather than planning, creating, or connecting.</p>
+                </div>
+                <div class="insight-box">
+                    <p><strong>Fight-or-Flight:</strong> An automatic danger response that diverts energy to worry rather than productive action. This physiological state keeps you hypervigilant and exhausted, making it difficult to access your natural problem-solving abilities.</p>
+                </div>
+                <div class="insight-box">
+                    <p><strong>Quality Time:</strong> A love language requiring shared presence and activities. For your relationship to thrive, you need dedicated, device-free time together where you can reconnect and feel emotionally close.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Therapeutic Frameworks</h2>
+                
+                <div class="framework">
+                    <div class="framework-title">Survival Mode Cycle</div>
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content"><strong>Trigger:</strong> Financial stress and relationship worries activate your threat detection system</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content"><strong>Response:</strong> Anxiety activation floods your system with stress hormones</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content"><strong>Consequence:</strong> Reduced motivation and strategic thinking as your brain focuses only on immediate survival</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content"><strong>Result:</strong> Withdrawal and isolation from partner and community</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content"><strong>Reinforcement:</strong> The cycle repeats, deepening hopelessness and disconnection</div>
+                    </div>
+                </div>
+                
+                <div class="framework">
+                    <div class="framework-title">Reclaiming Hope and Motivation</div>
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content"><strong>Acknowledge Past Achievements:</strong> Remind yourself of what you've already overcome and accomplished</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content"><strong>Challenge Survival Thinking:</strong> Recognize when your brain is catastrophizing versus assessing actual risk</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content"><strong>Intentional Disruption:</strong> Take small actions that break the pattern, even when you don't feel motivated</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content"><strong>Community Engagement:</strong> Connect with others to restore perspective and reduce isolation</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content"><strong>Strategic Planning Time:</strong> Create dedicated, anxiety-free space for future-focused thinking</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Practical Instructions</h2>
+                <div class="white-section">
+                    <p>Breaking the survival mode cycle requires consistent, small actions that signal safety to your nervous system. You don't need to feel motivated to begin—action creates motivation, not the other way around. Start with the easiest step and build from there.</p>
+                    <p style="margin-top: 15px;">Focus on what you can control: your daily reflection practice, one quality time activity with your partner, and one community connection. These aren't just tasks—they're interventions that directly interrupt the anxiety cycle.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Homework</h2>
+                <ul class="homework-list">
+                    <li>Daily 15-30 minute reflection on your current situation and identify small actionable steps you can take</li>
+                    <li>Plan one device-free quality time activity with your partner this week—something you both enjoy</li>
+                    <li>Research and attend one local community event or networking opportunity that interests you</li>
+                    <li>Track your reflections and insights to report back next session</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Medication Plan</h2>
+                <div class="medication-section">
+                    <div class="medication-title">Klonopin (Clonazepam)</div>
+                    <p><strong>Dosing:</strong> Half tablet 45 minutes before bed for insomnia and nighttime anxiety</p>
+                    <p><strong>Clinical Rationale:</strong> Klonopin's longer duration makes it more effective than lorazepam for sleep maintenance</p>
+                    <p><strong>Side Effects to Monitor:</strong> Drowsiness, grogginess, potential dependence</p>
+                </div>
+                
+                <div class="medication-section">
+                    <div class="medication-title">Adderall (Amphetamine/Dextroamphetamine)</div>
+                    <p><strong>Dosing:</strong> Morning dose with breakfast for focus and motivation</p>
+                    <p><strong>Clinical Rationale:</strong> Supports executive functioning needed to break survival mode patterns</p>
+                    <p><strong>Side Effects to Monitor:</strong> Anxiety, insomnia, appetite changes</p>
+                </div>
+                
+                <div class="warning-box">
+                    <p><strong>⚠️ Safety Warnings:</strong></p>
+                    <p>• Use Klonopin only as prescribed; avoid alcohol or sedative combinations</p>
+                    <p>• Monitor for dependence with Klonopin—discuss any concerns immediately</p>
+                    <p>• Take Adderall as directed; watch for signs of overuse</p>
+                    <p>• Avoid using substances to escape; they worsen anxiety cycles</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Key Takeaways</h2>
+                <ul class="takeaway-list">
+                    <li>Survival mode distorts your sense of safety despite actual stability</li>
+                    <li>Anxiety is blocking access to your existing capabilities and resources</li>
+                    <li>Relationship stress stems from your internal state, not your partner's actions</li>
+                    <li>Quality time with your partner is essential—prioritize it in small ways</li>
+                    <li>Past achievements prove your resilience and competence</li>
+                    <li>Hope requires intentional cultivation through action, not waiting for external changes</li>
+                    <li>Community connection breaks isolation and restores perspective</li>
+                    <li>Strategic planning needs dedicated, anxiety-free time</li>
+                    <li>Avoid using substances to escape; they worsen anxiety cycles</li>
+                    <li>Small, intentional actions disrupt the survival mode pattern</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Bottom Line</h2>
+                <div class="bottom-line">
+                    You are not actually in immediate danger, but your nervous system believes you are. This disconnect is keeping you trapped in survival mode, blocking your natural ability to hope, plan, and connect. The way forward isn't to wait until you feel better—it's to take small, intentional actions that signal safety to your brain. Your past achievements prove you have the resilience and capability to navigate this. Start with one quality time moment with your partner, one community connection, and daily reflection. These aren't just tasks—they're the building blocks of reclaiming your life from anxiety. You have more stability and resources than your survival brain is allowing you to see. It's time to gently challenge that narrative with compassionate action.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+```
