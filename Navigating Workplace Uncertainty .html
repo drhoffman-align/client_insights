@@ -1,0 +1,424 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Insights - Alignment Psychiatry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #f5f5dc;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        
+        .subtitle {
+            color: #f5f5dc;
+            font-size: 1.1em;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            color: #800020;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #800020;
+        }
+        
+        h3 {
+            color: #800020;
+            font-size: 1.3em;
+            margin: 25px 0 15px 0;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .quote-box {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+            font-style: italic;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        .insight-box {
+            background: linear-gradient(135deg, #ffa500 0%, #ff8c00 100%);
+            color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+        
+        .white-section {
+            background-color: white;
+            border-left: 5px solid #ffa500;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .framework {
+            margin: 30px 0;
+        }
+        
+        .framework-title {
+            color: #800020;
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .step-number {
+            background-color: #800020;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            flex-shrink: 0;
+            margin-right: 15px;
+        }
+        
+        .step-content {
+            flex: 1;
+            padding-top: 8px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        .clinical-concept {
+            background-color: #f9f9f9;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            border-left: 4px solid #800020;
+        }
+        
+        .concept-term {
+            font-weight: bold;
+            color: #800020;
+        }
+        
+        .bottom-line {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 30px;
+            margin-top: 40px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            .container {
+                box-shadow: none;
+            }
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            .content {
+                padding: 20px;
+            }
+            .step {
+                flex-direction: column;
+            }
+            .step-number {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Therapeutic Insights</h1>
+            <div class="subtitle">Alignment Psychiatry - Session Summary</div>
+        </header>
+        
+        <div class="content">
+            <div class="section">
+                <h2>The Situation</h2>
+                <p>Kristin is navigating multiple significant life transitions with remarkable resilience. She's managing her son's recent ADHD diagnosis and treatment with Concerta, which is showing positive results both at school and at home. At work, however, she faces a more challenging landscape—feeling chronically undervalued despite making significant contributions. She receives no performance reviews or bonuses, and communication from her supervisor remains inconsistent and unpredictable.</p>
+                <p>Beyond these immediate concerns, Kristin is considering a major relocation to Florida to be closer to family. She's actively exploring internal job opportunities while simultaneously balancing self-care and addressing physical health concerns that require attention.</p>
+            </div>
+            
+            <div class="section">
+                <h2>Core Problem</h2>
+                <div class="quote-box">
+                    "The mismatch between her contributions and absence of formal acknowledgment leads to frustration and questioning her career path."
+                </div>
+                <p>Workplace dissatisfaction stemming from lack of recognition and inconsistent management creates chronic stress and uncertainty about Kristin's professional future. This ongoing situation generates a persistent sense of being undervalued, despite clear evidence of her meaningful contributions. The absence of formal feedback mechanisms—no performance reviews, no bonuses, no consistent communication—leaves her without the professional validation that helps employees gauge their standing and plan their futures.</p>
+            </div>
+            
+            <div class="section">
+                <h2>Clinical Concepts</h2>
+                
+                <div class="clinical-concept">
+                    <span class="concept-term">ADHD (Attention-Deficit/Hyperactivity Disorder):</span> A neurodevelopmental disorder affecting attention, impulsivity, and organization. In Kristin's son's case, medication management with Concerta is helping to address these challenges, improving his functioning at school and home.
+                </div>
+                
+                <div class="clinical-concept">
+                    <span class="concept-term">504 Plan:</span> A formal school accommodation plan that ensures equal educational access for students with disabilities. This legal framework provides necessary supports without requiring special education services.
+                </div>
+                
+                <div class="clinical-concept">
+                    <span class="concept-term">Boundary Setting:</span> The practice of defining clear limits on time and energy to protect psychological well-being. In workplace contexts, this means establishing what you will and won't do, when you're available, and how you'll protect your personal resources.
+                </div>
+                
+                <div class="clinical-concept">
+                    <span class="concept-term">Reframing:</span> A cognitive technique involving changing the interpretation of situations to see constructive possibilities rather than only obstacles. This doesn't mean denying reality, but rather choosing perspectives that support forward movement.
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Therapeutic Frameworks</h2>
+                
+                <div class="framework">
+                    <div class="framework-title">Protecting Your Time and Energy at Work</div>
+                    
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <strong>Identify Core Responsibilities:</strong> Clarify what your actual job requirements are versus what has accumulated over time. Distinguish between essential duties and tasks that have been added without formal acknowledgment or compensation.
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <strong>Set Clear Boundaries:</strong> Establish firm limits around work hours, availability, and scope of responsibilities. This includes protecting time off and not allowing work to consistently encroach on personal time.
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <strong>Communicate Directly:</strong> Use your natural direct communication style as a professional strength. Be clear about what you can and cannot take on, and when you're available.
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <strong>Document Achievements:</strong> Keep a running record of your contributions, successes, and positive feedback. This creates evidence of your value that exists independently of whether your organization formally recognizes it.
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <strong>Redirect Energy Toward Professional Development:</strong> Channel the energy you've been spending on frustration into exploring new opportunities, building skills, and networking. This shifts you from reactive to proactive.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="framework">
+                    <div class="framework-title">Mindset Shift: From Frustration to Forward Focus</div>
+                    
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <strong>Acknowledge Reality:</strong> Accept that your current workplace has systemic issues with recognition and communication. This isn't about you—it's about organizational dysfunction. Stop trying to fix what you cannot control.
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <strong>Reframe Situations as Growth Opportunities:</strong> View this challenging period as preparation for your next role. You're learning what you need in a workplace and building resilience that will serve you throughout your career.
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <strong>Focus on What's Next:</strong> Shift your mental energy from "Why isn't this working?" to "What do I want next?" Explore internal opportunities, consider the Florida relocation, and actively plan your next chapter.
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <strong>Build Evidence of Your Value:</strong> Create a professional portfolio that demonstrates your contributions. This serves both as a tool for future opportunities and as a reminder to yourself of your capabilities when workplace dynamics feel discouraging.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Practical Instructions</h2>
+                
+                <div class="white-section">
+                    <h3>At Work</h3>
+                    <ul>
+                        <li>Use your PTO without guilt—it's earned compensation, not a gift from your employer</li>
+                        <li>Set firm boundaries around work hours and stick to them consistently</li>
+                        <li>When asked to take on additional responsibilities, pause and evaluate whether they align with your role and capacity</li>
+                        <li>Practice direct communication: "I can do X, but not Y" or "I'm available during these hours"</li>
+                        <li>Stop internalizing workplace dysfunction as personal failure</li>
+                    </ul>
+                </div>
+                
+                <div class="white-section">
+                    <h3>Career Planning</h3>
+                    <ul>
+                        <li>Actively explore internal job opportunities that might offer better alignment</li>
+                        <li>Network with colleagues in other departments to learn about different roles</li>
+                        <li>Research positions in Florida if relocation remains a serious consideration</li>
+                        <li>Update your professional portfolio weekly with new achievements</li>
+                        <li>Treat job exploration as a proactive choice, not a desperate escape</li>
+                    </ul>
+                </div>
+                
+                <div class="white-section">
+                    <h3>Managing Your Son's ADHD Treatment</h3>
+                    <ul>
+                        <li>Continue monitoring for side effects: fatigue, appetite changes, sleep disturbances</li>
+                        <li>Communicate any concerning changes to his prescriber promptly</li>
+                        <li>Celebrate the positive improvements you're seeing at school and home</li>
+                        <li>Maintain regular communication with his school about the 504 plan</li>
+                    </ul>
+                </div>
+                
+                <div class="white-section">
+                    <h3>Self-Care</h3>
+                    <ul>
+                        <li>Give balanced attention to physical health concerns alongside other responsibilities</li>
+                        <li>Recognize that managing multiple stressors requires intentional rest and recovery</li>
+                        <li>Continue your own medication (Adderall) as prescribed with no changes needed currently</li>
+                        <li>Use therapeutic check-ins for accountability and momentum</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Homework</h2>
+                <div class="insight-box">
+                    Create a "Professional Portfolio" document that will serve as both a career tool and a source of personal validation.
+                </div>
+                
+                <div class="white-section">
+                    <h3>Initial Setup</h3>
+                    <ul>
+                        <li>Create a document (digital or physical) dedicated to tracking your professional achievements</li>
+                        <li>List significant contributions you've made in your current role</li>
+                        <li>Include positive feedback you've received from colleagues, clients, or supervisors</li>
+                        <li>Document examples of leadership, problem-solving, or initiative</li>
+                        <li>Note any special projects, improvements, or innovations you've implemented</li>
+                    </ul>
+                </div>
+                
+                <div class="white-section">
+                    <h3>Weekly Maintenance (15 minutes)</h3>
+                    <ul>
+                        <li>Add new successes, contributions, or positive feedback from the week</li>
+                        <li>Include specific dates, outcomes, and any supporting materials</li>
+                        <li>Note both large accomplishments and smaller wins</li>
+                        <li>Keep this practice consistent—schedule it as a recurring task</li>
+                    </ul>
+                </div>
+                
+                <div class="white-section">
+                    <h3>Review at Next Session</h3>
+                    <p>Bring your portfolio to the June 3rd session. We'll review what you've documented and discuss how this practice is affecting your perspective on your professional value and future direction.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Key Takeaways</h2>
+                <ul>
+                    <li>Your son's ADHD medication is yielding positive improvements at school and home—this is significant progress worth acknowledging</li>
+                    <li>Document your achievements consistently; this creates evidence of your value that exists independently of your organization's recognition</li>
+                    <li>Set firm boundaries around work hours and responsibilities to protect your energy and well-being</li>
+                    <li>Shift your energy from frustration about current circumstances to actively exploring new opportunities</li>
+                    <li>Use your PTO without guilt—it's earned compensation, not a favor from your employer</li>
+                    <li>Your direct communication style is a professional strength, not a liability</li>
+                    <li>Avoid internalizing workplace dysfunction as personal failure; systemic issues are not reflections of your worth</li>
+                    <li>Physical health requires balanced attention alongside your other responsibilities</li>
+                    <li>Exploring internal roles and networking opens possibilities you may not have considered</li>
+                    <li>Regular therapeutic check-ins provide accountability and help maintain forward momentum during transitions</li>
+                </ul>
+            </div>
+            
+            <div class="bottom-line">
+                <strong>Bottom Line:</strong> You demonstrate remarkable resilience in managing multiple significant stressors while maintaining clear insight into workplace dynamics. The path forward involves shifting from reactive frustration to proactive career planning—documenting your value, setting protective boundaries, and actively exploring opportunities that better align with your worth. Your contributions are real and significant, regardless of whether your current organization formally acknowledges them. This challenging period is preparing you for a next chapter where your talents will be better recognized and utilized.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+```
