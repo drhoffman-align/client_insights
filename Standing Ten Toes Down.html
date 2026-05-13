@@ -1,0 +1,427 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Insights - Alignment Psychiatry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #f5f5dc;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .subtitle {
+            color: #f5f5dc;
+            font-size: 1.1em;
+            font-weight: 300;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            color: #800020;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .white-section {
+            background-color: white;
+            padding: 25px;
+            border-left: 5px solid #ff8c00;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .quote-box {
+            background: linear-gradient(135deg, #800020 0%, #ff8c00 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+            font-style: italic;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        .insight-box {
+            background: linear-gradient(135deg, #f5f5dc 0%, #ffe4b5 100%);
+            padding: 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+            border-left: 5px solid #800020;
+        }
+        
+        .framework {
+            margin-bottom: 35px;
+        }
+        
+        .framework-title {
+            color: #800020;
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .steps {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            flex: 1 1 45%;
+            min-width: 250px;
+        }
+        
+        .step-number {
+            background-color: #800020;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            flex-shrink: 0;
+            margin-right: 15px;
+        }
+        
+        .step-content {
+            flex: 1;
+            padding-top: 8px;
+        }
+        
+        .concept {
+            margin-bottom: 20px;
+        }
+        
+        .concept-term {
+            color: #800020;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+        
+        .concept-definition {
+            margin-top: 5px;
+            color: #555;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-top: 15px;
+        }
+        
+        li {
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+        
+        .medication-item {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            border-left: 3px solid #ff8c00;
+        }
+        
+        .medication-name {
+            color: #800020;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+        
+        .bottom-line {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-top: 40px;
+        }
+        
+        .bottom-line-title {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            
+            .container {
+                box-shadow: none;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .step {
+                flex: 1 1 100%;
+            }
+            
+            .section-title {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Therapeutic Insights</h1>
+            <div class="subtitle">Alignment Psychiatry</div>
+        </header>
+        
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">The Situation</h2>
+                <div class="white-section">
+                    <p>You are navigating intense emotional distress following a marital separation, struggling with intrusive thoughts about your partner being with others that disrupt sleep and daily functioning. You are job-searching with an upcoming interview while managing fraught couples therapy sessions marked by defensiveness and mutual accusations. You feel constantly invalidated, with your substantial contributions to the relationship overlooked or dismissed by your partner's critical and self-protective stance.</p>
+                </div>
+            </div>
+            
+            <div class="quote-box">
+                "Self-worth exists independent of partner's criticisms or opinions"
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Core Problem</h2>
+                <div class="white-section">
+                    <p>Your self-worth has become entangled with your partner's shifting, often critical perceptions, creating a cycle of defensiveness and internalized doubt. Despite clear evidence of your efforts and sacrifices, you feel unseen and unappreciated, caught between your reality and your partner's distorted narrative.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Clinical Concepts</h2>
+                <div class="white-section">
+                    <div class="concept">
+                        <div class="concept-term">Gaslighting</div>
+                        <div class="concept-definition">Manipulation causing doubt in one's own reality or memory</div>
+                    </div>
+                    
+                    <div class="concept">
+                        <div class="concept-term">Overfunctioning</div>
+                        <div class="concept-definition">Taking disproportionate relationship responsibility to compensate for partner's lack of support</div>
+                    </div>
+                    
+                    <div class="concept">
+                        <div class="concept-term">Self-Validation</div>
+                        <div class="concept-definition">Trusting personal experience and evidence over others' opinions</div>
+                    </div>
+                    
+                    <div class="concept">
+                        <div class="concept-term">Protective Mode</div>
+                        <div class="concept-definition">Operating from self-defense, leading to deflection and blame-avoidance</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="quote-box">
+                "Use concrete evidence of contributions for self-validation"
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Therapeutic Frameworks</h2>
+                
+                <div class="framework">
+                    <div class="framework-title">Evidence-Based Self-Validation</div>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">List concrete contributions</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">Compare to criticisms received</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">Recognize when opinions lack grounding in reality</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">Anchor self-worth in facts rather than external validation</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="framework">
+                    <div class="framework-title">Protective vs. Accommodating Stance</div>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">Identify when accommodating at own expense</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">Notice partner's self-protection patterns</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">Shift focus to own needs</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">Maintain firm boundaries</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="framework">
+                    <div class="framework-title">Grieving and Acceptance</div>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">Allow grief expression</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">Create intentional emotional release space</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">Accept partner's current reality</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">Make decisions based on present circumstances</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="insight-box">
+                <strong>Remember:</strong> Stop defending against reality-distorted accusations. Recognize your partner's self-protective stance versus objective truth. Assert your own needs rather than endless accommodation.
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Practical Instructions</h2>
+                <div class="white-section">
+                    <ul>
+                        <li>Set and communicate clear boundaries and dealbreakers in your interactions</li>
+                        <li>Grieve the relationship's former version to move forward with clarity</li>
+                        <li>Accept your partner's current limitations and behavior patterns</li>
+                        <li>Engage in daily movement, sunlight exposure, and social connection to support mood regulation</li>
+                        <li>Release emotions intentionally rather than suppressing them</li>
+                        <li>Choose self-respect over convincing others of your value</li>
+                        <li>Remember that medication manages symptoms while emotional work drives healing</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Homework</h2>
+                <div class="white-section">
+                    <p><strong>Complete within one week:</strong></p>
+                    <ul>
+                        <li>Review and expand list of relationship contributions</li>
+                        <li>Write out personal relationship needs and non-negotiables</li>
+                        <li>Schedule intentional grief processing time (music, journaling, conversation)</li>
+                        <li>Prepare boundaries for next couples therapy session</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Medication Adjustments</h2>
+                <div class="white-section">
+                    <div class="medication-item">
+                        <div class="medication-name">Clonazepam</div>
+                        <div>0.5-1.5mg nightly for anxiety/sleep; start low, titrate as needed</div>
+                    </div>
+                    
+                    <div class="medication-item">
+                        <div class="medication-name">Adderall</div>
+                        <div>15mg once or twice daily (morning/early afternoon) for focus and energy</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Key Takeaways</h2>
+                <div class="insight-box">
+                    <ul>
+                        <li>Self-worth exists independent of partner's criticisms or opinions</li>
+                        <li>Use concrete evidence of contributions for self-validation</li>
+                        <li>Stop defending against reality-distorted accusations</li>
+                        <li>Recognize partner's self-protective stance versus objective truth</li>
+                        <li>Assert own needs rather than endless accommodation</li>
+                        <li>Set and communicate clear boundaries and dealbreakers</li>
+                        <li>Grieve the relationship's former version to move forward</li>
+                        <li>Accept partner's current limitations and behavior patterns</li>
+                        <li>Medication manages symptoms; emotional work drives healing</li>
+                        <li>Daily movement, sunlight, and social connection support mood regulation</li>
+                        <li>Release emotions intentionally rather than suppressing them</li>
+                        <li>Choose self-respect over convincing others of your value</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-line">
+            <div class="bottom-line-title">Bottom Line</div>
+            <p>Your worth is not determined by your partner's perceptions or criticisms. Ground yourself in the concrete evidence of your contributions and efforts. It's time to shift from defending your reality to protecting your well-being. Set firm boundaries, honor your needs, and allow yourself to grieve what was while accepting what is. Healing comes from choosing self-respect and making decisions based on present circumstances, not past hopes. You deserve to be seen, valued, and treated with respect—and that begins with how you see and treat yourself.</p>
+        </div>
+    </div>
+</body>
+</html>
+```
