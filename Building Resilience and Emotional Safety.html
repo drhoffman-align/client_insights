@@ -1,0 +1,419 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Insights - Alignment Psychiatry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #f5f5dc;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        
+        .subtitle {
+            color: #f5f5dc;
+            font-size: 1.1em;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            color: #800020;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .section-content {
+            font-size: 1.05em;
+            line-height: 1.8;
+            color: #444;
+        }
+        
+        .quote-box {
+            background: linear-gradient(135deg, #800020 0%, #a64253 100%);
+            color: white;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+            font-style: italic;
+            font-size: 1.1em;
+            line-height: 1.7;
+        }
+        
+        .insight-box {
+            background: linear-gradient(135deg, #f5f5dc 0%, #e8e8d0 100%);
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+            border-left: 5px solid #800020;
+        }
+        
+        .white-section {
+            background: white;
+            padding: 25px;
+            margin: 25px 0;
+            border-left: 5px solid #ff8c00;
+            border-radius: 4px;
+        }
+        
+        .framework-steps {
+            margin: 30px 0;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+        
+        .step-number {
+            background-color: #800020;
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            flex-shrink: 0;
+            margin-right: 20px;
+        }
+        
+        .step-content {
+            flex: 1;
+            padding-top: 8px;
+        }
+        
+        .step-title {
+            font-weight: 600;
+            color: #800020;
+            margin-bottom: 5px;
+            font-size: 1.1em;
+        }
+        
+        .step-description {
+            color: #555;
+            line-height: 1.7;
+        }
+        
+        .framework-title {
+            font-size: 1.3em;
+            color: #800020;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        ul {
+            margin-left: 25px;
+            margin-top: 15px;
+        }
+        
+        li {
+            margin-bottom: 12px;
+            line-height: 1.7;
+            color: #444;
+        }
+        
+        .clinical-concept {
+            margin-bottom: 20px;
+        }
+        
+        .concept-term {
+            font-weight: 700;
+            color: #800020;
+            font-size: 1.1em;
+        }
+        
+        .concept-definition {
+            margin-top: 5px;
+            color: #555;
+            line-height: 1.7;
+        }
+        
+        .bottom-line {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 35px;
+            margin-top: 40px;
+            border-radius: 8px;
+            font-size: 1.15em;
+            line-height: 1.8;
+            text-align: center;
+        }
+        
+        .takeaway-list {
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .takeaway-list li {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 15px;
+        }
+        
+        .takeaway-list li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #ff8c00;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            .section-title {
+                font-size: 1.5em;
+            }
+            
+            .step-number {
+                width: 40px;
+                height: 40px;
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Therapeutic Insights</h1>
+            <div class="subtitle">Alignment Psychiatry</div>
+        </header>
+        
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">The Situation</h2>
+                <div class="section-content">
+                    <p>You are navigating disappointment after a public tour project attracted fewer participants than hoped, marking your first such risk in over a decade. You struggle with transitions from busy periods to unstructured time, experiencing anxiety and difficulty planning enjoyable downtime. At home, you notice escalating tension in family interactions, particularly your partner's frustration and your son's tendency to "scan the room" for emotional cues—a pattern you recognize from your own childhood and want to interrupt.</p>
+                </div>
+            </div>
+            
+            <div class="quote-box">
+                "Disappointment after risk-taking is normal—acknowledge it without letting it define the experience."
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Core Problem</h2>
+                <div class="white-section">
+                    <p>You experience difficulty managing disappointment and unstructured time, leading to anxiety and self-criticism. Your tendency to "go along" with others' preferences, while adaptive, prevents you from asserting needs at home, creating an environment where both you and your son remain hyper-vigilant to others' moods.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Clinical Concepts</h2>
+                <div class="insight-box">
+                    <div class="clinical-concept">
+                        <div class="concept-term">Emotional Safety</div>
+                        <div class="concept-definition">The sense that feelings can be expressed without fear of anger or withdrawal. This foundational element allows family members to be authentic and vulnerable without anticipating negative consequences.</div>
+                    </div>
+                    
+                    <div class="clinical-concept">
+                        <div class="concept-term">Emotional Scanning</div>
+                        <div class="concept-definition">Monitoring others' moods to anticipate reactions, common in families with unpredictable emotional climates. This hypervigilance develops as a protective mechanism but can prevent genuine connection and relaxation.</div>
+                    </div>
+                    
+                    <div class="clinical-concept">
+                        <div class="concept-term">Self-Compassion</div>
+                        <div class="concept-definition">Treating oneself with kindness during setbacks rather than harsh self-criticism. This practice interrupts cycles of negative self-talk and supports resilience during challenging times.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Therapeutic Frameworks</h2>
+                
+                <div class="framework-steps">
+                    <div class="framework-title">Managing Disappointment and Unstructured Time</div>
+                    
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <div class="step-title">Acknowledge the Feeling</div>
+                            <div class="step-description">Allow yourself to recognize and name the disappointment without judgment. Feelings are information, not failures.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <div class="step-title">Reframe the Experience</div>
+                            <div class="step-description">Consider what you learned and the courage it took to take the risk. Outcomes don't define the value of effort.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <div class="step-title">Plan for Downtime</div>
+                            <div class="step-description">Intentionally schedule specific enjoyable activities during unstructured periods to reduce anxiety and create something to look forward to.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <div class="step-title">Practice Self-Compassion</div>
+                            <div class="step-description">Speak to yourself as you would to a friend facing similar circumstances—with kindness, understanding, and encouragement.</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="framework-steps">
+                    <div class="framework-title">Emotional Safety and Positive Engagement at Home</div>
+                    
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <div class="step-title">Identify Triggers</div>
+                            <div class="step-description">Notice what situations or behaviors tend to escalate tension. Awareness is the first step toward change.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <div class="step-title">Save Intense Reactions for What Matters</div>
+                            <div class="step-description">Choose not to react strongly to minor frustrations. Reserve emotional intensity for truly important issues to reduce daily tension.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <div class="step-title">Increase Positive Interactions</div>
+                            <div class="step-description">Actively create moments of connection, warmth, and enjoyment to shift the overall emotional climate at home.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <div class="step-title">Model Calm Responses</div>
+                            <div class="step-description">Demonstrate self-regulation and calm engagement for your son. Your behavior teaches him how to navigate emotions safely.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="quote-box">
+                "Emotional scanning is a learned survival skill that can be reduced through consistent emotional safety."
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Practical Instructions</h2>
+                <div class="white-section">
+                    <p><strong>For Managing Disappointment:</strong> When you notice self-critical thoughts about the tour project, pause and ask yourself: "What would I say to a friend in this situation?" Write down that compassionate response and read it when needed. Remember that taking the risk itself was an achievement worth celebrating.</p>
+                    
+                    <p style="margin-top: 20px;"><strong>For Unstructured Time:</strong> Before each week begins, identify blocks of unstructured time and schedule at least one specific activity you genuinely enjoy. This could be as simple as a walk in a favorite location, reading a specific book, or trying a new recipe. The key is specificity and intention.</p>
+                    
+                    <p style="margin-top: 20px;"><strong>For Home Environment:</strong> When you notice minor frustrations arising, practice the "pause and assess" technique: take a breath, ask yourself if this issue truly matters in the bigger picture, and consciously choose whether to engage. When you choose not to react, notice how this affects the overall atmosphere. Simultaneously, look for opportunities to initiate positive moments—a shared laugh, a compliment, or a brief moment of connection.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Homework</h2>
+                <div class="insight-box">
+                    <ul>
+                        <li>Plan one specific enjoyable activity for upcoming unstructured time blocks</li>
+                        <li>Document one situation where you chose not to react strongly to minor frustration at home</li>
+                        <li>Observe your son's scanning behavior and note changes when modeling calm engagement</li>
+                        <li>Bring written observations to next session</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Key Takeaways</h2>
+                <div class="section-content">
+                    <ul class="takeaway-list">
+                        <li>Disappointment after risk-taking is normal—acknowledge it without letting it define the experience</li>
+                        <li>Unstructured time can be planned for and made restorative through intentional activities</li>
+                        <li>Emotional scanning is a learned survival skill that can be reduced through consistent emotional safety</li>
+                        <li>Your flexibility is a strength, but asserting needs at home is equally important</li>
+                        <li>Reserve strong emotional reactions for truly important issues to reduce daily tension</li>
+                        <li>Increase positive family engagement to shift the emotional climate</li>
+                        <li>Model calm self-regulation for your son</li>
+                        <li>Self-compassion interrupts self-criticism cycles</li>
+                        <li>Progress happens through small, consistent changes</li>
+                        <li>Celebrate efforts and risks taken, not just outcomes</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="bottom-line">
+                <strong>Bottom Line:</strong> You are working to break intergenerational patterns of emotional hypervigilance while learning to treat yourself with the same compassion you extend to others. By intentionally creating emotional safety at home, planning for unstructured time, and practicing self-compassion around disappointment, you are building a foundation for authentic connection and reduced anxiety. Small, consistent changes in how you respond to minor frustrations and how you model calm engagement will gradually shift the emotional climate for both you and your son. Your awareness and willingness to change these patterns is already a profound act of care.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+```
