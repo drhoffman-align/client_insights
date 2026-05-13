@@ -1,0 +1,411 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Insights - Alignment Psychiatry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #f5f5dc;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        
+        .subtitle {
+            color: #f5f5dc;
+            font-size: 1.1em;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            color: #800020;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #800020;
+        }
+        
+        .white-section {
+            background-color: white;
+            padding: 25px;
+            border-left: 5px solid #ff8c00;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .gradient-box {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+            font-style: italic;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        .insight-box {
+            background: linear-gradient(to right, #fff5e6 0%, #ffe6cc 100%);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #ff8c00;
+        }
+        
+        .framework {
+            margin: 30px 0;
+        }
+        
+        .framework h3 {
+            color: #800020;
+            font-size: 1.4em;
+            margin-bottom: 20px;
+        }
+        
+        .steps {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            flex: 1 1 45%;
+            min-width: 250px;
+        }
+        
+        .step-number {
+            background-color: #800020;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            flex-shrink: 0;
+            margin-right: 15px;
+        }
+        
+        .step-content {
+            flex: 1;
+            padding-top: 8px;
+        }
+        
+        ul {
+            list-style-position: inside;
+            margin: 15px 0;
+        }
+        
+        li {
+            margin: 10px 0;
+            padding-left: 10px;
+        }
+        
+        .bottom-line {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 40px;
+            text-align: center;
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-top: 40px;
+        }
+        
+        .clinical-concept {
+            margin: 20px 0;
+        }
+        
+        .concept-title {
+            color: #800020;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .step {
+                flex: 1 1 100%;
+            }
+            
+            .white-section {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Therapeutic Insights</h1>
+            <div class="subtitle">Alignment Psychiatry</div>
+        </header>
+        
+        <div class="content">
+            <div class="section">
+                <h2>The Situation</h2>
+                <div class="white-section">
+                    <p>You are a teacher processing multiple traumatic events: a violent classroom incident involving a student with autism who brought scissors to school, confusing and seemingly unjust administrative responses including questionable suspensions, and the recent murder of a former student. You feel unsupported by school leadership, suspect systemic racism and cover-ups, and are struggling with intense emotions including anger, grief, disappointment, and confusion. Old coping patterns like binge eating and emotional numbness have resurfaced as you navigate these overwhelming circumstances while trying to maintain job security.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Core Problem</h2>
+                <div class="white-section">
+                    <p>You struggle to process and express overwhelming emotions without turning them inward through self-harm, binge eating, or emotional suppression, or outward through impulsive actions that could jeopardize your employment. You experience cycles of self-blame and powerlessness despite many factors being outside your control.</p>
+                </div>
+                
+                <div class="gradient-box">
+                    "Your emotions are valid signals requiring attention, not enemies to suppress."
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Clinical Concepts</h2>
+                
+                <div class="clinical-concept">
+                    <div class="concept-title">Borderline Personality Disorder</div>
+                    <p>Condition marked by emotional extremes, black-and-white thinking, and difficulty regulating feelings; manifests through swings between numbness and overwhelming emotion.</p>
+                </div>
+                
+                <div class="clinical-concept">
+                    <div class="concept-title">Emotional Suppression</div>
+                    <p>Pushing feelings down rather than processing them, leading to numbness or acting out behaviors.</p>
+                </div>
+                
+                <div class="clinical-concept">
+                    <div class="concept-title">Net Positive/Negative Emotional Energy</div>
+                    <p>Some emotions (anger, anxiety) create energy driving action; others (depression, grief) drain energy causing withdrawal.</p>
+                </div>
+                
+                <div class="clinical-concept">
+                    <div class="concept-title">Strategic Action</div>
+                    <p>Acting with intention to protect oneself and others rather than reacting impulsively or self-destructively.</p>
+                </div>
+                
+                <div class="insight-box">
+                    <strong>Key Insight:</strong> Suppressed emotions emerge through unhealthy outlets like binge eating or numbness. Learning to channel emotional energy strategically protects both your wellbeing and your livelihood.
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Therapeutic Frameworks</h2>
+                
+                <div class="framework">
+                    <h3>Emotional Energy Framework</h3>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">Identify the emotion you're experiencing</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">Notice if it increases or drains your energy</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">Channel the energy intentionally</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">Choose strategic protective actions</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gradient-box">
+                    "Anger and disappointment are 'net positive' energies that can fuel advocacy rather than self-harm."
+                </div>
+                
+                <div class="framework">
+                    <h3>Black-and-White vs. Gray Thinking</h3>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">Notice extreme thinking patterns</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">Find nuance and middle ground</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">Pause before acting</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">Choose balanced protective actions</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="framework">
+                    <h3>Strategic Advocacy and Empowerment</h3>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">Gather information by listening to students</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">Empower others to share their stories</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">Protect yourself from direct confrontation</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">Report strategically using documentation and collective voices</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Practical Instructions</h2>
+                <div class="white-section">
+                    <p><strong>When you feel overwhelmed by emotions:</strong></p>
+                    <ul>
+                        <li>Pause and identify what you're feeling (anger, grief, confusion, disappointment)</li>
+                        <li>Ask yourself: "Does this emotion give me energy or drain me?"</li>
+                        <li>If it gives energy (anger, anxiety), channel it into physical activity like gardening or strategic action like documentation</li>
+                        <li>If it drains energy (grief, depression), allow yourself rest and self-compassion</li>
+                        <li>Notice black-and-white thoughts ("I must fix everything" or "I'm powerless") and seek the gray area</li>
+                    </ul>
+                    
+                    <p><strong>When facing workplace injustice:</strong></p>
+                    <ul>
+                        <li>Gather information first—listen to students without making promises</li>
+                        <li>Document everything you observe and hear</li>
+                        <li>Empower students to share their accounts with parents or trusted adults</li>
+                        <li>Use collective voices rather than solo confrontation</li>
+                        <li>Protect your job security by acting strategically, not impulsively</li>
+                    </ul>
+                    
+                    <p><strong>When old patterns resurface:</strong></p>
+                    <ul>
+                        <li>Recognize binge eating or numbness as signals that emotions need processing</li>
+                        <li>Journal about what you're feeling and what energy you notice</li>
+                        <li>Choose one small strategic action instead of suppressing or acting out</li>
+                        <li>Remember: you're not responsible for everything—don't accept misplaced blame</li>
+                    </ul>
+                </div>
+                
+                <div class="insight-box">
+                    <strong>Remember:</strong> Strategic advocacy uses collective voices and documentation rather than solo confrontation. You can make a difference while protecting yourself.
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Homework</h2>
+                <div class="white-section">
+                    <ul>
+                        <li>Ask returning students to write what happened in their own words</li>
+                        <li>Encourage students to share accounts with parents or trusted adults without promising outcomes</li>
+                        <li>Journal your emotional responses after conversations—what feelings arise, what energy you notice, how you choose to act</li>
+                        <li>Continue gardening or physical activities to process emotional energy</li>
+                        <li>Document events and gather evidence before taking action</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Key Takeaways</h2>
+                <div class="white-section">
+                    <ul>
+                        <li>Your emotions are valid signals requiring attention, not enemies to suppress</li>
+                        <li>Anger and disappointment are "net positive" energies that can fuel advocacy rather than self-harm</li>
+                        <li>You're not responsible for everything—don't accept misplaced blame</li>
+                        <li>Black-and-white thinking drives impulsivity; seek gray areas for balanced responses</li>
+                        <li>Channel emotional energy into strategic, protective actions like physical activity or documentation</li>
+                        <li>Empower students to tell their stories while protecting your job security</li>
+                        <li>Suppressed emotions emerge through unhealthy outlets like binge eating or numbness</li>
+                        <li>Strategic advocacy uses collective voices and documentation rather than solo confrontation</li>
+                        <li>Pause and gather information when confused before acting</li>
+                        <li>Self-compassion is essential—you're human and deserve care while navigating systemic failures</li>
+                    </ul>
+                </div>
+                
+                <div class="gradient-box">
+                    "You're not responsible for everything—don't accept misplaced blame. Self-compassion is essential—you're human and deserve care while navigating systemic failures."
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-line">
+            <strong>Bottom Line:</strong> Your intense emotions are appropriate responses to traumatic circumstances, not character flaws. By learning to identify whether emotions give or drain energy, you can channel them strategically—into advocacy, documentation, and physical activity—rather than turning them inward through self-harm or suppression. You have the power to empower others and create change while protecting yourself. Black-and-white thinking will push you toward impulsive actions; finding the gray area allows balanced, strategic responses. You deserve compassion as you navigate these systemic failures. Your wellbeing matters, and strategic action protects both your students and yourself.
+        </div>
+    </div>
+</body>
+</html>
+```
