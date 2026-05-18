@@ -1,0 +1,408 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Insights - Alignment Psychiatry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #f5f5dc;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        
+        .subtitle {
+            color: #f5f5dc;
+            font-size: 1.1em;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            color: #800020;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #800020;
+        }
+        
+        h3 {
+            color: #800020;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .quote-box {
+            background: linear-gradient(135deg, #fff5e6 0%, #ffe6cc 100%);
+            border-left: 4px solid #ff8c00;
+            padding: 20px;
+            margin: 25px 0;
+            font-style: italic;
+            border-radius: 4px;
+        }
+        
+        .insight-box {
+            background: linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%);
+            border-left: 4px solid #800020;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 4px;
+        }
+        
+        .white-section {
+            background: white;
+            border-left: 4px solid #ff8c00;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 4px;
+        }
+        
+        .framework {
+            margin: 30px 0;
+        }
+        
+        .framework-title {
+            font-weight: 600;
+            color: #800020;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        
+        .steps {
+            margin-left: 20px;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .step-number {
+            background-color: #800020;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .step-content {
+            flex: 1;
+            padding-top: 5px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        .takeaways-list {
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .takeaways-list li {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 12px;
+        }
+        
+        .takeaways-list li:before {
+            content: "→";
+            color: #800020;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .bottom-line {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 30px 40px;
+            margin-top: 40px;
+            text-align: center;
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
+        
+        .medication-warning {
+            background-color: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 4px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .medication-warning strong {
+            color: #856404;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .bottom-line {
+                padding: 20px;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Therapeutic Insights</h1>
+            <div class="subtitle">Alignment Psychiatry - Session Summary</div>
+        </header>
+        
+        <div class="content">
+            <div class="section">
+                <h2>The Situation</h2>
+                <p>You experience cycles of intense work immersion followed by brief periods of disconnection, often operating on "autopilot" where nothing exists except the task at hand. This pattern creates anxiety during transitions between work and personal life, making it difficult to find time for self-reflection and genuine connection. Despite having a structured daily routine and meal planning system with your partner, there's a mismatch between your schedule and deeper needs for rest, relationships, and self-actualization.</p>
+                
+                <div class="quote-box">
+                    "Operating without conscious awareness, focused solely on tasks with other needs suppressed."
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Core Problem</h2>
+                <div class="white-section">
+                    <p><strong>Persistent over-immersion in work leads to neglect of personal needs, self-reflection, and authentic downtime.</strong> This anxiety-driven "all-in" approach leaves minimal space for being human, making mistakes, or existing outside productivity. The result is a disconnection from yourself and what truly matters beyond task completion.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Clinical Concepts</h2>
+                
+                <h3>Autopilot/Suppression</h3>
+                <p>Operating without conscious awareness, focused solely on tasks with other needs suppressed. This state allows you to be highly productive but disconnects you from your emotional and physical needs.</p>
+                
+                <h3>Cognitive Load</h3>
+                <p>The mental effort required for decisions and task management. High cognitive load increases stress and makes it harder to be present in the moment or make thoughtful choices about how you spend your time.</p>
+                
+                <h3>Grounding</h3>
+                <p>Techniques that bring attention to the present moment and physical sensations to reduce anxiety. These practices help you reconnect with yourself and create intentional transitions between different parts of your day.</p>
+                
+                <h3>REM Sleep Suppression</h3>
+                <p>Benzodiazepines may reduce REM sleep and dreaming, potentially affecting sleep quality. While they help with sleep initiation and anxiety, it's important to monitor overall sleep quality and restorative rest.</p>
+            </div>
+            
+            <div class="section">
+                <h2>Therapeutic Frameworks</h2>
+                
+                <div class="framework">
+                    <div class="framework-title">Time-Blocking Based on Needs (Maslow's Hierarchy)</div>
+                    <p>Rather than organizing your schedule around tasks, organize it around fundamental human needs. This ensures you're not just productive, but truly fulfilled.</p>
+                    
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">Identify core life categories based on Maslow's hierarchy: physiological needs (sleep, food, exercise), safety (financial security, health), relationships (connection, intimacy), esteem (achievement, recognition), and self-actualization (creativity, growth, meaning).</div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">Block time for each category in your schedule, ensuring all levels receive attention. Don't just fill your calendar with work tasks—make space for what makes you human.</div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">Allow flexibility within blocks. You don't need to specify exactly what you'll do during "relationship time" or "self-actualization time"—just protect the space for those needs.</div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">Review and adjust regularly. Check in weekly to see if your time allocation matches your actual needs and make adjustments as life circumstances change.</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="framework">
+                    <div class="framework-title">Reducing Cognitive Load Through Routine and Delegation</div>
+                    <p>Every decision you make depletes mental energy. By creating routines and delegating decisions, you free up mental space for what truly matters.</p>
+                    
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">Implement meal planning with a rotating menu. You've already started this successfully—continue building on this foundation to eliminate daily "what's for dinner?" decisions.</div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">Establish weekly grocery ordering. Make this a routine task that happens the same day each week, removing the need to think about when to shop.</div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">Delegate dinner decisions to your partner or the meal plan. Trust the system you've created and resist the urge to reconsider or optimize every meal choice.</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="framework">
+                    <div class="framework-title">Grounding and Reconnection Practices</div>
+                    <p>Anxiety thrives in the space between tasks and during transitions. Grounding practices help you stay present and connected to yourself throughout the day.</p>
+                    
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">Engage in physical grounding activities: walking, stretching, deep breathing, or simply noticing physical sensations. These bring you back into your body and out of your racing mind.</div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">Create mindful transitions between work and personal time. Don't jump directly from one to the other—use a brief grounding practice as a bridge.</div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">Schedule reflection time. This isn't optional—it's essential for staying connected to yourself and ensuring your life aligns with your values.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Practical Instructions</h2>
+                
+                <div class="insight-box">
+                    <h3>Reorganizing Your Schedule</h3>
+                    <p>Take your current calendar and reorganize it using broad need-based categories rather than specific tasks. Create blocks for physiological needs, safety, relationships, esteem, and self-actualization. Notice how this shift in perspective changes your relationship with time.</p>
+                </div>
+                
+                <div class="insight-box">
+                    <h3>Daily Grounding Practice</h3>
+                    <p>Choose one grounding activity to practice daily, especially during transitions between work and personal life. This could be a five-minute walk, a breathing exercise, or simply sitting quietly and noticing your surroundings. The key is consistency and intentionality.</p>
+                </div>
+                
+                <div class="insight-box">
+                    <h3>Sleep Quality Focus</h3>
+                    <p>Aim for 8 uninterrupted hours of sleep. Remember that sleep quality matters more than timing—find the schedule that allows you to wake feeling rested and restored.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Homework</h2>
+                <ul>
+                    <li>Reorganize your schedule using broad need-based categories (physiological, safety, relationships, esteem, self-actualization)</li>
+                    <li>Continue your weekly meal planning and grocery ordering system</li>
+                    <li>Practice one daily grounding activity, especially during transitions between work and personal time</li>
+                    <li>Reflect on how these changes affect your anxiety and sense of connection</li>
+                    <li>Journal about changes in mood, anxiety levels, and overall satisfaction with how you're spending your time</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>Medication Information</h2>
+                
+                <div class="medication-warning">
+                    <strong>Current Medication:</strong> Clonazepam taken regularly for sleep and anxiety management.
+                </div>
+                
+                <p><strong>Important Considerations:</strong> Monitor for REM sleep suppression and potential rebound dreams if discontinued. Be aware of dependency risks with long-term use. Do not adjust dosage without consulting your prescriber.</p>
+                
+                <p><strong>Side Effects to Monitor:</strong> REM sleep suppression, dependency risks with long-term use, rebound dreams upon discontinuation. Report any changes in sleep quality or unusual dreams to your provider.</p>
+            </div>
+            
+            <div class="section">
+                <h2>Key Takeaways</h2>
+                <ul class="takeaways-list">
+                    <li>Over-immersion in work creates disconnection from personal needs and self</li>
+                    <li>Anxiety peaks during work-to-personal-life transitions</li>
+                    <li>Time-blocking by needs ensures a balanced, fulfilling schedule versus task-only focus</li>
+                    <li>Routine and delegation reduce decision fatigue and cognitive load</li>
+                    <li>Grounding activities foster presence and manage anxiety effectively</li>
+                    <li>Sleep quality matters more than timing; aim for 8 uninterrupted hours</li>
+                    <li>Simplifying your schedule into broad categories allows flexibility and spontaneity</li>
+                    <li>Regular reflection keeps your schedule aligned with actual needs</li>
+                    <li>Delegating decisions frees mental space for meaningful activities</li>
+                    <li>Building self-reflection time is essential for well-being and reconnection</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="bottom-line">
+            <strong>The Bottom Line:</strong> Shifting from task-driven to needs-based scheduling addresses all dimensions of your well-being, reducing anxiety while increasing satisfaction and authentic connection with yourself and others. You don't have to choose between productivity and being human—you can honor both by organizing your life around what truly matters.
+        </div>
+    </div>
+</body>
+</html>
+```
