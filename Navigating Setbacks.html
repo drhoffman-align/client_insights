@@ -1,0 +1,373 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Insights - Alignment Psychiatry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #f5f5dc;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        
+        .subtitle {
+            color: #f5f5dc;
+            font-size: 1.1em;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            color: #800020;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .section-content {
+            font-size: 1.05em;
+            color: #444;
+            line-height: 1.8;
+        }
+        
+        .quote-box {
+            background: linear-gradient(135deg, #800020 0%, #a64253 100%);
+            color: white;
+            padding: 25px 30px;
+            margin: 25px 0;
+            border-radius: 8px;
+            font-style: italic;
+            font-size: 1.1em;
+            line-height: 1.7;
+        }
+        
+        .white-section {
+            background-color: white;
+            border-left: 5px solid #ff8c00;
+            padding: 25px 30px;
+            margin: 25px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .insight-box {
+            background: linear-gradient(135deg, #f5f5dc 0%, #e8e8d0 100%);
+            padding: 25px 30px;
+            margin: 25px 0;
+            border-radius: 8px;
+            border-left: 5px solid #800020;
+        }
+        
+        .framework {
+            margin: 30px 0;
+        }
+        
+        .framework-title {
+            color: #800020;
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .steps {
+            list-style: none;
+            counter-reset: step-counter;
+        }
+        
+        .steps li {
+            counter-increment: step-counter;
+            margin-bottom: 20px;
+            padding-left: 60px;
+            position: relative;
+            line-height: 1.7;
+        }
+        
+        .steps li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: #800020;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .clinical-concepts {
+            display: grid;
+            gap: 15px;
+        }
+        
+        .concept {
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        
+        .concept-term {
+            color: #800020;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+        
+        .concept-definition {
+            margin-top: 5px;
+            color: #555;
+        }
+        
+        .homework-list, .takeaways-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .homework-list li, .takeaways-list li {
+            padding: 12px 0 12px 30px;
+            position: relative;
+            line-height: 1.7;
+        }
+        
+        .homework-list li::before {
+            content: "•";
+            color: #ff8c00;
+            font-size: 1.5em;
+            position: absolute;
+            left: 0;
+            top: 8px;
+        }
+        
+        .takeaways-list li::before {
+            content: "•";
+            color: #800020;
+            font-size: 1.5em;
+            position: absolute;
+            left: 0;
+            top: 8px;
+        }
+        
+        .bottom-line {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 40px;
+            margin-top: 40px;
+            text-align: center;
+            font-size: 1.2em;
+            line-height: 1.8;
+            border-radius: 8px;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .section-title {
+                font-size: 1.5em;
+            }
+            
+            .steps li {
+                padding-left: 50px;
+            }
+            
+            .steps li::before {
+                width: 35px;
+                height: 35px;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Therapeutic Insights</h1>
+            <div class="subtitle">Alignment Psychiatry</div>
+        </header>
+        
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">The Situation</h2>
+                <div class="section-content">
+                    <p>You are navigating the profound loss of your father while simultaneously managing a challenging inheritance dispute with your siblings. A manipulative half-sibling has been making unreasonable financial demands and dominating family meetings with emotional outbursts, leaving you feeling emotionally drained and triggered. The family dynamic is further complicated by long-standing resentments and a pattern of appeasing this difficult sibling to avoid conflict. You've begun avoiding communication platforms as a form of self-protection, recognizing the toll this situation is taking on your well-being.</p>
+                </div>
+            </div>
+            
+            <div class="quote-box">
+                "The family's pattern of appeasement reinforces these tactics, escalating the emotional toll while avoidance strategies enable further dysfunction."
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Core Problem</h2>
+                <div class="white-section">
+                    <p>Your ongoing exposure to your sibling's manipulative, boundary-crossing behavior has been tolerated for years in an attempt to avoid conflict. This pattern has led to emotional exhaustion and a sense of helplessness. The family's collective tendency to appease this sibling has inadvertently reinforced these manipulative tactics, creating a cycle that escalates the emotional toll on everyone involved. Your natural instinct to avoid confrontation, while understandable, has enabled the dysfunction to continue and intensify.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Clinical Concepts</h2>
+                <div class="clinical-concepts">
+                    <div class="concept">
+                        <div class="concept-term">Boundary Setting</div>
+                        <div class="concept-definition">Establishing clear limits on acceptable behaviors from others to protect your emotional and mental well-being.</div>
+                    </div>
+                    <div class="concept">
+                        <div class="concept-term">Conflict Avoidance</div>
+                        <div class="concept-definition">Sidestepping confrontation to keep peace, often causing greater long-term stress and enabling problematic behaviors to continue.</div>
+                    </div>
+                    <div class="concept">
+                        <div class="concept-term">Emotional Triggers</div>
+                        <div class="concept-definition">Specific interactions or behaviors that provoke strong emotional reactions, often rooted in past experiences or ongoing stressors.</div>
+                    </div>
+                    <div class="concept">
+                        <div class="concept-term">Projection</div>
+                        <div class="concept-definition">Attributing one's own feelings, thoughts, or motivations to others, often as a defense mechanism.</div>
+                    </div>
+                    <div class="concept">
+                        <div class="concept-term">Narcissistic Traits</div>
+                        <div class="concept-definition">Patterns of entitlement, lack of empathy, and manipulation that characterize certain personality styles and impact relationships.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Therapeutic Frameworks</h2>
+                
+                <div class="framework">
+                    <div class="framework-title">Boundary-Setting Framework</div>
+                    <ol class="steps">
+                        <li><strong>Recognize manipulative patterns:</strong> Identify the specific behaviors and tactics your sibling uses to control situations and provoke emotional responses.</li>
+                        <li><strong>Decide what you will and won't tolerate:</strong> Clarify your personal limits and what behaviors are acceptable versus unacceptable in your interactions.</li>
+                        <li><strong>Communicate boundaries clearly and calmly:</strong> Express your limits in a direct, non-emotional manner without justifying or over-explaining.</li>
+                        <li><strong>Follow through consistently:</strong> Maintain your boundaries even when challenged, demonstrating that your limits are firm and non-negotiable.</li>
+                        <li><strong>Release responsibility for others' emotions:</strong> Recognize that you are not responsible for how your sibling reacts to your healthy boundaries.</li>
+                    </ol>
+                </div>
+                
+                <div class="framework">
+                    <div class="framework-title">Emotional Release Framework</div>
+                    <ol class="steps">
+                        <li><strong>Identify triggers:</strong> Recognize the specific situations, words, or behaviors that provoke strong emotional reactions in you.</li>
+                        <li><strong>Allow yourself to feel and express emotions through safe outlets:</strong> Give yourself permission to experience your feelings fully through journaling, talking with trusted support, or physical activity.</li>
+                        <li><strong>Separate facts from emotional narratives:</strong> Distinguish between objective reality and the stories your emotions tell you, helping you respond more effectively.</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="insight-box">
+                <strong>Compassionate Insight:</strong> Setting boundaries is not about punishing others or being unkind—it's about honoring your own needs and protecting your mental health. You deserve to feel safe and respected in your family relationships, even during difficult times.
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Practical Instructions</h2>
+                <div class="white-section">
+                    <p><strong>Before the next family meeting:</strong> Draft a clear, concise script outlining your boundaries. Keep it simple and factual. For example: "I'm willing to discuss the estate matters calmly and respectfully. If the conversation becomes hostile or involves personal attacks, I will leave the meeting."</p>
+                    
+                    <p style="margin-top: 15px;"><strong>Practice your script:</strong> Say it aloud multiple times until it feels natural. Share it with your brother for feedback and support. This rehearsal builds confidence and reduces anxiety.</p>
+                    
+                    <p style="margin-top: 15px;"><strong>During the meeting:</strong> Stay calm and centered. If your sibling escalates, follow through on your boundary by calmly stating, "This conversation has become unproductive. I'm stepping away now," and then leave.</p>
+                    
+                    <p style="margin-top: 15px;"><strong>Manage daily stress:</strong> Block or mute your sibling on communication platforms to reduce daily anxiety and emotional triggers. This is not avoidance—it's strategic self-care.</p>
+                    
+                    <p style="margin-top: 15px;"><strong>Process emotions:</strong> After difficult interactions, use safe outlets like journaling, talking with supportive friends, or physical exercise to release emotional tension rather than bottling it up.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Homework</h2>
+                <ul class="homework-list">
+                    <li>Draft a script for setting boundaries at the next family meeting</li>
+                    <li>Practice saying the script aloud and share with brother for support</li>
+                    <li>Report on how the meeting went, what worked, and challenges faced</li>
+                    <li>Complete before next scheduled family meeting</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Key Takeaways</h2>
+                <ul class="takeaways-list">
+                    <li>Recognize how conflict avoidance has reinforced manipulative patterns</li>
+                    <li>Setting clear boundaries protects your mental health</li>
+                    <li>You're not responsible for your sibling's feelings or financial situation</li>
+                    <li>Communicate boundaries calmly and follow through consistently</li>
+                    <li>Use emotional outlets to process feelings rather than bottling them up</li>
+                    <li>Block or mute your sibling on platforms to reduce daily anxiety</li>
+                    <li>Prepare scripts for difficult conversations to increase confidence</li>
+                    <li>Don't try to "fix" your sibling—focus on your own well-being</li>
+                    <li>Family titles don't obligate you to tolerate toxic behavior</li>
+                    <li>Strategic disengagement can be more effective than direct confrontation</li>
+                </ul>
+            </div>
+            
+            <div class="bottom-line">
+                <strong>Bottom Line:</strong> You have the right and the responsibility to protect your emotional well-being, even within family relationships. Setting boundaries is an act of self-respect, not selfishness. By clearly communicating your limits and following through consistently, you reclaim your power and create space for healing. Remember: you cannot control your sibling's behavior, but you can control how much access they have to your peace of mind. Focus on what you can change—your responses, your boundaries, and your commitment to your own mental health.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+```
