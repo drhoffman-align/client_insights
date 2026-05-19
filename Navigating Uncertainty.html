@@ -1,0 +1,411 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Insights - Alignment Psychiatry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #f5f5dc;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        
+        .subtitle {
+            color: #f5f5dc;
+            font-size: 1.1em;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            color: #800020;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 3px solid #800020;
+            padding-bottom: 10px;
+        }
+        
+        .white-section {
+            background-color: white;
+            padding: 25px;
+            border-left: 5px solid #ff8c00;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .gradient-box {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+            font-style: italic;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        .insight-box {
+            background: linear-gradient(to right, #fff5e6 0%, #ffe6cc 100%);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #ff8c00;
+        }
+        
+        .framework {
+            margin: 30px 0;
+        }
+        
+        .framework-title {
+            color: #800020;
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .steps {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            flex: 1 1 45%;
+            min-width: 250px;
+        }
+        
+        .step-number {
+            background-color: #800020;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            flex-shrink: 0;
+            margin-right: 15px;
+        }
+        
+        .step-content {
+            flex: 1;
+            padding-top: 8px;
+        }
+        
+        .homework-list, .takeaway-list, .concept-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .homework-list li, .takeaway-list li, .concept-list li {
+            padding: 12px 0 12px 30px;
+            position: relative;
+            line-height: 1.7;
+        }
+        
+        .homework-list li:before {
+            content: "→";
+            color: #ff8c00;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 1.3em;
+        }
+        
+        .takeaway-list li:before {
+            content: "✓";
+            color: #800020;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 1.2em;
+        }
+        
+        .concept-list li {
+            margin-bottom: 15px;
+        }
+        
+        .concept-list li strong {
+            color: #800020;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .bottom-line {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 40px;
+            text-align: center;
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-top: 40px;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .section-title {
+                font-size: 1.5em;
+            }
+            
+            .step {
+                flex: 1 1 100%;
+            }
+            
+            .bottom-line {
+                padding: 30px 20px;
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Therapeutic Insights</h1>
+            <div class="subtitle">Alignment Psychiatry</div>
+        </header>
+        
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">The Situation</h2>
+                <div class="white-section">
+                    <p>You are transitioning from a structured program back to Washington, D.C., facing anticipated stress from family dynamics and resuming full-time work. You struggle with low motivation, procrastination, and avoidance behaviors while managing ADHD medication that disrupts your sleep. Marital tensions compound these challenges, with feelings of emotional distance, lack of support, and uncertainty about the relationship's future.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Core Problem</h2>
+                <div class="white-section">
+                    <p>You have difficulty managing transitions and stress, leading to avoidance and disrupted routines. Your ADHD medication (Adderall) improves focus but causes significant insomnia, worsening overall functioning. In your marriage, you feel unsupported and perceive a lack of trust and emotional reciprocity, leaving you feeling inadequate and uncertain about your role.</p>
+                </div>
+                
+                <div class="gradient-box">
+                    "Avoidance behaviors are stress responses, not character flaws."
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Clinical Concepts</h2>
+                <div class="white-section">
+                    <ul class="concept-list">
+                        <li>
+                            <strong>ADHD Medication Side Effects:</strong>
+                            Stimulants can cause insomnia; individual responses vary, and switching medications may resolve issues.
+                        </li>
+                        <li>
+                            <strong>Equally Yoked:</strong>
+                            Both partners contribute balanced effort and mutual respect, not just shared beliefs.
+                        </li>
+                        <li>
+                            <strong>Trust:</strong>
+                            Belief that your partner has your best interests at heart, built through consistent honest communication.
+                        </li>
+                        <li>
+                            <strong>Avoidance/Procrastination:</strong>
+                            Common responses to overwhelming transitions or emotional distress.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Therapeutic Frameworks</h2>
+                
+                <div class="framework">
+                    <div class="framework-title">Medication Adjustment Framework</div>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">Assess current effects of medication on focus and sleep</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">Experiment with timing and dosage adjustments</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">Consider alternatives if problems persist</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">Monitor and report changes to your provider</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="insight-box">
+                    Switching to methylphenidate may improve focus without disrupting sleep. Take your first dose early in the morning and avoid late-day stimulant use.
+                </div>
+                
+                <div class="framework">
+                    <div class="framework-title">Relationship Substance & "Yoking" Metaphor</div>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">Define what a balanced partnership means to you</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">Explore each partner's capacity to contribute</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">Identify current imbalances in the relationship</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">Clarify mutual needs and expectations</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gradient-box">
+                    "Both partners need to 'carry their own' for the relationship to thrive."
+                </div>
+                
+                <div class="framework">
+                    <div class="framework-title">Trust and Emotional Expression</div>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">Recognize trust as foundational to intimacy</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">Assess capacity for emotional expression in yourself and your partner</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">Identify barriers to vulnerability</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">Develop strategies for rebuilding intimacy</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="insight-box">
+                    Trust must be rebuilt through vulnerability and honest communication. Emotional expression is a developable skill, and open communication is essential for relationship repair.
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Practical Instructions</h2>
+                <div class="white-section">
+                    <p><strong>For Medication Management:</strong> Keep a daily log noting the time you take your medication, your focus level throughout the day, and your sleep quality at night. This information will help you and your provider make informed decisions about adjustments.</p>
+                    
+                    <p style="margin-top: 15px;"><strong>For Work and Avoidance:</strong> Set timers for focused work periods. When you notice yourself getting distracted or avoiding tasks, gently redirect your attention without judgment. Remember that transitions are manageable with structure and intentional effort.</p>
+                    
+                    <p style="margin-top: 15px;"><strong>For Relationship Work:</strong> Approach conversations with curiosity rather than criticism. Practice one small act of emotional openness this week, even if it feels uncomfortable. Self-compassion and seeking help are signs of strength, not weakness.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Homework</h2>
+                <div class="white-section">
+                    <ul class="homework-list">
+                        <li>Keep daily medication log noting time taken, focus level, and sleep quality</li>
+                        <li>Write down what you want from marriage and what spouse wants; identify one area to offer more support and one where you need support</li>
+                        <li>Practice one small act of emotional openness with spouse this week</li>
+                        <li>Set timers for focused work periods; redirect attention when distracted</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Key Takeaways</h2>
+                <div class="white-section">
+                    <ul class="takeaway-list">
+                        <li>Switching to methylphenidate may improve focus without disrupting sleep</li>
+                        <li>Take first dose early morning; avoid late-day stimulant use</li>
+                        <li>"Equally yoked" means mutual support and balanced contributions</li>
+                        <li>Trust must be rebuilt through vulnerability and honest communication</li>
+                        <li>Avoidance behaviors are stress responses, not character flaws</li>
+                        <li>Both partners need to "carry their own" for relationship to thrive</li>
+                        <li>Emotional expression is a developable skill</li>
+                        <li>Open communication is essential for relationship repair</li>
+                        <li>Transitions are manageable with structure and intentional effort</li>
+                        <li>Self-compassion and seeking help are signs of strength</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-line">
+            <strong>Bottom Line:</strong> You are navigating significant transitions in both your personal health management and your marriage. The challenges you face with medication side effects and relationship dynamics are interconnected and addressable. By adjusting your medication approach, clarifying what "equally yoked" means in your partnership, and taking small steps toward emotional vulnerability, you can create the foundation for better functioning and deeper connection. Remember: these are skills to develop, not character tests to pass. Progress comes through compassionate persistence, not perfection.
+        </div>
+    </div>
+</body>
+</html>
+```
