@@ -1,0 +1,380 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Insights - Alignment Psychiatry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #f5f5dc;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: normal;
+        }
+        
+        .subtitle {
+            color: #f5f5dc;
+            font-size: 1.1em;
+            font-style: italic;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            color: #800020;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #800020;
+        }
+        
+        .white-section {
+            background-color: white;
+            padding: 25px;
+            border-left: 5px solid #ff8c00;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .quote-box {
+            background: linear-gradient(135deg, #f5f5dc 0%, #e8e8d0 100%);
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+            font-style: italic;
+            border-left: 5px solid #800020;
+        }
+        
+        .insight-box {
+            background: linear-gradient(135deg, #fff5e6 0%, #ffe6cc 100%);
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+            border-left: 5px solid #ff8c00;
+        }
+        
+        .framework-steps {
+            margin: 30px 0;
+        }
+        
+        .step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .step-number {
+            background-color: #800020;
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            flex-shrink: 0;
+            margin-right: 20px;
+        }
+        
+        .step-content {
+            flex: 1;
+        }
+        
+        .clinical-concept {
+            margin-bottom: 20px;
+        }
+        
+        .concept-term {
+            color: #800020;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        .concept-definition {
+            margin-top: 5px;
+            padding-left: 20px;
+        }
+        
+        .takeaway-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .takeaway-list li {
+            padding: 12px 0 12px 30px;
+            position: relative;
+        }
+        
+        .takeaway-list li:before {
+            content: "→";
+            color: #ff8c00;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .bottom-line {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 40px;
+            margin-top: 40px;
+            text-align: center;
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
+        
+        .homework-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .homework-list li {
+            padding: 10px 0 10px 30px;
+            position: relative;
+        }
+        
+        .homework-list li:before {
+            content: "✓";
+            color: #800020;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 1.3em;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            .container {
+                box-shadow: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+            }
+            header {
+                padding: 40px 20px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Therapeutic Insights</h1>
+            <div class="subtitle">Navigating Relational Patterns and Setting Healthy Boundaries</div>
+        </header>
+        
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">The Situation</h2>
+                <div class="white-section">
+                    <p>You are navigating a recurring conflict with a close friend around planning group activities, where you feel your efforts and compromises go unacknowledged and unreciprocated. Recent attempts to organize a group trip have left you feeling emotionally exhausted, triggered, and reluctant to continue engaging.</p>
+                    <div class="quote-box">
+                        "This dynamic echoes past relational wounds from a previous relationship where you felt consumed and unappreciated."
+                    </div>
+                    <p>The pattern feels familiar—you extend yourself, coordinate, compromise, and then find yourself carrying the burden alone while your collaborative intentions seem to go unseen.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Core Problem</h2>
+                <div class="white-section">
+                    <p>You experience a pattern of overextending yourself in relationships, then feeling resentful when your emotional and logistical labor is not acknowledged. The struggle intensifies when your attempts to communicate and compromise are met with indecision or perceived withdrawal, creating a painful mismatch between your collaborative intentions and your experience of carrying the burden alone.</p>
+                    <div class="insight-box">
+                        <strong>The Pattern:</strong> Over-functioning in relationships leads to resentment and withdrawal. When we give more than we can sustain, we eventually feel depleted and unappreciated, even when our intentions are generous.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Clinical Concepts</h2>
+                <div class="white-section">
+                    <div class="clinical-concept">
+                        <div class="concept-term">Trigger</div>
+                        <div class="concept-definition">An emotional reaction to a situation that reminds you of past pain or trauma. Your current frustration isn't just about this friendship—it's connected to deeper wounds from previous relationships where you felt consumed and unappreciated.</div>
+                    </div>
+                    
+                    <div class="clinical-concept">
+                        <div class="concept-term">Vulnerability and Accountability</div>
+                        <div class="concept-definition">Being open about your feelings while taking responsibility for your actions. This balance allows for authentic connection while maintaining personal integrity in relationships.</div>
+                    </div>
+                    
+                    <div class="clinical-concept">
+                        <div class="concept-term">Teaching Others How to Treat You</div>
+                        <div class="concept-definition">Setting boundaries and communicating needs so others can interact with you respectfully. When we clearly express our limits and expectations, we give others the opportunity to meet us where we are.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Therapeutic Framework</h2>
+                <div class="white-section">
+                    <p><strong>Conflict Resolution Rubric</strong></p>
+                    <p>This six-step framework helps you organize your thoughts, communicate clearly, and protect your emotional well-being in difficult conversations.</p>
+                    
+                    <div class="framework-steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <strong>Prepare thoughts in writing</strong><br>
+                                Writing clarifies and organizes emotions before you speak. It helps you identify what truly matters and what you need to communicate.
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <strong>State purpose and goals</strong><br>
+                                Clearly stating conversation goals reduces defensiveness and helps the other person understand your intentions from the start.
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <strong>Identify trigger and its roots</strong><br>
+                                Naming triggers helps others understand the depth of your reaction and connects present feelings to past experiences.
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <strong>Describe the impact</strong><br>
+                                Share how the situation has affected you emotionally and practically. This creates understanding and empathy.
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <strong>Make a direct request</strong><br>
+                                Direct requests give others concrete ways to support you. Be specific about what you need going forward.
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">6</div>
+                            <div class="step-content">
+                                <strong>Give a boundary or "warning"</strong><br>
+                                Setting boundaries protects your emotional well-being and teaches others how to treat you. It's an act of self-respect.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="quote-box">
+                        "Written communication allows processing time for both parties—you can express yourself fully, and your friend can absorb and reflect before responding."
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Practical Instructions</h2>
+                <div class="white-section">
+                    <p>Use the conflict resolution rubric to structure your communication with your friend. This approach honors both your need to be heard and your friend's need to understand.</p>
+                    
+                    <div class="insight-box">
+                        <p><strong>Why write first?</strong> Writing before speaking gives you clarity, reduces emotional reactivity, and ensures you communicate what truly matters. It also gives your friend time to process without the pressure of an immediate response.</p>
+                    </div>
+                    
+                    <p><strong>Structure your message to include:</strong></p>
+                    <ul style="margin-left: 20px; margin-top: 15px;">
+                        <li>The purpose of your communication and what you hope to achieve</li>
+                        <li>The trigger you've identified and where it comes from in your history</li>
+                        <li>The specific impact this situation has had on you</li>
+                        <li>A clear, direct request for what you need</li>
+                        <li>A boundary that protects your emotional well-being</li>
+                    </ul>
+                    
+                    <p style="margin-top: 20px;"><strong>Important:</strong> Send this written message before having any live conversation. This allows both of you to approach a follow-up discussion with greater understanding and less defensiveness.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Homework</h2>
+                <div class="white-section">
+                    <ul class="homework-list">
+                        <li>Write a letter to your friend using the conflict resolution rubric</li>
+                        <li>Structure your message with purpose, trigger, impact, request, and boundary</li>
+                        <li>Send the message before any live conversation</li>
+                        <li>Bring your written message and your friend's response to the next session</li>
+                    </ul>
+                    
+                    <div class="insight-box" style="margin-top: 25px;">
+                        <strong>Remember:</strong> Not all friendships warrant this level of emotional labor. Walking away is sometimes the most appropriate and self-compassionate choice. This exercise will help you clarify whether this relationship is worth the investment.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Key Takeaways</h2>
+                <div class="white-section">
+                    <ul class="takeaway-list">
+                        <li>Your current frustration stems from both present dynamics and past relational wounds</li>
+                        <li>Writing thoughts before conversations clarifies and organizes emotions</li>
+                        <li>Clearly stating conversation goals reduces defensiveness</li>
+                        <li>Naming triggers helps others understand the depth of your reaction</li>
+                        <li>Direct requests give others concrete ways to support you</li>
+                        <li>Setting boundaries protects emotional well-being and teaches others how to treat you</li>
+                        <li>Over-functioning in relationships leads to resentment and withdrawal</li>
+                        <li>Vulnerability and accountability are essential for healthy relationships</li>
+                        <li>Not all friendships warrant the emotional labor—walking away is sometimes appropriate</li>
+                        <li>Written communication allows processing time for both parties</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-line">
+            <strong>The Bottom Line</strong><br><br>
+            You deserve relationships where your efforts are seen, your compromises are reciprocated, and your emotional labor is valued. By using the conflict resolution rubric, you're not only giving this friendship a fair chance—you're also practicing the skills of clear communication, healthy boundaries, and self-advocacy that will serve you in all relationships. Whether this friendship deepens or you choose to step back, you are learning to honor your needs and teach others how to treat you with the respect and appreciation you deserve.
+        </div>
+    </div>
+</body>
+</html>
+```
