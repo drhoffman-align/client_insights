@@ -1,0 +1,357 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Insights - Alignment Psychiatry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #f5f5dc;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        
+        .subtitle {
+            color: #f5f5dc;
+            font-size: 1.1em;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            color: #800020;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 3px solid #800020;
+            padding-bottom: 10px;
+        }
+        
+        .section-content {
+            background-color: white;
+            border-left: 5px solid #ff8c00;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .quote-box {
+            background: linear-gradient(135deg, #800020 0%, #ff8c00 100%);
+            color: white;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+            font-style: italic;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        .insight-box {
+            background: linear-gradient(135deg, #f5f5dc 0%, #ffe4b5 100%);
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+            border-left: 5px solid #800020;
+        }
+        
+        .framework {
+            margin: 30px 0;
+        }
+        
+        .framework-title {
+            color: #800020;
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .step-number {
+            background-color: #800020;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            flex-shrink: 0;
+            margin-right: 20px;
+        }
+        
+        .step-content {
+            flex: 1;
+            padding-top: 8px;
+        }
+        
+        .concept {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #fafafa;
+            border-radius: 5px;
+        }
+        
+        .concept-term {
+            color: #800020;
+            font-weight: 600;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+        
+        .homework-list, .takeaway-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .homework-list li, .takeaway-list li {
+            padding: 12px 0 12px 35px;
+            position: relative;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .homework-list li:before {
+            content: "□";
+            position: absolute;
+            left: 0;
+            color: #800020;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        
+        .takeaway-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #ff8c00;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        
+        .bottom-line {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 40px;
+            margin-top: 40px;
+            text-align: center;
+            font-size: 1.2em;
+            line-height: 1.8;
+            border-radius: 8px;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            .container {
+                box-shadow: none;
+            }
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            .content {
+                padding: 20px;
+            }
+            .section-content {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Therapeutic Insights</h1>
+            <div class="subtitle">Alignment Psychiatry</div>
+        </header>
+        
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">The Situation</h2>
+                <div class="section-content">
+                    <p>You are navigating significant workplace stress related to medical leave for mental health reasons. You encountered intimidation from HR and an unfamiliar director who questioned your leave inappropriately, creating a defensive and uncomfortable environment. This is compounded by your involvement in ongoing legal matters, adding complexity while you attempt to maintain professional responsibilities and personal well-being.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Core Problem</h2>
+                <div class="section-content">
+                    <p>Workplace intimidation and lack of support during a vulnerable time. The organization's stated policies conflict with actual behavior, creating barriers and undermining your trust and safety.</p>
+                </div>
+                <div class="quote-box">
+                    "Your discomfort and distrust are valid responses to intimidation and inappropriate questioning during a vulnerable time."
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Clinical Concepts</h2>
+                <div class="concept">
+                    <div class="concept-term">Intimidation</div>
+                    <div>Using position or behavior to pressure or make someone uncomfortable</div>
+                </div>
+                <div class="concept">
+                    <div class="concept-term">Retaliation</div>
+                    <div>Negative actions taken against someone for asserting their rights</div>
+                </div>
+                <div class="concept">
+                    <div class="concept-term">Boundary-Setting</div>
+                    <div>Clearly stating what you are and aren't comfortable with professionally</div>
+                </div>
+                <div class="concept">
+                    <div class="concept-term">Medical Certification</div>
+                    <div>Doctor's documentation legally supporting medical leave</div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Therapeutic Frameworks</h2>
+                
+                <div class="framework">
+                    <div class="framework-title">Documentation and Quiet Reporting Framework</div>
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">Document incident details including who, what, when, and where</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">File quiet complaint with trusted HR representative</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">Specify record-only request to avoid escalation</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">Provide doctor's contact for verification purposes only</div>
+                    </div>
+                </div>
+                
+                <div class="framework">
+                    <div class="framework-title">Boundary-Setting with Medical and HR Staff</div>
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">State discomfort with biased or intimidating staff clearly</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">Direct all verification requests to your treating doctor</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">Refuse engagement with intimidating personnel</div>
+                    </div>
+                </div>
+                
+                <div class="framework">
+                    <div class="framework-title">Narrative Control and Self-Advocacy</div>
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">Prepare personal narrative of events with factual details</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">Emphasize cooperation and separation from wrongdoing</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">Use consistently in legal and workplace contexts</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Practical Instructions</h2>
+                <div class="insight-box">
+                    <p><strong>Immediate Actions:</strong> Begin documenting all interactions with dates, times, and specific details. Your medical certification is sufficient—HR needs no additional personal information beyond what your doctor provides. Set firm boundaries by stating clearly when you feel uncomfortable or intimidated.</p>
+                    <p style="margin-top: 15px;"><strong>Communication Strategy:</strong> Keep all communications factual and professional. Direct verification requests to your treating doctor. Avoid unnecessary disclosure beyond legally required information. Control your narrative by preparing a consistent account that emphasizes your cooperation.</p>
+                    <p style="margin-top: 15px;"><strong>Protection Measures:</strong> File quiet complaints to create protective records without escalating situations. This documentation guards against potential retaliation and wrongful termination claims while maintaining your professional standing.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Homework</h2>
+                <ul class="homework-list">
+                    <li>File quiet complaint about intimidation incident with trusted HR representative</li>
+                    <li>Write factual account including who, what, when, where</li>
+                    <li>Provide doctor's contact information for verification only</li>
+                    <li>Prepare consistent narrative for legal and workplace discussions</li>
+                    <li>Document all future incidents with dates, times, and details</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Key Takeaways</h2>
+                <ul class="takeaway-list">
+                    <li>Document all intimidation incidents to create protective records</li>
+                    <li>File quiet complaints to guard against retaliation without escalating</li>
+                    <li>Medical certification is sufficient—HR needs no additional details</li>
+                    <li>Set firm boundaries with biased or intimidating staff</li>
+                    <li>Direct all verification requests to your treating doctor</li>
+                    <li>Control your narrative in legal and workplace contexts</li>
+                    <li>Avoid unnecessary disclosure beyond required information</li>
+                    <li>Documentation protects against wrongful termination claims</li>
+                    <li>Your discomfort and distrust are valid responses</li>
+                    <li>Act quietly and strategically to protect your rights</li>
+                </ul>
+            </div>
+            
+            <div class="bottom-line">
+                <strong>Bottom Line:</strong> You have the right to medical leave without intimidation or inappropriate questioning. By documenting incidents, filing quiet complaints, setting firm boundaries, and controlling your narrative, you protect yourself legally and professionally. Your medical certification is sufficient—no one needs more information than what your doctor provides. Act strategically, stay factual, and trust that your discomfort is a valid signal that boundaries have been crossed. You are advocating for yourself with wisdom and strength.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+```
