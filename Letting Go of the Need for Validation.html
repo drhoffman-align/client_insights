@@ -1,0 +1,330 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Insights - Alignment Psychiatry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #f5f5dc;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .subtitle {
+            color: #f5f5dc;
+            font-size: 1.1em;
+            font-weight: 300;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            color: #800020;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .section-content {
+            background-color: white;
+            border-left: 4px solid #ff8c00;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+        
+        .quote-box {
+            background: linear-gradient(135deg, #800020 0%, #ff8c00 100%);
+            color: white;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+            font-style: italic;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        .insight-box {
+            background: linear-gradient(135deg, #f5f5dc 0%, #ffe4b5 100%);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border-left: 4px solid #800020;
+        }
+        
+        .framework-steps {
+            margin: 25px 0;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .step-number {
+            background-color: #800020;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            flex-shrink: 0;
+            margin-right: 15px;
+        }
+        
+        .step-content {
+            flex: 1;
+            padding-top: 8px;
+        }
+        
+        .clinical-term {
+            font-weight: 600;
+            color: #800020;
+            font-style: italic;
+        }
+        
+        .homework-list, .takeaway-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .homework-list li, .takeaway-list li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .homework-list li:before {
+            content: "□";
+            position: absolute;
+            left: 0;
+            color: #ff8c00;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        
+        .takeaway-list li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #800020;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        
+        .bottom-line {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 30px 40px;
+            text-align: center;
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-top: 40px;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .section-title {
+                font-size: 1.5em;
+            }
+            
+            .bottom-line {
+                padding: 20px;
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Therapeutic Insights</h1>
+            <div class="subtitle">Alignment Psychiatry</div>
+        </header>
+        
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">The Situation</h2>
+                <div class="section-content">
+                    <p>You are navigating the emotional aftermath of a long-term relationship where you invested significant emotional labor through repeated communication, actionable suggestions, and attempts to foster change. Despite your extensive efforts, your partner has not responded as needed, leaving you feeling unseen and emotionally exhausted. You now struggle with accepting your own truth without your partner's acknowledgment and question how to move forward while carrying the weight of being the "strong friend" for others.</p>
+                </div>
+            </div>
+            
+            <div class="quote-box">
+                "Despite having clear evidence of your commitment and efforts, you remain stuck seeking external validation from your partner to acknowledge the work and care you invested in the relationship."
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Core Problem</h2>
+                <div class="section-content">
+                    <p>You remain stuck seeking external validation from your partner to acknowledge the work and care you invested in the relationship. This need for recognition prevents you from letting go and healing, despite having clear evidence of your commitment and efforts.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Clinical Concepts</h2>
+                <div class="section-content">
+                    <p><span class="clinical-term">Validation:</span> Having your feelings and efforts acknowledged by others; self-validation is crucial when external validation is unavailable.</p>
+                    <p style="margin-top: 15px;"><span class="clinical-term">Negligence:</span> Failing to respond to repeated relationship needs.</p>
+                    <p style="margin-top: 15px;"><span class="clinical-term">Self-Compassion:</span> Treating yourself with kindness when others do not.</p>
+                    <p style="margin-top: 15px;"><span class="clinical-term">Letting Go:</span> Releasing the need for closure from others to focus on personal healing.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Therapeutic Framework</h2>
+                <div class="insight-box">
+                    <strong>Accepting Your Own Truth Without External Validation</strong>
+                </div>
+                <div class="framework-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <strong>Acknowledge your efforts</strong> - Recognize the concrete actions you took to improve the relationship and the emotional labor you invested.
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <strong>Gather evidence of your actions</strong> - Document the specific ways you communicated, suggested changes, and attempted to foster growth.
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <strong>Separate your truth from others' acceptance</strong> - Understand that your efforts are valid regardless of whether your partner acknowledges them.
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <strong>Release the need for validation</strong> - Accept that external validation is not required for your truth to exist and that seeking it prolongs your pain.
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <strong>Move forward with self-compassion</strong> - Treat yourself with kindness, set boundaries to protect your emotional well-being, and focus on your healing and growth.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="quote-box">
+                "Your efforts are valid regardless of partner acknowledgment. External validation is not required for your truth to exist."
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Practical Instructions</h2>
+                <div class="section-content">
+                    <p><strong>Self-Validation Practice:</strong> Begin each day by acknowledging one specific effort you made in the relationship. Speak it aloud to yourself with compassion and without judgment.</p>
+                    <p style="margin-top: 15px;"><strong>Boundary Setting:</strong> When you notice yourself seeking validation from your former partner, pause and redirect that energy toward self-affirmation. Ask yourself: "What do I need to hear right now, and can I give that to myself?"</p>
+                    <p style="margin-top: 15px;"><strong>Managing the "Strong Friend" Role:</strong> Recognize that being supportive doesn't mean carrying everyone's burdens. It's okay to say "I don't have the capacity right now" when you need to prioritize your own healing.</p>
+                    <p style="margin-top: 15px;"><strong>Letting Go Ritual:</strong> When urges to seek acknowledgment arise, write them down and then write a compassionate response to yourself acknowledging your own truth.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Homework</h2>
+                <div class="section-content">
+                    <ul class="homework-list">
+                        <li>List all concrete actions you took to improve the relationship (be specific and thorough)</li>
+                        <li>Write brief reflections on your motivations and feelings for each action</li>
+                        <li>Read your list aloud daily for self-validation (preferably in the morning)</li>
+                        <li>Journal about urges to seek external validation and how you responded to them</li>
+                        <li>Complete all exercises before your next session (estimated time: 20-30 minutes)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Key Takeaways</h2>
+                <div class="section-content">
+                    <ul class="takeaway-list">
+                        <li>Your efforts are valid regardless of partner acknowledgment</li>
+                        <li>External validation is not required for your truth to exist</li>
+                        <li>You have concrete evidence of your commitment</li>
+                        <li>Continuing to seek acknowledgment prolongs pain</li>
+                        <li>Self-validation and self-compassion are essential for healing</li>
+                        <li>Letting go of validation needs is crucial for moving forward</li>
+                        <li>Set boundaries to protect emotional well-being</li>
+                        <li>Being the "strong friend" doesn't mean carrying everyone's burdens</li>
+                        <li>Focus on what you control: your healing and growth</li>
+                        <li>Deep wounds require time to heal</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-line">
+            <strong>Bottom Line:</strong> You invested genuine care and effort into your relationship, and that truth exists independently of your partner's acknowledgment. Continuing to seek their validation keeps you tethered to pain. Your path forward lies in validating yourself, practicing self-compassion, and releasing the need for external recognition. You have the evidence of your commitment—now it's time to honor that truth and focus on your own healing and growth.
+        </div>
+    </div>
+</body>
+</html>
+```
