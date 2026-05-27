@@ -1,0 +1,418 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Insights - Alignment Psychiatry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            padding: 60px 40px;
+            text-align: center;
+            color: #f5f5dc;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            color: #f5f5dc;
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            color: #f5f5dc;
+            font-weight: 300;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            font-size: 1.8em;
+            color: #800020;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #800020;
+        }
+        
+        .white-section {
+            background-color: white;
+            padding: 25px;
+            border-left: 5px solid #ff8c00;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .gradient-box {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+            font-style: italic;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        .insight-box {
+            background: linear-gradient(to right, #fff5e6 0%, #ffe6cc 100%);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #ff8c00;
+        }
+        
+        .framework {
+            margin: 30px 0;
+        }
+        
+        .framework-title {
+            font-size: 1.3em;
+            color: #800020;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .steps {
+            margin-left: 20px;
+        }
+        
+        .step {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+        }
+        
+        .step-number {
+            background-color: #800020;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+            flex-shrink: 0;
+            font-size: 1.1em;
+        }
+        
+        .step-text {
+            flex: 1;
+            font-size: 1.05em;
+        }
+        
+        .concept-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .concept-item {
+            padding: 15px;
+            margin: 10px 0;
+            background-color: #f9f9f9;
+            border-left: 4px solid #ff8c00;
+        }
+        
+        .concept-term {
+            font-weight: bold;
+            color: #800020;
+            font-size: 1.1em;
+        }
+        
+        .takeaway-list {
+            counter-reset: takeaway-counter;
+            list-style: none;
+            padding: 0;
+        }
+        
+        .takeaway-item {
+            counter-increment: takeaway-counter;
+            padding: 12px 12px 12px 50px;
+            margin: 10px 0;
+            position: relative;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        
+        .takeaway-item:before {
+            content: counter(takeaway-counter);
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #800020;
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        
+        .homework-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .homework-item {
+            padding: 12px 12px 12px 30px;
+            margin: 10px 0;
+            position: relative;
+            background-color: #fff5e6;
+            border-left: 4px solid #ff8c00;
+        }
+        
+        .homework-item:before {
+            content: "→";
+            position: absolute;
+            left: 12px;
+            color: #ff8c00;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .bottom-line {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 40px;
+            text-align: center;
+            font-size: 1.3em;
+            line-height: 1.8;
+            margin-top: 40px;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .section-title {
+                font-size: 1.5em;
+            }
+            
+            .bottom-line {
+                padding: 30px 20px;
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Therapeutic Insights</h1>
+            <div class="subtitle">Understanding Boundaries and Emotional Responsibility in Relationships</div>
+        </header>
+        
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">The Situation</h2>
+                <div class="white-section">
+                    <p>You are processing a recently ended romantic relationship that quickly deteriorated from a brief honeymoon phase into frequent, intense arguments and emotional turmoil. Your partner exhibited possessive behavior, made constant demands for attention, and used manipulative tactics including hurtful comments and threats of self-harm to maintain control. You felt responsible for your partner's emotional well-being, leading to feelings of powerlessness, overwhelm, and loss of self.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Core Problem</h2>
+                <div class="gradient-box">
+                    "You became entangled in a relationship with severely crossed emotional boundaries, where you were made to feel responsible for your partner's emotions at the expense of your own well-being."
+                </div>
+                <div class="white-section">
+                    <p>This dynamic resulted in you suppressing your needs, carrying the relationship's emotional weight, and experiencing self-doubt and emotional exhaustion. The relationship demanded that you sacrifice your sense of self to manage someone else's emotional state—a burden that no one should carry.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Clinical Concepts</h2>
+                <ul class="concept-list">
+                    <li class="concept-item">
+                        <div class="concept-term">Possessiveness</div>
+                        <div>Controlling a partner's time and attention, leading to autonomy loss. What may initially feel like intense interest or devotion ultimately becomes a cage that restricts your freedom and individuality.</div>
+                    </li>
+                    <li class="concept-item">
+                        <div class="concept-term">Emotional Responsibility</div>
+                        <div>An unhealthy dynamic where one person manages another's emotions. This creates an exhausting pattern where you become responsible for regulating feelings that aren't yours to control.</div>
+                    </li>
+                    <li class="concept-item">
+                        <div class="concept-term">Boundaries</div>
+                        <div>Limits that protect your sense of self in relationships. Healthy boundaries allow you to maintain your identity, values, and emotional well-being while still connecting with others.</div>
+                    </li>
+                    <li class="concept-item">
+                        <div class="concept-term">Dependency</div>
+                        <div>Excessive reliance on a partner for emotional regulation. When someone cannot manage their own emotional state without constant reassurance or presence from you, the relationship becomes unbalanced and unsustainable.</div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Therapeutic Frameworks</h2>
+                
+                <div class="framework">
+                    <div class="framework-title">Feelings Wheel Framework</div>
+                    <p style="margin-bottom: 15px;">A tool to help you identify and articulate your emotions with greater precision and clarity.</p>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-text">Identify the broad emotion you're experiencing (such as sad, angry, scared, happy, etc.)</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-text">Move to more specific feelings within that category (for example, if sad: lonely, vulnerable, abandoned)</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-text">Name all the emotions that resonate with your current experience, recognizing that multiple feelings can coexist</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="framework">
+                    <div class="framework-title">Venn Diagram Model of Relationships</div>
+                    <p style="margin-bottom: 15px;">A visual framework for understanding healthy relationship boundaries and maintaining individuality.</p>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-text">Visualize each person as a circle representing their complete self—interests, values, friendships, goals, and identity</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-text">Maintain a healthy overlap "sliver" where shared experiences, values, and connection exist</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-text">Avoid excessive overlap where one or both people lose their sense of self and become enmeshed</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="framework">
+                    <div class="framework-title">Emotional Responsibility vs. Helpfulness</div>
+                    <p style="margin-bottom: 15px;">Understanding the crucial difference between supporting someone and taking responsibility for their emotional state.</p>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-text">Distinguish support (offering comfort, listening, being present) from responsibility (managing, fixing, or controlling their emotions)</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-text">Recognize when you're carrying emotional burdens that aren't yours, leading to exhaustion and resentment</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-text">Set boundaries that allow you to be caring without sacrificing your own emotional well-being</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="insight-box">
+                    <strong>Trust Equation:</strong> Trust = Knowledge + Experience + Time
+                    <p style="margin-top: 10px;">Genuine trust cannot be rushed. It develops through observing how someone behaves across different contexts and situations over an extended period. Quick intensity often bypasses this essential foundation.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Practical Instructions</h2>
+                <div class="white-section">
+                    <p><strong>Using the Feelings Wheel:</strong> When you notice yourself feeling upset or overwhelmed, pause and use the feelings wheel to move from vague discomfort to specific emotional awareness. This clarity helps you communicate your needs and validate your own experience.</p>
+                </div>
+                <div class="white-section">
+                    <p><strong>Applying the Venn Diagram:</strong> Regularly assess your relationships by asking: "Am I maintaining my own circle? Do I still have interests, friendships, and activities that are mine alone?" If your circle has been absorbed into someone else's, it's time to reclaim your space.</p>
+                </div>
+                <div class="white-section">
+                    <p><strong>Setting Emotional Boundaries:</strong> Practice saying (to yourself and others): "I care about you, and I want to support you, but I cannot be responsible for managing your emotions." Notice when you feel the weight of someone else's emotional state and consciously set it down.</p>
+                </div>
+                <div class="gradient-box">
+                    "Being wanted should be based on choice, not obligation or manipulation. You deserve relationships that feel freeing, not suffocating."
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Homework</h2>
+                <ul class="homework-list">
+                    <li class="homework-item">Reflect on past and current relationships (romantic, friends, family) and notice patterns in how boundaries were maintained or crossed</li>
+                    <li class="homework-item">List the qualities you value in healthy relationships—what makes you feel respected, safe, and free to be yourself</li>
+                    <li class="homework-item">List the unwanted qualities and behaviors from your recent relationship that you want to avoid in the future</li>
+                    <li class="homework-item">Identify your minimum requirements for future relationships—the non-negotiable boundaries and standards you will maintain</li>
+                    <li class="homework-item">Define your ideal relationship characteristics—what would a truly healthy, balanced partnership look and feel like for you</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Key Takeaways</h2>
+                <ol class="takeaway-list">
+                    <li class="takeaway-item">The relationship ended due to possessiveness, manipulation, and boundary violations—not because of any failure on your part</li>
+                    <li class="takeaway-item">The feelings wheel provides emotional clarity and validation, helping you understand and articulate your inner experience</li>
+                    <li class="takeaway-item">Healthy relationships require autonomy with limited overlap, not total enmeshment where you lose yourself</li>
+                    <li class="takeaway-item">You cannot be responsible for another person's emotional regulation—this is an impossible and exhausting burden</li>
+                    <li class="takeaway-item">Carrying others' emotional burdens causes burnout and resentment, depleting your own resources</li>
+                    <li class="takeaway-item">Trust requires observing partners across contexts over time—it cannot be rushed or manufactured through intensity</li>
+                    <li class="takeaway-item">Possessiveness may initially feel flattering, but it ultimately harms both people by restricting freedom and autonomy</li>
+                    <li class="takeaway-item">Being wanted should be choice-based, not driven by obligation, guilt, or manipulation</li>
+                    <li class="takeaway-item">Clarifying your personal needs and boundaries prevents repeating unhealthy patterns in future relationships</li>
+                    <li class="takeaway-item">You deserve relationships that are respectful, collaborative, and freeing—partnerships that enhance rather than diminish your sense of self</li>
+                </ol>
+            </div>
+        </div>
+        
+        <div class="bottom-line">
+            <strong>The Bottom Line:</strong><br><br>
+            You are not responsible for managing another person's emotions, and healthy love does not require you to lose yourself. The relationship you experienced crossed fundamental boundaries, and recognizing this is an act of self-respect and wisdom. As you move forward, you now have frameworks to identify what healthy connection looks like—relationships where both people maintain their individuality while choosing to share parts of their lives together. You deserve partnerships built on mutual respect, trust earned over time, and the freedom to be fully yourself. This ending is not a failure; it's a reclaiming of your right to emotional safety and authentic connection.
+        </div>
+    </div>
+</body>
+</html>
+```
