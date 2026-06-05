@@ -1,0 +1,424 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Insights - Alignment Psychiatry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #f5f5dc;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        
+        .subtitle {
+            color: #f5f5dc;
+            font-size: 1.1em;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            color: #800020;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .section-content {
+            font-size: 1.05em;
+            line-height: 1.8;
+            color: #444;
+        }
+        
+        .quote-box {
+            background: linear-gradient(135deg, #800020 0%, #ff6b35 100%);
+            color: white;
+            padding: 25px 30px;
+            margin: 25px 0;
+            border-radius: 8px;
+            font-style: italic;
+            font-size: 1.15em;
+            line-height: 1.7;
+        }
+        
+        .white-section {
+            background-color: white;
+            border-left: 5px solid #ff6b35;
+            padding: 25px 30px;
+            margin: 25px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .insight-box {
+            background: linear-gradient(135deg, #f5f5dc 0%, #ffe4b5 100%);
+            padding: 25px 30px;
+            margin: 25px 0;
+            border-radius: 8px;
+            border-left: 5px solid #800020;
+        }
+        
+        .framework {
+            margin: 30px 0;
+        }
+        
+        .framework-title {
+            color: #800020;
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .steps {
+            margin-top: 20px;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .step-number {
+            background-color: #800020;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            flex-shrink: 0;
+            margin-right: 20px;
+        }
+        
+        .step-content {
+            flex: 1;
+            padding-top: 8px;
+            font-size: 1.05em;
+            line-height: 1.7;
+        }
+        
+        .concept {
+            margin-bottom: 20px;
+        }
+        
+        .concept-term {
+            color: #800020;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+        
+        .concept-definition {
+            margin-top: 5px;
+            padding-left: 20px;
+            color: #555;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-top: 15px;
+        }
+        
+        li {
+            margin-bottom: 12px;
+            line-height: 1.7;
+            color: #444;
+        }
+        
+        .medication-item {
+            margin-bottom: 25px;
+        }
+        
+        .medication-name {
+            color: #800020;
+            font-weight: 600;
+            font-size: 1.15em;
+            margin-bottom: 8px;
+        }
+        
+        .medication-details {
+            padding-left: 20px;
+            color: #555;
+            line-height: 1.7;
+        }
+        
+        .bottom-line {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 40px;
+            margin-top: 40px;
+            text-align: center;
+            font-size: 1.2em;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .section-title {
+                font-size: 1.5em;
+            }
+            
+            .bottom-line {
+                padding: 30px 20px;
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Therapeutic Insights</h1>
+            <div class="subtitle">Alignment Psychiatry</div>
+        </header>
+        
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">The Situation</h2>
+                <div class="section-content">
+                    <p>You are experiencing severe burnout, emotional exhaustion, and anxiety stemming from chronic over-functioning in relationships and work. You struggle with perfectionism, hypervigilance, and fear of abandonment rooted in childhood trauma. Sleep disturbances, migraines, and increased emotionality have worsened. You're navigating a relationship with an avoidant partner while managing your own need for control and immediate resolution.</p>
+                </div>
+            </div>
+            
+            <div class="quote-box">
+                "Burnout signals that current coping strategies are unsustainable. Your worth isn't defined by productivity or others' approval."
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Core Problem</h2>
+                <div class="white-section">
+                    <p>You over-function by taking excessive responsibility for others' emotions and outcomes, driven by perfectionism and fear of abandonment. This pattern, once adaptive, now causes chronic anxiety, emotional depletion, and inability to access joy.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Clinical Concepts</h2>
+                <div class="section-content">
+                    <div class="concept">
+                        <div class="concept-term">Burnout</div>
+                        <div class="concept-definition">Exhaustion from prolonged stress and over-responsibility.</div>
+                    </div>
+                    
+                    <div class="concept">
+                        <div class="concept-term">Perfectionism</div>
+                        <div class="concept-definition">Belief that impossibly high standards equal worthiness.</div>
+                    </div>
+                    
+                    <div class="concept">
+                        <div class="concept-term">Hypervigilance</div>
+                        <div class="concept-definition">Constant alertness for danger from trauma.</div>
+                    </div>
+                    
+                    <div class="concept">
+                        <div class="concept-term">Fear of Abandonment</div>
+                        <div class="concept-definition">Deep worry others will leave, causing relationship over-functioning.</div>
+                    </div>
+                    
+                    <div class="concept">
+                        <div class="concept-term">Adaptability</div>
+                        <div class="concept-definition">Ability to adjust to circumstances and remain flexible.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="quote-box">
+                "Adaptability, not control, reduces stress and restores joy. Self-compassion means treating yourself as kindly as you treat others."
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Therapeutic Frameworks</h2>
+                
+                <div class="framework">
+                    <div class="framework-title">Adaptability Over Control</div>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">Recognize limits of control</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">Identify areas needing flexibility</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">Practice allowing unexpected outcomes</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">Integrate past lessons as resources not rigid templates</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="framework">
+                    <div class="framework-title">Self-Compassion and Externalization</div>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">View yourself as you would a valued friend</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">Separate worth from outcomes</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">Embrace imperfection as human</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="framework">
+                    <div class="framework-title">Problem-Solving for Self</div>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">Apply problem-solving skills to your own needs</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">Clarify goals through lists and diagrams</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">Test tangible actions to clarify feelings</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="insight-box">
+                <strong>Key Insight:</strong> Distinguish between your burdens and others' responsibilities. Direct problem-solving energy toward your own needs. Rest and downtime are necessary, not optional.
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Practical Instructions</h2>
+                <div class="white-section">
+                    <p><strong>Medication Management:</strong></p>
+                    <div class="medication-item">
+                        <div class="medication-name">Clonazepam</div>
+                        <div class="medication-details">Increase to 2mg nightly for sleep and anxiety. Monitor grogginess and dependence risk. Avoid alcohol and sedatives.</div>
+                    </div>
+                    
+                    <div class="medication-item">
+                        <div class="medication-name">Escitalopram</div>
+                        <div class="medication-details">Continue 20mg daily. Monitor effectiveness.</div>
+                    </div>
+                    
+                    <div class="medication-item">
+                        <div class="medication-name">Cannabis</div>
+                        <div class="medication-details">Use sparingly; rely primarily on prescribed medication.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Homework</h2>
+                <div class="section-content">
+                    <p>Complete the following before your next session in a quiet space (30-60 minutes):</p>
+                    <ul>
+                        <li>List what brings joy versus what drains energy</li>
+                        <li>Diagram current life goals—identify self-directed versus reactive ones</li>
+                        <li>Journal about true desires in relationships (marriage, children, partnership)</li>
+                        <li>Optional: Visit bridal shop to explore emotional response to wedding dress</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="quote-box">
+                "Tangible experiments clarify true desires better than rumination. Trust yourself and community rather than relying solely on rigid self-sufficiency."
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Key Takeaways</h2>
+                <div class="insight-box">
+                    <ul>
+                        <li>Burnout signals current coping strategies are unsustainable</li>
+                        <li>Adaptability, not control, reduces stress and restores joy</li>
+                        <li>Your worth isn't defined by productivity or others' approval</li>
+                        <li>Distinguish between your burdens and others' responsibilities</li>
+                        <li>Direct problem-solving energy toward your own needs</li>
+                        <li>Self-compassion means treating yourself as kindly as you treat others</li>
+                        <li>Rest and downtime are necessary, not optional</li>
+                        <li>Tangible experiments clarify true desires better than rumination</li>
+                        <li>Take medication as prescribed; communicate about effectiveness</li>
+                        <li>Trust yourself and community rather than relying solely on rigid self-sufficiency</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-line">
+            <strong>Bottom Line:</strong> You have carried the weight of the world with remarkable strength, but sustainable healing requires releasing what was never yours to carry. By embracing adaptability over control and extending to yourself the same compassion you offer others, you create space for joy, rest, and authentic connection. Your worth is inherent—not earned through exhaustion.
+        </div>
+    </div>
+</body>
+</html>
+```
