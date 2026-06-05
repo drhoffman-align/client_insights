@@ -1,0 +1,355 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Insights - Alignment Psychiatry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #f5f5dc;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        
+        .subtitle {
+            color: #f5f5dc;
+            font-size: 1.1em;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        section {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            color: #800020;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #800020;
+        }
+        
+        .white-section {
+            background-color: white;
+            padding: 25px;
+            border-left: 5px solid #ff8c00;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .gradient-box {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 8px;
+            font-style: italic;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        .insight-box {
+            background: linear-gradient(to right, #fff5e6 0%, #ffe6cc 100%);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border-left: 4px solid #ff8c00;
+        }
+        
+        .framework-steps {
+            margin: 25px 0;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin: 20px 0;
+            padding: 15px;
+        }
+        
+        .step-number {
+            background-color: #800020;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            flex-shrink: 0;
+            margin-right: 20px;
+        }
+        
+        .step-content {
+            flex: 1;
+            padding-top: 8px;
+        }
+        
+        .clinical-concept {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #fafafa;
+            border-radius: 5px;
+        }
+        
+        .concept-term {
+            font-weight: bold;
+            color: #800020;
+            font-size: 1.1em;
+        }
+        
+        .concept-definition {
+            margin-top: 8px;
+            color: #555;
+        }
+        
+        ul {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+        
+        li {
+            margin: 12px 0;
+            line-height: 1.7;
+        }
+        
+        .bottom-line {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 40px;
+            text-align: center;
+            font-size: 1.3em;
+            line-height: 1.8;
+            margin-top: 40px;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            
+            section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+            
+            .step {
+                flex-direction: row;
+            }
+            
+            .step-number {
+                width: 35px;
+                height: 35px;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Therapeutic Insights</h1>
+            <div class="subtitle">Alignment Psychiatry</div>
+        </header>
+        
+        <div class="content">
+            <section>
+                <h2>The Situation</h2>
+                <div class="white-section">
+                    <p>You are a single parent navigating an overwhelming schedule that includes intensive physical training (4 hours per day, 4 days per week), full-time childcare, and household responsibilities with minimal partner support. You're experiencing chronic exhaustion and sleep deprivation due to your son's sleep regression, with no personal downtime. Despite your constant activity and dedication, you're not achieving your fitness goals and feel emotionally and physically depleted.</p>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Core Problem</h2>
+                <div class="gradient-box">
+                    "Chronic overload from an unsustainable schedule with no boundaries, rest, or self-care. Your efforts don't match your desired outcomes because routines aren't optimized and you lack effective boundary-setting with yourself and your child."
+                </div>
+            </section>
+            
+            <section>
+                <h2>Clinical Concepts</h2>
+                
+                <div class="clinical-concept">
+                    <div class="concept-term">Burnout</div>
+                    <div class="concept-definition">Chronic exhaustion from prolonged stress and overcommitment. This state occurs when demands consistently exceed your capacity to meet them, leading to physical, emotional, and mental depletion.</div>
+                </div>
+                
+                <div class="clinical-concept">
+                    <div class="concept-term">Sleep Regression</div>
+                    <div class="concept-definition">A period when a child who previously slept well begins waking frequently or resisting sleep. This developmental phase can significantly impact parental rest and overall family functioning.</div>
+                </div>
+                
+                <div class="clinical-concept">
+                    <div class="concept-term">Boundary Setting</div>
+                    <div class="concept-definition">Defining and maintaining limits to protect your time, energy, and well-being. Healthy boundaries are essential for sustainable functioning and prevent resentment and exhaustion.</div>
+                </div>
+                
+                <div class="clinical-concept">
+                    <div class="concept-term">Consequence-Based Parenting</div>
+                    <div class="concept-definition">Teaching children that actions have predictable outcomes to develop discipline. This approach helps children learn self-regulation while reducing parental stress through consistent expectations.</div>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Therapeutic Frameworks</h2>
+                <h3 style="color: #555; font-size: 1.3em; margin: 25px 0 20px 0;">Areas of Life Analysis</h3>
+                
+                <div class="framework-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <strong>Identify key life domains</strong> - Map out all the major areas of your life including work, parenting, fitness, relationships, household management, and personal time.
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <strong>Assess time and energy investment per area</strong> - Honestly evaluate how much time and energy you're currently dedicating to each domain on a weekly basis.
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <strong>Evaluate necessity of commitments</strong> - Determine which activities are truly essential versus those that could be reduced, delegated, or eliminated entirely.
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <strong>Make strategic adjustments to redistribute resources</strong> - Intentionally reallocate your time and energy to create space for rest, recovery, and activities that align with your goals.
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <strong>Monitor and adjust regularly</strong> - Continuously evaluate whether your new distribution is working and make modifications as circumstances change.
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Practical Instructions</h2>
+                <div class="white-section">
+                    <ul>
+                        <li><strong>Optimize your workouts:</strong> Prioritize intensity over duration. Effective weight loss requires workouts that elevate your heart rate to the point of heavy breathing, not just sweating. Quality matters more than quantity.</li>
+                        
+                        <li><strong>Ensure proper nutrition:</strong> Focus on adequate hydration and protein intake. A high-protein, low-carb approach supports your fitness goals more effectively than extended workout sessions without proper fuel.</li>
+                        
+                        <li><strong>Implement consistent bedtime routines:</strong> Establish clear consequences for your son around bedtime. Consistency benefits both of you by creating predictability and protecting your essential rest time.</li>
+                        
+                        <li><strong>Schedule personal downtime:</strong> Treat rest as a non-negotiable necessity, not a luxury. Even brief periods of genuine downtime support recovery and prevent burnout.</li>
+                        
+                        <li><strong>Aim for 8 hours of sleep:</strong> Prioritize sleep as a foundation for physical recovery, emotional regulation, and cognitive function.</li>
+                        
+                        <li><strong>Collaborate with your partner:</strong> Even when physically apart, maintain collaborative decision-making to ensure family stability and shared responsibility.</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Homework</h2>
+                <div class="insight-box">
+                    <ul>
+                        <li><strong>Complete Areas of Life worksheet:</strong> List all life domains, estimate weekly time and energy spent in each, mark essential versus reducible activities, and identify one area to delegate or eliminate.</li>
+                        
+                        <li><strong>Implement consistent bedtime routine:</strong> Establish clear consequences for your son and maintain consistency to improve sleep for both of you.</li>
+                        
+                        <li><strong>Optimize workouts:</strong> Prioritize intensity over duration, ensure adequate hydration, and increase protein intake to support your fitness goals.</li>
+                        
+                        <li><strong>Schedule personal downtime:</strong> Block out specific times for rest and recovery, treating them as essential appointments.</li>
+                        
+                        <li><strong>Aim for 8 hours of sleep:</strong> Adjust your schedule to prioritize sufficient sleep as a foundation for all other activities.</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Key Takeaways</h2>
+                <div class="white-section">
+                    <ul>
+                        <li>Your current pace is unsustainable and actively causing burnout</li>
+                        <li>Most of your time is consumed by training and childcare with zero personal time for recovery</li>
+                        <li>Effective weight loss requires intensity (heavy breathing during exercise), not just duration or sweating</li>
+                        <li>Setting firm bedtime boundaries benefits both you and your child by creating structure and protecting rest</li>
+                        <li>Rest and downtime are necessities for functioning, not luxuries to earn</li>
+                        <li>Delegating or dropping non-essential tasks is critical for energy recovery and preventing complete depletion</li>
+                        <li>Solo parenting requires strategic self-care and honest acknowledgment of your limits</li>
+                        <li>High-protein, low-carb nutrition supports fitness goals more effectively than excessive exercise alone</li>
+                        <li>Collaborative decision-making with your partner, even remotely, maintains family stability and shared responsibility</li>
+                        <li>Being honest about your needs demonstrates strength and models healthy self-advocacy</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        
+        <div class="bottom-line">
+            <strong>Bottom Line:</strong> You cannot pour from an empty cup. Your dedication to training, parenting, and household management is admirable, but without boundaries, rest, and strategic prioritization, you will continue to deplete yourself without achieving your goals. Sustainable progress requires honest assessment of what truly matters, the courage to let go of what doesn't serve you, and the wisdom to recognize that taking care of yourself enables you to better care for those who depend on you.
+        </div>
+    </div>
+</body>
+</html>
+```
