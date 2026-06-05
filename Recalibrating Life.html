@@ -1,0 +1,393 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Insights - Alignment Psychiatry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #f5f5dc;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        
+        .subtitle {
+            color: #f5f5dc;
+            font-size: 1.1em;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        section {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            color: #800020;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #800020;
+        }
+        
+        .white-section {
+            background-color: white;
+            padding: 25px;
+            border-left: 5px solid #ff8c00;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .gradient-box {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+            font-style: italic;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        .insight-box {
+            background: linear-gradient(to right, #fff5e6 0%, #ffe6cc 100%);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #ff8c00;
+        }
+        
+        .framework {
+            margin: 30px 0;
+        }
+        
+        .framework-title {
+            color: #800020;
+            font-size: 1.3em;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .steps {
+            margin: 20px 0;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .step-number {
+            background-color: #800020;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            flex-shrink: 0;
+            margin-right: 20px;
+        }
+        
+        .step-content {
+            flex: 1;
+            padding-top: 8px;
+        }
+        
+        .step-content strong {
+            color: #800020;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .concept {
+            margin-bottom: 20px;
+        }
+        
+        .concept-term {
+            color: #800020;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-top: 15px;
+        }
+        
+        li {
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+        
+        .bottom-line {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 40px;
+            text-align: center;
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-top: 40px;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            
+            section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+            
+            .step {
+                flex-direction: column;
+            }
+            
+            .step-number {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Therapeutic Insights</h1>
+            <div class="subtitle">Alignment Psychiatry</div>
+        </header>
+        
+        <div class="content">
+            <section>
+                <h2>The Situation</h2>
+                <div class="white-section">
+                    <p>You are a high-performing contractor in a demanding technical field who struggles with chronic overwork and rarely uses accrued PTO. You experience significant anxiety about taking extended breaks, fearing replacement or loss of value at work. Your work-centric schedule has left minimal time for your marriage, self-care, or personal reflection, leading to emotional dissociation and a need to reconnect with yourself.</p>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Core Problem</h2>
+                <div class="white-section">
+                    <p>You have an entrenched pattern of overfunctioning at work, creating chronic stress, emotional disconnection, and neglect of personal needs and relationships. You maintain an unsustainable belief that your value depends on constant availability and output, resulting in poor boundaries and persistent anxiety about stepping back from work.</p>
+                </div>
+                
+                <div class="gradient-box">
+                    "Your value is not defined solely by productivity or constant availability."
+                </div>
+            </section>
+            
+            <section>
+                <h2>Clinical Concepts</h2>
+                <div class="white-section">
+                    <div class="concept">
+                        <div class="concept-term">Dissociation</div>
+                        <p>Emotional numbness or disconnection from chronic stress. When we operate under sustained pressure without adequate rest, our minds can disconnect from our emotions as a protective mechanism.</p>
+                    </div>
+                    
+                    <div class="concept">
+                        <div class="concept-term">Parasympathetic State</div>
+                        <p>The body's rest and digest mode. This is the physiological state where healing, restoration, and genuine relaxation occur—essential for long-term wellbeing.</p>
+                    </div>
+                    
+                    <div class="concept">
+                        <div class="concept-term">Golden Handcuffs</div>
+                        <p>Feeling trapped in high-paying work despite lack of fulfillment. The financial security can make it difficult to make changes, even when the work is depleting your wellbeing.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Therapeutic Frameworks</h2>
+                
+                <div class="framework">
+                    <div class="framework-title">Reconnection Phases Framework</div>
+                    <div class="insight-box">
+                        This three-phase approach helps you systematically rebuild connection with yourself after prolonged periods of overwork and emotional disconnection.
+                    </div>
+                    
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <strong>Recalibration</strong>
+                                Rest and decompress. Allow your nervous system to shift from constant activation to a parasympathetic state. This phase is about doing less, not more.
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <strong>Exploration</strong>
+                                Experiment with new routines and activities that bring genuine interest or joy. This is where you begin to rediscover what matters beyond work.
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <strong>Integration</strong>
+                                Reflect on identity and values. Consider who you are beyond your professional role and what kind of life you want to build moving forward.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="framework">
+                    <div class="framework-title">Time Blocking & Personal Development</div>
+                    <div class="insight-box">
+                        This structured approach helps redistribute your energy toward neglected areas of life, creating sustainable balance through intentional scheduling.
+                    </div>
+                    
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <strong>Map Life Areas</strong>
+                                Identify all important domains: work, marriage, self-care, personal development, social connections, and any other meaningful areas.
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <strong>Allocate Specific Time Blocks</strong>
+                                Assign protected time to each area in your weekly schedule. Treat these blocks as non-negotiable appointments with yourself and your relationships.
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <strong>Monitor and Adjust Energy Distribution</strong>
+                                Track how you're actually spending time versus your intentions. Make adjustments to ensure energy flows toward what truly matters.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Practical Instructions</h2>
+                <div class="white-section">
+                    <p><strong>Planning Your Extended Break:</strong></p>
+                    <ul>
+                        <li>Identify a slower work period in the coming months</li>
+                        <li>Schedule two consecutive weeks off and inform your employer well in advance</li>
+                        <li>Use the first week purely for decompression—no planned activities, no productivity goals</li>
+                        <li>In the second week, begin exploring enriching activities that interest you</li>
+                        <li>Avoid filling your time off with household chores or obligations</li>
+                    </ul>
+                    
+                    <p><strong>Creating Your Time-Blocking System:</strong></p>
+                    <ul>
+                        <li>Design a weekly template that includes dedicated blocks for yourself, your spouse, and personal development</li>
+                        <li>Start with realistic time commitments you can maintain consistently</li>
+                        <li>Protect these blocks as you would important work meetings</li>
+                        <li>Remember: consistency matters more than perfection</li>
+                    </ul>
+                </div>
+                
+                <div class="gradient-box">
+                    "Extended time off is essential for recalibration, not a luxury. Expect discomfort, anxiety, and guilt initially—this is normal and temporary."
+                </div>
+            </section>
+            
+            <section>
+                <h2>Homework</h2>
+                <div class="white-section">
+                    <ul>
+                        <li>Plan two consecutive weeks off during a slower work period; inform your employer in advance</li>
+                        <li>First week: decompress without planned activities; second week: explore enriching activities</li>
+                        <li>Use provided prompts to plan optimal PTO usage aligned with holidays</li>
+                        <li>Track time spent in meaningful conversation with your spouse and self-reflection over two weeks</li>
+                        <li>Create a weekly time-blocking template including blocks for self, spouse, and personal development</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Key Takeaways</h2>
+                <div class="white-section">
+                    <ul>
+                        <li>Extended time off is essential for recalibration, not a luxury</li>
+                        <li>Expect discomfort, anxiety, and guilt initially—this is normal and temporary</li>
+                        <li>Time blocking redistributes energy toward neglected life areas</li>
+                        <li>Personal development time should be protected and regular</li>
+                        <li>Value is not defined solely by productivity or constant availability</li>
+                        <li>Meaningful connections require intentional effort and protected time</li>
+                        <li>Plan PTO around low-work periods to maximize restorative effect</li>
+                        <li>Avoid filling breaks with chores—true rest is the goal</li>
+                        <li>Relationships should be reciprocal, not one-sided</li>
+                        <li>Consistency in boundaries matters more than perfection</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        
+        <div class="bottom-line">
+            <strong>The Bottom Line</strong><br><br>
+            You cannot sustain a life built solely around work without losing connection to yourself and what matters most. Taking extended time off isn't about being weak or uncommitted—it's about reclaiming your humanity and building a life that honors all of who you are. The anxiety you feel about stepping back is a signal that change is needed, not a reason to avoid it. Your worth extends far beyond your productivity, and the relationships and personal growth you've been postponing deserve the same dedication you've given your career. Start with rest, move toward exploration, and trust that reconnection is possible when you create the space for it.
+        </div>
+    </div>
+</body>
+</html>
+```
