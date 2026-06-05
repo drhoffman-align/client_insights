@@ -1,0 +1,390 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Insights - Alignment Psychiatry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #f5f5dc;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        
+        .subtitle {
+            color: #f5f5dc;
+            font-size: 1.1em;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            color: #800020;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #800020;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .quote-box {
+            background: linear-gradient(135deg, #fff5e6 0%, #ffe6cc 100%);
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+            border-left: 5px solid #ff8c00;
+            font-style: italic;
+            color: #555;
+        }
+        
+        .insight-box {
+            background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border-left: 4px solid #800020;
+        }
+        
+        .white-section {
+            background-color: white;
+            padding: 25px;
+            margin: 20px 0;
+            border-left: 5px solid #ff8c00;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .framework {
+            margin: 30px 0;
+        }
+        
+        .framework h3 {
+            color: #800020;
+            font-size: 1.3em;
+            margin-bottom: 20px;
+        }
+        
+        .steps {
+            margin: 20px 0;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .step-number {
+            background-color: #800020;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            flex-shrink: 0;
+            margin-right: 15px;
+        }
+        
+        .step-content {
+            flex: 1;
+            padding-top: 8px;
+        }
+        
+        .clinical-concept {
+            margin-bottom: 20px;
+        }
+        
+        .concept-term {
+            color: #800020;
+            font-weight: bold;
+            font-style: italic;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            line-height: 1.7;
+        }
+        
+        .homework-list {
+            background-color: #fff9f0;
+            padding: 20px 20px 20px 40px;
+            border-radius: 8px;
+            border-left: 5px solid #ff8c00;
+        }
+        
+        .takeaways-list {
+            list-style-type: none;
+            margin-left: 0;
+        }
+        
+        .takeaways-list li:before {
+            content: "→ ";
+            color: #800020;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .bottom-line {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 30px;
+            margin-top: 40px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            
+            .container {
+                box-shadow: none;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Therapeutic Insights</h1>
+            <div class="subtitle">Alignment Psychiatry</div>
+        </header>
+        
+        <div class="content">
+            <div class="section">
+                <h2>The Situation</h2>
+                <p>You are navigating intense frustration in your federal government job where your PhD-level expertise is consistently ignored and undervalued. Despite superior qualifications, you earn less and receive fewer responsibilities than less-qualified colleagues who benefit from favoritism and office politics. You experience panic attacks and rumination about workplace injustices while feeling trapped by financial needs, health insurance requirements, and conflicting ideals about public service.</p>
+                
+                <div class="quote-box">
+                    "Your internal sense of competence conflicts sharply with the external validation you receive, creating anger, anxiety, and self-doubt that perpetuate your professional undervaluation."
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Core Problem</h2>
+                <div class="white-section">
+                    <p>A persistent pattern of powerlessness and invisibility in a toxic work environment where expertise is overlooked. Your internal sense of competence conflicts sharply with external validation received, creating anger, anxiety, and self-doubt that perpetuate your professional undervaluation.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Clinical Concepts</h2>
+                
+                <div class="clinical-concept">
+                    <p><span class="concept-term">Powerlessness:</span> The inability to influence outcomes due to systemic barriers. When organizational structures prevent your expertise from being recognized, feelings of helplessness naturally emerge.</p>
+                </div>
+                
+                <div class="clinical-concept">
+                    <p><span class="concept-term">Unfairness:</span> Perceived injustice in treatment and opportunities. Your experience of being overlooked despite superior qualifications represents a genuine systemic inequity.</p>
+                </div>
+                
+                <div class="clinical-concept">
+                    <p><span class="concept-term">Rebranding:</span> Redefining and communicating professional identity. This involves consciously reshaping how you present your expertise and value to others.</p>
+                </div>
+                
+                <div class="clinical-concept">
+                    <p><span class="concept-term">Sunk Cost Fallacy:</span> Staying in situations due to past investment rather than current value. The time and energy already invested should not determine whether you remain in an environment that doesn't serve you.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Therapeutic Frameworks</h2>
+                
+                <div class="framework">
+                    <h3>Categorizing and Naming Problems</h3>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">List all sources of distress in your current work environment, creating a comprehensive inventory of what troubles you.</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">Break each source into specific, concrete examples that illustrate the pattern rather than remaining abstract.</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">Identify which issues are systemic versus personal, clarifying what you can influence and what exists beyond your control.</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="framework">
+                    <h3>Acceptance and Strategic Adaptation</h3>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">Acknowledge the systemic unfairness you face without minimizing or rationalizing it—your anger is valid.</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">Accept that your ideals about public service and meritocracy may not align with organizational reality.</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">Reconfigure your expectations based on what is actually true rather than what should be true, redirecting energy accordingly.</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="framework">
+                    <h3>Rebranding and Self-Advocacy</h3>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">Identify your core strengths, expertise, and professional characteristics without minimizing or qualifying them.</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">Transform these qualities into a communicable brand—a clear, confident statement of your professional identity.</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">Practice presenting this brand confidently in professional contexts, allowing others to see your value clearly.</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="framework">
+                    <h3>Expert in the Room Mindset</h3>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">Assume your expertise authority—recognize that your PhD and experience make you genuinely qualified to speak with confidence.</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">Present yourself accordingly despite internal discomfort, understanding that others recognize expertise primarily through confident presentation.</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">Balance confidence with humility—assertiveness is not arrogance, and claiming your expertise enables rather than diminishes collaboration.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Practical Instructions</h2>
+                <div class="insight-box">
+                    <p>Your transition to a new division offers a strategic opportunity for professional reset. This is your chance to establish a different pattern of interaction from the beginning, where your expertise is visible and valued.</p>
+                    
+                    <p style="margin-top: 15px;">Focus your energy where your contributions are valued rather than continuing to invest in systems that consistently overlook you. Systemic favoritism cannot be changed through individual effort alone—this is not a personal failure but an organizational reality.</p>
+                    
+                    <p style="margin-top: 15px;">Remember that assertiveness differs fundamentally from arrogance. Claiming your expertise and presenting it confidently enables others to recognize your value and creates opportunities for meaningful contribution.</p>
+                </div>
+                
+                <div class="quote-box">
+                    "Past dismissals should not define your current self-worth. Your expertise creates options beyond your current position."
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Homework</h2>
+                <div class="homework-list">
+                    <ul>
+                        <li>Write out your professional characteristics and strengths without minimizing or qualifying them</li>
+                        <li>Transform these traits into a brand statement that emphasizes your expertise and unique value</li>
+                        <li>Draft bullet points that capture your professional identity in clear, confident language</li>
+                        <li>Bring these written materials to your next session on the second Tuesday of July</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Key Takeaways</h2>
+                <ul class="takeaways-list">
+                    <li>Anger and powerlessness are valid responses to toxic environments</li>
+                    <li>Systemic favoritism cannot be changed through individual effort alone</li>
+                    <li>Categorizing problems clarifies controllable versus uncontrollable factors</li>
+                    <li>Others recognize expertise only when confidently presented</li>
+                    <li>Your new division offers a rebranding opportunity to reset perceptions</li>
+                    <li>Assertiveness differs from arrogance and enables visibility</li>
+                    <li>Past dismissals should not define current self-worth</li>
+                    <li>Focus energy where contributions are valued</li>
+                    <li>Your expertise creates options beyond your current position</li>
+                    <li>Ideals shouldn't trap you in harmful situations</li>
+                </ul>
+            </div>
+            
+            <div class="bottom-line">
+                <strong>Bottom Line:</strong> You possess genuine expertise that has been systematically undervalued in a toxic environment. Your anger is valid, and your powerlessness is real—but neither defines your worth or limits your options. The transition to a new division offers a strategic opportunity to rebrand yourself, presenting your expertise confidently from the start. By categorizing what you can and cannot control, accepting systemic realities without internalizing them, and practicing assertive self-advocacy, you can break the pattern of invisibility. Your ideals about public service matter, but they should not trap you in situations that harm you. Focus your considerable talents where they will be recognized and valued.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+```
