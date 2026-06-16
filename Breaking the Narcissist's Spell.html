@@ -1,0 +1,391 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Insights - Alignment Psychiatry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            padding: 60px 40px;
+            text-align: center;
+            color: #f5f5dc;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            color: #f5f5dc;
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            color: #f5f5dc;
+            font-weight: 300;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            font-size: 1.8em;
+            color: #800020;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #800020;
+        }
+        
+        .quote-box {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+            font-style: italic;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        .white-section {
+            background-color: white;
+            border-left: 5px solid #ff8c00;
+            padding: 25px;
+            margin: 25px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .insight-box {
+            background: linear-gradient(135deg, #fff5e6 0%, #ffe6cc 100%);
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+            border-left: 5px solid #ff8c00;
+        }
+        
+        .framework {
+            margin: 30px 0;
+        }
+        
+        .framework-title {
+            font-size: 1.3em;
+            color: #800020;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .steps {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .step-number {
+            background-color: #800020;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            flex-shrink: 0;
+            margin-right: 15px;
+        }
+        
+        .step-content {
+            flex: 1;
+        }
+        
+        .step-title {
+            font-weight: 600;
+            color: #800020;
+            margin-bottom: 5px;
+        }
+        
+        .concept {
+            margin-bottom: 25px;
+        }
+        
+        .concept-title {
+            font-weight: 600;
+            color: #800020;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+        
+        .concept-description {
+            color: #555;
+            line-height: 1.7;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-top: 15px;
+        }
+        
+        li {
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+        
+        .bottom-line {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 30px 40px;
+            margin-top: 40px;
+            font-size: 1.1em;
+            line-height: 1.8;
+            text-align: center;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            .container {
+                box-shadow: none;
+            }
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            .content {
+                padding: 20px;
+            }
+            .steps {
+                flex-direction: column;
+            }
+            .step {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Therapeutic Insights</h1>
+            <div class="subtitle">Understanding Your Journey to Healing</div>
+        </header>
+        
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">The Situation</h2>
+                <p>You are recovering from a long-term relationship with a partner displaying narcissistic traits who used psychological manipulation, financial control, and career threats to maintain power. Your former partner created debt in your name, isolated you from support systems, and threatened workplace disruption. While you have separated, you continue to struggle with self-doubt, confusion, and residual guilt about staying in the relationship.</p>
+            </div>
+            
+            <div class="quote-box">
+                "Staying was a survival strategy, not a personal failing. Narcissists create convincing facades to trap victims."
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Core Problem</h2>
+                <div class="white-section">
+                    <p>You are experiencing the lingering psychological impact from prolonged narcissistic abuse, which manifests as self-blame and difficulty recognizing the manipulation as the abuser's pathology rather than your own failings. This is a common response to sustained psychological trauma, and understanding this pattern is the first step toward healing.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Clinical Concepts</h2>
+                
+                <div class="concept">
+                    <div class="concept-title">Narcissistic Personality Disorder</div>
+                    <div class="concept-description">A mental health condition involving inflated self-importance, need for admiration, and lack of empathy, leading to manipulation and emotional abuse in relationships. This is a recognized psychiatric disorder, not simply "bad behavior."</div>
+                </div>
+                
+                <div class="concept">
+                    <div class="concept-title">Psychological Abuse</div>
+                    <div class="concept-description">Non-physical controlling behaviors intended to isolate or belittle another person. Research shows that psychological abuse is as damaging as physical abuse, causing lasting trauma and impacting mental health.</div>
+                </div>
+                
+                <div class="concept">
+                    <div class="concept-title">Victim Blaming</div>
+                    <div class="concept-description">When victims internalize responsibility for abuse. It's crucial to understand that staying was a survival strategy, not weakness. The human brain adapts to threatening situations in ways that prioritize immediate safety.</div>
+                </div>
+            </div>
+            
+            <div class="insight-box">
+                <strong>Important Understanding:</strong> Naming the abuse is the first healing step. By identifying what happened to you as narcissistic abuse, you begin to separate your self-worth from the abuser's actions.
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Therapeutic Frameworks</h2>
+                
+                <div class="framework">
+                    <div class="framework-title">Narcissistic Abuse Cycle</div>
+                    <p>Understanding this cycle helps you recognize that what you experienced follows a predictable pattern of abuse:</p>
+                    
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <div class="step-title">Facade Phase</div>
+                                <p>The narcissist presents an idealized version of themselves, creating intense connection and trust.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <div class="step-title">Devaluation Phase</div>
+                                <p>Criticism, belittling, and emotional withdrawal begin, creating confusion and self-doubt.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <div class="step-title">Control and Isolation</div>
+                                <p>Financial entanglement, social isolation, and threats maintain power over the victim.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <div class="step-title">Psychological Trauma</div>
+                                <p>Lasting effects include self-blame, confusion, and difficulty trusting one's own perceptions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="framework">
+                    <div class="framework-title">Victim Conceptualization Framework</div>
+                    <p>This framework helps you reframe your experience and begin healing:</p>
+                    
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <div class="step-title">Recognize Manipulation</div>
+                                <p>Identify the specific tactics used against you—financial control, isolation, threats, and psychological games.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <div class="step-title">Understand Effects</div>
+                                <p>Acknowledge how these tactics impacted your mental health, self-perception, and decision-making.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <div class="step-title">Separate Self from Blame</div>
+                                <p>Recognize that the abuse reflects the abuser's pathology, not your worth or judgment.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="quote-box">
+                "Isolation occurs through embarrassment avoidance and enforced separation. Financial entanglement is a common control method. These are tactics, not your failures."
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Practical Instructions</h2>
+                <div class="white-section">
+                    <ul>
+                        <li><strong>Maintain Boundaries:</strong> Continue the appropriate boundaries you've established with your ex-partner. Boundaries are essential for ongoing safety and healing.</li>
+                        <li><strong>Practice Self-Compassion:</strong> When self-doubt or guilt arises, remind yourself that this was not your fault. Speak to yourself as you would to a friend in the same situation.</li>
+                        <li><strong>Document Your Progress:</strong> Keep track of moments when you recognize manipulation patterns or feel stronger in your understanding of what happened.</li>
+                        <li><strong>Seek Support:</strong> Reconnect with support systems that may have been disrupted during the relationship. Healing happens in connection with others.</li>
+                        <li><strong>Monitor Your Thoughts:</strong> Notice when self-blame emerges and gently redirect to the frameworks we've discussed.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Homework</h2>
+                <div class="insight-box">
+                    <ul>
+                        <li>Read the provided articles on narcissistic abuse and victim experiences</li>
+                        <li>Highlight sections that resonate with your experience</li>
+                        <li>Note any questions or emotional reactions that arise</li>
+                        <li>Document memories that now make sense through this framework</li>
+                        <li>Bring your reflections and "aha" moments to our next session</li>
+                    </ul>
+                    <p style="margin-top: 15px;"><strong>Purpose:</strong> This homework validates your experience through education and helps you recognize patterns you may not have previously identified as abuse.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Key Takeaways</h2>
+                <ul>
+                    <li>The relationship followed classic narcissistic abuse patterns: idealization, devaluation, control, and trauma</li>
+                    <li>Psychological abuse is as damaging as physical abuse and deserves the same recognition and treatment</li>
+                    <li>Staying was a survival strategy, not a personal failing or weakness</li>
+                    <li>Narcissists create convincing facades specifically designed to trap victims</li>
+                    <li>Isolation occurs through embarrassment avoidance and enforced separation from support systems</li>
+                    <li>Financial entanglement is a common and deliberate control method</li>
+                    <li>Naming the abuse is the first healing step—you cannot heal what you don't acknowledge</li>
+                    <li>Boundaries are essential for ongoing safety and recovery</li>
+                    <li>Self-compassion is crucial—this was not your fault</li>
+                    <li>Education validates your experience and supports recovery by helping you understand what happened</li>
+                </ul>
+            </div>
+            
+            <div class="quote-box">
+                "Self-compassion is crucial—this was not your fault. Education validates experience and supports recovery."
+            </div>
+        </div>
+        
+        <div class="bottom-line">
+            <strong>Bottom Line:</strong> Understanding narcissistic abuse patterns helps separate your self-worth from the abuser's actions, reducing self-blame and enabling recovery through insight and boundary maintenance. You demonstrated remarkable strength in leaving this relationship, and you continue to show insight and courage in processing the psychological aftermath. Healing is not linear, but with education, self-compassion, and appropriate boundaries, you are moving toward reclaiming your sense of self and well-being.
+        </div>
+    </div>
+</body>
+</html>
+```
