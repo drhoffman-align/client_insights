@@ -1,0 +1,379 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Insights - Alignment Psychiatry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #f5f5dc;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .subtitle {
+            color: #f5f5dc;
+            font-size: 1.1em;
+            font-weight: 300;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            color: #800020;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .section-content {
+            background-color: white;
+            border-left: 4px solid #ff8c00;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .quote-box {
+            background: linear-gradient(135deg, #800020 0%, #ff8c00 100%);
+            color: white;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+            font-size: 1.2em;
+            font-style: italic;
+            text-align: center;
+        }
+        
+        .insight-box {
+            background: linear-gradient(135deg, #f5f5dc 0%, #ffe4b5 100%);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border-left: 4px solid #800020;
+        }
+        
+        .framework {
+            margin: 30px 0;
+        }
+        
+        .framework-title {
+            color: #800020;
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .steps {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .step {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .step-number {
+            background-color: #800020;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+            font-size: 1.1em;
+        }
+        
+        .step-text {
+            flex: 1;
+        }
+        
+        .concept {
+            margin-bottom: 15px;
+        }
+        
+        .concept-term {
+            color: #800020;
+            font-weight: 600;
+        }
+        
+        ul {
+            list-style-position: inside;
+            margin-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            padding-left: 10px;
+        }
+        
+        .bottom-line {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 30px;
+            text-align: center;
+            font-size: 1.3em;
+            font-weight: 500;
+            margin-top: 40px;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            
+            .container {
+                box-shadow: none;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .section-title {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Therapeutic Insights</h1>
+            <div class="subtitle">Alignment Psychiatry</div>
+        </header>
+        
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">The Situation</h2>
+                <div class="section-content">
+                    <p>You are navigating multiple significant stressors simultaneously: adjusting to new medication, managing ongoing marital tension around household responsibilities, and serving as the primary caretaker and problem-solver for your father during his cancer treatment. You've taken on the role of coordinating his medication adherence and managing family dynamics while supporting your mother and siblings through this difficult time.</p>
+                    <p style="margin-top: 15px;">You've recognized an important pattern: you consistently take on unsustainable levels of responsibility for others, which leads to exhaustion, frustration, and resentment. This awareness is the first step toward meaningful change.</p>
+                </div>
+            </div>
+            
+            <div class="quote-box">
+                "You cannot be more responsible for others' choices than they are themselves."
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Core Problem</h2>
+                <div class="section-content">
+                    <p>The central challenge you're facing is <strong>over-responsibility</strong>—feeling compelled to manage and fix the lack of follow-through from others in both your marriage and your father's healthcare situation. This pattern creates emotional exhaustion and resentment, stemming from a fundamental mismatch between your sense of duty and the reality that you cannot control others' choices or outcomes.</p>
+                    <p style="margin-top: 15px;">When you over-function, you inadvertently enable others to avoid their own responsibilities while depleting your own resources. This cycle perpetuates the very problems you're trying to solve.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Clinical Concepts</h2>
+                <div class="section-content">
+                    <div class="concept">
+                        <span class="concept-term">Over-Responsibility:</span> Taking on more than your fair share of emotional or practical labor, often at the expense of your own wellbeing.
+                    </div>
+                    <div class="concept">
+                        <span class="concept-term">Boundaries:</span> Protective limits that safeguard your time, energy, and emotional resources from being depleted.
+                    </div>
+                    <div class="concept">
+                        <span class="concept-term">Assertiveness:</span> Clear, direct communication that expresses your needs without aggression or passivity.
+                    </div>
+                    <div class="concept">
+                        <span class="concept-term">Enmeshment:</span> Blurred family boundaries that create an unhealthy sense of obligation to manage others' problems as if they were your own.
+                    </div>
+                    <div class="concept">
+                        <span class="concept-term">Anticipatory Grief:</span> The process of grieving a loss before it actually happens, which is a normal response to impending change or loss.
+                    </div>
+                    <div class="concept">
+                        <span class="concept-term">Autonomy:</span> Each person's fundamental right to make their own choices and face the natural consequences of those choices.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Therapeutic Frameworks</h2>
+                
+                <div class="framework">
+                    <div class="framework-title">Responsibility and Autonomy Framework</div>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-text">Identify your true responsibilities versus those you've assumed that belong to others</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-text">Recognize when you're over-functioning and enabling others to under-function</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-text">Communicate boundaries clearly and directly without apologizing</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-text">Follow through with stated consequences consistently</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-text">Practice letting go of outcomes you cannot control</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="framework">
+                    <div class="framework-title">Assertive Communication and Consequence Setting</div>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-text">State your needs directly without hinting or hoping others will guess</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-text">Communicate clear consequences for when boundaries aren't respected</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-text">Enforce boundaries consistently, even when it feels uncomfortable</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-text">Use group communication when appropriate to share responsibility more effectively</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="framework">
+                    <div class="framework-title">Grief and Letting Go</div>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-text">Acknowledge anticipatory grief about your father's illness and changing family roles</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-text">Process emotions without judgment—grief doesn't require guilt</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-text">Prepare emotionally for possible outcomes while staying present</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-text">Focus on controllable actions rather than uncontrollable outcomes</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="insight-box">
+                <strong>Important Insight:</strong> Your family culture may have encouraged over-responsibility, but you have the power to choose differently. Letting go respects others' autonomy while protecting your wellbeing. This isn't selfish—it's necessary for sustainable caregiving.
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Practical Instructions</h2>
+                <div class="section-content">
+                    <p><strong>With Your Husband:</strong> Instead of repeated reminders about household tasks, state your needs once clearly and communicate the consequence. For example: "I need you to handle X task by Y time. If it's not done, I will [specific consequence]." Then follow through consistently.</p>
+                    
+                    <p style="margin-top: 15px;"><strong>With Your Father's Care:</strong> Consider using group communication (family text or meeting) to share information and expectations. This distributes responsibility and makes everyone accountable, rather than you serving as the sole intermediary.</p>
+                    
+                    <p style="margin-top: 15px;"><strong>Time Management:</strong> Implement time-blocking for your daily and weekly tasks. This creates structure, reduces overwhelm, and helps you identify what's truly essential versus what you've taken on unnecessarily.</p>
+                    
+                    <p style="margin-top: 15px;"><strong>Medication Monitoring:</strong> Continue tracking your response to the new medication, noting improvements in energy and functioning as well as any side effects. This information is valuable for ongoing treatment optimization.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Homework</h2>
+                <div class="section-content">
+                    <ul>
+                        <li>Implement a time-blocking schedule for your daily and weekly tasks</li>
+                        <li>Draft a group text or prepare for a family meeting around Father's Day to communicate care expectations and share responsibility</li>
+                        <li>Practice stating boundaries and consequences with your husband regarding household responsibilities</li>
+                        <li>Practice stating boundaries with your father about his medication adherence and healthcare follow-through</li>
+                        <li>Report on the effectiveness of your schedule and outcomes of family communication at the next session</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="quote-box">
+                "Over-functioning enables avoidance and drains your resources. Direct, assertive communication is more effective than repeated reminders."
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Key Takeaways</h2>
+                <div class="section-content">
+                    <ul>
+                        <li>You cannot be more responsible for others' choices than they are themselves</li>
+                        <li>Over-functioning enables avoidance and drains your resources</li>
+                        <li>Direct, assertive communication is more effective than repeated reminders</li>
+                        <li>Boundaries require both communicated and enforced consequences</li>
+                        <li>Family culture may encourage over-responsibility, but you can choose differently</li>
+                        <li>Grief about changing roles is normal and doesn't require guilt</li>
+                        <li>Letting go respects others' autonomy while protecting your wellbeing</li>
+                        <li>Your medication is improving energy and functioning—continue monitoring side effects</li>
+                        <li>Time-blocking reduces overwhelm and clarifies priorities</li>
+                        <li>Group communication shares responsibility more effectively than being the sole intermediary</li>
+                        <li>Prioritize self-care, especially when others aren't doing their part</li>
+                        <li>Your worth isn't defined by how much you do for others</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="bottom-line">
+                You are learning to distinguish between genuine responsibility and unsustainable over-functioning. By setting clear boundaries, communicating assertively, and allowing others to face the natural consequences of their choices, you protect your wellbeing while respecting everyone's autonomy. This isn't about caring less—it's about caring more sustainably and effectively.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+```
