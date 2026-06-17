@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Weekly Time-Block Planner</title>
+<style>
+  :root{
+    --bg:#F3F4F2;
+    --surface:#FFFFFF;
+    --ink:#1B2220;
+    --muted:#6B7280;
+    --line:#E3E5E1;
+    --accent:#0F6E64;
+    --accent-dark:#0A5048;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  .app{
+    max-width:1180px;
+    margin:0 auto;
+    padding:28px 22px 60px;
+  }
+  header.top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    flex-wrap:wrap;
+    gap:14px;
+    margin-bottom:22px;
+  }
+  h1{
+    font-size:26px;
+    letter-spacing:-0.01em;
+    margin:0 0 4px;
+    font-weight:700;
+  }
+  .sub{
+    color:var(--muted);
+    font-size:13.5px;
+    margin:0;
+  }
+  .toolbar{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+  }
+  button{
+    font-family:inherit;
+    font-size:13px;
+    border:1px solid var(--line);
+    background:var(--surface);
+    color:var(--ink);
+    border-radius:8px;
+    padding:7px 12px;
+    cursor:pointer;
+    transition:background .15s, border-color .15s;
+  }
+  button:hover{ border-color:var(--accent); }
+  button.primary{
+    background:var(--accent);
+    border-color:var(--accent);
+    color:#fff;
+  }
+  button.primary:hover{ background:var(--accent-dark); }
+  label.weekend-toggle{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    font-size:13px;
+    color:var(--muted);
+    user-select:none;
+  }
+  .layout{
+    display:grid;
+    grid-template-columns:220px 1fr;
+    gap:20px;
+  }
+  @media (max-width:880px){
+    .layout{ grid-template-columns:1fr; }
+  }
+  aside{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:16px 16px 18px;
+    align-self:start;
+  }
+  aside h2{
+    font-size:12.5px;
+    text-transform:uppercase;
+    letter-spacing:.06em;
+    color:var(--muted);
+    margin:0 0 12px;
+  }
+  .domain-list{
+    list-style:none;
+    margin:0;
+    padding:0;
+    font-size:13.5px;
+  }
+  .domain-list li{
+    display:flex;
+    align-items:baseline;
+    gap:8px;
+    padding:5px 0;
+  }
+  .domain-list li.sub{ padding-left:16px; font-size:13px; color:var(--ink); }
+  .domain-list .dot{
+    width:8px;height:8px;border-radius:50%;
+    flex:0 0 auto;
+    margin-top:4px;
+  }
+  .planner-wrap{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:12px;
+    overflow:auto;
+  }
+  table{
+    border-collapse:collapse;
+    width:100%;
+    min-width:760px;
+  }
+  th{
+    text-align:left;
+    font-size:11.5px;
+    text-transform:uppercase;
+    letter-spacing:.05em;
+    color:var(--muted);
+    padding:12px 10px 10px;
+    border-bottom:1px solid var(--line);
+    position:sticky;
+    top:0;
+    background:var(--surface);
+  }
+  th.daycol{ min-width:120px; }
+  td{
+    padding:6px 8px;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+  }
+  tr.row{ border-left:4px solid transparent; }
+  .row-label-cell{ min-width:150px; }
+  .row-label-cell input{ font-weight:600; }
+  .row-time-cell{ min-width:130px; }
+  input.cell-input, textarea.cell-input{
+    width:100%;
+    border:1px solid transparent;
+    background:transparent;
+    font-family:inherit;
+    font-size:13.5px;
+    color:var(--ink);
+    padding:7px 6px;
+    border-radius:6px;
+    resize:none;
+  }
+  input.cell-input:hover, textarea.cell-input:hover{
+    border-color:var(--line);
+  }
+  input.cell-input:focus, textarea.cell-input:focus{
+    outline:none;
+    border-color:var(--accent);
+    background:var(--surface);
+  }
+  textarea.cell-input{
+    min-height:34px;
+    line-height:1.3;
+    font-family:inherit;
+  }
+  .row-controls{
+    display:flex;
+    gap:4px;
+    align-items:center;
+    white-space:nowrap;
+  }
+  .dot-btn{
+    width:18px;height:18px;
+    border-radius:50%;
+    border:1px solid var(--line);
+    padding:0;
+    cursor:pointer;
+  }
+  .del-btn{
+    border:none;
+    background:transparent;
+    color:var(--muted);
+    font-size:14px;
+    padding:2px 4px;
+    cursor:pointer;
+  }
+  .del-btn:hover{ color:#B91C1C; }
+  .add-row-bar{
+    padding:12px;
+    display:flex;
+    justify-content:flex-start;
+  }
+  footer.note{
+    margin-top:14px;
+    font-size:12px;
+    color:var(--muted);
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .saved-pill{
+    font-size:11px;
+    color:var(--accent);
+    opacity:0;
+    transition:opacity .3s;
+  }
+  .saved-pill.show{ opacity:1; }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <header class="top">
+    <div>
+      <h1>Weekly Time-Block Planner</h1>
+      <p class="sub">Click any cell to edit. Saved on this device only — nothing is sent anywhere.</p>
+    </div>
+    <div class="toolbar">
+      <label class="weekend-toggle">
+        <input type="checkbox" id="weekendToggle">
+        Include Sat / Sun
+      </label>
+      <button id="addRowBtn">+ Add row</button>
+      <button id="resetBtn">Reset template</button>
+    </div>
+  </header>
+
+  <div class="layout">
+
+    <aside>
+      <h2>Life Domains</h2>
+      <ul class="domain-list" id="domainList"></ul>
+    </aside>
+
+    <div>
+      <div class="planner-wrap">
+        <table id="plannerTable">
+          <thead>
+            <tr id="headRow"></tr>
+          </thead>
+          <tbody id="plannerBody"></tbody>
+        </table>
+        <div class="add-row-bar">
+          <button id="addRowBtn2">+ Add row</button>
+        </div>
+      </div>
+      <footer class="note">
+        <span>Click the colored dot on any row to tag it by life domain.</span>
+        <span class="saved-pill" id="savedPill">Saved</span>
+      </footer>
+    </div>
+
+  </div>
+</div>
+
+<script>
+(function(){
+
+  const COLORS = {
+    purple: { accent:"#7C3AED", tint:"#F1EAFE" },
+    amber:  { accent:"#C2730C", tint:"#FBEFE0" },
+    blue:   { accent:"#2563EB", tint:"#E7EEFD" },
+    rose:   { accent:"#DB2777", tint:"#FCE7F3" },
+    slate:  { accent:"#475569", tint:"#F1F5F9" }
+  };
+  const COLOR_ORDER = ["purple","amber","blue","rose","slate"];
+
+  const DAY_KEYS_BASE = ["mon","tue","wed","thu","fri"];
+  const DAY_KEYS_WEEKEND = ["sat","sun"];
+  const DAY_LABELS = { mon:"Mon", tue:"Tue", wed:"Wed", thu:"Thu", fri:"Fri", sat:"Sat", sun:"Sun" };
+
+  function emptyDays(){
+    const d = {};
+    DAY_KEYS_BASE.concat(DAY_KEYS_WEEKEND).forEach(k => d[k] = "");
+    return d;
+  }
+
+  function cryptoId(){
+    return 'r' + Math.random().toString(36).slice(2,10);
+  }
+
+  // Generic blank starter template -- no personal schedule baked in,
+  // so each person who opens this builds their own week from scratch.
+  function defaultRows(){
+    return [
+      { id: cryptoId(), label:"Sleep", time:"", color:"purple", days: emptyDays() },
+      { id: cryptoId(), label:"Work / Career", time:"", color:"amber", days: emptyDays() },
+      { id: cryptoId(), label:"Meals", time:"", color:"amber", days: emptyDays() },
+      { id: cryptoId(), label:"Self-Care / Recreation", time:"", color:"blue", days: emptyDays() },
+      { id: cryptoId(), label:"Open block", time:"", color:"slate", days: emptyDays() }
+    ];
+  }
+
+  const DOMAINS = [
+    { name:"Physical", note:"workout", color:"amber" },
+    { name:"Mental", note:"appointment", color:"amber" },
+    { name:"Work / Career", note:"", color:"amber" },
+    { name:"Personal", note:"", color:"amber", group:["Finance","Life Purpose","Self-Improvement"] },
+    { name:"Spirituality", note:"", color:"amber" },
+    { name:"Domestic / House", note:"", color:"amber" },
+    { name:"Recreation / Hobbies", note:"", color:"blue" },
+    { name:"Social Connections", note:"", color:"blue" },
+    { name:"Sleep", note:"", color:"purple" },
+    { name:"Eating", note:"", color:"purple" }
+  ];
+
+  let rows = [];
+  let includeWeekend = false;
+  let saveTimer = null;
+
+  const plannerBody = document.getElementById('plannerBody');
+  const headRow = document.getElementById('headRow');
+  const domainList = document.getElementById('domainList');
+  const weekendToggle = document.getElementById('weekendToggle');
+  const savedPill = document.getElementById('savedPill');
+
+  function activeDayKeys(){
+    return includeWeekend ? DAY_KEYS_BASE.concat(DAY_KEYS_WEEKEND) : DAY_KEYS_BASE.slice();
+  }
+
+  function renderDomains(){
+    domainList.innerHTML = "";
+    DOMAINS.forEach(d => {
+      const li = document.createElement('li');
+      const dot = document.createElement('span');
+      dot.className = 'dot';
+      dot.style.background = COLORS[d.color].accent;
+      li.appendChild(dot);
+      const text = document.createElement('span');
+      text.textContent = d.note ? (d.name + " -- " + d.note) : d.name;
+      li.appendChild(text);
+      domainList.appendChild(li);
+      if (d.group){
+        d.group.forEach(g => {
+          const sub = document.createElement('li');
+          sub.className = 'sub';
+          sub.textContent = g;
+          domainList.appendChild(sub);
+        });
+      }
+    });
+  }
+
+  function renderHead(){
+    headRow.innerHTML = "";
+    const blank1 = document.createElement('th');
+    blank1.textContent = "Block";
+    headRow.appendChild(blank1);
+    const blank2 = document.createElement('th');
+    blank2.textContent = "Time";
+    headRow.appendChild(blank2);
+    activeDayKeys().forEach(k => {
+      const th = document.createElement('th');
+      th.className = "daycol";
+      th.textContent = DAY_LABELS[k];
+      headRow.appendChild(th);
+    });
+    const blank3 = document.createElement('th');
+    blank3.textContent = "";
+    headRow.appendChild(blank3);
+  }
+
+  function renderRows(){
+    plannerBody.innerHTML = "";
+    rows.forEach(row => {
+      const tr = document.createElement('tr');
+      tr.className = "row";
+      tr.style.borderLeftColor = COLORS[row.color].accent;
+      tr.style.background = COLORS[row.color].tint + "55";
+
+      const labelTd = document.createElement('td');
+      labelTd.className = "row-label-cell";
+      const labelInput = document.createElement('input');
+      labelInput.className = "cell-input";
+      labelInput.value = row.label;
+      labelInput.addEventListener('input', e => { row.label = e.target.value; scheduleSave(); });
+      labelTd.appendChild(labelInput);
+      tr.appendChild(labelTd);
+
+      const timeTd = document.createElement('td');
+      timeTd.className = "row-time-cell";
+      const timeInput = document.createElement('input');
+      timeInput.className = "cell-input";
+      timeInput.placeholder = "e.g. 8-10am";
+      timeInput.value = row.time;
+      timeInput.addEventListener('input', e => { row.time = e.target.value; scheduleSave(); });
+      timeTd.appendChild(timeInput);
+      tr.appendChild(timeTd);
+
+      activeDayKeys().forEach(k => {
+        const td = document.createElement('td');
+        const ta = document.createElement('textarea');
+        ta.className = "cell-input";
+        ta.value = row.days[k] || "";
+        ta.addEventListener('input', e => { row.days[k] = e.target.value; scheduleSave(); });
+        td.appendChild(ta);
+        tr.appendChild(td);
+      });
+
+      const controlsTd = document.createElement('td');
+      const controls = document.createElement('div');
+      controls.className = "row-controls";
+
+      const dotBtn = document.createElement('button');
+      dotBtn.className = "dot-btn";
+      dotBtn.style.background = COLORS[row.color].accent;
+      dotBtn.title = "Click to change domain color";
+      dotBtn.addEventListener('click', () => {
+        const idx = COLOR_ORDER.indexOf(row.color);
+        row.color = COLOR_ORDER[(idx + 1) % COLOR_ORDER.length];
+        scheduleSave();
+        renderRows();
+      });
+      controls.appendChild(dotBtn);
+
+      const delBtn = document.createElement('button');
+      delBtn.className = "del-btn";
+      delBtn.textContent = "✕";
+      delBtn.title = "Delete row";
+      delBtn.addEventListener('click', () => {
+        rows = rows.filter(r => r.id !== row.id);
+        scheduleSave();
+        renderRows();
+      });
+      controls.appendChild(delBtn);
+
+      controlsTd.appendChild(controls);
+      tr.appendChild(controlsTd);
+
+      plannerBody.appendChild(tr);
+    });
+  }
+
+  function addRow(){
+    rows.push({ id: cryptoId(), label:"New block", time:"", color:"slate", days: emptyDays() });
+    scheduleSave();
+    renderRows();
+  }
+
+  function scheduleSave(){
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(persist, 400);
+  }
+
+  function persist(){
+    try{
+      localStorage.setItem('weekly-planner-rows', JSON.stringify(rows));
+      localStorage.setItem('weekly-planner-weekend', JSON.stringify(includeWeekend));
+      flashSaved();
+    }catch(e){
+      console.error('Storage error', e);
+    }
+  }
+
+  function flashSaved(){
+    savedPill.classList.add('show');
+    setTimeout(() => savedPill.classList.remove('show'), 900);
+  }
+
+  function load(){
+    try{
+      const r = localStorage.getItem('weekly-planner-rows');
+      rows = r ? JSON.parse(r) : defaultRows();
+    }catch(e){
+      rows = defaultRows();
+    }
+    try{
+      const w = localStorage.getItem('weekly-planner-weekend');
+      includeWeekend = w ? JSON.parse(w) : false;
+    }catch(e){
+      includeWeekend = false;
+    }
+    weekendToggle.checked = includeWeekend;
+    renderHead();
+    renderRows();
+  }
+
+  document.getElementById('addRowBtn').addEventListener('click', addRow);
+  document.getElementById('addRowBtn2').addEventListener('click', addRow);
+
+  document.getElementById('resetBtn').addEventListener('click', () => {
+    if (confirm("Reset the planner back to the blank template? This clears everything entered.")){
+      rows = defaultRows();
+      scheduleSave();
+      renderRows();
+    }
+  });
+
+  weekendToggle.addEventListener('change', e => {
+    includeWeekend = e.target.checked;
+    scheduleSave();
+    renderHead();
+    renderRows();
+  });
+
+  renderDomains();
+  load();
+
+})();
+</script>
+</body>
+</html>
