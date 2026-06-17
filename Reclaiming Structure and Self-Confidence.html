@@ -1,0 +1,415 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Insights - Alignment Psychiatry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #f5f5dc;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        
+        .subtitle {
+            color: #f5f5dc;
+            font-size: 1.1em;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            color: #800020;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 3px solid #800020;
+            padding-bottom: 10px;
+        }
+        
+        .white-section {
+            background-color: white;
+            padding: 25px;
+            border-left: 5px solid #ff8c00;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .gradient-box {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+            font-style: italic;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        .insight-box {
+            background: linear-gradient(to right, #fff5e6 0%, #ffe6cc 100%);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #ff8c00;
+        }
+        
+        .framework-section {
+            margin: 30px 0;
+        }
+        
+        .framework-title {
+            color: #800020;
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .step-container {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .step-circle {
+            background-color: #800020;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            flex-shrink: 0;
+            margin-right: 15px;
+        }
+        
+        .step-content {
+            flex: 1;
+            padding-top: 8px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        
+        li {
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+        
+        .concept-item {
+            margin-bottom: 20px;
+        }
+        
+        .concept-title {
+            color: #800020;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+        
+        .bottom-line {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 40px;
+            text-align: center;
+            font-size: 1.3em;
+            line-height: 1.8;
+            margin-top: 40px;
+        }
+        
+        .medication-item {
+            margin-bottom: 15px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        
+        .medication-name {
+            color: #800020;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            .container {
+                box-shadow: none;
+            }
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            .content {
+                padding: 20px;
+            }
+            header {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Therapeutic Insights</h1>
+            <div class="subtitle">Alignment Psychiatry</div>
+        </header>
+        
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">The Situation</h2>
+                <div class="white-section">
+                    <p>You are recovering from a destabilizing experience in a dysfunctional nonprofit workplace that eroded your self-confidence and professional identity. Currently not working, you are struggling with disrupted sleep patterns—falling asleep after 3 a.m. and waking in the afternoon—along with a lack of daily structure and questions about your PR career direction. You continue to experience anxiety, OCD symptoms, and circadian rhythm disruption despite your current medication regimen.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Core Problem</h2>
+                <div class="white-section">
+                    <p>The loss of structure and self-confidence stemming from a toxic workplace has been compounded by difficulty distinguishing between personal responsibility and systemic dysfunction. This has resulted in procrastination, sleep disruption, isolation, and misplaced self-blame for problems that predated your arrival and were beyond your control.</p>
+                </div>
+                
+                <div class="gradient-box">
+                    "The workplace dysfunction was systemic, not a personal failure. Focus on what you can control, not systemic problems."
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Clinical Concepts</h2>
+                
+                <div class="concept-item">
+                    <div class="concept-title">Circadian Rhythm</div>
+                    <p>Your body's internal clock regulating sleep/wake cycles. Resetting this rhythm improves mood and overall functioning, creating a foundation for recovery.</p>
+                </div>
+                
+                <div class="concept-item">
+                    <div class="concept-title">Procrastination as Defense</div>
+                    <p>Avoiding difficult emotional processing by focusing on low-stakes tasks. This protective mechanism keeps you busy while preventing deeper healing work.</p>
+                </div>
+                
+                <div class="concept-item">
+                    <div class="concept-title">Personal Development Time</div>
+                    <p>Protected time for self-reflection and growth before daily demands take over. This ensures you give your best mental energy to yourself first.</p>
+                </div>
+                
+                <div class="concept-item">
+                    <div class="concept-title">Medication Titration</div>
+                    <p>Gradually adjusting medication doses to balance therapeutic benefits with side effects, optimizing your treatment response.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Therapeutic Frameworks</h2>
+                
+                <div class="framework-section">
+                    <div class="framework-title">Area-of-Life Time Blocking Framework</div>
+                    
+                    <div class="step-container">
+                        <div class="step-circle">1</div>
+                        <div class="step-content">
+                            <strong>Identify all important life areas:</strong> Physical health, mental health, career, finance, purpose, self-improvement, spirituality, household, recreation, social connections, sleep, and eating.
+                        </div>
+                    </div>
+                    
+                    <div class="step-container">
+                        <div class="step-circle">2</div>
+                        <div class="step-content">
+                            <strong>Set ideal wake/sleep times:</strong> Establish consistent times that support healthy circadian rhythm and allow for morning personal development.
+                        </div>
+                    </div>
+                    
+                    <div class="step-container">
+                        <div class="step-circle">3</div>
+                        <div class="step-content">
+                            <strong>Block time for each area on weekly schedule:</strong> Create visual representation of how your week will be structured across all life domains.
+                        </div>
+                    </div>
+                    
+                    <div class="step-container">
+                        <div class="step-circle">4</div>
+                        <div class="step-content">
+                            <strong>Assign consistent time blocks:</strong> Designate specific recurring times for each life area to build routine and predictability.
+                        </div>
+                    </div>
+                    
+                    <div class="step-container">
+                        <div class="step-circle">5</div>
+                        <div class="step-content">
+                            <strong>Substitute activities within blocks:</strong> Maintain the structure even when changing specific activities—flexibility within consistency.
+                        </div>
+                    </div>
+                    
+                    <div class="step-container">
+                        <div class="step-circle">6</div>
+                        <div class="step-content">
+                            <strong>Incorporate outside-the-house activities:</strong> Break isolation by including activities that get you out into the world regularly.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="insight-box">
+                    Structure combats depression and restores a sense of control. Consistency matters more than perfection.
+                </div>
+                
+                <div class="framework-section">
+                    <div class="framework-title">Medication-Assisted Circadian Reset</div>
+                    
+                    <div class="step-container">
+                        <div class="step-circle">1</div>
+                        <div class="step-content">
+                            <strong>Set specific start date:</strong> Choose a date at least one week out to mentally prepare and increase commitment to the change.
+                        </div>
+                    </div>
+                    
+                    <div class="step-container">
+                        <div class="step-circle">2</div>
+                        <div class="step-content">
+                            <strong>Use medications to enforce sleep/wake times:</strong> Leverage medication timing to support your new schedule rather than fighting against it.
+                        </div>
+                    </div>
+                    
+                    <div class="step-container">
+                        <div class="step-circle">3</div>
+                        <div class="step-content">
+                            <strong>Adjust medication timing for optimal benefit:</strong> Take medications at times that align with and reinforce your desired sleep/wake cycle.
+                        </div>
+                    </div>
+                    
+                    <div class="step-container">
+                        <div class="step-circle">4</div>
+                        <div class="step-content">
+                            <strong>Track effects and adjust as needed:</strong> Monitor how medications affect your sleep, energy, and functioning, communicating observations for fine-tuning.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gradient-box">
+                    "Sleep and eating are foundational to all other functioning. Give your best mental energy to yourself first each day."
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Practical Instructions</h2>
+                <div class="white-section">
+                    <p><strong>Start each day with 1-2 hours of personal development time.</strong> This is your time for self-reflection, journaling, and growth before the world makes demands on you.</p>
+                    
+                    <p style="margin-top: 15px;"><strong>Mentally rehearse your new sleep schedule nightly.</strong> Visualization increases commitment and prepares your mind for the transition.</p>
+                    
+                    <p style="margin-top: 15px;"><strong>Include outside-the-house activities regularly.</strong> Breaking isolation supports recovery and provides structure beyond your home environment.</p>
+                    
+                    <p style="margin-top: 15px;"><strong>Process work experiences through journaling.</strong> Writing helps distinguish between personal responsibility and systemic dysfunction, reducing misplaced self-blame.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Medication Adjustments</h2>
+                
+                <div class="medication-item">
+                    <div class="medication-name">Adderall</div>
+                    <p>Increase to 30-40 mg in the morning (from 20 mg) for improved focus and alertness throughout the day.</p>
+                </div>
+                
+                <div class="medication-item">
+                    <div class="medication-name">Fluvoxamine</div>
+                    <p>Increase to 100 mg daily for OCD symptoms. Take at night if it causes drowsiness, using this side effect to support your sleep schedule.</p>
+                </div>
+                
+                <div class="medication-item">
+                    <div class="medication-name">Clonazepam</div>
+                    <p>Take the full 2 mg at bedtime (not split) to induce sleep and help reset your circadian rhythm.</p>
+                </div>
+                
+                <div class="insight-box">
+                    Monitor medication effects and side effects carefully. Communicate your observations so adjustments can be made as needed.
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Homework</h2>
+                <div class="white-section">
+                    <ul>
+                        <li>Set a specific date (at least one week out) to begin your new sleep schedule and mentally rehearse it nightly</li>
+                        <li>Create a weekly time-blocked schedule covering all life areas: physical, mental, career, finance, purpose, self-improvement, spirituality, household, recreation, social, sleep, and eating</li>
+                        <li>Start each day with 1-2 hours of personal development time</li>
+                        <li>Track medication effects and side effects</li>
+                        <li>Include outside-the-house activities to break isolation patterns</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Key Takeaways</h2>
+                <div class="white-section">
+                    <ul>
+                        <li>The workplace dysfunction was systemic, not a personal failure on your part</li>
+                        <li>Structure combats depression and restores a sense of control over your life</li>
+                        <li>Give your best mental energy to yourself first each day</li>
+                        <li>Setting a start date for your sleep schedule increases commitment and follow-through</li>
+                        <li>Maintain time-block structure even when substituting activities—flexibility within consistency</li>
+                        <li>Focus on what you can control, not systemic problems beyond your influence</li>
+                        <li>Consistency matters more than perfection in building new habits</li>
+                        <li>Breaking isolation through outside activities supports recovery</li>
+                        <li>Sleep and eating are foundational to all other areas of functioning</li>
+                        <li>Process work experiences through journaling to gain clarity and perspective</li>
+                        <li>Monitor medication effects and adjust as directed</li>
+                        <li>Practice self-compassion and prioritize progress over perfection</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-line">
+            <strong>Bottom Line:</strong> You are rebuilding from a workplace experience that was systemically dysfunctional, not a reflection of your worth or capabilities. By resetting your circadian rhythm, creating structured time blocks across all life areas, and giving yourself the gift of personal development time each morning, you are reclaiming control and laying the foundation for sustainable recovery. Structure, self-compassion, and consistency will guide you forward.
+        </div>
+    </div>
+</body>
+</html>
+```
