@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Insights - Alignment Psychiatry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #f5f5dc;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        
+        .subtitle {
+            color: #f5f5dc;
+            font-size: 1.1em;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            color: #800020;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .section-content {
+            font-size: 1.05em;
+            line-height: 1.8;
+            color: #444;
+        }
+        
+        .quote-box {
+            background: linear-gradient(135deg, #800020 0%, #a64253 100%);
+            color: white;
+            padding: 25px 30px;
+            margin: 25px 0;
+            border-radius: 8px;
+            font-style: italic;
+            font-size: 1.1em;
+            line-height: 1.7;
+        }
+        
+        .white-section {
+            background-color: white;
+            border-left: 5px solid #ff8c00;
+            padding: 25px 30px;
+            margin: 25px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .insight-box {
+            background: linear-gradient(135deg, #f5f5dc 0%, #e8e8d0 100%);
+            padding: 25px 30px;
+            margin: 25px 0;
+            border-radius: 8px;
+            border-left: 5px solid #800020;
+        }
+        
+        .framework {
+            margin: 30px 0;
+        }
+        
+        .framework-title {
+            color: #800020;
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .step-number {
+            background-color: #800020;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            flex-shrink: 0;
+            margin-right: 20px;
+        }
+        
+        .step-content {
+            flex: 1;
+            padding-top: 8px;
+            font-size: 1.05em;
+            line-height: 1.7;
+        }
+        
+        .clinical-concept {
+            margin-bottom: 20px;
+        }
+        
+        .concept-term {
+            color: #800020;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+        
+        .concept-definition {
+            margin-top: 5px;
+            padding-left: 20px;
+            color: #555;
+        }
+        
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        ul li {
+            padding: 10px 0 10px 30px;
+            position: relative;
+            line-height: 1.7;
+        }
+        
+        ul li:before {
+            content: "•";
+            color: #ff8c00;
+            font-weight: bold;
+            font-size: 1.5em;
+            position: absolute;
+            left: 0;
+            top: 5px;
+        }
+        
+        .bottom-line {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 40px;
+            margin-top: 40px;
+            text-align: center;
+            font-size: 1.2em;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .section-title {
+                font-size: 1.5em;
+            }
+            
+            .step {
+                flex-direction: column;
+            }
+            
+            .step-number {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Therapeutic Insights</h1>
+            <div class="subtitle">Alignment Psychiatry</div>
+        </header>
+        
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">The Situation</h2>
+                <div class="section-content">
+                    <p>You are currently unemployed and socially isolated, struggling with motivation to establish healthy routines. You feel trapped in an emotionally exhausting relationship with your mother, who has multiple health issues and relies on you as an emotional caretaker. The overwhelming guilt and obligation you experience has led you to believe you must sacrifice your own life to manage her problems and emotional needs.</p>
+                </div>
+            </div>
+            
+            <div class="quote-box">
+                "You are not indebted to your mother; parenting was her responsibility."
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Core Problem</h2>
+                <div class="white-section">
+                    <p>You have blurred boundaries with your mother, leading to feelings of indebtedness and emotional exhaustion. You are confusing healthy commitment with unhealthy obligation, which is preventing you from living autonomously and investing in your own well-being.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Clinical Concepts</h2>
+                <div class="section-content">
+                    <div class="clinical-concept">
+                        <div class="concept-term">Boundaries</div>
+                        <div class="concept-definition">Limits protecting your time, energy, and emotional well-being.</div>
+                    </div>
+                    
+                    <div class="clinical-concept">
+                        <div class="concept-term">Indebtedness vs. Commitment</div>
+                        <div class="concept-definition">Feeling obligated to repay versus choosing to support out of care.</div>
+                    </div>
+                    
+                    <div class="clinical-concept">
+                        <div class="concept-term">Learned Helplessness</div>
+                        <div class="concept-definition">Believing you cannot change your situation, so you stop trying.</div>
+                    </div>
+                    
+                    <div class="clinical-concept">
+                        <div class="concept-term">Autonomy</div>
+                        <div class="concept-definition">The ability to make your own choices and live your own life.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="quote-box">
+                "You can love someone and still refuse to be their emotional caretaker."
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Therapeutic Frameworks</h2>
+                
+                <div class="framework">
+                    <div class="framework-title">Commitment vs. Indebtedness Framework</div>
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">Distinguish between owing someone versus choosing to support them</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">Examine the origins of your sense of obligation</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">Recognize that parental care is not a debt to repay</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">Shift your focus to commitment to yourself</div>
+                    </div>
+                </div>
+                
+                <div class="framework">
+                    <div class="framework-title">Boundary Setting Framework</div>
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">Identify where boundaries are needed</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">Decide what you will and won't tolerate</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">Communicate your limits clearly</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">Hold your boundaries consistently</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">Reaffirm care while maintaining limits</div>
+                    </div>
+                </div>
+                
+                <div class="framework">
+                    <div class="framework-title">Responsibility and Autonomy Model</div>
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">Recognize that adults are responsible for their own lives</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">Accept that you cannot want change for others more than they want it</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">Redirect your energy to personal growth</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="insight-box">
+                <strong>Important Insight:</strong> Setting boundaries may cause discomfort, but that's acceptable. You are an autonomous adult with the right to prioritize your needs.
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Practical Instructions</h2>
+                <div class="white-section">
+                    <p>When your mother begins discussing her health complaints, practice setting a clear boundary. Calmly state that you cannot continue conversations unless she's open to solutions or professional help. If she resists, repeat the boundary without arguing or defending yourself. Remember that repeating boundaries calmly is more effective than engaging in debate.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Homework</h2>
+                <div class="section-content">
+                    <ul>
+                        <li>Practice setting a specific boundary with your mother regarding health complaints</li>
+                        <li>Calmly state you cannot continue conversations unless she's open to solutions or professional help</li>
+                        <li>If your mother resists, repeat the boundary without arguing</li>
+                        <li>Journal about the experience, your emotional responses, and any challenges</li>
+                        <li>Report your findings at the next session</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="quote-box">
+                "You cannot want change for someone more than they want it themselves."
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Key Takeaways</h2>
+                <div class="section-content">
+                    <ul>
+                        <li>You are not indebted to your mother; parenting was her responsibility</li>
+                        <li>Boundaries protect your emotional health and are necessary</li>
+                        <li>You can love someone and still refuse to be their emotional caretaker</li>
+                        <li>Your mother's problems are ultimately hers to solve</li>
+                        <li>Setting boundaries may cause discomfort, but that's acceptable</li>
+                        <li>You are an autonomous adult with the right to prioritize your needs</li>
+                        <li>You cannot want change for someone more than they want it themselves</li>
+                        <li>Limiting availability is valid self-care</li>
+                        <li>Repeating boundaries calmly is more effective than arguing</li>
+                        <li>Use freed energy to build your own life and relationships</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-line">
+            <strong>Bottom Line:</strong> Your mother's emotional well-being is not your responsibility to manage. By establishing clear boundaries, you are not abandoning her—you are reclaiming your autonomy and creating space to build your own life. The discomfort you may feel is a sign of growth, not failure. You deserve to invest in yourself, and doing so will ultimately serve everyone better than continuing to sacrifice your well-being for someone else's unmet needs.
+        </div>
+    </div>
+</body>
+</html>
