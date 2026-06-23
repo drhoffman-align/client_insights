@@ -1,0 +1,352 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Insights - Alignment Psychiatry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #f5f5dc;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .subtitle {
+            color: #f5f5dc;
+            font-size: 1.1em;
+            font-weight: 300;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            color: #800020;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .quote-box {
+            background: linear-gradient(135deg, #800020 0%, #a64253 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+            font-style: italic;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        .white-section {
+            background-color: white;
+            border-left: 5px solid #ff8c00;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .insight-box {
+            background: linear-gradient(135deg, #fff5e6 0%, #ffe6cc 100%);
+            padding: 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+            border-left: 5px solid #ff8c00;
+        }
+        
+        .framework-steps {
+            margin: 30px 0;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin: 25px 0;
+        }
+        
+        .step-number {
+            background-color: #800020;
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.3em;
+            flex-shrink: 0;
+            margin-right: 20px;
+        }
+        
+        .step-content {
+            flex: 1;
+            padding-top: 8px;
+        }
+        
+        .step-title {
+            font-weight: 600;
+            color: #800020;
+            margin-bottom: 5px;
+            font-size: 1.1em;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-top: 15px;
+        }
+        
+        li {
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+        
+        .concept-item {
+            margin-bottom: 20px;
+        }
+        
+        .concept-title {
+            font-weight: 600;
+            color: #800020;
+            margin-bottom: 5px;
+        }
+        
+        .bottom-line {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 30px 40px;
+            text-align: center;
+            font-size: 1.2em;
+            line-height: 1.8;
+            font-weight: 500;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .section-title {
+                font-size: 1.5em;
+            }
+            
+            .bottom-line {
+                padding: 20px;
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Therapeutic Insights</h1>
+            <div class="subtitle">Alignment Psychiatry</div>
+        </header>
+        
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">The Situation</h2>
+                <div class="white-section">
+                    <p>You are experiencing inconsistency in daily life that contributes to increased anxiety and procrastination. You are working to establish better structure and time management to address multiple competing demands across different life domains.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Core Problem</h2>
+                <div class="quote-box">
+                    "Lack of consistent schedule and unclear prioritization of life areas leading to avoidance behaviors and heightened anxiety about responsibilities."
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Clinical Concepts</h2>
+                <div class="white-section">
+                    <div class="concept-item">
+                        <div class="concept-title">Time-Blocking</div>
+                        <p>Scheduling technique that assigns specific time periods to particular activities or categories, reducing decision fatigue.</p>
+                    </div>
+                    
+                    <div class="concept-item">
+                        <div class="concept-title">Areas of Life</div>
+                        <p>Distinct life domains (work, relationships, health, personal growth) requiring balanced attention and energy investment.</p>
+                    </div>
+                    
+                    <div class="concept-item">
+                        <div class="concept-title">Procrastination Cycle</div>
+                        <p>Anxiety triggers avoidance, which increases anxiety and perpetuates delay.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Therapeutic Frameworks</h2>
+                
+                <h3 style="color: #800020; margin-top: 30px; margin-bottom: 20px; font-size: 1.3em;">Time-Blocking Method</h3>
+                <div class="framework-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <div class="step-title">Identify Time Blocks</div>
+                            <p>Divide your day into distinct time periods that can be dedicated to specific activities or categories of tasks.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <div class="step-title">Assign Specific Activities</div>
+                            <p>Designate each time block for particular activities, ensuring all important life areas receive attention.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <div class="step-title">Maintain Consistency</div>
+                            <p>Follow your time-blocked schedule regularly to create predictability and reduce decision fatigue.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 style="color: #800020; margin-top: 40px; margin-bottom: 20px; font-size: 1.3em;">Areas of Life Framework</h3>
+                <div class="framework-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <div class="step-title">Define Life Domains</div>
+                            <p>Identify the distinct areas of your life that require attention (work, relationships, health, personal growth, etc.).</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <div class="step-title">Assess Time Allocation</div>
+                            <p>Evaluate how much time and energy you currently invest in each life domain.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <div class="step-title">Identify Gaps</div>
+                            <p>Recognize which life areas are receiving insufficient attention and may be contributing to imbalance.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <div class="step-title">Redistribute Attention</div>
+                            <p>Intentionally reallocate time and energy to create better balance across all life domains.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Practical Instructions</h2>
+                <div class="insight-box">
+                    <p><strong>Clinical Rationale:</strong> Structured time management reduces cognitive load and provides external regulation when internal motivation fluctuates, directly addressing the anxiety-procrastination cycle.</p>
+                </div>
+                <div class="white-section">
+                    <p>Begin by creating structure in your daily life through intentional scheduling. Time-blocking eliminates the constant decision-making about what to do next, which can be a significant source of mental fatigue and anxiety.</p>
+                    <p style="margin-top: 15px;">Remember that structure provides a framework for action rather than restriction. The goal is to create predictability that reduces anxiety, not to add rigidity that increases stress.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Homework</h2>
+                <div class="white-section">
+                    <ul>
+                        <li>Create a list of your personal life areas requiring attention</li>
+                        <li>Design a time-blocked weekly schedule incorporating all identified areas</li>
+                        <li>Track your adherence to the schedule and note anxiety levels before and after implementation</li>
+                        <li>Identify which life areas currently receive insufficient time</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Key Takeaways</h2>
+                <div class="white-section">
+                    <ul>
+                        <li>Consistency in scheduling reduces anxiety by creating predictability</li>
+                        <li>Time-blocking eliminates constant decision-making about what to do next</li>
+                        <li>Procrastination often stems from unclear priorities rather than laziness</li>
+                        <li>Visualizing life areas helps identify neglected domains</li>
+                        <li>Structure provides framework for action rather than restriction</li>
+                        <li>Balanced attention across life areas prevents burnout in single domain</li>
+                        <li>Anxiety decreases when responsibilities are contained within designated times</li>
+                        <li>Proactive scheduling is more effective than reactive task management</li>
+                        <li>Regular review of life areas ensures ongoing balance</li>
+                        <li>Implementation consistency matters more than perfect scheduling</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-line">
+            Structure and intentional time management are not about perfection—they are about creating a sustainable framework that reduces anxiety and supports balanced attention across all areas of your life. Consistency in implementation matters more than having the perfect schedule.
+        </div>
+    </div>
+</body>
+</html>
+```
