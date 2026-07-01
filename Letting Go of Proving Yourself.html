@@ -1,0 +1,323 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Insights - Alignment Psychiatry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #f5f5dc;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        
+        .subtitle {
+            color: #f5f5dc;
+            font-size: 1.1em;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        section {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            color: #800020;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 400;
+        }
+        
+        .white-section {
+            background-color: white;
+            padding: 25px;
+            border-left: 5px solid #ff8c00;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .gradient-box {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+            font-style: italic;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        .insight-box {
+            background: linear-gradient(to right, #fff5e6 0%, #ffe6cc 100%);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #ff8c00;
+        }
+        
+        .framework-steps {
+            counter-reset: step-counter;
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .framework-steps li {
+            counter-increment: step-counter;
+            margin-bottom: 20px;
+            padding-left: 70px;
+            position: relative;
+            line-height: 1.8;
+        }
+        
+        .framework-steps li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: #800020;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+        
+        .clinical-concept {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #fafafa;
+            border-radius: 5px;
+        }
+        
+        .clinical-concept strong {
+            color: #800020;
+            font-size: 1.1em;
+        }
+        
+        .takeaways-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .takeaways-list li {
+            padding: 12px 0 12px 35px;
+            position: relative;
+            line-height: 1.7;
+        }
+        
+        .takeaways-list li::before {
+            content: "•";
+            position: absolute;
+            left: 10px;
+            color: #ff8c00;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        
+        .homework-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .homework-list li {
+            padding: 10px 0 10px 30px;
+            position: relative;
+            line-height: 1.7;
+        }
+        
+        .homework-list li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #800020;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .bottom-line {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 40px;
+            text-align: center;
+            font-size: 1.3em;
+            line-height: 1.8;
+            margin-top: 40px;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            
+            section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+            }
+            
+            header {
+                padding: 40px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .framework-steps li {
+                padding-left: 60px;
+            }
+            
+            .framework-steps li::before {
+                width: 40px;
+                height: 40px;
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Therapeutic Insights</h1>
+            <div class="subtitle">Alignment Psychiatry</div>
+        </header>
+        
+        <div class="content">
+            <section>
+                <h2>The Situation</h2>
+                <div class="white-section">
+                    <p>You are navigating a frustrating, drawn-out job hiring process with an organization that repeatedly delays decisions and provides unclear expectations. Simultaneously, you are managing ongoing family conflict with your brother and father involving communication mishaps and deeper issues of accountability and respect. You feel held to a higher standard than others in both contexts, constantly required to justify your actions while others avoid accountability.</p>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Core Problem</h2>
+                <div class="gradient-box">
+                    "The pattern of feeling compelled to prove your worth and integrity to others—professionally and personally—while not receiving reciprocal accountability or respect creates frustration, resentment, and emotional exhaustion."
+                </div>
+            </section>
+            
+            <section>
+                <h2>Clinical Concepts</h2>
+                <div class="clinical-concept">
+                    <strong>Boundaries:</strong> Limits protecting emotional and mental well-being; deciding when to engage or step back from toxic interactions.
+                </div>
+                <div class="clinical-concept">
+                    <strong>Accountability:</strong> Taking responsibility for one's actions; should be mutual, not one-sided.
+                </div>
+                <div class="clinical-concept">
+                    <strong>Projection:</strong> Accusing others of traits you yourself exhibit.
+                </div>
+                <div class="clinical-concept">
+                    <strong>Trigger:</strong> Emotional reaction to situations reminding you of past wounds.
+                </div>
+                <div class="clinical-concept">
+                    <strong>Validation:</strong> Affirming your feelings as legitimate regardless of others' responses.
+                </div>
+            </section>
+            
+            <section>
+                <h2>Therapeutic Framework</h2>
+                <div class="insight-box">
+                    <strong>Direct, Honest Communication with Boundaries</strong>
+                </div>
+                <ol class="framework-steps">
+                    <li>Assess if continued engagement is productive</li>
+                    <li>Communicate directly using "I" statements</li>
+                    <li>Set clear boundaries about what you will/won't tolerate</li>
+                    <li>Release responsibility for others' actions and reactions</li>
+                    <li>Disengage if the situation remains draining</li>
+                </ol>
+            </section>
+            
+            <section>
+                <h2>Practical Instructions</h2>
+                <div class="white-section">
+                    <p>When you find yourself in situations where you feel compelled to prove your worth or justify your actions, pause and ask yourself: "Is this engagement serving my peace?" Remember that stating your truth directly, without over-explaining, is both powerful and sufficient. You have the right to set boundaries and step back from relationships—professional or personal—that consistently drain your energy without reciprocal respect.</p>
+                    <p style="margin-top: 15px;">Practice communicating your needs using "I" statements: "I need," "I feel," "I will." Release the burden of managing others' emotions or fixing their mistakes. Your integrity speaks for itself; you don't need to defend it constantly.</p>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Homework</h2>
+                <ul class="homework-list">
+                    <li>Draft and send professional withdrawal email to organization by Friday</li>
+                    <li>Practice stating needs/boundaries in one family interaction without over-explaining</li>
+                    <li>Reflect on feelings when disengaging from proving yourself</li>
+                    <li>Report outcomes and emotional shifts next session</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h2>Key Takeaways</h2>
+                <ul class="takeaways-list">
+                    <li>You are not responsible for fixing others' mistakes or emotions</li>
+                    <li>State your truth directly without over-explaining or justifying</li>
+                    <li>Boundaries protect well-being; stepping back from draining situations is healthy</li>
+                    <li>You don't need to prove your worth to anyone</li>
+                    <li>Family patterns can be broken; you're not obligated to repeat them</li>
+                    <li>Professional relationships should be reciprocal; walking away is acceptable</li>
+                    <li>When triggered, pause and assess if engaging serves your peace</li>
+                    <li>Accountability must be mutual, not one-sided</li>
+                    <li>Validation comes from within, not external approval</li>
+                    <li>Trust your integrity and let it speak for itself</li>
+                </ul>
+            </section>
+        </div>
+        
+        <div class="bottom-line">
+            <strong>Bottom Line:</strong> Your worth is inherent and does not require constant proof or justification. Setting boundaries and disengaging from one-sided relationships is an act of self-respect and emotional health. Trust yourself, communicate clearly, and honor your peace above the need for external validation.
+        </div>
+    </div>
+</body>
+</html>
+```
