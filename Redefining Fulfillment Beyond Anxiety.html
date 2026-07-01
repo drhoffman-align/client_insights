@@ -1,0 +1,421 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Insights - Alignment Psychiatry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #f5f5dc;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .subtitle {
+            color: #f5f5dc;
+            font-size: 1.1em;
+            font-weight: 300;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            color: #800020;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .section-content {
+            background-color: white;
+            border-left: 4px solid #ff8c00;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .quote-box {
+            background: linear-gradient(135deg, #800020 0%, #ff8c00 100%);
+            color: white;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+            font-style: italic;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        .insight-box {
+            background: linear-gradient(135deg, #f5f5dc 0%, #ffe4b5 100%);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border-left: 4px solid #800020;
+        }
+        
+        .framework {
+            margin: 30px 0;
+        }
+        
+        .framework-title {
+            color: #800020;
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .step-number {
+            background-color: #800020;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            flex-shrink: 0;
+            margin-right: 15px;
+        }
+        
+        .step-content {
+            flex: 1;
+            padding-top: 8px;
+        }
+        
+        .concept {
+            margin-bottom: 20px;
+        }
+        
+        .concept-title {
+            color: #800020;
+            font-weight: 600;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+        }
+        
+        .homework-list, .takeaway-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .homework-list li, .takeaway-list li {
+            padding: 12px 0 12px 30px;
+            position: relative;
+            line-height: 1.6;
+        }
+        
+        .homework-list li:before {
+            content: "→";
+            color: #ff8c00;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 1.3em;
+        }
+        
+        .takeaway-list li:before {
+            content: "•";
+            color: #800020;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 1.5em;
+        }
+        
+        .bottom-line {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: white;
+            padding: 30px 40px;
+            font-size: 1.2em;
+            line-height: 1.8;
+            text-align: center;
+        }
+        
+        .medication-section {
+            background-color: #fff9f0;
+            border: 2px solid #ff8c00;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .medication-item {
+            margin-bottom: 15px;
+        }
+        
+        .medication-name {
+            color: #800020;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            .container {
+                box-shadow: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            .content {
+                padding: 20px;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
+            .bottom-line {
+                padding: 20px;
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Therapeutic Insights</h1>
+            <div class="subtitle">Alignment Psychiatry</div>
+        </header>
+        
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">The Situation</h2>
+                <div class="section-content">
+                    <p>You recently received a promotion from manager to director and have experienced significant anxiety reduction with no paralyzing thought spirals. However, you've noticed decreased motivation for optional social activities and emotional blunting—less intense lows but also diminished highs. As you prepare for a European vacation, you're considering tapering your antidepressant medication while grappling with existential beliefs about death and meaning that continue to shape your motivation.</p>
+                </div>
+            </div>
+            
+            <div class="quote-box">
+                "Motivation has shifted from anxiety-driven to logic-driven, especially for optional activities."
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Core Problem</h2>
+                <div class="section-content">
+                    <p>You have shifted from anxiety-driven to logic-based motivation, resulting in diminished enthusiasm for optional activities and emotional flattening. While medication has reduced anxiety, it may be dampening positive emotions and intrinsic motivation, creating tension between avoiding previous anxiety and seeking fuller emotional engagement.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Clinical Concepts</h2>
+                
+                <div class="concept">
+                    <div class="concept-title">Blunted Affect</div>
+                    <p>Reduction in emotional intensity—less anxiety but also less joy or excitement.</p>
+                </div>
+                
+                <div class="concept">
+                    <div class="concept-title">Activation Energy</div>
+                    <p>Mental effort required to initiate activities; harder to muster for optional experiences.</p>
+                </div>
+                
+                <div class="concept">
+                    <div class="concept-title">Floor-Ceiling Effect</div>
+                    <p>Medication raises the emotional floor (reducing lows) while lowering the ceiling (dampening highs).</p>
+                </div>
+                
+                <div class="concept">
+                    <div class="concept-title">Automatic Thoughts</div>
+                    <p>Unconscious thoughts driven by core beliefs that influence motivation and anxiety.</p>
+                </div>
+                
+                <div class="concept">
+                    <div class="concept-title">Existential Anxiety</div>
+                    <p>Anxiety rooted in mortality awareness and the search for meaning.</p>
+                </div>
+            </div>
+            
+            <div class="insight-box">
+                <strong>Important Understanding:</strong> Emotional blunting is common with antidepressants—less anxiety but also less joy. This is a trade-off worth examining as you consider your path forward.
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Therapeutic Frameworks</h2>
+                
+                <div class="framework">
+                    <div class="framework-title">Belief-Driven Motivation Framework</div>
+                    
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <strong>Identify core beliefs</strong> about life, death, and meaning that shape your motivation
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <strong>Recognize automatic thoughts</strong> that arise from these beliefs in daily situations
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <strong>Assess impact on behavior</strong> and notice how beliefs influence your choices and engagement
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <strong>Evaluate and adjust beliefs</strong> by asking "Is this belief helping me? Is it in my best interest?"
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <strong>Experiment with new perspectives</strong> and observe how different beliefs change your experience
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="framework">
+                    <div class="framework-title">Medication as a Tool, Not a Solution</div>
+                    
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <strong>Understand medication's role</strong> in stabilizing symptoms while you build lasting skills
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <strong>Use therapy for lasting change</strong> by addressing beliefs and thought patterns, not just symptoms
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <strong>Weigh risks and benefits</strong> of medication effects on both anxiety and positive emotions
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <strong>Plan for tapering</strong> gradually under supervision while monitoring for symptom return
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="quote-box">
+                "You have power to choose and adjust beliefs to better serve your well-being."
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Practical Instructions</h2>
+                <div class="section-content">
+                    <p><strong>Reflecting on Beliefs:</strong> Set aside quiet time to journal about your current beliefs regarding life and death. Ask yourself whether each belief is helping you or holding you back. Consider what kind of life would feel like "living until you can't."</p>
+                    
+                    <p><strong>Monitoring Emotional Range:</strong> Pay attention to both the absence of anxiety and the presence (or absence) of joy and excitement. Notice which activities still spark genuine interest versus those that feel like obligations.</p>
+                    
+                    <p><strong>Medication Awareness:</strong> Continue your current medications as prescribed. Do not stop abruptly. After your vacation, we'll discuss a gradual tapering plan for Fluoxetine while monitoring for any return of anxiety symptoms. Use the therapy skills you've developed to manage any anxiety that emerges.</p>
+                    
+                    <p><strong>Experimentation:</strong> During your European vacation, experiment with new activities and perspectives. Notice what brings genuine satisfaction versus what you're doing out of logic or obligation.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Medication Plan</h2>
+                <div class="medication-section">
+                    <div class="medication-item">
+                        <div class="medication-name">Fluoxetine 20mg daily</div>
+                        <p>Stabilizes mood and reduces anxiety but may cause emotional blunting. Do not stop abruptly; taper gradually under supervision. Consider gradual taper after vacation while monitoring for symptom return.</p>
+                    </div>
+                    
+                    <div class="medication-item">
+                        <div class="medication-name">Bupropion (dose unspecified)</div>
+                        <p>Increases motivation and energy with fewer side effects. Continue for motivational benefits.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Homework</h2>
+                <ul class="homework-list">
+                    <li>Reflect on beliefs about life and death; consider whether changing perspective could reduce anxiety or increase fulfillment</li>
+                    <li>Journal current beliefs and ask: "Is this belief helping me? Is it in my best interest?"</li>
+                    <li>Consider what kind of life would feel like "living until you can't"</li>
+                    <li>Bring reflections to next session after vacation</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Key Takeaways</h2>
+                <ul class="takeaway-list">
+                    <li>Motivation has shifted from anxiety-driven to logic-driven, especially for optional activities</li>
+                    <li>Medication reduces anxiety but may dampen positive emotions and intrinsic motivation</li>
+                    <li>Beliefs about death and life fundamentally shape experience of motivation and fulfillment</li>
+                    <li>You have power to choose and adjust beliefs to better serve your well-being</li>
+                    <li>Therapy provides lasting change by addressing beliefs and thought patterns, not just symptoms</li>
+                    <li>Emotional blunting is common with antidepressants—less anxiety but also less joy</li>
+                    <li>Gradual medication tapering is safer and allows monitoring for symptom return</li>
+                    <li>Reflecting on desired life can help counterbalance existential anxiety</li>
+                    <li>Use therapy skills to manage anxiety if it returns during medication changes</li>
+                    <li>Experiment with new activities and perspectives to discover genuine satisfaction</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="bottom-line">
+            <strong>Bottom Line:</strong> You've made significant progress in reducing anxiety, but the trade-off has been some emotional flattening. The path forward involves examining your core beliefs about life and meaning, considering whether medication adjustments might restore fuller emotional range, and using therapy skills to maintain stability. You have the power to choose beliefs that serve your well-being and to design a life worth living fully. This is about finding balance between managing anxiety and experiencing the richness of positive emotions.
+        </div>
+    </div>
+</body>
+</html>
+```
