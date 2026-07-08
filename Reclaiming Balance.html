@@ -1,0 +1,348 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Insights - Alignment Psychiatry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #f5f5dc;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        
+        .subtitle {
+            color: #f5f5dc;
+            font-size: 1.1em;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        section {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            color: #800020;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #800020;
+        }
+        
+        .white-section {
+            background-color: white;
+            padding: 25px;
+            border-left: 5px solid #ff8c00;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .gradient-box {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+            font-style: italic;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        .insight-box {
+            background: linear-gradient(to right, #fff5e6 0%, #ffe6cc 100%);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            border-left: 4px solid #ff8c00;
+        }
+        
+        .framework {
+            margin: 30px 0;
+        }
+        
+        .framework h3 {
+            color: #800020;
+            font-size: 1.4em;
+            margin-bottom: 20px;
+        }
+        
+        .steps {
+            list-style: none;
+            counter-reset: step-counter;
+        }
+        
+        .steps li {
+            counter-increment: step-counter;
+            margin-bottom: 20px;
+            padding-left: 60px;
+            position: relative;
+            line-height: 1.8;
+        }
+        
+        .steps li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: #800020;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .concept {
+            margin-bottom: 20px;
+        }
+        
+        .concept strong {
+            color: #800020;
+            font-size: 1.1em;
+        }
+        
+        ul.bullet-list {
+            margin-left: 20px;
+            margin-top: 15px;
+        }
+        
+        ul.bullet-list li {
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+        
+        .bottom-line {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 40px;
+            text-align: center;
+            font-size: 1.3em;
+            line-height: 1.8;
+            margin-top: 40px;
+        }
+        
+        .medication-alert {
+            background-color: #fff3cd;
+            border: 2px solid #ff8c00;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .medication-alert strong {
+            color: #800020;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            
+            .container {
+                box-shadow: none;
+            }
+            
+            section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .steps li {
+                padding-left: 50px;
+            }
+            
+            .steps li::before {
+                width: 35px;
+                height: 35px;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Therapeutic Insights</h1>
+            <div class="subtitle">Alignment Psychiatry</div>
+        </header>
+        
+        <div class="content">
+            <section>
+                <h2>The Situation</h2>
+                <div class="white-section">
+                    <p>You're completing your doctoral dissertation while working as a university program specialist. While your new medication has helped with focus, you're struggling with structure—particularly around sleep and work-life balance. Anxiety about deadlines, chronic exhaustion, and guilt when expectations aren't met have you questioning whether these challenges stem from ADHD, exhaustion, or poor habits.</p>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Core Problem</h2>
+                <div class="gradient-box">
+                    "You're not lazy—ADHD, exhaustion, and lack of structure are the barriers."
+                </div>
+                <div class="white-section">
+                    <p>The root issue is a lack of structured routine and energy optimization, causing chronic exhaustion, inconsistent sleep, and imbalanced time allocation. Your current schedule is heavily skewed toward schoolwork—consuming over 60% of your weekly hours—leaving minimal time for relationships, self-care, and rest. This imbalance is unsustainable and undermines both your well-being and productivity.</p>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Clinical Concepts</h2>
+                
+                <div class="concept">
+                    <strong>Energy Optimization</strong>
+                    <p>Using your time and energy to support your goals and well-being rather than simply reacting to demands. This means intentionally structuring your days to work with your natural rhythms and capacity, not against them.</p>
+                </div>
+                
+                <div class="concept">
+                    <strong>Time Blocking</strong>
+                    <p>Scheduling specific periods for activities to create structure and reduce decision fatigue. By pre-deciding when you'll work on tasks, you eliminate the constant mental burden of figuring out what to do next.</p>
+                </div>
+                
+                <div class="concept">
+                    <strong>Sleep-Wake Cycle</strong>
+                    <p>Your body's natural rhythm that requires consistency for mental and physical health. Irregular sleep patterns disrupt this cycle, leading to decreased cognitive function, mood instability, and reduced resilience.</p>
+                </div>
+                
+                <div class="concept">
+                    <strong>ADHD</strong>
+                    <p>A neurodevelopmental condition affecting organization, time management, and sustained attention. Understanding ADHD helps you recognize that your challenges aren't character flaws—they're neurological differences that require specific strategies and support.</p>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Therapeutic Frameworks</h2>
+                
+                <div class="framework">
+                    <h3>Areas of Life Framework</h3>
+                    <ol class="steps">
+                        <li>List all life domains (work, school, relationships, self-care, sleep, recreation, etc.)</li>
+                        <li>Estimate current time allocation for each area as a percentage of your week</li>
+                        <li>Assess your satisfaction level with each domain</li>
+                        <li>Set future goals for how you'd like time distributed</li>
+                        <li>Adjust allocations to total 100% of weekly hours</li>
+                        <li>Plan concrete steps for change</li>
+                    </ol>
+                </div>
+                
+                <div class="framework">
+                    <h3>Time Blocking & Energy Optimization</h3>
+                    <ol class="steps">
+                        <li>Translate life areas into specific time blocks on your calendar</li>
+                        <li>Prioritize sleep and energy as foundational elements</li>
+                        <li>Batch similar tasks together to reduce context-switching</li>
+                        <li>Build in flexibility and buffer time for the unexpected</li>
+                        <li>Review and revise your schedule regularly based on what's working</li>
+                    </ol>
+                </div>
+                
+                <div class="insight-box">
+                    <strong>Remember:</strong> Sleep is foundational—prioritize a consistent sleep-wake cycle before making other changes. Everything else builds on this foundation.
+                </div>
+            </section>
+            
+            <section>
+                <h2>Practical Instructions</h2>
+                <div class="white-section">
+                    <p><strong>Establishing Your Sleep Foundation:</strong></p>
+                    <p>Begin taking diazepam at the same time each night to establish a consistent sleep-wake cycle. This is a short-term tool to reset your sleep pattern, not a permanent solution. The goal is to train your body to expect sleep at a regular time.</p>
+                    
+                    <div class="medication-alert">
+                        <strong>Important Safety Information:</strong> Do not drive after taking diazepam. Avoid alcohol and other sedatives. Monitor for drowsiness and be aware of possible dependence with long-term use.
+                    </div>
+                    
+                    <p><strong>Building Your Schedule:</strong></p>
+                    <p>Start by visualizing and rebalancing your current routine using the frameworks provided. Old strategies like all-nighters no longer work and actively harm your productivity. Time blocking creates structure and reduces anxiety about tasks by giving everything a designated place.</p>
+                    
+                    <p><strong>Making Changes Sustainable:</strong></p>
+                    <p>Make small, consistent changes rather than overhauling everything at once. Communicate with your partner about your efforts to create more balance. Review and adjust your schedule weekly to maintain progress and respond to what you're learning about yourself.</p>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Homework</h2>
+                <div class="white-section">
+                    <ul class="bullet-list">
+                        <li>Complete the Areas of Life worksheet with current and desired time allocations for all domains</li>
+                        <li>Write concrete goals for each area (e.g., 9 hours sleep nightly, 5 hours with partner weekly)</li>
+                        <li>Draft a time-blocked weekly schedule based on your allocations</li>
+                        <li>Begin taking diazepam as prescribed to establish a consistent bedtime</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Key Takeaways</h2>
+                <div class="white-section">
+                    <ul class="bullet-list">
+                        <li>Sleep is foundational—prioritize a consistent sleep-wake cycle before other changes</li>
+                        <li>Your current routine lacks balance; visualize and rebalance using the frameworks provided</li>
+                        <li>You're not lazy—ADHD, exhaustion, and lack of structure are the barriers</li>
+                        <li>Old strategies like all-nighters no longer work and harm productivity</li>
+                        <li>Time blocking creates structure and reduces anxiety about tasks</li>
+                        <li>Make small, consistent changes rather than overhauling everything at once</li>
+                        <li>Communicate with your partner about your efforts to create more balance</li>
+                        <li>Review and adjust your schedule weekly to maintain progress</li>
+                        <li>Build in dedicated time for relationships, self-care, and relaxation</li>
+                        <li>Medication is a short-term tool to reset sleep, not a permanent solution</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        
+        <div class="bottom-line">
+            <strong>Bottom Line:</strong> Your exhaustion and overwhelm aren't personal failures—they're the natural result of an unsustainable schedule and untreated ADHD challenges. By establishing a consistent sleep foundation and intentionally rebalancing your time across all life domains, you can create a structure that supports both your dissertation completion and your well-being. Small, consistent changes will serve you far better than heroic efforts that leave you depleted.
+        </div>
+    </div>
+</body>
+</html>
+```
