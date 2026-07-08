@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reclaiming Your Value: Power, Worth, and Boundaries After Loss</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        @media print {
+            body { background: white; padding: 0; margin: 0; }
+            .container { max-width: none; box-shadow: none; border-radius: 0; }
+            .content { padding: 0.5in; }
+            .section { page-break-inside: avoid; break-inside: avoid; }
+            .page-break { page-break-before: always; break-before: page; }
+            @page { size: 8.5in 11in; margin: 0.75in; }
+        }
+
+        @media screen {
+            body {
+                background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+                min-height: 100vh;
+                padding: 20px;
+            }
+            .container {
+                max-width: 8.5in;
+                margin: 0 auto;
+                background: #E8DFD6;
+                border-radius: 20px;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+                overflow: hidden;
+            }
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #4A4A4A;
+        }
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+            color: #E8DFD6;
+            padding: 50px 40px;
+            text-align: center;
+        }
+        .header .eyebrow {
+            font-size: 0.85em;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            opacity: 0.7;
+            margin-bottom: 14px;
+        }
+        .header h1 {
+            font-size: 2.6em;
+            font-weight: 700;
+            margin-bottom: 14px;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+            line-height: 1.2;
+        }
+        .header .subtitle {
+            font-size: 1.15em;
+            opacity: 0.88;
+            font-style: italic;
+        }
+
+        /* CONTENT WRAPPER */
+        .content { padding: 44px 40px; }
+
+        /* STANDARD SECTION */
+        .section {
+            background: #ffffff;
+            border-radius: 14px;
+            border-left: 5px solid #D67B4A;
+            padding: 30px 32px;
+            margin-bottom: 32px;
+        }
+        .section h2 {
+            color: #6B2C3A;
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #E8DFD6;
+        }
+        .section p { margin-bottom: 12px; color: #4A4A4A; }
+        .section p:last-child { margin-bottom: 0; }
+
+        /* FRAMEWORK BLOCK */
+        .framework {
+            background: #ffffff;
+            border-radius: 14px;
+            border-left: 5px solid #6B2C3A;
+            padding: 30px 32px;
+            margin-bottom: 32px;
+        }
+        .framework h2 {
+            color: #6B2C3A;
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .framework .framework-subtitle {
+            color: #D67B4A;
+            font-size: 1em;
+            font-style: italic;
+            margin-bottom: 20px;
+            padding-bottom: 14px;
+            border-bottom: 2px solid #E8DFD6;
+        }
+
+        /* KEY QUOTE */
+        .key-quote {
+            background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+            color: #E8DFD6;
+            padding: 26px 32px;
+            border-radius: 12px;
+            margin: 22px 0;
+            font-size: 1.2em;
+            font-style: italic;
+            text-align: center;
+            box-shadow: 0 6px 18px rgba(107,44,58,0.25);
+            line-height: 1.5;
+        }
+
+        /* STEP */
+        .step {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            margin-bottom: 20px;
+        }
+        .step-number {
+            flex-shrink: 0;
+            background: #6B2C3A;
+            color: #E8DFD6;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1em;
+            margin-top: 2px;
+        }
+        .step-content h4 {
+            color: #6B2C3A;
+            font-size: 1.05em;
+            margin-bottom: 4px;
+        }
+        .step-content p { color: #4A4A4A; font-size: 0.95em; margin: 0; }
+
+        /* APPLICATION BOX */
+        .application-box {
+            background: linear-gradient(135deg, #E8DFD6 0%, #d4c9be 100%);
+            border-left: 5px solid #D67B4A;
+            border-radius: 10px;
+            padding: 22px 26px;
+            margin-top: 24px;
+        }
+        .application-box h4 {
+            color: #6B2C3A;
+            font-size: 1em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 8px;
+        }
+        .application-box p { font-size: 0.95em; margin: 0; }
+
+        /* CONCEPTS GRID */
+        .concepts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 8px;
+        }
+        @media (max-width: 600px) { .concepts-grid { grid-template-columns: 1fr; } }
+        .concept-card {
+            background: #f9f6f3;
+            border-radius: 10px;
+            padding: 18px 20px;
+            border-top: 3px solid #D67B4A;
+        }
+        .concept-card h4 {
+            color: #6B2C3A;
+            font-size: 0.95em;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .concept-card p { font-size: 0.88em; color: #4A4A4A; margin: 0; }
+
+        /* PRACTICAL INSTRUCTIONS */
+        .instruction-list {
+            list-style: none;
+            margin-top: 8px;
+        }
+        .instruction-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 12px 0;
+            border-bottom: 1px solid #E8DFD6;
+        }
+        .instruction-list li:last-child { border-bottom: none; }
+        .instruction-list .bullet {
+            flex-shrink: 0;
+            width: 10px;
+            height: 10px;
+            background: #D67B4A;
+            border-radius: 50%;
+            margin-top: 7px;
+        }
+        .instruction-list li p { margin: 0; font-size: 0.95em; }
+        .instruction-list li strong { color: #6B2C3A; }
+
+        /* TAKEAWAYS */
+        .takeaway-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 8px;
+        }
+        @media (max-width: 600px) { .takeaway-grid { grid-template-columns: 1fr; } }
+        .takeaway-item {
+            background: #f9f6f3;
+            border-radius: 8px;
+            padding: 14px 16px;
+            border-left: 3px solid #D67B4A;
+            font-size: 0.92em;
+            color: #4A4A4A;
+        }
+
+        /* MEDICATION PILL */
+        .med-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .med-tag {
+            background: #E8DFD6;
+            border: 1px solid #B8B8B8;
+            border-radius: 20px;
+            padding: 6px 16px;
+            font-size: 0.88em;
+            color: #4A4A4A;
+        }
+        .med-tag strong { color: #6B2C3A; }
+
+        /* HOMEWORK BOX */
+        .homework-box {
+            background: linear-gradient(135deg, #f9f6f3 0%, #E8DFD6 100%);
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin-top: 8px;
+        }
+        .homework-box h4 {
+            color: #D67B4A;
+            font-size: 1em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 10px;
+        }
+        .homework-box p { font-size: 0.95em; margin-bottom: 8px; }
+        .homework-box p:last-child { margin-bottom: 0; }
+
+        /* BOTTOM LINE */
+        .bottom-line {
+            background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+            color: #E8DFD6;
+            border-radius: 14px;
+            padding: 38px 40px;
+            margin-bottom: 0;
+        }
+        .bottom-line h2 {
+            color: #E8DFD6;
+            font-size: 1.6em;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+        .bottom-line p {
+            color: #E8DFD6;
+            opacity: 0.92;
+            font-size: 1em;
+            margin-bottom: 14px;
+        }
+        .bottom-line p:last-child { margin-bottom: 0; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="eyebrow">Alignment Psychiatry · Therapeutic Insights</div>
+        <h1>⚖️ Reclaiming Your Value</h1>
+        <div class="subtitle">Understanding Power, Worth, and Boundaries After Loss</div>
+    </div>
+
+    <div class="content">
+
+        <!-- THE SITUATION -->
+        <div class="section">
+            <h2>The Situation</h2>
+            <p>You are navigating the emotional aftermath of a significant relationship rupture — grief, loneliness, and an unsettling sense of limbo, both relationally and professionally. Despite feeling more present than at the start of treatment, something still feels off-center.</p>
+            <p>To stay grounded, you've been leaning on structure: church, Bible study, pickleball, golf. These aren't distractions — they're evidence that part of you already knows how to hold yourself together when things fall apart.</p>
+        </div>
+
+        <!-- CORE PROBLEM -->
+        <div class="section">
+            <h2>Core Problem</h2>
+            <p>The central pattern is this: you have been consistently undervaluing yourself while overinvesting in others. This shows up as people-pleasing, difficulty setting limits, and deriving your sense of worth from whether or not other people approve of you.</p>
+            <p>The result is a vulnerability — when relationships end or roles shift, the external source of your value disappears with them. The work ahead is building a sense of worth that lives inside you, not in someone else's opinion.</p>
+        </div>
+
+        <!-- KEY QUOTE -->
+        <div class="key-quote">
+            "Other people's validation cannot be — you can't put other people's validation above what you know about you."
+        </div>
+
+        <!-- CLINICAL CONCEPTS -->
+        <div class="section">
+            <h2>Understanding the Dynamics</h2>
+            <div class="concepts-grid">
+                <div class="concept-card">
+                    <h4>People-Pleasing</h4>
+                    <p>Prioritizing others' comfort over your own to gain approval or prevent rejection. In small doses, generosity. At scale, self-erasure.</p>
+                </div>
+                <div class="concept-card">
+                    <h4>External Validation</h4>
+                    <p>Measuring your worth by how others respond to you. Reliable until the relationship ends — then it collapses with it.</p>
+                </div>
+                <div class="concept-card">
+                    <h4>Power Dynamics</h4>
+                    <p>Every relationship involves an exchange of influence. Unclaimed power doesn't disappear — someone else takes it.</p>
+                </div>
+                <div class="concept-card">
+                    <h4>Boundaries</h4>
+                    <p>Limits that define how you allow yourself to be treated. Not walls — they're instructions you give others about who you are.</p>
+                </div>
+                <div class="concept-card">
+                    <h4>The Vacuum Effect</h4>
+                    <p>What happens in a space when you leave it. Your absence creates a gap others notice. That gap is proof of your value.</p>
+                </div>
+                <div class="concept-card">
+                    <h4>Self-Sacrifice</h4>
+                    <p>Giving beyond your means. Admirable in moderation; corrosive when it requires you to disappear to make someone else feel secure.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FRAMEWORK -->
+        <div class="framework">
+            <h2>🧭 The Power and Value Framework</h2>
+            <div class="framework-subtitle">A six-step process for reclaiming your sense of worth from the inside out</div>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h4>Inventory Your Qualities and Impact</h4>
+                    <p>Write down your strengths, credentials, experiences, and the specific ways you show up for others. Make it concrete. Degrees earned. Problems solved. People steadied. This is your evidence base.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h4>Acknowledge Your Resources</h4>
+                    <p>Recognize what you bring that others don't. Not arrogance — accuracy. Your education, your emotional range, your steadiness under pressure are real assets, not lucky accidents.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h4>Understand Power Dynamics</h4>
+                    <p>Power in relationships isn't just about who earns more or who speaks louder. It's about who shapes the narrative, who controls access, and who gets to define what's acceptable. Learn to read the room.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h4>Stop Outsourcing Validation</h4>
+                    <p>When you catch yourself waiting to see how someone else reacts before deciding how you feel, pause. Return to your evidence base. Your track record doesn't change based on someone else's mood.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <h4>Set Boundaries</h4>
+                    <p>Start small. Decline one low-stakes request. Take space without explaining why. Notice what happens — both in others and in you. Limits are a practice, not a personality trait you either have or don't.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">6</div>
+                <div class="step-content">
+                    <h4>Recognize When Power Is Being Taken</h4>
+                    <p>Pay attention to the moments you feel diminished, dismissed, or pressured to shrink. Those are signals. You can be loyal, kind, and giving — and still notice when someone is leveraging your generosity against you.</p>
+                </div>
+            </div>
+
+            <div class="application-box">
+                <h4>What This Means for You</h4>
+                <p>You have been doing "all the things" — showing up, providing, staying steady — and still accepting a diminished version of yourself in return. This framework isn't about becoming harder. It's about recognizing that you can love people and not sacrifice yourself. You can be generous and still be the catch.</p>
+            </div>
+        </div>
+
+        <!-- KEY QUOTE 2 -->
+        <div class="key-quote">
+            "You can love people and not sacrifice yourself."
+        </div>
+
+        <!-- PRACTICAL INSTRUCTIONS -->
+        <div class="section">
+            <h2>Putting It Into Practice</h2>
+            <ul class="instruction-list">
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Notice the vacuum effect.</strong> Mentally remove yourself from a situation — a team, a relationship, a room — and ask what would change. What would fall apart? What would go unnoticed? That gap is data about your value.</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Return to the evidence.</strong> When negative self-talk surfaces, don't argue with the feeling — redirect to the facts. Your track record, your degrees, your impact. Feelings are real, but they aren't always accurate.</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Practice limits without justification.</strong> You don't owe everyone an explanation for your no. Try declining once this week without over-explaining. The boundary is complete as stated.</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Monitor the dynamic.</strong> In any relationship, notice whether the exchange feels reciprocal. If you're consistently giving more than you receive — time, energy, emotional labor — that's a signal worth examining.</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- HOMEWORK -->
+        <div class="section">
+            <h2>Assignment</h2>
+            <div class="homework-box">
+                <h4>Areas of Life Worksheet</h4>
+                <p>Review each area of your life — work, relationships, health, self-care, finances, community. For each one, note how much time and energy you currently invest, and whether that investment reflects your actual values and goals.</p>
+                <p>Identify two or three areas where you are giving away more than you're receiving, or where a limit would create more alignment. Bring your notes to the next session.</p>
+            </div>
+        </div>
+
+        <!-- MEDICATION -->
+        <div class="section">
+            <h2>Medication Note</h2>
+            <div class="med-row">
+                <div class="med-tag"><strong>Adderall</strong> · As needed · Morning only</div>
+                <div class="med-tag">Use on high-demand days</div>
+                <div class="med-tag">Avoid late-day dosing</div>
+                <div class="med-tag">Monitor: sleep, appetite, heart rate</div>
+            </div>
+        </div>
+
+        <!-- KEY TAKEAWAYS -->
+        <div class="section">
+            <h2>Key Takeaways</h2>
+            <div class="takeaway-grid">
+                <div class="takeaway-item">Your worth is not determined by someone else's opinion of you — it exists in your track record, your impact, and your presence.</div>
+                <div class="takeaway-item">People-pleasing at scale erodes identity. Generosity is a strength; self-erasure is a pattern to break.</div>
+                <div class="takeaway-item">Power is about impact, influence, and access — not just money or status. You already have it.</div>
+                <div class="takeaway-item">Unclaimed power gets taken. If you don't define your value, someone else will — often inaccurately.</div>
+                <div class="takeaway-item">The vacuum effect is real. Your absence creates a gap others notice. Let that be evidence.</div>
+                <div class="takeaway-item">Internal validation is more stable than external approval. Build the habit of returning to your own evidence first.</div>
+                <div class="takeaway-item">Boundaries aren't walls. They are instructions that teach people how to show up for you.</div>
+                <div class="takeaway-item">You can be loyal, kind, steady, and generous — and still be the one who sets the terms.</div>
+            </div>
+        </div>
+
+        <!-- BOTTOM LINE -->
+        <div class="bottom-line">
+            <h2>⚓ The Bottom Line</h2>
+            <p>This session was about one thing: the gap between the evidence of your value and your lived experience of it. The evidence is overwhelming — your presence, your steadiness, your skill, your impact. The experience hasn't caught up yet. That's what the work is for.</p>
+            <p>You have been giving your power away — not because you lack it, but because you weren't taught to claim it. Moving forward, the practice is simple but not easy: stop outsourcing your worth. Return to the facts. Set the limit. Stay in your power.</p>
+            <p>You are not just surviving this. You are capable of building something on the other side of it that is more aligned with who you actually are — not who you've been accommodating yourself to be for others. That version of you doesn't need permission. He already has the evidence.</p>
+        </div>
+
+    </div><!-- end .content -->
+</div><!-- end .container -->
+</body>
+</html>
