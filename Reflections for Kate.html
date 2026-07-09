@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Understanding Yourself Before Understanding Your Marriage — Kate</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --purple: #2B2734;
+    --charcoal: #1D232F;
+    --offwhite: #F3F5F7;
+    --gold: #C9A84C;
+    --gold-soft: rgba(201,168,76,0.35);
+    --ink: #E9E6EE;
+    --ink-dim: rgba(233,230,238,0.62);
+    --paper: #F3F5F7;
+    --text-dark: #2B2734;
+    --text-dim: rgba(43,39,52,0.66);
+    --gold-dark: #9C7E30;
+  }
+
+  *{ box-sizing: border-box; }
+
+  html,body{
+    margin:0;
+    padding:0;
+    background: var(--charcoal);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .doc{
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* ---------- COVER ---------- */
+  .cover{
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    background:
+      radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.10), transparent 55%),
+      linear-gradient(180deg, var(--purple) 0%, var(--charcoal) 78%);
+    padding: 80px 32px;
+    position: relative;
+  }
+
+  .cover::before{
+    content:"";
+    position:absolute;
+    top:48px; left:50%;
+    transform: translateX(-50%);
+    width:1px; height:64px;
+    background: linear-gradient(180deg, transparent, var(--gold));
+  }
+
+  .eyebrow{
+    font-family:'DM Sans', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+    margin-bottom: 28px;
+  }
+
+  .cover h1{
+    font-family:'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 52px;
+    line-height: 1.18;
+    letter-spacing: 0.005em;
+    max-width: 620px;
+    margin: 0 0 26px 0;
+    color: var(--offwhite);
+  }
+
+  .cover .subtitle{
+    font-family:'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 19px;
+    color: var(--ink-dim);
+    max-width: 460px;
+    line-height: 1.6;
+    margin-bottom: 56px;
+  }
+
+  .cover .for-line{
+    font-size: 12px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+    margin-bottom: 10px;
+  }
+
+  .cover .for-name{
+    font-family:'Cormorant Garamond', serif;
+    font-size: 26px;
+    color: var(--gold);
+    letter-spacing: 0.03em;
+  }
+
+  .cover .practice-mark{
+    position:absolute;
+    bottom: 56px;
+    left:50%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(233,230,238,0.4);
+  }
+
+  /* ---------- BODY ---------- */
+  .content{
+    background: var(--paper);
+    padding: 100px 0 140px 0;
+  }
+
+  .intro-note{
+    font-family:'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.85;
+    color: var(--text-dim);
+    border-left: 2px solid var(--gold-dark);
+    padding-left: 28px;
+    margin: 0 0 96px 0;
+  }
+
+  .part{
+    margin-bottom: 96px;
+  }
+
+  .part-label{
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold-dark);
+    font-weight: 500;
+    margin-bottom: 14px;
+    display:block;
+  }
+
+  .part h2{
+    font-family:'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.28;
+    color: var(--text-dark);
+    margin: 0 0 40px 0;
+    max-width: 90%;
+  }
+
+  .part p{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    line-height: 1.9;
+    color: var(--text-dark);
+    margin: 0 0 26px 0;
+    font-weight: 400;
+  }
+
+  .part p.short{
+    margin-bottom: 8px;
+  }
+
+  .part p.emphasis{
+    font-style: italic;
+    color: var(--gold-dark);
+  }
+
+  .part p.question{
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--gold-dark);
+    margin: 40px 0;
+    padding: 0 8px;
+  }
+
+  .divider{
+    width: 100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin: 96px 0;
+  }
+
+  .divider .mark{
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--gold-dark);
+    opacity: 0.6;
+  }
+
+  .divider .line{
+    height: 1px;
+    width: 120px;
+    background: linear-gradient(90deg, transparent, rgba(156,126,48,0.35), transparent);
+  }
+
+  /* ---------- CLOSING ---------- */
+  .closing{
+    background: var(--paper);
+    padding: 40px 0 140px 0;
+    position: relative;
+    border-top: 1px solid rgba(43,39,52,0.10);
+  }
+
+  .closing .part-label{
+    text-align:center;
+    display:block;
+  }
+
+  .closing h2{
+    font-family:'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 30px;
+    color: var(--text-dark);
+    text-align:center;
+    margin: 0 0 56px 0;
+  }
+
+  .closing p{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    line-height: 1.95;
+    color: var(--text-dark);
+    margin: 0 0 26px 0;
+  }
+
+  .closing p.short{
+    margin-bottom: 8px;
+  }
+
+  .closing .signature{
+    margin-top: 64px;
+    text-align: center;
+  }
+
+  .closing .signature .name{
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--gold-dark);
+  }
+
+  .closing .signature .title{
+    font-size: 11px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-top: 8px;
+  }
+
+  .footer-mark{
+    text-align:center;
+    padding: 48px 32px 64px 32px;
+    background: var(--purple);
+  }
+
+  .footer-mark .line1{
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+
+  .footer-mark .line2{
+    font-size: 12px;
+    color: rgba(233,230,238,0.45);
+  }
+
+  @media (max-width: 640px){
+    .cover h1{ font-size: 36px; }
+    .cover .subtitle{ font-size: 17px; }
+    .part h2{ font-size: 27px; }
+    .part p, .closing p{ font-size: 17px; }
+    .doc{ padding: 0 22px; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- COVER -->
+  <section class="cover">
+    <div class="eyebrow">Alignment Psychiatry</div>
+    <h1>Understanding Yourself<br>Before Understanding<br>Your Marriage</h1>
+    <div class="subtitle">A reflection on the patterns, strengths, and opportunities that have emerged during our work together.</div>
+    <div class="for-line">Prepared For</div>
+    <div class="for-name">Kate</div>
+    <div class="practice-mark">Hoffman Mental Health Services · Confidential</div>
+  </section>
+
+  <!-- BODY -->
+  <section class="content">
+    <div class="doc">
+
+      <p class="intro-note">This is written for you, and for no one else. It reflects what I have noticed about you over the course of our work together — not a verdict, not a diagnosis, and not an argument for one side of your marriage over the other. My hope is that reading it slowly, and returning to it before we meet again, gives you something more useful than advice: a clearer view of your own patterns, offered with the same respect I'd want if someone had spent this much time paying attention to me.</p>
+
+      <div class="part" id="part-1">
+        <span class="part-label">Part I</span>
+        <h2>What I Think You Want Most</h2>
+        <p>One of the questions I often ask myself when working with people is:</p>
+        <p class="question">"What is this person protecting?"</p>
+        <p>Over time, I began asking that question about you.</p>
+        <p class="short">At first, I thought your primary struggle was conflict avoidance.</p>
+        <p>The more we talked, however, the less convinced I became that avoidance itself was the issue.</p>
+        <p class="short">I think what you want is something deeper.</p>
+        <p class="emphasis">I think you want to feel emotionally safe.</p>
+        <p>When I say "safe," I don't mean physically safe.</p>
+        <p>I mean safe enough to be yourself without feeling like you have to defend, explain, or justify who you are.</p>
+        <p>Safe enough to disagree without fearing that disagreement will become disconnection.</p>
+        <p>Safe enough to express your needs without immediately wondering whether you've disappointed someone.</p>
+        <p>Safe enough to exist without feeling responsible for managing everyone else's emotional experience.</p>
+        <p class="short">That is not weakness.</p>
+        <p>It is a deeply human need.</p>
+        <p>Throughout our conversations, I have consistently seen someone who cares deeply about relationships and who genuinely wants people to feel heard. You often spend considerable energy trying to understand another person's perspective before fully expressing your own.</p>
+        <p class="short">That capacity for empathy is one of your greatest strengths.</p>
+        <p>It is also one of the reasons you sometimes disappear inside relationships.</p>
+      </div>
+
+      <div class="divider"><div class="line"></div><div class="mark"></div><div class="line"></div></div>
+
+      <div class="part" id="part-2">
+        <span class="part-label">Part II</span>
+        <h2>One of Your Greatest Strengths</h2>
+        <p>If I had to choose one word that consistently comes to mind when I think about you, it would be thoughtful.</p>
+        <p class="short">You rarely respond impulsively.</p>
+        <p class="short">You reflect.</p>
+        <p class="short">You consider context.</p>
+        <p class="short">You ask yourself whether you're missing something.</p>
+        <p>You are often willing to examine your own role before asking someone else to examine theirs.</p>
+        <p class="short">That quality is incredibly valuable.</p>
+        <p>Relationships need people who can tolerate complexity.</p>
+        <p>You have shown me that ability repeatedly.</p>
+        <p>Even during moments when you were hurt, you often remained curious about what someone else might have been experiencing.</p>
+        <p>That tells me you possess a high capacity for empathy.</p>
+        <p>However, empathy has a shadow side.</p>
+        <p>When empathy becomes excessive, it can quietly turn into self-neglect.</p>
+        <p>If we spend all of our energy understanding other people, we sometimes forget to ask whether anyone understands us.</p>
+        <p>Over time, this can create loneliness — not because people don't care about us, but because we've become so skilled at making room for everyone else that there isn't much room left for ourselves.</p>
+      </div>
+
+      <div class="divider"><div class="line"></div><div class="mark"></div><div class="line"></div></div>
+
+      <div class="part" id="part-3">
+        <span class="part-label">Part III</span>
+        <h2>The Growth I've Seen</h2>
+        <p>One of the most encouraging things I've observed over the course of therapy is that you have changed.</p>
+        <p class="short">Perhaps not in dramatic ways.</p>
+        <p>But in meaningful ones.</p>
+        <p class="short">You are speaking more openly.</p>
+        <p class="short">You are disagreeing more honestly.</p>
+        <p class="short">You are identifying your own needs more clearly.</p>
+        <p>You are less likely to automatically smooth over conflict simply because conflict feels uncomfortable.</p>
+        <p>I know that this probably doesn't feel like progress.</p>
+        <p>In many ways, it probably feels like things have become more difficult.</p>
+        <p class="short">That makes sense.</p>
+        <p>Whenever one person begins changing long-established patterns, relationships often feel less stable before they become healthier.</p>
+        <p>Imagine someone who has spent years leaning to one side of a boat.</p>
+        <p>When they finally begin sitting upright, the boat doesn't immediately become smoother.</p>
+        <p class="short">For a while, it actually rocks more.</p>
+        <p>That doesn't necessarily mean the change is wrong.</p>
+        <p>Sometimes it means the system is adjusting.</p>
+        <p>I believe that's part of what is happening now.</p>
+      </div>
+
+      <div class="divider"><div class="line"></div><div class="mark"></div><div class="line"></div></div>
+
+      <div class="part" id="part-4">
+        <span class="part-label">Part IV</span>
+        <h2>The Pattern I Keep Seeing</h2>
+        <p>There is one pattern I've consistently noticed.</p>
+        <p>When conversations become emotionally intense, your attention often shifts away from your own experience and toward reducing the intensity of the interaction.</p>
+        <p class="short">Sometimes that looks like becoming quieter.</p>
+        <p class="short">Sometimes it looks like explaining yourself carefully.</p>
+        <p class="short">Sometimes it looks like trying to reassure the other person.</p>
+        <p>Sometimes it looks like mentally withdrawing while remaining physically present.</p>
+        <p>These responses make sense.</p>
+        <p>Most people develop strategies like this because, at some point in their lives, those strategies helped preserve important relationships.</p>
+        <p>The difficulty is that strategies that once protected us can eventually prevent us from being fully known.</p>
+        <p>I've wondered whether, at times, your desire to maintain peace has unintentionally made it harder for people to understand what is happening inside of you.</p>
+        <p class="short">Not because you're hiding.</p>
+        <p class="emphasis">But because you're protecting.</p>
+        <p>Protection and concealment are not the same thing.</p>
+      </div>
+
+      <div class="divider"><div class="line"></div><div class="mark"></div><div class="line"></div></div>
+
+      <div class="part" id="part-5">
+        <span class="part-label">Part V</span>
+        <h2>One Question That Stayed With Me</h2>
+        <p>As we talked over the past several months, one thought kept returning to me.</p>
+        <p>I found myself wondering:</p>
+        <p class="question">How often have you felt responsible for protecting the relationship, even when you were hurting?</p>
+        <p>There were moments in therapy where I sensed you instinctively shifted your attention toward understanding someone else's experience before fully allowing your own to exist.</p>
+        <p class="short">That instinct is compassionate.</p>
+        <p>It is also exhausting.</p>
+        <p class="short">Healthy relationships require empathy.</p>
+        <p>They also require reciprocity.</p>
+        <p>If one person consistently becomes the emotional caretaker while the other consistently becomes the emotional explainer, both people eventually become lonely for different reasons.</p>
+        <p>Part of your continued growth may involve trusting that your feelings deserve space even when someone else's feelings are also important.</p>
+        <p>Those two things are not mutually exclusive.</p>
+      </div>
+
+      <div class="divider"><div class="line"></div><div class="mark"></div><div class="line"></div></div>
+
+      <div class="part" id="part-6">
+        <span class="part-label">Part VI</span>
+        <h2>Something I Hope You Remember</h2>
+        <p>One thing I admire about you is that your compassion has never disappeared, even while you've begun developing more confidence in your own voice.</p>
+        <p>I hope you continue protecting that compassion.</p>
+        <p>But I also hope you become increasingly comfortable protecting yourself.</p>
+        <p>There is an important difference between kindness and self-abandonment.</p>
+        <p class="short">Kindness says:</p>
+        <p class="emphasis">"I care about your experience."</p>
+        <p class="short">Self-abandonment says:</p>
+        <p class="emphasis">"Your experience matters more than mine."</p>
+        <p>Those are not the same thing.</p>
+        <p>The healthiest relationships make room for both people.</p>
+        <p>I don't believe your task is to become louder.</p>
+        <p>I think your task is to become more fully present.</p>
+        <p class="short">Sometimes that will mean speaking.</p>
+        <p>Sometimes it will mean staying with your own feelings a little longer before rushing to understand someone else's.</p>
+        <p>Sometimes it will simply mean believing that your perspective deserves to remain in the conversation, even when someone disagrees with it.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="closing">
+    <div class="doc">
+      <span class="part-label">Closing Thoughts</span>
+      <h2>Before We Meet Again</h2>
+      <p>Kate, I don't believe the work you're doing is easy.</p>
+      <p>In many ways, I think you're learning something that many people never fully learn:</p>
+      <p class="short">How to remain compassionate without disappearing.</p>
+      <p class="short">How to care deeply without carrying all of the emotional responsibility.</p>
+      <p>How to stay connected without losing yourself.</p>
+      <p class="short">Those are difficult lessons.</p>
+      <p>They also happen to be some of the most important ones in long-term relationships.</p>
+      <p>As you continue this process, I would encourage you to carry one question into future conversations:</p>
+      <p class="question" style="text-align:center;">"What do I genuinely need right now, and have I allowed myself to say it clearly?"</p>
+      <p>Notice that the question isn't whether someone agrees with your need.</p>
+      <p class="short">It isn't whether someone likes your need.</p>
+      <p>It isn't whether your need is convenient.</p>
+      <p style="text-align:center;">It is simply whether you have allowed yourself to acknowledge it.</p>
+      <p style="text-align:center;">Because healthy relationships are built not only by understanding another person's inner world. They are built by allowing your own inner world to be known as well.</p>
+
+      <div class="signature">
+        <div class="name">Dr. Christopher J. Hoffman, MD</div>
+        <div class="title">Alignment Psychiatry</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer-mark">
+    <div class="line1">Alignment Psychiatry</div>
+    <div class="line2">This document is confidential and intended solely for the individual named above.</div>
+  </div>
+
+</body>
+</html>
