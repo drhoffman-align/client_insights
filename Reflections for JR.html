@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Understanding Yourself Before Understanding Your Marriage</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --purple: #2B2734;
+    --charcoal: #1D232F;
+    --offwhite: #F3F5F7;
+    --gold: #C9A84C;
+    --gold-soft: rgba(201,168,76,0.35);
+    --ink: #E9E6EE;
+    --ink-dim: rgba(233,230,238,0.62);
+    --paper: #F3F5F7;
+    --text-dark: #2B2734;
+    --text-dim: rgba(43,39,52,0.66);
+    --gold-dark: #9C7E30;
+  }
+
+  *{ box-sizing: border-box; }
+
+  html,body{
+    margin:0;
+    padding:0;
+    background: var(--charcoal);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .doc{
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* ---------- COVER ---------- */
+  .cover{
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    background:
+      radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.10), transparent 55%),
+      linear-gradient(180deg, var(--purple) 0%, var(--charcoal) 78%);
+    padding: 80px 32px;
+    position: relative;
+  }
+
+  .cover::before{
+    content:"";
+    position:absolute;
+    top:48px; left:50%;
+    transform: translateX(-50%);
+    width:1px; height:64px;
+    background: linear-gradient(180deg, transparent, var(--gold));
+  }
+
+  .eyebrow{
+    font-family:'DM Sans', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+    margin-bottom: 28px;
+  }
+
+  .cover h1{
+    font-family:'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 52px;
+    line-height: 1.18;
+    letter-spacing: 0.005em;
+    max-width: 620px;
+    margin: 0 0 26px 0;
+    color: var(--offwhite);
+  }
+
+  .cover .subtitle{
+    font-family:'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 19px;
+    color: var(--ink-dim);
+    max-width: 460px;
+    line-height: 1.6;
+    margin-bottom: 56px;
+  }
+
+  .cover .for-line{
+    font-size: 12px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+    margin-bottom: 10px;
+  }
+
+  .cover .for-name{
+    font-family:'Cormorant Garamond', serif;
+    font-size: 26px;
+    color: var(--gold);
+    letter-spacing: 0.03em;
+  }
+
+  .cover .practice-mark{
+    position:absolute;
+    bottom: 56px;
+    left:50%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(233,230,238,0.4);
+  }
+
+  /* ---------- BODY ---------- */
+  .content{
+    background: var(--paper);
+    padding: 100px 0 140px 0;
+  }
+
+  .intro-note{
+    font-family:'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.85;
+    color: var(--text-dim);
+    border-left: 2px solid var(--gold-dark);
+    padding-left: 28px;
+    margin: 0 0 96px 0;
+  }
+
+  .part{
+    margin-bottom: 96px;
+  }
+
+  .part-label{
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold-dark);
+    font-weight: 500;
+    margin-bottom: 14px;
+    display:block;
+  }
+
+  .part h2{
+    font-family:'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.28;
+    color: var(--text-dark);
+    margin: 0 0 40px 0;
+    max-width: 90%;
+  }
+
+  .part p{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    line-height: 1.9;
+    color: var(--text-dark);
+    margin: 0 0 26px 0;
+    font-weight: 400;
+  }
+
+  .part p.short{
+    margin-bottom: 8px;
+  }
+
+  .part p.emphasis{
+    font-style: italic;
+    color: var(--gold-dark);
+  }
+
+  .part p.question{
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--gold-dark);
+    margin: 40px 0;
+    padding: 0 8px;
+  }
+
+  .divider{
+    width: 100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin: 96px 0;
+  }
+
+  .divider .mark{
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--gold-dark);
+    opacity: 0.6;
+  }
+
+  .divider .line{
+    height: 1px;
+    width: 120px;
+    background: linear-gradient(90deg, transparent, rgba(156,126,48,0.35), transparent);
+  }
+
+  /* ---------- CLOSING ---------- */
+  .closing{
+    background: var(--paper);
+    padding: 40px 0 140px 0;
+    position: relative;
+    border-top: 1px solid rgba(43,39,52,0.10);
+  }
+
+  .closing .part-label{
+    text-align:center;
+    display:block;
+  }
+
+  .closing h2{
+    font-family:'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 30px;
+    color: var(--text-dark);
+    text-align:center;
+    margin: 0 0 56px 0;
+  }
+
+  .closing p{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    line-height: 1.95;
+    color: var(--text-dark);
+    margin: 0 0 26px 0;
+  }
+
+  .closing p.short{
+    margin-bottom: 8px;
+  }
+
+  .closing .signature{
+    margin-top: 64px;
+    text-align: center;
+  }
+
+  .closing .signature .name{
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--gold-dark);
+  }
+
+  .closing .signature .title{
+    font-size: 11px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-top: 8px;
+  }
+
+  .footer-mark{
+    text-align:center;
+    padding: 48px 32px 64px 32px;
+    background: var(--purple);
+  }
+
+  .footer-mark .line1{
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+
+  .footer-mark .line2{
+    font-size: 12px;
+    color: rgba(233,230,238,0.45);
+  }
+
+  @media (max-width: 640px){
+    .cover h1{ font-size: 36px; }
+    .cover .subtitle{ font-size: 17px; }
+    .part h2{ font-size: 27px; }
+    .part p, .closing p{ font-size: 17px; }
+    .doc{ padding: 0 22px; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- COVER -->
+  <section class="cover">
+    <div class="eyebrow">Alignment Psychiatry</div>
+    <h1>Understanding Yourself<br>Before Understanding<br>Your Marriage</h1>
+    <div class="subtitle">A reflection on the patterns, strengths, and opportunities that have emerged during our work together.</div>
+    <div class="for-line">Prepared For</div>
+    <div class="for-name">JR</div>
+    <div class="practice-mark">Hoffman Mental Health Services · Confidential</div>
+  </section>
+
+  <!-- BODY -->
+  <section class="content">
+    <div class="doc">
+
+      <p class="intro-note">This is written for you, and for no one else. It reflects what I have noticed about you over the course of our work together — not a verdict, not a diagnosis, and not an argument for one side of your marriage over the other. My hope is that reading it slowly, and returning to it before we meet again, gives you something more useful than advice: a clearer view of your own patterns, offered with the same respect I'd want if someone had spent this much time paying attention to me.</p>
+
+      <div class="part" id="part-1">
+        <span class="part-label">Part I</span>
+        <h2>What I Think You Want Most</h2>
+        <p>Over the past several months, I've listened carefully to what frustrates you, disappoints you, and hurts you. At first glance, many of your concerns appear to be about respect. You frequently return to examples where you feel dismissed, overlooked, interrupted, or not taken seriously.</p>
+        <p class="short">Initially, I wondered if respect itself was your primary need.</p>
+        <p class="short">The more we've talked, however, the less convinced I became that respect is actually the deepest issue.</p>
+        <p class="short">I think what you want is something more fundamental.</p>
+        <p class="emphasis">I think you want to matter.</p>
+        <p>You want to know that your thoughts carry weight with the person you love most. You want to believe that when something is important to you, it becomes important — not because someone is forced to agree with you, but because they genuinely care that it matters to you.</p>
+        <p>Throughout our conversations, I've noticed that the examples you provide are rarely about the actual event. They are about what the event represents.</p>
+        <p>When someone interrupts you, it doesn't simply feel like an interruption. It feels like your thoughts weren't important enough to hear.</p>
+        <p>When a request you've made multiple times isn't followed through on, it doesn't simply feel like a forgotten task. It feels like your needs weren't important enough to remember.</p>
+        <p>When conversations change direction before you feel understood, it doesn't simply feel like a communication problem. It feels like your inner world wasn't worth staying with.</p>
+        <p class="short">These are very human experiences.</p>
+        <p class="short">Every person wants to matter to the people they love.</p>
+        <p class="short">Your desire isn't unusual.</p>
+        <p>The challenge isn't that you have this need. The challenge is how you respond when you fear that need isn't being met.</p>
+      </div>
+
+      <div class="divider"><div class="line"></div><div class="mark"></div><div class="line"></div></div>
+
+      <div class="part" id="part-2">
+        <span class="part-label">Part II</span>
+        <h2>One of Your Greatest Strengths</h2>
+        <p>One thing I appreciate about you is that you don't avoid difficult conversations.</p>
+        <p class="short">Many people withdraw when relationships become challenging.</p>
+        <p class="short">You don't.</p>
+        <p class="short">You stay engaged.</p>
+        <p class="short">You ask questions.</p>
+        <p class="short">You reflect.</p>
+        <p class="short">You revisit conversations.</p>
+        <p class="short">You think deeply about what happened.</p>
+        <p>You genuinely want your marriage to improve.</p>
+        <p class="short">Throughout therapy, I have never doubted your commitment to the relationship.</p>
+        <p>I've also never doubted that you love your wife.</p>
+        <p class="emphasis">That matters.</p>
+        <p>Your willingness to engage is one of the greatest strengths you bring into this process.</p>
+        <p>However, one of the realities of psychology is that our greatest strengths often become our greatest vulnerabilities when they become overused.</p>
+        <p>The same persistence that allows you to work through difficult conversations can also make it difficult to recognize when the other person has become emotionally overwhelmed.</p>
+        <p>The same determination that helps you seek clarity can unintentionally leave another person feeling as though there isn't enough space for their experience.</p>
+        <p>In other words, your greatest strength and one of your greatest growth opportunities may actually be the same characteristic.</p>
+      </div>
+
+      <div class="divider"><div class="line"></div><div class="mark"></div><div class="line"></div></div>
+
+      <div class="part" id="part-3">
+        <span class="part-label">Part III</span>
+        <h2>The Pattern I Keep Seeing</h2>
+        <p>One of the advantages of seeing someone over time is that patterns become much easier to recognize.</p>
+        <p class="short">There is one pattern I've consistently observed.</p>
+        <p>It tends to look something like this:</p>
+        <p class="short">Something happens that feels hurtful.</p>
+        <p class="short">You try to explain why it hurt.</p>
+        <p class="short">The explanation becomes detailed because you're trying to help the other person fully understand your experience.</p>
+        <p class="short">As the explanation becomes longer, the emotional intensity of the conversation gradually increases.</p>
+        <p>The other person begins feeling overwhelmed. They withdraw, defend themselves, or attempt to explain their own perspective.</p>
+        <p>At that point, something important happens.</p>
+        <p>Instead of experiencing their response as an attempt to participate in the conversation, you often experience it as evidence that they still don't understand you.</p>
+        <p>As a result, you explain your position even more carefully.</p>
+        <p class="emphasis">Ironically, the harder you work to help someone understand your experience, the harder it sometimes becomes for them to remain emotionally present with you.</p>
+        <p>I don't believe this happens because you're trying to dominate conversations. I think it happens because you're trying to protect something that feels incredibly important. You want your experience to be understood before the conversation moves on.</p>
+        <p class="short">That makes sense.</p>
+        <p>Most people do exactly that when they're hurting.</p>
+        <p>The difficulty is that relationships rarely work that way. Most people become capable of understanding someone else's experience only after they themselves feel emotionally safe.</p>
+      </div>
+
+      <div class="divider"><div class="line"></div><div class="mark"></div><div class="line"></div></div>
+
+      <div class="part" id="part-4">
+        <span class="part-label">Part IV</span>
+        <h2>Understanding Versus Persuading</h2>
+        <p>This may be one of the most important distinctions we've explored together.</p>
+        <p>There is a difference between communicating to understand and communicating to persuade.</p>
+        <p class="short">Neither is inherently wrong.</p>
+        <p>But they produce very different conversations.</p>
+        <p>When we're communicating for understanding, we're curious. We're trying to discover something.</p>
+        <p>When we're communicating for persuasion, we're trying to convince someone that our interpretation is the correct one.</p>
+        <p>Over the past several months, I've noticed that when you're emotionally activated, your communication naturally shifts toward persuasion.</p>
+        <p class="short">Not because you're trying to win.</p>
+        <p>Because you're trying to be fully understood.</p>
+        <p>Ironically, these two goals can begin to look very similar from the other person's perspective. Repeated explanation, offered with good intent, can start to function less like an invitation to be understood and more like an attempt to reduce your own uncertainty — to make sure the record is complete, even when the other person has already begun to withdraw. The paradox worth sitting with is that slowing down long enough to understand someone else's experience is often what makes the space for your own to finally be heard. Certainty rushes to closure. Curiosity is what actually gets received.</p>
+        <p class="question">"Am I helping this person understand me, or am I helping them feel like they need to agree with me before I can feel settled?"</p>
+        <p class="short">That distinction is subtle.</p>
+        <p>It is also incredibly powerful.</p>
+      </div>
+
+      <div class="divider"><div class="line"></div><div class="mark"></div><div class="line"></div></div>
+
+      <div class="part" id="part-5">
+        <span class="part-label">Part V</span>
+        <h2>Something I Hope You Consider</h2>
+        <p>One thing I've admired throughout our work together is your willingness to examine yourself. Even when conversations have been difficult, you've continued showing up. That says something important about your character.</p>
+        <p>As we've worked together, I've also noticed moments where you've accepted responsibility sincerely. Those moments matter because they demonstrate that you are capable of accountability.</p>
+        <p>The next step in your growth, however, may not be taking more responsibility.</p>
+        <p class="emphasis">It may be learning to stay with someone else's pain long enough that they experience being understood before introducing your own.</p>
+        <p>There have been times when you've apologized and then quickly shifted toward explaining your intentions or discussing your own concerns. I don't think this comes from a lack of care. I think it comes from a desire for mutual understanding. The unintended effect, however, is that the other person's hurt can begin to feel unfinished.</p>
+        <p class="short">Sometimes repair isn't about saying the right words.</p>
+        <p>Sometimes repair is about resisting the urge to move the conversation forward before the other person has had the experience of feeling fully seen.</p>
+        <p class="short">That is a difficult skill.</p>
+        <p>It is also one of the most healing skills in any long-term relationship.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="closing">
+    <div class="doc">
+      <span class="part-label">Closing Thoughts</span>
+      <h2>Before We Meet Again</h2>
+      <p>JR, I don't believe your marriage is struggling because either of you are bad people.</p>
+      <p>I believe it is struggling because the two of you have developed ways of protecting yourselves that unintentionally collide with one another.</p>
+      <p>Your instinct, when hurt, is to seek understanding through explanation.</p>
+      <p>That instinct comes from a good place.</p>
+      <p>As you continue growing, I would encourage you to ask one question more often than any other:</p>
+      <p class="question" style="text-align:center;">"What would help the other person feel understood before I ask them to understand me?"</p>
+      <p>You may discover that this doesn't diminish your voice.</p>
+      <p style="text-align:center;">It actually creates the conditions where your voice can be heard.</p>
+
+      <div class="signature">
+        <div class="name">Dr. Christopher J. Hoffman, MD</div>
+        <div class="title">Alignment Psychiatry</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer-mark">
+    <div class="line1">Alignment Psychiatry</div>
+    <div class="line2">This document is confidential and intended solely for the individual named above.</div>
+  </div>
+
+</body>
+</html>
