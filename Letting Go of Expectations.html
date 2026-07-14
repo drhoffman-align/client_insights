@@ -1,0 +1,363 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Insights - Alignment Psychiatry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #f5f5dc;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        
+        .subtitle {
+            color: #f5f5dc;
+            font-size: 1.1em;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        section {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            color: #800020;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #800020;
+        }
+        
+        .quote-box {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+            font-style: italic;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        .white-section {
+            background-color: white;
+            border-left: 4px solid #ff8c00;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .insight-box {
+            background: linear-gradient(135deg, #fff5e6 0%, #ffe6cc 100%);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border-left: 4px solid #ff8c00;
+        }
+        
+        .framework {
+            margin: 30px 0;
+        }
+        
+        .framework h3 {
+            color: #800020;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+        }
+        
+        .steps {
+            margin: 20px 0;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin: 15px 0;
+        }
+        
+        .step-number {
+            background-color: #800020;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+            margin-right: 15px;
+        }
+        
+        .step-content {
+            flex: 1;
+            padding-top: 5px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        
+        li {
+            margin: 10px 0;
+            line-height: 1.8;
+        }
+        
+        .concept {
+            margin: 15px 0;
+        }
+        
+        .concept-term {
+            color: #800020;
+            font-weight: bold;
+        }
+        
+        .bottom-line {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 30px;
+            margin-top: 40px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            
+            .container {
+                box-shadow: none;
+            }
+            
+            section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Therapeutic Insights</h1>
+            <div class="subtitle">Alignment Psychiatry</div>
+        </header>
+        
+        <div class="content">
+            <section>
+                <h2>The Situation</h2>
+                <div class="white-section">
+                    <p>You are navigating chronic dissatisfaction in your 22-year marriage, marked by limited emotional connection and intimacy despite your husband fulfilling practical roles. You manage a demanding career, parenting a toddler, and extensive emotional labor maintaining both family and your husband's social connections. The cumulative effect is depletion and questioning whether to continue in this dynamic, considering divorce versus "parallel living."</p>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Core Problem</h2>
+                <div class="quote-box">
+                    "A profound mismatch exists between your emotional and intimate needs and what your husband provides, creating chronic disappointment and invisibility."
+                </div>
+                <div class="white-section">
+                    <p>Your ongoing expectations—despite years of contrary evidence—are the primary source of distress, compounded by fear and social constructs limiting your ability to prioritize your well-being.</p>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Clinical Concepts</h2>
+                <div class="insight-box">
+                    <div class="concept">
+                        <span class="concept-term">Expectations:</span> Beliefs about how someone will behave that, when unmet, create disappointment.
+                    </div>
+                    <div class="concept">
+                        <span class="concept-term">Parallel Living:</span> Partners share household but lead separate lives, reducing conflict but potentially perpetuating loneliness.
+                    </div>
+                    <div class="concept">
+                        <span class="concept-term">Emotional Labor:</span> Invisible work managing feelings and relationships.
+                    </div>
+                    <div class="concept">
+                        <span class="concept-term">Social Constructs:</span> Cultural beliefs about marriage that pressure staying in unsatisfying relationships.
+                    </div>
+                    <div class="concept">
+                        <span class="concept-term">Fear-Based Decision-Making:</span> Choices made to avoid discomfort rather than pursue authentic well-being.
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Therapeutic Frameworks</h2>
+                
+                <div class="framework">
+                    <h3>Expectation-Drain Model</h3>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">Identify expectations you hold for your husband</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">Assess which expectations are consistently unmet and their emotional impact</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">Experiment with releasing specific expectations</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">Observe emotional changes when expectations are released</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">Decide which needs are non-negotiable for your well-being</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="framework">
+                    <h3>Parallel Living Framework</h3>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">Imagine what separate lives in a shared household would look like</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">Define which areas require collaboration versus independence</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">Assess the mental health impact of this arrangement</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">Compare this scenario to the alternative of divorce</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="framework">
+                    <h3>Fear and Social Construct Awareness</h3>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">Identify which fears are influencing your decisions</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">Recognize societal expectations about marriage and family</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">Separate your authentic needs from external pressures</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">Make decisions based on your well-being rather than fear</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Practical Instructions</h2>
+                <div class="white-section">
+                    <p><strong>Releasing Expectations:</strong> Begin by noticing when disappointment arises. Ask yourself: "What expectation am I holding?" Then consciously choose to release it, reminding yourself that you cannot force someone to meet needs they're unwilling to provide.</p>
+                    <p style="margin-top: 15px;"><strong>Exploring Parallel Living:</strong> Visualize your daily life with emotional and intimate independence while sharing practical responsibilities. Notice how this feels in your body—does it bring relief or additional distress?</p>
+                    <p style="margin-top: 15px;"><strong>Challenging Fear and "Shoulds":</strong> When you notice thoughts like "I should stay" or "What will people think," pause and ask: "Is this my authentic voice or external pressure?" Write down your answers.</p>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Homework</h2>
+                <div class="insight-box">
+                    <ul>
+                        <li>List expectations of your husband across all life areas; mark which ones are consistently unmet</li>
+                        <li>Release two specific expectations for one week</li>
+                        <li>Journal daily about changes in mood, energy, and interactions</li>
+                        <li>Imagine a parallel living scenario in detail; journal about the emotional impact</li>
+                        <li>Challenge fears and "shoulds" when you notice them arising</li>
+                        <li>Bring your written inventory and reflections to the next session</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Key Takeaways</h2>
+                <div class="white-section">
+                    <ul>
+                        <li>Chronic unmet expectations drain emotional energy</li>
+                        <li>Releasing expectations reduces disappointment and reclaims energy</li>
+                        <li>Fear and social constructs often override authentic needs</li>
+                        <li>Well-being must be prioritized over social expectations</li>
+                        <li>Presence without engagement is not true partnership</li>
+                        <li>You cannot force someone to meet needs they're unwilling to provide</li>
+                        <li>Emotional labor managing both social worlds is exhausting</li>
+                        <li>Explicit communication is necessary for practical matters</li>
+                        <li>Healing takes time whether staying or leaving</li>
+                        <li>Your needs as a whole person are valid and deserve fulfillment</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <div class="bottom-line">
+                <strong>Bottom Line:</strong> Your emotional depletion stems from holding expectations that years of evidence show will not be met. By releasing these expectations and examining the fears and social constructs keeping you stuck, you can make authentic decisions about your well-being. Whether you choose parallel living or divorce, prioritizing your needs as a whole person is not selfish—it's essential. You deserve fulfillment, connection, and a life that honors who you truly are.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+```
