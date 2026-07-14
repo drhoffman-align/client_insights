@@ -1,0 +1,369 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Insights - Alignment Psychiatry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #f5f5dc;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .subtitle {
+            color: #f5f5dc;
+            font-size: 1.1em;
+            font-weight: 300;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            color: #800020;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .white-section {
+            background-color: white;
+            padding: 25px;
+            border-left: 5px solid #ff8c00;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .gradient-box {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+            font-style: italic;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        .insight-box {
+            background: linear-gradient(to right, #fff5e6 0%, #ffe6cc 100%);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #ff8c00;
+        }
+        
+        .framework {
+            margin: 30px 0;
+        }
+        
+        .framework-title {
+            color: #800020;
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .steps {
+            list-style: none;
+            counter-reset: step-counter;
+        }
+        
+        .steps li {
+            counter-increment: step-counter;
+            margin-bottom: 20px;
+            padding-left: 60px;
+            position: relative;
+            line-height: 1.8;
+        }
+        
+        .steps li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: #800020;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .concept {
+            margin-bottom: 20px;
+        }
+        
+        .concept-term {
+            color: #800020;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+        
+        .concept-definition {
+            margin-top: 5px;
+            padding-left: 20px;
+        }
+        
+        .homework-list, .takeaways-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .homework-list li, .takeaways-list li {
+            padding: 12px 0 12px 30px;
+            position: relative;
+            line-height: 1.7;
+        }
+        
+        .homework-list li::before {
+            content: "•";
+            color: #ff8c00;
+            font-size: 1.5em;
+            position: absolute;
+            left: 0;
+            top: 8px;
+        }
+        
+        .takeaways-list li::before {
+            content: "•";
+            color: #800020;
+            font-size: 1.5em;
+            position: absolute;
+            left: 0;
+            top: 8px;
+        }
+        
+        .bottom-line {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 40px;
+            text-align: center;
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-top: 40px;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .section-title {
+                font-size: 1.5em;
+            }
+            
+            .steps li {
+                padding-left: 50px;
+            }
+            
+            .steps li::before {
+                width: 35px;
+                height: 35px;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Therapeutic Insights</h1>
+            <div class="subtitle">Alignment Psychiatry</div>
+        </header>
+        
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">The Situation</h2>
+                <div class="white-section">
+                    <p>You are navigating a painful family dynamic where your brother repeatedly cuts you off after conflicts, then reinitiates contact sporadically, leaving you feeling used and destabilized. Your mother expects you to maintain the relationship and "fix" conflicts for family unity, despite the emotional harm this causes you.</p>
+                    <p style="margin-top: 15px;">You face double standards in how you and your brother are treated, and you struggle with anxiety and sadness from these interactions. There's an underlying fear of being left out or alone if you enforce boundaries that protect your well-being.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Core Problem</h2>
+                <div class="gradient-box">
+                    "You are cast as the 'strong one' who must absorb emotional blows and repair relationships while your brother's harmful behavior is excused."
+                </div>
+                <div class="white-section">
+                    <p>This pattern leaves you feeling powerless, unappreciated, and emotionally drained. However, you actually underestimate the significant influence and value you hold within your family system. The role you've been assigned doesn't reflect your true power—it obscures it.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Clinical Concepts</h2>
+                <div class="white-section">
+                    <div class="concept">
+                        <div class="concept-term">Stonewalling</div>
+                        <div class="concept-definition">Refusing to communicate or engage as a form of punishment or control. This is what your brother does when he cuts you off—it's a way of wielding power through withdrawal.</div>
+                    </div>
+                    
+                    <div class="concept">
+                        <div class="concept-term">Boundaries</div>
+                        <div class="concept-definition">Limits that protect your emotional and physical well-being. Boundaries are only effective when communicated clearly and enforced with consistent consequences.</div>
+                    </div>
+                    
+                    <div class="concept">
+                        <div class="concept-term">Power</div>
+                        <div class="concept-definition">Perceived value and influence in relationships, felt through the consequences of your actions. Power isn't about control—it's about what others believe you can provide or withhold.</div>
+                    </div>
+                    
+                    <div class="concept">
+                        <div class="concept-term">Codependency</div>
+                        <div class="concept-definition">A relationship dynamic where one person enables another's problematic behavior at their own expense. This often involves sacrificing your own needs to maintain peace or connection.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Therapeutic Frameworks</h2>
+                
+                <div class="framework">
+                    <div class="framework-title">Boundary Setting and Consequences</div>
+                    <div class="white-section">
+                        <ol class="steps">
+                            <li>Identify the boundary you need to protect your emotional well-being</li>
+                            <li>Communicate the boundary clearly and directly to the person involved</li>
+                            <li>Decide on a specific consequence if the boundary is crossed</li>
+                            <li>Implement the consequence consistently when violations occur</li>
+                            <li>Reassess and adjust the boundary as needed based on your experience</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="framework">
+                    <div class="framework-title">Power as Perceived Value</div>
+                    <div class="white-section">
+                        <ol class="steps">
+                            <li>Recognize your own value and the resources you provide to others</li>
+                            <li>Understand that power is about what others believe you have to offer</li>
+                            <li>Notice how your actions and choices influence others' behavior toward you</li>
+                            <li>Use this awareness to make choices that serve your well-being</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="insight-box">
+                    <strong>Clinical Insight:</strong> Your mother moving closer to you demonstrates your value in the family system, even if it remains unspoken. Actions often reveal what words don't acknowledge.
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Practical Instructions</h2>
+                <div class="white-section">
+                    <p><strong>Understanding Your Emotional Reactions:</strong> Having emotional reactions to boundary violations doesn't make your boundaries weak. It makes you human. The strength of a boundary isn't measured by your emotional response—it's measured by your consistent follow-through with consequences.</p>
+                    
+                    <p style="margin-top: 20px;"><strong>Addressing Stonewalling:</strong> Your brother's stonewalling is a form of emotional control, and it is not your responsibility to fix. You cannot force someone to communicate who has chosen withdrawal as their weapon. What you can control is whether you remain available for this pattern to continue.</p>
+                    
+                    <p style="margin-top: 20px;"><strong>Navigating Family Expectations:</strong> You are not responsible for choices others made or for their expectations of you. The role of "family peacekeeper" was assigned to you, not chosen by you. You have the right to decline roles that harm you.</p>
+                </div>
+                
+                <div class="gradient-box">
+                    "Enforcing boundaries may cause temporary discomfort, but it protects your long-term well-being."
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Homework</h2>
+                <div class="white-section">
+                    <ul class="homework-list">
+                        <li>Write down all the ways you provide value and support to your family—emotional, practical, and logistical</li>
+                        <li>List every instance where you've helped or been relied upon by family members</li>
+                        <li>Note patterns in who asks for help and how you typically respond</li>
+                        <li>Bring this list to your next session so we can review it together</li>
+                    </ul>
+                </div>
+                
+                <div class="insight-box">
+                    <strong>Purpose:</strong> This exercise will help you see clearly the influence and value you hold in your family system—value that you currently underestimate.
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Key Takeaways</h2>
+                <div class="white-section">
+                    <ul class="takeaways-list">
+                        <li>You underestimate your influence and power within your family</li>
+                        <li>Boundaries require clear communication and consistent consequences to be effective</li>
+                        <li>Your brother's stonewalling is emotional control, not your responsibility to fix</li>
+                        <li>Your mother moving closer demonstrates your value, even if unspoken</li>
+                        <li>Emotional reactions to boundary violations don't make boundaries weak</li>
+                        <li>Power is about perception—what others believe you can provide or withhold</li>
+                        <li>Fear of being alone influences your decisions and deserves exploration</li>
+                        <li>You're not responsible for choices others made or their expectations</li>
+                        <li>Enforcing boundaries may cause temporary discomfort but protects your well-being</li>
+                        <li>Your needs and feelings are valid regardless of others' acknowledgment</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-line">
+            <strong>Bottom Line:</strong> You hold more power in your family than you realize, and that power comes from the value you provide. Boundaries aren't about controlling others—they're about honoring yourself. Your fear of being alone is understandable, but staying in harmful patterns guarantees a different kind of loneliness: being disconnected from yourself. You deserve relationships where your needs matter as much as everyone else's.
+        </div>
+    </div>
+</body>
+</html>
+```
