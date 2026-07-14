@@ -1,0 +1,399 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Insights - Alignment Psychiatry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #f5f5dc;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        
+        .subtitle {
+            color: #f5f5dc;
+            font-size: 1.1em;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            color: #800020;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 3px solid #800020;
+            padding-bottom: 10px;
+        }
+        
+        .white-section {
+            background-color: white;
+            padding: 25px;
+            border-left: 5px solid #ff8c00;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .gradient-box {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+            font-style: italic;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        .insight-box {
+            background: linear-gradient(to right, #fff5e6 0%, #ffe6cc 100%);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #ff8c00;
+        }
+        
+        .framework {
+            margin: 30px 0;
+        }
+        
+        .framework-title {
+            color: #800020;
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .steps {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            flex: 1 1 45%;
+            min-width: 250px;
+        }
+        
+        .step-number {
+            background-color: #800020;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            flex-shrink: 0;
+            margin-right: 15px;
+        }
+        
+        .step-content {
+            flex: 1;
+            padding-top: 8px;
+        }
+        
+        .clinical-concept {
+            margin-bottom: 20px;
+        }
+        
+        .concept-term {
+            color: #800020;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+        
+        .concept-definition {
+            margin-top: 5px;
+            padding-left: 20px;
+        }
+        
+        .homework-list, .takeaway-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .homework-list li, .takeaway-list li {
+            padding: 12px 0 12px 35px;
+            position: relative;
+            line-height: 1.6;
+        }
+        
+        .homework-list li:before {
+            content: "→";
+            color: #ff8c00;
+            font-weight: bold;
+            position: absolute;
+            left: 10px;
+            font-size: 1.3em;
+        }
+        
+        .takeaway-list li:before {
+            content: "•";
+            color: #800020;
+            font-weight: bold;
+            position: absolute;
+            left: 10px;
+            font-size: 1.5em;
+        }
+        
+        .bottom-line {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 40px;
+            margin-top: 40px;
+            text-align: center;
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .section-title {
+                font-size: 1.5em;
+            }
+            
+            .step {
+                flex: 1 1 100%;
+            }
+            
+            .bottom-line {
+                padding: 30px 20px;
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Therapeutic Insights</h1>
+            <div class="subtitle">Alignment Psychiatry</div>
+        </header>
+        
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">The Situation</h2>
+                <div class="white-section">
+                    <p>You struggle with chronic self-doubt and a lifelong pattern of people-pleasing rooted in past family experiences, particularly with your mother. You habitually make yourself "small" in social situations, prioritize others' comfort over your own needs, and view yourself through others' eyes, leading to feelings of being devalued. Despite being intelligent and accomplished, you do not feel worthy of power or recognition and have difficulty trusting others with your authentic self.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Core Problem</h2>
+                <div class="gradient-box">
+                    "You automatically use 'fawning' as a survival mechanism—constantly adapting to others, seeking approval, and avoiding conflict by making yourself less visible. This creates a mismatch between your actual capabilities and your internalized belief that you are unworthy of power or space."
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Clinical Concepts</h2>
+                <div class="white-section">
+                    <div class="clinical-concept">
+                        <div class="concept-term">Fawning</div>
+                        <div class="concept-definition">Trauma response involving pleasing others to avoid harm or rejection</div>
+                    </div>
+                    
+                    <div class="clinical-concept">
+                        <div class="concept-term">Power</div>
+                        <div class="concept-definition">Both capability and belief (by self and others) in that capability</div>
+                    </div>
+                    
+                    <div class="clinical-concept">
+                        <div class="concept-term">Self-Validation</div>
+                        <div class="concept-definition">Affirming one's own worth without relying on others' approval</div>
+                    </div>
+                    
+                    <div class="clinical-concept">
+                        <div class="concept-term">Survival Mechanisms</div>
+                        <div class="concept-definition">Automatic behaviors developed to cope with past threats</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Therapeutic Frameworks</h2>
+                
+                <div class="framework">
+                    <div class="framework-title">The Four F's of Survival</div>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">Recognition of people-pleasing patterns</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">Understanding origins in unsafe environments</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">Assessing impact on self-worth</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">Shifting toward authenticity and self-advocacy</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="framework">
+                    <div class="framework-title">Power and Self-Belief Framework</div>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">Identifying where power is given away</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">Recognizing capabilities</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">Challenging false beliefs</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">Practicing self-validation</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="framework">
+                    <div class="framework-title">Changing Beliefs Through Self-Narrative</div>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">Noticing negative self-talk</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">Writing a new narrative about strengths</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">Reinforcing new beliefs through repetition</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Practical Instructions</h2>
+                <div class="insight-box">
+                    <p><strong>Notice fawning moments:</strong> When you catch yourself making yourself small or prioritizing others' comfort over your own needs, pause. Ask yourself: "What do I actually want or need in this moment?"</p>
+                </div>
+                <div class="insight-box">
+                    <p><strong>Practice self-validation:</strong> Instead of waiting for external approval, affirm your own worth. Remind yourself that you are the ultimate authority on your own experience.</p>
+                </div>
+                <div class="insight-box">
+                    <p><strong>Assert your perspective:</strong> Start small by expressing your opinions and needs in low-stakes situations. Gradually reclaim your space in relationships and conversations.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Homework</h2>
+                <div class="white-section">
+                    <ul class="homework-list">
+                        <li>Write daily (10 minutes) about strengths, achievements, and positive qualities</li>
+                        <li>List three accomplishments or moments of capability</li>
+                        <li>Reflect on what you want and deserve</li>
+                        <li>Bring observations about self-talk changes to next session</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Key Takeaways</h2>
+                <div class="white-section">
+                    <ul class="takeaway-list">
+                        <li>Fawning is a learned survival response from unsafe environments, not a character flaw</li>
+                        <li>Making yourself small preemptively avoids rejection but limits authentic living</li>
+                        <li>Power requires both capability and self-belief—if you don't believe in yourself, others won't either</li>
+                        <li>Self-validation is essential; don't wait for external approval</li>
+                        <li>Notice fawning moments and pause to consider your true needs</li>
+                        <li>Writing about strengths rewires self-concept through repetition</li>
+                        <li>Assert your perspective in small ways to reclaim space</li>
+                        <li>Trust your own experience—nobody knows you better than yourself</li>
+                        <li>Being helpful is positive only when it doesn't erase your needs</li>
+                        <li>Changing beliefs requires intentionally telling yourself a different story</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-line">
+            <strong>Bottom Line:</strong> You have spent a lifetime making yourself small to survive, but survival mode is no longer serving you. Your capabilities are real, your needs matter, and you deserve to take up space. The path forward involves recognizing fawning patterns, challenging the false belief that you are unworthy of power, and intentionally rewriting your self-narrative through daily practice. Trust yourself—you are the expert on your own experience, and reclaiming your authentic self begins with believing in your own worth.
+        </div>
+    </div>
+</body>
+</html>
+```
