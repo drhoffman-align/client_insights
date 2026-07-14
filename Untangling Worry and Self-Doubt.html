@@ -1,0 +1,420 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Insights - Alignment Psychiatry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #f5f5dc;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        
+        .subtitle {
+            color: #f5f5dc;
+            font-size: 1.1em;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            color: #800020;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .section-content {
+            font-size: 1.05em;
+            color: #444;
+            line-height: 1.8;
+        }
+        
+        .quote-box {
+            background: linear-gradient(135deg, #800020 0%, #a64253 100%);
+            color: white;
+            padding: 25px 30px;
+            margin: 25px 0;
+            border-radius: 8px;
+            font-style: italic;
+            font-size: 1.1em;
+            line-height: 1.7;
+        }
+        
+        .white-section {
+            background-color: white;
+            border-left: 5px solid #ff8c00;
+            padding: 25px 30px;
+            margin: 25px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .insight-box {
+            background: linear-gradient(135deg, #f5f5dc 0%, #e8e8d0 100%);
+            padding: 25px 30px;
+            margin: 25px 0;
+            border-radius: 8px;
+            border-left: 5px solid #800020;
+        }
+        
+        .framework {
+            margin: 30px 0;
+        }
+        
+        .framework-title {
+            color: #800020;
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .step-number {
+            background-color: #800020;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            flex-shrink: 0;
+            margin-right: 20px;
+        }
+        
+        .step-content {
+            flex: 1;
+            padding-top: 8px;
+            font-size: 1.05em;
+            line-height: 1.6;
+        }
+        
+        .concept-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .concept-item {
+            background-color: white;
+            border-left: 5px solid #ff8c00;
+            padding: 20px 25px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .concept-term {
+            color: #800020;
+            font-weight: 600;
+            font-size: 1.15em;
+            margin-bottom: 8px;
+        }
+        
+        .concept-definition {
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .takeaway-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .takeaway-item {
+            padding: 12px 0 12px 30px;
+            position: relative;
+            font-size: 1.05em;
+            line-height: 1.7;
+            color: #444;
+        }
+        
+        .takeaway-item:before {
+            content: "→";
+            color: #ff8c00;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 1.3em;
+        }
+        
+        .bottom-line {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 40px;
+            margin-top: 50px;
+            text-align: center;
+            font-size: 1.2em;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+        
+        .homework-box {
+            background-color: #fff9f0;
+            border: 2px solid #ff8c00;
+            padding: 25px 30px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+        
+        .homework-item {
+            padding: 10px 0;
+            padding-left: 25px;
+            position: relative;
+            line-height: 1.7;
+        }
+        
+        .homework-item:before {
+            content: "✓";
+            color: #ff8c00;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 1.2em;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            .container {
+                box-shadow: none;
+            }
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            .content {
+                padding: 20px;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Therapeutic Insights</h1>
+            <div class="subtitle">Alignment Psychiatry</div>
+        </header>
+        
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">The Situation</h2>
+                <div class="section-content">
+                    <p>You're experiencing heightened anxiety, excessive worry, and feelings of guilt and inadequacy, particularly in your relationships with family and a romantic interest. You find yourself apologizing frequently, ruminating over past events, and struggling with recurring thoughts that feel difficult to control.</p>
+                    <p style="margin-top: 15px;">Additionally, you're managing significant physical symptoms—explosive diarrhea, nausea, and fatigue—with a possible Crohn's disease diagnosis pending. You've noticed that stress directly impacts your physical health, creating a challenging cycle between your emotional and physical wellbeing.</p>
+                </div>
+            </div>
+            
+            <div class="quote-box">
+                "Feelings are valid but not always factual—seek evidence."
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Core Problem</h2>
+                <div class="white-section">
+                    <p>You're interpreting ambiguous social situations—especially perceived rejection—as evidence of personal inadequacy. This means you're conflating others' choices with your own worth. This cognitive pattern creates cycles of self-doubt, emotional distress, and avoidance behaviors.</p>
+                    <p style="margin-top: 15px;">There's a significant mismatch between what you're feeling ("he was turned off by me") and the actual evidence available to support that conclusion. This gap between feelings and facts is maintaining your distress.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Clinical Concepts</h2>
+                <ul class="concept-list">
+                    <li class="concept-item">
+                        <div class="concept-term">Rumination</div>
+                        <div class="concept-definition">Repetitive, unproductive thinking about distressing topics that keeps you stuck in cycles of worry without resolution.</div>
+                    </li>
+                    <li class="concept-item">
+                        <div class="concept-term">Black-and-White Thinking</div>
+                        <div class="concept-definition">Seeing situations in extremes rather than nuances—things are either perfect or terrible, with no middle ground.</div>
+                    </li>
+                    <li class="concept-item">
+                        <div class="concept-term">Rejection Sensitivity</div>
+                        <div class="concept-definition">A heightened emotional response to perceived rejection, often leading to preemptive withdrawal or intense distress.</div>
+                    </li>
+                    <li class="concept-item">
+                        <div class="concept-term">Evidence-Based Thinking</div>
+                        <div class="concept-definition">Making judgments based on observable facts rather than assumptions, feelings, or interpretations.</div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Therapeutic Frameworks</h2>
+                
+                <div class="framework">
+                    <div class="framework-title">Emotional Journaling and Condensing</div>
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">List all the emotions you're experiencing in the moment</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">Write why you're feeling each emotion</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">Condense overlapping feelings into core emotions</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">Examine whether your perception matches reality</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">Reframe or challenge emotions that lack supporting evidence</div>
+                    </div>
+                </div>
+                
+                <div class="framework">
+                    <div class="framework-title">Evidence-Based Thinking</div>
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">Identify the belief you're holding about the situation</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">Ask yourself: what observable evidence supports this belief?</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">Consider alternative explanations for what happened</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">Acknowledge uncertainty if the evidence is lacking</div>
+                    </div>
+                </div>
+                
+                <div class="framework">
+                    <div class="framework-title">Dialectical Thinking</div>
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">Notice when you're engaging in black-and-white thinking</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">Practice holding two opposite truths simultaneously</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">Use this skill to reduce self-blame and emotional reactivity</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="insight-box">
+                <strong>Clinical Rationale:</strong> Separating feelings from facts interrupts automatic negative thoughts and reduces emotional intensity in ambiguous situations. This practice builds emotional resilience and supports healthier relationship patterns over time.
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Practical Instructions</h2>
+                <div class="white-section">
+                    <p><strong>When you notice yourself ruminating or feeling overwhelmed:</strong></p>
+                    <ul style="margin-top: 15px; padding-left: 20px;">
+                        <li style="margin-bottom: 10px;">Pause and grab your journal</li>
+                        <li style="margin-bottom: 10px;">List every emotion you're experiencing without judgment</li>
+                        <li style="margin-bottom: 10px;">Look for overlapping emotions and condense them (e.g., "anxious," "worried," and "nervous" might all be "fear")</li>
+                        <li style="margin-bottom: 10px;">For each core emotion, write: "I feel [emotion] because..."</li>
+                        <li style="margin-bottom: 10px;">Ask: "What observable evidence do I have for this belief?"</li>
+                        <li style="margin-bottom: 10px;">Write alternative explanations that fit the same facts</li>
+                        <li style="margin-bottom: 10px;">Practice holding both truths: your feeling AND the uncertainty</li>
+                    </ul>
+                    <p style="margin-top: 20px;"><strong>Remember:</strong> The goal isn't to eliminate feelings, but to examine whether they're based on facts or assumptions. This creates space between stimulus and response.</p>
+                </div>
+            </div>
+            
+            <div class="quote-box">
+                "Someone choosing another person doesn't indicate your inadequacy. Your worth isn't determined by others' choices."
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Homework</h2>
+                <div class="homework-box">
+                    <div class="homework-item">Journal using the condensed emotion method: list emotions, condense overlapping ones, write why for each, ask for evidence, and reframe with alternatives</div>
+                    <div class="homework-item">Bring one journal entry where you challenged a negative belief with evidence to your next session</div>
+                    <div class="homework-item">Complete at least one entry before your next appointment</div>
+                </div>
+                <div class="insight-box" style="margin-top: 25px;">
+                    <strong>Important Note:</strong> If you begin biologic medication for Crohn's disease (pending blood work), follow your GI specialist's instructions carefully and report any severe reactions immediately. Managing stress through these therapeutic techniques is crucial for both your mental health and Crohn's disease management.
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Key Takeaways</h2>
+                <ul class="takeaway-list">
+                    <li class="takeaway-item">Feelings are valid but not always factual—seek evidence</li>
+                    <li class="takeaway-item">Condensing emotions reduces overwhelm and clarifies true feelings</li>
+                    <li class="takeaway-item">Someone choosing another person doesn't indicate your inadequacy</li>
+                    <li class="takeaway-item">Hold both truths: your feeling and the uncertainty</li>
+                    <li class="takeaway-item">Stress management is crucial for both mental health and Crohn's disease</li>
+                    <li class="takeaway-item">Use observable facts, not assumptions, to judge situations</li>
+                    <li class="takeaway-item">Rejection sensitivity can trigger preemptive withdrawal</li>
+                    <li class="takeaway-item">Rumination keeps you stuck; structured journaling breaks the cycle</li>
+                    <li class="takeaway-item">Your worth isn't determined by others' choices</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="bottom-line">
+            <strong>Bottom Line:</strong> You're learning to distinguish between what you feel and what you know. By examining the evidence behind your beliefs, you can interrupt cycles of rumination and self-doubt. This isn't about dismissing your feelings—it's about ensuring they're grounded in reality rather than assumptions. As you practice these skills, you'll build resilience, reduce emotional reactivity, and develop healthier patterns in your relationships. Remember: uncertainty is uncomfortable, but it's also honest. You're capable of holding both your feelings and the truth that you may not have all the answers.
+        </div>
+    </div>
+</body>
+</html>
+```
