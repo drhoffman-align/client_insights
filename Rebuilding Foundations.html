@@ -1,0 +1,490 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Insights - Alignment Psychiatry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #f5f5dc;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        
+        .subtitle {
+            color: #f5f5dc;
+            font-size: 1.1em;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        section {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            color: #800020;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #800020;
+        }
+        
+        h3 {
+            color: #800020;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .quote-box {
+            background: linear-gradient(135deg, #fff5e6 0%, #ffe6cc 100%);
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+            border-left: 5px solid #ff8c00;
+            font-style: italic;
+            color: #555;
+        }
+        
+        .insight-box {
+            background: linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%);
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+            border-left: 5px solid #4682b4;
+        }
+        
+        .white-section {
+            background: white;
+            padding: 25px;
+            margin: 25px 0;
+            border-left: 5px solid #ff8c00;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .framework {
+            margin: 30px 0;
+        }
+        
+        .step-container {
+            display: flex;
+            align-items: flex-start;
+            margin: 20px 0;
+        }
+        
+        .step-number {
+            background-color: #800020;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+            margin-right: 20px;
+            font-size: 1.1em;
+        }
+        
+        .step-content {
+            flex: 1;
+            padding-top: 8px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        .homework-list {
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .homework-list li {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 15px;
+        }
+        
+        .homework-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #800020;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+        
+        .takeaway-list {
+            counter-reset: takeaway-counter;
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .takeaway-list li {
+            counter-increment: takeaway-counter;
+            padding-left: 40px;
+            position: relative;
+            margin-bottom: 15px;
+        }
+        
+        .takeaway-list li:before {
+            content: counter(takeaway-counter);
+            position: absolute;
+            left: 0;
+            background-color: #800020;
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9em;
+            text-align: center;
+            line-height: 28px;
+        }
+        
+        .bottom-line {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 30px 40px;
+            margin-top: 40px;
+            text-align: center;
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            
+            section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .bottom-line {
+                padding: 20px;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Therapeutic Insights</h1>
+            <div class="subtitle">Alignment Psychiatry - Session Summary</div>
+        </header>
+        
+        <div class="content">
+            <section>
+                <h2>The Situation</h2>
+                <p>You are experiencing declining motivation and energy despite maintaining productivity, linked to disrupted self-care routines and significant business stress. Morning fatigue, skipped meals and vitamins, and body aches are interfering with exercise. Your business faces financial pressures including empty office spaces and an impending rent increase, while you manage multiple operational tasks and uncertain marketing team effectiveness.</p>
+                
+                <div class="quote-box">
+                    "Client maintains productivity but lacks previous enthusiasm. Physical neglect compounds business stress, creating energy deficit affecting all areas."
+                </div>
+            </section>
+            
+            <section>
+                <h2>Core Problem</h2>
+                <div class="white-section">
+                    <p>Your energy and motivation have declined due to physical neglect—poor nutrition and skipped vitamins—combined with business stress and lack of systematic daily structure. A mismatch exists between knowing what needs to be done and feeling able to execute with your previous drive.</p>
+                </div>
+                
+                <div class="insight-box">
+                    <strong>Clinical Understanding:</strong> Foundational self-care must be restored before tackling higher-level challenges. Your physical baseline supports decision-making and sustainable performance.
+                </div>
+            </section>
+            
+            <section>
+                <h2>Clinical Concepts</h2>
+                
+                <h3>Energy Deficit</h3>
+                <p>Running on empty when nutrition and self-care are neglected makes everything harder. Your body and mind require proper fuel to function optimally.</p>
+                
+                <h3>Overextension</h3>
+                <p>Taking on more than is manageable creates unsustainable patterns. Enjoyment of activities doesn't negate physical limits.</p>
+                
+                <h3>Attainable Goals</h3>
+                <p>Goals must be realistic, not just desirable. Setting achievable targets prevents burnout and disappointment.</p>
+                
+                <h3>Resourcefulness</h3>
+                <p>Using all available options to solve problems expands your capacity to navigate challenges effectively.</p>
+            </section>
+            
+            <section>
+                <h2>Therapeutic Frameworks</h2>
+                
+                <div class="framework">
+                    <h3>Time and Energy Optimization Framework</h3>
+                    <p>A systematic approach to managing your most valuable resources:</p>
+                    
+                    <div class="step-container">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <strong>Assess Wakeful Hours</strong><br>
+                            Identify how many productive hours you have each day and recognize your natural energy patterns.
+                        </div>
+                    </div>
+                    
+                    <div class="step-container">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <strong>Track Time Allocation</strong><br>
+                            Monitor where your time actually goes versus where you think it goes to identify gaps and inefficiencies.
+                        </div>
+                    </div>
+                    
+                    <div class="step-container">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <strong>Prioritize Energy Management</strong><br>
+                            Protect your energy through proper nutrition, rest, and strategic task scheduling aligned with your energy levels.
+                        </div>
+                    </div>
+                    
+                    <div class="step-container">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <strong>Systematize Tasks</strong><br>
+                            Create repeatable systems and routines that reduce decision fatigue and increase efficiency.
+                        </div>
+                    </div>
+                    
+                    <div class="step-container">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <strong>Strategize for Crises</strong><br>
+                            Develop contingency plans and maintain flexibility to handle unexpected challenges without derailing progress.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="framework">
+                    <h3>SMART Goals Framework</h3>
+                    <p>A proven method for setting achievable objectives:</p>
+                    
+                    <div class="step-container">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <strong>Specific</strong><br>
+                            Define exactly what you want to accomplish with clear, concrete details.
+                        </div>
+                    </div>
+                    
+                    <div class="step-container">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <strong>Measurable</strong><br>
+                            Establish criteria to track progress and know when you've achieved your goal.
+                        </div>
+                    </div>
+                    
+                    <div class="step-container">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <strong>Attainable</strong><br>
+                            Ensure the goal is realistic given your current resources, time, and circumstances.
+                        </div>
+                    </div>
+                    
+                    <div class="step-container">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <strong>Relevant</strong><br>
+                            Align the goal with your broader objectives and values to maintain motivation.
+                        </div>
+                    </div>
+                    
+                    <div class="step-container">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <strong>Time-bound</strong><br>
+                            Set a deadline to create urgency and prevent indefinite postponement.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="framework">
+                    <h3>Relationship Management in Crisis Negotiation</h3>
+                    <p>Building trust during challenging business situations:</p>
+                    
+                    <div class="step-container">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <strong>Be Transparent</strong><br>
+                            Communicate openly about challenges and limitations to establish credibility and trust.
+                        </div>
+                    </div>
+                    
+                    <div class="step-container">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <strong>Offer Solutions</strong><br>
+                            Present concrete proposals that address concerns and demonstrate commitment to resolution.
+                        </div>
+                    </div>
+                    
+                    <div class="step-container">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <strong>Plan for Repayment</strong><br>
+                            Create realistic timelines and structures for meeting obligations that work for all parties.
+                        </div>
+                    </div>
+                    
+                    <div class="step-container">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <strong>Maintain Trust</strong><br>
+                            Follow through on commitments and maintain consistent communication to preserve relationships.
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Practical Instructions</h2>
+                <div class="white-section">
+                    <p><strong>Immediate Actions:</strong></p>
+                    <ul>
+                        <li>Resume regular meals immediately—set alarms if needed to ensure you eat consistently throughout the day</li>
+                        <li>Take your daily vitamins without exception; consider keeping them visible as a reminder</li>
+                        <li>Block 30 minutes daily in your calendar specifically for personal development and strategic planning</li>
+                    </ul>
+                    
+                    <p><strong>Business Crisis Management:</strong></p>
+                    <ul>
+                        <li>Draft a detailed landlord proposal including a realistic repayment plan and potential incentives</li>
+                        <li>Schedule a focused meeting with your wife to review business foundation and develop a crisis plan</li>
+                        <li>Diversify your efforts beyond relying on a single marketing solution</li>
+                    </ul>
+                    
+                    <p><strong>Systematic Approach:</strong></p>
+                    <ul>
+                        <li>Follow the plan → schedule → execute sequence for all major tasks</li>
+                        <li>Track your time and energy patterns to identify imbalances</li>
+                        <li>Focus on controllable factors rather than outcomes beyond your influence</li>
+                    </ul>
+                </div>
+                
+                <div class="quote-box">
+                    "Systematic planning (plan → schedule → execute) beats reactive management."
+                </div>
+            </section>
+            
+            <section>
+                <h2>Homework</h2>
+                <ul class="homework-list">
+                    <li>Resume regular meals and daily vitamins immediately</li>
+                    <li>Block 30 minutes daily for personal development and strategic planning</li>
+                    <li>Draft detailed landlord proposal with repayment plan and incentive</li>
+                    <li>Meet with wife to review business foundation and crisis plan</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h2>Key Takeaways</h2>
+                <ul class="takeaway-list">
+                    <li>Energy and motivation directly link to nutrition and vitamins</li>
+                    <li>Systematic planning (plan → schedule → execute) beats reactive management</li>
+                    <li>Realistic goals prevent burnout and disappointment</li>
+                    <li>Focus on controllable factors, not all outcomes</li>
+                    <li>Proactive crisis management essential for business survival</li>
+                    <li>Transparency builds trust in business relationships</li>
+                    <li>Personal development time critical for strategic thinking</li>
+                    <li>Use all available resources during crisis</li>
+                    <li>Track time and energy to identify imbalances</li>
+                    <li>Diversify efforts beyond single solutions</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h2>Medication Monitoring</h2>
+                <div class="insight-box">
+                    <p><strong>Adderall - Side Effects to Monitor:</strong></p>
+                    <ul>
+                        <li>Insomnia or sleep disturbances</li>
+                        <li>Appetite suppression (particularly relevant given current nutrition challenges)</li>
+                        <li>Increased heart rate or cardiovascular changes</li>
+                    </ul>
+                    <p style="margin-top: 15px;"><em>Report any concerning symptoms to your psychiatrist promptly.</em></p>
+                </div>
+            </section>
+        </div>
+        
+        <div class="bottom-line">
+            <strong>Bottom Line:</strong> Your physical foundation—nutrition, vitamins, and self-care—must be restored first. Everything else builds from there. Systematic planning and realistic goals will help you navigate business challenges while maintaining your wellbeing. You have the resourcefulness to handle this crisis; now apply that same capability to caring for yourself.
+        </div>
+    </div>
+</body>
+</html>
+```
