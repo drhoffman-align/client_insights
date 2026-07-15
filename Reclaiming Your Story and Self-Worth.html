@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breaking the Cycle of Showing Up: Reclaiming Your Story and Self-Worth</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        @media print {
+            body { background: white; padding: 0; margin: 0; }
+            .container { max-width: none; box-shadow: none; border-radius: 0; }
+            .content { padding: 0.5in; }
+            .section, .framework, .cycle-block { page-break-inside: avoid; break-inside: avoid; }
+            .page-break { page-break-before: always; break-before: page; }
+            @page { size: 8.5in 11in; margin: 0.75in; }
+        }
+
+        @media screen {
+            body {
+                background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+                min-height: 100vh;
+                padding: 20px;
+            }
+            .container {
+                max-width: 8.5in;
+                margin: 0 auto;
+                background: #E8DFD6;
+                border-radius: 20px;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+                overflow: hidden;
+            }
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #4A4A4A;
+        }
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+            color: #E8DFD6;
+            padding: 50px 40px;
+            text-align: center;
+        }
+        .header .eyebrow {
+            font-size: 0.82em;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            opacity: 0.7;
+            margin-bottom: 14px;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 14px;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+            line-height: 1.2;
+        }
+        .header .subtitle {
+            font-size: 1.1em;
+            opacity: 0.88;
+            font-style: italic;
+        }
+
+        /* CONTENT */
+        .content { padding: 44px 40px; }
+
+        /* STANDARD SECTION */
+        .section {
+            background: #ffffff;
+            border-radius: 14px;
+            border-left: 5px solid #D67B4A;
+            padding: 30px 32px;
+            margin-bottom: 32px;
+        }
+        .section h2 {
+            color: #6B2C3A;
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #E8DFD6;
+        }
+        .section p { margin-bottom: 12px; }
+        .section p:last-child { margin-bottom: 0; }
+
+        /* PULL QUOTE */
+        .pull-quote {
+            background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+            color: #E8DFD6;
+            padding: 26px 36px;
+            border-radius: 12px;
+            margin: 28px 0;
+            font-size: 1.2em;
+            font-style: italic;
+            text-align: center;
+            box-shadow: 0 6px 18px rgba(107,44,58,0.25);
+            line-height: 1.6;
+        }
+
+        /* CONCEPTS GRID */
+        .concepts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 10px;
+        }
+        @media (max-width: 600px) { .concepts-grid { grid-template-columns: 1fr; } }
+        .concept-card {
+            background: #f9f6f3;
+            border-radius: 10px;
+            padding: 18px 20px;
+            border-top: 3px solid #D67B4A;
+        }
+        .concept-card h4 {
+            color: #6B2C3A;
+            font-size: 0.95em;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .concept-card p { font-size: 0.88em; color: #4A4A4A; margin: 0; }
+
+        /* CYCLE BLOCK */
+        .cycle-block {
+            background: #ffffff;
+            border-radius: 14px;
+            border-left: 5px solid #6B2C3A;
+            padding: 30px 32px;
+            margin-bottom: 32px;
+        }
+        .cycle-block h2 {
+            color: #6B2C3A;
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .cycle-block .cycle-subtitle {
+            color: #D67B4A;
+            font-size: 0.95em;
+            font-style: italic;
+            margin-bottom: 22px;
+            padding-bottom: 14px;
+            border-bottom: 2px solid #E8DFD6;
+        }
+
+        /* CYCLE STEPS - visual loop */
+        .cycle-steps {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 600px) { .cycle-steps { grid-template-columns: 1fr; } }
+        .cycle-step {
+            background: #f9f6f3;
+            border-radius: 10px;
+            padding: 18px 20px;
+            position: relative;
+        }
+        .cycle-step .step-label {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #6B2C3A;
+            color: #E8DFD6;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        .cycle-step h4 {
+            color: #6B2C3A;
+            font-size: 0.95em;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .cycle-step p { font-size: 0.88em; margin: 0; }
+        .cycle-loop-note {
+            background: linear-gradient(135deg, #D67B4A 0%, #6B2C3A 100%);
+            color: #E8DFD6;
+            border-radius: 10px;
+            padding: 16px 22px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 4px;
+        }
+        .cycle-loop-note strong { font-size: 1em; }
+
+        /* LINEAR STEPS */
+        .step {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            margin-bottom: 18px;
+        }
+        .step:last-of-type { margin-bottom: 0; }
+        .step-number {
+            flex-shrink: 0;
+            background: #6B2C3A;
+            color: #E8DFD6;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.95em;
+            margin-top: 2px;
+        }
+        .step-content h4 {
+            color: #6B2C3A;
+            font-size: 1.02em;
+            margin-bottom: 4px;
+        }
+        .step-content p { font-size: 0.95em; margin: 0; }
+
+        /* APPLICATION BOX */
+        .application-box {
+            background: linear-gradient(135deg, #E8DFD6 0%, #d4c9be 100%);
+            border-left: 5px solid #D67B4A;
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin-top: 22px;
+        }
+        .application-box h4 {
+            color: #6B2C3A;
+            font-size: 0.9em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 8px;
+        }
+        .application-box p { font-size: 0.95em; margin: 0; }
+
+        /* BEFORE/AFTER */
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 10px;
+        }
+        @media (max-width: 600px) { .before-after { grid-template-columns: 1fr; } }
+        .ba-card {
+            border-radius: 10px;
+            padding: 18px 20px;
+        }
+        .ba-card.before {
+            background: #f3ecec;
+            border-top: 3px solid #B8B8B8;
+        }
+        .ba-card.after {
+            background: #f0ece8;
+            border-top: 3px solid #D67B4A;
+        }
+        .ba-card h4 {
+            font-size: 0.85em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+        }
+        .ba-card.before h4 { color: #B8B8B8; }
+        .ba-card.after h4 { color: #D67B4A; }
+        .ba-card p { font-size: 0.9em; margin: 0; }
+
+        /* INSTRUCTION LIST */
+        .instruction-list { list-style: none; margin-top: 8px; }
+        .instruction-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 11px 0;
+            border-bottom: 1px solid #E8DFD6;
+        }
+        .instruction-list li:last-child { border-bottom: none; }
+        .bullet {
+            flex-shrink: 0;
+            width: 10px;
+            height: 10px;
+            background: #D67B4A;
+            border-radius: 50%;
+            margin-top: 7px;
+        }
+        .instruction-list li p { margin: 0; font-size: 0.95em; }
+        .instruction-list li strong { color: #6B2C3A; }
+
+        /* HOMEWORK */
+        .homework-box {
+            background: linear-gradient(135deg, #f9f6f3 0%, #E8DFD6 100%);
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin-top: 8px;
+        }
+        .homework-box h4 {
+            color: #D67B4A;
+            font-size: 0.9em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 10px;
+        }
+        .homework-box p { font-size: 0.95em; margin-bottom: 8px; }
+        .homework-box p:last-child { margin-bottom: 0; }
+
+        /* MED NOTE */
+        .med-note {
+            background: #f9f6f3;
+            border-radius: 10px;
+            padding: 16px 20px;
+            font-size: 0.9em;
+            color: #4A4A4A;
+            border-left: 3px solid #B8B8B8;
+            margin-top: 8px;
+        }
+
+        /* TAKEAWAYS */
+        .takeaway-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 8px;
+        }
+        @media (max-width: 600px) { .takeaway-grid { grid-template-columns: 1fr; } }
+        .takeaway-item {
+            background: #f9f6f3;
+            border-radius: 8px;
+            padding: 14px 16px;
+            border-left: 3px solid #D67B4A;
+            font-size: 0.92em;
+        }
+
+        /* BOTTOM LINE */
+        .bottom-line {
+            background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+            color: #E8DFD6;
+            border-radius: 14px;
+            padding: 38px 40px;
+        }
+        .bottom-line h2 {
+            color: #E8DFD6;
+            font-size: 1.6em;
+            margin-bottom: 18px;
+            text-align: center;
+        }
+        .bottom-line p {
+            color: #E8DFD6;
+            opacity: 0.92;
+            font-size: 1em;
+            margin-bottom: 14px;
+        }
+        .bottom-line p:last-child { margin-bottom: 0; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="eyebrow">Alignment Psychiatry · Therapeutic Insights</div>
+        <h1>🔄 Breaking the Cycle of Showing Up</h1>
+        <div class="subtitle">Reclaiming Your Story and Self-Worth in the Face of Family Narratives</div>
+    </div>
+
+    <div class="content">
+
+        <!-- THE SITUATION -->
+        <div class="section">
+            <h2>The Situation</h2>
+            <p>A recent family visit reopened wounds that had never fully healed. You were excluded from news about a close relative's near-fatal accident — not by accident, but as a signal. The message was familiar: you are "out of the family." What makes this particularly painful is the contrast. You have spent your life being the person the family calls in a crisis. Now, when the crisis doesn't involve you, they don't call at all.</p>
+            <p>On top of this, ongoing scrutiny from your mother has created a self-consciousness that follows you outside of family interactions — into work, into sleep, into daily life. You're experiencing insomnia, distressing dreams, and difficulty concentrating. The weight you're carrying isn't imaginary. It has a physical address.</p>
+        </div>
+
+        <!-- CORE PROBLEM -->
+        <div class="section">
+            <h2>Core Problem</h2>
+            <p>You were parentified — assigned adult responsibilities as a child that were never yours to carry. Managing insurance claims for dying relatives. Mediating conflicts. Writing scripts for other family members on how to support a cousin in crisis. You did the labor. You showed up. You dealt with it.</p>
+            <p>What you didn't learn — because no one taught you — was how to protect yourself emotionally. And now, when you ask others to show up for you, the family responds with silence, reframes your boundary-setting as abandonment, and casts you as the problem. The mismatch between your actual history of contribution and the way you're currently being treated is the source of your pain. It isn't confusion. It's clarity about something deeply unfair.</p>
+        </div>
+
+        <!-- PULL QUOTE 1 -->
+        <div class="pull-quote">
+            "Now that you ask people to show up and deal with you, they seem to be unwilling. And that freaking hurts."
+        </div>
+
+        <!-- CLINICAL CONCEPTS -->
+        <div class="section">
+            <h2>Understanding the Dynamics</h2>
+            <div class="concepts-grid">
+                <div class="concept-card">
+                    <h4>Parentification</h4>
+                    <p>When a child is assigned adult emotional or practical responsibilities — managing crises, supporting parents, mediating family conflict. It builds capability at the cost of childhood and teaches you to give without knowing how to receive.</p>
+                </div>
+                <div class="concept-card">
+                    <h4>Narrative Manipulation</h4>
+                    <p>When people rewrite events to cast themselves as victims and avoid accountability. Your boundary letter became "an ultimatum." Your years of sacrifice became invisible. The story got spun — and you weren't in the room when it happened.</p>
+                </div>
+                <div class="concept-card">
+                    <h4>Boundary Setting</h4>
+                    <p>Establishing limits on what you will accept from others. Your letter was not an ultimatum — it was an invitation to stay in relationship with you on terms that didn't require your erasure. They declined. That's on them.</p>
+                </div>
+                <div class="concept-card">
+                    <h4>Vulnerability</h4>
+                    <p>Allowing yourself to be open about pain and need, rather than always being the capable one. You have spent your life being strong for everyone else. You are allowed to not be strong. You are allowed to need things.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FRAMEWORK 1: THE CYCLE -->
+        <div class="cycle-block">
+            <h2>🔄 Framework 1: The "Showing Up and Dealing With It" Cycle</h2>
+            <div class="cycle-subtitle">Understanding why the pattern keeps repeating — and why it hurts so much</div>
+
+            <div class="cycle-steps">
+                <div class="cycle-step">
+                    <div class="step-label">1</div>
+                    <h4>The Expectation</h4>
+                    <p>The family expects you to handle crises and absorb emotional labor. This expectation was set in childhood and has never been renegotiated.</p>
+                </div>
+                <div class="cycle-step">
+                    <div class="step-label">2</div>
+                    <h4>You Fulfill It</h4>
+                    <p>You show up. You manage the insurance claim, write the script, make the call, carry the weight. Often at significant personal cost.</p>
+                </div>
+                <div class="cycle-step">
+                    <div class="step-label">3</div>
+                    <h4>You Ask for Something</h4>
+                    <p>When you set a boundary or ask for support in return, the family withdraws, goes silent, or reframes your request as abandonment.</p>
+                </div>
+                <div class="cycle-step">
+                    <div class="step-label">4</div>
+                    <h4>You're Left to Question Yourself</h4>
+                    <p>You feel hurt, isolated, and confused — wondering if you did something wrong. The narrative has been spun before you can respond.</p>
+                </div>
+            </div>
+
+            <div class="cycle-loop-note">
+                <strong>Why it loops:</strong> The family benefits from your labor and suffers no consequence for withdrawing from yours. Until the dynamic is named and interrupted, step 4 circles back to step 1.
+            </div>
+
+            <div class="application-box">
+                <h4>What This Means for You</h4>
+                <p>Your pain is not a reaction to one incident. It's a cumulative response to a lifetime of this cycle running on repeat. The fact that you're feeling it now doesn't mean you're weak — it means the pattern has finally become visible to you. That's the first step to breaking it.</p>
+            </div>
+        </div>
+
+        <!-- FRAMEWORK 2: NAMING YOUR TRUTH -->
+        <div class="cycle-block">
+            <h2>🗣️ Framework 2: The Power of Naming Your Truth</h2>
+            <div class="cycle-subtitle">Reclaiming your narrative — not to shame them, but to stop disappearing</div>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h4>List What You've Actually Done</h4>
+                    <p>Not in your head — on paper. Insurance claims. Crisis calls. Emotional labor. Mediations. Scripts you wrote for others. Make it concrete so it can't be argued away by your own self-doubt.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h4>Acknowledge the Cost</h4>
+                    <p>What did each of those actions take from you emotionally? Time you didn't have? Energy you weren't replenished for? Reflect on what "showing up" actually cost over time.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h4>Decide Whether to Share It</h4>
+                    <p>This is your choice. The reflection has value regardless of whether you communicate it to your family. But if you choose to share, you do so not to prove a point — but to assert who you have been and why their treatment hurts.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h4>Speak the Connection</h4>
+                    <p>If you communicate, connect the dots explicitly: "This is who I have been in this family. This is why it hurts to be treated this way now." Naming the gap between your history and their current behavior closes the loop they've been avoiding.</p>
+                </div>
+            </div>
+
+            <div class="application-box">
+                <h4>The Written Record Matters</h4>
+                <p>One of the tools available to you: what was written cannot be rewritten. When the narrative gets spun, documentation is your anchor. Your letter was already an example of this. The therapist's notes and your own list can serve the same function — a record that says: this happened. This is what I said. This is who I was.</p>
+            </div>
+        </div>
+
+        <!-- FRAMEWORK 3: ACCEPTING LIMITATIONS -->
+        <div class="cycle-block">
+            <h2>🌿 Framework 3: Accepting Their Limitations and Your Own</h2>
+            <div class="cycle-subtitle">Shifting from trying to change them to focusing on your own healing</div>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h4>Recognize the Ceiling</h4>
+                    <p>Your family may not be capable of giving you what you need. This is not a maybe — their behavior over time is evidence. Continuing to invest in hope for a different response keeps you in the cycle.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h4>Separate Their Ceiling from Your Worth</h4>
+                    <p>Their inability to acknowledge your contributions is a reflection of their limitations, not a verdict on your value. People who are losing something valuable don't always know it — until it's gone.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h4>Allow Yourself to Be Human</h4>
+                    <p>You don't have to be the strong one here. The same competence that made you the family's crisis manager has made it hard for you to let yourself need things. That pattern ends when you decide it ends.</p>
+                </div>
+            </div>
+
+            <div class="before-after" style="margin-top: 22px;">
+                <div class="ba-card before">
+                    <h4>The Old Frame</h4>
+                    <p>Internalizing the family's narrative. Believing you're "doing it wrong" when you ask for support. Waiting for them to see your contributions and respond differently.</p>
+                </div>
+                <div class="ba-card after">
+                    <h4>The New Frame</h4>
+                    <p>Naming the pattern. Accepting their limitations as theirs. Shifting energy from changing them to advocating for yourself — not as their caretaker, but as your own.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PULL QUOTE 2 -->
+        <div class="pull-quote">
+            "You are allowed to be human. You don't have to be the strong one in here."
+        </div>
+
+        <!-- PRACTICAL INSTRUCTIONS -->
+        <div class="section">
+            <h2>Putting It Into Practice</h2>
+            <ul class="instruction-list">
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>With your mother specifically:</strong> Tell her directly how her comments make you feel — not in general terms, but concretely. "When you say X, I feel Y, and it follows me into my day." This is different from relitigating history. It's a present-tense statement about impact.</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Document before you doubt:</strong> Make the list before your confidence wavers. The list exists to hold ground when your own memory starts negotiating with the family narrative.</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Notice the silence as a strategy:</strong> The family's withdrawal is not confusion — it's a tactic you have watched them use on others. Recognizing it as deliberate removes some of its power to make you question yourself.</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Let yourself grieve without fixing it:</strong> You don't have to resolve this to be okay. Some of what you're feeling is grief — for the family you needed and didn't have. That grief deserves space, not a solution.</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- HOMEWORK -->
+        <div class="section">
+            <h2>Assignment</h2>
+            <div class="homework-box">
+                <h4>Outline Your Contributions</h4>
+                <p>Review the therapist's notes and build your own list of what you have done for your family — specific, concrete, real. Insurance claims. Crisis calls. Emotional labor. The scripts you wrote. Note what each one cost you.</p>
+                <p>This is not a grievance document. It is a record of your history in this family — one you can return to when the narrative gets rewritten around you. Bring your list and any reflections to your next session.</p>
+            </div>
+        </div>
+
+        <!-- MEDICATION -->
+        <div class="section">
+            <h2>Medication Note</h2>
+            <div class="med-note">
+                No new medications discussed this session. Sleep medication currently in use but insomnia and distressing dreams persist. Continue current regimen — monitor sleep quality and report any changes at the next visit.
+            </div>
+        </div>
+
+        <!-- KEY TAKEAWAYS -->
+        <div class="section">
+            <h2>Key Takeaways</h2>
+            <div class="takeaway-grid">
+                <div class="takeaway-item">You were parentified — given adult responsibilities as a child that shaped how you show up in relationships and made it hard to ask for anything in return.</div>
+                <div class="takeaway-item">The family's silence is not confusion. It is a deliberate tactic — one you have watched them use on others throughout your life.</div>
+                <div class="takeaway-item">When you set a boundary, they called it abandonment. That reframe is narrative manipulation, not an accurate account of what you did.</div>
+                <div class="takeaway-item">Your strength in managing crises is real. So is your current powerlessness to protect yourself emotionally. Both things are true at the same time.</div>
+                <div class="takeaway-item">Their inability to acknowledge your contributions is a reflection of their limitations — not a verdict on your worth.</div>
+                <div class="takeaway-item">Naming what you have done — for yourself, not just for them — is an act of reclaiming your story from the version they've been telling without you.</div>
+                <div class="takeaway-item">You are allowed to need things. You are allowed to be vulnerable. You do not have to be the strong one in order to deserve care.</div>
+                <div class="takeaway-item">Recovery is not linear. What feels like a relapse into old pain is part of the process — not evidence that nothing has changed.</div>
+            </div>
+        </div>
+
+        <!-- BOTTOM LINE -->
+        <div class="bottom-line">
+            <h2>🌱 The Bottom Line</h2>
+            <p>You have spent your life being the person your family called when things fell apart. You managed the unmanageable. You showed up when no one else would. And somewhere in all of that, you never learned how to ask anyone to show up for you — because no one ever modeled that it was allowed.</p>
+            <p>What's happening now is painful precisely because it exposes that gap. You asked for reciprocity. They responded with silence and a rewritten story. The contrast between what you've given and what you're receiving isn't subtle — it's stark. And your pain is not weakness. It is a clear-eyed response to something that is genuinely unfair.</p>
+            <p>The work ahead is not about winning them over or making them see. It's about reclaiming your own record — knowing what you have done, what it cost, and why you deserve more than what you've been given. You are not the abandoner in this story. You are the one who stayed the longest, gave the most, and is finally — for the first time — asking to be treated accordingly.</p>
+            <p>That is not an ultimatum. That is a human being standing up for herself. It's overdue. And it's right.</p>
+        </div>
+
+    </div><!-- end .content -->
+</div><!-- end .container -->
+</body>
+</html>
