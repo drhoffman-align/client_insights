@@ -1,0 +1,361 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Insights - Alignment Psychiatry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #f5f5dc;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        
+        .subtitle {
+            color: #f5f5dc;
+            font-size: 1.1em;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            color: #800020;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid #800020;
+            padding-bottom: 10px;
+        }
+        
+        .white-section {
+            background-color: white;
+            padding: 25px;
+            border-left: 5px solid #ff8c00;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .gradient-box {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+            font-style: italic;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        .insight-box {
+            background: linear-gradient(to right, #fff5e6 0%, #ffe6cc 100%);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #ff8c00;
+        }
+        
+        .framework {
+            margin: 30px 0;
+        }
+        
+        .framework-title {
+            color: #800020;
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .steps {
+            list-style: none;
+            counter-reset: step-counter;
+        }
+        
+        .steps li {
+            counter-increment: step-counter;
+            margin-bottom: 20px;
+            padding-left: 60px;
+            position: relative;
+            line-height: 1.8;
+        }
+        
+        .steps li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: #800020;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .homework-list, .takeaways-list, .concepts-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .homework-list li, .takeaways-list li, .concepts-list li {
+            padding: 12px 0 12px 30px;
+            position: relative;
+            line-height: 1.7;
+        }
+        
+        .homework-list li::before, .takeaways-list li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #ff8c00;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+        
+        .concepts-list li::before {
+            content: "•";
+            position: absolute;
+            left: 10px;
+            color: #800020;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+        
+        .concept-term {
+            font-weight: 600;
+            color: #800020;
+        }
+        
+        .bottom-line {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 40px;
+            text-align: center;
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-top: 40px;
+        }
+        
+        .medication-section {
+            background-color: #fff9f0;
+            padding: 20px;
+            border-radius: 8px;
+            border: 2px solid #ff8c00;
+            margin: 20px 0;
+        }
+        
+        .medication-title {
+            color: #800020;
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .section-title {
+                font-size: 1.5em;
+            }
+            
+            .steps li {
+                padding-left: 50px;
+            }
+            
+            .steps li::before {
+                width: 35px;
+                height: 35px;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Therapeutic Insights</h1>
+            <div class="subtitle">Alignment Psychiatry</div>
+        </header>
+        
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">The Situation</h2>
+                <div class="white-section">
+                    <p>You're navigating an exciting period of creative ambition and transition, balancing your dream of hosting music-centered parties with managing ADHD and daily life demands. Your aspiration is to be a one-stop shop—DJ, promoter, and producer—creating inclusive, community-driven events rooted in authentic music curation. At the same time, you're managing medication for ADHD and anxiety while addressing concerns about appetite and weight loss.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Core Problem</h2>
+                <div class="white-section">
+                    <p>The main challenge is translating your broad creative vision into actionable steps without losing your sense of freedom or authenticity. You're experiencing tension between wanting structure to achieve your goals while fearing it will stifle your creativity. You also need to clarify what "eclectic" and "community" truly mean for your brand so you can move forward with confidence and clarity.</p>
+                </div>
+                
+                <div class="gradient-box">
+                    "Writing your vision makes it real and actionable. Use personal experiences to clarify what you want and don't want."
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Clinical Concepts</h2>
+                <div class="white-section">
+                    <ul class="concepts-list">
+                        <li><span class="concept-term">Visioning:</span> Turning abstract goals into detailed, actionable plans using real examples and written documentation</li>
+                        <li><span class="concept-term">Structure for ADHD:</span> Creating organizational routines that support goals without feeling restrictive</li>
+                        <li><span class="concept-term">Community vs. Elitism:</span> Community emphasizes inclusivity and accessibility; elitism creates barriers and exclusivity</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Therapeutic Frameworks</h2>
+                
+                <div class="framework">
+                    <div class="framework-title">Visioning Through Specificity</div>
+                    <ol class="steps">
+                        <li>Identify your goal clearly and name what you're working toward</li>
+                        <li>Use real-life examples from your experience to clarify the details</li>
+                        <li>Define both what you want and what you don't want</li>
+                        <li>Visualize the experience in vivid detail—the atmosphere, the people, the feeling</li>
+                        <li>Write it down to make it tangible and create a reference point for action</li>
+                    </ol>
+                </div>
+                
+                <div class="framework">
+                    <div class="framework-title">Structure for ADHD Without Rigidity</div>
+                    <ol class="steps">
+                        <li>Use tools like writing to externalize your thoughts and reduce mental clutter</li>
+                        <li>Build flexible routines instead of rigid schedules that feel constraining</li>
+                        <li>Focus on key daily priorities rather than exhaustive checklists that overwhelm</li>
+                    </ol>
+                </div>
+                
+                <div class="insight-box">
+                    <strong>Remember:</strong> Structure helps ADHD management but doesn't require rigidity. The goal is to support your creativity, not suppress it.
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Practical Instructions</h2>
+                <div class="white-section">
+                    <p><strong>For Your Creative Vision:</strong></p>
+                    <p>Start by writing a detailed description of your ideal party. Include the audience you want to attract, the venue atmosphere, the specific music genres you'll feature, and the overall feeling you want to create. Be equally specific about what you want to avoid—what doesn't align with your vision of community and authenticity.</p>
+                    <p style="margin-top: 15px;"><strong>For Managing ADHD:</strong></p>
+                    <p>Use your notebook as an external brain. Reference specific past events you've attended to help clarify your preferences. Define what "eclectic" means to you personally so your brand becomes distinct and recognizable. Remember that the dance floor is central—avoid creating sections that disrupt connection and flow.</p>
+                </div>
+                
+                <div class="gradient-box">
+                    "Prioritize community, inclusivity, and authentic music over elitist vibes. Visualizing goals in detail enables step-by-step progress."
+                </div>
+                
+                <div class="medication-section">
+                    <div class="medication-title">Medication Management</div>
+                    <p><strong>Adderall 15mg:</strong> Take daily for ADHD with food to minimize appetite suppression. This medication helps with both focus and anxiety management.</p>
+                    <p style="margin-top: 10px;"><strong>Diazepam 10mg:</strong> Use only as-needed for acute anxiety episodes, not as a daily medication.</p>
+                    <p style="margin-top: 15px;"><strong>Important:</strong> Monitor appetite suppression and weight loss. Supplement meals with protein shakes if appetite is low. Watch for insomnia with Adderall and be aware of drowsiness and dependence risk with Diazepam.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Homework</h2>
+                <div class="white-section">
+                    <ul class="homework-list">
+                        <li>Write a detailed description of your ideal party including audience, venue, music genres, atmosphere, and what to avoid</li>
+                        <li>Use your notebook to reference specific past events for comparison and clarity</li>
+                        <li>Be as specific as possible about what "eclectic" means to you personally</li>
+                        <li>Bring your written vision to the next session for refinement and next steps</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Key Takeaways</h2>
+                <div class="white-section">
+                    <ul class="takeaways-list">
+                        <li>Writing your vision makes it real and actionable—it's the bridge between dreaming and doing</li>
+                        <li>Use personal experiences to clarify what you want and don't want</li>
+                        <li>Structure helps ADHD management but doesn't require rigidity or perfection</li>
+                        <li>Prioritize community, inclusivity, and authentic music over elitist vibes</li>
+                        <li>Define "eclectic" clearly so your brand is distinct and recognizable</li>
+                        <li>The dance floor is central—avoid sections that disrupt connection</li>
+                        <li>Monitor your health with medication; supplement meals with protein shakes if appetite is low</li>
+                        <li>Use anxiety medication only as needed; Adderall helps both focus and anxiety</li>
+                        <li>Visualizing goals in detail enables step-by-step progress</li>
+                        <li>Start small with intentional planning—150 people is a solid beginning</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-line">
+            <strong>Bottom Line:</strong> Your creative vision is valid and achievable. By writing down the specific details of what you want to create, you transform an abstract dream into a concrete plan. Structure doesn't have to mean rigidity—it can be the flexible framework that supports your ADHD brain while honoring your authentic creative spirit. Start with clarity, build with intention, and remember that community and inclusivity are your guiding principles. You're not just throwing parties; you're creating spaces where people connect through authentic music experiences.
+        </div>
+    </div>
+</body>
+</html>
+```
