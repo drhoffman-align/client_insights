@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reclaiming Agency Amidst Change: Building Stability After Loss</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        @media print {
+            body { background: white; padding: 0; margin: 0; }
+            .container { max-width: none; box-shadow: none; border-radius: 0; }
+            .content { padding: 0.5in; }
+            .section, .framework { page-break-inside: avoid; break-inside: avoid; }
+            .page-break { page-break-before: always; break-before: page; }
+            @page { size: 8.5in 11in; margin: 0.75in; }
+        }
+
+        @media screen {
+            body {
+                background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+                min-height: 100vh;
+                padding: 20px;
+            }
+            .container {
+                max-width: 8.5in;
+                margin: 0 auto;
+                background: #E8DFD6;
+                border-radius: 20px;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+                overflow: hidden;
+            }
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #4A4A4A;
+        }
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+            color: #E8DFD6;
+            padding: 50px 40px;
+            text-align: center;
+        }
+        .header .eyebrow {
+            font-size: 0.82em;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            opacity: 0.7;
+            margin-bottom: 14px;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 14px;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+            line-height: 1.2;
+        }
+        .header .subtitle {
+            font-size: 1.1em;
+            opacity: 0.88;
+            font-style: italic;
+        }
+
+        /* CONTENT */
+        .content { padding: 44px 40px; }
+
+        /* STANDARD SECTION */
+        .section {
+            background: #ffffff;
+            border-radius: 14px;
+            border-left: 5px solid #D67B4A;
+            padding: 30px 32px;
+            margin-bottom: 32px;
+        }
+        .section h2 {
+            color: #6B2C3A;
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #E8DFD6;
+        }
+        .section p { margin-bottom: 12px; }
+        .section p:last-child { margin-bottom: 0; }
+
+        /* FRAMEWORK */
+        .framework {
+            background: #ffffff;
+            border-radius: 14px;
+            border-left: 5px solid #6B2C3A;
+            padding: 30px 32px;
+            margin-bottom: 32px;
+        }
+        .framework h2 {
+            color: #6B2C3A;
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .framework .fw-subtitle {
+            color: #D67B4A;
+            font-size: 0.95em;
+            font-style: italic;
+            margin-bottom: 22px;
+            padding-bottom: 14px;
+            border-bottom: 2px solid #E8DFD6;
+        }
+
+        /* PULL QUOTE */
+        .pull-quote {
+            background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+            color: #E8DFD6;
+            padding: 26px 36px;
+            border-radius: 12px;
+            margin: 28px 0;
+            font-size: 1.2em;
+            font-style: italic;
+            text-align: center;
+            box-shadow: 0 6px 18px rgba(107,44,58,0.25);
+            line-height: 1.6;
+        }
+
+        /* STRESSOR GRID */
+        .stressor-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 10px;
+        }
+        @media (max-width: 600px) { .stressor-grid { grid-template-columns: 1fr; } }
+        .stressor-card {
+            background: #f9f6f3;
+            border-radius: 10px;
+            padding: 16px 18px;
+            border-left: 3px solid #D67B4A;
+            font-size: 0.9em;
+        }
+        .stressor-card strong { color: #6B2C3A; display: block; margin-bottom: 4px; }
+
+        /* CONCEPTS GRID */
+        .concepts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 10px;
+        }
+        @media (max-width: 600px) { .concepts-grid { grid-template-columns: 1fr; } }
+        .concept-card {
+            background: #f9f6f3;
+            border-radius: 10px;
+            padding: 18px 20px;
+            border-top: 3px solid #D67B4A;
+        }
+        .concept-card h4 { color: #6B2C3A; font-size: 0.95em; font-weight: 700; margin-bottom: 6px; }
+        .concept-card p { font-size: 0.88em; margin: 0; }
+
+        /* ROLE SHIFT */
+        .role-shift {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 16px;
+            align-items: center;
+            margin: 20px 0;
+        }
+        @media (max-width: 600px) {
+            .role-shift { grid-template-columns: 1fr; }
+            .role-arrow { transform: rotate(90deg); }
+        }
+        .role-card {
+            border-radius: 12px;
+            padding: 22px 20px;
+            text-align: center;
+        }
+        .role-card.before {
+            background: #f3ecec;
+            border: 2px solid #B8B8B8;
+        }
+        .role-card.after {
+            background: linear-gradient(135deg, #f0ece8, #E8DFD6);
+            border: 2px solid #D67B4A;
+        }
+        .role-card .role-title {
+            font-size: 1.1em;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .role-card.before .role-title { color: #B8B8B8; }
+        .role-card.after .role-title { color: #D67B4A; }
+        .role-card p { font-size: 0.88em; }
+        .role-arrow {
+            font-size: 2em;
+            color: #6B2C3A;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        /* STEPS */
+        .step {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            margin-bottom: 18px;
+        }
+        .step:last-of-type { margin-bottom: 0; }
+        .step-number {
+            flex-shrink: 0;
+            background: #6B2C3A;
+            color: #E8DFD6;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.95em;
+            margin-top: 2px;
+        }
+        .step-content h4 { color: #6B2C3A; font-size: 1.02em; margin-bottom: 4px; }
+        .step-content p { font-size: 0.95em; margin: 0; }
+
+        /* APPLICATION BOX */
+        .application-box {
+            background: linear-gradient(135deg, #E8DFD6 0%, #d4c9be 100%);
+            border-left: 5px solid #D67B4A;
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin-top: 22px;
+        }
+        .application-box h4 {
+            color: #6B2C3A;
+            font-size: 0.9em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 8px;
+        }
+        .application-box p { font-size: 0.95em; margin: 0; }
+
+        /* MORNING ROUTINE VISUAL */
+        .routine-flow {
+            display: flex;
+            align-items: stretch;
+            gap: 0;
+            margin-top: 14px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        @media (max-width: 600px) { .routine-flow { flex-direction: column; } }
+        .routine-step {
+            flex: 1;
+            padding: 18px 16px;
+            text-align: center;
+            position: relative;
+        }
+        .routine-step:nth-child(1) { background: #6B2C3A; color: #E8DFD6; }
+        .routine-step:nth-child(2) { background: #8a3a4a; color: #E8DFD6; }
+        .routine-step:nth-child(3) { background: #D67B4A; color: #E8DFD6; }
+        .routine-step .r-icon { font-size: 1.6em; margin-bottom: 6px; display: block; }
+        .routine-step .r-label { font-size: 0.78em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
+        .routine-step .r-desc { font-size: 0.82em; opacity: 0.88; }
+
+        /* INSTRUCTION LIST */
+        .instruction-list { list-style: none; margin-top: 8px; }
+        .instruction-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 11px 0;
+            border-bottom: 1px solid #E8DFD6;
+        }
+        .instruction-list li:last-child { border-bottom: none; }
+        .bullet {
+            flex-shrink: 0;
+            width: 10px;
+            height: 10px;
+            background: #D67B4A;
+            border-radius: 50%;
+            margin-top: 7px;
+        }
+        .instruction-list li p { margin: 0; font-size: 0.95em; }
+        .instruction-list li strong { color: #6B2C3A; }
+
+        /* HOMEWORK */
+        .homework-box {
+            background: linear-gradient(135deg, #f9f6f3 0%, #E8DFD6 100%);
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin-top: 8px;
+        }
+        .homework-box h4 {
+            color: #D67B4A;
+            font-size: 0.9em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 12px;
+        }
+        .hw-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 14px;
+        }
+        .hw-item:last-child { margin-bottom: 0; }
+        .hw-num {
+            flex-shrink: 0;
+            background: #D67B4A;
+            color: white;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+            font-weight: 700;
+            margin-top: 2px;
+        }
+        .hw-item p { font-size: 0.93em; margin: 0; }
+        .hw-item strong { color: #6B2C3A; }
+
+        /* MED NOTE */
+        .med-note {
+            background: #f9f6f3;
+            border-radius: 10px;
+            padding: 16px 20px;
+            font-size: 0.9em;
+            border-left: 3px solid #B8B8B8;
+            margin-top: 8px;
+        }
+        .med-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        .med-tag {
+            background: #E8DFD6;
+            border: 1px solid #B8B8B8;
+            border-radius: 20px;
+            padding: 4px 14px;
+            font-size: 0.85em;
+        }
+        .med-tag strong { color: #6B2C3A; }
+
+        /* TAKEAWAYS */
+        .takeaway-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 8px;
+        }
+        @media (max-width: 600px) { .takeaway-grid { grid-template-columns: 1fr; } }
+        .takeaway-item {
+            background: #f9f6f3;
+            border-radius: 8px;
+            padding: 14px 16px;
+            border-left: 3px solid #D67B4A;
+            font-size: 0.92em;
+        }
+
+        /* BOTTOM LINE */
+        .bottom-line {
+            background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+            color: #E8DFD6;
+            border-radius: 14px;
+            padding: 38px 40px;
+        }
+        .bottom-line h2 {
+            color: #E8DFD6;
+            font-size: 1.6em;
+            margin-bottom: 18px;
+            text-align: center;
+        }
+        .bottom-line p {
+            color: #E8DFD6;
+            opacity: 0.92;
+            font-size: 1em;
+            margin-bottom: 14px;
+        }
+        .bottom-line p:last-child { margin-bottom: 0; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="eyebrow">Alignment Psychiatry · Therapeutic Insights</div>
+        <h1>🧭 Reclaiming Agency Amidst Change</h1>
+        <div class="subtitle">Building Stability After Loss</div>
+    </div>
+
+    <div class="content">
+
+        <!-- THE SITUATION -->
+        <div class="section">
+            <h2>The Situation</h2>
+            <p>You are navigating several major stressors hitting simultaneously — not one at a time, the way you'd plan for them, but all at once. Job loss. Housing instability. Family grief. A worsening situation with a parent. A relationship on pause until conditions stabilize. This is not a manageable pile. It's a cascade.</p>
+            <div class="stressor-grid">
+                <div class="stressor-card">
+                    <strong>Work</strong>
+                    Contract ending within a month. Decision pending: leave early for a payout or stay through August.
+                </div>
+                <div class="stressor-card">
+                    <strong>Housing</strong>
+                    Must find new housing for yourself and your pets with limited support and a compressed timeline.
+                </div>
+                <div class="stressor-card">
+                    <strong>Family</strong>
+                    Recent loss of a close family member. A parent's dementia worsening inside a complicated family system.
+                </div>
+                <div class="stressor-card">
+                    <strong>Connection</strong>
+                    Isolated from your usual community. Your relationship is on hold. The support structures you relied on are gone.
+                </div>
+            </div>
+            <p style="margin-top: 16px;">Underneath all of it: a sense of being in shock. Low energy. Difficulty getting out of bed. A grief not just for what you've lost, but for who you were inside those structures.</p>
+        </div>
+
+        <!-- CORE PROBLEM -->
+        <div class="section">
+            <h2>Core Problem</h2>
+            <p>The stressors are real — but the deeper issue is what they've done to your relationship with your own agency. You've shifted into reactive mode: getting by, filling in whatever blanks life hands you, managing one crisis at a time without directing your own path.</p>
+            <p>What makes this particularly sharp is the mismatch. The evidence of your past capability is substantial. You have navigated hard things. You have created change when it mattered. You've shown up fully — for jobs, for communities, for other people. The question this session raises is: why is it so hard to do it for yourself?</p>
+        </div>
+
+        <!-- PULL QUOTE 1 -->
+        <div class="pull-quote">
+            "You were all in when it wasn't for you. Now that it's for you, you're not."
+        </div>
+
+        <!-- CLINICAL CONCEPTS -->
+        <div class="section">
+            <h2>Understanding the Dynamics</h2>
+            <div class="concepts-grid">
+                <div class="concept-card">
+                    <h4>Ego Death</h4>
+                    <p>The painful process of losing old identities, roles, and beliefs about yourself — often after major life upheaval. It's disorienting because the self you relied on is gone before the new one has taken shape. It's also, eventually, an opening.</p>
+                </div>
+                <div class="concept-card">
+                    <h4>Agency</h4>
+                    <p>The ability to make choices and influence your own outcomes. You have it. The current crisis has made it feel inaccessible — but your history shows it's there. The work is reconnecting with it.</p>
+                </div>
+                <div class="concept-card">
+                    <h4>Rumination</h4>
+                    <p>Getting stuck in repetitive, circular, negative thinking. Worries loop without resolution when they stay in your head. Externalizing them — getting them onto paper — interrupts the cycle.</p>
+                </div>
+                <div class="concept-card">
+                    <h4>Reactive vs. Strategic Mode</h4>
+                    <p>Reactive mode responds to whatever appears next. Strategic mode plans, sequences, and makes decisions ahead of the crisis. You are capable of both — right now you're stuck in the first one.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FRAMEWORK 1: DEPUTY DIRECTOR -->
+        <div class="framework">
+            <h2>🎬 Framework 1: The Deputy Director Model</h2>
+            <div class="fw-subtitle">Moving from managing your life to leading it</div>
+
+            <p style="margin-bottom: 20px;">You described yourself as the "deputy director" of your own life — technically in charge, but not quite claiming the role. The director's chair is yours. The question is whether you're willing to sit in it.</p>
+
+            <div class="role-shift">
+                <div class="role-card before">
+                    <div class="role-title">Deputy Director</div>
+                    <p>Responding to what arrives. Managing crises. Filling in the blanks of whatever change brings. Letting external events set the agenda.</p>
+                </div>
+                <div class="role-arrow">→</div>
+                <div class="role-card after">
+                    <div class="role-title">Director</div>
+                    <p>Setting the agenda. Making decisions ahead of the crisis. Planning with intention. Treating your life like a project that deserves strategy.</p>
+                </div>
+            </div>
+
+            <div class="step" style="margin-top: 20px;">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h4>Recognize Who's Currently Running Things</h4>
+                    <p>Notice the moments when "change" or circumstances are making your decisions for you. Name it when it's happening. You can't redirect something you haven't identified.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h4>Recall the Evidence</h4>
+                    <p>You have found jobs before. Built community from scratch. Made significant things happen when they mattered. The capability that created those outcomes still belongs to you. It didn't leave with the circumstances that are gone.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h4>Strategize Before You React</h4>
+                    <p>Make lists. Block out time. Sequence your next moves. Treat housing and employment as projects with steps, not walls to run into. The strategist in you knows how to do this.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h4>Claim the Role</h4>
+                    <p>Accept that you have power over more than you currently feel you do. Not everything — but more. The difference between deputy and director is not capability. It's willingness to accept responsibility for the outcome.</p>
+                </div>
+            </div>
+
+            <div class="application-box">
+                <h4>The Ego Death Reframe</h4>
+                <p>The identity loss you're experiencing is real and painful. But ego death is also the precondition for something new. The roles you've lost were not always yours to carry — some of them needed to go. What's on the other side of this isn't just recovery. It's an opportunity to build something more authentically yours.</p>
+            </div>
+        </div>
+
+        <!-- PULL QUOTE 2 -->
+        <div class="pull-quote">
+            "Spend less time in your head than you do on paper."
+        </div>
+
+        <!-- FRAMEWORK 2: JOURNALING -->
+        <div class="framework">
+            <h2>📓 Framework 2: Truth-Telling Journaling</h2>
+            <div class="fw-subtitle">Getting worries out of your head and onto paper — where they can be solved</div>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h4>Write Daily — Ideally Outside Your Home</h4>
+                    <p>A coffee shop, a park, anywhere that isn't the space where you've been stuck. The change of environment matters. It signals to your nervous system that something is different today.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h4>Externalize Every Worry</h4>
+                    <p>Write down every fear, every "what if," every negative loop you've been running. Don't filter. The goal is to empty the mental queue onto paper, where each worry can be seen for what it actually is — rather than what it feels like at 3am.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h4>Problem-Solve on Paper</h4>
+                    <p>Once a worry is written, respond to it directly. What is actually true? What is catastrophizing? What is solvable? What is outside your control? The page is where rumination becomes analysis.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h4>Capture Throughout the Day</h4>
+                    <p>When a worry surfaces between sessions, write it down immediately — phone notes, scraps of paper, anything. Bring them to your next journaling block to process. The goal is that nothing stays trapped in your head unexamined.</p>
+                </div>
+            </div>
+
+            <div class="application-box">
+                <h4>Why This Works for You Specifically</h4>
+                <p>You are someone who processes internally, which means worries compound invisibly. Writing forces the loop to complete — and gives you something concrete to argue with, adjust, or discard. The journal is not a diary. It's a problem-solving tool.</p>
+            </div>
+        </div>
+
+        <!-- FRAMEWORK 3: MEDICATION AS FOUNDATION -->
+        <div class="framework">
+            <h2>💊 Framework 3: Medication as the Non-Negotiable First Step</h2>
+            <div class="fw-subtitle">The morning routine that makes everything else possible</div>
+
+            <p style="margin-bottom: 18px;">Medication adherence is not one item on your list. It is the foundation that makes every other item on your list achievable. Missing a dose doesn't just affect one day — it creates a domino effect on mood, energy, and motivation that can set back an entire week.</p>
+
+            <div class="routine-flow">
+                <div class="routine-step">
+                    <span class="r-icon">💊</span>
+                    <div class="r-label">Before Eyes Open</div>
+                    <div class="r-desc">Medication is on your nightstand. Take it before you give yourself a chance to negotiate.</div>
+                </div>
+                <div class="routine-step">
+                    <span class="r-icon">📓</span>
+                    <div class="r-label">Get Outside</div>
+                    <div class="r-desc">Journal in a public space. Morning. Non-negotiable. 1–2 hours minimum.</div>
+                </div>
+                <div class="routine-step">
+                    <span class="r-icon">🎬</span>
+                    <div class="r-label">Direct Your Day</div>
+                    <div class="r-desc">One strategic action — housing search, job applications, a single decision made.</div>
+                </div>
+            </div>
+
+            <div class="application-box" style="margin-top: 16px;">
+                <h4>The Logic of No Negotiation</h4>
+                <p>The brain at waking is not your most rational brain. It will find reasons to delay, to wait, to see how you feel first. Don't ask it. Place the medication where there's no decision to make. The action precedes the motivation — not the other way around.</p>
+            </div>
+
+            <div class="med-note" style="margin-top: 16px;">
+                <strong style="color: #6B2C3A;">Medication:</strong> Current psychiatric regimen as previously prescribed.
+                <div class="med-tags">
+                    <div class="med-tag">Take before getting out of bed</div>
+                    <div class="med-tag">Every day including weekends</div>
+                    <div class="med-tag">If missed — catch up immediately</div>
+                    <div class="med-tag">Monitor energy and mood</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRACTICAL INSTRUCTIONS -->
+        <div class="section">
+            <h2>Putting It Into Practice</h2>
+            <ul class="instruction-list">
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Review your résumé — not as a job tool, but as evidence.</strong> Look at what you built, where you were, what you created. The person who did those things is still you. Read it as a reminder of capability, not a checklist of the past.</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Treat housing and employment as projects, not emergencies.</strong> Make lists. Identify concrete next steps. Block time for searching. Sequenced action is less overwhelming than a mass of unresolved pressure.</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Let yourself grieve without making it mean something is broken.</strong> The losses are real. Grieving them is not the same as being stuck. The ego death you're in the middle of is a transition — painful, not permanent.</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Be cautious with family systems during this window.</strong> Worsening dementia in a parent, complicated by a toxic family dynamic, is a high-drain environment. Protect your emotional resources. Know the difference between showing up and being consumed.</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- HOMEWORK -->
+        <div class="section">
+            <h2>Assignments</h2>
+            <div class="homework-box">
+                <h4>Before the Next Session</h4>
+                <div class="hw-item">
+                    <div class="hw-num">1</div>
+                    <p><strong>Medication routine:</strong> Medication by the bed, taken before getting up, every morning. Note any missed days and how you felt on those days. Bring observations.</p>
+                </div>
+                <div class="hw-item">
+                    <div class="hw-num">2</div>
+                    <p><strong>Daily journaling:</strong> Outside the home, ideally a coffee shop or outdoors, 1–2 hours. Write down worries as they arise throughout the day. Bring your notes.</p>
+                </div>
+                <div class="hw-item">
+                    <div class="hw-num">3</div>
+                    <p><strong>Résumé review:</strong> Read it once — not to edit, but to reconnect. Note any memories or feelings that surface. What does it remind you of about who you are?</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- KEY TAKEAWAYS -->
+        <div class="section">
+            <h2>Key Takeaways</h2>
+            <div class="takeaway-grid">
+                <div class="takeaway-item">Feeling powerless is a feeling, not a fact. Your history provides substantial evidence of your capacity to create change — including under pressure.</div>
+                <div class="takeaway-item">You are in reactive mode right now. The move from deputy to director starts with one strategic decision made on purpose — not in response to a crisis.</div>
+                <div class="takeaway-item">Medication adherence is not optional. It is the first domino. Everything else in your day depends on it being taken before you give yourself room to negotiate.</div>
+                <div class="takeaway-item">Rumination compounds in silence. Writing externalizes the loop and makes it solvable. What stays in your head stays circular.</div>
+                <div class="takeaway-item">Ego death is real and painful — and also the precondition for rebuilding something more authentic. Some of what you've lost needed to go.</div>
+                <div class="takeaway-item">The next two months are a window, not a deadline. Housing and work are solvable. Beneath those problems is a bigger one: reconnecting with yourself.</div>
+                <div class="takeaway-item">You built community from scratch before. You found work before. You navigated hard transitions before. That skillset is yours — it belongs to you, not to the circumstances that are gone.</div>
+                <div class="takeaway-item">Action precedes motivation. Don't wait to feel ready. The routine creates the momentum — not the other way around.</div>
+            </div>
+        </div>
+
+        <!-- BOTTOM LINE -->
+        <div class="bottom-line">
+            <h2>🧭 The Bottom Line</h2>
+            <p>You are not starting from zero. You are starting from experience — a different thing. Everything you've navigated, built, and survived is still in you. The circumstances that housed those achievements are gone. The capability that created them isn't.</p>
+            <p>Right now, the most important thing is not finding the apartment or the job — though both matter. It's reclaiming your relationship with your own agency. The director's chair is empty and it belongs to you. The way back into it isn't through a breakthrough. It's through a morning routine. Medication before your feet hit the floor. Journal open in a coffee shop. One decision made on purpose.</p>
+            <p>The grief is real. Let it be real. And inside it, start building — not the life you lost, but the one you're actually trying to get to. You have the evidence that you can do this. You have been all in for other people, for jobs, for communities. Now it's your turn. Show up for yourself the way you show up for everything else. That's the only thing left to figure out.</p>
+        </div>
+
+    </div><!-- end .content -->
+</div><!-- end .container -->
+</body>
+</html>
