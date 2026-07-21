@@ -1,0 +1,387 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Insights - Alignment Psychiatry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #f5f5dc;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        
+        .subtitle {
+            color: #f5f5dc;
+            font-size: 1.1em;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            color: #800020;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .section-content {
+            font-size: 1.05em;
+            line-height: 1.8;
+            color: #444;
+        }
+        
+        .quote-box {
+            background: linear-gradient(135deg, #800020 0%, #a64253 100%);
+            color: white;
+            padding: 25px 30px;
+            margin: 25px 0;
+            border-radius: 8px;
+            font-style: italic;
+            font-size: 1.1em;
+            line-height: 1.7;
+        }
+        
+        .white-section {
+            background-color: white;
+            border-left: 5px solid #ff8c00;
+            padding: 25px 30px;
+            margin: 25px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .insight-box {
+            background: linear-gradient(135deg, #f5f5dc 0%, #e8e8d0 100%);
+            padding: 25px 30px;
+            margin: 25px 0;
+            border-radius: 8px;
+            border-left: 5px solid #800020;
+        }
+        
+        .framework {
+            margin: 30px 0;
+        }
+        
+        .framework-title {
+            color: #800020;
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .steps {
+            margin: 20px 0;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .step-number {
+            background-color: #800020;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            flex-shrink: 0;
+            margin-right: 20px;
+        }
+        
+        .step-content {
+            flex: 1;
+            padding-top: 8px;
+            font-size: 1.05em;
+            line-height: 1.7;
+        }
+        
+        .homework-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .homework-list li {
+            padding: 12px 0 12px 30px;
+            position: relative;
+            line-height: 1.7;
+            font-size: 1.05em;
+        }
+        
+        .homework-list li:before {
+            content: "•";
+            color: #ff8c00;
+            font-size: 1.5em;
+            position: absolute;
+            left: 0;
+            top: 8px;
+        }
+        
+        .takeaways-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .takeaways-list li {
+            padding: 12px 0 12px 30px;
+            position: relative;
+            line-height: 1.7;
+            font-size: 1.05em;
+        }
+        
+        .takeaways-list li:before {
+            content: "•";
+            color: #800020;
+            font-size: 1.5em;
+            position: absolute;
+            left: 0;
+            top: 8px;
+        }
+        
+        .bottom-line {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: white;
+            padding: 40px;
+            margin-top: 40px;
+            text-align: center;
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
+        
+        .bottom-line-title {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: #f5f5dc;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .section-title {
+                font-size: 1.5em;
+            }
+            
+            .quote-box, .white-section, .insight-box {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Therapeutic Insights</h1>
+            <div class="subtitle">Alignment Psychiatry</div>
+        </header>
+        
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">The Situation</h2>
+                <div class="section-content">
+                    <p>You struggle with chronic self-criticism, particularly around jiu jitsu competitions. You fixate on perceived failures rather than accomplishments, feeling more comfortable in self-hate than self-acceptance. You experience difficulty translating practice energy into competition performance, leading to disappointment and intensified shame cycles.</p>
+                </div>
+            </div>
+            
+            <div class="quote-box">
+                "Shame isn't required for growth—disappointment motivates without self-hate."
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Core Problem</h2>
+                <div class="white-section">
+                    <p>You use shame and self-degradation as primary motivators, believing feeling terrible about mistakes is necessary for improvement. This creates a cycle where shame becomes both punishment and fuel, ultimately causing stagnation, avoidance, and diminished self-worth despite genuine effort.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Clinical Concepts</h2>
+                <div class="insight-box">
+                    <p><strong>Shame:</strong> A painful emotion from believing oneself fundamentally flawed. While often used as a motivator, it actually causes avoidance and prevents growth.</p>
+                    <p style="margin-top: 15px;"><strong>Self-degradation:</strong> Excessive self-criticism used as a coping mechanism that ultimately prevents genuine growth and learning.</p>
+                    <p style="margin-top: 15px;"><strong>Energy Allocation:</strong> What you focus on grows—shame reinforces more shame, while learning builds skill. Where you direct your emotional energy matters.</p>
+                </div>
+            </div>
+            
+            <div class="quote-box">
+                "Direct emotional energy toward learning, not self-punishment."
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Therapeutic Frameworks</h2>
+                
+                <div class="framework">
+                    <div class="framework-title">Necessary vs. Unnecessary Shame</div>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">Identify the emotion you're experiencing and name it clearly</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">Assess whether it inspires change or simply worsens how you feel</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">Determine if it leads to insight or keeps you stuck in rumination</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">Redirect from shame to constructive analysis of what happened</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="framework">
+                    <div class="framework-title">Absorb, Understand, Let Go</div>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">Acknowledge the event and your feelings about it without judgment</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">Analyze what happened and what you can learn without self-criticism</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">Release the shame and move forward with insight and intention</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="framework">
+                    <div class="framework-title">Energy Allocation</div>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">Notice where your emotional energy is flowing right now</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">Choose to invest in problem-solving over self-punishment</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">Use emotions as signals about what matters, not as weapons against yourself</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="quote-box">
+                "Improvement comes from insight and action, not from feeling terrible."
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Practical Instructions</h2>
+                <div class="white-section">
+                    <p>After each practice or competition, pause and use the "Absorb, Understand, Let Go" framework. First, acknowledge what happened and how you feel about it—this is the absorb phase. Next, analyze your performance objectively, noting what you learned and what you might do differently—this is understanding. Finally, write a release statement where you consciously choose to move forward with your insights rather than carrying shame—this is letting go.</p>
+                    <p style="margin-top: 15px;">Remember that analyzing mistakes without judgment breaks the shame cycle. Writing externalizes your thoughts and provides perspective. The goal is to redirect your considerable emotional energy from self-punishment toward actual learning and growth.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Homework</h2>
+                <ul class="homework-list">
+                    <li>After each practice or competition, write a reflection using the "absorb, understand, let go" framework</li>
+                    <li>Document what happened and your feelings about it (absorb phase)</li>
+                    <li>List specific performance observations and learnings without judgment (understand phase)</li>
+                    <li>Write a release statement choosing to move forward with insight (let go phase)</li>
+                    <li>Bring your written reflections to the next session for discussion</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Key Takeaways</h2>
+                <ul class="takeaways-list">
+                    <li>Shame isn't required for growth—disappointment motivates without self-hate</li>
+                    <li>Over-focusing on failures reinforces negativity and stalls progress</li>
+                    <li>Direct emotional energy toward learning, not self-punishment</li>
+                    <li>Feeling less bad doesn't mean caring less about improvement</li>
+                    <li>Shame as a coping mechanism can be unlearned with practice</li>
+                    <li>Analyze mistakes without judgment to break shame cycles</li>
+                    <li>Writing externalizes thoughts and provides helpful perspective</li>
+                    <li>Improvement comes from insight and action, not feeling terrible</li>
+                    <li>Use emotions as signals about what matters, not self-weapons</li>
+                    <li>Avoid ruminating; focus on what to do differently next time</li>
+                    <li>Self-compassion develops with consistent practice</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="bottom-line">
+            <div class="bottom-line-title">Bottom Line</div>
+            <p>You've been using shame as fuel, believing you need to feel terrible to improve. But shame doesn't build skill—it builds avoidance. The work now is to redirect that powerful emotional energy from self-punishment toward actual learning. You can be disappointed without being degrading. You can analyze mistakes without attacking yourself. Growth happens through insight and action, not through feeling bad enough. This shift takes practice, but it's the path forward.</p>
+        </div>
+    </div>
+</body>
+</html>
+```
