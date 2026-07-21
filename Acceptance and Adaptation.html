@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Managing Expectations: Acceptance and Adaptation in Family Dynamics</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        @media print {
+            body { background: white; padding: 0; margin: 0; }
+            .container { max-width: none; box-shadow: none; border-radius: 0; }
+            .content { padding: 0.5in; }
+            .section, .framework { page-break-inside: avoid; break-inside: avoid; }
+            .page-break { page-break-before: always; break-before: page; }
+            @page { size: 8.5in 11in; margin: 0.75in; }
+        }
+
+        @media screen {
+            body {
+                background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+                min-height: 100vh;
+                padding: 20px;
+            }
+            .container {
+                max-width: 8.5in;
+                margin: 0 auto;
+                background: #E8DFD6;
+                border-radius: 20px;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+                overflow: hidden;
+            }
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #4A4A4A;
+        }
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+            color: #E8DFD6;
+            padding: 50px 40px;
+            text-align: center;
+        }
+        .header .eyebrow {
+            font-size: 0.82em;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            opacity: 0.7;
+            margin-bottom: 14px;
+        }
+        .header h1 {
+            font-size: 2.4em;
+            font-weight: 700;
+            margin-bottom: 14px;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+            line-height: 1.2;
+        }
+        .header .subtitle {
+            font-size: 1.1em;
+            opacity: 0.88;
+            font-style: italic;
+        }
+
+        /* CONTENT */
+        .content { padding: 44px 40px; }
+
+        /* STANDARD SECTION */
+        .section {
+            background: #ffffff;
+            border-radius: 14px;
+            border-left: 5px solid #D67B4A;
+            padding: 30px 32px;
+            margin-bottom: 32px;
+        }
+        .section h2 {
+            color: #6B2C3A;
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #E8DFD6;
+        }
+        .section p { margin-bottom: 12px; }
+        .section p:last-child { margin-bottom: 0; }
+
+        /* FRAMEWORK */
+        .framework {
+            background: #ffffff;
+            border-radius: 14px;
+            border-left: 5px solid #6B2C3A;
+            padding: 30px 32px;
+            margin-bottom: 32px;
+        }
+        .framework h2 {
+            color: #6B2C3A;
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .framework .fw-subtitle {
+            color: #D67B4A;
+            font-size: 0.95em;
+            font-style: italic;
+            margin-bottom: 22px;
+            padding-bottom: 14px;
+            border-bottom: 2px solid #E8DFD6;
+        }
+
+        /* PULL QUOTE */
+        .pull-quote {
+            background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+            color: #E8DFD6;
+            padding: 26px 36px;
+            border-radius: 12px;
+            margin: 28px 0;
+            font-size: 1.2em;
+            font-style: italic;
+            text-align: center;
+            box-shadow: 0 6px 18px rgba(107,44,58,0.25);
+            line-height: 1.6;
+        }
+
+        /* CONCEPTS GRID */
+        .concepts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 10px;
+        }
+        @media (max-width: 600px) { .concepts-grid { grid-template-columns: 1fr; } }
+        .concept-card {
+            background: #f9f6f3;
+            border-radius: 10px;
+            padding: 18px 20px;
+            border-top: 3px solid #D67B4A;
+        }
+        .concept-card h4 { color: #6B2C3A; font-size: 0.95em; font-weight: 700; margin-bottom: 6px; }
+        .concept-card p { font-size: 0.88em; margin: 0; }
+
+        /* FRUSTRATION CYCLE */
+        .frustration-cycle {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            margin: 16px 0;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        @media (max-width: 600px) { .frustration-cycle { flex-direction: column; } }
+        .fc-node {
+            flex: 1;
+            padding: 18px 14px;
+            text-align: center;
+        }
+        .fc-node:nth-child(1) { background: #3d1a21; }
+        .fc-node:nth-child(2) { background: #52242c; }
+        .fc-node:nth-child(3) { background: #622c36; }
+        .fc-node:nth-child(4) { background: #6B2C3A; }
+        .fc-node .fc-icon { font-size: 1.5em; display: block; margin-bottom: 6px; }
+        .fc-node h4 { color: #D67B4A; font-size: 0.82em; font-weight: 700; margin-bottom: 4px; }
+        .fc-node p { color: #E8DFD6; font-size: 0.78em; opacity: 0.88; margin: 0; }
+        .cycle-arrow {
+            color: #E8DFD6;
+            font-size: 1.2em;
+            padding: 0 4px;
+            opacity: 0.5;
+            align-self: center;
+        }
+
+        /* CONTROL GRID */
+        .control-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 16px 0;
+        }
+        @media (max-width: 600px) { .control-grid { grid-template-columns: 1fr; } }
+        .control-col {
+            padding: 22px 20px;
+        }
+        .control-col.cannot { background: #f3ecec; border-right: 1px solid #E8DFD6; }
+        .control-col.can { background: #f0ece8; }
+        .control-col h4 {
+            font-size: 0.82em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 14px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid;
+        }
+        .control-col.cannot h4 { color: #B8B8B8; border-color: #B8B8B8; }
+        .control-col.can h4 { color: #D67B4A; border-color: #D67B4A; }
+        .control-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 10px;
+            font-size: 0.88em;
+        }
+        .control-item:last-child { margin-bottom: 0; }
+        .control-dot {
+            flex-shrink: 0;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-top: 6px;
+        }
+        .cannot .control-dot { background: #B8B8B8; }
+        .can .control-dot { background: #D67B4A; }
+
+        /* STEPS */
+        .step {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            margin-bottom: 18px;
+        }
+        .step:last-of-type { margin-bottom: 0; }
+        .step-number {
+            flex-shrink: 0;
+            background: #6B2C3A;
+            color: #E8DFD6;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.95em;
+            margin-top: 2px;
+        }
+        .step-content h4 { color: #6B2C3A; font-size: 1.02em; margin-bottom: 4px; }
+        .step-content p { font-size: 0.95em; margin: 0; }
+
+        /* APPLICATION BOX */
+        .application-box {
+            background: linear-gradient(135deg, #E8DFD6 0%, #d4c9be 100%);
+            border-left: 5px solid #D67B4A;
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin-top: 22px;
+        }
+        .application-box h4 {
+            color: #6B2C3A;
+            font-size: 0.9em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 8px;
+        }
+        .application-box p { font-size: 0.95em; margin: 0; }
+
+        /* ACCEPTANCE DISTINCTION */
+        .distinction-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 10px;
+        }
+        @media (max-width: 600px) { .distinction-box { grid-template-columns: 1fr; } }
+        .distinction-card {
+            border-radius: 10px;
+            padding: 20px 20px;
+        }
+        .distinction-card.is-not {
+            background: #f3ecec;
+            border-top: 3px solid #B8B8B8;
+        }
+        .distinction-card.is {
+            background: #f0ece8;
+            border-top: 3px solid #D67B4A;
+        }
+        .distinction-card h4 {
+            font-size: 0.82em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 12px;
+        }
+        .distinction-card.is-not h4 { color: #B8B8B8; }
+        .distinction-card.is h4 { color: #D67B4A; }
+        .distinction-card ul { list-style: none; }
+        .distinction-card ul li {
+            font-size: 0.88em;
+            padding: 5px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+        .distinction-card ul li:last-child { border-bottom: none; }
+        .distinction-card ul li::before {
+            content: '—';
+            flex-shrink: 0;
+            opacity: 0.4;
+            margin-top: 1px;
+        }
+
+        /* INSTRUCTION LIST */
+        .instruction-list { list-style: none; margin-top: 8px; }
+        .instruction-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 11px 0;
+            border-bottom: 1px solid #E8DFD6;
+        }
+        .instruction-list li:last-child { border-bottom: none; }
+        .bullet {
+            flex-shrink: 0;
+            width: 10px;
+            height: 10px;
+            background: #D67B4A;
+            border-radius: 50%;
+            margin-top: 7px;
+        }
+        .instruction-list li p { margin: 0; font-size: 0.95em; }
+        .instruction-list li strong { color: #6B2C3A; }
+
+        /* HOMEWORK */
+        .homework-box {
+            background: linear-gradient(135deg, #f9f6f3 0%, #E8DFD6 100%);
+            border-radius: 12px;
+            padding: 24px 28px;
+        }
+        .homework-box h4 {
+            color: #D67B4A;
+            font-size: 0.9em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 12px;
+        }
+        .hw-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+        }
+        @media (max-width: 600px) { .hw-row { grid-template-columns: 1fr 1fr; } }
+        .hw-card {
+            background: white;
+            border-radius: 8px;
+            padding: 14px 12px;
+            text-align: center;
+            border-top: 2px solid #D67B4A;
+        }
+        .hw-card .hw-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #D67B4A;
+            color: white;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            font-size: 0.8em;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .hw-card p { font-size: 0.82em; color: #4A4A4A; }
+        .homework-box .hw-note { font-size: 0.88em; margin-top: 14px; color: #4A4A4A; }
+
+        /* TAKEAWAYS */
+        .takeaway-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 8px;
+        }
+        @media (max-width: 600px) { .takeaway-grid { grid-template-columns: 1fr; } }
+        .takeaway-item {
+            background: #f9f6f3;
+            border-radius: 8px;
+            padding: 14px 16px;
+            border-left: 3px solid #D67B4A;
+            font-size: 0.92em;
+        }
+
+        /* BOTTOM LINE */
+        .bottom-line {
+            background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+            color: #E8DFD6;
+            border-radius: 14px;
+            padding: 38px 40px;
+        }
+        .bottom-line h2 {
+            color: #E8DFD6;
+            font-size: 1.6em;
+            margin-bottom: 18px;
+            text-align: center;
+        }
+        .bottom-line p {
+            color: #E8DFD6;
+            opacity: 0.92;
+            font-size: 1em;
+            margin-bottom: 14px;
+        }
+        .bottom-line p:last-child { margin-bottom: 0; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="eyebrow">Alignment Psychiatry · Therapeutic Insights</div>
+        <h1>🧩 Managing Expectations</h1>
+        <div class="subtitle">Acceptance and Adaptation in Family Dynamics</div>
+    </div>
+
+    <div class="content">
+
+        <!-- THE SITUATION -->
+        <div class="section">
+            <h2>The Situation</h2>
+            <p>You are navigating a family dynamic where the gap between what you need from your partner and what he consistently delivers has become a primary source of stress. His inattentiveness, rigid discipline approach, and risk-taking behaviors conflict with your values around parenting and safety — and you have found yourself compensating for those gaps while also trying, largely without success, to educate him about why they matter.</p>
+            <p>Your son is in the middle of all of this. You are managing his developmental needs, mediating between his emotional world and his father's responses, and trying to build stability for him within a dynamic that doesn't always offer it. You are carrying a significant amount — and the frustration is not the problem. The pattern of how you're responding to it is what this session was about.</p>
+        </div>
+
+        <!-- CORE PROBLEM -->
+        <div class="section">
+            <h2>Core Problem</h2>
+            <p>The central issue is not that your expectations are unreasonable. They are not. The issue is that they consistently exceed what your partner has demonstrated, over years, that he is capable of or willing to deliver. And each time you expect the reasonable thing and don't get it, the frustration is not really about that moment — it is about the accumulated weight of expecting something that his track record says he won't provide.</p>
+            <p>The cycle produces suffering not because your standards are wrong, but because they are being applied to someone whose consistent behavior does not meet them. The gap between reasonable expectation and repeated reality is where the stress lives.</p>
+        </div>
+
+        <!-- PULL QUOTE 1 -->
+        <div class="pull-quote">
+            "The best predictor of future behavior is past behavior."
+        </div>
+
+        <!-- CLINICAL CONCEPTS -->
+        <div class="section">
+            <h2>Understanding the Dynamics</h2>
+            <div class="concepts-grid">
+                <div class="concept-card">
+                    <h4>Radical Acceptance</h4>
+                    <p>Fully acknowledging reality as it actually is — not as you wish it were — in order to reduce suffering. Acceptance doesn't mean approval. It means you stop fighting a reality that keeps showing up the same way regardless of the fight.</p>
+                </div>
+                <div class="concept-card">
+                    <h4>Expectation Management</h4>
+                    <p>Adjusting your internal plans and predictions to align with what someone has actually demonstrated they will do — not what you hope they'll do, or what would be reasonable for them to do.</p>
+                </div>
+                <div class="concept-card">
+                    <h4>Executive Functioning</h4>
+                    <p>The brain's capacity for thoughtful planning, impulse control, and risk assessment. When this is underdeveloped or inconsistently applied, it shows up in exactly the behaviors you're describing — unsafe driving, reactive parenting, poor planning.</p>
+                </div>
+                <div class="concept-card">
+                    <h4>Emotional Brain vs. Executive Brain</h4>
+                    <p>Children operate primarily from their emotional brain — feelings drive behavior before logic can catch up. Your son's reactions are developmentally expected. Gradual, consistent teaching works here; demands for immediate behavioral change don't.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FRAMEWORK -->
+        <div class="framework">
+            <h2>🔑 Framework: Expectation Management and Radical Acceptance</h2>
+            <div class="fw-subtitle">A five-step process for breaking the cycle of repeated disappointment</div>
+
+            <p style="margin-bottom: 16px; font-size: 0.95em;">The frustration cycle you're in runs on a consistent loop. Naming it is the first step to stepping out of it:</p>
+
+            <div class="frustration-cycle">
+                <div class="fc-node">
+                    <span class="fc-icon">🤞</span>
+                    <h4>Hope</h4>
+                    <p>Expect him to behave differently this time</p>
+                </div>
+                <div class="fc-node">
+                    <span class="fc-icon">😟</span>
+                    <h4>Repeat</h4>
+                    <p>He behaves the same way he always has</p>
+                </div>
+                <div class="fc-node">
+                    <span class="fc-icon">😤</span>
+                    <h4>React</h4>
+                    <p>Frustration, anxiety, argument</p>
+                </div>
+                <div class="fc-node">
+                    <span class="fc-icon">🔁</span>
+                    <h4>Reset</h4>
+                    <p>Hope again. The cycle continues.</p>
+                </div>
+            </div>
+
+            <div class="step" style="margin-top: 24px;">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h4>Identify the Expectation</h4>
+                    <p>Clearly name what you are hoping will happen. Make it explicit — not "I want him to be better" but "I expect him to drive carefully in the rain." Specificity lets you compare the expectation to the actual track record.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h4>Assess the Track Record</h4>
+                    <p>Compare this expectation to his actual, consistent behavior over time. Not the best version of him, not the version you need him to be — the version he has repeatedly demonstrated. Is this new behavior or a known pattern?</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h4>Accept the Reality</h4>
+                    <p>Acknowledge, without softening it, that this is who he is right now. Not who he could be with growth. Not who you need him to be. Who he has consistently shown himself to be. Belief in this reality is what acceptance actually requires.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h4>Adjust Your Behavior</h4>
+                    <p>Make practical changes that account for the reality you've accepted. If he drives unsafely in the rain — drive yourself. If he won't plan activities — plan them independently. You are not giving up. You are adapting to what's actually in front of you.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <h4>Build Self-Reliance</h4>
+                    <p>Identify where you have been waiting for him to show up and begin meeting those needs yourself — not from defeat, but from a decision to stop outsourcing your stability to someone whose reliability is inconsistent. Self-reliance is strength, not failure.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 22px;">
+                <p style="font-size: 0.9em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #6B2C3A; margin-bottom: 12px;">What You Can and Cannot Control</p>
+                <div class="control-grid">
+                    <div class="control-col cannot">
+                        <h4>Cannot Control</h4>
+                        <div class="control-item">
+                            <div class="control-dot"></div>
+                            <span>How your partner drives</span>
+                        </div>
+                        <div class="control-item">
+                            <div class="control-dot"></div>
+                            <span>His approach to parenting and discipline</span>
+                        </div>
+                        <div class="control-item">
+                            <div class="control-dot"></div>
+                            <span>Whether he internalizes your concerns</span>
+                        </div>
+                        <div class="control-item">
+                            <div class="control-dot"></div>
+                            <span>His level of attentiveness and planning</span>
+                        </div>
+                        <div class="control-item">
+                            <div class="control-dot"></div>
+                            <span>How he responds when you try to educate him</span>
+                        </div>
+                    </div>
+                    <div class="control-col can">
+                        <h4>Can Control</h4>
+                        <div class="control-item">
+                            <div class="control-dot"></div>
+                            <span>Whether you get in the car when it's raining</span>
+                        </div>
+                        <div class="control-item">
+                            <div class="control-dot"></div>
+                            <span>How you respond to your son</span>
+                        </div>
+                        <div class="control-item">
+                            <div class="control-dot"></div>
+                            <span>Planning activities independently when needed</span>
+                        </div>
+                        <div class="control-item">
+                            <div class="control-dot"></div>
+                            <span>Where and how you invest your emotional energy</span>
+                        </div>
+                        <div class="control-item">
+                            <div class="control-dot"></div>
+                            <span>When and how you have difficult conversations</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="application-box">
+                <h4>The Spidey Sense Principle</h4>
+                <p>When you genuinely accept who your partner is — not as a resignation, but as a real belief — your nervous system stops being surprised by his behavior. You start to anticipate it. Your "spidey sense" fires before the moment arrives, giving you time to adapt rather than react. Acceptance, practiced fully, actually creates more calm — because reality stops being a disappointment and starts being something you've already accounted for.</p>
+            </div>
+        </div>
+
+        <!-- ACCEPTANCE DISTINCTION -->
+        <div class="section">
+            <h2>What Acceptance Is and Is Not</h2>
+            <p style="margin-bottom: 14px;">Radical acceptance is widely misunderstood. This distinction matters because the misunderstanding is what makes people resist it:</p>
+            <div class="distinction-box">
+                <div class="distinction-card is-not">
+                    <h4>Acceptance Is Not</h4>
+                    <ul>
+                        <li>Approving of his behavior</li>
+                        <li>Giving up on the relationship</li>
+                        <li>Pretending you're not hurt or frustrated</li>
+                        <li>Excusing what's genuinely problematic</li>
+                        <li>Agreeing that your standards are too high</li>
+                        <li>Staying silent about safety concerns</li>
+                    </ul>
+                </div>
+                <div class="distinction-card is">
+                    <h4>Acceptance Is</h4>
+                    <ul>
+                        <li>Believing what the evidence actually shows</li>
+                        <li>Stopping the cycle of surprise at a known pattern</li>
+                        <li>Making decisions based on reality, not hope</li>
+                        <li>Protecting your peace without waiting for him to change</li>
+                        <li>Choosing where to invest your energy wisely</li>
+                        <li>Modeling resilience and self-reliance for your son</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- PULL QUOTE 2 -->
+        <div class="pull-quote">
+            "If you find yourself being upset about the same thing over and over, ask: why did I expect something different?"
+        </div>
+
+        <!-- PRACTICAL INSTRUCTIONS -->
+        <div class="section">
+            <h2>Putting It Into Practice</h2>
+            <ul class="instruction-list">
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>When frustration rises, pause and identify the pattern.</strong> Ask yourself: "Is this a new problem, or am I surprised again by something I already know?" That question alone interrupts the cycle and redirects energy toward adaptation instead of reaction.</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Stop trying to convince him in the moment.</strong> In-the-moment education rarely lands. If a concern needs to be raised, raise it when things are calm — not in the middle of the behavior that's triggering you. And release the expectation that raising it will result in a changed pattern.</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Protect difficult conversations from your son's presence.</strong> He is operating from his emotional brain. Whatever emotional tone he absorbs in the room, he internalizes — regardless of whether he understands the words. Plan when to have hard conversations; don't let them happen by accident in front of him.</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Build independent systems where reciprocity is unreliable.</strong> Plan his activities, manage his routines, make decisions that don't require your partner's buy-in in advance. This is not a failure of the partnership. It is a realistic allocation of responsibility based on what you actually know about each person's capacity.</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Notice what you're modeling for your son.</strong> He is learning how adults manage frustration, adapt to circumstances, and maintain stability under pressure. The self-reliance and calm adaptation you build now is something he will watch and internalize — even when the circumstances that require it are not ones you chose.</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- HOMEWORK -->
+        <div class="section">
+            <h2>Assignment</h2>
+            <div class="homework-box">
+                <h4>Expectation Log — 5 Incidents Before Next Session</h4>
+                <div class="hw-row">
+                    <div class="hw-card">
+                        <div class="hw-num">1</div>
+                        <p>What did you expect to happen?</p>
+                    </div>
+                    <div class="hw-card">
+                        <div class="hw-num">2</div>
+                        <p>What actually happened?</p>
+                    </div>
+                    <div class="hw-card">
+                        <div class="hw-num">3</div>
+                        <p>How did you respond?</p>
+                    </div>
+                    <div class="hw-card">
+                        <div class="hw-num">4</div>
+                        <p>What could you do differently next time?</p>
+                    </div>
+                </div>
+                <p class="hw-note">Use a notebook or phone. Keep entries brief — a few sentences per incident is enough. The point is pattern recognition, not documentation. Bring your notes to the next session.</p>
+            </div>
+        </div>
+
+        <!-- KEY TAKEAWAYS -->
+        <div class="section">
+            <h2>Key Takeaways</h2>
+            <div class="takeaway-grid">
+                <div class="takeaway-item">Your expectations are reasonable. The problem is not your standards — it's the mismatch between those standards and what your partner has consistently demonstrated he will do.</div>
+                <div class="takeaway-item">Past behavior is the most reliable predictor of future behavior. Expecting otherwise without new evidence sets up the same cycle of frustration every time.</div>
+                <div class="takeaway-item">Radical acceptance means believing what the evidence shows — not approving of it, not giving up, but stopping the cycle of being surprised by a known pattern.</div>
+                <div class="takeaway-item">Self-reliance is the practical expression of acceptance. Where he is reliably unavailable, build your own systems instead of waiting for him to show up differently.</div>
+                <div class="takeaway-item">Your son operates from his emotional brain. Gradual, consistent teaching works. Immediate demands for behavioral change don't match what his developing brain can produce.</div>
+                <div class="takeaway-item">In-the-moment education of your partner rarely works. If something needs to be addressed, do it when things are calm — and release the expectation that it will produce lasting change.</div>
+                <div class="takeaway-item">Protecting your peace is not giving up. Adapting your behavior based on what you know is a form of strength — and it is something your son is watching you model right now.</div>
+                <div class="takeaway-item">The frustration you feel is valid. The question is not whether you're right to feel it — you are. The question is whether staying in the cycle is serving you or your son.</div>
+            </div>
+        </div>
+
+        <!-- BOTTOM LINE -->
+        <div class="bottom-line">
+            <h2>⚓ The Bottom Line</h2>
+            <p>Your standards are not the problem. Wanting a partner who is attentive, safe, and engaged with your son's development is not too much to ask. But wanting something reasonable from someone who has consistently not provided it — and continuing to be surprised when he doesn't — is where your energy is going. And it's expensive.</p>
+            <p>What this session asked of you is genuinely hard: to believe, at a real level, that the pattern you've seen is the pattern you should expect. Not because change is impossible, but because acting as though it's already happened — before there is evidence that it has — guarantees the same outcome every time.</p>
+            <p>Acceptance practiced fully is not resignation. It is clarity. It means you stop bracing for a different outcome that isn't coming and start making decisions based on the reality in front of you. You protect your peace. You model steadiness for your son. You invest your energy where it can actually produce something. That is not settling. That is choosing yourself.</p>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
