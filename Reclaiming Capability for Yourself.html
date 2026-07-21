@@ -1,0 +1,358 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Insights - Alignment Psychiatry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            padding: 60px 40px;
+            text-align: center;
+            color: #f5f5dc;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        section {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            color: #800020;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #800020;
+        }
+        
+        .quote-box {
+            background: linear-gradient(135deg, #800020 0%, #a64253 100%);
+            color: white;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+            font-style: italic;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        .white-section {
+            background-color: white;
+            border-left: 5px solid #ff8c00;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .insight-box {
+            background: linear-gradient(135deg, #f5f5dc 0%, #e8e8d0 100%);
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+            border-left: 5px solid #800020;
+        }
+        
+        .framework {
+            margin: 30px 0;
+        }
+        
+        .framework h3 {
+            color: #800020;
+            font-size: 1.3em;
+            margin-bottom: 20px;
+        }
+        
+        .steps {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .step {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .step-number {
+            background-color: #800020;
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            flex-shrink: 0;
+        }
+        
+        .step-text {
+            flex: 1;
+            font-size: 1.05em;
+        }
+        
+        .concept {
+            margin: 20px 0;
+        }
+        
+        .concept strong {
+            color: #800020;
+            font-size: 1.1em;
+        }
+        
+        .takeaways {
+            list-style: none;
+            counter-reset: takeaway-counter;
+        }
+        
+        .takeaways li {
+            counter-increment: takeaway-counter;
+            margin: 15px 0;
+            padding-left: 40px;
+            position: relative;
+            line-height: 1.7;
+        }
+        
+        .takeaways li::before {
+            content: counter(takeaway-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: #800020;
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        
+        .bottom-line {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 30px;
+            margin-top: 40px;
+            border-radius: 8px;
+            font-size: 1.15em;
+            line-height: 1.8;
+            text-align: center;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            
+            section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+            
+            header h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+            
+            .step {
+                flex-direction: row;
+            }
+            
+            .step-number {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Therapeutic Insights</h1>
+            <p>Alignment Psychiatry</p>
+        </header>
+        
+        <div class="content">
+            <section>
+                <h2>The Situation</h2>
+                <div class="white-section">
+                    <p>You grew up in a family system governed by village mentality, religious conformity, and strict age-based hierarchy, where you were assigned responsibilities beyond your years. You became the "capable one," always serving others while suppressing your own needs and voice. Now burned out and anxious, you struggle to say no, advocate for yourself, or separate your worth from your usefulness to others.</p>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Core Problem</h2>
+                <div class="quote-box">
+                    "Your capability has been directed outward for others' benefit, leaving you feeling incapable of advocating for your own needs despite your competence."
+                </div>
+                <p>You have internalized beliefs equating your value with serving others, rooted in family hierarchy and collective expectations. The very capability that makes you effective has been weaponized against your own well-being.</p>
+            </section>
+            
+            <section>
+                <h2>Clinical Concepts</h2>
+                
+                <div class="concept">
+                    <p><strong>Village Mentality:</strong> The belief that family needs always supersede individual well-being. This cultural framework prioritizes collective harmony over personal boundaries.</p>
+                </div>
+                
+                <div class="concept">
+                    <p><strong>Hierarchy:</strong> A system where age or title grants authority and silences younger voices, regardless of wisdom, insight, or individual needs.</p>
+                </div>
+                
+                <div class="concept">
+                    <p><strong>Fawning:</strong> A trauma response of appeasing others to avoid conflict. This automatic pattern develops when expressing needs feels unsafe.</p>
+                </div>
+                
+                <div class="concept">
+                    <p><strong>CBT (Cognitive Behavioral Therapy):</strong> A therapeutic model that examines how beliefs shape thoughts, which generate feelings, which drive actions—creating reinforcing cycles.</p>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Therapeutic Frameworks</h2>
+                
+                <div class="framework">
+                    <h3>Think-Feel-Do Model (CBT Framework)</h3>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-text">Identify core beliefs driving behavior</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-text">Notice automatic thoughts and assumptions</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-text">Recognize resulting emotions</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-text">Observe actions that reinforce the cycle</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="framework">
+                    <h3>Challenging Hierarchy and Village Mentality</h3>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-text">Identify how hierarchy silences your voice</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-text">Question whether age/title equals wisdom</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-text">Notice the impact on your well-being</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-text">Experiment with small boundary-setting acts</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Practical Instructions</h2>
+                <div class="insight-box">
+                    <p>Begin noticing the automatic patterns that have kept you trapped in over-functioning. When someone makes a request, pause before responding. Ask yourself: "What belief is arising right now? What would happen if I said no? Whose voice am I hearing—mine or someone from my past?"</p>
+                    <p style="margin-top: 15px;">Your capability is not the problem. The problem is that you were never taught to direct that capability toward yourself. Start small. Practice self-advocacy in low-stakes situations. Notice the discomfort—it's evidence of change, not failure.</p>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Homework</h2>
+                <div class="white-section">
+                    <ul style="list-style-position: inside; line-height: 2;">
+                        <li>Identify one situation this week where you feel pressured to help</li>
+                        <li>Pause and document: What was asked? What belief arose? What did you do? How did you feel before and after?</li>
+                        <li>Bring your notes to the next session</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Key Takeaways</h2>
+                <ul class="takeaways">
+                    <li>Your family rewarded capability but never taught self-advocacy</li>
+                    <li>Worth was equated with usefulness, not inherent value</li>
+                    <li>The Think-Feel-Do model reveals how beliefs drive automatic actions</li>
+                    <li>Age-based hierarchy is arbitrary and often silences valid perspectives</li>
+                    <li>Over-helping is a learned response to family expectations</li>
+                    <li>Challenging these patterns will trigger discomfort and grief</li>
+                    <li>Your capability remains intact—it needs redirection toward yourself</li>
+                    <li>Small acts of self-advocacy build new patterns</li>
+                    <li>Relapses into old behaviors are normal growth pains</li>
+                    <li>Question inherited beliefs: "Is this always true? What if I said no?"</li>
+                </ul>
+            </section>
+            
+            <div class="bottom-line">
+                <h2 style="color: #f5f5dc; border: none; margin-bottom: 15px;">Bottom Line</h2>
+                <p>You were trained to be capable for everyone except yourself. The same strength that allowed you to survive your family system can now be redirected toward your own healing. Saying no is not selfish—it's reclaiming the voice that was silenced. Your worth exists independent of your usefulness. The work ahead involves grieving what you didn't receive while building the self-advocacy you deserve.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+```
