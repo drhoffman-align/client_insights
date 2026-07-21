@@ -1,0 +1,437 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Insights - Alignment Psychiatry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #f5f5dc;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: normal;
+        }
+        
+        .subtitle {
+            color: #f5f5dc;
+            font-size: 1.1em;
+            font-style: italic;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            color: #800020;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #800020;
+        }
+        
+        .white-section {
+            background-color: white;
+            padding: 25px;
+            border-left: 5px solid #ff8c00;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .quote-box {
+            background: linear-gradient(135deg, #800020 0%, #ff8c00 100%);
+            color: white;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+            font-style: italic;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        .insight-box {
+            background: linear-gradient(135deg, #f5f5dc 0%, #ffe4b5 100%);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border-left: 4px solid #800020;
+        }
+        
+        .framework-steps {
+            margin: 25px 0;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .step-number {
+            background-color: #800020;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+            margin-right: 15px;
+            font-size: 1.1em;
+        }
+        
+        .step-content {
+            flex: 1;
+            padding-top: 8px;
+        }
+        
+        .step-title {
+            font-weight: bold;
+            color: #800020;
+            margin-bottom: 5px;
+        }
+        
+        .concept {
+            margin-bottom: 20px;
+        }
+        
+        .concept-title {
+            font-weight: bold;
+            color: #800020;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+        }
+        
+        .homework-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .homework-list li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .homework-list li:before {
+            content: "□";
+            position: absolute;
+            left: 0;
+            color: #800020;
+            font-size: 1.3em;
+        }
+        
+        .takeaway-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .takeaway-list li {
+            padding: 10px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .takeaway-list li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #ff8c00;
+            font-size: 1.5em;
+            line-height: 1;
+        }
+        
+        .bottom-line {
+            background: linear-gradient(135deg, #800020 0%, #4a4a4a 100%);
+            color: #f5f5dc;
+            padding: 30px;
+            margin-top: 40px;
+            border-radius: 8px;
+            font-size: 1.15em;
+            line-height: 1.8;
+            text-align: center;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            
+            .container {
+                box-shadow: none;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .section-title {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Therapeutic Insights</h1>
+            <div class="subtitle">Alignment Psychiatry</div>
+        </header>
+        
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">The Situation</h2>
+                <div class="white-section">
+                    <p>You are navigating complex workers' compensation litigation involving significant financial settlements while simultaneously managing strained family relationships where your brother and father have stopped speaking to you. You face repeated patterns of being undervalued and dismissed by both your employer and family despite clear evidence of your competence and achievements.</p>
+                    <p style="margin-top: 15px;">Despite these challenges, you are actively gathering documentation, advocating for yourself, and working toward establishing generational wealth through your legal victories.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Core Problem</h2>
+                <div class="white-section">
+                    <p>You repeatedly experience being undervalued and dismissed by both employer and family despite demonstrated competence. You internalize this treatment by withholding your power and delaying confrontation to avoid conflict, leading to emotional build-up and explosive reactions when pushed too far.</p>
+                </div>
+                
+                <div class="quote-box">
+                    "Withholding power until explosive moments is ineffective. Consistent, gentle assertion of boundaries prevents emotional build-up."
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Clinical Concepts</h2>
+                
+                <div class="concept">
+                    <div class="concept-title">Power and Hierarchy</div>
+                    <p>Power is the ability to influence outcomes; hierarchy determines who holds authority in systems, often used to maintain control at your expense.</p>
+                </div>
+                
+                <div class="concept">
+                    <div class="concept-title">Perceived vs. Actual Value</div>
+                    <p>Perceived value is what others think you're worth; actual value is your true contributions, which often exceed recognition when you don't self-promote.</p>
+                </div>
+                
+                <div class="concept">
+                    <div class="concept-title">Boundaries</div>
+                    <p>Limits set to protect well-being and emotional energy.</p>
+                </div>
+                
+                <div class="concept">
+                    <div class="concept-title">Grace</div>
+                    <p>Extending understanding or forgiveness; only healthy when communicated, not silently absorbed.</p>
+                </div>
+                
+                <div class="insight-box">
+                    <strong>Key Insight:</strong> Grace must be communicated, not silently absorbed. When you hold space for people who repeatedly hurt you without expressing your boundaries, caring becomes unhealthy and keeps you stuck.
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Therapeutic Frameworks</h2>
+                
+                <h3 style="color: #800020; margin-top: 30px; margin-bottom: 20px;">Power, Hierarchy, and Value Framework</h3>
+                
+                <div class="framework-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <div class="step-title">Recognize Hierarchy Structures</div>
+                            <p>Identify who holds authority in your systems and how that structure impacts your position.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <div class="step-title">Distinguish Actual Versus Perceived Value</div>
+                            <p>Separate what others think you're worth from your true contributions and competence.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <div class="step-title">Understand Power Dynamics</div>
+                            <p>Recognize how power flows in your relationships and where you can influence outcomes.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <div class="step-title">Assert Value Proactively</div>
+                            <p>Use consistent gentle corrections rather than waiting for explosive moments.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <div class="step-title">Set Clear Boundaries with Consequences</div>
+                            <p>Establish limits that protect your well-being and follow through when they're crossed.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="quote-box">
+                    "Documentation shifts power dynamics effectively. Influence grows when others see your substance."
+                </div>
+                
+                <h3 style="color: #800020; margin-top: 40px; margin-bottom: 20px;">Conflict Resolution Rubric</h3>
+                
+                <div class="framework-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <div class="step-title">Define the Goal</div>
+                            <p>What outcome do you want from this conflict?</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <div class="step-title">Identify Why It Matters</div>
+                            <p>What makes this important to you? What values are at stake?</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <div class="step-title">Explore Feelings</div>
+                            <p>Process your emotions before engaging in the conflict.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <div class="step-title">Express Clearly</div>
+                            <p>Articulate your perspective, needs, and boundaries directly.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <div class="step-title">Reflect on the Process</div>
+                            <p>Consider what worked, what didn't, and what you learned.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">6</div>
+                        <div class="step-content">
+                            <div class="step-title">Prepare for Next Steps</div>
+                            <p>Plan how you'll move forward based on the outcome.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">7</div>
+                        <div class="step-content">
+                            <div class="step-title">Respond to Guided Prompts</div>
+                            <p>Use structured questions to deepen your understanding.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Practical Instructions</h2>
+                <div class="white-section">
+                    <p><strong>For Family Relationships:</strong> Work through the Conflict Resolution Rubric for each family member who has stopped speaking to you. Process your feelings about being dismissed and undervalued before deciding whether and how to engage.</p>
+                    
+                    <p style="margin-top: 15px;"><strong>For Employer Relationship:</strong> Complete the Conflict Resolution Rubric focusing on the workers' compensation litigation. Continue gathering documentation while processing the emotional impact of being undervalued despite your competence.</p>
+                    
+                    <p style="margin-top: 15px;"><strong>General Approach:</strong> Practice consistent, gentle assertion of your value rather than withholding power until you reach an explosive point. Remember that you don't have to hold space for people who repeatedly hurt you.</p>
+                </div>
+                
+                <div class="insight-box">
+                    <strong>Remember:</strong> Family and workplace dynamics mirror each other. The patterns you see in one relationship often reflect patterns in the other. Addressing them together creates comprehensive change.
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Homework</h2>
+                <ul class="homework-list">
+                    <li>Complete Conflict Resolution Rubric for family members and employer</li>
+                    <li>Work through all seven steps for each relationship</li>
+                    <li>Draft letters if desired but not required to send</li>
+                    <li>Bring completed rubrics to next session (August 3rd, 2:00 PM)</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Key Takeaways</h2>
+                <ul class="takeaway-list">
+                    <li>True value is often underestimated by both employer and family</li>
+                    <li>Withholding power until explosive moments is ineffective</li>
+                    <li>Consistent, gentle assertion of boundaries prevents emotional build-up</li>
+                    <li>Documentation shifts power dynamics effectively</li>
+                    <li>Grace must be communicated, not silently absorbed</li>
+                    <li>Influence grows when others see your substance</li>
+                    <li>Family and workplace dynamics mirror each other</li>
+                    <li>Process feelings before engaging in conflict</li>
+                    <li>You don't have to hold space for people who repeatedly hurt you</li>
+                    <li>Caring becomes unhealthy when it keeps you stuck</li>
+                </ul>
+            </div>
+            
+            <div class="bottom-line">
+                <strong>Bottom Line:</strong> Your actual value far exceeds how you've been treated by both family and employer. The pattern of being undervalued will continue until you consistently assert your worth through gentle, proactive boundaries rather than explosive reactions. You have the power to influence outcomes—documentation, clear communication, and refusing to silently absorb mistreatment are your tools. You don't owe anyone space in your life who repeatedly dismisses your competence and contributions.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+```
