@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Trust and Assertiveness: Navigating Relationships with Confidence</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        @media print {
+            body { background: white; padding: 0; margin: 0; }
+            .container { max-width: none; box-shadow: none; border-radius: 0; }
+            .content { padding: 0.5in; }
+            .section, .framework { page-break-inside: avoid; break-inside: avoid; }
+            .page-break { page-break-before: always; break-before: page; }
+            @page { size: 8.5in 11in; margin: 0.75in; }
+        }
+
+        @media screen {
+            body {
+                background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+                min-height: 100vh;
+                padding: 20px;
+            }
+            .container {
+                max-width: 8.5in;
+                margin: 0 auto;
+                background: #E8DFD6;
+                border-radius: 20px;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+                overflow: hidden;
+            }
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #4A4A4A;
+        }
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+            color: #E8DFD6;
+            padding: 50px 40px;
+            text-align: center;
+        }
+        .header .eyebrow {
+            font-size: 0.82em;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            opacity: 0.7;
+            margin-bottom: 14px;
+        }
+        .header h1 {
+            font-size: 2.4em;
+            font-weight: 700;
+            margin-bottom: 14px;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+            line-height: 1.2;
+        }
+        .header .subtitle {
+            font-size: 1.1em;
+            opacity: 0.88;
+            font-style: italic;
+        }
+
+        /* CONTENT */
+        .content { padding: 44px 40px; }
+
+        /* STANDARD SECTION */
+        .section {
+            background: #ffffff;
+            border-radius: 14px;
+            border-left: 5px solid #D67B4A;
+            padding: 30px 32px;
+            margin-bottom: 32px;
+        }
+        .section h2 {
+            color: #6B2C3A;
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #E8DFD6;
+        }
+        .section p { margin-bottom: 12px; }
+        .section p:last-child { margin-bottom: 0; }
+
+        /* FRAMEWORK */
+        .framework {
+            background: #ffffff;
+            border-radius: 14px;
+            border-left: 5px solid #6B2C3A;
+            padding: 30px 32px;
+            margin-bottom: 32px;
+        }
+        .framework h2 {
+            color: #6B2C3A;
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .framework .fw-subtitle {
+            color: #D67B4A;
+            font-size: 0.95em;
+            font-style: italic;
+            margin-bottom: 22px;
+            padding-bottom: 14px;
+            border-bottom: 2px solid #E8DFD6;
+        }
+
+        /* PULL QUOTE */
+        .pull-quote {
+            background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+            color: #E8DFD6;
+            padding: 26px 36px;
+            border-radius: 12px;
+            margin: 28px 0;
+            font-size: 1.2em;
+            font-style: italic;
+            text-align: center;
+            box-shadow: 0 6px 18px rgba(107,44,58,0.25);
+            line-height: 1.6;
+        }
+
+        /* CONCEPTS GRID */
+        .concepts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 10px;
+        }
+        .concepts-grid .concept-card:last-child:nth-child(odd) {
+            grid-column: 1 / -1;
+        }
+        @media (max-width: 600px) { .concepts-grid { grid-template-columns: 1fr; } }
+        .concept-card {
+            background: #f9f6f3;
+            border-radius: 10px;
+            padding: 18px 20px;
+            border-top: 3px solid #D67B4A;
+        }
+        .concept-card h4 { color: #6B2C3A; font-size: 0.95em; font-weight: 700; margin-bottom: 6px; }
+        .concept-card p { font-size: 0.88em; margin: 0; }
+
+        /* RELATIONSHIP PHASES */
+        .phases-track {
+            display: flex;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 16px 0 8px;
+        }
+        @media (max-width: 600px) { .phases-track { flex-direction: column; } }
+        .phase {
+            flex: 1;
+            padding: 20px 16px;
+            text-align: center;
+            position: relative;
+        }
+        .phase.intro { background: #3d1a21; }
+        .phase.honey { background: #5e2a33; }
+        .phase.maint { background: #D67B4A; }
+        .phase .ph-icon { font-size: 1.6em; display: block; margin-bottom: 8px; }
+        .phase h4 { color: #E8DFD6; font-size: 0.9em; font-weight: 700; margin-bottom: 6px; }
+        .phase p { color: rgba(232,223,214,0.85); font-size: 0.78em; line-height: 1.4; margin: 0; }
+        .phase .ph-tag {
+            display: inline-block;
+            margin-top: 8px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 12px;
+            padding: 3px 10px;
+            font-size: 0.7em;
+            color: #E8DFD6;
+        }
+        .phase.maint .ph-tag { background: rgba(107,44,58,0.3); }
+        .phases-caption {
+            font-size: 0.8em;
+            font-style: italic;
+            color: #4A4A4A;
+            text-align: center;
+            margin-top: 6px;
+            opacity: 0.75;
+        }
+
+        /* TRUST SAFETY CARDS */
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            margin-top: 14px;
+        }
+        @media (max-width: 600px) { .trust-grid { grid-template-columns: 1fr; } }
+        .trust-card {
+            background: #f9f6f3;
+            border-radius: 10px;
+            padding: 20px 18px;
+            text-align: center;
+            border-top: 3px solid #6B2C3A;
+        }
+        .trust-card .tc-icon { font-size: 1.8em; margin-bottom: 10px; display: block; }
+        .trust-card h4 { color: #6B2C3A; font-size: 0.92em; font-weight: 700; margin-bottom: 8px; }
+        .trust-card p { font-size: 0.83em; }
+
+        /* CONFRONTATION REFRAME */
+        .reframe-grid {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 14px;
+            align-items: center;
+            margin: 16px 0;
+        }
+        @media (max-width: 600px) {
+            .reframe-grid { grid-template-columns: 1fr; }
+            .reframe-arrow { transform: rotate(90deg); }
+        }
+        .reframe-card {
+            border-radius: 10px;
+            padding: 18px 20px;
+        }
+        .reframe-card.myth {
+            background: #f3ecec;
+            border: 2px dashed #B8B8B8;
+        }
+        .reframe-card.truth {
+            background: #f0ece8;
+            border: 2px solid #D67B4A;
+        }
+        .reframe-card .rf-label {
+            font-size: 0.72em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 8px;
+            display: block;
+        }
+        .reframe-card.myth .rf-label { color: #B8B8B8; }
+        .reframe-card.truth .rf-label { color: #D67B4A; }
+        .reframe-card p { font-size: 0.88em; }
+        .reframe-arrow { font-size: 1.6em; color: #6B2C3A; text-align: center; }
+
+        /* HARBORING vs EARLY */
+        .harbor-compare {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 16px 0;
+        }
+        @media (max-width: 600px) { .harbor-compare { grid-template-columns: 1fr; } }
+        .hc-col { padding: 20px 20px; }
+        .hc-col.harbor { background: #f3ecec; }
+        .hc-col.early { background: #f0ece8; border-left: 1px solid #E8DFD6; }
+        .hc-col h4 {
+            font-size: 0.78em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid;
+        }
+        .hc-col.harbor h4 { color: #B8B8B8; border-color: #B8B8B8; }
+        .hc-col.early h4 { color: #D67B4A; border-color: #D67B4A; }
+        .hc-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 8px;
+            font-size: 0.85em;
+        }
+        .hc-item:last-child { margin-bottom: 0; }
+        .hc-dot {
+            flex-shrink: 0;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-top: 6px;
+        }
+        .harbor .hc-dot { background: #B8B8B8; }
+        .early .hc-dot { background: #D67B4A; }
+
+        /* STEPS */
+        .step {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            margin-bottom: 18px;
+        }
+        .step:last-of-type { margin-bottom: 0; }
+        .step-number {
+            flex-shrink: 0;
+            background: #6B2C3A;
+            color: #E8DFD6;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.95em;
+            margin-top: 2px;
+        }
+        .step-content h4 { color: #6B2C3A; font-size: 1.02em; margin-bottom: 4px; }
+        .step-content p { font-size: 0.95em; margin: 0; }
+
+        /* APPLICATION BOX */
+        .application-box {
+            background: linear-gradient(135deg, #E8DFD6 0%, #d4c9be 100%);
+            border-left: 5px solid #D67B4A;
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin-top: 22px;
+        }
+        .application-box h4 {
+            color: #6B2C3A;
+            font-size: 0.9em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 8px;
+        }
+        .application-box p { font-size: 0.95em; margin: 0; }
+
+        /* INSTRUCTION LIST */
+        .instruction-list { list-style: none; margin-top: 8px; }
+        .instruction-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 11px 0;
+            border-bottom: 1px solid #E8DFD6;
+        }
+        .instruction-list li:last-child { border-bottom: none; }
+        .bullet {
+            flex-shrink: 0;
+            width: 10px;
+            height: 10px;
+            background: #D67B4A;
+            border-radius: 50%;
+            margin-top: 7px;
+        }
+        .instruction-list li p { margin: 0; font-size: 0.95em; }
+        .instruction-list li strong { color: #6B2C3A; }
+
+        /* HOMEWORK */
+        .homework-box {
+            background: linear-gradient(135deg, #f9f6f3 0%, #E8DFD6 100%);
+            border-radius: 12px;
+            padding: 24px 28px;
+        }
+        .homework-box h4 {
+            color: #D67B4A;
+            font-size: 0.9em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 12px;
+        }
+        .homework-box p { font-size: 0.93em; margin-bottom: 8px; }
+        .homework-box p:last-child { margin-bottom: 0; }
+
+        /* MED NOTE */
+        .med-note-box {
+            background: #f9f6f3;
+            border-radius: 10px;
+            padding: 16px 20px;
+            border-left: 3px solid #B8B8B8;
+            font-size: 0.9em;
+            color: #4A4A4A;
+        }
+
+        /* TAKEAWAYS */
+        .takeaway-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 8px;
+        }
+        @media (max-width: 600px) { .takeaway-grid { grid-template-columns: 1fr; } }
+        .takeaway-item {
+            background: #f9f6f3;
+            border-radius: 8px;
+            padding: 14px 16px;
+            border-left: 3px solid #D67B4A;
+            font-size: 0.92em;
+        }
+
+        /* BOTTOM LINE */
+        .bottom-line {
+            background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+            color: #E8DFD6;
+            border-radius: 14px;
+            padding: 38px 40px;
+        }
+        .bottom-line h2 {
+            color: #E8DFD6;
+            font-size: 1.6em;
+            margin-bottom: 18px;
+            text-align: center;
+        }
+        .bottom-line p {
+            color: #E8DFD6;
+            opacity: 0.92;
+            font-size: 1em;
+            margin-bottom: 14px;
+        }
+        .bottom-line p:last-child { margin-bottom: 0; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="eyebrow">Alignment Psychiatry · Therapeutic Insights</div>
+        <h1>🤝 Building Trust and Assertiveness</h1>
+        <div class="subtitle">Navigating Relationships with Confidence</div>
+    </div>
+
+    <div class="content">
+
+        <!-- THE SITUATION -->
+        <div class="section">
+            <h2>The Situation</h2>
+            <p>Your close friendships — the ones built on regular contact and real history — are a genuine source of connection and comfort. You know how to maintain those. The challenge shows up earlier in the relationship cycle: in the introduction phases, in online contexts, in romantic situations where the stakes feel higher and the footing feels less certain.</p>
+            <p>Self-esteem shaped by childhood experiences with body image continues to show up in how you move through social and intimate spaces — particularly your comfort with proximity, touch, and perceived judgment. When something feels off, your first instinct is to manage it internally rather than name it. You prepare, you observe, you wait. And by the time you address it, it has already done work on you that early communication might have prevented.</p>
+        </div>
+
+        <!-- CORE PROBLEM -->
+        <div class="section">
+            <h2>Core Problem</h2>
+            <p>The gap between what you want in relationships — closeness, ease, safety, reciprocity — and how you pursue it is where the friction lives. You tend to absorb discomfort rather than surface it, which means the emotional labor of managing relationship tension falls almost entirely on you. Others don't know something is wrong because you haven't told them. And the longer you wait, the more the discomfort grows and the harder communication becomes.</p>
+            <p>Overthinking fills the space that direct communication could occupy. It's not a cognitive flaw — it's what happens when the nervous system encounters unfamiliarity without a clear pathway to resolution. The resolution, in most cases, is a conversation that feels riskier than it actually needs to be.</p>
+        </div>
+
+        <!-- PULL QUOTE 1 -->
+        <div class="pull-quote">
+            "Overthinking things usually come with things that you are uncomfortable with."
+        </div>
+
+        <!-- CLINICAL CONCEPTS -->
+        <div class="section">
+            <h2>Understanding the Dynamics</h2>
+            <div class="concepts-grid">
+                <div class="concept-card">
+                    <h4>Overthinking</h4>
+                    <p>Repetitive, circular thoughts about potential problems or past mistakes. It typically surfaces in unfamiliar or high-stakes situations — not because something is actually wrong, but because the brain is trying to manage uncertainty without enough information. Communication is the antidote overthinking can't replicate.</p>
+                </div>
+                <div class="concept-card">
+                    <h4>Assertiveness</h4>
+                    <p>The ability to express needs, limits, and feelings clearly and respectfully — without aggression or apology. Assertiveness is not confrontation. It's the decision to participate actively in shaping relationship dynamics rather than managing discomfort in silence.</p>
+                </div>
+                <div class="concept-card">
+                    <h4>Harboring Emotions</h4>
+                    <p>Holding feelings internally rather than expressing them. Provides short-term relief from the anxiety of confrontation but accumulates over time — eventually surfacing as anxiety, depression, or an outburst that feels disproportionate to the triggering moment.</p>
+                </div>
+                <div class="concept-card">
+                    <h4>Power Dynamics</h4>
+                    <p>The balance of influence in a relationship. When one person consistently manages their own discomfort rather than addressing others' behaviors, they cede their position as an active participant. Naming your experience redistributes that balance.</p>
+                </div>
+                <div class="concept-card">
+                    <h4>Trust</h4>
+                    <p>A felt sense of safety and predictability with another person. It's built not just through their behavior but through your ability to distinguish between discomfort rooted in your own history and discomfort created by theirs — and to respond to each appropriately.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FRAMEWORK 1: RELATIONSHIP PHASES -->
+        <div class="framework">
+            <h2>🔄 Framework 1: Relationship Development Phases</h2>
+            <div class="fw-subtitle">Understanding where your discomfort arises — and what each phase requires</div>
+
+            <p style="margin-bottom: 16px; font-size: 0.95em;">Every relationship moves through phases that require different things emotionally and behaviorally. Knowing which phase you're in helps you understand what's being asked of you — and why some phases feel harder than others.</p>
+
+            <div class="phases-track">
+                <div class="phase intro">
+                    <span class="ph-icon">👋</span>
+                    <h4>Introduction</h4>
+                    <p>First impressions, uncertainty, reading cues, deciding whether to invest. The wall goes up here.</p>
+                    <span class="ph-tag">⚠ Most discomfort</span>
+                </div>
+                <div class="phase honey">
+                    <span class="ph-icon">✨</span>
+                    <h4>Honeymoon</h4>
+                    <p>Initial excitement and connection. Self-esteem vulnerability shows up when the other person pulls back or goes quiet.</p>
+                    <span class="ph-tag">⚠ Rejection sensitivity</span>
+                </div>
+                <div class="phase maint">
+                    <span class="ph-icon">🌱</span>
+                    <h4>Maintenance</h4>
+                    <p>Ongoing care, communication, and mutual investment. Where your strongest relationships already live.</p>
+                    <span class="ph-tag">✓ Your comfort zone</span>
+                </div>
+            </div>
+            <div class="phases-caption">You thrive in maintenance. The work is building the skills to move through introduction and honeymoon without shutting down.</div>
+
+            <div class="application-box" style="margin-top: 20px;">
+                <h4>What This Means Practically</h4>
+                <p>Discomfort in the early phases isn't a signal that the relationship is wrong — it's a signal that unfamiliarity activates your self-esteem vulnerability. Distinguishing between "this person is unsafe" and "this situation is unfamiliar" is the work of the Trust and Safety model below.</p>
+            </div>
+        </div>
+
+        <!-- FRAMEWORK 2: TRUST AND SAFETY -->
+        <div class="framework">
+            <h2>🛡️ Framework 2: The Trust and Safety Model</h2>
+            <div class="fw-subtitle">Learning to tell the difference between your triggers and their behavior</div>
+
+            <div class="trust-grid">
+                <div class="trust-card">
+                    <span class="tc-icon">🔍</span>
+                    <h4>Personal Safety Scan</h4>
+                    <p>Ask: Am I physically safe? Emotionally safe? Do I feel respected? This check-in helps you name what's actually happening rather than running on a vague sense of unease.</p>
+                </div>
+                <div class="trust-card">
+                    <span class="tc-icon">🪞</span>
+                    <h4>Contextual Comfort Check</h4>
+                    <p>Ask: Is this discomfort about something they did — or about something in my history that this is activating? Both are valid. But they require different responses.</p>
+                </div>
+                <div class="trust-card">
+                    <span class="tc-icon">🗣️</span>
+                    <h4>Active Communication</h4>
+                    <p>Once you've scanned and checked: address it. Early. With evidence. Not to start a fight — to participate in the relationship rather than manage it alone.</p>
+                </div>
+            </div>
+
+            <div class="application-box" style="margin-top: 20px;">
+                <h4>You Are an Active Facilitator — Not a Passive Manager</h4>
+                <p>There is a power move available to you in every relationship: naming your experience. When you do, you shift from someone who absorbs and adapts to someone who shapes the dynamic. That shift doesn't require aggression. It requires presence. The model gives you the language to be present instead of protective.</p>
+            </div>
+        </div>
+
+        <!-- PULL QUOTE 2 -->
+        <div class="pull-quote">
+            "Confrontation doesn't have to be a big fight or debate. It can be a conversation where you show evidence and tell them how you feel."
+        </div>
+
+        <!-- FRAMEWORK 3: ASSERTIVE COMMUNICATION -->
+        <div class="framework">
+            <h2>💬 Framework 3: Assertive Communication</h2>
+            <div class="fw-subtitle">A five-step process for addressing discomfort before it becomes a wall</div>
+
+            <div class="reframe-grid">
+                <div class="reframe-card myth">
+                    <span class="rf-label">What you think it is</span>
+                    <p>A confrontation. A fight waiting to happen. Something that will damage the relationship or confirm that you're "too much." A big event requiring preparation and perfect timing.</p>
+                </div>
+                <div class="reframe-arrow">→</div>
+                <div class="reframe-card truth">
+                    <span class="rf-label">What it actually is</span>
+                    <p>A conversation with evidence. Light. Specific. Early. Something that protects the relationship by preventing buildup. A normal part of knowing each other.</p>
+                </div>
+            </div>
+
+            <div class="step" style="margin-top: 22px;">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h4>Notice the Discomfort</h4>
+                    <p>Pay attention when something feels off — a comment, a dynamic, a pattern. This is data, not drama. The discomfort is a signal asking to be addressed, not suppressed.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h4>Gather Specific Evidence</h4>
+                    <p>Recall the concrete moments. Not a general feeling — actual examples. "Three times in the last month, when I mentioned X, you did Y." Specificity removes the accusation and adds the clarity.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h4>Choose a Low-Pressure Moment</h4>
+                    <p>Not in the middle of the triggering situation. Not at the end of a long day. Find a calm, private moment when neither of you is activated. The timing changes the entire quality of the conversation.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h4>Express Clearly Without Accusation</h4>
+                    <p>"When this happened, I felt this way. I wanted to bring it up because I value our connection." Evidence plus feeling, delivered without aggression. Light. Honest. Direct. That's the whole formula.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <h4>Monitor the Response</h4>
+                    <p>How someone responds when you're honest with them tells you something important. Defensiveness, dismissal, or genuine receptivity — all of it is information about what the relationship is actually made of.</p>
+                </div>
+            </div>
+
+            <p style="font-size: 0.88em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #6B2C3A; margin: 22px 0 12px;">What Changes When You Communicate Early</p>
+            <div class="harbor-compare">
+                <div class="hc-col harbor">
+                    <h4>When You Harbor It</h4>
+                    <div class="hc-item">
+                        <div class="hc-dot"></div>
+                        <span>Discomfort grows in silence</span>
+                    </div>
+                    <div class="hc-item">
+                        <div class="hc-dot"></div>
+                        <span>Overthinking fills the gap</span>
+                    </div>
+                    <div class="hc-item">
+                        <div class="hc-dot"></div>
+                        <span>Eventual outburst or withdrawal</span>
+                    </div>
+                    <div class="hc-item">
+                        <div class="hc-dot"></div>
+                        <span>You carry the weight alone</span>
+                    </div>
+                    <div class="hc-item">
+                        <div class="hc-dot"></div>
+                        <span>Anxiety and exhaustion</span>
+                    </div>
+                </div>
+                <div class="hc-col early">
+                    <h4>When You Speak Early</h4>
+                    <div class="hc-item">
+                        <div class="hc-dot"></div>
+                        <span>The loop closes before it builds</span>
+                    </div>
+                    <div class="hc-item">
+                        <div class="hc-dot"></div>
+                        <span>Overthinking has less to work with</span>
+                    </div>
+                    <div class="hc-item">
+                        <div class="hc-dot"></div>
+                        <span>A conversation instead of a rupture</span>
+                    </div>
+                    <div class="hc-item">
+                        <div class="hc-dot"></div>
+                        <span>The other person gets to respond</span>
+                    </div>
+                    <div class="hc-item">
+                        <div class="hc-dot"></div>
+                        <span>Relationships that actually know you</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRACTICAL INSTRUCTIONS -->
+        <div class="section">
+            <h2>Putting It Into Practice</h2>
+            <ul class="instruction-list">
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Use overthinking as a trigger for action, not more thinking.</strong> When you notice your mind looping on something — a comment, a silence, a behavior — treat it as a signal to communicate rather than a problem to solve internally. Overthinking is the symptom. Communication is the interruption.</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Distinguish your history from their behavior before reacting.</strong> Not all discomfort is about the person in front of you. Some of it belongs to older wounds. Take a moment to check: Is this about what they did, or what it reminded me of? Both are worth addressing — but in different ways.</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Prepare for difficult conversations the same way you prepare for hard work situations.</strong> You already know how to plan ahead when stakes are high. Bring that same preparation to personal conversations — know what you want to say, what your evidence is, and what you need in response.</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Watch for the wall going up and name it — at least to yourself.</strong> When you feel yourself becoming robotic, disengaged, or closed off, that's the protective response activating. You don't have to immediately dismantle it. But naming it internally — "this is my wall" — creates a small gap between the trigger and the automatic response.</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Let people respond to the real you — early enough for it to matter.</strong> Relationships maintained behind a protective wall are relationships with a curated version of you. The people worth keeping will respond to honesty. The ones who don't are giving you information about the relationship's actual ceiling.</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- HOMEWORK -->
+        <div class="section">
+            <h2>Assignment</h2>
+            <div class="homework-box">
+                <h4>Reflecting on the Cost of Waiting</h4>
+                <p>Before the next session, think of two or three recent situations where you felt uncomfortable but didn't speak up right away. For each one, write down: what happened, how you felt during the wait, and what you think might have been different if you had addressed it sooner.</p>
+                <p>Then write at least three specific reasons why early communication would have been better than waiting. Not general reasons — reasons specific to those situations. Bring your reflections to the next session, along with any moments where you practiced speaking earlier.</p>
+            </div>
+        </div>
+
+        <!-- MEDICATION -->
+        <div class="section">
+            <h2>Medication Note</h2>
+            <div class="med-note-box">
+                A prescription was noted as pending. No specific medication details were discussed during this session. Details will be provided at the next appointment or via follow-up communication.
+            </div>
+        </div>
+
+        <!-- KEY TAKEAWAYS -->
+        <div class="section">
+            <h2>Key Takeaways</h2>
+            <div class="takeaway-grid">
+                <div class="takeaway-item">Your close, in-person friendships work because they're in the maintenance phase — the one that fits your strengths. The work is building the skills to move through introduction and honeymoon without shutting down.</div>
+                <div class="takeaway-item">Overthinking fills the space that direct communication could occupy. When the loop starts, it's usually a signal to say something — not to think more carefully about whether to say it.</div>
+                <div class="takeaway-item">Harboring discomfort doesn't make it smaller. It makes it heavier. What could have been a light conversation early becomes a loaded one later — or doesn't happen at all, and shows up as anxiety instead.</div>
+                <div class="takeaway-item">Not all discomfort comes from the other person. Some of it is yours — rooted in history that predates them. Distinguishing between the two protects your relationships from being governed by old data.</div>
+                <div class="takeaway-item">Assertive communication is not confrontation. It's a conversation with evidence, delivered calmly and early. The goal is not to win — it's to be known, and to let the other person decide how to respond to that.</div>
+                <div class="takeaway-item">How someone responds when you're honest with them is information. Receptivity, defensiveness, dismissal — all of it tells you something about what the relationship is actually made of. You need that information.</div>
+                <div class="takeaway-item">You have already demonstrated the ability to communicate effectively — using specific examples, a light tone, direct language. The skill exists. What's needed is deploying it earlier rather than waiting until it's overdue.</div>
+                <div class="takeaway-item">You are an active participant in shaping your relationships — not a passive manager of other people's behavior. Naming your experience is not making things complicated. It's claiming your place in the dynamic.</div>
+            </div>
+        </div>
+
+        <!-- BOTTOM LINE -->
+        <div class="bottom-line">
+            <h2>🌿 The Bottom Line</h2>
+            <p>You already know how to build close relationships. You have people who know you, see you, and show up for you. The question this session raised isn't whether you're capable of connection — it's whether you're willing to pursue it before conditions feel perfectly safe.</p>
+            <p>The wall that goes up in unfamiliar situations is protective. It learned its job in environments where protection was necessary. But in the relationships you're trying to build now, the wall is costing you more than it's saving you. It's keeping people at the distance you say you don't want them at.</p>
+            <p>Assertiveness isn't about becoming someone who confronts everything. It's about deciding that you are worth a conversation — early, honest, specific, and light. You have the evidence. You have the language. You know how to do this. The only thing that changes now is the timing.</p>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
