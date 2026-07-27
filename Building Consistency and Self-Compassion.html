@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Consistency and Self-Compassion: Managing Anxiety and ADHD with Structure and Medication</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        @media print {
+            body { background: white; padding: 0; margin: 0; }
+            .container { max-width: none; box-shadow: none; border-radius: 0; }
+            .content { padding: 0.5in; }
+            .section, .framework { page-break-inside: avoid; break-inside: avoid; }
+            .page-break { page-break-before: always; break-before: page; }
+            @page { size: 8.5in 11in; margin: 0.75in; }
+        }
+
+        @media screen {
+            body {
+                background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+                min-height: 100vh;
+                padding: 20px;
+            }
+            .container {
+                max-width: 8.5in;
+                margin: 0 auto;
+                background: #E8DFD6;
+                border-radius: 20px;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+                overflow: hidden;
+            }
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #4A4A4A;
+        }
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+            color: #E8DFD6;
+            padding: 50px 40px;
+            text-align: center;
+        }
+        .header .eyebrow {
+            font-size: 0.82em;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            opacity: 0.7;
+            margin-bottom: 14px;
+        }
+        .header h1 {
+            font-size: 2.3em;
+            font-weight: 700;
+            margin-bottom: 14px;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+            line-height: 1.2;
+        }
+        .header .subtitle {
+            font-size: 1.1em;
+            opacity: 0.88;
+            font-style: italic;
+        }
+
+        /* CONTENT */
+        .content { padding: 44px 40px; }
+
+        /* STANDARD SECTION */
+        .section {
+            background: #ffffff;
+            border-radius: 14px;
+            border-left: 5px solid #D67B4A;
+            padding: 30px 32px;
+            margin-bottom: 32px;
+        }
+        .section h2 {
+            color: #6B2C3A;
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #E8DFD6;
+        }
+        .section p { margin-bottom: 12px; }
+        .section p:last-child { margin-bottom: 0; }
+
+        /* FRAMEWORK */
+        .framework {
+            background: #ffffff;
+            border-radius: 14px;
+            border-left: 5px solid #6B2C3A;
+            padding: 30px 32px;
+            margin-bottom: 32px;
+        }
+        .framework h2 {
+            color: #6B2C3A;
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .framework .fw-subtitle {
+            color: #D67B4A;
+            font-size: 0.95em;
+            font-style: italic;
+            margin-bottom: 22px;
+            padding-bottom: 14px;
+            border-bottom: 2px solid #E8DFD6;
+        }
+
+        /* PULL QUOTE */
+        .pull-quote {
+            background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+            color: #E8DFD6;
+            padding: 26px 36px;
+            border-radius: 12px;
+            margin: 28px 0;
+            font-size: 1.2em;
+            font-style: italic;
+            text-align: center;
+            box-shadow: 0 6px 18px rgba(107,44,58,0.25);
+            line-height: 1.6;
+        }
+
+        /* CONCEPTS GRID */
+        .concepts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 10px;
+        }
+        @media (max-width: 600px) { .concepts-grid { grid-template-columns: 1fr; } }
+        .concept-card {
+            background: #f9f6f3;
+            border-radius: 10px;
+            padding: 18px 20px;
+            border-top: 3px solid #D67B4A;
+        }
+        .concept-card h4 { color: #6B2C3A; font-size: 0.95em; font-weight: 700; margin-bottom: 6px; }
+        .concept-card p { font-size: 0.88em; margin: 0; }
+
+        /* ADHD-ANXIETY INTERACTION */
+        .interaction-visual {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 12px;
+            align-items: center;
+            margin: 16px 0;
+        }
+        @media (max-width: 600px) {
+            .interaction-visual { grid-template-columns: 1fr; }
+            .interact-arrow { transform: rotate(90deg); }
+        }
+        .interact-card {
+            border-radius: 10px;
+            padding: 20px 18px;
+            text-align: center;
+        }
+        .interact-card.adhd { background: #f0ece8; border: 2px solid #D67B4A; }
+        .interact-card.anxiety { background: #f3ecec; border: 2px solid #6B2C3A; }
+        .interact-card h4 { font-size: 1em; font-weight: 700; margin-bottom: 8px; }
+        .interact-card.adhd h4 { color: #D67B4A; }
+        .interact-card.anxiety h4 { color: #6B2C3A; }
+        .interact-card p { font-size: 0.83em; }
+        .interact-arrow { font-size: 1.4em; color: #6B2C3A; text-align: center; opacity: 0.6; }
+        .interact-caption {
+            font-size: 0.8em;
+            color: #4A4A4A;
+            font-style: italic;
+            text-align: center;
+            margin-top: 8px;
+            opacity: 0.8;
+        }
+
+        /* DAY ARCHITECTURE TIMELINE */
+        .day-timeline {
+            position: relative;
+            margin: 20px 0 8px;
+        }
+        .timeline-track {
+            display: flex;
+            align-items: stretch;
+            border-radius: 10px;
+            overflow: hidden;
+            height: auto;
+        }
+        @media (max-width: 600px) { .timeline-track { flex-direction: column; } }
+        .timeline-block {
+            padding: 16px 14px;
+            text-align: center;
+            position: relative;
+        }
+        .timeline-block.sleep { flex: 2; background: #3d1a21; }
+        .timeline-block.morning { flex: 3; background: #D67B4A; }
+        .timeline-block.work { flex: 4; background: #b26038; }
+        .timeline-block.afternoon { flex: 2; background: #8a3a4a; }
+        .timeline-block.evening { flex: 3; background: #6B2C3A; }
+        .timeline-block .tb-time {
+            font-size: 0.7em;
+            font-weight: 700;
+            color: rgba(255,255,255,0.65);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 4px;
+        }
+        .timeline-block .tb-label {
+            font-size: 0.82em;
+            font-weight: 700;
+            color: #E8DFD6;
+            margin-bottom: 4px;
+        }
+        .timeline-block .tb-detail {
+            font-size: 0.72em;
+            color: rgba(232,223,214,0.8);
+            line-height: 1.3;
+        }
+        .timeline-block .tb-med {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            border-radius: 12px;
+            padding: 2px 8px;
+            font-size: 0.68em;
+            color: #E8DFD6;
+            margin-top: 5px;
+        }
+
+        /* DIMMER vs LIGHT SWITCH */
+        .med-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin: 16px 0;
+        }
+        @media (max-width: 600px) { .med-comparison { grid-template-columns: 1fr; } }
+        .med-comp-card {
+            border-radius: 10px;
+            padding: 20px 18px;
+            text-align: center;
+        }
+        .med-comp-card.dimmer {
+            background: linear-gradient(135deg, #f9f6f3, #E8DFD6);
+            border: 2px solid #D67B4A;
+        }
+        .med-comp-card.switch {
+            background: linear-gradient(135deg, #f9f6f3, #E8DFD6);
+            border: 2px solid #6B2C3A;
+        }
+        .med-comp-card .mc-icon { font-size: 2em; margin-bottom: 8px; display: block; }
+        .med-comp-card h4 { font-size: 0.95em; font-weight: 700; margin-bottom: 6px; }
+        .med-comp-card.dimmer h4 { color: #D67B4A; }
+        .med-comp-card.switch h4 { color: #6B2C3A; }
+        .med-comp-card .mc-type { font-size: 0.75em; color: #B8B8B8; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.08em; }
+        .med-comp-card p { font-size: 0.85em; }
+
+        /* STEPS */
+        .step {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            margin-bottom: 18px;
+        }
+        .step:last-of-type { margin-bottom: 0; }
+        .step-number {
+            flex-shrink: 0;
+            background: #6B2C3A;
+            color: #E8DFD6;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.95em;
+            margin-top: 2px;
+        }
+        .step-content h4 { color: #6B2C3A; font-size: 1.02em; margin-bottom: 4px; }
+        .step-content p { font-size: 0.95em; margin: 0; }
+
+        /* APPLICATION BOX */
+        .application-box {
+            background: linear-gradient(135deg, #E8DFD6 0%, #d4c9be 100%);
+            border-left: 5px solid #D67B4A;
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin-top: 22px;
+        }
+        .application-box h4 {
+            color: #6B2C3A;
+            font-size: 0.9em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 8px;
+        }
+        .application-box p { font-size: 0.95em; margin: 0; }
+
+        /* AREAS OF LIFE PROMPT */
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 14px;
+        }
+        @media (max-width: 600px) { .areas-grid { grid-template-columns: 1fr 1fr; } }
+        .area-chip {
+            background: #f9f6f3;
+            border-radius: 8px;
+            padding: 12px 14px;
+            text-align: center;
+            font-size: 0.85em;
+            font-weight: 600;
+            color: #6B2C3A;
+            border-top: 2px solid #D67B4A;
+        }
+
+        /* INSTRUCTION LIST */
+        .instruction-list { list-style: none; margin-top: 8px; }
+        .instruction-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 11px 0;
+            border-bottom: 1px solid #E8DFD6;
+        }
+        .instruction-list li:last-child { border-bottom: none; }
+        .bullet {
+            flex-shrink: 0;
+            width: 10px;
+            height: 10px;
+            background: #D67B4A;
+            border-radius: 50%;
+            margin-top: 7px;
+        }
+        .instruction-list li p { margin: 0; font-size: 0.95em; }
+        .instruction-list li strong { color: #6B2C3A; }
+
+        /* HOMEWORK */
+        .homework-box {
+            background: linear-gradient(135deg, #f9f6f3 0%, #E8DFD6 100%);
+            border-radius: 12px;
+            padding: 24px 28px;
+        }
+        .homework-box h4 {
+            color: #D67B4A;
+            font-size: 0.9em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 12px;
+        }
+        .hw-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+        .hw-item:last-child { margin-bottom: 0; }
+        .hw-num {
+            flex-shrink: 0;
+            background: #D67B4A;
+            color: white;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+            font-weight: 700;
+            margin-top: 2px;
+        }
+        .hw-item p { font-size: 0.93em; margin: 0; }
+        .hw-item strong { color: #6B2C3A; }
+
+        /* MEDICATION CARDS */
+        .med-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-top: 10px;
+        }
+        @media (max-width: 600px) { .med-grid { grid-template-columns: 1fr; } }
+        .med-card {
+            background: #f9f6f3;
+            border-radius: 10px;
+            padding: 16px 18px;
+            border-top: 3px solid #B8B8B8;
+        }
+        .med-card h4 { color: #6B2C3A; font-size: 0.9em; font-weight: 700; margin-bottom: 8px; }
+        .med-tag {
+            display: inline-block;
+            background: #E8DFD6;
+            border-radius: 20px;
+            padding: 3px 10px;
+            font-size: 0.76em;
+            color: #4A4A4A;
+            margin: 2px 2px 2px 0;
+        }
+        .med-note { font-size: 0.82em; color: #4A4A4A; margin-top: 8px; line-height: 1.5; }
+
+        /* TAKEAWAYS */
+        .takeaway-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 8px;
+        }
+        @media (max-width: 600px) { .takeaway-grid { grid-template-columns: 1fr; } }
+        .takeaway-item {
+            background: #f9f6f3;
+            border-radius: 8px;
+            padding: 14px 16px;
+            border-left: 3px solid #D67B4A;
+            font-size: 0.92em;
+        }
+
+        /* BOTTOM LINE */
+        .bottom-line {
+            background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+            color: #E8DFD6;
+            border-radius: 14px;
+            padding: 38px 40px;
+        }
+        .bottom-line h2 {
+            color: #E8DFD6;
+            font-size: 1.6em;
+            margin-bottom: 18px;
+            text-align: center;
+        }
+        .bottom-line p {
+            color: #E8DFD6;
+            opacity: 0.92;
+            font-size: 1em;
+            margin-bottom: 14px;
+        }
+        .bottom-line p:last-child { margin-bottom: 0; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="eyebrow">Alignment Psychiatry · Therapeutic Insights</div>
+        <h1>⚡ Building Consistency and Self-Compassion</h1>
+        <div class="subtitle">Managing Anxiety and ADHD with Structure and Medication</div>
+    </div>
+
+    <div class="content">
+
+        <!-- THE SITUATION -->
+        <div class="section">
+            <h2>The Situation</h2>
+            <p>You are navigating a pattern that shows up in multiple areas of your life: anxiety that surfaces in social situations and leadership moments, low motivation for personal projects after work hours, and sleep inconsistency that drains the energy you need to follow through on things that matter to you. The feelings come and go — rarely lasting long — but they happen often enough to create a constant background hum of frustration and self-doubt.</p>
+            <p>You have been actively seeking support. You are in therapy. You are tracking what's happening. You are showing up for this. That is evidence of resilience, not failure — and it matters that you recognize it as such, especially on days when the ADHD brain convinces you that you are the problem rather than the pattern.</p>
+        </div>
+
+        <!-- CORE PROBLEM -->
+        <div class="section">
+            <h2>Core Problem</h2>
+            <p>The core challenge is the interaction between ADHD and anxiety — each one amplifying the other. Difficulty focusing and sustaining motivation (ADHD) leads to tasks piling up, which feeds worry and self-criticism (anxiety), which makes starting feel even harder, which increases avoidance, which feeds the next round of anxiety. It's a loop, not a character flaw.</p>
+            <p>What's missing is not willpower or desire. It's structure — a consistent external scaffold that replaces the internal executive functioning that ADHD makes unreliable. Motivation is not a reliable starting point. Structure and habit are. That's what this session was designed to build.</p>
+        </div>
+
+        <!-- PULL QUOTE 1 -->
+        <div class="pull-quote">
+            "A lot of ADHD is trying to live up to societal standards that don't fit how our brains work."
+        </div>
+
+        <!-- CLINICAL CONCEPTS -->
+        <div class="section">
+            <h2>Understanding the Dynamics</h2>
+
+            <div class="interaction-visual">
+                <div class="interact-card adhd">
+                    <h4>ADHD</h4>
+                    <p>Challenges with focus, impulse control, and sustaining attention. A brain difference — not a discipline problem. Makes starting hard, even when the desire to start is real.</p>
+                </div>
+                <div class="interact-arrow">⇄</div>
+                <div class="interact-card anxiety">
+                    <h4>Anxiety</h4>
+                    <p>Persistent worry triggered by discomfort, social situations, and self-doubt. Worsens when ADHD-driven avoidance causes tasks to pile up. The two feed each other.</p>
+                </div>
+            </div>
+            <div class="interact-caption">Which came first doesn't matter as much as breaking the loop — and structure is how you break it.</div>
+
+            <div class="concepts-grid" style="margin-top: 20px;">
+                <div class="concept-card">
+                    <h4>Stimulant Medication</h4>
+                    <p>Works by increasing dopamine and norepinephrine — the neurotransmitters that support focus, motivation, and follow-through. Not addictive when used as prescribed. Provides a physiological boost that willpower alone cannot reliably replicate.</p>
+                </div>
+                <div class="concept-card">
+                    <h4>Diazepam (for Sleep)</h4>
+                    <p>Calms the nervous system to help initiate sleep and reset an inconsistent sleep cycle. Short-term use only — the goal is to build a new rhythm that can eventually sustain itself without the medication.</p>
+                </div>
+                <div class="concept-card">
+                    <h4>Decision Fatigue</h4>
+                    <p>The cognitive drain that comes from making too many unstructured choices about what to do next. ADHD brains are especially vulnerable to it. Time block scheduling reduces the number of real-time decisions, conserving mental energy for execution.</p>
+                </div>
+                <div class="concept-card">
+                    <h4>Habit Formation</h4>
+                    <p>New routines take roughly 2–3 months to stabilize. During that window, consistency matters more than perfection. The goal is not to feel like doing it — the goal is to do it anyway until the brain stops requiring as much effort to begin.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FRAMEWORK 1: ENERGY OPTIMIZATION -->
+        <div class="framework">
+            <h2>🔋 Framework 1: Energy Optimization</h2>
+            <div class="fw-subtitle">Sleep and nutrition as the foundation for everything else</div>
+
+            <p style="margin-bottom: 18px; font-size: 0.95em;">Mood, focus, anxiety tolerance, and motivation are all downstream of how rested and fueled your body is. No framework, habit, or medication works as well on depleted energy. This is the non-negotiable foundation.</p>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h4>Set a Fixed Wake Time — and Protect It</h4>
+                    <p>Target: 6am, daily. Not just weekdays. The consistency of the wake time is what resets the body clock — not the bedtime. Once the wake time stabilizes, sleep onset tends to follow. Cannabis on weekends disrupts REM; keep that in mind as you track how you feel.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h4>Use Medication to Bridge the Sleep Reset</h4>
+                    <p>Diazepam at 11pm supports sleep onset while you build the new routine. The goal is not permanent use — it's getting 2–3 months of consistent sleep so the pattern becomes self-sustaining. Don't fight the drowsiness it creates. Get in bed and let it work.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h4>Fuel Before You Expect Focus</h4>
+                    <p>Stimulant medication suppresses appetite, which can work against you. Eat something before taking morning medication. Nutrition and hydration aren't secondary to the plan — they're part of it.</p>
+                </div>
+            </div>
+
+            <div class="application-box">
+                <h4>Why This Comes First</h4>
+                <p>Every other framework — medication timing, time block scheduling, personal project momentum — depends on this one. An under-slept, under-fueled brain cannot build new habits reliably. Fixing the foundation first is not slow. It's the fastest path to the other things working.</p>
+            </div>
+        </div>
+
+        <!-- FRAMEWORK 2: MEDICATION AS CONSISTENCY TOOL -->
+        <div class="framework">
+            <h2>💊 Framework 2: Medication as a Consistency Tool</h2>
+            <div class="fw-subtitle">Using medication to create momentum — not to replace effort, but to make starting possible</div>
+
+            <p style="margin-bottom: 16px; font-size: 0.95em;">The two stimulant medications serve distinct roles. Understanding the difference helps you use them strategically rather than reactively:</p>
+
+            <div class="med-comparison">
+                <div class="med-comp-card dimmer">
+                    <span class="mc-icon">🔆</span>
+                    <div class="mc-type">Adderall XR · Long-Acting</div>
+                    <h4>The Dimmer</h4>
+                    <p>Provides steady, gradual support throughout the day. Takes 30–60 minutes to build. Sustains focus across your morning and into early afternoon without peaks and crashes.</p>
+                </div>
+                <div class="med-comp-card switch">
+                    <span class="mc-icon">💡</span>
+                    <div class="mc-type">Adderall IR · Short-Acting</div>
+                    <h4>The Light Switch</h4>
+                    <p>A targeted boost for high-demand afternoon periods. Fast-acting, shorter duration. Use it when you need to finish something specific — not as a daily default.</p>
+                </div>
+            </div>
+
+            <div class="step" style="margin-top: 22px;">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h4>Take It Daily — Not Just When You Feel Ready</h4>
+                    <p>The ADHD brain does not reliably produce the motivation to begin. Waiting until you feel like taking your medication and then doing the work reverses the sequence. Take the medication first. The motivation follows the action — not the other way around.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h4>Time It Around Your Day Architecture</h4>
+                    <p>Long-acting in the morning, immediately after waking. Short-acting as a booster around 2–3pm if needed for a specific demand. Nothing after 4pm. The sleep window is the hard stop — protect it.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h4>Track the Effects — Not Just Whether You Took It</h4>
+                    <p>Log your energy, mood, and focus each day alongside your medication log. This data becomes the basis for adjusting dose or timing at your next appointment. The medication is a starting point, not a fixed prescription.</p>
+                </div>
+            </div>
+
+            <div class="application-box">
+                <h4>What Medication Can and Cannot Do</h4>
+                <p>Medication primes the pump — it lowers the activation energy required to start. It does not produce motivation out of nothing, nor does it replace the structure of knowing what to do next. That's where the next framework comes in. Medication and scheduling work together; neither is sufficient alone.</p>
+            </div>
+        </div>
+
+        <!-- PULL QUOTE 2 -->
+        <div class="pull-quote">
+            "Don't wait to feel motivated — take the medication anyway, and then do what you need to do."
+        </div>
+
+        <!-- FRAMEWORK 3: TIME BLOCK SCHEDULING -->
+        <div class="framework">
+            <h2>🗓️ Framework 3: Time Block Scheduling</h2>
+            <div class="fw-subtitle">Building a day architecture that works with your brain — not against it</div>
+
+            <p style="margin-bottom: 16px; font-size: 0.95em;">The ADHD brain struggles with open-ended time. When the day is unstructured, it defaults to whatever is most immediately stimulating — not most important. Time block scheduling removes the constant decision of "what should I be doing right now?" and replaces it with a plan made when you were thinking clearly.</p>
+
+            <!-- DAY ARCHITECTURE -->
+            <div class="day-timeline">
+                <p style="font-size: 0.8em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #6B2C3A; margin-bottom: 10px;">Your Ideal Day Architecture</p>
+                <div class="timeline-track">
+                    <div class="timeline-block sleep">
+                        <div class="tb-time">11pm – 6am</div>
+                        <div class="tb-label">Sleep</div>
+                        <div class="tb-detail">Protected. Non-negotiable.</div>
+                        <span class="tb-med">💊 Diazepam 11pm</span>
+                    </div>
+                    <div class="timeline-block morning">
+                        <div class="tb-time">6am – 9am</div>
+                        <div class="tb-label">Your Time</div>
+                        <div class="tb-detail">Personal projects, gym, priorities that matter most to you.</div>
+                        <span class="tb-med">💊 Adderall XR</span>
+                    </div>
+                    <div class="timeline-block work">
+                        <div class="tb-time">9am – 2pm</div>
+                        <div class="tb-label">Work</div>
+                        <div class="tb-detail">Peak medication window. High-demand tasks here.</div>
+                    </div>
+                    <div class="timeline-block afternoon">
+                        <div class="tb-time">2pm – 5pm</div>
+                        <div class="tb-label">Afternoon</div>
+                        <div class="tb-detail">Booster if needed for specific demands.</div>
+                        <span class="tb-med">💊 IR if needed</span>
+                    </div>
+                    <div class="timeline-block evening">
+                        <div class="tb-time">5pm – 11pm</div>
+                        <div class="tb-label">Wind Down</div>
+                        <div class="tb-detail">No stimulants. Light tasks, rest, preparation for sleep.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step" style="margin-top: 22px;">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h4>Map Your Areas of Life First</h4>
+                    <p>Before scheduling anything, identify what actually matters to you: work, gym, personal projects, relationships, rest, creative work. These become the categories your time blocks serve. You can't schedule meaningfully until you know what you're scheduling for.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h4>Assign Blocks — Not Tasks</h4>
+                    <p>Schedule "gym time" rather than "go to gym." Schedule "personal project time" rather than "write the presentation." The block is fixed; what happens inside it can vary. This protects the structure while allowing the flexibility your brain actually needs.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h4>Front-Load What Matters Most</h4>
+                    <p>After work, energy is lowest — that's not a character flaw, it's physiology. Personal projects that require creativity, focus, or motivation belong in the morning block when medication is active and energy is fresh. Stop trying to squeeze important things into leftover time.</p>
+                </div>
+            </div>
+
+            <p style="font-size: 0.88em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #6B2C3A; margin: 20px 0 10px;">Your Areas of Life (Starting Points)</p>
+            <div class="areas-grid">
+                <div class="area-chip">🏋️ Gym / Movement</div>
+                <div class="area-chip">💼 Work</div>
+                <div class="area-chip">🎯 Personal Projects</div>
+                <div class="area-chip">👥 Relationships</div>
+                <div class="area-chip">😴 Rest / Recovery</div>
+                <div class="area-chip">🌱 Growth / Learning</div>
+            </div>
+
+            <div class="application-box" style="margin-top: 20px;">
+                <h4>On Consistency vs. Perfection</h4>
+                <p>Missed a block? The goal is not a perfect week — it's a consistent pattern over 2–3 months. The brain builds habits through repetition, not through perfection. A structure you follow 70% of the time beats one you follow perfectly for two weeks and abandon. Keep going.</p>
+            </div>
+        </div>
+
+        <!-- PRACTICAL INSTRUCTIONS -->
+        <div class="section">
+            <h2>Putting It Into Practice</h2>
+            <ul class="instruction-list">
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Put the medication next to your bed tonight.</strong> Remove the decision from the morning. Wake up, take it, lie there if you want to. The action precedes the momentum — not the other way around.</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Stop saving your most important work for after work.</strong> If something genuinely matters — a creative project, a goal, a priority — put it in the morning window when medication is active and the day hasn't depleted you yet.</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Track for data, not for judgment.</strong> Keep a simple daily log: bedtime, wake time, medication taken, energy level (1–5), focus quality (1–5). Two weeks of this gives you and your provider real information for adjusting the plan.</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Notice self-criticism as a signal, not a verdict.</strong> When the inner critic fires up about not doing enough, treat it as a data point — something triggered anxiety or executive function — not as confirmation that something is wrong with you. These thoughts are common in ADHD and they are not accurate.</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Avoid alcohol entirely; limit cannabis to weekends.</strong> Both affect sleep architecture and medication effectiveness. The sleep reset you're building is fragile in the first month — protect it.</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- HOMEWORK -->
+        <div class="section">
+            <h2>Assignments</h2>
+            <div class="homework-box">
+                <h4>Begin Immediately — Review in Two Weeks</h4>
+                <div class="hw-item">
+                    <div class="hw-num">1</div>
+                    <p><strong>Start the sleep routine tonight:</strong> Diazepam at 11pm, in bed immediately after, wake at 6am. Log bedtime and wake time every day.</p>
+                </div>
+                <div class="hw-item">
+                    <div class="hw-num">2</div>
+                    <p><strong>Begin medication as prescribed:</strong> Long-acting in the morning, short-acting booster as needed around 2–3pm, nothing after 4pm.</p>
+                </div>
+                <div class="hw-item">
+                    <div class="hw-num">3</div>
+                    <p><strong>Complete the Areas of Life worksheet:</strong> Identify your key life categories, estimate current time investment in each, and note where the gaps are between how you spend time and what actually matters to you.</p>
+                </div>
+                <div class="hw-item">
+                    <div class="hw-num">4</div>
+                    <p><strong>Draft a weekly time block schedule:</strong> Assign blocks to each area. Keep it simple — even a rough first draft is more useful than a perfect plan that doesn't exist. Bring it to the next session.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- MEDICATION -->
+        <div class="section">
+            <h2>Medication Summary</h2>
+            <div class="med-grid">
+                <div class="med-card">
+                    <h4>Adderall XR 15mg</h4>
+                    <div class="med-tag">Morning</div>
+                    <div class="med-tag">Long-acting</div>
+                    <div class="med-tag">ADHD / Focus</div>
+                    <div class="med-note">Take after waking, before 11am. Swallow whole — do not crush. Monitor: insomnia, appetite, jitteriness.</div>
+                </div>
+                <div class="med-card">
+                    <h4>Adderall IR</h4>
+                    <div class="med-tag">2–3pm as needed</div>
+                    <div class="med-tag">Short-acting</div>
+                    <div class="med-tag">Afternoon boost</div>
+                    <div class="med-note">Use for specific high-demand tasks. Do not take after 4pm. Not a daily default.</div>
+                </div>
+                <div class="med-card">
+                    <h4>Diazepam 5mg</h4>
+                    <div class="med-tag">11pm nightly</div>
+                    <div class="med-tag">Sleep reset</div>
+                    <div class="med-tag">Short-term use</div>
+                    <div class="med-note">Get in bed immediately after taking. No alcohol. Taper plan after 2–3 months. May reduce to 2.5mg if too sedating.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- KEY TAKEAWAYS -->
+        <div class="section">
+            <h2>Key Takeaways</h2>
+            <div class="takeaway-grid">
+                <div class="takeaway-item">ADHD and anxiety amplify each other. The difficulty starting, the avoidance, the self-criticism — these are features of an interaction between two conditions, not evidence of personal failure.</div>
+                <div class="takeaway-item">Motivation is not a reliable starting point for ADHD brains. Structure, routine, and medication create the conditions that make motivation possible — not the other way around.</div>
+                <div class="takeaway-item">Sleep is foundational. Everything else — medication effectiveness, focus, anxiety tolerance, mood — depends on consistent, protected sleep. Fix this first.</div>
+                <div class="takeaway-item">The long-acting stimulant (dimmer) and short-acting (light switch) serve different roles. Understanding the difference helps you deploy them strategically rather than reactively.</div>
+                <div class="takeaway-item">Front-load what matters. After-work energy is lowest. Your most important personal priorities belong in the morning window — not in the leftover hours at the end of the day.</div>
+                <div class="takeaway-item">Time block scheduling reduces decision fatigue by removing the question "what should I do now?" from the moment. The plan is made when you're thinking clearly; the block just requires showing up.</div>
+                <div class="takeaway-item">Consistency over 2–3 months is the goal — not perfection over 2 weeks. Habits build through repetition; missing one block doesn't break the pattern. Stopping does.</div>
+                <div class="takeaway-item">You have been actively seeking support, building relationships, and taking on leadership. That is evidence of resilience. The inner critic that says otherwise is not giving you accurate information.</div>
+            </div>
+        </div>
+
+        <!-- BOTTOM LINE -->
+        <div class="bottom-line">
+            <h2>⚡ The Bottom Line</h2>
+            <p>What's been missing is not effort or desire. It's the scaffold — the external structure that replaces what ADHD makes internally unreliable. Waiting to feel motivated before building structure is the trap. Structure is what generates momentum. Medication is what makes starting less costly. Sleep is what makes all of it sustainable.</p>
+            <p>The plan from this session is simple on paper and genuinely hard in practice — not because any single piece is complicated, but because building new habits requires doing the right things on the days you don't feel like it. That's the entire point. The medication helps with that. The schedule helps with that. The sleep helps with that. Three months of consistency is the goal, not the outcome — the outcome is that three months from now, this requires significantly less effort than it does today.</p>
+            <p>Be patient with yourself during the adjustment period. Notice what the self-criticism says and don't give it the last word. You are not behind. You are building something — and this session gave you the blueprint for what to build.</p>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
