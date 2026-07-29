@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roadmap to Redemption: Healing Grief, Reclaiming Identity, and Calming the Nervous System</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        @media print {
+            body { background: white; padding: 0; margin: 0; }
+            .container { max-width: none; box-shadow: none; border-radius: 0; }
+            .content { padding: 0.5in; }
+            .section, .framework { page-break-inside: avoid; break-inside: avoid; }
+            .page-break { page-break-before: always; break-before: page; }
+            @page { size: 8.5in 11in; margin: 0.75in; }
+        }
+
+        @media screen {
+            body {
+                background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+                min-height: 100vh;
+                padding: 20px;
+            }
+            .container {
+                max-width: 8.5in;
+                margin: 0 auto;
+                background: #E8DFD6;
+                border-radius: 20px;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+                overflow: hidden;
+            }
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #4A4A4A;
+        }
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+            color: #E8DFD6;
+            padding: 50px 40px;
+            text-align: center;
+        }
+        .header .eyebrow {
+            font-size: 0.82em;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            opacity: 0.7;
+            margin-bottom: 14px;
+        }
+        .header h1 {
+            font-size: 2.4em;
+            font-weight: 700;
+            margin-bottom: 14px;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+            line-height: 1.2;
+        }
+        .header .subtitle {
+            font-size: 1.1em;
+            opacity: 0.88;
+            font-style: italic;
+        }
+
+        /* CONTENT */
+        .content { padding: 44px 40px; }
+
+        /* STANDARD SECTION */
+        .section {
+            background: #ffffff;
+            border-radius: 14px;
+            border-left: 5px solid #D67B4A;
+            padding: 30px 32px;
+            margin-bottom: 32px;
+        }
+        .section h2 {
+            color: #6B2C3A;
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #E8DFD6;
+        }
+        .section p { margin-bottom: 12px; }
+        .section p:last-child { margin-bottom: 0; }
+
+        /* FRAMEWORK */
+        .framework {
+            background: #ffffff;
+            border-radius: 14px;
+            border-left: 5px solid #6B2C3A;
+            padding: 30px 32px;
+            margin-bottom: 32px;
+        }
+        .framework h2 {
+            color: #6B2C3A;
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .framework .fw-subtitle {
+            color: #D67B4A;
+            font-size: 0.95em;
+            font-style: italic;
+            margin-bottom: 22px;
+            padding-bottom: 14px;
+            border-bottom: 2px solid #E8DFD6;
+        }
+
+        /* PULL QUOTE */
+        .pull-quote {
+            background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+            color: #E8DFD6;
+            padding: 26px 36px;
+            border-radius: 12px;
+            margin: 28px 0;
+            font-size: 1.15em;
+            font-style: italic;
+            text-align: center;
+            box-shadow: 0 6px 18px rgba(107,44,58,0.25);
+            line-height: 1.6;
+        }
+
+        /* CONCEPTS GRID */
+        .concepts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 10px;
+        }
+        @media (max-width: 600px) { .concepts-grid { grid-template-columns: 1fr; } }
+        .concept-card {
+            background: #f9f6f3;
+            border-radius: 10px;
+            padding: 18px 20px;
+            border-top: 3px solid #D67B4A;
+        }
+        .concept-card h4 { color: #6B2C3A; font-size: 0.95em; font-weight: 700; margin-bottom: 6px; }
+        .concept-card p { font-size: 0.88em; margin: 0; }
+
+        /* GRIEF MAP */
+        .grief-map {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin: 16px 0;
+        }
+        @media (max-width: 600px) { .grief-map { grid-template-columns: 1fr 1fr; } }
+        .grief-node {
+            border-radius: 10px;
+            padding: 16px 14px;
+            text-align: center;
+        }
+        .grief-node:nth-child(1) { background: #3d1a21; }
+        .grief-node:nth-child(2) { background: #52242c; }
+        .grief-node:nth-child(3) { background: #622c36; }
+        .grief-node:nth-child(4) { background: #6B2C3A; }
+        .grief-node:nth-child(5) { background: #7a343f; }
+        .grief-node:nth-child(6) { background: #8a3a4a; }
+        .grief-node .gn-icon { font-size: 1.5em; display: block; margin-bottom: 6px; }
+        .grief-node h4 { color: #D67B4A; font-size: 0.82em; font-weight: 700; margin-bottom: 4px; }
+        .grief-node p { color: rgba(232,223,214,0.82); font-size: 0.75em; margin: 0; line-height: 1.3; }
+        .grief-caption {
+            font-size: 0.8em;
+            font-style: italic;
+            text-align: center;
+            color: #4A4A4A;
+            margin-top: 8px;
+            opacity: 0.75;
+        }
+
+        /* OVERLOAD VISUAL */
+        .overload-visual {
+            display: flex;
+            align-items: flex-end;
+            gap: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 16px 0;
+        }
+        @media (max-width: 600px) { .overload-visual { flex-direction: column; } }
+        .ov-role {
+            flex: 1;
+            padding: 14px 10px;
+            text-align: center;
+        }
+        .ov-role:nth-child(1) { background: #E8DFD6; }
+        .ov-role:nth-child(2) { background: #d4c9be; }
+        .ov-role:nth-child(3) { background: #c0b5aa; }
+        .ov-role:nth-child(4) { background: #D67B4A; }
+        .ov-role:nth-child(5) { background: #6B2C3A; }
+        .ov-role .ov-icon { font-size: 1.4em; display: block; margin-bottom: 4px; }
+        .ov-role .ov-label { font-size: 0.72em; font-weight: 700; }
+        .ov-role:nth-child(1) .ov-label,
+        .ov-role:nth-child(2) .ov-label,
+        .ov-role:nth-child(3) .ov-label { color: #4A4A4A; }
+        .ov-role:nth-child(4) .ov-label,
+        .ov-role:nth-child(5) .ov-label { color: #E8DFD6; }
+        .ov-caption {
+            font-size: 0.78em;
+            font-style: italic;
+            text-align: center;
+            color: #4A4A4A;
+            margin-top: 8px;
+            opacity: 0.75;
+        }
+
+        /* ROADMAP STAGES */
+        .roadmap-stages {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr auto 1fr;
+            gap: 0;
+            align-items: stretch;
+            margin: 20px 0;
+        }
+        @media (max-width: 600px) {
+            .roadmap-stages { grid-template-columns: 1fr; }
+            .road-arrow { transform: rotate(90deg); display: flex; justify-content: center; }
+        }
+        .road-stage {
+            border-radius: 12px;
+            padding: 24px 18px;
+            text-align: center;
+        }
+        .road-stage.past {
+            background: linear-gradient(160deg, #3d1a21, #6B2C3A);
+            border: 2px solid #6B2C3A;
+        }
+        .road-stage.identity {
+            background: linear-gradient(160deg, #6B2C3A, #8a3a4a);
+            border: 2px solid #D67B4A;
+        }
+        .road-stage.future {
+            background: linear-gradient(160deg, #D67B4A, #c06035);
+            border: 2px solid #D67B4A;
+        }
+        .road-arrow {
+            display: flex;
+            align-items: center;
+            padding: 0 8px;
+            font-size: 1.6em;
+            color: #6B2C3A;
+            opacity: 0.5;
+        }
+        .road-stage .rs-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.15);
+            color: #E8DFD6;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            font-size: 0.85em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .road-stage .rs-icon { font-size: 1.8em; display: block; margin-bottom: 8px; }
+        .road-stage h4 { color: #E8DFD6; font-size: 0.92em; font-weight: 700; margin-bottom: 6px; }
+        .road-stage p { color: rgba(232,223,214,0.85); font-size: 0.78em; line-height: 1.4; margin: 0; }
+
+        /* STAGE DETAIL CARDS */
+        .stage-detail {
+            background: #f9f6f3;
+            border-radius: 12px;
+            padding: 22px 24px;
+            margin-bottom: 16px;
+            border-left: 4px solid #6B2C3A;
+        }
+        .stage-detail:last-child { margin-bottom: 0; }
+        .stage-detail .sd-tag {
+            display: inline-block;
+            background: #6B2C3A;
+            color: #E8DFD6;
+            font-size: 0.72em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 3px 10px;
+            border-radius: 12px;
+            margin-bottom: 10px;
+        }
+        .stage-detail.identity-stage { border-left-color: #D67B4A; }
+        .stage-detail.identity-stage .sd-tag { background: #D67B4A; }
+        .stage-detail.future-stage { border-left-color: #D67B4A; }
+        .stage-detail.future-stage .sd-tag { background: #D67B4A; }
+        .stage-detail h4 { color: #6B2C3A; font-size: 1em; font-weight: 700; margin-bottom: 8px; }
+        .stage-detail p { font-size: 0.92em; margin: 0; }
+
+        /* SURVIVAL RESPONSES */
+        .survival-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 14px;
+        }
+        @media (max-width: 600px) { .survival-grid { grid-template-columns: 1fr 1fr; } }
+        .survival-card {
+            background: #f9f6f3;
+            border-radius: 10px;
+            padding: 16px 12px;
+            text-align: center;
+            border-top: 3px solid #6B2C3A;
+        }
+        .survival-card .sv-icon { font-size: 1.6em; display: block; margin-bottom: 6px; }
+        .survival-card h4 { color: #6B2C3A; font-size: 0.88em; font-weight: 700; margin-bottom: 4px; }
+        .survival-card p { font-size: 0.78em; color: #4A4A4A; margin: 0; }
+
+        /* APPLICATION BOX */
+        .application-box {
+            background: linear-gradient(135deg, #E8DFD6 0%, #d4c9be 100%);
+            border-left: 5px solid #D67B4A;
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin-top: 22px;
+        }
+        .application-box h4 {
+            color: #6B2C3A;
+            font-size: 0.9em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 8px;
+        }
+        .application-box p { font-size: 0.95em; margin: 0; }
+
+        /* CBT INLINE */
+        .cbt-inline {
+            background: #f9f6f3;
+            border-radius: 10px;
+            padding: 18px 20px;
+            margin-top: 16px;
+        }
+        .cbt-inline h4 {
+            color: #6B2C3A;
+            font-size: 0.88em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .cbt-row {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+        .cbt-chip {
+            background: #6B2C3A;
+            color: #E8DFD6;
+            border-radius: 20px;
+            padding: 5px 14px;
+            font-size: 0.78em;
+            font-weight: 600;
+        }
+        .cbt-arrow { color: #D67B4A; font-size: 1em; }
+
+        /* INSTRUCTION LIST */
+        .instruction-list { list-style: none; margin-top: 8px; }
+        .instruction-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 11px 0;
+            border-bottom: 1px solid #E8DFD6;
+        }
+        .instruction-list li:last-child { border-bottom: none; }
+        .bullet {
+            flex-shrink: 0;
+            width: 10px;
+            height: 10px;
+            background: #D67B4A;
+            border-radius: 50%;
+            margin-top: 7px;
+        }
+        .instruction-list li p { margin: 0; font-size: 0.95em; }
+        .instruction-list li strong { color: #6B2C3A; }
+
+        /* HOMEWORK */
+        .homework-box {
+            background: linear-gradient(135deg, #f9f6f3 0%, #E8DFD6 100%);
+            border-radius: 12px;
+            padding: 24px 28px;
+        }
+        .homework-box h4 {
+            color: #D67B4A;
+            font-size: 0.9em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 12px;
+        }
+        .homework-box p { font-size: 0.93em; margin-bottom: 8px; }
+        .homework-box p:last-child { margin-bottom: 0; }
+        .grief-prompts {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 12px;
+        }
+        @media (max-width: 600px) { .grief-prompts { grid-template-columns: 1fr; } }
+        .grief-prompt {
+            background: white;
+            border-radius: 8px;
+            padding: 14px 12px;
+            border-top: 2px solid #D67B4A;
+            font-size: 0.82em;
+            color: #4A4A4A;
+        }
+        .grief-prompt strong { color: #6B2C3A; display: block; margin-bottom: 4px; font-size: 0.9em; text-transform: uppercase; letter-spacing: 0.06em; }
+
+        /* TAKEAWAYS */
+        .takeaway-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 8px;
+        }
+        @media (max-width: 600px) { .takeaway-grid { grid-template-columns: 1fr; } }
+        .takeaway-item {
+            background: #f9f6f3;
+            border-radius: 8px;
+            padding: 14px 16px;
+            border-left: 3px solid #D67B4A;
+            font-size: 0.92em;
+        }
+
+        /* BOTTOM LINE */
+        .bottom-line {
+            background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+            color: #E8DFD6;
+            border-radius: 14px;
+            padding: 38px 40px;
+        }
+        .bottom-line h2 {
+            color: #E8DFD6;
+            font-size: 1.6em;
+            margin-bottom: 18px;
+            text-align: center;
+        }
+        .bottom-line p {
+            color: #E8DFD6;
+            opacity: 0.92;
+            font-size: 1em;
+            margin-bottom: 14px;
+        }
+        .bottom-line p:last-child { margin-bottom: 0; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="eyebrow">Alignment Psychiatry · Therapeutic Insights</div>
+        <h1>🗺️ Roadmap to Redemption</h1>
+        <div class="subtitle">Healing Grief, Reclaiming Identity, and Calming the Nervous System</div>
+    </div>
+
+    <div class="content">
+
+        <!-- THE SITUATION -->
+        <div class="section">
+            <h2>The Situation</h2>
+            <p>You are carrying multiple losses simultaneously — and only one of them has a name that people recognize as grief. The loss of your mother. The loss of the person you were before everything shifted. The loss of the life and marriage you envisioned. The loss of a community that didn't materialize. These losses are stacked, and your nervous system has been holding the weight of all of them while you continue to show up for everyone who needs you.</p>
+            <p>You've been trying. The bubble baths, the breathwork, the exercise, the herbal remedies. They provide temporary relief — and they're not enough. Not because you're doing it wrong, but because surface-level self-care cannot process what lives deeper than the surface. This session was about understanding what's actually underneath, and building a real map toward it.</p>
+        </div>
+
+        <!-- CORE PROBLEM -->
+        <div class="section">
+            <h2>Core Problem</h2>
+            <p>The central issue is cumulative, unprocessed grief — not just bereavement, but the ongoing loss of identity, dreams, and expectations that were never fully acknowledged or mourned. That grief, combined with years of over-functioning across too many roles without enough support, has overloaded the nervous system. The result is what you're experiencing: numbness, exhaustion, emotional volatility, and the feeling of cycling through shutdown, reactivity, and freeze — sometimes all in the same day.</p>
+            <p>The mismatch is between how much you are carrying internally and how much of it you've been able to put down, name, or have witnessed. You cannot keep it together and heal at the same time. One of those has to give.</p>
+        </div>
+
+        <!-- PULL QUOTE 1 -->
+        <div class="pull-quote">
+            "There's a version of you that you haven't actually grieved — the you that you dreamed about."
+        </div>
+
+        <!-- CLINICAL CONCEPTS -->
+        <div class="section">
+            <h2>Understanding the Dynamics</h2>
+            <div class="concepts-grid">
+                <div class="concept-card">
+                    <h4>Grief (Expanded)</h4>
+                    <p>More than sadness about death. Grief applies to any significant loss — of a person, a role, a dream, a version of yourself, an expectation that was never met. Each requires its own mourning process. When multiple losses stack up unprocessed, the nervous system cannot distinguish past pain from present reality.</p>
+                </div>
+                <div class="concept-card">
+                    <h4>Burnout</h4>
+                    <p>Not just being tired. A state of depletion where the system cannot recover through ordinary rest because the demands never stopped and the emotional processing never happened. Burnout from chronic over-functioning looks like numbness, emotional volatility, inability to access motivation, and a profound sense of being empty at the core.</p>
+                </div>
+                <div class="concept-card">
+                    <h4>Superwoman Syndrome</h4>
+                    <p>The pattern of taking on every role — caretaker, provider, protector, manager, emotional anchor — without asking for help, without rest, and without acknowledging limits. It's rooted in the belief that others will fall apart if you don't hold everything together. It is not sustainable, and it is not invisible to the nervous system.</p>
+                </div>
+                <div class="concept-card">
+                    <h4>Survival Mode</h4>
+                    <p>When the nervous system has been under sustained threat or stress for too long, it stops distinguishing between genuine danger and normal daily friction. Everything gets read as an emergency. Protective responses — fight, flight, freeze, fawn — activate for situations that don't require them, because the system is perpetually braced.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FRAMEWORK 1: NERVOUS SYSTEM -->
+        <div class="framework">
+            <h2>⚡ Framework 1: The Nervous System Under Overload</h2>
+            <div class="fw-subtitle">Understanding why you're running hot — and what it takes to cool down</div>
+
+            <p style="margin-bottom: 16px; font-size: 0.95em;">The nervous system is the body's electrical and warning system — it regulates energy, generates emotions, stores trauma, and activates protective responses. It is also not designed to run at full capacity indefinitely without coolant. When it does, you get what you're experiencing: a system that can't reset, can't differentiate, and can't stop bracing for the next impact.</p>
+
+            <p style="font-size: 0.88em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #6B2C3A; margin-bottom: 10px;">Where the Overload Comes From</p>
+
+            <div class="overload-visual">
+                <div class="ov-role">
+                    <span class="ov-icon">💔</span>
+                    <div class="ov-label">Grief</div>
+                </div>
+                <div class="ov-role">
+                    <span class="ov-icon">👩‍👧</span>
+                    <div class="ov-label">Motherhood</div>
+                </div>
+                <div class="ov-role">
+                    <span class="ov-icon">💍</span>
+                    <div class="ov-label">Marriage</div>
+                </div>
+                <div class="ov-role">
+                    <span class="ov-icon">🦸‍♀️</span>
+                    <div class="ov-label">Superwoman</div>
+                </div>
+                <div class="ov-role">
+                    <span class="ov-icon">🌡️</span>
+                    <div class="ov-label">Overheated</div>
+                </div>
+            </div>
+            <div class="ov-caption">Each role added more heat. Nothing removed any. The system eventually reaches its limit — not because of weakness, but because of physics.</div>
+
+            <p style="font-size: 0.88em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #6B2C3A; margin: 20px 0 10px;">Your Survival Responses — When the System Is Overwhelmed</p>
+
+            <div class="survival-grid">
+                <div class="survival-card">
+                    <span class="sv-icon">⚡</span>
+                    <h4>Fight</h4>
+                    <p>Confrontation, anger, reactive intensity. Protective and necessary — but exhausting when it's the default.</p>
+                </div>
+                <div class="survival-card">
+                    <span class="sv-icon">🏃</span>
+                    <h4>Flight</h4>
+                    <p>Escape, avoidance, withdrawal. Getting away from the threat — including emotionally unavailable situations.</p>
+                </div>
+                <div class="survival-card">
+                    <span class="sv-icon">🧊</span>
+                    <h4>Freeze</h4>
+                    <p>Shutdown. Numbness. The system stops when it can't fight or flee. Often mistaken for calm — it is not calm.</p>
+                </div>
+                <div class="survival-card">
+                    <span class="sv-icon">🤝</span>
+                    <h4>Fawn</h4>
+                    <p>People-pleasing. Appeasement. Giving others what they need to reduce threat — at the cost of your own needs.</p>
+                </div>
+            </div>
+
+            <div class="application-box" style="margin-top: 20px;">
+                <h4>The Anger That's Still in Your Body</h4>
+                <p>When something provokes a protective response — like harm to your child — and you hold the anger in to address it later, the physiological energy of that anger doesn't disappear. It stays in the body, adding to the accumulated load. Over time, this is why the nervous system eventually overreacts to smaller triggers. It's not overreacting to those triggers. It's finally releasing what has been building for a long time.</p>
+            </div>
+        </div>
+
+        <!-- FRAMEWORK 2: ROADMAP TO REDEMPTION -->
+        <div class="framework">
+            <h2>🗺️ Framework 2: The Roadmap to Redemption</h2>
+            <div class="fw-subtitle">A three-stage process — in sequence, not simultaneously</div>
+
+            <p style="margin-bottom: 18px; font-size: 0.95em;">This is not a checklist. It is a sequence — each stage depends on the one before it. You cannot form a clear new identity while still carrying unprocessed grief. You cannot plan a meaningful future while still unsure of who you are. The stages must be taken in order.</p>
+
+            <div class="roadmap-stages">
+                <div class="road-stage past">
+                    <div class="rs-num">1</div>
+                    <span class="rs-icon">🌧️</span>
+                    <h4>Deal With the Past</h4>
+                    <p>Acknowledge and process all sources of grief. Move toward acceptance — not forgetting, but integration.</p>
+                </div>
+                <div class="road-arrow">→</div>
+                <div class="road-stage identity">
+                    <div class="rs-num">2</div>
+                    <span class="rs-icon">🌱</span>
+                    <h4>Form New Identity</h4>
+                    <p>Explore who you are now — not who you were, not who others need you to be. Define yourself from the inside.</p>
+                </div>
+                <div class="road-arrow">→</div>
+                <div class="road-stage future">
+                    <div class="rs-num">3</div>
+                    <span class="rs-icon">🌅</span>
+                    <h4>Build a Way Forward</h4>
+                    <p>Set goals and intentions rooted in your real values and limits — not in old roles or old expectations.</p>
+                </div>
+            </div>
+
+            <!-- STAGE 1 DETAIL -->
+            <div style="margin-top: 24px;">
+                <div class="stage-detail">
+                    <span class="sd-tag">Stage 1 · Grief Work</span>
+                    <h4>The Full Inventory of What You've Lost</h4>
+                    <p>Most people grieve the person who died and stop there. But grief also belongs to the version of yourself you carried before everything changed, the marriage you imagined, the community that didn't come together, the expectations you brought into motherhood, and the future you pictured that no longer exists. Each of these deserves acknowledgment — not as additional burdens, but as losses that are real and mournable. Naming them is the first step to moving through them.</p>
+                </div>
+
+                <p style="font-size: 0.82em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #6B2C3A; margin: 16px 0 10px;">The Grief Is Not Just One Thing</p>
+
+                <div class="grief-map">
+                    <div class="grief-node">
+                        <span class="gn-icon">🕊️</span>
+                        <h4>Your Mother</h4>
+                        <p>The relationship — including what it was and what it wasn't.</p>
+                    </div>
+                    <div class="grief-node">
+                        <span class="gn-icon">👤</span>
+                        <h4>Your Former Self</h4>
+                        <p>The you before these losses. The you with those dreams.</p>
+                    </div>
+                    <div class="grief-node">
+                        <span class="gn-icon">💭</span>
+                        <h4>Your Dreams</h4>
+                        <p>The life you envisioned before reality diverged from it.</p>
+                    </div>
+                    <div class="grief-node">
+                        <span class="gn-icon">💍</span>
+                        <h4>Unmet Expectations</h4>
+                        <p>What you needed from your marriage and didn't receive.</p>
+                    </div>
+                    <div class="grief-node">
+                        <span class="gn-icon">🏘️</span>
+                        <h4>Your Community</h4>
+                        <p>The village that didn't appear the way you needed it to.</p>
+                    </div>
+                    <div class="grief-node">
+                        <span class="gn-icon">🦸</span>
+                        <h4>Superwoman</h4>
+                        <p>The identity you can no longer sustain — and the grief in releasing it.</p>
+                    </div>
+                </div>
+                <div class="grief-caption">Grief doesn't require a death certificate. It requires acknowledgment.</div>
+
+                <!-- STAGE 2 -->
+                <div class="stage-detail identity-stage" style="margin-top: 20px;">
+                    <span class="sd-tag">Stage 2 · Identity Formation</span>
+                    <h4>Who You Are Now — Not Who You Were</h4>
+                    <p>The Superwoman identity was a solution to a problem — and it worked, until it didn't. The problem isn't that you are strong. The problem is that strength became the only thing you were allowed to be. You are also someone who needs. Someone who grieves. Someone who has a different relationship to limits than you did before. Forming a new identity doesn't mean starting over — it means stopping the performance of the old one and finding out who you actually are now.</p>
+                </div>
+
+                <!-- STAGE 3 -->
+                <div class="stage-detail future-stage">
+                    <span class="sd-tag">Stage 3 · Way Forward</span>
+                    <h4>Goals Built on Real Ground</h4>
+                    <p>This stage only becomes possible after the first two. When you know what you're grieving and you have a clearer sense of who you are now, you can set intentions that are realistic — because they're grounded in who you actually are rather than who you thought you were supposed to be. This includes how you want to approach your marriage, what you need from relationships, what your limits are, and what you want your life to actually look like from here.</p>
+                </div>
+            </div>
+
+            <div class="cbt-inline">
+                <h4>Understanding the Chain: Think → Feel → Do</h4>
+                <div class="cbt-row">
+                    <div class="cbt-chip">Beliefs / Bubble</div>
+                    <span class="cbt-arrow">→</span>
+                    <div class="cbt-chip">Event / Trigger</div>
+                    <span class="cbt-arrow">→</span>
+                    <div class="cbt-chip">Interpretation</div>
+                    <span class="cbt-arrow">→</span>
+                    <div class="cbt-chip">Feeling</div>
+                    <span class="cbt-arrow">→</span>
+                    <div class="cbt-chip">Action or Reaction</div>
+                </div>
+                <p style="font-size: 0.83em; margin-top: 10px; color: #4A4A4A;">Understanding this sequence shows you where you have agency — at the interpretation, before the feeling has already decided what happens next. Grief work and identity work both update the "Beliefs / Bubble" at the beginning of the chain, which changes everything downstream.</p>
+            </div>
+        </div>
+
+        <!-- PULL QUOTE 2 -->
+        <div class="pull-quote">
+            "Acceptance is a place where you understand it as a part of your life — and you almost appreciate this part as a part of your life."
+        </div>
+
+        <!-- PRACTICAL INSTRUCTIONS -->
+        <div class="section">
+            <h2>Putting It Into Practice</h2>
+            <ul class="instruction-list">
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Expand your definition of what you're grieving.</strong> The grief journal is not only for your mother. Each loss on the map above deserves its own entry. What do you miss about your former self? What did you wish your marriage had been? What does it feel like to release the Superwoman identity you can no longer carry?</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Notice which survival response is active — before you act from it.</strong> When you feel yourself flooding, shutting down, wanting to flee, or over-accommodating — name it. "This is freeze." "This is fight." Naming the response creates a small gap between the trigger and the automatic behavior. That gap is where choice lives.</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Stop requiring yourself to keep it together first.</strong> The strategy of managing everything externally while holding grief internally is what created the overload. Healing requires the reverse — allowing what's internal to have a way out. Writing, movement, conversation, creative expression. The energy needs somewhere to go.</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>When you set a boundary or give a warning — follow through.</strong> Warnings that aren't enforced teach the nervous system that the threat isn't real, and the pent-up energy continues to build. Consistent follow-through prevents accumulation and teaches others — and your own nervous system — that you mean what you say.</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Distinguish self-care from self-processing.</strong> Bubble baths, breathing, exercise — these regulate in the moment. They don't process the underlying grief or update the beliefs driving the reactions. Both are needed. Don't mistake temporary relief for the deeper work — and don't abandon temporary relief while you do the deeper work.</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- HOMEWORK -->
+        <div class="section">
+            <h2>Assignment</h2>
+            <div class="homework-box">
+                <h4>The Grief Inventory Journal — 10–15 Minutes Daily</h4>
+                <p>Choose one loss per entry. For each one, work through the three prompts below. You don't have to complete all losses before the next session — start with the ones that feel most present or urgent. Bring whatever you've written to discuss.</p>
+                <div class="grief-prompts">
+                    <div class="grief-prompt">
+                        <strong>What I Miss</strong>
+                        What specifically do you miss about what was lost — the person, the version of yourself, the dream, the expectation?
+                    </div>
+                    <div class="grief-prompt">
+                        <strong>What I Wish</strong>
+                        What do you wish had been different? What needed acknowledgment that never got it?
+                    </div>
+                    <div class="grief-prompt">
+                        <strong>What I Carry</strong>
+                        What has this loss taught you? What do you carry from it — even if it's painful? Note any body sensations that arise as you write.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- KEY TAKEAWAYS -->
+        <div class="section">
+            <h2>Key Takeaways</h2>
+            <div class="takeaway-grid">
+                <div class="takeaway-item">Grief is not only for bereavement. The loss of your former self, your dreams, your envisioned marriage, and your community are all real losses that require their own mourning — and their own time.</div>
+                <div class="takeaway-item">The nervous system stores unprocessed emotional energy and applies it to new situations. The reactions that feel disproportionate are proportionate to everything that's accumulated — not just to the current trigger.</div>
+                <div class="takeaway-item">Burnout is not tiredness. It is depletion from sustained over-functioning without recovery. The Superwoman pattern created it. That pattern is no longer sustainable — and recognizing that is not failure. It's clarity.</div>
+                <div class="takeaway-item">The three stages of the Roadmap — grief, identity, forward — must be taken in sequence. Identity cannot be rebuilt while grief is unprocessed. The future cannot be planned without a stable foundation of self.</div>
+                <div class="takeaway-item">Your four survival responses (fight, flight, freeze, fawn) are protective — and they become problematic only when the nervous system is so overloaded it can't distinguish genuine threats from ordinary friction.</div>
+                <div class="takeaway-item">Surface self-care (baths, breathwork, movement) regulates the moment. It does not process the underlying grief or update the beliefs driving your reactions. Both layers of the work are necessary.</div>
+                <div class="takeaway-item">You cannot keep it together and heal simultaneously. Healing requires allowing what's internal to have a way out — even when that feels counterintuitive to someone who has held everything in for years.</div>
+                <div class="takeaway-item">Acceptance doesn't mean forgetting or approving. It means integrating. Understanding a loss as part of your story — rather than something that should not have happened — is what eventually makes it possible to stop bracing against it.</div>
+            </div>
+        </div>
+
+        <!-- BOTTOM LINE -->
+        <div class="bottom-line">
+            <h2>🌅 The Bottom Line</h2>
+            <p>You have been running too hot for too long, carrying too much alone, grieving losses that didn't all have names. The exhaustion, the volatility, the numbness — these are not signs that something is wrong with you. They are signs that a system has been operating beyond its capacity, and that the unprocessed weight of years is asking, finally, to be put down.</p>
+            <p>The roadmap is not a fast one. Stage One — the grief work — is not a weekend exercise. It is the most important foundation, and it cannot be skipped. But it also does not have to be done all at once, and it does not have to be done alone. You are not starting from scratch. You are starting from experience — from everything you have survived, from the clarity that comes from having been through something real, from the fact that you are here asking for a different way forward.</p>
+            <p>This work is about you. Your healing. Your nervous system. Your story. Not the roles, not the others, not what you owe anyone. For the first time — perhaps — you have permission to put yourself at the center of your own life. That permission is not something that needs to be earned. You already have it.</p>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
