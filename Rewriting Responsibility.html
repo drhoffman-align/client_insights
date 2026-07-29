@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rewriting Responsibility: Navigating Identity, Integrity, and Self-Blame</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        @media print {
+            body { background: white; padding: 0; margin: 0; }
+            .container { max-width: none; box-shadow: none; border-radius: 0; }
+            .content { padding: 0.5in; }
+            .section, .framework { page-break-inside: avoid; break-inside: avoid; }
+            .page-break { page-break-before: always; break-before: page; }
+            @page { size: 8.5in 11in; margin: 0.75in; }
+        }
+
+        @media screen {
+            body {
+                background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+                min-height: 100vh;
+                padding: 20px;
+            }
+            .container {
+                max-width: 8.5in;
+                margin: 0 auto;
+                background: #E8DFD6;
+                border-radius: 20px;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+                overflow: hidden;
+            }
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #4A4A4A;
+        }
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+            color: #E8DFD6;
+            padding: 50px 40px;
+            text-align: center;
+        }
+        .header .eyebrow {
+            font-size: 0.82em;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            opacity: 0.7;
+            margin-bottom: 14px;
+        }
+        .header h1 {
+            font-size: 2.4em;
+            font-weight: 700;
+            margin-bottom: 14px;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+            line-height: 1.2;
+        }
+        .header .subtitle {
+            font-size: 1.1em;
+            opacity: 0.88;
+            font-style: italic;
+        }
+
+        /* CONTENT */
+        .content { padding: 44px 40px; }
+
+        /* STANDARD SECTION */
+        .section {
+            background: #ffffff;
+            border-radius: 14px;
+            border-left: 5px solid #D67B4A;
+            padding: 30px 32px;
+            margin-bottom: 32px;
+        }
+        .section h2 {
+            color: #6B2C3A;
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #E8DFD6;
+        }
+        .section p { margin-bottom: 12px; }
+        .section p:last-child { margin-bottom: 0; }
+
+        /* FRAMEWORK */
+        .framework {
+            background: #ffffff;
+            border-radius: 14px;
+            border-left: 5px solid #6B2C3A;
+            padding: 30px 32px;
+            margin-bottom: 32px;
+        }
+        .framework h2 {
+            color: #6B2C3A;
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .framework .fw-subtitle {
+            color: #D67B4A;
+            font-size: 0.95em;
+            font-style: italic;
+            margin-bottom: 22px;
+            padding-bottom: 14px;
+            border-bottom: 2px solid #E8DFD6;
+        }
+
+        /* PULL QUOTE */
+        .pull-quote {
+            background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+            color: #E8DFD6;
+            padding: 26px 36px;
+            border-radius: 12px;
+            margin: 28px 0;
+            font-size: 1.15em;
+            font-style: italic;
+            text-align: center;
+            box-shadow: 0 6px 18px rgba(107,44,58,0.25);
+            line-height: 1.6;
+        }
+
+        /* CONCEPTS GRID */
+        .concepts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 10px;
+        }
+        .concepts-grid .concept-card:last-child:nth-child(odd) {
+            grid-column: 1 / -1;
+        }
+        @media (max-width: 600px) { .concepts-grid { grid-template-columns: 1fr; } }
+        .concept-card {
+            background: #f9f6f3;
+            border-radius: 10px;
+            padding: 18px 20px;
+            border-top: 3px solid #D67B4A;
+        }
+        .concept-card h4 { color: #6B2C3A; font-size: 0.95em; font-weight: 700; margin-bottom: 6px; }
+        .concept-card p { font-size: 0.88em; margin: 0; }
+
+        /* IDENTITY vs BRANDING */
+        .ib-visual {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 16px 0;
+        }
+        @media (max-width: 600px) {
+            .ib-visual { grid-template-columns: 1fr; }
+            .ib-divider { transform: rotate(90deg); }
+        }
+        .ib-col {
+            padding: 24px 20px;
+        }
+        .ib-col.identity { background: linear-gradient(160deg, #3d1a21, #6B2C3A); }
+        .ib-col.brand { background: linear-gradient(160deg, #4A4A4A, #2a2a2a); }
+        .ib-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 6px;
+            background: #2a2a2a;
+            color: rgba(232,223,214,0.5);
+            font-size: 1.4em;
+        }
+        .ib-col .ib-label {
+            font-size: 0.72em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 10px;
+        }
+        .ib-col.identity .ib-label { color: #D67B4A; }
+        .ib-col.brand .ib-label { color: #B8B8B8; }
+        .ib-col h4 { color: #E8DFD6; font-size: 1em; font-weight: 700; margin-bottom: 8px; }
+        .ib-col ul { list-style: none; }
+        .ib-col ul li {
+            color: rgba(232,223,214,0.82);
+            font-size: 0.82em;
+            padding: 4px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+        .ib-col ul li:last-child { border-bottom: none; }
+        .ib-col ul li::before { content: '·'; opacity: 0.5; flex-shrink: 0; }
+        .ib-gap-note {
+            background: #f9f6f3;
+            border-radius: 10px;
+            padding: 16px 20px;
+            margin-top: 14px;
+            font-size: 0.88em;
+            border-left: 3px solid #D67B4A;
+        }
+        .ib-gap-note strong { color: #6B2C3A; }
+
+        /* SELF-BLAME TRAP */
+        .trap-visual {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 14px;
+            align-items: start;
+            margin: 16px 0;
+        }
+        @media (max-width: 600px) { .trap-visual { grid-template-columns: 1fr; } }
+        .trap-col { }
+        .trap-col .tc-label {
+            font-size: 0.72em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .trap-col.logic .tc-label { color: #B8B8B8; }
+        .trap-col.reality .tc-label { color: #D67B4A; }
+        .trap-node {
+            border-radius: 10px;
+            padding: 14px 16px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.85em;
+        }
+        .trap-col.logic .trap-node { background: #f3ecec; }
+        .trap-col.reality .trap-node { background: #f0ece8; }
+        .trap-node .tn-icon { font-size: 1.2em; flex-shrink: 0; }
+        .trap-node p { margin: 0; }
+        .trap-col.logic .trap-node p { color: #4A4A4A; }
+        .trap-col.reality .trap-node p { color: #4A4A4A; }
+        .trap-col.logic .trap-node:nth-child(3) { background: #e8d8d8; }
+        .trap-col.reality .trap-node:nth-child(3) { background: linear-gradient(135deg, #f0ece8, #E8DFD6); border-left: 3px solid #D67B4A; }
+        .trap-arrow-col {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 24px;
+            font-size: 1.6em;
+            color: #6B2C3A;
+            opacity: 0.5;
+        }
+
+        /* FAULT QUAD */
+        .fault-quad {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 16px 0;
+        }
+        @media (max-width: 600px) { .fault-quad { grid-template-columns: 1fr; } }
+        .fq-card {
+            border-radius: 10px;
+            padding: 18px 18px;
+            border-top: 3px solid #6B2C3A;
+            background: #f9f6f3;
+        }
+        .fq-card h4 { color: #6B2C3A; font-size: 0.9em; font-weight: 700; margin-bottom: 4px; }
+        .fq-card .fq-skew { font-size: 0.75em; color: #D67B4A; font-style: italic; margin-bottom: 8px; font-weight: 600; }
+        .fq-card p { font-size: 0.83em; margin: 0; }
+
+        /* SHOULD vs IS */
+        .should-is {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 16px 0;
+        }
+        @media (max-width: 600px) { .should-is { grid-template-columns: 1fr; } }
+        .si-col { padding: 20px 20px; }
+        .si-col.should { background: #f3ecec; }
+        .si-col.is { background: #f0ece8; border-left: 1px solid #E8DFD6; }
+        .si-col h4 {
+            font-size: 0.78em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid;
+        }
+        .si-col.should h4 { color: #B8B8B8; border-color: #B8B8B8; }
+        .si-col.is h4 { color: #D67B4A; border-color: #D67B4A; }
+        .si-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 8px;
+            font-size: 0.85em;
+        }
+        .si-item:last-child { margin-bottom: 0; }
+        .si-dot {
+            flex-shrink: 0;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-top: 6px;
+        }
+        .should .si-dot { background: #B8B8B8; }
+        .is .si-dot { background: #D67B4A; }
+
+        /* FILTER VISUAL */
+        .filter-visual {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 12px;
+            align-items: center;
+            margin: 16px 0;
+        }
+        @media (max-width: 600px) { .filter-visual { grid-template-columns: 1fr; } }
+        .filter-event {
+            background: #4A4A4A;
+            color: #E8DFD6;
+            border-radius: 10px;
+            padding: 18px 16px;
+            text-align: center;
+        }
+        .filter-event .fe-icon { font-size: 1.6em; display: block; margin-bottom: 6px; }
+        .filter-event h4 { font-size: 0.88em; font-weight: 700; margin-bottom: 4px; }
+        .filter-event p { font-size: 0.78em; opacity: 0.8; margin: 0; }
+        .filter-arrow { font-size: 1.4em; color: #6B2C3A; opacity: 0.5; text-align: center; }
+        .filter-outcomes {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .filter-outcome {
+            border-radius: 8px;
+            padding: 12px 14px;
+            font-size: 0.82em;
+        }
+        .filter-outcome.skewed {
+            background: #f3ecec;
+            border-left: 3px solid #B8B8B8;
+        }
+        .filter-outcome.balanced {
+            background: #f0ece8;
+            border-left: 3px solid #D67B4A;
+        }
+        .filter-outcome .fo-tag {
+            font-size: 0.72em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 4px;
+            display: block;
+        }
+        .filter-outcome.skewed .fo-tag { color: #B8B8B8; }
+        .filter-outcome.balanced .fo-tag { color: #D67B4A; }
+        .filter-outcome p { margin: 0; }
+
+        /* SELF-CENTERED REFRAME */
+        .reframe-box {
+            background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin: 16px 0;
+        }
+        .reframe-box h4 { color: #D67B4A; font-size: 1em; font-weight: 700; margin-bottom: 12px; }
+        .reframe-row {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 12px;
+            align-items: center;
+        }
+        @media (max-width: 600px) { .reframe-row { grid-template-columns: 1fr; } }
+        .reframe-card {
+            border-radius: 10px;
+            padding: 16px 16px;
+        }
+        .reframe-card.old {
+            background: rgba(255,255,255,0.08);
+            border: 1px dashed rgba(255,255,255,0.2);
+        }
+        .reframe-card.new {
+            background: rgba(214,123,74,0.2);
+            border: 1px solid rgba(214,123,74,0.4);
+        }
+        .reframe-card .rc-tag {
+            font-size: 0.68em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 6px;
+            display: block;
+        }
+        .reframe-card.old .rc-tag { color: rgba(232,223,214,0.5); }
+        .reframe-card.new .rc-tag { color: #D67B4A; }
+        .reframe-card p { color: #E8DFD6; font-size: 0.85em; margin: 0; opacity: 0.88; }
+        .reframe-arrow { font-size: 1.4em; color: rgba(232,223,214,0.4); text-align: center; }
+
+        /* APPLICATION BOX */
+        .application-box {
+            background: linear-gradient(135deg, #E8DFD6 0%, #d4c9be 100%);
+            border-left: 5px solid #D67B4A;
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin-top: 22px;
+        }
+        .application-box h4 {
+            color: #6B2C3A;
+            font-size: 0.9em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 8px;
+        }
+        .application-box p { font-size: 0.95em; margin: 0; }
+
+        /* INSTRUCTION LIST */
+        .instruction-list { list-style: none; margin-top: 8px; }
+        .instruction-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 11px 0;
+            border-bottom: 1px solid #E8DFD6;
+        }
+        .instruction-list li:last-child { border-bottom: none; }
+        .bullet {
+            flex-shrink: 0;
+            width: 10px;
+            height: 10px;
+            background: #D67B4A;
+            border-radius: 50%;
+            margin-top: 7px;
+        }
+        .instruction-list li p { margin: 0; font-size: 0.95em; }
+        .instruction-list li strong { color: #6B2C3A; }
+
+        /* HOMEWORK */
+        .homework-box {
+            background: linear-gradient(135deg, #f9f6f3 0%, #E8DFD6 100%);
+            border-radius: 12px;
+            padding: 24px 28px;
+        }
+        .homework-box h4 {
+            color: #D67B4A;
+            font-size: 0.9em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 12px;
+        }
+        .attr-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+        }
+        @media (max-width: 600px) { .attr-grid { grid-template-columns: 1fr; } }
+        .attr-card {
+            background: white;
+            border-radius: 8px;
+            padding: 14px 12px;
+            text-align: center;
+            border-top: 2px solid #D67B4A;
+        }
+        .attr-card .ac-q {
+            font-size: 0.75em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: #D67B4A;
+            margin-bottom: 5px;
+        }
+        .attr-card p { font-size: 0.8em; color: #4A4A4A; }
+        .homework-box .hw-note { font-size: 0.88em; margin-top: 12px; color: #4A4A4A; }
+
+        /* TAKEAWAYS */
+        .takeaway-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 8px;
+        }
+        @media (max-width: 600px) { .takeaway-grid { grid-template-columns: 1fr; } }
+        .takeaway-item {
+            background: #f9f6f3;
+            border-radius: 8px;
+            padding: 14px 16px;
+            border-left: 3px solid #D67B4A;
+            font-size: 0.92em;
+        }
+
+        /* BOTTOM LINE */
+        .bottom-line {
+            background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+            color: #E8DFD6;
+            border-radius: 14px;
+            padding: 38px 40px;
+        }
+        .bottom-line h2 {
+            color: #E8DFD6;
+            font-size: 1.6em;
+            margin-bottom: 18px;
+            text-align: center;
+        }
+        .bottom-line p {
+            color: #E8DFD6;
+            opacity: 0.92;
+            font-size: 1em;
+            margin-bottom: 14px;
+        }
+        .bottom-line p:last-child { margin-bottom: 0; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="eyebrow">Alignment Psychiatry · Therapeutic Insights</div>
+        <h1>✍️ Rewriting Responsibility</h1>
+        <div class="subtitle">Navigating Identity, Integrity, and Self-Blame</div>
+    </div>
+
+    <div class="content">
+
+        <!-- THE SITUATION -->
+        <div class="section">
+            <h2>The Situation</h2>
+            <p>You move through ambiguous situations with a near-automatic tendency to locate fault in yourself — even when the situation genuinely doesn't warrant it, even when others are clearly more responsible. This isn't a failure of intelligence or self-awareness. It is a long-practiced strategy that once served a purpose and has outlasted it.</p>
+            <p>As you approach a significant life milestone, you're questioning whether the values you've built your life around are sustainable — or whether holding to a moral code calibrated for how the world should work, rather than how it actually does, has been quietly exhausting you for years. The answer, most likely, is yes. And that doesn't mean your values are wrong. It means the way you've been carrying them needs revision.</p>
+        </div>
+
+        <!-- CORE PROBLEM -->
+        <div class="section">
+            <h2>Core Problem</h2>
+            <p>The central issue is not that you have high standards. It's that you apply those standards asymmetrically — rigidly to yourself, generously (or bitterly) to others. You absorb responsibility in ambiguous situations as a form of control: if you're the problem, you can fix it. If someone else is the problem, you're helpless. The math feels safer one way. It isn't.</p>
+            <p>The self-blame is costing more than it's protecting. It produces shame, anxiety, and a sense of being perpetually at fault — while the actual harm it was meant to prevent keeps happening anyway. The pattern has become its own source of injury.</p>
+        </div>
+
+        <!-- PULL QUOTE 1 -->
+        <div class="pull-quote">
+            "It's safer for me to perceive myself as wrong."
+        </div>
+
+        <!-- CLINICAL CONCEPTS -->
+        <div class="section">
+            <h2>Understanding the Dynamics</h2>
+            <div class="concepts-grid">
+                <div class="concept-card">
+                    <h4>Self-Blame as a Coping Strategy</h4>
+                    <p>Taking responsibility for outcomes — even when not warranted — creates an illusion of control. If you caused the problem, you can prevent the next one. If someone else caused it, you're helpless. The strategy reduces the felt experience of powerlessness at the cost of accuracy and self-worth.</p>
+                </div>
+                <div class="concept-card">
+                    <h4>Cognitive Filtering</h4>
+                    <p>The brain interprets every situation through a lens built from past experience. When the lens is calibrated toward self-doubt and risk, even neutral or ambiguous events get read as confirmation of fault. The filter isn't a character flaw — it's a learned template that can be examined and updated.</p>
+                </div>
+                <div class="concept-card">
+                    <h4>Sunk Cost Fallacy (Applied to Values)</h4>
+                    <p>The belief that changing a pattern now would invalidate the years spent living by it. "If I stop over-apologizing, did all that apologizing mean nothing?" No — it means you learned something. Continuing a strategy because you've already invested in it is different from continuing it because it's working.</p>
+                </div>
+                <div class="concept-card">
+                    <h4>Integrity vs. Hyper-Accountability</h4>
+                    <p>Integrity is acting in alignment with your values. Hyper-accountability is holding yourself responsible for outcomes that others contributed to or caused — and using shame as the enforcement mechanism. These look similar from the outside. They feel very different from the inside, and only one of them is functional.</p>
+                </div>
+                <div class="concept-card">
+                    <h4>The "Self-Centered" Reframe</h4>
+                    <p>Self-centered does not mean narcissistic. It means being at the center of your own life — understanding your experience, your needs, your perspective as the primary frame of reference. This is not selfishness. It is the basic orientation required for self-advocacy, boundary-setting, and realistic self-assessment.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FRAMEWORK 1: IDENTITY vs BRANDING -->
+        <div class="framework">
+            <h2>🪞 Framework 1: Identity vs. Branding</h2>
+            <div class="fw-subtitle">What lives inside vs. what gets presented — and where the gap creates distress</div>
+
+            <p style="margin-bottom: 16px; font-size: 0.95em;">Identity is who you actually are — your values, beliefs, and self-concept at the core. Branding is how you present yourself externally — what you emphasize, what you hide, how you calibrate your self-presentation for different audiences. Neither is inherently false. The tension arises when the gap between them becomes a source of anxiety or inauthenticity.</p>
+
+            <div class="ib-visual">
+                <div class="ib-col identity">
+                    <div class="ib-label">Internal · Identity</div>
+                    <h4>Who You Actually Are</h4>
+                    <ul>
+                        <li>Your core values: honesty, integrity, accountability</li>
+                        <li>Your actual skills, accomplishments, track record</li>
+                        <li>Your emotional inner world — rich, complex, intense</li>
+                        <li>Your needs and limits — even when unspoken</li>
+                        <li>Your real moral standard — applied to yourself</li>
+                    </ul>
+                </div>
+                <div class="ib-divider">⇄</div>
+                <div class="ib-col brand">
+                    <div class="ib-label">External · Branding</div>
+                    <h4>What Gets Presented</h4>
+                    <ul>
+                        <li>Downplaying accomplishments to appear humble</li>
+                        <li>Over-explaining to preempt judgment</li>
+                        <li>Indirect communication to avoid conflict</li>
+                        <li>Accepting blame to appear accountable</li>
+                        <li>Holding back needs to protect others from discomfort</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="ib-gap-note">
+                <strong>Where the Gap Shows Up:</strong> You resent others who exaggerate their skills — while you consistently understate yours. You hold yourself to a moral standard that most people don't share — and feel isolated and frustrated when they don't reciprocate it. The gap between your internal value system and your external self-presentation is where much of the anxiety lives.
+            </div>
+
+            <div class="application-box" style="margin-top: 16px;">
+                <h4>Reviewing Your Attributes</h4>
+                <p>Your personal attributes — the list of qualities you identify with — may be carrying some outdated entries. Some were accurate once and no longer apply. Some need to become more specific. Some new ones have emerged that haven't been formally acknowledged. Updating this list is not reinventing yourself. It is making the internal picture more accurate — which makes the external presentation less strained.</p>
+            </div>
+        </div>
+
+        <!-- FRAMEWORK 2: FAULT / SELF-BLAME TRAP -->
+        <div class="framework">
+            <h2>⚖️ Framework 2: Fault, Risk, Morals, and Reality</h2>
+            <div class="fw-subtitle">Why self-blame feels like protection — and why it produces the opposite</div>
+
+            <p style="margin-bottom: 16px; font-size: 0.95em;">The self-blame strategy has an internal logic. Understanding that logic is the first step to questioning it — because it cannot be argued out of a person who doesn't first see that it's there.</p>
+
+            <div class="trap-visual">
+                <div class="trap-col logic">
+                    <span class="tc-label">The Faulty Logic</span>
+                    <div class="trap-node">
+                        <span class="tn-icon">🤔</span>
+                        <p>Accept blame → I control the narrative</p>
+                    </div>
+                    <div class="trap-node">
+                        <span class="tn-icon">🛡️</span>
+                        <p>Control the narrative → I can prevent more harm</p>
+                    </div>
+                    <div class="trap-node">
+                        <span class="tn-icon">❌</span>
+                        <p>Result: I feel safe — because I'm the problem, not them</p>
+                    </div>
+                </div>
+                <div class="trap-arrow-col">→</div>
+                <div class="trap-col reality">
+                    <span class="tc-label">What Actually Happens</span>
+                    <div class="trap-node">
+                        <span class="tn-icon">📉</span>
+                        <p>Shame accumulates — even for things not actually your fault</p>
+                    </div>
+                    <div class="trap-node">
+                        <span class="tn-icon">😰</span>
+                        <p>Anxiety increases — because the threat of "being wrong" is everywhere</p>
+                    </div>
+                    <div class="trap-node">
+                        <span class="tn-icon">✅</span>
+                        <p>The harm is not prevented — and now you've absorbed the damage</p>
+                    </div>
+                </div>
+            </div>
+
+            <p style="font-size: 0.88em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #6B2C3A; margin: 22px 0 10px;">The Four Concepts — And Where Your Defaults Sit</p>
+
+            <div class="fault-quad">
+                <div class="fq-card">
+                    <h4>Fault</h4>
+                    <div class="fq-skew">Your default: over-attributed to self</div>
+                    <p>Who is actually responsible for a given outcome? Fault is not binary, and in most ambiguous situations it is shared. Defaulting to "I am at fault" in ambiguous situations removes the ambiguity artificially — and always at your expense.</p>
+                </div>
+                <div class="fq-card">
+                    <h4>Risk</h4>
+                    <div class="fq-skew">Your default: overestimated in social contexts</div>
+                    <p>How likely is harm to occur, and how severe? The nervous system that is primed for self-blame perceives risk as higher than it often is — particularly the risk of social harm, judgment, or of being "the bad guy."</p>
+                </div>
+                <div class="fq-card">
+                    <h4>Morals</h4>
+                    <div class="fq-skew">Your default: held for self, not mirrored by world</div>
+                    <p>Your moral code is a real asset — integrity, honesty, accountability are genuine values. The cost emerges when you hold yourself to standards that others don't share and feel personally betrayed by their failures to meet them.</p>
+                </div>
+                <div class="fq-card">
+                    <h4>Reality</h4>
+                    <div class="fq-skew">Your default: how it should be, not how it is</div>
+                    <p>Most people operate with self-interest as the primary frame. This is not cynicism — it is accurate. Calibrating expectations to how the world actually operates protects you from repeated disappointment without requiring you to lower your own standards.</p>
+                </div>
+            </div>
+
+            <p style="font-size: 0.88em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #6B2C3A; margin: 22px 0 10px;">The Should/Is Gap — Where Frustration Lives</p>
+
+            <div class="should-is">
+                <div class="si-col should">
+                    <h4>How the World Should Be</h4>
+                    <div class="si-item">
+                        <div class="si-dot"></div>
+                        <span>People should own their mistakes</span>
+                    </div>
+                    <div class="si-item">
+                        <div class="si-dot"></div>
+                        <span>Honesty should be reciprocated</span>
+                    </div>
+                    <div class="si-item">
+                        <div class="si-dot"></div>
+                        <span>Hard work should be credited accurately</span>
+                    </div>
+                    <div class="si-item">
+                        <div class="si-dot"></div>
+                        <span>People should meet the same standard you hold</span>
+                    </div>
+                    <div class="si-item">
+                        <div class="si-dot"></div>
+                        <span>Integrity should be the norm, not the exception</span>
+                    </div>
+                </div>
+                <div class="si-col is">
+                    <h4>How the World Is</h4>
+                    <div class="si-item">
+                        <div class="si-dot"></div>
+                        <span>People often avoid accountability when they can</span>
+                    </div>
+                    <div class="si-item">
+                        <div class="si-dot"></div>
+                        <span>Honesty is selectively applied</span>
+                    </div>
+                    <div class="si-item">
+                        <div class="si-dot"></div>
+                        <span>Credit is often claimed, not distributed fairly</span>
+                    </div>
+                    <div class="si-item">
+                        <div class="si-dot"></div>
+                        <span>Most people operate primarily from self-interest</span>
+                    </div>
+                    <div class="si-item">
+                        <div class="si-dot"></div>
+                        <span>Integrity at your level is uncommon — which is why it's yours</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="application-box" style="margin-top: 16px;">
+                <h4>What Changes When You Accept the Gap</h4>
+                <p>Accepting how the world is doesn't require lowering your own standards. It requires updating your predictions about others' behavior. When you stop expecting people to meet a standard they never agreed to, their failures stop being betrayals — and your anger and resentment have somewhere else to go. Your values stay intact. Your expectations of others become more accurate.</p>
+            </div>
+        </div>
+
+        <!-- PULL QUOTE 2 -->
+        <div class="pull-quote">
+            "You base your value in being true to yourself on how the world should be — not how it is."
+        </div>
+
+        <!-- FRAMEWORK 3: COGNITIVE FILTERING -->
+        <div class="framework">
+            <h2>🔍 Framework 3: Pattern Recognition and Cognitive Filtering</h2>
+            <div class="fw-subtitle">How learned templates shape what you see — and how to update the filter</div>
+
+            <p style="margin-bottom: 16px; font-size: 0.95em;">Everyone filters reality through patterns built from past experience. These templates help the brain process information quickly — but they also introduce systematic distortions. When early experiences taught you that you were prone to error, that filter gets applied to every ambiguous situation, long after the original conditions that created it have changed.</p>
+
+            <div class="filter-visual">
+                <div class="filter-event">
+                    <span class="fe-icon">⚡</span>
+                    <h4>Ambiguous Event</h4>
+                    <p>Something happens. The situation is genuinely unclear — fault could be shared, or it may not be yours at all.</p>
+                </div>
+                <div class="filter-arrow">→</div>
+                <div class="filter-outcomes">
+                    <div class="filter-outcome skewed">
+                        <span class="fo-tag">Through Your Current Filter</span>
+                        <p>"This is my fault. I should have known better. I must have missed something." The ambiguity collapses — always in one direction.</p>
+                    </div>
+                    <div class="filter-outcome balanced">
+                        <span class="fo-tag">Through an Updated Filter</span>
+                        <p>"What actually happened here? What part, if any, is mine? What part belongs to someone else or to circumstance?" The ambiguity stays open long enough to see it accurately.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reframe-box">
+                <h4>The "Self-Centered" Reframe</h4>
+                <div class="reframe-row">
+                    <div class="reframe-card old">
+                        <span class="rc-tag">Old Understanding</span>
+                        <p>Self-centered means I think I'm more important than others. It's narcissism. It's the thing I've been trying not to be.</p>
+                    </div>
+                    <div class="reframe-arrow">→</div>
+                    <div class="reframe-card new">
+                        <span class="rc-tag">Reframe</span>
+                        <p>Self-centered means being at the center of your own experience — understanding your needs, your perspective, your world as the primary frame. Not the center of everyone else's attention. The center of your own life. That is not narcissism. That is self-advocacy.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="application-box" style="margin-top: 16px;">
+                <h4>Filters Can Be Updated — Not Erased</h4>
+                <p>You cannot simply decide to stop filtering through old patterns. But you can learn to notice them, name them, and pause before accepting their verdict. "This feels like my fault" is a report from the filter — not an objective assessment. The question is whether you can slow down enough to ask: is this actually true, or is this a familiar story my brain tells in ambiguous situations?</p>
+            </div>
+        </div>
+
+        <!-- PRACTICAL INSTRUCTIONS -->
+        <div class="section">
+            <h2>Putting It Into Practice</h2>
+            <ul class="instruction-list">
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>When you feel at fault — pause before accepting it.</strong> Ask: "Is this actually my responsibility, or am I defaulting to a familiar pattern?" The pause doesn't require a verdict. It just creates space between the feeling and the automatic conclusion.</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Practice more direct, succinct communication.</strong> Over-explaining is a form of pre-emptive apologizing — cushioning your position before anyone has objected to it. Try stating what you need or think in one sentence. Notice what happens when you don't soften, qualify, or over-justify it.</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>When you see others taking credit you deserved — acknowledge the anger without acting from it.</strong> The frustration is real and valid. It's also partly fueled by the gap between how you believe people should behave and how they actually do. Let yourself feel it. Then ask whether the expectation was realistic given what you know about this person.</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Stop using shame as a motivator.</strong> Shame says: "You are the problem." It does not produce better behavior — it produces more anxiety, more self-monitoring, and more avoidance. Accountability says: "This happened. What do I want to do about it?" One is about being; one is about doing. One is paralytic; one is actionable.</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Revise your internal attributes list — not to lower your standards, but to make them accurate.</strong> Some values may be outdated. Some may need to become more specific. Some may need compassion added to them. A moral code held rigidly eventually breaks its holder. A moral code held thoughtfully sustains them.</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- HOMEWORK -->
+        <div class="section">
+            <h2>Assignment</h2>
+            <div class="homework-box">
+                <h4>Personal Attributes Review</h4>
+                <p>Locate your existing list of personal attributes and values — from previous sessions or notes. For each one, work through the three questions below. Add any new attributes that have emerged but aren't yet on the list.</p>
+                <div class="attr-grid">
+                    <div class="attr-card">
+                        <div class="ac-q">Still True?</div>
+                        <p>Does this attribute still accurately describe you — or does it reflect who you were trying to be rather than who you are?</p>
+                    </div>
+                    <div class="attr-card">
+                        <div class="ac-q">More Specific?</div>
+                        <p>Does this need to be refined? "Honest" is broad. "Honest even at personal cost, except when protection is at stake" is specific and real.</p>
+                    </div>
+                    <div class="attr-card">
+                        <div class="ac-q">Still Serving You?</div>
+                        <p>Is this attribute a genuine value or a coping strategy? Does holding it still align with your growth, or has it become self-limiting?</p>
+                    </div>
+                </div>
+                <p class="hw-note">Bring the updated list to the next session. There are no wrong answers — the goal is accuracy, not self-improvement performance.</p>
+            </div>
+        </div>
+
+        <!-- KEY TAKEAWAYS -->
+        <div class="section">
+            <h2>Key Takeaways</h2>
+            <div class="takeaway-grid">
+                <div class="takeaway-item">Self-blame is a coping strategy disguised as accountability. It creates the illusion of control — "if I'm the problem, I can fix it" — while producing shame, anxiety, and distorted self-perception.</div>
+                <div class="takeaway-item">The internal identity (who you are) and the external branding (how you present) are out of alignment. Closing that gap — more direct communication, less over-explanation — reduces the anxiety that comes from performing a version of yourself.</div>
+                <div class="takeaway-item">Your moral code is calibrated to how the world should behave. Most people's behavior is calibrated to self-interest. Updating your expectations of others doesn't compromise your values. It protects you from perpetual disappointment.</div>
+                <div class="takeaway-item">Cognitive filters apply familiar templates to new situations. When the template says "I'm probably at fault," ambiguous situations get resolved that way — regardless of the actual evidence. The filter can be noticed, named, and questioned.</div>
+                <div class="takeaway-item">Shame does not produce better behavior. It produces more anxiety and more avoidance. Accountability — the functional version — is about choosing a response to what happened, not about becoming the problem.</div>
+                <div class="takeaway-item">The sunk cost fallacy applied to personal values says: "Changing now would invalidate everything I've built." It wouldn't. It would update a strategy that is no longer working as well as it once did.</div>
+                <div class="takeaway-item">Being self-centered — in the clinical sense — means being at the center of your own experience. This is the prerequisite for self-advocacy, realistic self-assessment, and setting limits that you can actually maintain.</div>
+                <div class="takeaway-item">Your values are not the problem. Integrity, honesty, accountability are genuine strengths. The problem is the asymmetry — holding yourself to a standard that others don't share, and paying the full cost of that gap alone.</div>
+            </div>
+        </div>
+
+        <!-- BOTTOM LINE -->
+        <div class="bottom-line">
+            <h2>✍️ The Bottom Line</h2>
+            <p>You have built your life around a moral code that most people don't share — and that asymmetry has been quietly exhausting you. Not because integrity is wrong, but because holding yourself to standards calibrated for how the world should work, rather than how it does, produces a specific kind of loneliness and frustration that compounds over time.</p>
+            <p>The self-blame is not evidence that you care more than others. It is evidence that a coping strategy you developed to feel safe in ambiguous situations has been running on autopilot well past the point where it serves you. It is costing more than it protects. Shame, in particular, has not made you better. It has made you more anxious, more vigilant, and more prone to absorbing responsibility that doesn't belong to you.</p>
+            <p>What changes now is not your values. It is the way you carry them. More accurately. More specifically. With compassion for the fact that you are human, and that humans — including you — are allowed to get some things wrong, share some faults, and occupy the center of their own story without apologizing for it. That is not a lowering of your standards. That is what standards actually look like when they're working.</p>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
