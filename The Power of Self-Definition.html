@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reclaiming Agency: Boundaries, Ego Death, and the Power of Self-Definition | Alignment Psychiatry</title>
+<style>
+  :root {
+    --burgundy: #6B2C3A;
+    --orange: #D67B4A;
+    --cream: #E8DFD6;
+    --dark-gray: #4A4A4A;
+    --light-gray: #B8B8B8;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--cream);
+    color: var(--dark-gray);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.65;
+  }
+
+  .page {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+  }
+
+  /* HEADER */
+  header {
+    background: linear-gradient(135deg, var(--burgundy) 0%, var(--dark-gray) 100%);
+    color: var(--cream);
+    text-align: center;
+    padding: 46px 30px 40px;
+    margin: 0 -20px 30px;
+    border-radius: 0 0 20px 20px;
+  }
+  header .brand {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 12px;
+    opacity: 0.85;
+    margin-bottom: 14px;
+  }
+  header h1 {
+    font-size: 26px;
+    margin: 0 0 12px;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+  header p.subtitle {
+    font-style: italic;
+    font-size: 15px;
+    opacity: 0.9;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  /* SECTIONS */
+  section.card {
+    background: #ffffff;
+    border-left: 6px solid var(--orange);
+    border-radius: 14px;
+    padding: 26px 30px;
+    margin-bottom: 22px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  section.card h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--burgundy);
+    margin: 0 0 16px;
+  }
+  section.card p { margin: 0 0 12px; font-size: 15px; }
+  section.card p:last-child { margin-bottom: 0; }
+
+  /* PULL QUOTES */
+  .pull-quote {
+    background: linear-gradient(120deg, var(--burgundy) 0%, var(--dark-gray) 100%);
+    color: var(--cream);
+    text-align: center;
+    font-style: italic;
+    font-size: 17px;
+    padding: 28px 36px;
+    border-radius: 14px;
+    margin: 26px 0;
+  }
+
+  /* CONCEPT GRID */
+  .concept-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .concept-card {
+    background: #f9f6f3;
+    border-top: 4px solid var(--orange);
+    border-radius: 10px;
+    padding: 16px 18px;
+  }
+  .concept-card h3 {
+    margin: 0 0 6px;
+    font-size: 15px;
+    color: var(--burgundy);
+  }
+  .concept-card p {
+    margin: 0;
+    font-size: 13.5px;
+    color: var(--dark-gray);
+  }
+
+  /* CYCLE VISUAL */
+  .cycle-wrap { margin: 22px 0 6px; }
+  .cycle-row {
+    display: flex;
+    align-items: stretch;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .cycle-node {
+    flex: 1 1 130px;
+    background: var(--dark-gray);
+    color: var(--cream);
+    border-radius: 10px;
+    padding: 14px 12px;
+    text-align: center;
+    font-size: 13px;
+  }
+  .cycle-node .num {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--light-gray);
+    margin-bottom: 6px;
+  }
+  .cycle-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--orange);
+    font-size: 20px;
+    flex: 0 0 auto;
+  }
+  .cycle-loop-note {
+    text-align: center;
+    font-size: 12.5px;
+    color: var(--dark-gray);
+    font-style: italic;
+    margin-top: 10px;
+  }
+
+  /* FRAMEWORKS */
+  section.framework {
+    background: #ffffff;
+    border-left: 6px solid var(--burgundy);
+    border-radius: 14px;
+    padding: 26px 30px;
+    margin-bottom: 22px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  section.framework > h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--dark-gray);
+    margin: 0 0 4px;
+  }
+  section.framework > h3 {
+    font-size: 19px;
+    color: var(--burgundy);
+    margin: 0 0 18px;
+  }
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .step {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .step .circle {
+    flex: 0 0 auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--burgundy);
+    color: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .step .step-text { font-size: 14.5px; padding-top: 4px; }
+  .step .step-text strong { color: var(--dark-gray); }
+
+  .application-box {
+    background: linear-gradient(135deg, #f4ede3 0%, #ede0d1 100%);
+    border-left: 4px solid var(--orange);
+    border-radius: 0 10px 10px 0;
+    padding: 14px 18px;
+    font-size: 14px;
+  }
+  .application-box .label {
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--burgundy);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  /* PRACTICAL INSTRUCTIONS */
+  ul.practical {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+  ul.practical li {
+    font-size: 14.5px;
+    padding: 10px 0 10px 30px;
+    position: relative;
+    border-bottom: 1px solid #ece5db;
+  }
+  ul.practical li:last-child { border-bottom: none; }
+  ul.practical li::before {
+    content: "\2192";
+    position: absolute;
+    left: 0;
+    color: var(--orange);
+    font-weight: bold;
+  }
+
+  /* DISTINCTION GRID (React vs Respond / Give vs Trade) */
+  .distinction {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 18px 0 6px;
+    border: 1px solid #ece5db;
+  }
+  .distinction .col {
+    padding: 16px 18px;
+    font-size: 13.5px;
+  }
+  .distinction .col.left {
+    background: #f9f6f3;
+    border-right: 1px solid #ece5db;
+  }
+  .distinction .col.right {
+    background: #f4ede3;
+  }
+  .distinction .col h4 {
+    margin: 0 0 8px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .distinction .col.left h4 { color: var(--light-gray); }
+  .distinction .col.right h4 { color: var(--orange); }
+
+  /* ROLE SHIFT (Before -> After) */
+  .role-shift {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin: 18px 0 6px;
+  }
+  .role-shift .box {
+    flex: 1 1 220px;
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-size: 13.5px;
+  }
+  .role-shift .before {
+    background: #f9f6f3;
+    border-top: 4px solid var(--light-gray);
+  }
+  .role-shift .after {
+    background: #f4ede3;
+    border-top: 4px solid var(--orange);
+  }
+  .role-shift .arrow {
+    font-size: 20px;
+    color: var(--orange);
+    flex: 0 0 auto;
+  }
+  .role-shift .label {
+    display: block;
+    text-transform: uppercase;
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    color: var(--dark-gray);
+    margin-bottom: 6px;
+  }
+
+  /* MEDICATION TAGS */
+  .med-block { margin-bottom: 14px; }
+  .med-block:last-child { margin-bottom: 0; }
+  .med-block h4 {
+    margin: 0 0 8px;
+    font-size: 14.5px;
+    color: var(--burgundy);
+  }
+  .med-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .tag {
+    font-size: 12.5px;
+    background: #f9f6f3;
+    border: 1px solid var(--light-gray);
+    color: var(--dark-gray);
+    padding: 6px 14px;
+    border-radius: 20px;
+  }
+  .tag.warn {
+    border-color: var(--orange);
+    color: var(--burgundy);
+  }
+
+  /* TAKEAWAYS */
+  .takeaway-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .takeaway-card {
+    background: #f9f6f3;
+    border-left: 4px solid var(--orange);
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 13.5px;
+  }
+
+  /* BOTTOM LINE */
+  section.bottom-line {
+    background: linear-gradient(135deg, var(--burgundy) 0%, var(--dark-gray) 100%);
+    color: var(--cream);
+    border-radius: 14px;
+    padding: 30px 32px;
+    margin-bottom: 10px;
+  }
+  section.bottom-line h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--cream);
+    opacity: 0.85;
+    margin: 0 0 16px;
+  }
+  section.bottom-line p {
+    font-size: 15px;
+    margin: 0 0 14px;
+    opacity: 0.97;
+  }
+  section.bottom-line p:last-child { margin-bottom: 0; }
+
+  footer.practice-footer {
+    text-align: center;
+    font-size: 11.5px;
+    color: var(--dark-gray);
+    opacity: 0.7;
+    margin-top: 26px;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 640px) {
+    .concept-grid, .takeaway-grid, .distinction { grid-template-columns: 1fr; }
+    .distinction .col.left { border-right: none; border-bottom: 1px solid #ece5db; }
+    header h1 { font-size: 21px; }
+    section.card, section.framework, section.bottom-line { padding: 20px 18px; }
+    .cycle-row { flex-direction: column; }
+    .cycle-arrow { transform: rotate(90deg); }
+  }
+
+  /* PRINT */
+  @media print {
+    body { background: #fff; }
+    header, section.bottom-line { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    section.card, section.framework, .pull-quote, section.bottom-line {
+      break-inside: avoid;
+      page-break-inside: avoid;
+      box-shadow: none;
+    }
+    .page { max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="brand">Alignment Psychiatry</div>
+    <h1>&#9876;&#65039; Reclaiming Agency: Boundaries, Ego Death, and the Power of Self-Definition</h1>
+    <p class="subtitle">Untangling over-sacrifice, manipulation, and the meaning attached to giving too much</p>
+  </header>
+
+  <section class="card">
+    <h2>The Situation</h2>
+    <p>High-conflict relationships with the mothers of the client's children and with his own mother have left him feeling triggered, manipulated, and emotionally drained, with interactions that often collapse into arguments or leave him feeling powerless. He describes it as a prison of his own making &mdash; retreating like a castle under siege to protect what's left of his own goodness.</p>
+    <p>He has recently begun limiting direct communication (moving exchanges to email, using AI to draft unemotional responses) as a first step toward firmer boundaries. This is unfolding alongside major life upheaval: his mother moving out, job loss, and the emotional aftermath of losing access to his children and housing.</p>
+    <p>Betrayal, resentment, and overwhelm are present, but so are moments of real empowerment when he takes action to protect his own well-being.</p>
+  </section>
+
+  <section class="card">
+    <h2>Core Problem</h2>
+    <p>A long pattern of over-sacrificing for family, at the expense of his own autonomy, has left him feeling manipulated and depleted. The intention behind the sacrifice &mdash; to be a good father and a supportive son &mdash; is not in question. What's in question is the result: others have learned to expect and demand more precisely because he consistently delivers it.</p>
+    <p>There is a mismatch between acting from love and responsibility and the reality that those same actions have enabled unhealthy dynamics and eroded his sense of self.</p>
+  </section>
+
+  <div class="pull-quote">"You gave up agency because of the suffering, but you did it because of the meaning you associated with it."</div>
+
+  <section class="card">
+    <h2>The Sacrifice Feedback Loop</h2>
+    <p>The pattern behind the core problem isn't a single decision &mdash; it's a loop that reinforces itself each time it runs:</p>
+    <div class="cycle-wrap">
+      <div class="cycle-row">
+        <div class="cycle-node"><span class="num">1</span>He over-gives, over-sacrifices</div>
+        <div class="cycle-arrow">&#8594;</div>
+        <div class="cycle-node"><span class="num">2</span>Others learn this is available</div>
+        <div class="cycle-arrow">&#8594;</div>
+        <div class="cycle-node"><span class="num">3</span>Expectations and demands increase</div>
+        <div class="cycle-arrow">&#8594;</div>
+        <div class="cycle-node"><span class="num">4</span>His own resources deplete</div>
+      </div>
+      <p class="cycle-loop-note">&#8635; depletion increases the pressure to prove himself again, feeding back into step 1</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Understanding the Dynamics</h2>
+    <div class="concept-grid">
+      <div class="concept-card">
+        <h3>Agency</h3>
+        <p>The ability to make choices and act independently, rather than from obligation or fear of how others will react.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Ego Death</h3>
+        <p>The loss or transformation of one's sense of self after major upheaval &mdash; painful, but often a necessary step in redefining who you are.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Boundaries</h3>
+        <p>Limits set to protect emotional and physical space &mdash; not requests, but decisions acted on regardless of the other person's reaction.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Manipulation</h3>
+        <p>When someone uses their knowledge of your values or emotional triggers to influence your behavior for their own benefit.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Emotional Overwhelm</h3>
+        <p>The point where accumulated stress and emotion exceed your capacity to cope, showing up as outbursts or shutdown.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="framework">
+    <h2>Framework A</h2>
+    <h3>Agency and Sacrifice</h3>
+    <div class="steps">
+      <div class="step"><div class="circle">1</div><div class="step-text"><strong>Identify</strong> &mdash; notice where agency is being given up.</div></div>
+      <div class="step"><div class="circle">2</div><div class="step-text"><strong>Examine the meaning</strong> &mdash; ask what the sacrifice is meant to prove or protect.</div></div>
+      <div class="step"><div class="circle">3</div><div class="step-text"><strong>Recognize the feedback loop</strong> &mdash; others learn from what you consistently allow.</div></div>
+      <div class="step"><div class="circle">4</div><div class="step-text"><strong>Reclaim agency</strong> &mdash; decide what you will and won't do, and say so clearly.</div></div>
+      <div class="step"><div class="circle">5</div><div class="step-text"><strong>Adapt to reality</strong> &mdash; you can't control others' intentions, only your own response.</div></div>
+    </div>
+    <div class="application-box">
+      <span class="label">Applied</span>
+      A long history of "giving and giving" to his mother and his children's mothers has taught them to expect that he'll always step up &mdash; even when it costs him. Naming that pattern is the starting point for setting limits without abandoning the people involved.
+    </div>
+  </section>
+
+  <section class="framework">
+    <h2>Framework B</h2>
+    <h3>Emotional Information Processing</h3>
+    <div class="steps">
+      <div class="step"><div class="circle">1</div><div class="step-text"><strong>Notice triggers</strong> &mdash; track when and with whom anger, resentment, or overwhelm shows up.</div></div>
+      <div class="step"><div class="circle">2</div><div class="step-text"><strong>Use emotion as information</strong> &mdash; it signals something; it doesn't have to dictate the next move.</div></div>
+      <div class="step"><div class="circle">3</div><div class="step-text"><strong>Sort it out</strong> &mdash; use writing to separate what's his from what's being projected onto him.</div></div>
+      <div class="step"><div class="circle">4</div><div class="step-text"><strong>Respond, don't react</strong> &mdash; choose actions from values, not guilt or pressure.</div></div>
+    </div>
+    <div class="application-box">
+      <span class="label">Applied</span>
+      He's triggered specifically by these three people, and at ease with everyone else &mdash; a pattern that's diagnostic rather than incidental. That specificity is itself the signal pointing to exactly where boundaries are needed.
+    </div>
+  </section>
+
+  <section class="framework">
+    <h2>Framework C</h2>
+    <h3>Power and Influence Model</h3>
+    <div class="steps">
+      <div class="step"><div class="circle">1</div><div class="step-text"><strong>Recognize the dynamic</strong> &mdash; most relationships carry an implicit bid for power or influence.</div></div>
+      <div class="step"><div class="circle">2</div><div class="step-text"><strong>Guard your resources</strong> &mdash; weigh the cost to your time, energy, and money before giving them away.</div></div>
+      <div class="step"><div class="circle">3</div><div class="step-text"><strong>Make your value visible</strong> &mdash; don't let contributions go unrecognized or quietly absorbed.</div></div>
+      <div class="step"><div class="circle">4</div><div class="step-text"><strong>Trade, don't just give</strong> &mdash; look for reciprocity rather than one-sided exchange.</div></div>
+    </div>
+    <div class="application-box">
+      <span class="label">Applied</span>
+      He's recognized that others have engaged in a kind of "audience capture" &mdash; using his own stated values to predict and steer his behavior. Naming his value explicitly, and expecting a fair exchange for it, is what prevents him from playing a supporting role in someone else's script.
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Practical Instructions</h2>
+    <ul class="practical">
+      <li>When a boundary is tested, state your position once and stop &mdash; no justifying, explaining, or defending.</li>
+      <li>Route high-conflict exchanges through writing to strip out emotional charge and create a record.</li>
+      <li>Before agreeing to a request, ask directly whether it serves you or is being extracted from you.</li>
+      <li>Let anger, sadness, or resentment register fully before deciding whether any action is warranted.</li>
+      <li>Notice which specific people trigger a reaction and which don't &mdash; the contrast is diagnostic, not incidental.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Assignment</h2>
+    <p>Begin a daily journaling practice tracking interactions with his mother and his children's mothers: what was said or done, how he felt, what he wanted to do versus what he actually did, and whether the boundary held. Ten to fifteen minutes at the end of each day is enough &mdash; bring the notes to the next session for review.</p>
+    <div class="role-shift">
+      <div class="box before"><span class="label">Before</span>Good father = sacrificing everything, always available</div>
+      <div class="arrow">&#8594;</div>
+      <div class="box after"><span class="label">After</span>Good father = fighting for your kids without giving up everything</div>
+    </div>
+  </section>
+
+  <div class="pull-quote">"You can still be a good father and fight for your kids, but it doesn't mean you have to sacrifice everything."</div>
+
+  <section class="card">
+    <h2>Medication Note</h2>
+    <div class="med-block">
+      <h4>Adderall</h4>
+      <div class="med-tags">
+        <span class="tag">Continued, dose unchanged</span>
+        <span class="tag warn">Monitor for insomnia / appetite / mood changes</span>
+      </div>
+    </div>
+    <div class="med-block">
+      <h4>Sleep Medication</h4>
+      <div class="med-tags">
+        <span class="tag">Continued, as needed</span>
+        <span class="tag warn">Avoid combining with alcohol/sedatives</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Key Takeaways</h2>
+    <div class="takeaway-grid">
+      <div class="takeaway-card">Sacrifice has functioned as a feedback loop &mdash; the more given, the more others learn to expect.</div>
+      <div class="takeaway-card">Being triggered by only specific people, while at ease with others, is itself diagnostic information.</div>
+      <div class="takeaway-card">Manipulation frequently works by using a person's own stated values as leverage against them.</div>
+      <div class="takeaway-card">Emotions are signals to interpret, not commands that require immediate action.</div>
+      <div class="takeaway-card">A boundary loses its protective function the moment it comes with justification attached.</div>
+      <div class="takeaway-card">Redefining what "good father" or "good son" means is part of this transition, not a betrayal of it.</div>
+      <div class="takeaway-card">Guarding time, energy, and money is as much a boundary as any verbal limit.</div>
+      <div class="takeaway-card">Relationships run on reciprocity; one-sided giving is a structural imbalance, not generosity.</div>
+    </div>
+  </section>
+
+  <section class="bottom-line">
+    <h2>Bottom Line</h2>
+    <p>What's underway here is less a crisis than a re-sorting of identity from obligation, happening at the same time as several major losses &mdash; a job, housing, day-to-day access to his children, his mother's presence in the house. Ego death, in this context, isn't a symptom to manage; it's the process of figuring out who he is once "good father" and "good son" stop being defined entirely by what he's willing to give up.</p>
+    <p>The over-sacrifice pattern created a kind of market: people learned what could be asked for and what he would deliver, regardless of cost to himself. That market doesn't correct itself. It corrects only when a boundary holds even when it produces friction, distance, or accusations of selfishness in the short term.</p>
+    <p>Nothing here requires him to stop giving. It requires that giving become a choice, weighed against his own resources and against what comes back, rather than a reflex triggered by guilt or the fear of being seen as anything less than everything to everyone.</p>
+  </section>
+
+  <footer class="practice-footer">Alignment Psychiatry &middot; Clinical Session Insights</footer>
+
+</div>
+</body>
+</html>
