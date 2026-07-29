@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balancing Excellence and Visibility: Navigating Power, Recognition, and Fulfillment</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        @media print {
+            body { background: white; padding: 0; margin: 0; }
+            .container { max-width: none; box-shadow: none; border-radius: 0; }
+            .content { padding: 0.5in; }
+            .section, .framework { page-break-inside: avoid; break-inside: avoid; }
+            .page-break { page-break-before: always; break-before: page; }
+            @page { size: 8.5in 11in; margin: 0.75in; }
+        }
+
+        @media screen {
+            body {
+                background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+                min-height: 100vh;
+                padding: 20px;
+            }
+            .container {
+                max-width: 8.5in;
+                margin: 0 auto;
+                background: #E8DFD6;
+                border-radius: 20px;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+                overflow: hidden;
+            }
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #4A4A4A;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+            color: #E8DFD6;
+            padding: 50px 40px;
+            text-align: center;
+        }
+        .header .eyebrow { font-size: 0.82em; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.7; margin-bottom: 14px; }
+        .header h1 { font-size: 2.3em; font-weight: 700; margin-bottom: 14px; text-shadow: 2px 2px 6px rgba(0,0,0,0.3); line-height: 1.2; }
+        .header .subtitle { font-size: 1.1em; opacity: 0.88; font-style: italic; }
+
+        .content { padding: 44px 40px; }
+
+        .section {
+            background: #ffffff;
+            border-radius: 14px;
+            border-left: 5px solid #D67B4A;
+            padding: 30px 32px;
+            margin-bottom: 32px;
+        }
+        .section h2 { color: #6B2C3A; font-size: 1.5em; font-weight: 700; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #E8DFD6; }
+        .section p { margin-bottom: 12px; }
+        .section p:last-child { margin-bottom: 0; }
+
+        .framework {
+            background: #ffffff;
+            border-radius: 14px;
+            border-left: 5px solid #6B2C3A;
+            padding: 30px 32px;
+            margin-bottom: 32px;
+        }
+        .framework h2 { color: #6B2C3A; font-size: 1.5em; font-weight: 700; margin-bottom: 6px; }
+        .framework .fw-subtitle { color: #D67B4A; font-size: 0.95em; font-style: italic; margin-bottom: 22px; padding-bottom: 14px; border-bottom: 2px solid #E8DFD6; }
+
+        .pull-quote {
+            background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+            color: #E8DFD6;
+            padding: 26px 36px;
+            border-radius: 12px;
+            margin: 28px 0;
+            font-size: 1.15em;
+            font-style: italic;
+            text-align: center;
+            box-shadow: 0 6px 18px rgba(107,44,58,0.25);
+            line-height: 1.6;
+        }
+
+        .concepts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 10px; }
+        @media (max-width: 600px) { .concepts-grid { grid-template-columns: 1fr; } }
+        .concept-card { background: #f9f6f3; border-radius: 10px; padding: 18px 20px; border-top: 3px solid #D67B4A; }
+        .concept-card h4 { color: #6B2C3A; font-size: 0.95em; font-weight: 700; margin-bottom: 6px; }
+        .concept-card p { font-size: 0.88em; margin: 0; }
+
+        /* FIRST PLACE PARADOX */
+        .race-visual {
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 16px 0;
+            background: #f9f6f3;
+        }
+        .race-track {
+            padding: 20px 24px 10px;
+        }
+        .race-label {
+            font-size: 0.72em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #6B2C3A;
+            margin-bottom: 10px;
+        }
+        .race-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+        .race-runner {
+            font-size: 1.2em;
+            flex-shrink: 0;
+        }
+        .race-bar-wrap {
+            flex: 1;
+            height: 28px;
+            background: #E8DFD6;
+            border-radius: 4px;
+            position: relative;
+            overflow: hidden;
+        }
+        .race-fill {
+            height: 100%;
+            border-radius: 4px 0 0 4px;
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+        }
+        .race-fill.leading { background: linear-gradient(90deg, #6B2C3A, #8a3a4a); width: 90%; }
+        .race-fill.slowing { background: linear-gradient(90deg, #D67B4A, #c06035); width: 65%; }
+        .race-fill.settled { background: linear-gradient(90deg, #B8B8B8, #9a9a9a); width: 50%; }
+        .race-fill span { color: #E8DFD6; font-size: 0.72em; font-weight: 700; white-space: nowrap; }
+        .finish-line {
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: #4A4A4A;
+        }
+        .race-result {
+            flex-shrink: 0;
+            font-size: 0.75em;
+            color: #B8B8B8;
+            font-style: italic;
+            width: 130px;
+            text-align: right;
+        }
+        .race-note {
+            font-size: 0.8em;
+            font-style: italic;
+            color: #6B2C3A;
+            padding: 12px 24px;
+            text-align: center;
+            border-top: 1px solid #E8DFD6;
+        }
+
+        /* POWER FLOW */
+        .power-flow {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 16px 0;
+        }
+        @media (max-width: 600px) { .power-flow { flex-direction: column; } }
+        .pf-node {
+            flex: 1;
+            padding: 20px 14px;
+            text-align: center;
+        }
+        .pf-node:nth-child(1) { background: linear-gradient(160deg, #D67B4A, #c06035); }
+        .pf-node:nth-child(2) { background: rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: center; font-size: 1.6em; color: rgba(255,255,255,0.4); flex: 0; padding: 0 8px; }
+        .pf-node:nth-child(3) { background: linear-gradient(160deg, #4A4A4A, #2a2a2a); }
+        .pf-node .pn-icon { font-size: 1.6em; display: block; margin-bottom: 6px; }
+        .pf-node h4 { color: #E8DFD6; font-size: 0.88em; font-weight: 700; margin-bottom: 4px; }
+        .pf-node p { color: rgba(232,223,214,0.82); font-size: 0.78em; line-height: 1.3; margin: 0; }
+        .power-flow-note {
+            font-size: 0.8em;
+            color: #6B2C3A;
+            font-style: italic;
+            text-align: center;
+            margin-top: 8px;
+        }
+
+        /* BEST SELF MOTIVATIONS */
+        .motivation-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin: 16px 0;
+        }
+        @media (max-width: 600px) { .motivation-grid { grid-template-columns: 1fr; } }
+        .mot-card {
+            border-radius: 10px;
+            padding: 18px 16px;
+            text-align: center;
+        }
+        .mot-card.sustainable { background: linear-gradient(135deg, #f0ece8, #E8DFD6); border-top: 3px solid #D67B4A; }
+        .mot-card.mixed { background: #f9f6f3; border-top: 3px solid #B8B8B8; }
+        .mot-card.costly { background: #f3ecec; border-top: 3px dashed #B8B8B8; }
+        .mot-card .m-icon { font-size: 1.6em; display: block; margin-bottom: 8px; }
+        .mot-card h4 { font-size: 0.88em; font-weight: 700; margin-bottom: 6px; }
+        .mot-card.sustainable h4 { color: #D67B4A; }
+        .mot-card.mixed h4 { color: #4A4A4A; }
+        .mot-card.costly h4 { color: #B8B8B8; }
+        .mot-card p { font-size: 0.78em; margin: 0; }
+
+        /* STEPS */
+        .step { display: flex; align-items: flex-start; gap: 18px; margin-bottom: 18px; }
+        .step:last-of-type { margin-bottom: 0; }
+        .step-number {
+            flex-shrink: 0;
+            background: #6B2C3A;
+            color: #E8DFD6;
+            width: 40px; height: 40px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 0.95em; margin-top: 2px;
+        }
+        .step-content h4 { color: #6B2C3A; font-size: 1.02em; margin-bottom: 4px; }
+        .step-content p { font-size: 0.95em; margin: 0; }
+
+        .application-box {
+            background: linear-gradient(135deg, #E8DFD6 0%, #d4c9be 100%);
+            border-left: 5px solid #D67B4A;
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin-top: 22px;
+        }
+        .application-box h4 { color: #6B2C3A; font-size: 0.9em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
+        .application-box p { font-size: 0.95em; margin: 0; }
+
+        .instruction-list { list-style: none; margin-top: 8px; }
+        .instruction-list li { display: flex; align-items: flex-start; gap: 14px; padding: 11px 0; border-bottom: 1px solid #E8DFD6; }
+        .instruction-list li:last-child { border-bottom: none; }
+        .bullet { flex-shrink: 0; width: 10px; height: 10px; background: #D67B4A; border-radius: 50%; margin-top: 7px; }
+        .instruction-list li p { margin: 0; font-size: 0.95em; }
+        .instruction-list li strong { color: #6B2C3A; }
+
+        .homework-box {
+            background: linear-gradient(135deg, #f9f6f3 0%, #E8DFD6 100%);
+            border-radius: 12px;
+            padding: 24px 28px;
+        }
+        .homework-box h4 { color: #D67B4A; font-size: 0.9em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px; }
+        .hw-item { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 10px; }
+        .hw-item:last-child { margin-bottom: 0; }
+        .hw-num {
+            flex-shrink: 0;
+            background: #D67B4A;
+            color: white;
+            width: 26px; height: 26px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.8em; font-weight: 700; margin-top: 2px;
+        }
+        .hw-item p { font-size: 0.93em; margin: 0; }
+        .hw-item strong { color: #6B2C3A; }
+
+        .med-note-box { background: #f9f6f3; border-radius: 10px; padding: 16px 20px; border-left: 3px solid #B8B8B8; }
+        .med-note-box h4 { color: #6B2C3A; font-size: 0.9em; font-weight: 700; margin-bottom: 8px; }
+        .med-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+        .med-tag { background: #E8DFD6; border-radius: 20px; padding: 4px 12px; font-size: 0.78em; color: #4A4A4A; }
+        .med-note-text { font-size: 0.82em; color: #4A4A4A; }
+
+        .takeaway-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 8px; }
+        @media (max-width: 600px) { .takeaway-grid { grid-template-columns: 1fr; } }
+        .takeaway-item { background: #f9f6f3; border-radius: 8px; padding: 14px 16px; border-left: 3px solid #D67B4A; font-size: 0.92em; }
+
+        .bottom-line {
+            background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+            color: #E8DFD6;
+            border-radius: 14px;
+            padding: 38px 40px;
+        }
+        .bottom-line h2 { color: #E8DFD6; font-size: 1.6em; margin-bottom: 18px; text-align: center; }
+        .bottom-line p { color: #E8DFD6; opacity: 0.92; font-size: 1em; margin-bottom: 14px; }
+        .bottom-line p:last-child { margin-bottom: 0; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <div class="eyebrow">Alignment Psychiatry · Therapeutic Insights</div>
+        <h1>🏆 Balancing Excellence and Visibility</h1>
+        <div class="subtitle">Navigating Power, Recognition, and Fulfillment</div>
+    </div>
+
+    <div class="content">
+
+        <div class="section">
+            <h2>The Situation</h2>
+            <p>You are highly accomplished — recognized by your field, sought after for your expertise, called in on high-stakes work that others can't do. And yet something feels constrained. You know you're leading, and you prefer not to be seen leading. You want to be the best at what you do, and you're genuinely uncertain whether that desire is for yourself or for everyone who ever doubted you. You give others the credit, you work behind the curtain, and you feel boxed in by the very role you've built.</p>
+            <p>The tension is not between excellence and humility. It's between what you're actually capable of and what you're willing to publicly claim — and the cost of that gap is becoming hard to ignore.</p>
+        </div>
+
+        <div class="section">
+            <h2>Core Problem</h2>
+            <p>The central pattern is power avoidance disguised as service orientation. You consistently give away authority, credit, and visibility — not because you lack the capability to hold them, but because holding them comes with responsibilities and scrutiny that you've been unwilling to accept. The result: you lead without claiming leadership, you produce results while others take the stage, and you feel increasingly boxed in by a role that never fully reflected what you actually do.</p>
+            <p>The question underneath all of it — the one that surfaced in this session — is: what would fulfillment actually look like? Not professional success. Not proving anything to anyone. Actual, personal fulfillment. You don't yet have a clear answer. That is the work.</p>
+        </div>
+
+        <div class="pull-quote">
+            "You would run in first place the whole time — and then be like, I don't want that attention."
+        </div>
+
+        <div class="section">
+            <h2>Understanding the Dynamics</h2>
+            <div class="concepts-grid">
+                <div class="concept-card">
+                    <h4>Power (Redefined Again)</h4>
+                    <p>Power is not just formal authority. It is your brand — what people think of you, what they trust you to do, and what resources they believe you can offer them. You have considerable power. The question is whether you're actively claiming it or continually giving it away.</p>
+                </div>
+                <div class="concept-card">
+                    <h4>Brand vs. Expertise</h4>
+                    <p>People often accrue power not because they have the most expertise, but because they are most visible. The expert who works behind the curtain regularly gives power to the less-qualified person who stands in front of it. This is the structural dynamic you are inside.</p>
+                </div>
+                <div class="concept-card">
+                    <h4>"Boxed In"</h4>
+                    <p>The experience of being seen — by others and by your own reputation — in a way that no longer fits what you actually are or want to be. Being boxed in is not the same as being stuck. It's a signal that the category you've been placed in (or placed yourself in) has become too small.</p>
+                </div>
+                <div class="concept-card">
+                    <h4>The "Have To" Shift</h4>
+                    <p>When you are truly depended upon, the work moves from "want to" to "have to." That shift changes the relationship to the work — and to yourself in it. The resistance to being fully visible may partly be resistance to that shift: the weight of being someone others cannot function without.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="framework">
+            <h2>🏁 The First Place Paradox</h2>
+            <div class="fw-subtitle">Running the race, winning the race, and not wanting to cross the finish line</div>
+
+            <p style="margin-bottom: 16px; font-size: 0.95em;">The pattern shows up consistently: you lead the work, you have the expertise, you drive the outcomes — and then, when it comes to claiming the result, you prefer to be somewhere other than first. Not because you don't want to win, but because first place comes with a podium, and the podium comes with attention you aren't sure you want.</p>
+
+            <div class="race-visual">
+                <div class="race-track">
+                    <div class="race-label">The Race Pattern</div>
+                    <div class="race-row">
+                        <span class="race-runner">🏃</span>
+                        <div class="race-bar-wrap">
+                            <div class="race-fill leading"><span>Leading — clearly out front</span></div>
+                            <div class="finish-line"></div>
+                        </div>
+                        <div class="race-result">Real position: 1st</div>
+                    </div>
+                    <div class="race-row">
+                        <span class="race-runner">🚶</span>
+                        <div class="race-bar-wrap">
+                            <div class="race-fill slowing"><span>Approach finish → slow down</span></div>
+                            <div class="finish-line"></div>
+                        </div>
+                        <div class="race-result">Chosen position: 2nd</div>
+                    </div>
+                    <div class="race-row">
+                        <span class="race-runner">🏅</span>
+                        <div class="race-bar-wrap">
+                            <div class="race-fill settled"><span>Accept: "I didn't win"</span></div>
+                            <div class="finish-line"></div>
+                        </div>
+                        <div class="race-result">Narrative: not the leader</div>
+                    </div>
+                </div>
+                <div class="race-note">The capability never changed. The willingness to claim the finish line did.</div>
+            </div>
+
+            <p style="font-size: 0.88em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #6B2C3A; margin: 20px 0 10px;">Where Power Goes When You Give It Away</p>
+
+            <div class="power-flow">
+                <div class="pf-node">
+                    <span class="pn-icon">⚡</span>
+                    <h4>You — The Resource</h4>
+                    <p>Actual expertise, institutional knowledge, ability to produce results others can't. Consistently steps back.</p>
+                </div>
+                <div class="pf-node">→</div>
+                <div class="pf-node">
+                    <span class="pn-icon">📣</span>
+                    <h4>Whoever Is Visible</h4>
+                    <p>Takes the credit, shapes the narrative, accrues the authority — regardless of whether the expertise matches.</p>
+                </div>
+            </div>
+            <div class="power-flow-note">Power flows toward visibility. When you cede visibility, you cede power — even when you retain the capability.</div>
+
+            <div class="application-box" style="margin-top: 16px;">
+                <h4>What "Being Depended On" Actually Means</h4>
+                <p>When you are truly the person others cannot function without, the work shifts from "I choose to do this" to "this has to happen and only I can make it happen." That weight is real. Part of the resistance to being fully out front may be a rational response to that shift — and it deserves to be examined rather than dismissed as modesty.</p>
+            </div>
+        </div>
+
+        <div class="framework">
+            <h2>🎯 Framework: Best Self vs. Others' Expectations</h2>
+            <div class="fw-subtitle">Clarifying what drives the drive — and whether it's still working for you</div>
+
+            <p style="margin-bottom: 16px; font-size: 0.95em;">You want to be the best at whatever you do. That is clear. What's less clear is: best by whose standards, for whose benefit, and toward what end? The motivation matters — because it determines whether excellence is energizing or exhausting, and whether the work feels like an expression of who you are or a performance of who you're trying to prove you are.</p>
+
+            <div class="motivation-grid">
+                <div class="mot-card sustainable">
+                    <span class="m-icon">🔍</span>
+                    <h4>Curiosity & Mastery</h4>
+                    <p>Driven by the intrinsic pull of figuring things out and getting exceptionally good at them. Sustainable. Renewing. Yours.</p>
+                </div>
+                <div class="mot-card sustainable">
+                    <span class="m-icon">🤝</span>
+                    <h4>Service & Impact</h4>
+                    <p>Driven by wanting to make others successful and the work excellent. Meaningful when it doesn't require self-erasure to do it.</p>
+                </div>
+                <div class="mot-card costly">
+                    <span class="m-icon">👁️</span>
+                    <h4>Proving Doubters Wrong</h4>
+                    <p>Driven by others' low expectations. Works as fuel in the short term. Costs more than it pays over time. Not yours — it's theirs.</p>
+                </div>
+            </div>
+
+            <div class="step" style="margin-top: 22px;">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h4>Clarify Whose "Best" You're Pursuing</h4>
+                    <p>Your best — the standard you set for yourself, by your own criteria — or everyone's best — the standard you're trying to meet to satisfy external validation or prove a point? These require different things from you and produce different outcomes.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h4>Notice When Motivation Shifts to Vindication</h4>
+                    <p>When the drive to be excellent tips into the drive to prove someone wrong — a doubter, a system, a person who underestimated you — the work is no longer for you. It's a performance for an audience that may never acknowledge what you've accomplished anyway.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h4>Examine What the Spotlight Actually Costs</h4>
+                    <p>The discomfort with visibility is real. It comes with responsibility, scrutiny, expectations, and the "have to" shift. These are genuine costs — not just anxiety to be overcome. Understanding them accurately lets you make a real decision rather than an avoidant one.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h4>Explore Fulfillment Outside the Work</h4>
+                    <p>When professional and personal life are as intertwined as yours appear to be, it becomes hard to know what satisfaction would even look like in an area of your life that isn't tied to achievement. That question is worth sitting with — not to find an answer today, but to open the inquiry.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="pull-quote">
+            "You are almost refusing to accept parts of you — giving away authority or power or parts of yourself so that everybody else is comfortable."
+        </div>
+
+        <div class="section">
+            <h2>Putting It Into Practice</h2>
+            <ul class="instruction-list">
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Notice the moments you step back — and ask why.</strong> When you defer credit, work behind the curtain, or deliberately let someone else take the finish line — catch it. Ask: is this genuine service, or is this power avoidance? They can look identical from the outside.</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Practice accepting recognition in low-stakes situations.</strong> Don't start with the high-visibility project. Start with the small acknowledgment — the compliment, the credit in a meeting, the "I know how to do this" said out loud without a qualifier after it. Notice how it feels to not immediately redirect it away from yourself.</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>When you feel the vindication motivation rising — name it.</strong> "I'm doing this to prove something to someone who probably won't notice, and definitely won't give me what I'm actually looking for." That clarity helps you decide whether the work is still worth doing for its own sake.</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Ask yourself what fulfillment looks like that has nothing to do with achievement.</strong> Not an answer — just the question. Let it be uncomfortable for a while. The professional/personal commingle is worth examining because if all your fulfillment lives in work, the cost of being boxed in or underrecognized at work becomes your entire cost of living.</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Bypass the chain of command deliberately and deliberately notice it.</strong> You already do this — efficiently and effectively. The next step is owning it as a conscious choice rather than something that just happens. That ownership is a form of claiming the authority you already exercise.</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Assignments</h2>
+            <div class="homework-box">
+                <h4>Reflection Journal — Before the Next Session</h4>
+                <div class="hw-item">
+                    <div class="hw-num">1</div>
+                    <p><strong>What does being "the best" mean to you</strong> — your best, or everyone's best? Where do those definitions diverge, and which one is actually driving you?</p>
+                </div>
+                <div class="hw-item">
+                    <div class="hw-num">2</div>
+                    <p><strong>In what situations do you give away power or avoid recognition?</strong> List specific recent examples. What was the impulse? What did you get from stepping back?</p>
+                </div>
+                <div class="hw-item">
+                    <div class="hw-num">3</div>
+                    <p><strong>What would fulfillment look like outside of professional achievement?</strong> Not the answer — just whatever comes up when you sit with the question. Bring your notes.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Medication Note</h2>
+            <div class="med-note-box">
+                <h4>Current Medications</h4>
+                <div class="med-tags">
+                    <div class="med-tag">Vyvanse · Daily AM · ADHD</div>
+                    <div class="med-tag">Adderall · As prescribed · ADHD</div>
+                    <div class="med-tag">Refills recently obtained</div>
+                </div>
+                <div class="med-note-text">Continue both as directed. Monitor for insomnia, appetite changes, mood swings. Do not adjust dosages without consulting your provider. Report any cardiovascular symptoms or significant mood changes.</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Key Takeaways</h2>
+            <div class="takeaway-grid">
+                <div class="takeaway-item">You give away authority and visibility not because you lack capability, but because claiming them brings responsibilities and scrutiny you have been unwilling to accept. That is a choice — not a character trait.</div>
+                <div class="takeaway-item">Power flows toward visibility, not toward expertise. When you consistently cede visibility to others, you transfer authority to people who may be less qualified than you — regardless of what the actual results show.</div>
+                <div class="takeaway-item">The "first place paradox" runs consistently: you lead the work, and at the moment of claiming the result, you deliberately slow down. The pattern is worth examining — not eliminating necessarily, but understanding.</div>
+                <div class="takeaway-item">The motivation behind "wanting to be the best" matters. Curiosity and service are sustainable. Proving doubters wrong is a fuel source borrowed from someone who may never acknowledge the repayment.</div>
+                <div class="takeaway-item">Being depended upon shifts work from "want to" to "have to." The resistance to full visibility may be a rational response to that shift — not just discomfort to override, but a real cost to weigh honestly.</div>
+                <div class="takeaway-item">You feel boxed in because the way others see you doesn't match what you've become or what you want. That's not a reputation problem. It's a signal that the category is too small and needs to be renegotiated.</div>
+                <div class="takeaway-item">The commingle of professional and personal fulfillment means that if all your sense of meaning lives in work, the cost of being underrecognized at work becomes the cost of your whole life. That's worth examining.</div>
+                <div class="takeaway-item">Accepting recognition in small situations is a practice, not a personality switch. It can be approached incrementally — noticing when you deflect it, and choosing, sometimes, not to.</div>
+            </div>
+        </div>
+
+        <div class="bottom-line">
+            <h2>🏆 The Bottom Line</h2>
+            <p>You have been leading from behind a curtain you built yourself. The curtain protects you from the weight of being fully seen, fully depended on, and fully accountable for outcomes. It also costs you — in recognition, in the sense of being boxed in, and in a persistent feeling that the role you're performing doesn't quite match the person performing it.</p>
+            <p>The question this session opened is not "how do you become more visible" but "why do you prefer not to be" — and whether the reasons are still compelling enough to outweigh what the invisibility is costing you. That's a real question, not a prompt to push yourself out front before you're ready. Some of the discomfort is worth examining. Some of it may simply be the honest cost of a choice that still makes sense for you.</p>
+            <p>What is clear: you are not the person your current role says you are. You have more capability, more authority, and more actual power than the position reflects. What you do with that gap — whether you claim it, renegotiate it, or consciously choose to keep the curtain in place — is the work ahead. That choice should be yours, made with full awareness. Not made by default, out of habit, or to keep everyone else comfortable.</p>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
