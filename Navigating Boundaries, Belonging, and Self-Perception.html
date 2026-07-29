@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navigating Boundaries, Belonging, and Self-Perception | Alignment Psychiatry</title>
+<style>
+  :root {
+    --burgundy: #6B2C3A;
+    --orange: #D67B4A;
+    --cream: #E8DFD6;
+    --dark-gray: #4A4A4A;
+    --light-gray: #B8B8B8;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--cream);
+    color: var(--dark-gray);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.65;
+  }
+
+  .page {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+  }
+
+  /* HEADER */
+  header {
+    background: linear-gradient(135deg, var(--burgundy) 0%, var(--dark-gray) 100%);
+    color: var(--cream);
+    text-align: center;
+    padding: 46px 30px 40px;
+    margin: 0 -20px 30px;
+    border-radius: 0 0 20px 20px;
+  }
+  header .brand {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 12px;
+    opacity: 0.85;
+    margin-bottom: 14px;
+  }
+  header h1 {
+    font-size: 26px;
+    margin: 0 0 12px;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+  header p.subtitle {
+    font-style: italic;
+    font-size: 15px;
+    opacity: 0.9;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  /* SECTIONS */
+  section.card {
+    background: #ffffff;
+    border-left: 6px solid var(--orange);
+    border-radius: 14px;
+    padding: 26px 30px;
+    margin-bottom: 22px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  section.card h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--burgundy);
+    margin: 0 0 16px;
+  }
+  section.card p { margin: 0 0 12px; font-size: 15px; }
+  section.card p:last-child { margin-bottom: 0; }
+
+  /* PULL QUOTES */
+  .pull-quote {
+    background: linear-gradient(120deg, var(--burgundy) 0%, var(--dark-gray) 100%);
+    color: var(--cream);
+    text-align: center;
+    font-style: italic;
+    font-size: 17px;
+    padding: 28px 36px;
+    border-radius: 14px;
+    margin: 26px 0;
+  }
+
+  /* CONCEPT GRID */
+  .concept-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .concept-card {
+    background: #f9f6f3;
+    border-top: 4px solid var(--orange);
+    border-radius: 10px;
+    padding: 16px 18px;
+  }
+  .concept-card h3 {
+    margin: 0 0 6px;
+    font-size: 15px;
+    color: var(--burgundy);
+  }
+  .concept-card p {
+    margin: 0;
+    font-size: 13.5px;
+    color: var(--dark-gray);
+  }
+
+  /* CYCLE VISUAL */
+  .cycle-wrap {
+    margin: 22px 0 6px;
+  }
+  .cycle-row {
+    display: flex;
+    align-items: stretch;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .cycle-node {
+    flex: 1 1 130px;
+    background: var(--dark-gray);
+    color: var(--cream);
+    border-radius: 10px;
+    padding: 14px 12px;
+    text-align: center;
+    font-size: 13px;
+  }
+  .cycle-node .num {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--light-gray);
+    margin-bottom: 6px;
+  }
+  .cycle-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--orange);
+    font-size: 20px;
+    flex: 0 0 auto;
+  }
+  .cycle-loop-note {
+    text-align: center;
+    font-size: 12.5px;
+    color: var(--dark-gray);
+    font-style: italic;
+    margin-top: 10px;
+  }
+
+  /* FRAMEWORKS */
+  section.framework {
+    background: #ffffff;
+    border-left: 6px solid var(--burgundy);
+    border-radius: 14px;
+    padding: 26px 30px;
+    margin-bottom: 22px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  section.framework > h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--dark-gray);
+    margin: 0 0 4px;
+  }
+  section.framework > h3 {
+    font-size: 19px;
+    color: var(--burgundy);
+    margin: 0 0 18px;
+  }
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .step {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .step .circle {
+    flex: 0 0 auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--burgundy);
+    color: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .step .step-text { font-size: 14.5px; padding-top: 4px; }
+  .step .step-text strong { color: var(--dark-gray); }
+
+  .application-box {
+    background: linear-gradient(135deg, #f4ede3 0%, #ede0d1 100%);
+    border-left: 4px solid var(--orange);
+    border-radius: 0 10px 10px 0;
+    padding: 14px 18px;
+    font-size: 14px;
+  }
+  .application-box .label {
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--burgundy);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  /* PRACTICAL INSTRUCTIONS */
+  ul.practical {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+  ul.practical li {
+    font-size: 14.5px;
+    padding: 10px 0 10px 30px;
+    position: relative;
+    border-bottom: 1px solid #ece5db;
+  }
+  ul.practical li:last-child { border-bottom: none; }
+  ul.practical li::before {
+    content: "\2192";
+    position: absolute;
+    left: 0;
+    color: var(--orange);
+    font-weight: bold;
+  }
+
+  /* STATEMENT -> QUESTION TRANSFORM */
+  .transform {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin: 18px 0 6px;
+  }
+  .transform .box {
+    flex: 1 1 220px;
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-size: 13.5px;
+  }
+  .transform .statement {
+    background: #f9f6f3;
+    border-top: 4px solid var(--light-gray);
+  }
+  .transform .question {
+    background: #f4ede3;
+    border-top: 4px solid var(--orange);
+  }
+  .transform .arrow {
+    font-size: 20px;
+    color: var(--orange);
+    flex: 0 0 auto;
+  }
+  .transform .label {
+    display: block;
+    text-transform: uppercase;
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    color: var(--dark-gray);
+    margin-bottom: 6px;
+  }
+
+  /* MEDICATION TAGS */
+  .med-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .tag {
+    font-size: 12.5px;
+    background: #f9f6f3;
+    border: 1px solid var(--light-gray);
+    color: var(--dark-gray);
+    padding: 6px 14px;
+    border-radius: 20px;
+  }
+  .tag.warn {
+    border-color: var(--orange);
+    color: var(--burgundy);
+  }
+
+  /* TAKEAWAYS */
+  .takeaway-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .takeaway-card {
+    background: #f9f6f3;
+    border-left: 4px solid var(--orange);
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 13.5px;
+  }
+
+  /* BOTTOM LINE */
+  section.bottom-line {
+    background: linear-gradient(135deg, var(--burgundy) 0%, var(--dark-gray) 100%);
+    color: var(--cream);
+    border-radius: 14px;
+    padding: 30px 32px;
+    margin-bottom: 10px;
+  }
+  section.bottom-line h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--cream);
+    opacity: 0.85;
+    margin: 0 0 16px;
+  }
+  section.bottom-line p {
+    font-size: 15px;
+    margin: 0 0 14px;
+    opacity: 0.97;
+  }
+  section.bottom-line p:last-child { margin-bottom: 0; }
+
+  footer.practice-footer {
+    text-align: center;
+    font-size: 11.5px;
+    color: var(--dark-gray);
+    opacity: 0.7;
+    margin-top: 26px;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 640px) {
+    .concept-grid, .takeaway-grid { grid-template-columns: 1fr; }
+    header h1 { font-size: 21px; }
+    section.card, section.framework, section.bottom-line { padding: 20px 18px; }
+    .cycle-row { flex-direction: column; }
+    .cycle-arrow { transform: rotate(90deg); }
+  }
+
+  /* PRINT */
+  @media print {
+    body { background: #fff; }
+    header, section.bottom-line { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    section.card, section.framework, .pull-quote, section.bottom-line {
+      break-inside: avoid;
+      page-break-inside: avoid;
+      box-shadow: none;
+    }
+    .page { max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="brand">Alignment Psychiatry</div>
+    <h1>🧭 Navigating Boundaries, Belonging, and Self-Perception</h1>
+    <p class="subtitle">Reframing the social narratives that turn ordinary setbacks into evidence of being unwanted</p>
+  </header>
+
+  <section class="card">
+    <h2>The Situation</h2>
+    <p>Since relocating to DC, the client has struggled to form and sustain close friendships. A recurring pattern &mdash; last-minute cancellations, being left off invitations, feeling like an afterthought &mdash; has hardened into a belief that people simply don't want her around.</p>
+    <p>Boundary-setting, especially with family, brings its own strain. Attempts to hold a limit are followed by guilt, embarrassment, or a fear of being cut off entirely.</p>
+    <p>This caution has a history: a strong social network in college and earlier life gave way to a significant rupture in her post-college friend group, leaving her hesitant to initiate new connections. Low energy and depressive symptoms since the move are compounded by family stress and a draining relationship.</p>
+  </section>
+
+  <section class="card">
+    <h2>Core Problem</h2>
+    <p>Ambiguous or negative social outcomes &mdash; a cancellation, a missed invite &mdash; are read not as ordinary friction but as confirmation of being unlikable. This interpretation, more than any actual deficit in social skill, is what drives the avoidance and reluctance to initiate that keep the isolation going.</p>
+    <p>The same dynamic shows up around boundaries: fear of isolation makes enforcement feel too costly, so limits go unenforced, resentment builds, and self-blame fills the gap.</p>
+  </section>
+
+  <div class="pull-quote">"We don't have enough information to make some of the assumptions you've made about yourself."</div>
+
+  <section class="card">
+    <h2>The Isolation Cycle</h2>
+    <p>The pattern connecting assumption, avoidance, and continued isolation runs in a loop rather than a straight line:</p>
+    <div class="cycle-wrap">
+      <div class="cycle-row">
+        <div class="cycle-node"><span class="num">1</span>Ambiguous social moment (cancellation, no invite)</div>
+        <div class="cycle-arrow">&#8594;</div>
+        <div class="cycle-node"><span class="num">2</span>Assumed as proof of rejection</div>
+        <div class="cycle-arrow">&#8594;</div>
+        <div class="cycle-node"><span class="num">3</span>Withdrawal / no initiation</div>
+        <div class="cycle-arrow">&#8594;</div>
+        <div class="cycle-node"><span class="num">4</span>Fewer real connections</div>
+      </div>
+      <p class="cycle-loop-note">&#8635; which reinforces the original belief, feeding back into step 2</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Understanding the Dynamics</h2>
+    <div class="concept-grid">
+      <div class="concept-card">
+        <h3>Boundaries</h3>
+        <p>The limits set to protect well-being in a relationship &mdash; defined not just by what's refused, but by what follows if the limit isn't respected.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Consequences</h3>
+        <p>The follow-through that gives a boundary weight. Without one, a boundary is a preference, not a limit, and others have no way to learn it's real.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Assumptions</h3>
+        <p>Beliefs formed to fill gaps in ambiguous situations &mdash; usually shaped by past hurt rather than by current evidence.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Isolation</h3>
+        <p>Both a cause and an effect here: fear of being alone drives tolerance of poor treatment, and tolerating it deepens the isolation.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Self-Perception vs. Social Perception</h3>
+        <p>The distance between how she experiences herself internally and the untested story she carries about how others experience her.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="framework">
+    <h2>Framework A</h2>
+    <h3>Boundaries and Consequences</h3>
+    <div class="steps">
+      <div class="step"><div class="circle">1</div><div class="step-text"><strong>Define</strong> &mdash; get specific about what is and isn't acceptable.</div></div>
+      <div class="step"><div class="circle">2</div><div class="step-text"><strong>Communicate</strong> &mdash; state the boundary directly to the person involved.</div></div>
+      <div class="step"><div class="circle">3</div><div class="step-text"><strong>Set the consequence</strong> &mdash; decide, in advance, what happens if it's crossed.</div></div>
+      <div class="step"><div class="circle">4</div><div class="step-text"><strong>Enforce it</strong> &mdash; follow through, even when it's uncomfortable.</div></div>
+    </div>
+    <div class="application-box">
+      <span class="label">Applied</span>
+      A boundary was set with a family member's behavior at Thanksgiving. When the consequence led to being frozen out, it felt like punishment rather than a boundary working as intended &mdash; a pain worth naming directly, without treating it as a reason to abandon the boundary.
+    </div>
+  </section>
+
+  <section class="framework">
+    <h2>Framework B</h2>
+    <h3>Challenging Assumptions</h3>
+    <div class="steps">
+      <div class="step"><div class="circle">1</div><div class="step-text"><strong>Identify</strong> &mdash; notice the negative assumption as it forms.</div></div>
+      <div class="step"><div class="circle">2</div><div class="step-text"><strong>Gather evidence</strong> &mdash; what actually supports it, and what's missing?</div></div>
+      <div class="step"><div class="circle">3</div><div class="step-text"><strong>Consider alternatives</strong> &mdash; what else could explain this?</div></div>
+      <div class="step"><div class="circle">4</div><div class="step-text"><strong>Test it</strong> &mdash; seek clarification or try a different behavior.</div></div>
+    </div>
+    <div class="application-box">
+      <span class="label">Applied</span>
+      Cancellations and missed invitations are consistently read as proof of being unwanted. Her own counter-example &mdash; a friend rescheduling a birthday party so she could attend &mdash; is evidence that people do value her, even if not everyone does.
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Practical Instructions</h2>
+    <ul class="practical">
+      <li>Initiate one invitation or hangout this week without waiting to be asked first.</li>
+      <li>When a plan falls through, name two situational explanations before accepting the personal one.</li>
+      <li>Choose one existing boundary and write down, in advance, exactly what its consequence will look like.</li>
+      <li>Keep a running note of moments, however small, when someone shows she is valued.</li>
+      <li>After enforcing a boundary, wait 24 hours before deciding the resulting distance means rejection.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Assignment</h2>
+    <p>Reflect on how two seemingly opposite beliefs are held at once: feeling genuinely "cool" internally, while assuming almost everyone else sees her as immature or unlikable. The task is not to resolve the contradiction but to notice where and how it shows up.</p>
+    <div class="transform">
+      <div class="box statement"><span class="label">Statement held</span>"I'm cool &mdash; but nobody else thinks so."</div>
+      <div class="arrow">&#8594;</div>
+      <div class="box question"><span class="label">Question to sit with</span>"How do both of these live in my mind at the same time?"</div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Medication Note</h2>
+    <div class="med-tags">
+      <span class="tag">No change this session</span>
+      <span class="tag warn">Refill pending &mdash; expires in 30 days</span>
+      <span class="tag">Contact provider with any concerns</span>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Key Takeaways</h2>
+    <div class="takeaway-grid">
+      <div class="takeaway-card">Social setbacks are being read as verdicts on likability rather than as ordinary friction.</div>
+      <div class="takeaway-card">The gap between self-image and assumed social image is worth examining on its own, not just resolving.</div>
+      <div class="takeaway-card">A boundary without an enforced consequence functions as a suggestion, not a limit.</div>
+      <div class="takeaway-card">Fear of isolation, not lack of clarity, is what most often blocks enforcement.</div>
+      <div class="takeaway-card">Adult friendship requires more deliberate initiation than the more automatic contact of college years.</div>
+      <div class="takeaway-card">A single friend-group rupture has generalized into caution across all new relationships.</div>
+      <div class="takeaway-card">The same underlying fear of abandonment is shaping both the family boundary work and the friendship pattern.</div>
+      <div class="takeaway-card">Existing counter-evidence of being valued tends to get filtered out by the older, louder narrative of rejection.</div>
+    </div>
+  </section>
+
+  <section class="bottom-line">
+    <h2>Bottom Line</h2>
+    <p>Much of this work is about separating old evidence from current reality. The belief that she is unwanted was built from real experiences, but it has outgrown them &mdash; generalizing from one ruptured friend group and a run of hard weeks into a verdict on her worth to everyone, in every setting.</p>
+    <p>Boundaries sit inside the same trap. Enforcing one can produce real distance, at least at first, and that distance is easy to mistake for proof that connection was never solid to begin with. The more accurate reading is that a relationship that can't survive a boundary was already telling her something &mdash; not that she caused its end by having limits.</p>
+    <p>The path forward isn't to stop noticing when things go wrong socially, but to slow down the jump from noticing to concluding. Untested assumptions and unenforced boundaries both do the same thing: they let old fear write the story before current evidence gets a chance to speak.</p>
+  </section>
+
+  <footer class="practice-footer">Alignment Psychiatry &middot; Clinical Session Insights</footer>
+
+</div>
+</body>
+</html>
