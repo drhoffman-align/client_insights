@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reclaiming Sanity at Work: Setting Boundaries and Protecting Yourself in Overwhelming Environments</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        @media print {
+            body { background: white; padding: 0; margin: 0; }
+            .container { max-width: none; box-shadow: none; border-radius: 0; }
+            .content { padding: 0.5in; }
+            .section, .framework { page-break-inside: avoid; break-inside: avoid; }
+            .page-break { page-break-before: always; break-before: page; }
+            @page { size: 8.5in 11in; margin: 0.75in; }
+        }
+
+        @media screen {
+            body {
+                background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+                min-height: 100vh;
+                padding: 20px;
+            }
+            .container {
+                max-width: 8.5in;
+                margin: 0 auto;
+                background: #E8DFD6;
+                border-radius: 20px;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+                overflow: hidden;
+            }
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #4A4A4A;
+        }
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+            color: #E8DFD6;
+            padding: 50px 40px;
+            text-align: center;
+        }
+        .header .eyebrow {
+            font-size: 0.82em;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            opacity: 0.7;
+            margin-bottom: 14px;
+        }
+        .header h1 {
+            font-size: 2.3em;
+            font-weight: 700;
+            margin-bottom: 14px;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+            line-height: 1.2;
+        }
+        .header .subtitle {
+            font-size: 1.1em;
+            opacity: 0.88;
+            font-style: italic;
+        }
+
+        /* CONTENT */
+        .content { padding: 44px 40px; }
+
+        /* STANDARD SECTION */
+        .section {
+            background: #ffffff;
+            border-radius: 14px;
+            border-left: 5px solid #D67B4A;
+            padding: 30px 32px;
+            margin-bottom: 32px;
+        }
+        .section h2 {
+            color: #6B2C3A;
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #E8DFD6;
+        }
+        .section p { margin-bottom: 12px; }
+        .section p:last-child { margin-bottom: 0; }
+
+        /* FRAMEWORK */
+        .framework {
+            background: #ffffff;
+            border-radius: 14px;
+            border-left: 5px solid #6B2C3A;
+            padding: 30px 32px;
+            margin-bottom: 32px;
+        }
+        .framework h2 {
+            color: #6B2C3A;
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .framework .fw-subtitle {
+            color: #D67B4A;
+            font-size: 0.95em;
+            font-style: italic;
+            margin-bottom: 22px;
+            padding-bottom: 14px;
+            border-bottom: 2px solid #E8DFD6;
+        }
+
+        /* PULL QUOTE */
+        .pull-quote {
+            background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+            color: #E8DFD6;
+            padding: 26px 36px;
+            border-radius: 12px;
+            margin: 28px 0;
+            font-size: 1.15em;
+            font-style: italic;
+            text-align: center;
+            box-shadow: 0 6px 18px rgba(107,44,58,0.25);
+            line-height: 1.6;
+        }
+
+        /* CONCEPTS GRID */
+        .concepts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 10px;
+        }
+        @media (max-width: 600px) { .concepts-grid { grid-template-columns: 1fr; } }
+        .concept-card {
+            background: #f9f6f3;
+            border-radius: 10px;
+            padding: 18px 20px;
+            border-top: 3px solid #D67B4A;
+        }
+        .concept-card h4 { color: #6B2C3A; font-size: 0.95em; font-weight: 700; margin-bottom: 6px; }
+        .concept-card p { font-size: 0.88em; margin: 0; }
+
+        /* PRIORITY STACK */
+        .priority-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin: 16px 0;
+        }
+        .priority-tier {
+            border-radius: 10px;
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .priority-tier:nth-child(1) { background: #6B2C3A; }
+        .priority-tier:nth-child(2) { background: #7a3848; }
+        .priority-tier:nth-child(3) { background: #D67B4A; }
+        .priority-tier:nth-child(4) { background: #c06035; }
+        .priority-tier:nth-child(5) { background: #4A4A4A; }
+        .priority-tier:nth-child(6) { background: #363636; }
+        .pt-badge {
+            flex-shrink: 0;
+            background: rgba(255,255,255,0.15);
+            color: #E8DFD6;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.88em;
+        }
+        .pt-content { flex: 1; }
+        .pt-content h4 { color: #E8DFD6; font-size: 0.9em; font-weight: 700; margin-bottom: 2px; }
+        .pt-content p { color: rgba(232,223,214,0.82); font-size: 0.78em; margin: 0; line-height: 1.3; }
+        .pt-tag {
+            flex-shrink: 0;
+            background: rgba(255,255,255,0.12);
+            color: rgba(232,223,214,0.75);
+            border-radius: 12px;
+            padding: 3px 10px;
+            font-size: 0.7em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        /* SYSTEM vs YOU */
+        .svy-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 16px 0;
+        }
+        @media (max-width: 600px) { .svy-grid { grid-template-columns: 1fr; } }
+        .svy-col { padding: 22px 20px; }
+        .svy-col.yours { background: linear-gradient(135deg, #f0ece8, #E8DFD6); border-top: 3px solid #D67B4A; }
+        .svy-col.system { background: #f3ecec; border-top: 3px solid #B8B8B8; }
+        .svy-col h4 {
+            font-size: 0.78em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid;
+        }
+        .svy-col.yours h4 { color: #D67B4A; border-color: #D67B4A; }
+        .svy-col.system h4 { color: #B8B8B8; border-color: #B8B8B8; }
+        .svy-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 8px;
+            font-size: 0.84em;
+        }
+        .svy-item:last-child { margin-bottom: 0; }
+        .svy-dot { flex-shrink: 0; width: 8px; height: 8px; border-radius: 50%; margin-top: 6px; }
+        .yours .svy-dot { background: #D67B4A; }
+        .system .svy-dot { background: #B8B8B8; }
+
+        /* PAPER TRAIL FLOW */
+        .paper-trail {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 16px 0;
+        }
+        .pt-row {
+            display: flex;
+            align-items: stretch;
+        }
+        .pt-row:nth-child(even) { background: #f9f6f3; }
+        .pt-row:nth-child(odd) { background: #ffffff; }
+        .pt-num {
+            flex-shrink: 0;
+            background: #6B2C3A;
+            color: #E8DFD6;
+            width: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.88em;
+        }
+        .pt-row-content {
+            flex: 1;
+            padding: 14px 16px;
+        }
+        .pt-row-content h4 { color: #6B2C3A; font-size: 0.88em; font-weight: 700; margin-bottom: 3px; }
+        .pt-row-content p { font-size: 0.82em; margin: 0; }
+        .pt-row-action {
+            flex-shrink: 0;
+            padding: 14px 14px;
+            display: flex;
+            align-items: center;
+        }
+        .pt-action-tag {
+            background: #E8DFD6;
+            border-radius: 10px;
+            padding: 4px 10px;
+            font-size: 0.72em;
+            font-weight: 700;
+            color: #6B2C3A;
+            text-align: center;
+            min-width: 60px;
+        }
+
+        /* EMAIL TEMPLATE */
+        .email-template {
+            background: #f9f6f3;
+            border-radius: 12px;
+            border: 1px solid #E8DFD6;
+            overflow: hidden;
+            margin: 16px 0;
+        }
+        .email-header {
+            background: #4A4A4A;
+            padding: 12px 18px;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 8px 16px;
+        }
+        .email-field {
+            font-size: 0.78em;
+            color: rgba(232,223,214,0.6);
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .email-value {
+            font-size: 0.78em;
+            color: rgba(232,223,214,0.88);
+        }
+        .email-body {
+            padding: 18px 20px;
+            font-size: 0.85em;
+            line-height: 1.7;
+            color: #4A4A4A;
+        }
+        .email-body p { margin-bottom: 10px; }
+        .email-body p:last-child { margin-bottom: 0; }
+        .email-note {
+            background: #E8DFD6;
+            padding: 10px 16px;
+            font-size: 0.78em;
+            color: #6B2C3A;
+            font-style: italic;
+        }
+
+        /* BEFORE AFTER */
+        .ba-compare {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 14px 0;
+        }
+        @media (max-width: 600px) { .ba-compare { grid-template-columns: 1fr; } }
+        .ba-card {
+            border-radius: 10px;
+            padding: 16px 18px;
+        }
+        .ba-card.before { background: #f3ecec; border-top: 3px solid #B8B8B8; }
+        .ba-card.after { background: #f0ece8; border-top: 3px solid #D67B4A; }
+        .ba-card .ba-label {
+            font-size: 0.72em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 8px;
+            display: block;
+        }
+        .ba-card.before .ba-label { color: #B8B8B8; }
+        .ba-card.after .ba-label { color: #D67B4A; }
+        .ba-card p { font-size: 0.85em; }
+
+        /* APPLICATION BOX */
+        .application-box {
+            background: linear-gradient(135deg, #E8DFD6 0%, #d4c9be 100%);
+            border-left: 5px solid #D67B4A;
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin-top: 22px;
+        }
+        .application-box h4 {
+            color: #6B2C3A;
+            font-size: 0.9em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 8px;
+        }
+        .application-box p { font-size: 0.95em; margin: 0; }
+
+        /* INSTRUCTION LIST */
+        .instruction-list { list-style: none; margin-top: 8px; }
+        .instruction-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 11px 0;
+            border-bottom: 1px solid #E8DFD6;
+        }
+        .instruction-list li:last-child { border-bottom: none; }
+        .bullet {
+            flex-shrink: 0;
+            width: 10px;
+            height: 10px;
+            background: #D67B4A;
+            border-radius: 50%;
+            margin-top: 7px;
+        }
+        .instruction-list li p { margin: 0; font-size: 0.95em; }
+        .instruction-list li strong { color: #6B2C3A; }
+
+        /* HOMEWORK */
+        .homework-box {
+            background: linear-gradient(135deg, #f9f6f3 0%, #E8DFD6 100%);
+            border-radius: 12px;
+            padding: 24px 28px;
+        }
+        .homework-box h4 {
+            color: #D67B4A;
+            font-size: 0.9em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 12px;
+        }
+        .hw-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+        .hw-item:last-child { margin-bottom: 0; }
+        .hw-num {
+            flex-shrink: 0;
+            background: #D67B4A;
+            color: white;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+            font-weight: 700;
+            margin-top: 2px;
+        }
+        .hw-item p { font-size: 0.93em; margin: 0; }
+        .hw-item strong { color: #6B2C3A; }
+
+        /* MED */
+        .med-note-box {
+            background: #f9f6f3;
+            border-radius: 10px;
+            padding: 16px 20px;
+            border-left: 3px solid #B8B8B8;
+        }
+        .med-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+        .med-tag {
+            background: #E8DFD6;
+            border-radius: 20px;
+            padding: 4px 12px;
+            font-size: 0.78em;
+            color: #4A4A4A;
+        }
+        .med-note-text { font-size: 0.82em; color: #4A4A4A; }
+
+        /* TAKEAWAYS */
+        .takeaway-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 8px;
+        }
+        @media (max-width: 600px) { .takeaway-grid { grid-template-columns: 1fr; } }
+        .takeaway-item {
+            background: #f9f6f3;
+            border-radius: 8px;
+            padding: 14px 16px;
+            border-left: 3px solid #D67B4A;
+            font-size: 0.92em;
+        }
+
+        /* BOTTOM LINE */
+        .bottom-line {
+            background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+            color: #E8DFD6;
+            border-radius: 14px;
+            padding: 38px 40px;
+        }
+        .bottom-line h2 {
+            color: #E8DFD6;
+            font-size: 1.6em;
+            margin-bottom: 18px;
+            text-align: center;
+        }
+        .bottom-line p {
+            color: #E8DFD6;
+            opacity: 0.92;
+            font-size: 1em;
+            margin-bottom: 14px;
+        }
+        .bottom-line p:last-child { margin-bottom: 0; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="eyebrow">Alignment Psychiatry · Therapeutic Insights</div>
+        <h1>🛡️ Reclaiming Sanity at Work</h1>
+        <div class="subtitle">Setting Boundaries and Protecting Yourself in Overwhelming Environments</div>
+    </div>
+
+    <div class="content">
+
+        <!-- THE SITUATION -->
+        <div class="section">
+            <h2>The Situation</h2>
+            <p>You are doing the work of several people and being evaluated as if you are one of them. The phones ring while someone is at the front desk. Insurance verifications stack up while you're scheduling. Confirmation calls go unmade because you're managing a patient who walked in unannounced. Every incomplete task at the end of the day feels like a personal failure — even though the math of what's being asked of you and what one person can actually do has never added up.</p>
+            <p>The anxiety isn't coming from you doing your job badly. It's coming from being placed in a structurally impossible position and then holding yourself responsible for the impossibility. That distinction is the starting point for everything in this session.</p>
+        </div>
+
+        <!-- CORE PROBLEM -->
+        <div class="section">
+            <h2>Core Problem</h2>
+            <p>The central issue is a mismatch between what is being asked of you and what one person can actually do — compounded by the habit of internalizing that gap as personal failure. When things don't get done, the explanation you reach for is "I should have done more." The more accurate explanation is "the system does not have enough people to do this work."</p>
+            <p>The risk of the current pattern: you will burn out trying to meet expectations that were never designed to be met by one person, and when you eventually can't sustain it, you'll blame yourself for that too. The work here is to interrupt that pattern before it gets there — by clarifying what is actually yours to carry and what belongs somewhere else.</p>
+        </div>
+
+        <!-- PULL QUOTE 1 -->
+        <div class="pull-quote">
+            "You cannot do everything. Your priority is to yourself — to maintain your sanity."
+        </div>
+
+        <!-- CLINICAL CONCEPTS -->
+        <div class="section">
+            <h2>Understanding the Dynamics</h2>
+            <div class="concepts-grid">
+                <div class="concept-card">
+                    <h4>Overfunctioning</h4>
+                    <p>Taking on more than your fair share — often to compensate for systemic failures — in a way that is unsustainable and ultimately harms you. Overfunctioning feels like responsibility. It is actually an absorption of someone else's problem at your own expense.</p>
+                </div>
+                <div class="concept-card">
+                    <h4>Triage</h4>
+                    <p>The clinical practice of prioritizing where resources go when demand exceeds capacity. Not everything gets addressed immediately. Not everything can. Triage is not neglect — it is professional judgment about what matters most right now.</p>
+                </div>
+                <div class="concept-card">
+                    <h4>CYA (Cover Yourself)</h4>
+                    <p>Creating a written record of your actions and communications so that you have evidence if disputes arise about performance or expectations. This is not defensiveness — it is professional protection. It also shifts accountability back to where it belongs.</p>
+                </div>
+                <div class="concept-card">
+                    <h4>Paper Trail</h4>
+                    <p>Written documentation — emails, notes, records — that can demonstrate what you did, when you reported issues, and what management was told. Power in hostile or unreasonable work environments does not come from working harder. It comes from documentation.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FRAMEWORK 1: PRIORITIZATION -->
+        <div class="framework">
+            <h2>🎯 Framework 1: Prioritization and Triage</h2>
+            <div class="fw-subtitle">A clear order for how to spend your capacity — when you can't do everything, this is the sequence</div>
+
+            <p style="margin-bottom: 16px; font-size: 0.95em;">The anxiety of impossible demands gets managed by having a clear hierarchy. When you know the order — when you know what you will do first, second, and third regardless of what else is piling up — the overwhelm has somewhere to land. This is the order.</p>
+
+            <div class="priority-stack">
+                <div class="priority-tier">
+                    <div class="pt-badge">1</div>
+                    <div class="pt-content">
+                        <h4>Protect Your Sanity</h4>
+                        <p>Your mental health is the job before the job. Without it, nothing else functions. This is not optional.</p>
+                    </div>
+                    <div class="pt-tag">Non-negotiable</div>
+                </div>
+                <div class="priority-tier">
+                    <div class="pt-badge">2</div>
+                    <div class="pt-content">
+                        <h4>The Person in Front of You</h4>
+                        <p>Whoever is physically present gets your full attention. The ringing phone is a lower priority than the patient at the desk.</p>
+                    </div>
+                    <div class="pt-tag">Always First</div>
+                </div>
+                <div class="priority-tier">
+                    <div class="pt-badge">3</div>
+                    <div class="pt-content">
+                        <h4>Triage Incoming Tasks</h4>
+                        <p>What must happen today versus what can wait? Organize by urgency, not by volume. Not all tasks are equally critical.</p>
+                    </div>
+                    <div class="pt-tag">Assess Daily</div>
+                </div>
+                <div class="priority-tier">
+                    <div class="pt-badge">4</div>
+                    <div class="pt-content">
+                        <h4>Acknowledge Your Limit</h4>
+                        <p>You are one person. Accept this before the day starts, not after it ends. The limit is not a failure. It's a fact.</p>
+                    </div>
+                    <div class="pt-tag">Daily Reset</div>
+                </div>
+                <div class="priority-tier">
+                    <div class="pt-badge">5</div>
+                    <div class="pt-content">
+                        <h4>Communicate What You Can't Reach</h4>
+                        <p>Tell management what you weren't able to get to, and why. Don't absorb the gap — document and report it.</p>
+                    </div>
+                    <div class="pt-tag">End of Day</div>
+                </div>
+                <div class="priority-tier">
+                    <div class="pt-badge">6</div>
+                    <div class="pt-content">
+                        <h4>Document Everything</h4>
+                        <p>Write it down. Email when possible. Verbal conversations disappear. Written ones do not.</p>
+                    </div>
+                    <div class="pt-tag">Always</div>
+                </div>
+            </div>
+
+            <p style="font-size: 0.88em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #6B2C3A; margin: 20px 0 10px;">What Is Actually Yours — and What Is the System's</p>
+
+            <div class="svy-grid">
+                <div class="svy-col yours">
+                    <h4>Your Responsibility</h4>
+                    <div class="svy-item"><div class="svy-dot"></div><span>The patient or person physically in front of you</span></div>
+                    <div class="svy-item"><div class="svy-dot"></div><span>Doing your actual job to the best of your capacity</span></div>
+                    <div class="svy-item"><div class="svy-dot"></div><span>Reporting when you're over capacity or systems are down</span></div>
+                    <div class="svy-item"><div class="svy-dot"></div><span>Communicating your limits clearly and professionally</span></div>
+                    <div class="svy-item"><div class="svy-dot"></div><span>Protecting your own mental health</span></div>
+                </div>
+                <div class="svy-col system">
+                    <h4>Not Your Responsibility</h4>
+                    <div class="svy-item"><div class="svy-dot"></div><span>Compensating for understaffing</span></div>
+                    <div class="svy-item"><div class="svy-dot"></div><span>Doing the work of multiple roles for one person's pay</span></div>
+                    <div class="svy-item"><div class="svy-dot"></div><span>System failures and technology outages</span></div>
+                    <div class="svy-item"><div class="svy-dot"></div><span>Management's decisions about staffing levels</span></div>
+                    <div class="svy-item"><div class="svy-dot"></div><span>Outcomes that require more capacity than you were given</span></div>
+                </div>
+            </div>
+
+            <div class="application-box">
+                <h4>When You Feel Responsible for Everything</h4>
+                <p>Pause and ask: is this a task that belongs in my column, or the system's? If the phone rings while you're with a patient, that's a staffing problem — not a failure of your attention. If insurance verification didn't happen because you were handling seven other things, that's a capacity problem. You can report it. You cannot fix it by trying harder.</p>
+            </div>
+        </div>
+
+        <!-- PULL QUOTE 2 -->
+        <div class="pull-quote">
+            "The way that you gain power is to maintain your professionalism and send emails — create a paper trail."
+        </div>
+
+        <!-- FRAMEWORK 2: CYA / PAPER TRAIL -->
+        <div class="framework">
+            <h2>📄 Framework 2: CYA — Creating Your Paper Trail</h2>
+            <div class="fw-subtitle">Documentation as protection, accountability as power</div>
+
+            <p style="margin-bottom: 16px; font-size: 0.95em;">In an unreasonable work environment, the most professional thing you can do is document everything. Not as evidence of complaint — as evidence of professional conduct. Every email you send reporting a capacity issue, every record of a system outage, every note about what was prioritized and why — these shift responsibility from you to the people who set the conditions.</p>
+
+            <div class="paper-trail">
+                <div class="pt-row">
+                    <div class="pt-num">1</div>
+                    <div class="pt-row-content">
+                        <h4>Daily Summary Email</h4>
+                        <p>At the end of each shift, email your supervisor a brief summary: what was completed, what was not completed, and why. Keep it professional and factual.</p>
+                    </div>
+                    <div class="pt-row-action"><div class="pt-action-tag">Daily</div></div>
+                </div>
+                <div class="pt-row">
+                    <div class="pt-num">2</div>
+                    <div class="pt-row-content">
+                        <h4>Report System Failures Immediately</h4>
+                        <p>When a system is down or a tool fails, send an email: "I am unable to complete [task] today because [system] is unavailable. I'm notifying you so you can address this." The problem is now on their radar in writing.</p>
+                    </div>
+                    <div class="pt-row-action"><div class="pt-action-tag">As Needed</div></div>
+                </div>
+                <div class="pt-row">
+                    <div class="pt-num">3</div>
+                    <div class="pt-row-content">
+                        <h4>Forecast Problems in Advance</h4>
+                        <p>If you can see a problem coming — too many tasks, too little time — communicate before it becomes a crisis. "I want to flag that today's schedule makes it unlikely I can complete both X and Y. Please let me know which to prioritize."</p>
+                    </div>
+                    <div class="pt-row-action"><div class="pt-action-tag">Proactive</div></div>
+                </div>
+                <div class="pt-row">
+                    <div class="pt-num">4</div>
+                    <div class="pt-row-content">
+                        <h4>Invite Feedback — Then Set the Standard</h4>
+                        <p>Your initial email establishes the baseline. "Here's how I'm prioritizing. I'm open to suggestions." This invites their input while making your approach official. If they don't respond, you've documented that you tried.</p>
+                    </div>
+                    <div class="pt-row-action"><div class="pt-action-tag">One Time</div></div>
+                </div>
+                <div class="pt-row">
+                    <div class="pt-num">5</div>
+                    <div class="pt-row-content">
+                        <h4>Keep All Correspondence</h4>
+                        <p>Save every email. Do not rely on chat platforms that can be deleted. If something is said verbally that matters, follow up with an email: "Confirming our conversation today about..."</p>
+                    </div>
+                    <div class="pt-row-action"><div class="pt-action-tag">Always</div></div>
+                </div>
+            </div>
+
+            <p style="font-size: 0.88em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #6B2C3A; margin: 20px 0 10px;">The Initial Baseline Email — What to Send This Week</p>
+
+            <div class="email-template">
+                <div class="email-header">
+                    <div class="email-field">To:</div>
+                    <div class="email-value">[Supervisor Name(s)]</div>
+                    <div class="email-field">Subject:</div>
+                    <div class="email-value">Workload Overview and Task Prioritization</div>
+                </div>
+                <div class="email-body">
+                    <p>Hi [Name],</p>
+                    <p>I wanted to give you a clear picture of how I've been managing my responsibilities over the past few months, and to share how I'm currently prioritizing tasks given the workload.</p>
+                    <p>My daily responsibilities include [list 4–6 core tasks]. When all of these demand attention simultaneously — which is most days — I prioritize in this order: (1) patients who are physically present, (2) time-sensitive insurance and billing tasks, (3) scheduling and confirmation calls as capacity allows.</p>
+                    <p>I want to be transparent that there are days when the volume of tasks exceeds what one person can reasonably complete in a shift. When that happens, I will document what was left undone and why, and I'll notify you directly.</p>
+                    <p>I'm open to any suggestions you have for prioritizing or restructuring how I manage these tasks. I want to make sure we're aligned on expectations going forward.</p>
+                    <p>Thank you,<br>[Your Name]</p>
+                </div>
+                <div class="email-note">This email does four things: establishes your priority system, names the capacity reality, puts management on notice, and invites their input — all professionally.</div>
+            </div>
+
+            <div class="ba-compare">
+                <div class="ba-card before">
+                    <span class="ba-label">Before — Absorbing It Silently</span>
+                    <p>You try to do everything. Things get missed. You blame yourself. Management assumes you're managing fine. Nothing changes except your stress level.</p>
+                </div>
+                <div class="ba-card after">
+                    <span class="ba-label">After — Documenting It Professionally</span>
+                    <p>You do what you can, report what you couldn't, and create a written record. Management is on notice. If problems continue, accountability is traceable — and it isn't pointing at you.</p>
+                </div>
+            </div>
+
+            <div class="application-box">
+                <h4>On the Power of the Paper Trail</h4>
+                <p>If you are doing your job and documenting your work, there is very little they can do to you that doesn't leave a trail pointing back to the system's failures. If they ignore your documented concerns, the responsibility for what follows is theirs — in writing, with timestamps. The paper trail is not a complaint. It is professionalism. And professionalism, practiced consistently, is power in an unreasonable environment.</p>
+            </div>
+        </div>
+
+        <!-- PRACTICAL INSTRUCTIONS -->
+        <div class="section">
+            <h2>Putting It Into Practice</h2>
+            <ul class="instruction-list">
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Start each day by reminding yourself of the priority order.</strong> Sanity first. Person in front of you second. Everything else: triage. When the day feels like it's spinning out, return to this sequence. It gives the overwhelm a structure to land in.</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Stop apologizing internally for what you can't reach.</strong> When the phone rings while you're with someone, that is not your failure. When insurance calls don't get made because the front desk was full, that is a staffing decision, not a personal one. Name it accurately before your nervous system does.</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Use email — not chat — for anything that matters.</strong> Chat can be deleted. Email cannot. If your supervisor gives you an instruction verbally, follow up in email to confirm. "Just confirming from our conversation today: I should prioritize X over Y when the schedule is full." That confirmation is now part of the record.</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Send the initial baseline email this week.</strong> It sets the stage for everything else. Use the template from this document, adjust it to your specific tasks, and send it to whoever has authority over your workload. What you do after that — the daily summaries, the issue reports — builds on this foundation.</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Continue building toward your backup plan.</strong> The medical billing and coding course is not just a plan B — it is a psychological asset. Knowing you have an exit that you're building toward changes how the current situation sits in your nervous system. Keep going. The current job is a position you're in, not one you're trapped in.</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- HOMEWORK -->
+        <div class="section">
+            <h2>Assignments</h2>
+            <div class="homework-box">
+                <h4>This Week and Ongoing</h4>
+                <div class="hw-item">
+                    <div class="hw-num">1</div>
+                    <p><strong>Draft and send the initial baseline email</strong> to your supervisor(s) this week. Use the template above as a starting point. Adapt it to your specific role and tasks. Save a copy.</p>
+                </div>
+                <div class="hw-item">
+                    <div class="hw-num">2</div>
+                    <p><strong>Begin daily end-of-shift documentation:</strong> What you completed, what you didn't complete, and why (system issues, volume, single-person capacity). Send or save it — preferably both.</p>
+                </div>
+                <div class="hw-item">
+                    <div class="hw-num">3</div>
+                    <p><strong>Use the conflict resolution rubric</strong> (provided by your therapist) to structure any communications about recurring issues. Bring copies of emails sent and any responses received to the next session.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- MEDICATION -->
+        <div class="section">
+            <h2>Medication Note</h2>
+            <div class="med-note-box">
+                <div class="med-tags">
+                    <div class="med-tag">Current dose: 10mg</div>
+                    <div class="med-tag">Daily as prescribed</div>
+                    <div class="med-tag">Anxiety / mood support</div>
+                    <div class="med-tag">Monitor: sleep, mood, appetite</div>
+                </div>
+                <div class="med-note-text">Continue current regimen as prescribed. Report any changes in effectiveness or side effects at next visit. Ongoing work stress is relevant context for your prescriber.</div>
+            </div>
+        </div>
+
+        <!-- KEY TAKEAWAYS -->
+        <div class="section">
+            <h2>Key Takeaways</h2>
+            <div class="takeaway-grid">
+                <div class="takeaway-item">You are being asked to do the work of several people while being paid and evaluated as one. That is a systemic problem, not a personal failure. The math doesn't add up because it was never designed to.</div>
+                <div class="takeaway-item">Your primary job is to protect your own sanity. Not to absorb every task, not to compensate for understaffing, not to overfunc tion your way to the expectations set for a fully-staffed office. Sanity first.</div>
+                <div class="takeaway-item">Triage is professional judgment, not neglect. When you prioritize the person in front of you over the ringing phone, that is a sound clinical decision. Name it that way — to yourself and in your documentation.</div>
+                <div class="takeaway-item">The paper trail is your protection. Written documentation of what you completed, what you couldn't, and why — sent to management via email — shifts accountability back to the people who set the conditions. Your word plus a timestamp is more powerful than frustration alone.</div>
+                <div class="takeaway-item">Professionalism is power. Frame everything as information, not complaint. "I'm unable to complete X today due to Y" is a professional update. It puts management on notice without giving them grounds to respond punitively.</div>
+                <div class="takeaway-item">If they don't respond to your documented concerns, responsibility for what follows is theirs. You notified them. You documented your capacity. If problems escalate, the trail doesn't point at you.</div>
+                <div class="takeaway-item">Anything beyond your job description is not your job. The company's staffing decisions are their choices and their consequences. You are responsible for doing your job well — not for filling the roles they chose not to fill.</div>
+                <div class="takeaway-item">Building a backup plan is not disloyalty — it is sanity. The medical billing and coding course gives you options, and having options changes your relationship to this job from trapped to temporary. Both things matter.</div>
+            </div>
+        </div>
+
+        <!-- BOTTOM LINE -->
+        <div class="bottom-line">
+            <h2>🛡️ The Bottom Line</h2>
+            <p>You are not failing at your job. You are being given a job that was designed to require more than one person, and you are holding yourself accountable for the parts that fall through the cracks. That accounting is wrong. The cracks are not yours. They belong to a system that chose to understaff and over-expect.</p>
+            <p>The two tools from this session — triage and documentation — work together. Triage clarifies what you can actually do. Documentation captures what you couldn't, and sends it back to the people who created the conditions. Together they protect your mental health, protect your job, and create a professional record that positions you correctly: as someone who showed up, did their work, communicated clearly, and reported what wasn't possible rather than silently absorbing it.</p>
+            <p>Your value is not measured by how much you can endure. The most professional thing you can do in this environment is refuse to over-function your way into burnout, maintain your sanity, keep building your options, and document everything. That is not weakness. That is self-protection — and in a workplace that asks too much, it is the only sustainable strategy.</p>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
