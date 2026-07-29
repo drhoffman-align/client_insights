@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breaking the Cycle: Understanding Emotional Feedback Loops and Self-Compassion in Relationships</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        @media print {
+            body { background: white; padding: 0; margin: 0; }
+            .container { max-width: none; box-shadow: none; border-radius: 0; }
+            .content { padding: 0.5in; }
+            .section, .framework { page-break-inside: avoid; break-inside: avoid; }
+            .page-break { page-break-before: always; break-before: page; }
+            @page { size: 8.5in 11in; margin: 0.75in; }
+        }
+
+        @media screen {
+            body {
+                background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+                min-height: 100vh;
+                padding: 20px;
+            }
+            .container {
+                max-width: 8.5in;
+                margin: 0 auto;
+                background: #E8DFD6;
+                border-radius: 20px;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+                overflow: hidden;
+            }
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #4A4A4A;
+        }
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+            color: #E8DFD6;
+            padding: 50px 40px;
+            text-align: center;
+        }
+        .header .eyebrow {
+            font-size: 0.82em;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            opacity: 0.7;
+            margin-bottom: 14px;
+        }
+        .header h1 {
+            font-size: 2.3em;
+            font-weight: 700;
+            margin-bottom: 14px;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+            line-height: 1.2;
+        }
+        .header .subtitle {
+            font-size: 1.1em;
+            opacity: 0.88;
+            font-style: italic;
+        }
+
+        /* CONTENT */
+        .content { padding: 44px 40px; }
+
+        /* STANDARD SECTION */
+        .section {
+            background: #ffffff;
+            border-radius: 14px;
+            border-left: 5px solid #D67B4A;
+            padding: 30px 32px;
+            margin-bottom: 32px;
+        }
+        .section h2 {
+            color: #6B2C3A;
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #E8DFD6;
+        }
+        .section p { margin-bottom: 12px; }
+        .section p:last-child { margin-bottom: 0; }
+
+        /* FRAMEWORK */
+        .framework {
+            background: #ffffff;
+            border-radius: 14px;
+            border-left: 5px solid #6B2C3A;
+            padding: 30px 32px;
+            margin-bottom: 32px;
+        }
+        .framework h2 {
+            color: #6B2C3A;
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .framework .fw-subtitle {
+            color: #D67B4A;
+            font-size: 0.95em;
+            font-style: italic;
+            margin-bottom: 22px;
+            padding-bottom: 14px;
+            border-bottom: 2px solid #E8DFD6;
+        }
+
+        /* PULL QUOTE */
+        .pull-quote {
+            background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+            color: #E8DFD6;
+            padding: 26px 36px;
+            border-radius: 12px;
+            margin: 28px 0;
+            font-size: 1.15em;
+            font-style: italic;
+            text-align: center;
+            box-shadow: 0 6px 18px rgba(107,44,58,0.25);
+            line-height: 1.6;
+        }
+
+        /* CONCEPTS GRID */
+        .concepts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 10px;
+        }
+        @media (max-width: 600px) { .concepts-grid { grid-template-columns: 1fr; } }
+        .concept-card {
+            background: #f9f6f3;
+            border-radius: 10px;
+            padding: 18px 20px;
+            border-top: 3px solid #D67B4A;
+        }
+        .concept-card h4 { color: #6B2C3A; font-size: 0.95em; font-weight: 700; margin-bottom: 6px; }
+        .concept-card p { font-size: 0.88em; margin: 0; }
+
+        /* NERVOUS SYSTEM DASHBOARD */
+        .dashboard-visual {
+            background: #1a1a2e;
+            border-radius: 12px;
+            padding: 24px 20px;
+            margin: 16px 0;
+        }
+        .dashboard-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+        @media (max-width: 600px) { .dashboard-row { grid-template-columns: 1fr 1fr; } }
+        .dash-light {
+            text-align: center;
+            padding: 14px 10px;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.06);
+        }
+        .dash-light .dl-icon { font-size: 1.6em; display: block; margin-bottom: 6px; }
+        .dash-light .dl-label { font-size: 0.72em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
+        .dash-light .dl-desc { font-size: 0.72em; line-height: 1.3; }
+        .dash-light.active .dl-label { color: #D67B4A; }
+        .dash-light.active .dl-desc { color: rgba(232,223,214,0.75); }
+        .dash-light.dim .dl-label { color: #B8B8B8; }
+        .dash-light.dim .dl-desc { color: rgba(184,184,184,0.6); }
+        .dashboard-caption {
+            font-size: 0.78em;
+            color: rgba(232,223,214,0.5);
+            text-align: center;
+            margin-top: 14px;
+            font-style: italic;
+        }
+
+        /* EMOTION ACCUMULATION */
+        .accumulation-track {
+            display: flex;
+            align-items: flex-end;
+            gap: 6px;
+            padding: 16px;
+            background: #f9f6f3;
+            border-radius: 10px;
+            margin: 16px 0;
+        }
+        @media (max-width: 500px) { .accumulation-track { flex-wrap: wrap; } }
+        .acc-bar {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        .acc-fill {
+            width: 100%;
+            border-radius: 4px 4px 0 0;
+            transition: height 0.3s;
+        }
+        .acc-bar:nth-child(1) .acc-fill { height: 18px; background: #E8DFD6; border: 1px solid #B8B8B8; }
+        .acc-bar:nth-child(2) .acc-fill { height: 32px; background: #D67B4A; opacity: 0.3; }
+        .acc-bar:nth-child(3) .acc-fill { height: 48px; background: #D67B4A; opacity: 0.55; }
+        .acc-bar:nth-child(4) .acc-fill { height: 66px; background: #D67B4A; opacity: 0.75; }
+        .acc-bar:nth-child(5) .acc-fill { height: 90px; background: #6B2C3A; }
+        .acc-label {
+            font-size: 0.7em;
+            color: #4A4A4A;
+            text-align: center;
+            line-height: 1.3;
+        }
+        .acc-bar:nth-child(5) .acc-label { color: #6B2C3A; font-weight: 700; }
+        .acc-caption {
+            font-size: 0.8em;
+            color: #4A4A4A;
+            font-style: italic;
+            text-align: center;
+            margin-top: 8px;
+        }
+
+        /* THINK-FEEL-DO TRIANGLE */
+        .tfd-flow {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            margin: 16px 0;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        @media (max-width: 600px) { .tfd-flow { flex-direction: column; } }
+        .tfd-node {
+            flex: 1;
+            padding: 22px 16px;
+            text-align: center;
+        }
+        .tfd-node:nth-child(1) { background: #6B2C3A; }
+        .tfd-node:nth-child(2) { background: #8a3a4a; }
+        .tfd-node:nth-child(3) { background: #D67B4A; }
+        .tfd-arrow {
+            background: transparent;
+            color: #E8DFD6;
+            font-size: 1.4em;
+            padding: 0 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.5;
+        }
+        .tfd-node .tn-icon { font-size: 1.8em; display: block; margin-bottom: 8px; }
+        .tfd-node h4 { color: #E8DFD6; font-size: 1em; font-weight: 700; margin-bottom: 4px; }
+        .tfd-node p { color: rgba(232,223,214,0.82); font-size: 0.78em; margin: 0; line-height: 1.4; }
+        .tfd-loop-note {
+            text-align: center;
+            font-size: 0.78em;
+            color: #6B2C3A;
+            font-style: italic;
+            margin-top: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        /* FEEDBACK LOOP CYCLE */
+        .feedback-cycle {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 16px 0;
+        }
+        @media (max-width: 600px) { .feedback-cycle { grid-template-columns: 1fr; } }
+        .fc-node {
+            padding: 20px 18px;
+        }
+        .fc-node:nth-child(1) { background: #3d1a21; }
+        .fc-node:nth-child(2) { background: #52242c; }
+        .fc-node:nth-child(3) { background: #622c36; }
+        .fc-node:nth-child(4) { background: #6B2C3A; }
+        .fc-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.1);
+            color: #E8DFD6;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            font-size: 0.78em;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .fc-node h4 { color: #D67B4A; font-size: 0.88em; font-weight: 700; margin-bottom: 4px; }
+        .fc-node p { color: rgba(232,223,214,0.85); font-size: 0.8em; margin: 0; line-height: 1.4; }
+        .fc-prophecy {
+            background: linear-gradient(135deg, #4A4A4A 0%, #6B2C3A 100%);
+            border-radius: 10px;
+            padding: 14px 20px;
+            margin-top: 14px;
+            text-align: center;
+            font-size: 0.85em;
+            color: #E8DFD6;
+            font-style: italic;
+        }
+
+        /* ACCEPTANCE vs TRIVIALIZATION */
+        .avt-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 14px;
+        }
+        @media (max-width: 600px) { .avt-grid { grid-template-columns: 1fr; } }
+        .avt-card {
+            border-radius: 12px;
+            padding: 22px 20px;
+        }
+        .avt-card.triv {
+            background: #f3ecec;
+            border-top: 3px solid #B8B8B8;
+        }
+        .avt-card.accept {
+            background: #f0ece8;
+            border-top: 3px solid #D67B4A;
+        }
+        .avt-card .avt-icon { font-size: 1.8em; display: block; margin-bottom: 10px; }
+        .avt-card h4 { font-size: 0.92em; font-weight: 700; margin-bottom: 8px; }
+        .avt-card.triv h4 { color: #B8B8B8; }
+        .avt-card.accept h4 { color: #D67B4A; }
+        .avt-card .avt-def { font-size: 0.85em; margin-bottom: 10px; font-style: italic; }
+        .avt-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 7px;
+            font-size: 0.83em;
+        }
+        .avt-item:last-child { margin-bottom: 0; }
+        .avt-dot {
+            flex-shrink: 0;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            margin-top: 6px;
+        }
+        .triv .avt-dot { background: #B8B8B8; }
+        .accept .avt-dot { background: #D67B4A; }
+
+        /* APPLICATION BOX */
+        .application-box {
+            background: linear-gradient(135deg, #E8DFD6 0%, #d4c9be 100%);
+            border-left: 5px solid #D67B4A;
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin-top: 22px;
+        }
+        .application-box h4 {
+            color: #6B2C3A;
+            font-size: 0.9em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 8px;
+        }
+        .application-box p { font-size: 0.95em; margin: 0; }
+
+        /* INSTRUCTION LIST */
+        .instruction-list { list-style: none; margin-top: 8px; }
+        .instruction-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 11px 0;
+            border-bottom: 1px solid #E8DFD6;
+        }
+        .instruction-list li:last-child { border-bottom: none; }
+        .bullet {
+            flex-shrink: 0;
+            width: 10px;
+            height: 10px;
+            background: #D67B4A;
+            border-radius: 50%;
+            margin-top: 7px;
+        }
+        .instruction-list li p { margin: 0; font-size: 0.95em; }
+        .instruction-list li strong { color: #6B2C3A; }
+
+        /* HOMEWORK */
+        .homework-box {
+            background: linear-gradient(135deg, #f9f6f3 0%, #E8DFD6 100%);
+            border-radius: 12px;
+            padding: 24px 28px;
+        }
+        .homework-box h4 {
+            color: #D67B4A;
+            font-size: 0.9em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 12px;
+        }
+        .hw-cols {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+        }
+        @media (max-width: 600px) { .hw-cols { grid-template-columns: 1fr 1fr; } }
+        .hw-col {
+            background: white;
+            border-radius: 8px;
+            padding: 14px 12px;
+            text-align: center;
+            border-top: 2px solid #D67B4A;
+        }
+        .hw-col .hw-q {
+            font-size: 0.75em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: #D67B4A;
+            margin-bottom: 6px;
+        }
+        .hw-col p { font-size: 0.8em; color: #4A4A4A; }
+        .homework-box .hw-note { font-size: 0.88em; margin-top: 12px; color: #4A4A4A; }
+
+        /* TAKEAWAYS */
+        .takeaway-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 8px;
+        }
+        @media (max-width: 600px) { .takeaway-grid { grid-template-columns: 1fr; } }
+        .takeaway-item {
+            background: #f9f6f3;
+            border-radius: 8px;
+            padding: 14px 16px;
+            border-left: 3px solid #D67B4A;
+            font-size: 0.92em;
+        }
+
+        /* BOTTOM LINE */
+        .bottom-line {
+            background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+            color: #E8DFD6;
+            border-radius: 14px;
+            padding: 38px 40px;
+        }
+        .bottom-line h2 {
+            color: #E8DFD6;
+            font-size: 1.6em;
+            margin-bottom: 18px;
+            text-align: center;
+        }
+        .bottom-line p {
+            color: #E8DFD6;
+            opacity: 0.92;
+            font-size: 1em;
+            margin-bottom: 14px;
+        }
+        .bottom-line p:last-child { margin-bottom: 0; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="eyebrow">Alignment Psychiatry · Therapeutic Insights</div>
+        <h1>🔁 Breaking the Cycle</h1>
+        <div class="subtitle">Understanding Emotional Feedback Loops and Self-Compassion in Relationships</div>
+    </div>
+
+    <div class="content">
+
+        <!-- THE SITUATION -->
+        <div class="section">
+            <h2>The Situation</h2>
+            <p>You are caught in a pattern that is both familiar and exhausting: you pull back from friendships hoping someone will notice, but when they reach out, the response rarely feels satisfying. You know how it works while you're in it. You can trace the logic. And somehow it keeps happening anyway — because the pattern isn't running on logic. It's running on something older and deeper.</p>
+            <p>At work, a recent experience crystallized something important: you improvised a presentation successfully, others praised you, and you still felt like you failed. The inner verdict and the outer reality were completely different. That gap — between what you experience internally and what others actually see — is the same gap that drives the relationship pattern. This session was about understanding how it works at the level of the nervous system, not just the mind.</p>
+        </div>
+
+        <!-- CORE PROBLEM -->
+        <div class="section">
+            <h2>Core Problem</h2>
+            <p>The central issue is a self-reinforcing loop: you withhold your feelings or needs, hoping others will notice them without being told. When they don't respond — or don't respond in the way you need — it confirms an existing belief: that people don't really show up for you. The loop then tightens. The belief shapes how you interpret the next interaction. Which produces the next disappointment. Which reinforces the belief.</p>
+            <p>This is not a relationship problem. It is a nervous system problem. Past experiences of emotional betrayal and invalidation were stored not just as memories but as a filter — one that influences what you notice, how you interpret it, and what you expect. The present keeps getting read through the past, and the past keeps being confirmed.</p>
+        </div>
+
+        <!-- PULL QUOTE 1 -->
+        <div class="pull-quote">
+            "If you don't deal with your emotional energy, your brain remembers it — and it becomes more of 'I'm lonely in this world. Nobody gets me.'"
+        </div>
+
+        <!-- CLINICAL CONCEPTS -->
+        <div class="section">
+            <h2>Understanding the Dynamics</h2>
+            <div class="concepts-grid">
+                <div class="concept-card">
+                    <h4>Self-Fulfilling Prophecy</h4>
+                    <p>When your behavior — shaped by a belief — produces the very outcome the belief predicted. You expect people won't show up → you don't communicate your need → they can't respond to what they don't know → they don't show up. The belief is confirmed. The behavior was its own cause.</p>
+                </div>
+                <div class="concept-card">
+                    <h4>Emotional Energy</h4>
+                    <p>Unprocessed emotions don't dissolve. They are stored in the nervous system and accumulate over time. Each new disappointment adds to the total. Eventually, the response to a small trigger carries the weight of everything that wasn't processed before it.</p>
+                </div>
+                <div class="concept-card">
+                    <h4>Cognitive Dissonance</h4>
+                    <p>The discomfort of holding conflicting beliefs or experiences simultaneously — like being praised for something you feel you failed at. The brain always tries to resolve the tension. How it resolves it (acceptance vs. trivialization) determines whether you grow or stay stuck.</p>
+                </div>
+                <div class="concept-card">
+                    <h4>Your "Bubble"</h4>
+                    <p>Your personal worldview — the lens shaped by every experience, belief, and perception that filters what you notice and how you interpret it. Your bubble is not objective reality. It is reality as your nervous system has learned to see it. It can be updated — but only consciously.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FRAMEWORK 1: NERVOUS SYSTEM -->
+        <div class="framework">
+            <h2>🧠 Framework 1: The Nervous System Foundation</h2>
+            <div class="fw-subtitle">Why emotional memories shape present reactions — even when you know they shouldn't</div>
+
+            <p style="margin-bottom: 16px; font-size: 0.95em;">Think of the nervous system as your internal dashboard. It monitors everything — events, interactions, patterns — and generates signals (emotions) when something needs attention. The problem is that it stores past signals too, and those old signals influence how it reads new situations.</p>
+
+            <div class="dashboard-visual">
+                <div class="dashboard-row">
+                    <div class="dash-light active">
+                        <span class="dl-icon">⚠️</span>
+                        <div class="dl-label">Check Engine</div>
+                        <div class="dl-desc">An emotion surfaced. Something needs attention — not suppression.</div>
+                    </div>
+                    <div class="dash-light active">
+                        <span class="dl-icon">🧠</span>
+                        <div class="dl-label">Memory Filter</div>
+                        <div class="dl-desc">Past experiences color how the current event is being read.</div>
+                    </div>
+                    <div class="dash-light active">
+                        <span class="dl-icon">🔋</span>
+                        <div class="dl-label">Energy Reserve</div>
+                        <div class="dl-desc">Unprocessed emotions drain the reserve and amplify future reactions.</div>
+                    </div>
+                    <div class="dash-light dim">
+                        <span class="dl-icon">🟢</span>
+                        <div class="dl-label">All Clear</div>
+                        <div class="dl-desc">What becomes possible when emotions are processed and released.</div>
+                    </div>
+                </div>
+                <div class="dashboard-caption">The nervous system is always working — even when you think you've moved on from something. It remembers what you don't.</div>
+            </div>
+
+            <p style="font-size: 0.88em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #6B2C3A; margin: 20px 0 10px;">What Happens When Emotional Energy Accumulates</p>
+
+            <div class="accumulation-track">
+                <div class="acc-bar">
+                    <div class="acc-fill"></div>
+                    <div class="acc-label">First hurt, unprocessed</div>
+                </div>
+                <div class="acc-bar">
+                    <div class="acc-fill"></div>
+                    <div class="acc-label">Second hurt, absorbed</div>
+                </div>
+                <div class="acc-bar">
+                    <div class="acc-fill"></div>
+                    <div class="acc-label">Pattern forming, unnamed</div>
+                </div>
+                <div class="acc-bar">
+                    <div class="acc-fill"></div>
+                    <div class="acc-label">Belief solidifying</div>
+                </div>
+                <div class="acc-bar">
+                    <div class="acc-fill"></div>
+                    <div class="acc-label">One small thing → "Nobody gets me"</div>
+                </div>
+            </div>
+            <div class="acc-caption">The final trigger is never the actual cause. It's the last addition to everything that wasn't processed before it.</div>
+
+            <div class="application-box" style="margin-top: 20px;">
+                <h4>What This Means for You</h4>
+                <p>The intensity of your reactions in relationships is not disproportionate to your current situation — it's proportionate to everything your nervous system has stored from past situations. Processing emotional energy (through writing, conversation, movement, reflection) is not optional self-care. It's how you prevent old pain from narrating new experiences.</p>
+            </div>
+        </div>
+
+        <!-- FRAMEWORK 2: THINK-FEEL-DO + FEEDBACK LOOP -->
+        <div class="framework">
+            <h2>🔄 Framework 2: The Think-Feel-Do Model → The Feedback Loop</h2>
+            <div class="fw-subtitle">How a universal mechanism becomes a self-fulfilling cycle when needs stay hidden</div>
+
+            <p style="margin-bottom: 16px; font-size: 0.95em;">Every emotional reaction follows the same sequence. Understanding it lets you identify where to intervene — rather than being carried along by it automatically.</p>
+
+            <div class="tfd-flow">
+                <div class="tfd-node">
+                    <span class="tn-icon">💭</span>
+                    <h4>Think</h4>
+                    <p>An event happens. You interpret it through your bubble — your past, your beliefs, your expectations.</p>
+                </div>
+                <div class="tfd-arrow">→</div>
+                <div class="tfd-node">
+                    <span class="tn-icon">❤️</span>
+                    <h4>Feel</h4>
+                    <p>An emotion arises in response to your interpretation — not the raw event, but your reading of it.</p>
+                </div>
+                <div class="tfd-arrow">→</div>
+                <div class="tfd-node">
+                    <span class="tn-icon">🚶</span>
+                    <h4>Do</h4>
+                    <p>You act — or don't. Withdraw, reach out, stay silent, express. The action shapes the next event.</p>
+                </div>
+            </div>
+            <div class="tfd-loop-note">↩ The "Do" creates the next event — which feeds back into "Think." The cycle continues.</div>
+
+            <p style="font-size: 0.88em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #6B2C3A; margin: 22px 0 10px;">When Needs Are Hidden: The Self-Fulfilling Feedback Loop</p>
+
+            <div class="feedback-cycle">
+                <div class="fc-node">
+                    <div class="fc-num">1</div>
+                    <h4>Withhold</h4>
+                    <p>Hold back feelings or needs. Hope others will notice without being told. Don't ask directly.</p>
+                </div>
+                <div class="fc-node">
+                    <div class="fc-num">2</div>
+                    <h4>Wait</h4>
+                    <p>Pull back to see if anyone reaches out. Test without them knowing they're being tested.</p>
+                </div>
+                <div class="fc-node">
+                    <div class="fc-num">3</div>
+                    <h4>Interpret</h4>
+                    <p>Their lack of response — or insufficient response — reads as confirmation: "They don't care."</p>
+                </div>
+                <div class="fc-node">
+                    <div class="fc-num">4</div>
+                    <h4>Withdraw Further</h4>
+                    <p>Pull back more. The belief tightens. The cycle resets with stronger evidence for the original fear.</p>
+                </div>
+            </div>
+            <div class="fc-prophecy">The need was never communicated. The test was invisible. The belief was confirmed by the very behavior designed to avoid confirming it.</div>
+
+            <div class="application-box" style="margin-top: 20px;">
+                <h4>The Intervention Point</h4>
+                <p>You can enter the Think-Feel-Do cycle at any node. Catching the interpretation ("is this actually true, or is my bubble reading it?") breaks the loop before the feeling solidifies. Changing the Do — communicating the need directly instead of withholding — eliminates the test altogether. Either intervention stops the self-fulfilling prophecy from completing.</p>
+            </div>
+        </div>
+
+        <!-- PULL QUOTE 2 -->
+        <div class="pull-quote">
+            "Acceptance is consciously choosing to tolerate the discomfort — which immediately releases the mental tension."
+        </div>
+
+        <!-- FRAMEWORK 3: ACCEPTANCE vs TRIVIALIZATION -->
+        <div class="framework">
+            <h2>🌿 Framework 3: Acceptance vs. Trivialization</h2>
+            <div class="fw-subtitle">Two ways to resolve cognitive dissonance — one leads forward, one keeps you stuck</div>
+
+            <p style="margin-bottom: 16px; font-size: 0.95em;">When you hold two conflicting things at once — "I failed" and "everyone says I did great" — your brain will find a way to resolve the tension. The strategy it chooses determines whether you grow or stay in the same place.</p>
+
+            <div class="avt-grid">
+                <div class="avt-card triv">
+                    <span class="avt-icon">🚫</span>
+                    <h4>Trivialization</h4>
+                    <div class="avt-def">"It wasn't a big deal anyway."</div>
+                    <div class="avt-item">
+                        <div class="avt-dot"></div>
+                        <span>Minimizes the conflict to avoid discomfort</span>
+                    </div>
+                    <div class="avt-item">
+                        <div class="avt-dot"></div>
+                        <span>Leaves the underlying emotion unprocessed</span>
+                    </div>
+                    <div class="avt-item">
+                        <div class="avt-dot"></div>
+                        <span>Stores the energy for the next trigger</span>
+                    </div>
+                    <div class="avt-item">
+                        <div class="avt-dot"></div>
+                        <span>Dismisses your own needs as "not that important"</span>
+                    </div>
+                    <div class="avt-item">
+                        <div class="avt-dot"></div>
+                        <span>Prevents real resolution or growth</span>
+                    </div>
+                </div>
+                <div class="avt-card accept">
+                    <span class="avt-icon">✅</span>
+                    <h4>Acceptance</h4>
+                    <div class="avt-def">"I did my best with what I had."</div>
+                    <div class="avt-item">
+                        <div class="avt-dot"></div>
+                        <span>Consciously tolerates the discomfort</span>
+                    </div>
+                    <div class="avt-item">
+                        <div class="avt-dot"></div>
+                        <span>Stops fighting the need to appear perfectly rational</span>
+                    </div>
+                    <div class="avt-item">
+                        <div class="avt-dot"></div>
+                        <span>Releases mental tension without requiring resolution</span>
+                    </div>
+                    <div class="avt-item">
+                        <div class="avt-dot"></div>
+                        <span>Creates space for self-compassion</span>
+                    </div>
+                    <div class="avt-item">
+                        <div class="avt-dot"></div>
+                        <span>Allows growth without requiring the past to be different</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="application-box" style="margin-top: 20px;">
+                <h4>On the Presentation</h4>
+                <p>When you were forced to improvise and succeeded — that was acceptance in action, even if you didn't name it that way. You tolerated the discomfort of imperfection, adapted, and performed. The shame you felt afterward was trivialization running in parallel — dismissing what you had done because it didn't match the standard you had set. Both happened simultaneously. Recognizing that is how you begin to give acceptance more weight than trivialization next time.</p>
+            </div>
+        </div>
+
+        <!-- PRACTICAL INSTRUCTIONS -->
+        <div class="section">
+            <h2>Putting It Into Practice</h2>
+            <ul class="instruction-list">
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>When you feel the urge to pull back — pause and name what you're hoping will happen.</strong> "I'm hoping they'll notice and reach out." Naming the hope makes the test visible. Then ask: would communicating the need directly be more likely to get the response you actually want?</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Trace the Think-Feel-Do sequence when a strong reaction arises.</strong> What happened? What did you think about it? How did you feel? What did you do? The sequence shows you where the loop can be interrupted — usually at the interpretation, before the emotion has already gathered momentum.</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>When you receive positive feedback that conflicts with your inner verdict, sit with the conflict instead of resolving it quickly.</strong> You don't have to choose between "I failed" and "they said I did great." Both can be true from different perspectives. Staying in the dissonance longer, without rushing to resolve it, is what acceptance looks like in practice.</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Find a consistent way to process and release emotional energy.</strong> Writing, movement, talking, creative expression — whatever moves it out of the body and onto something external. Unprocessed energy doesn't wait patiently. It narrates your next interaction whether you invite it to or not.</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Reality-check your bubble.</strong> When the interpretation feels certain — "they don't care," "I failed," "people aren't honest" — ask: is this about this person and this situation, or is this a pattern my nervous system has stored? The distinction doesn't invalidate the feeling. It helps you respond to what's actually in front of you.</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- HOMEWORK -->
+        <div class="section">
+            <h2>Assignment</h2>
+            <div class="homework-box">
+                <h4>Think-Feel-Do Reflection — One Recent Situation</h4>
+                <div class="hw-cols">
+                    <div class="hw-col">
+                        <div class="hw-q">What Happened</div>
+                        <p>The specific event, interaction, or moment — just the facts, no interpretation yet.</p>
+                    </div>
+                    <div class="hw-col">
+                        <div class="hw-q">What I Thought</div>
+                        <p>Your interpretation. What assumptions, judgments, or predictions arose immediately?</p>
+                    </div>
+                    <div class="hw-col">
+                        <div class="hw-q">How I Felt</div>
+                        <p>The emotion that followed the thought. What did it feel like in the body, not just the mind?</p>
+                    </div>
+                    <div class="hw-col">
+                        <div class="hw-q">What I Did</div>
+                        <p>Your response — action or inaction. Did any past experience or belief shape it?</p>
+                    </div>
+                </div>
+                <p class="hw-note">Choose a specific recent situation — a friendship interaction, a work moment, anything that produced a strong reaction. Write through all four columns. Then reflect: where was your bubble most active? What might you do differently? Bring your reflection to the next session.</p>
+            </div>
+        </div>
+
+        <!-- KEY TAKEAWAYS -->
+        <div class="section">
+            <h2>Key Takeaways</h2>
+            <div class="takeaway-grid">
+                <div class="takeaway-item">The loop begins with withholding. When needs are invisible, others can't respond to them — and their non-response confirms the belief that they don't care. The prophecy fulfills itself through the behavior meant to test it.</div>
+                <div class="takeaway-item">Your nervous system stores emotional energy from past experiences and applies it to present situations. The intensity of a current reaction often carries the weight of everything that wasn't processed before it.</div>
+                <div class="takeaway-item">Your interpretation of an event is not the event. It's the event filtered through your bubble — shaped by past experience, belief, and expectation. The interpretation is where you have the most leverage to intervene.</div>
+                <div class="takeaway-item">Unprocessed emotional energy accumulates until a small trigger carries the weight of everything that preceded it. Processing it — through writing, movement, talking — is maintenance, not indulgence.</div>
+                <div class="takeaway-item">Acceptance means tolerating discomfort without forcing it to resolve. It releases mental tension precisely because it stops the fight for perfect coherence. It is not giving up — it is stopping the war with reality.</div>
+                <div class="takeaway-item">Trivialization feels like acceptance but works in the opposite direction. Minimizing your own needs to avoid conflict leaves the emotion in the body and the pattern intact.</div>
+                <div class="takeaway-item">Perfectionism and the inner critic can coexist with competence. Others may see your strengths clearly while you see only where you fell short of an internal standard no one else was using.</div>
+                <div class="takeaway-item">Getting from "these people did something to me" to "I learned, I know how to identify, I'm getting better" — that movement is the work. Each insight moves the filter in the bubble a little closer to the present.</div>
+            </div>
+        </div>
+
+        <!-- BOTTOM LINE -->
+        <div class="bottom-line">
+            <h2>🔓 The Bottom Line</h2>
+            <p>The patterns you're in didn't come from nowhere. They were built by a nervous system doing exactly what nervous systems are supposed to do — storing experience, generating predictions, protecting you from pain by anticipating it. The problem is that the protection has become its own kind of pain.</p>
+            <p>What this session named is that the loop is not about what other people are doing to you. It's about what your nervous system learned to do with what people did to you — and how it keeps applying that learning to people who may not deserve it. That distinction isn't a judgment. It's an opening.</p>
+            <p>The way out is not to stop feeling intensely or to stop caring about relationships. It's to interrupt the sequence earlier — before the interpretation becomes the verdict, before the withdrawal becomes the signal, before the old story becomes the new one. You have more access to that interruption than you think. And every time you use it, the loop loosens a little.</p>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
