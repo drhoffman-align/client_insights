@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reclaiming Power: Identity, Strategy, and Moving Beyond the Bubble</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        @media print {
+            body { background: white; padding: 0; margin: 0; }
+            .container { max-width: none; box-shadow: none; border-radius: 0; }
+            .content { padding: 0.5in; }
+            .section, .framework { page-break-inside: avoid; break-inside: avoid; }
+            .page-break { page-break-before: always; break-before: page; }
+            @page { size: 8.5in 11in; margin: 0.75in; }
+        }
+
+        @media screen {
+            body {
+                background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+                min-height: 100vh;
+                padding: 20px;
+            }
+            .container {
+                max-width: 8.5in;
+                margin: 0 auto;
+                background: #E8DFD6;
+                border-radius: 20px;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+                overflow: hidden;
+            }
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #4A4A4A;
+        }
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+            color: #E8DFD6;
+            padding: 50px 40px;
+            text-align: center;
+        }
+        .header .eyebrow {
+            font-size: 0.82em;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            opacity: 0.7;
+            margin-bottom: 14px;
+        }
+        .header h1 {
+            font-size: 2.4em;
+            font-weight: 700;
+            margin-bottom: 14px;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+            line-height: 1.2;
+        }
+        .header .subtitle {
+            font-size: 1.1em;
+            opacity: 0.88;
+            font-style: italic;
+        }
+
+        /* CONTENT */
+        .content { padding: 44px 40px; }
+
+        /* STANDARD SECTION */
+        .section {
+            background: #ffffff;
+            border-radius: 14px;
+            border-left: 5px solid #D67B4A;
+            padding: 30px 32px;
+            margin-bottom: 32px;
+        }
+        .section h2 {
+            color: #6B2C3A;
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #E8DFD6;
+        }
+        .section p { margin-bottom: 12px; }
+        .section p:last-child { margin-bottom: 0; }
+
+        /* FRAMEWORK */
+        .framework {
+            background: #ffffff;
+            border-radius: 14px;
+            border-left: 5px solid #6B2C3A;
+            padding: 30px 32px;
+            margin-bottom: 32px;
+        }
+        .framework h2 {
+            color: #6B2C3A;
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .framework .fw-subtitle {
+            color: #D67B4A;
+            font-size: 0.95em;
+            font-style: italic;
+            margin-bottom: 22px;
+            padding-bottom: 14px;
+            border-bottom: 2px solid #E8DFD6;
+        }
+
+        /* PULL QUOTE */
+        .pull-quote {
+            background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+            color: #E8DFD6;
+            padding: 26px 36px;
+            border-radius: 12px;
+            margin: 28px 0;
+            font-size: 1.15em;
+            font-style: italic;
+            text-align: center;
+            box-shadow: 0 6px 18px rgba(107,44,58,0.25);
+            line-height: 1.6;
+        }
+
+        /* CONCEPTS GRID */
+        .concepts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 10px;
+        }
+        @media (max-width: 600px) { .concepts-grid { grid-template-columns: 1fr; } }
+        .concept-card {
+            background: #f9f6f3;
+            border-radius: 10px;
+            padding: 18px 20px;
+            border-top: 3px solid #D67B4A;
+        }
+        .concept-card h4 { color: #6B2C3A; font-size: 0.95em; font-weight: 700; margin-bottom: 6px; }
+        .concept-card p { font-size: 0.88em; margin: 0; }
+
+        /* PIPELINE */
+        .pipeline {
+            display: flex;
+            align-items: stretch;
+            gap: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 16px 0;
+        }
+        @media (max-width: 600px) { .pipeline { flex-direction: column; } }
+        .pipeline-stage {
+            flex: 1;
+            padding: 22px 14px;
+            text-align: center;
+            position: relative;
+        }
+        .pipeline-stage:nth-child(1) { background: #3d1a21; }
+        .pipeline-stage:nth-child(2) { background: #5a2430; }
+        .pipeline-stage:nth-child(3) { background: #783040; }
+        .pipeline-stage:nth-child(4) { background: #D67B4A; }
+        .pipeline-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0,0,0,0.2);
+            color: rgba(232,223,214,0.5);
+            font-size: 1.2em;
+            padding: 0 2px;
+        }
+        .pipeline-stage .ps-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.12);
+            color: #E8DFD6;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            font-size: 0.78em;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .pipeline-stage .ps-icon { font-size: 1.6em; display: block; margin-bottom: 6px; }
+        .pipeline-stage h4 { color: #E8DFD6; font-size: 0.85em; font-weight: 700; margin-bottom: 4px; }
+        .pipeline-stage p { color: rgba(232,223,214,0.8); font-size: 0.75em; line-height: 1.3; margin: 0; }
+
+        /* STAGE DETAIL */
+        .stage-detail {
+            background: #f9f6f3;
+            border-radius: 12px;
+            padding: 22px 24px;
+            margin-bottom: 14px;
+            border-left: 4px solid #6B2C3A;
+        }
+        .stage-detail.orange { border-left-color: #D67B4A; }
+        .stage-detail .sd-tag {
+            display: inline-block;
+            background: #6B2C3A;
+            color: #E8DFD6;
+            font-size: 0.72em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 3px 10px;
+            border-radius: 12px;
+            margin-bottom: 10px;
+        }
+        .stage-detail.orange .sd-tag { background: #D67B4A; }
+        .stage-detail h4 { color: #6B2C3A; font-size: 1em; font-weight: 700; margin-bottom: 8px; }
+        .stage-detail.orange h4 { color: #D67B4A; }
+        .stage-detail p { font-size: 0.92em; margin: 0; }
+
+        /* RESOURCE GRID */
+        .resource-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 16px 0;
+        }
+        @media (max-width: 600px) { .resource-grid { grid-template-columns: 1fr; } }
+        .resource-col { padding: 20px 20px; }
+        .resource-col.internal { background: linear-gradient(160deg, #f0ece8, #E8DFD6); }
+        .resource-col.external { background: linear-gradient(160deg, #e8ece0, #dde2d5); border-left: 1px solid rgba(255,255,255,0.5); }
+        .resource-col h4 {
+            font-size: 0.78em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid;
+        }
+        .resource-col.internal h4 { color: #6B2C3A; border-color: #D67B4A; }
+        .resource-col.external h4 { color: #4A4A4A; border-color: #6B2C3A; }
+        .resource-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 8px;
+            font-size: 0.85em;
+        }
+        .resource-item:last-child { margin-bottom: 0; }
+        .resource-dot {
+            flex-shrink: 0;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-top: 6px;
+        }
+        .internal .resource-dot { background: #D67B4A; }
+        .external .resource-dot { background: #6B2C3A; }
+
+        /* BUBBLE VISUAL */
+        .bubble-compare {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 14px;
+            align-items: center;
+            margin: 16px 0;
+        }
+        @media (max-width: 600px) { .bubble-compare { grid-template-columns: 1fr; } }
+        .bubble-card {
+            border-radius: 12px;
+            padding: 20px 18px;
+        }
+        .bubble-card.inside {
+            background: #f3ecec;
+            border: 2px dashed #B8B8B8;
+        }
+        .bubble-card.outside {
+            background: linear-gradient(135deg, #f0ece8, #E8DFD6);
+            border: 2px solid #D67B4A;
+        }
+        .bubble-card .bc-label {
+            font-size: 0.72em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .bubble-card.inside .bc-label { color: #B8B8B8; }
+        .bubble-card.outside .bc-label { color: #D67B4A; }
+        .bubble-card ul { list-style: none; }
+        .bubble-card ul li {
+            font-size: 0.83em;
+            padding: 4px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+        .bubble-card ul li:last-child { border-bottom: none; }
+        .bubble-card ul li::before { content: '·'; opacity: 0.4; flex-shrink: 0; }
+        .bubble-arrow { font-size: 1.6em; color: #6B2C3A; text-align: center; opacity: 0.5; }
+
+        /* BRANDING vs NETWORKING */
+        .bn-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 16px 0;
+        }
+        @media (max-width: 600px) { .bn-grid { grid-template-columns: 1fr; } }
+        .bn-col { padding: 22px 20px; }
+        .bn-col.brand { background: linear-gradient(160deg, #3d1a21, #6B2C3A); }
+        .bn-col.network { background: linear-gradient(160deg, #4A4A4A, #2a2a2a); border-left: 1px solid rgba(255,255,255,0.1); }
+        .bn-col .bn-label {
+            font-size: 0.72em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: #D67B4A;
+            margin-bottom: 6px;
+            display: block;
+        }
+        .bn-col h4 { color: #E8DFD6; font-size: 0.95em; font-weight: 700; margin-bottom: 10px; }
+        .bn-col ul { list-style: none; }
+        .bn-col ul li {
+            color: rgba(232,223,214,0.82);
+            font-size: 0.8em;
+            padding: 4px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+        .bn-col ul li:last-child { border-bottom: none; }
+        .bn-col ul li::before { content: '·'; opacity: 0.4; flex-shrink: 0; }
+
+        /* APPLICATION BOX */
+        .application-box {
+            background: linear-gradient(135deg, #E8DFD6 0%, #d4c9be 100%);
+            border-left: 5px solid #D67B4A;
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin-top: 22px;
+        }
+        .application-box h4 {
+            color: #6B2C3A;
+            font-size: 0.9em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 8px;
+        }
+        .application-box p { font-size: 0.95em; margin: 0; }
+
+        /* INSTRUCTION LIST */
+        .instruction-list { list-style: none; margin-top: 8px; }
+        .instruction-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 11px 0;
+            border-bottom: 1px solid #E8DFD6;
+        }
+        .instruction-list li:last-child { border-bottom: none; }
+        .bullet {
+            flex-shrink: 0;
+            width: 10px;
+            height: 10px;
+            background: #D67B4A;
+            border-radius: 50%;
+            margin-top: 7px;
+        }
+        .instruction-list li p { margin: 0; font-size: 0.95em; }
+        .instruction-list li strong { color: #6B2C3A; }
+
+        /* HOMEWORK */
+        .homework-box {
+            background: linear-gradient(135deg, #f9f6f3 0%, #E8DFD6 100%);
+            border-radius: 12px;
+            padding: 24px 28px;
+        }
+        .homework-box h4 {
+            color: #D67B4A;
+            font-size: 0.9em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 10px;
+        }
+        .homework-box p { font-size: 0.93em; margin-bottom: 8px; }
+        .homework-box p:last-child { margin-bottom: 0; }
+
+        /* MED TAGS */
+        .med-note-box {
+            background: #f9f6f3;
+            border-radius: 10px;
+            padding: 16px 20px;
+            border-left: 3px solid #B8B8B8;
+        }
+        .med-note-box h4 { color: #6B2C3A; font-size: 0.9em; font-weight: 700; margin-bottom: 8px; }
+        .med-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 8px;
+        }
+        .med-tag {
+            background: #E8DFD6;
+            border-radius: 20px;
+            padding: 4px 12px;
+            font-size: 0.78em;
+            color: #4A4A4A;
+        }
+        .med-tag strong { color: #6B2C3A; }
+        .med-note-text { font-size: 0.82em; color: #4A4A4A; }
+
+        /* TAKEAWAYS */
+        .takeaway-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 8px;
+        }
+        @media (max-width: 600px) { .takeaway-grid { grid-template-columns: 1fr; } }
+        .takeaway-item {
+            background: #f9f6f3;
+            border-radius: 8px;
+            padding: 14px 16px;
+            border-left: 3px solid #D67B4A;
+            font-size: 0.92em;
+        }
+
+        /* BOTTOM LINE */
+        .bottom-line {
+            background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+            color: #E8DFD6;
+            border-radius: 14px;
+            padding: 38px 40px;
+        }
+        .bottom-line h2 {
+            color: #E8DFD6;
+            font-size: 1.6em;
+            margin-bottom: 18px;
+            text-align: center;
+        }
+        .bottom-line p {
+            color: #E8DFD6;
+            opacity: 0.92;
+            font-size: 1em;
+            margin-bottom: 14px;
+        }
+        .bottom-line p:last-child { margin-bottom: 0; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="eyebrow">Alignment Psychiatry · Therapeutic Insights</div>
+        <h1>⚡ Reclaiming Power</h1>
+        <div class="subtitle">Identity, Strategy, and Moving Beyond the Bubble</div>
+    </div>
+
+    <div class="content">
+
+        <!-- THE SITUATION -->
+        <div class="section">
+            <h2>The Situation</h2>
+            <p>You are in the middle of a significant transition — clear on the destination (something more fulfilling, more aligned, more expansive) and less clear on the route. The current role feels like a ceiling, not a floor. You're actively interviewing, exploring cities, talking to people in different environments. Something has shifted in your awareness of what else exists beyond where you currently are — and that shift is both energizing and anxiety-producing.</p>
+            <p>The pattern that keeps showing up: you downplay what you bring. You look at your own résumé and read the words without reading between the lines. You have built something real — skills, experiences, a network, a track record — and you consistently attribute it to luck, circumstance, or things that "don't count." That habit of diminishment is the thing most standing between you and the next level. Not the job market. Not the timeline. The way you hold your own value.</p>
+        </div>
+
+        <!-- CORE PROBLEM -->
+        <div class="section">
+            <h2>Core Problem</h2>
+            <p>The central issue is undervaluing power — the power that comes from who you are, what you know, and how others perceive your value. This undervaluation shows up as settling, tolerating more than is healthy, and making decisions that prioritize external logic (career trajectory, finances, practicality) while leaving emotional needs and personal fulfillment as afterthoughts.</p>
+            <p>The result is a strategy built on a partial foundation: one that accounts for the market but not for the person navigating it. The missing piece is identity — a clear, accurate, internalized understanding of what you actually bring — because without it, you can't deploy your resources effectively. You give away power you don't realize you have.</p>
+        </div>
+
+        <!-- PULL QUOTE 1 -->
+        <div class="pull-quote">
+            "Your brand is like your superpower."
+        </div>
+
+        <!-- CLINICAL CONCEPTS -->
+        <div class="section">
+            <h2>Understanding the Dynamics</h2>
+            <div class="concepts-grid">
+                <div class="concept-card">
+                    <h4>Power (Redefined)</h4>
+                    <p>Not authority over others. Power is your ability to act, influence, and make things happen — your skills, your knowledge, your network, your reputation, your presence. You are a resource. The degree to which you recognize yourself as one determines how much of that resource gets used.</p>
+                </div>
+                <div class="concept-card">
+                    <h4>Branding vs. Networking</h4>
+                    <p>Branding is intrinsic — the sum of who you are, what you've done, and how others experience working with you. It exists whether you manage it or not. Networking is selective — the deliberate sharing of your brand to build specific relationships. One is who you are; the other is how you strategically introduce it.</p>
+                </div>
+                <div class="concept-card">
+                    <h4>Resourcefulness</h4>
+                    <p>Not just having resources — knowing how to use them creatively to produce outcomes. A connection you haven't activated, a skill you've undervalued, an experience you've minimized — these are resources waiting to be deployed. Resourcefulness is the practice of seeing and using what you already have.</p>
+                </div>
+                <div class="concept-card">
+                    <h4>The Stepping Stone Reframe</h4>
+                    <p>A role that doesn't fulfill you is not a failure or a trap — it is a position from which you gather resources, skills, and momentum for the next move. The current situation does not define the trajectory. How you use it while you're in it does. Make the best of where you are until you're ready for what's next.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- MAIN FRAMEWORK -->
+        <div class="framework">
+            <h2>🗺️ Framework: Strategic Life Manipulation</h2>
+            <div class="fw-subtitle">"Manipulation" here means resourceful — using everything available to shape outcomes in your favor</div>
+
+            <p style="margin-bottom: 16px; font-size: 0.95em;">This framework has four components that build on each other in sequence. The foundation is always identity — you cannot effectively inventory what you have, plan toward what you want, or deploy your resources if you don't first have a clear and accurate sense of who you are.</p>
+
+            <div class="pipeline">
+                <div class="pipeline-stage">
+                    <div class="ps-num">1</div>
+                    <span class="ps-icon">🪪</span>
+                    <h4>Identity & Power</h4>
+                    <p>Know who you are and what you bring. This is your foundation.</p>
+                </div>
+                <div class="pipeline-arrow">→</div>
+                <div class="pipeline-stage">
+                    <div class="ps-num">2</div>
+                    <span class="ps-icon">📦</span>
+                    <h4>Resource Inventory</h4>
+                    <p>Map what you have — skills, experiences, connections, knowledge.</p>
+                </div>
+                <div class="pipeline-arrow">→</div>
+                <div class="pipeline-stage">
+                    <div class="ps-num">3</div>
+                    <span class="ps-icon">🗓️</span>
+                    <h4>Strategic Planning</h4>
+                    <p>Set goals. Break them down. Know what the next step actually requires.</p>
+                </div>
+                <div class="pipeline-arrow">→</div>
+                <div class="pipeline-stage">
+                    <div class="ps-num">4</div>
+                    <span class="ps-icon">⚡</span>
+                    <h4>Deploy Resources</h4>
+                    <p>Mix, match, and activate what you have to create opportunities.</p>
+                </div>
+            </div>
+
+            <!-- STAGE 1: IDENTITY -->
+            <div class="stage-detail" style="margin-top: 24px;">
+                <span class="sd-tag">Stage 1 · Identity & Power</span>
+                <h4>Read Between the Lines of Your Own Story</h4>
+                <p>Your résumé contains facts. What it doesn't automatically convey is what those facts mean — the judgment calls you made, the environments you navigated, the things that required you to stretch, adapt, and deliver under conditions that most people haven't encountered. Identity work is the practice of reading between those lines. Not inflating the story — accurately understanding it. The undervaluation is not humility. It's inaccuracy.</p>
+            </div>
+
+            <!-- STAGE 2: RESOURCE INVENTORY -->
+            <div class="stage-detail">
+                <span class="sd-tag">Stage 2 · Resource Inventory</span>
+                <h4>You Have More Than You Think You Do</h4>
+                <p>Most people undercount their resources because they're looking for the obvious ones. The network you've built without realizing it, the international experience, the career pivots that built range, the industry access you take for granted — these are assets. The inventory only works if you count what's actually there, including the things you've been dismissing as "not a big deal."</p>
+            </div>
+
+            <p style="font-size: 0.82em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #6B2C3A; margin: 16px 0 10px;">Internal vs. External Resources</p>
+
+            <div class="resource-grid">
+                <div class="resource-col internal">
+                    <h4>Internal Resources</h4>
+                    <div class="resource-item"><div class="resource-dot"></div><span>Skills developed across roles and environments</span></div>
+                    <div class="resource-item"><div class="resource-dot"></div><span>Industry knowledge and pattern recognition</span></div>
+                    <div class="resource-item"><div class="resource-dot"></div><span>Adaptability demonstrated through career pivots</span></div>
+                    <div class="resource-item"><div class="resource-dot"></div><span>Personal qualities — how you show up, how others experience you</span></div>
+                    <div class="resource-item"><div class="resource-dot"></div><span>Clarity about what you actually want (underrated asset)</span></div>
+                </div>
+                <div class="resource-col external">
+                    <h4>External Resources</h4>
+                    <div class="resource-item"><div class="resource-dot"></div><span>Network — existing contacts who can advocate or refer</span></div>
+                    <div class="resource-item"><div class="resource-dot"></div><span>Current role access and its affiliated opportunities</span></div>
+                    <div class="resource-item"><div class="resource-dot"></div><span>Relationships with people already inside target environments</span></div>
+                    <div class="resource-item"><div class="resource-dot"></div><span>Industry-specific visibility and reputation</span></div>
+                    <div class="resource-item"><div class="resource-dot"></div><span>Timing — the current market moment and your available window</span></div>
+                </div>
+            </div>
+
+            <!-- STAGE 3: PLANNING -->
+            <div class="stage-detail">
+                <span class="sd-tag">Stage 3 · Strategic Planning</span>
+                <h4>The Bigger the Goal, the More Specific the Planning Needs to Be</h4>
+                <p>Big goals don't require bigger leaps — they require more granular planning. The goal of working with an NFL team or league office is not one move. It is a sequence of smaller moves, each of which requires knowing what you have, what the next step specifically needs, and how to close that gap. Emotional fulfillment is not a soft consideration in this planning — it is a hard requirement. A plan that gets you to the right title in the wrong environment is not a winning plan.</p>
+            </div>
+
+            <!-- STAGE 4: DEPLOY -->
+            <div class="stage-detail orange">
+                <span class="sd-tag">Stage 4 · Deploy Resources</span>
+                <h4>Make Things Happen Instead of Waiting for Them</h4>
+                <p>Deploying resources means activating what you have rather than waiting for opportunities to arrive fully formed. It means asking the contact to put in a word after the interview. It means using a current role's access to build toward the next one. It means mixing connections with skills to create openings that didn't exist before. The world sometimes moves to create space — but how you use that space in the moment depends on whether you have a strategy ready.</p>
+            </div>
+
+            <div class="application-box">
+                <h4>On Branding vs. Networking — A Critical Distinction</h4>
+                <div class="bn-grid" style="margin-top: 10px;">
+                    <div class="bn-col brand">
+                        <span class="bn-label">Branding</span>
+                        <h4>Who You Are</h4>
+                        <ul>
+                            <li>Intrinsic — exists whether you manage it or not</li>
+                            <li>The totality of your identity and track record</li>
+                            <li>How people experience working with you</li>
+                            <li>Developed through consistent behavior over time</li>
+                            <li>The foundation for everything else</li>
+                        </ul>
+                    </div>
+                    <div class="bn-col network">
+                        <span class="bn-label">Networking</span>
+                        <h4>How You Share It</h4>
+                        <ul>
+                            <li>Selective — you choose what to surface and when</li>
+                            <li>Time-limited and context-specific</li>
+                            <li>The deliberate introduction of your brand to specific people</li>
+                            <li>Relational — built through exchanges, not broadcasts</li>
+                            <li>Only works if the brand underneath it is real</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BUBBLE SECTION -->
+        <div class="framework">
+            <h2>🫧 Breaking Out of the Bubble</h2>
+            <div class="fw-subtitle">What limited environments do to possibility — and how exposure changes it</div>
+
+            <p style="margin-bottom: 16px; font-size: 0.95em;">A "bubble" is any environment that limits exposure to new people, new norms, new ways of operating — and therefore limits your sense of what's possible for you. Bubbles aren't always negative. They provide stability. But they also narrow the aperture through which you see your own potential and the opportunities available to you.</p>
+
+            <div class="bubble-compare">
+                <div class="bubble-card inside">
+                    <span class="bc-label">Inside the Bubble</span>
+                    <ul>
+                        <li>Familiar but limiting reference points</li>
+                        <li>Norms that don't match where you want to go</li>
+                        <li>Comparative ceiling set by the environment</li>
+                        <li>Reduced visibility of what's actually possible</li>
+                        <li>Tolerance for conditions that don't serve you</li>
+                    </ul>
+                </div>
+                <div class="bubble-arrow">→</div>
+                <div class="bubble-card outside">
+                    <span class="bc-label">Outside the Bubble</span>
+                    <ul>
+                        <li>New evidence of what environments can look like</li>
+                        <li>People operating at the level you're moving toward</li>
+                        <li>Expanded sense of what you can expect and ask for</li>
+                        <li>Your value becomes visible in new contexts</li>
+                        <li>Excitement and anxiety — both signs it's working</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="application-box">
+                <h4>The Anxiety Is Part of It</h4>
+                <p>The discomfort that comes with exposure to new environments is not a sign that something is wrong. It is what it feels like when possibility expands faster than your current self-concept can absorb. The excitement and the anxiety come from the same source. You are not behind the person you're becoming. You are becoming her. That is what the transition period feels like from the inside.</p>
+            </div>
+        </div>
+
+        <!-- PULL QUOTE 2 -->
+        <div class="pull-quote">
+            "Sometimes the world will move for you and create space — but how you use that moment is determined by your strategy."
+        </div>
+
+        <!-- PRACTICAL INSTRUCTIONS -->
+        <div class="section">
+            <h2>Putting It Into Practice</h2>
+            <ul class="instruction-list">
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Start the identity inventory in writing — not in your head.</strong> Write out who you are, what you value, what you've built, and what makes you specific as a professional and as a person. Don't edit for modesty. Write what's true, even if it feels like overstating. You are probably understating.</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Read your résumé as if you were reading someone else's.</strong> What would you conclude about that person's capabilities, range, and adaptability? That conclusion — the one you'd reach about someone else — is the accurate one about you.</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Activate your network with a specific ask.</strong> Not a general "keep me in mind" — a specific ask. "I'm interviewing at X. If you know anyone there or have a way to put in a word, I'd appreciate it." Specificity makes it easy for people to help. Vagueness lets them off the hook.</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Include emotional fulfillment in your decision criteria — not as a bonus, but as a requirement.</strong> The next role must satisfy both the career logic and the personal reality of what makes a situation livable and sustainable. Either alone is insufficient.</p>
+                </li>
+                <li>
+                    <div class="bullet"></div>
+                    <p><strong>Set a real timeline and hold it.</strong> The November transition date is a decision, not a wish. Having a concrete date changes how you operate between now and then — it creates accountability and makes the in-between period purposeful rather than passive.</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- HOMEWORK -->
+        <div class="section">
+            <h2>Assignment</h2>
+            <div class="homework-box">
+                <h4>Written Identity Exploration</h4>
+                <p>Set aside quiet, uninterrupted time to write about who you are — not a bio, not a résumé summary, but a genuine reflection. Include your values, your strengths, the experiences that shaped you, the things you bring that others in your field don't, and the things you want that you've been afraid to name out loud.</p>
+                <p>Don't edit for tone or professionalism. Write for accuracy. Include both strengths and honest areas for growth — not to diminish, but to see the full picture. Bring this reflection to the next session for discussion and to begin building the resource inventory from it.</p>
+            </div>
+        </div>
+
+        <!-- MEDICATION -->
+        <div class="section">
+            <h2>Medication Note</h2>
+            <div class="med-note-box">
+                <h4>Current Plan</h4>
+                <div class="med-tags">
+                    <div class="med-tag">Current dose: 15mg</div>
+                    <div class="med-tag">Option to increase: up to 20mg</div>
+                    <div class="med-tag">Weekdays only</div>
+                    <div class="med-tag">Monitor mood, sleep, appetite</div>
+                </div>
+                <div class="med-note-text">If 15mg feels insufficient, add 5mg using available lower-dose pills to reach 20mg. Use up existing supply first before switching. Report any changes in effectiveness or side effects at next visit.</div>
+            </div>
+        </div>
+
+        <!-- KEY TAKEAWAYS -->
+        <div class="section">
+            <h2>Key Takeaways</h2>
+            <div class="takeaway-grid">
+                <div class="takeaway-item">You are undervaluing what you bring. The pattern of diminishment is not humility — it's inaccuracy. The evidence of your capability exists in your track record; the work is learning to read it accurately.</div>
+                <div class="takeaway-item">Power is your ability to act, influence, and make things happen. It includes your skills, your knowledge, your relationships, and your reputation. It is already yours. Recognizing it is what unlocks it.</div>
+                <div class="takeaway-item">Branding is who you are; networking is how you selectively introduce that to specific people. One is intrinsic and always present. The other is strategic and context-specific. Both matter — in the right sequence.</div>
+                <div class="takeaway-item">Resourcefulness is not about having more — it's about seeing and activating what you already have. Connections you haven't asked, experiences you've dismissed, access you take for granted: these are deployable assets.</div>
+                <div class="takeaway-item">The bubble is real. Limited environments narrow the aperture for what feels possible and what feels acceptable. Exposure to new environments expands it — and the anxiety that comes with that expansion is part of the process, not a warning signal.</div>
+                <div class="takeaway-item">Emotional fulfillment is a hard requirement in your planning — not a soft preference. A plan that delivers the right title in the wrong environment is still a plan that doesn't work. Include your actual needs, not just the logical ones.</div>
+                <div class="takeaway-item">The current role is a stepping stone. The question is not whether it's limiting — it is. The question is what you're building and gathering from it while you're still in it, for use in what comes next.</div>
+                <div class="takeaway-item">The world sometimes moves to create space. Your strategy determines whether you're ready to use it when it does. The transition timeline, the identity work, the resource inventory — these are preparation, not delay.</div>
+            </div>
+        </div>
+
+        <!-- BOTTOM LINE -->
+        <div class="bottom-line">
+            <h2>⚡ The Bottom Line</h2>
+            <p>You have been operating with an incomplete picture of your own resources — underestimating what you bring, underutilizing what you have, and tolerating conditions that don't serve you because the self-doubt has been louder than the evidence. The evidence is extensive. The résumé is real. The network is real. The skills are real. The gap is not between where you are and what you're capable of. It's between what you're capable of and what you currently believe about it.</p>
+            <p>The Strategic Life Manipulation framework is not a set of tricks. It is a structured way of doing what resourceful people do naturally: understanding who you are, inventorying what you have, planning toward where you want to go, and activating what's available to close the distance. The "manipulation" is just intentionality — treating your own life as something worth strategic investment rather than something that happens to you.</p>
+            <p>The transition is real. The timeline is real. The goal is real. What gets built between now and then is determined by how clearly you see yourself and how deliberately you use what you already have. Start with the identity work. Everything else is built on it.</p>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
