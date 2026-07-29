@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reclaiming Peace: Letting Go of Shame and Standing on Your Truth After Relationship Loss | Alignment Psychiatry</title>
+<style>
+  :root {
+    --burgundy: #6B2C3A;
+    --orange: #D67B4A;
+    --cream: #E8DFD6;
+    --dark-gray: #4A4A4A;
+    --light-gray: #B8B8B8;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--cream);
+    color: var(--dark-gray);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.65;
+  }
+
+  .page {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+  }
+
+  /* HEADER */
+  header {
+    background: linear-gradient(135deg, var(--burgundy) 0%, var(--dark-gray) 100%);
+    color: var(--cream);
+    text-align: center;
+    padding: 46px 30px 40px;
+    margin: 0 -20px 30px;
+    border-radius: 0 0 20px 20px;
+  }
+  header .brand {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 12px;
+    opacity: 0.85;
+    margin-bottom: 14px;
+  }
+  header h1 {
+    font-size: 26px;
+    margin: 0 0 12px;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+  header p.subtitle {
+    font-style: italic;
+    font-size: 15px;
+    opacity: 0.9;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  /* SECTIONS */
+  section.card {
+    background: #ffffff;
+    border-left: 6px solid var(--orange);
+    border-radius: 14px;
+    padding: 26px 30px;
+    margin-bottom: 22px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  section.card h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--burgundy);
+    margin: 0 0 16px;
+  }
+  section.card p { margin: 0 0 12px; font-size: 15px; }
+  section.card p:last-child { margin-bottom: 0; }
+
+  /* PULL QUOTES */
+  .pull-quote {
+    background: linear-gradient(120deg, var(--burgundy) 0%, var(--dark-gray) 100%);
+    color: var(--cream);
+    text-align: center;
+    font-style: italic;
+    font-size: 17px;
+    padding: 28px 36px;
+    border-radius: 14px;
+    margin: 26px 0;
+  }
+
+  /* CONCEPT GRID */
+  .concept-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .concept-card {
+    background: #f9f6f3;
+    border-top: 4px solid var(--orange);
+    border-radius: 10px;
+    padding: 16px 18px;
+  }
+  .concept-card h3 {
+    margin: 0 0 6px;
+    font-size: 15px;
+    color: var(--burgundy);
+  }
+  .concept-card p {
+    margin: 0;
+    font-size: 13.5px;
+    color: var(--dark-gray);
+  }
+
+  /* SHAME VS GUILT DISTINCTION */
+  .distinction {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 18px 0 6px;
+    border: 1px solid #ece5db;
+  }
+  .distinction .col {
+    padding: 16px 18px;
+    font-size: 13.5px;
+  }
+  .distinction .col.left {
+    background: #f9f6f3;
+    border-right: 1px solid #ece5db;
+  }
+  .distinction .col.right {
+    background: #f4ede3;
+  }
+  .distinction .col h4 {
+    margin: 0 0 8px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .distinction .col.left h4 { color: var(--light-gray); }
+  .distinction .col.right h4 { color: var(--orange); }
+
+  /* MOVING GOALPOSTS PHASE STRIP */
+  .phase-strip {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 18px 0 6px;
+  }
+  .phase-stage {
+    flex: 1 1 130px;
+    background: #f9f6f3;
+    border-top: 4px solid var(--light-gray);
+    border-radius: 8px;
+    padding: 12px 14px;
+    font-size: 12.5px;
+    text-align: center;
+  }
+  .phase-stage .stage-num {
+    display: block;
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--light-gray);
+    margin-bottom: 6px;
+  }
+  .phase-stage.final {
+    background: linear-gradient(135deg, var(--burgundy) 0%, var(--dark-gray) 100%);
+    color: var(--cream);
+    border-top: 4px solid var(--orange);
+  }
+  .phase-stage.final .stage-num { color: var(--orange); }
+  .phase-chevron {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--orange);
+    font-size: 16px;
+    flex: 0 0 auto;
+  }
+  .phase-caption {
+    text-align: center;
+    font-size: 12.5px;
+    font-style: italic;
+    color: var(--dark-gray);
+    margin-top: 10px;
+  }
+
+  /* FRAMEWORKS */
+  section.framework {
+    background: #ffffff;
+    border-left: 6px solid var(--burgundy);
+    border-radius: 14px;
+    padding: 26px 30px;
+    margin-bottom: 22px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  section.framework > h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--dark-gray);
+    margin: 0 0 4px;
+  }
+  section.framework > h3 {
+    font-size: 19px;
+    color: var(--burgundy);
+    margin: 0 0 18px;
+  }
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .step {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .step .circle {
+    flex: 0 0 auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--burgundy);
+    color: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .step .step-text { font-size: 14.5px; padding-top: 4px; }
+  .step .step-text strong { color: var(--dark-gray); }
+
+  .application-box {
+    background: linear-gradient(135deg, #f4ede3 0%, #ede0d1 100%);
+    border-left: 4px solid var(--orange);
+    border-radius: 0 10px 10px 0;
+    padding: 14px 18px;
+    font-size: 14px;
+  }
+  .application-box .label {
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--burgundy);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  /* PRACTICAL INSTRUCTIONS */
+  ul.practical {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+  ul.practical li {
+    font-size: 14.5px;
+    padding: 10px 0 10px 30px;
+    position: relative;
+    border-bottom: 1px solid #ece5db;
+  }
+  ul.practical li:last-child { border-bottom: none; }
+  ul.practical li::before {
+    content: "\2192";
+    position: absolute;
+    left: 0;
+    color: var(--orange);
+    font-weight: bold;
+  }
+
+  /* MEDICATION TAGS */
+  .med-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .tag {
+    font-size: 12.5px;
+    background: #f9f6f3;
+    border: 1px solid var(--light-gray);
+    color: var(--dark-gray);
+    padding: 6px 14px;
+    border-radius: 20px;
+  }
+  .tag.warn {
+    border-color: var(--orange);
+    color: var(--burgundy);
+  }
+
+  /* TAKEAWAYS */
+  .takeaway-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .takeaway-card {
+    background: #f9f6f3;
+    border-left: 4px solid var(--orange);
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 13.5px;
+  }
+
+  /* BOTTOM LINE */
+  section.bottom-line {
+    background: linear-gradient(135deg, var(--burgundy) 0%, var(--dark-gray) 100%);
+    color: var(--cream);
+    border-radius: 14px;
+    padding: 30px 32px;
+    margin-bottom: 10px;
+  }
+  section.bottom-line h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--cream);
+    opacity: 0.85;
+    margin: 0 0 16px;
+  }
+  section.bottom-line p {
+    font-size: 15px;
+    margin: 0 0 14px;
+    opacity: 0.97;
+  }
+  section.bottom-line p:last-child { margin-bottom: 0; }
+
+  footer.practice-footer {
+    text-align: center;
+    font-size: 11.5px;
+    color: var(--dark-gray);
+    opacity: 0.7;
+    margin-top: 26px;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 640px) {
+    .concept-grid, .takeaway-grid, .distinction { grid-template-columns: 1fr; }
+    .distinction .col.left { border-right: none; border-bottom: 1px solid #ece5db; }
+    header h1 { font-size: 21px; }
+    section.card, section.framework, section.bottom-line { padding: 20px 18px; }
+    .phase-strip { flex-direction: column; }
+    .phase-chevron { transform: rotate(90deg); }
+  }
+
+  /* PRINT */
+  @media print {
+    body { background: #fff; }
+    header, section.bottom-line { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    section.card, section.framework, .pull-quote, section.bottom-line {
+      break-inside: avoid;
+      page-break-inside: avoid;
+      box-shadow: none;
+    }
+    .page { max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="brand">Alignment Psychiatry</div>
+    <h1>&#128330; Reclaiming Peace: Letting Go of Shame and Standing on Your Truth After Relationship Loss</h1>
+    <p class="subtitle">Separating what you feel from what actually happened, after a relationship built on shifting standards</p>
+  </header>
+
+  <section class="card">
+    <h2>The Situation</h2>
+    <p>The client is navigating the emotional aftermath of ending her marriage. Couples therapy had become repetitive and unproductive &mdash; a cycle of being told she wasn't accountable enough for missteps like downloading a dating app or brief contact with an ex, while her own efforts to repair the relationship were treated as never quite sufficient.</p>
+    <p>She describes her needs as consistently deprioritized throughout the relationship, and she's now carrying significant shame, anxiety, and a sense of loss that extends beyond the relationship itself to her own peace and identity.</p>
+    <p>Alongside this, she's working through spiritual disconnection and the harder task of carrying hard-won insight from the therapy room into daily life, where the old narrative is quick to resurface.</p>
+  </section>
+
+  <section class="card">
+    <h2>Core Problem</h2>
+    <p>Blame and shame for the marriage's end have been internalized despite clear evidence of real effort to repair and support the relationship. There's a persistent mismatch between what she feels &mdash; not good enough, at fault &mdash; and what actually happened: her partner's expectations were inconsistent and, at times, unattainable regardless of what she did.</p>
+    <p>Holding onto her own account of events, in the face of a partner's shifting narrative and repeated accusations, has produced real cognitive dissonance and ongoing emotional distress.</p>
+  </section>
+
+  <div class="pull-quote">"You did your best, but your best was never good enough &mdash; for her."</div>
+
+  <section class="card">
+    <h2>The Moving Goalposts</h2>
+    <p>The concrete example that surfaced in session: no matter what she did to try to fix things, the target kept relocating.</p>
+    <div class="phase-strip">
+      <div class="phase-stage"><span class="stage-num">Stage 1</span>Rebuild trust</div>
+      <div class="phase-chevron">&#8250;</div>
+      <div class="phase-stage"><span class="stage-num">Stage 2</span>Prove commitment</div>
+      <div class="phase-chevron">&#8250;</div>
+      <div class="phase-stage"><span class="stage-num">Stage 3</span>Never make another mistake</div>
+      <div class="phase-chevron">&#8250;</div>
+      <div class="phase-stage final"><span class="stage-num">Result</span>Still not enough</div>
+    </div>
+    <p class="phase-caption">Each stage she met was replaced by a new one &mdash; a pattern about the relationship, not about her effort.</p>
+  </section>
+
+  <section class="card">
+    <h2>Understanding the Dynamics</h2>
+    <div class="concept-grid">
+      <div class="concept-card">
+        <h3>Cognitive Dissonance</h3>
+        <p>The discomfort of holding two conflicting beliefs at once &mdash; for her, guilt over not being "enough" alongside clear knowledge that she gave her all.</p>
+      </div>
+      <div class="concept-card">
+        <h3>People-Pleasing</h3>
+        <p>Prioritizing another person's happiness over your own needs &mdash; here, setting aside her own well-being to avoid conflict and keep her partner content.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Emotional Boundaries</h3>
+        <p>The capacity to keep your own emotions and reality separate from someone else's projections or manipulations.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Unreliable Narrator</h3>
+        <p>When someone's account of events is inconsistent or self-serving, it doesn't qualify as a trustworthy source of reality &mdash; no matter how close the relationship.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Shame vs. Guilt</h2>
+    <div class="distinction">
+      <div class="col left">
+        <h4>Shame</h4>
+        "I am bad." A verdict on the self &mdash; and the frame she's been carrying, built from her partner's criticisms.
+      </div>
+      <div class="col right">
+        <h4>Guilt</h4>
+        "I did something bad." A verdict on a specific action &mdash; narrower, more accurate, and easier to actually resolve.
+      </div>
+    </div>
+  </section>
+
+  <section class="framework">
+    <h2>Framework A</h2>
+    <h3>Truth vs. Feelings Integration</h3>
+    <div class="steps">
+      <div class="step"><div class="circle">1</div><div class="step-text"><strong>Identify the difference</strong> &mdash; separate what you feel from what actually happened.</div></div>
+      <div class="step"><div class="circle">2</div><div class="step-text"><strong>Reiterate your truth</strong> &mdash; what you know about your own efforts, intentions, and actions.</div></div>
+      <div class="step"><div class="circle">3</div><div class="step-text"><strong>Recognize unreliable sources</strong> &mdash; a shifting standard isn't a fair measure of reality.</div></div>
+      <div class="step"><div class="circle">4</div><div class="step-text"><strong>Practice self-validation</strong> &mdash; and set boundaries that protect it.</div></div>
+    </div>
+    <div class="application-box">
+      <span class="label">Applied</span>
+      Her shame is fueled by accusations layered on top of her own already-high standards. Separated from feeling, the facts show a partner who provided and tried &mdash; even when it wasn't enough for a goalpost that kept moving.
+    </div>
+  </section>
+
+  <section class="framework">
+    <h2>Framework B</h2>
+    <h3>Cognitive Dissonance Awareness</h3>
+    <div class="steps">
+      <div class="step"><div class="circle">1</div><div class="step-text"><strong>Notice the conflict</strong> &mdash; e.g., "I should have led" versus "I tried everything."</div></div>
+      <div class="step"><div class="circle">2</div><div class="step-text"><strong>Name it and trace its roots</strong> &mdash; often childhood patterns or people-pleasing.</div></div>
+      <div class="step"><div class="circle">3</div><div class="step-text"><strong>Choose the belief</strong> that actually matches your values and reality.</div></div>
+      <div class="step"><div class="circle">4</div><div class="step-text"><strong>Reframe</strong> &mdash; trade self-blame for self-compassion.</div></div>
+    </div>
+    <div class="application-box">
+      <span class="label">Applied</span>
+      She feels both ashamed for not "leading" and resentful for always following. That contradiction points to real effort colliding with an unhealthy dynamic &mdash; not a personal failing that needs fixing.
+    </div>
+  </section>
+
+  <section class="framework">
+    <h2>Framework C</h2>
+    <h3>Emotional Boundaries and Self-Protection</h3>
+    <div class="steps">
+      <div class="step"><div class="circle">1</div><div class="step-text"><strong>Acknowledge the impulse</strong> &mdash; to keep validating an ex's emotions out of habit.</div></div>
+      <div class="step"><div class="circle">2</div><div class="step-text"><strong>Choose not to engage</strong> &mdash; deliberately, with narratives designed to manipulate.</div></div>
+      <div class="step"><div class="circle">3</div><div class="step-text"><strong>Use reminders</strong> &mdash; written or spoken, to keep your own reality in view.</div></div>
+      <div class="step"><div class="circle">4</div><div class="step-text"><strong>Build a safe space</strong> &mdash; one that belongs to you alone.</div></div>
+    </div>
+    <div class="application-box">
+      <span class="label">Applied</span>
+      Her partner's logic shifts to fit whatever serves the moment. Declining to validate that inconsistent account &mdash; rather than debating it &mdash; is what actually protects her peace.
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Practical Instructions</h2>
+    <ul class="practical">
+      <li>Limit contact to logistics only &mdash; no debating the past or seeking her agreement on what happened.</li>
+      <li>When an old accusation resurfaces internally, ask whether it's fact or her framing before reacting to it.</li>
+      <li>Build one non-negotiable peace ritual into each day &mdash; spiritual practice, quiet time, a supportive call.</li>
+      <li>Let the physical sensation of shame register fully before trying to resolve or explain it away.</li>
+      <li>Before responding to any message from her, wait long enough that the reply is chosen, not automatic.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Assignment</h2>
+    <p>Write a concise statement of what's actually true about her efforts and intentions in the relationship, and place it somewhere visible &mdash; phone screen, notebook, mirror. Each time shame or self-doubt surfaces, read or recite it rather than re-litigating the accusation in her head.</p>
+    <div class="application-box">
+      <span class="label">Sample statement</span>
+      "I was a good partner. I provided, I tried, and I protected my peace."
+    </div>
+  </section>
+
+  <div class="pull-quote">"Nobody else is coming to save you."</div>
+
+  <section class="card">
+    <h2>Medication Note</h2>
+    <div class="med-tags">
+      <span class="tag">Adderall &mdash; continued, taken each morning</span>
+      <span class="tag">Supply currently sufficient</span>
+      <span class="tag warn">Standard monitoring, dose unchanged</span>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Key Takeaways</h2>
+    <div class="takeaway-grid">
+      <div class="takeaway-card">Effort and outcome are separate &mdash; real effort doesn't guarantee a partner ever calls it enough.</div>
+      <div class="takeaway-card">Shame says "I am bad"; guilt says "I did something bad" &mdash; hers has been shame, not guilt.</div>
+      <div class="takeaway-card">An unreliable narrator doesn't become reliable just because the relationship mattered.</div>
+      <div class="takeaway-card">The dissonance between "I should have led" and "I tried everything" points to a mismatched dynamic, not a personal failing.</div>
+      <div class="takeaway-card">People-pleasing kept her own needs off the table long before the marriage ended.</div>
+      <div class="takeaway-card">Ending an unhealthy relationship is not the same as being the villain in it.</div>
+      <div class="takeaway-card">A written truth statement works through repetition &mdash; not on the first read.</div>
+      <div class="takeaway-card">Protecting her peace is now a task only she can carry out, not one to delegate or wait on.</div>
+    </div>
+  </section>
+
+  <section class="bottom-line">
+    <h2>Bottom Line</h2>
+    <p>Shame has been doing the work grief usually does &mdash; standing in for facts that don't actually support the amount of self-blame she's been carrying. The record of what she gave to this relationship doesn't match the verdict she's been handed about it.</p>
+    <p>No fixed standard could have been met here, because the standard itself kept relocating. That's information about the relationship's structure, not a measurement of her adequacy as a partner.</p>
+    <p>Going forward, she is the source she has to trust. External validation from that particular relationship was never going to be reliable, which means her own written, repeated account of what's true carries more weight now than it did before &mdash; not as a slogan, but as the most accurate record available to her.</p>
+  </section>
+
+  <footer class="practice-footer">Alignment Psychiatry &middot; Clinical Session Insights</footer>
+
+</div>
+</body>
+</html>
