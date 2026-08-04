@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Choosing Yourself: Reclaiming Energy and Agency in Life Decisions | Alignment Psychiatry</title>
+<style>
+  :root {
+    --burgundy: #6B2C3A;
+    --orange: #D67B4A;
+    --cream: #E8DFD6;
+    --dark-gray: #4A4A4A;
+    --light-gray: #B8B8B8;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--cream);
+    color: var(--dark-gray);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.65;
+  }
+
+  .page {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+  }
+
+  /* HEADER */
+  header {
+    background: linear-gradient(135deg, var(--burgundy) 0%, var(--dark-gray) 100%);
+    color: var(--cream);
+    text-align: center;
+    padding: 46px 30px 40px;
+    margin: 0 -20px 30px;
+    border-radius: 0 0 20px 20px;
+  }
+  header .brand {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 12px;
+    opacity: 0.85;
+    margin-bottom: 14px;
+  }
+  header h1 {
+    font-size: 26px;
+    margin: 0 0 12px;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+  header p.subtitle {
+    font-style: italic;
+    font-size: 15px;
+    opacity: 0.9;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  /* SECTIONS */
+  section.card {
+    background: #ffffff;
+    border-left: 6px solid var(--orange);
+    border-radius: 14px;
+    padding: 26px 30px;
+    margin-bottom: 22px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  section.card h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--burgundy);
+    margin: 0 0 16px;
+  }
+  section.card p { margin: 0 0 12px; font-size: 15px; }
+  section.card p:last-child { margin-bottom: 0; }
+
+  /* PULL QUOTES */
+  .pull-quote {
+    background: linear-gradient(120deg, var(--burgundy) 0%, var(--dark-gray) 100%);
+    color: var(--cream);
+    text-align: center;
+    font-style: italic;
+    font-size: 17px;
+    padding: 28px 36px;
+    border-radius: 14px;
+    margin: 26px 0;
+  }
+
+  /* CONCEPT GRID */
+  .concept-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .concept-card {
+    background: #f9f6f3;
+    border-top: 4px solid var(--orange);
+    border-radius: 10px;
+    padding: 16px 18px;
+  }
+  .concept-card h3 {
+    margin: 0 0 6px;
+    font-size: 15px;
+    color: var(--burgundy);
+  }
+  .concept-card p {
+    margin: 0;
+    font-size: 13.5px;
+    color: var(--dark-gray);
+  }
+
+  /* ENERGY ALLOCATION COMPARISON */
+  .energy-compare {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 18px 0 6px;
+  }
+  .energy-row .row-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--burgundy);
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  .energy-bar {
+    display: flex;
+    height: 40px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .energy-seg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    color: var(--cream);
+    text-align: center;
+    padding: 0 4px;
+  }
+  .energy-seg.partner { background: var(--dark-gray); }
+  .energy-seg.child { background: var(--burgundy); }
+  .energy-seg.family { background: #b98f70; }
+  .energy-seg.self { background: var(--orange); font-weight: 700; }
+  .energy-caption {
+    text-align: center;
+    font-size: 12.5px;
+    font-style: italic;
+    color: var(--dark-gray);
+    margin-top: 10px;
+  }
+
+  /* FEAR VS REALITY DISTINCTION */
+  .distinction {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 18px 0 6px;
+    border: 1px solid #ece5db;
+  }
+  .distinction .col {
+    padding: 16px 18px;
+    font-size: 13.5px;
+  }
+  .distinction .col.left {
+    background: #f9f6f3;
+    border-right: 1px solid #ece5db;
+  }
+  .distinction .col.right {
+    background: #f4ede3;
+  }
+  .distinction .col h4 {
+    margin: 0 0 10px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .distinction .col.left h4 { color: var(--light-gray); }
+  .distinction .col.right h4 { color: var(--orange); }
+  .distinction .col ul { margin: 0; padding-left: 18px; }
+  .distinction .col li { margin-bottom: 6px; }
+
+  /* FRAMEWORKS */
+  section.framework {
+    background: #ffffff;
+    border-left: 6px solid var(--burgundy);
+    border-radius: 14px;
+    padding: 26px 30px;
+    margin-bottom: 22px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  section.framework > h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--dark-gray);
+    margin: 0 0 4px;
+  }
+  section.framework > h3 {
+    font-size: 19px;
+    color: var(--burgundy);
+    margin: 0 0 18px;
+  }
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .step {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .step .circle {
+    flex: 0 0 auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--burgundy);
+    color: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .step .step-text { font-size: 14.5px; padding-top: 4px; }
+  .step .step-text strong { color: var(--dark-gray); }
+
+  .application-box {
+    background: linear-gradient(135deg, #f4ede3 0%, #ede0d1 100%);
+    border-left: 4px solid var(--orange);
+    border-radius: 0 10px 10px 0;
+    padding: 14px 18px;
+    font-size: 14px;
+  }
+  .application-box .label {
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--burgundy);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  /* PRACTICAL INSTRUCTIONS */
+  ul.practical {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+  ul.practical li {
+    font-size: 14.5px;
+    padding: 10px 0 10px 30px;
+    position: relative;
+    border-bottom: 1px solid #ece5db;
+  }
+  ul.practical li:last-child { border-bottom: none; }
+  ul.practical li::before {
+    content: "\2192";
+    position: absolute;
+    left: 0;
+    color: var(--orange);
+    font-weight: bold;
+  }
+
+  /* TAKEAWAYS */
+  .takeaway-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .takeaway-card {
+    background: #f9f6f3;
+    border-left: 4px solid var(--orange);
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 13.5px;
+  }
+
+  /* BOTTOM LINE */
+  section.bottom-line {
+    background: linear-gradient(135deg, var(--burgundy) 0%, var(--dark-gray) 100%);
+    color: var(--cream);
+    border-radius: 14px;
+    padding: 30px 32px;
+    margin-bottom: 10px;
+  }
+  section.bottom-line h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--cream);
+    opacity: 0.85;
+    margin: 0 0 16px;
+  }
+  section.bottom-line p {
+    font-size: 15px;
+    margin: 0 0 14px;
+    opacity: 0.97;
+  }
+  section.bottom-line p:last-child { margin-bottom: 0; }
+
+  footer.practice-footer {
+    text-align: center;
+    font-size: 11.5px;
+    color: var(--dark-gray);
+    opacity: 0.7;
+    margin-top: 26px;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 640px) {
+    .concept-grid, .takeaway-grid, .distinction { grid-template-columns: 1fr; }
+    .distinction .col.left { border-right: none; border-bottom: 1px solid #ece5db; }
+    header h1 { font-size: 21px; }
+    section.card, section.framework, section.bottom-line { padding: 20px 18px; }
+    .energy-seg { font-size: 9.5px; padding: 0 2px; }
+  }
+
+  /* PRINT */
+  @media print {
+    body { background: #fff; }
+    header, section.bottom-line { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    section.card, section.framework, .pull-quote, section.bottom-line {
+      break-inside: avoid;
+      page-break-inside: avoid;
+      box-shadow: none;
+    }
+    .page { max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="brand">Alignment Psychiatry</div>
+    <h1>&#127793; Choosing Yourself: Reclaiming Energy and Agency in Life Decisions</h1>
+    <p class="subtitle">Renewing a life instead of starting over, and giving her own needs a real share of the energy</p>
+  </header>
+
+  <section class="card">
+    <h2>The Situation</h2>
+    <p>The IVF process is underway &mdash; generating and freezing eggs, weighing the possibility of pregnancy &mdash; while still married to a partner from whom real emotional distance has grown. Fulfillment in that relationship is largely absent.</p>
+    <p>Parenting is managed mostly alone; her child is not her current partner's biological son. Years of decisions built around the well-being of a partner, a child, family, and friends have left her depleted, with spiritual and societal expectations about marriage and motherhood adding weight to an already exhausting equation.</p>
+    <p>Underneath it all sits a harder question about what it would mean to "start over" &mdash; and whether that fear is accurate.</p>
+  </section>
+
+  <section class="card">
+    <h2>Core Problem</h2>
+    <p>A habitual pattern of making decisions that serve everyone else before herself has produced real emotional exhaustion, a sense of being stuck, and difficulty picturing a future that actually belongs to her.</p>
+    <p>The mismatch sits between what she feels &mdash; fear of being alone, guilt about prioritizing herself &mdash; and what's actually true: current choices aren't producing happiness or fulfillment. She's caught between what her life is "supposed" to look like and what her unmet needs are telling her.</p>
+  </section>
+
+  <div class="pull-quote">"Your decision making has always been for the good of everybody. What's been lacking is: what is the best thing for me?"</div>
+
+  <section class="card">
+    <h2>Understanding the Dynamics</h2>
+    <div class="concept-grid">
+      <div class="concept-card">
+        <h3>Capacity</h3>
+        <p>The total emotional, mental, and physical energy available to give &mdash; currently maxed out by obligations to other people.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Passive Support</h3>
+        <p>Going along to keep the peace, rather than actively meeting a need &mdash; support in name, without the substance behind it.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Guilt as a Decision Driver</h3>
+        <p>When guilt, rather than an actual want, is what's steering a choice &mdash; often invisible until named directly.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Emotional Distance</h3>
+        <p>A gap in connection within a relationship that persists even when the relationship itself continues on the surface.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="framework">
+    <h2>Framework A</h2>
+    <h3>The Energy Allocation Model</h3>
+    <div class="steps">
+      <div class="step"><div class="circle">1</div><div class="step-text"><strong>Identify the recipients</strong> &mdash; everyone and everything currently receiving your energy.</div></div>
+      <div class="step"><div class="circle">2</div><div class="step-text"><strong>Estimate the split</strong> &mdash; roughly what percentage each one is getting.</div></div>
+      <div class="step"><div class="circle">3</div><div class="step-text"><strong>Notice what's left</strong> &mdash; how much actually remains for you.</div></div>
+      <div class="step"><div class="circle">4</div><div class="step-text"><strong>Imagine reallocating</strong> &mdash; what would change with more energy directed at yourself?</div></div>
+    </div>
+    <div class="application-box">
+      <span class="label">Applied</span>
+      Partner, child, and extended family currently draw the largest share of daily energy, leaving a small remainder for herself. Redirecting even a portion of that toward her own goals &mdash; IVF included &mdash; is enough to change the shape of what's possible.
+    </div>
+    <div class="energy-compare">
+      <div class="energy-row">
+        <div class="row-label">Current split</div>
+        <div class="energy-bar">
+          <div class="energy-seg partner" style="flex:35;">Partner 35%</div>
+          <div class="energy-seg child" style="flex:25;">Child 25%</div>
+          <div class="energy-seg family" style="flex:20;">Family/Friends 20%</div>
+          <div class="energy-seg self" style="flex:20;">Self 20%</div>
+        </div>
+      </div>
+      <div class="energy-row">
+        <div class="row-label">Reimagined split</div>
+        <div class="energy-bar">
+          <div class="energy-seg partner" style="flex:20;">Partner 20%</div>
+          <div class="energy-seg child" style="flex:20;">Child 20%</div>
+          <div class="energy-seg family" style="flex:10;">Family/Friends 10%</div>
+          <div class="energy-seg self" style="flex:50;">Self 50%</div>
+        </div>
+      </div>
+    </div>
+    <p class="energy-caption">Illustrative, not exact &mdash; the value is in seeing the split, not in the precise numbers.</p>
+  </section>
+
+  <section class="framework">
+    <h2>Framework B</h2>
+    <h3>Alignment with Nature</h3>
+    <div class="steps">
+      <div class="step"><div class="circle">1</div><div class="step-text"><strong>Identify your natural tendencies</strong> &mdash; showing up for others, making things happen.</div></div>
+      <div class="step"><div class="circle">2</div><div class="step-text"><strong>Accept them</strong> rather than fighting against who you actually are.</div></div>
+      <div class="step"><div class="circle">3</div><div class="step-text"><strong>Work with your strengths</strong> &mdash; maximize and collaborate with your own gifts.</div></div>
+      <div class="step"><div class="circle">4</div><div class="step-text"><strong>Avoid resisting your nature</strong> &mdash; going against it costs more energy than it saves.</div></div>
+    </div>
+    <div class="application-box">
+      <span class="label">Applied</span>
+      She's naturally someone who makes things happen for other people. That same drive, aimed at her own goals instead of diluted by everyone else's first, is what moves the IVF process and the rest of her life forward.
+    </div>
+  </section>
+
+  <section class="framework">
+    <h2>Framework C</h2>
+    <h3>Reality Testing vs. Catastrophizing</h3>
+    <div class="steps">
+      <div class="step"><div class="circle">1</div><div class="step-text"><strong>Challenge the catastrophic belief</strong> &mdash; e.g., "I'll be starting over with nothing."</div></div>
+      <div class="step"><div class="circle">2</div><div class="step-text"><strong>List what would actually happen</strong> if the change were made.</div></div>
+      <div class="step"><div class="circle">3</div><div class="step-text"><strong>Compare the fear to the likely outcome</strong> side by side.</div></div>
+    </div>
+    <div class="application-box">
+      <span class="label">Applied</span>
+      "Starting over" gets reframed as renewing &mdash; she'd keep her resources, her child, and her ability to build the life she wants. The fear and the likely reality turn out to be two very different things once actually compared.
+    </div>
+    <div class="distinction">
+      <div class="col left">
+        <h4>The fear</h4>
+        <ul>
+          <li>Starting over from nothing</li>
+          <li>Losing everything built so far</li>
+          <li>Being alone, permanently</li>
+        </ul>
+      </div>
+      <div class="col right">
+        <h4>The reality</h4>
+        <ul>
+          <li>Renewing an identity, not erasing one</li>
+          <li>Keeping resources, child, and skills</li>
+          <li>Free to date, train, and live on her terms</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="pull-quote">"You're not starting over; you're renewing things."</div>
+
+  <section class="card">
+    <h2>Practical Instructions</h2>
+    <ul class="practical">
+      <li>When asked to take something on, pause and name out loud whose need it's actually serving.</li>
+      <li>Block one recurring slot on the calendar that belongs to no one but you, and protect it like any other commitment.</li>
+      <li>Before accepting a "should" about marriage or motherhood, trace where that specific belief actually came from.</li>
+      <li>Offer your child one real choice a day, with two acceptable options, rather than managing the outcome yourself.</li>
+      <li>Notice a decision made from guilt versus one made from an actual want, and label it as it happens.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Assignment</h2>
+    <p>Journal for 15&ndash;20 minutes daily: where energy went that day, and what you'd do with an extra 30% of it directed at yourself. Explore any fears about change directly and reality-test them against what would actually happen. Bring the entries and whatever questions surface.</p>
+  </section>
+
+  <section class="card">
+    <h2>Key Takeaways</h2>
+    <div class="takeaway-grid">
+      <div class="takeaway-card">A pattern of good decision-making for everyone else doesn't automatically transfer to decisions made for herself.</div>
+      <div class="takeaway-card">The current energy split leaves a small, almost incidental remainder for her own needs.</div>
+      <div class="takeaway-card">Fear of being alone is functioning as a reason to stay, separate from whether the relationship itself is working.</div>
+      <div class="takeaway-card">A partner who "goes along to get along" is offering agreement, not necessarily active support.</div>
+      <div class="takeaway-card">The skills that make her effective for other people are the same skills available for her own goals.</div>
+      <div class="takeaway-card">Renewing an identity and losing everything built are being treated as the same outcome when they aren't.</div>
+      <div class="takeaway-card">A friend's version of a stable life isn't evidence about what would actually make her happy.</div>
+      <div class="takeaway-card">Change has moved slowly so far because everyone else's needs are still being weighed alongside her own.</div>
+    </div>
+  </section>
+
+  <section class="bottom-line">
+    <h2>Bottom Line</h2>
+    <p>Years of competent, generous decision-making on behalf of other people have become the default operating mode &mdash; to the point where asking what she actually wants feels like an unfamiliar question rather than an obvious one to answer.</p>
+    <p>The fear driving the current inertia is built on a version of "starting over" that doesn't match what would actually remain: her resources, her child, her capability. That's a testable claim, not a fixed truth, and it doesn't hold up well once actually tested.</p>
+    <p>Redirecting energy toward herself doesn't mean abandoning the people she cares about. It means her own needs stop being treated as whatever's left over after everyone else's have already been met.</p>
+  </section>
+
+  <footer class="practice-footer">Alignment Psychiatry &middot; Clinical Session Insights</footer>
+
+</div>
+</body>
+</html>
