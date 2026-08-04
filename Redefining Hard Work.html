@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redefining Hard Work: From Overexertion to Strategic Growth | Alignment Psychiatry</title>
+<style>
+  :root {
+    --burgundy: #6B2C3A;
+    --orange: #D67B4A;
+    --cream: #E8DFD6;
+    --dark-gray: #4A4A4A;
+    --light-gray: #B8B8B8;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--cream);
+    color: var(--dark-gray);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.65;
+  }
+
+  .page {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+  }
+
+  /* HEADER */
+  header {
+    background: linear-gradient(135deg, var(--burgundy) 0%, var(--dark-gray) 100%);
+    color: var(--cream);
+    text-align: center;
+    padding: 46px 30px 40px;
+    margin: 0 -20px 30px;
+    border-radius: 0 0 20px 20px;
+  }
+  header .brand {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 12px;
+    opacity: 0.85;
+    margin-bottom: 14px;
+  }
+  header h1 {
+    font-size: 26px;
+    margin: 0 0 12px;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+  header p.subtitle {
+    font-style: italic;
+    font-size: 15px;
+    opacity: 0.9;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  /* SECTIONS */
+  section.card {
+    background: #ffffff;
+    border-left: 6px solid var(--orange);
+    border-radius: 14px;
+    padding: 26px 30px;
+    margin-bottom: 22px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  section.card h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--burgundy);
+    margin: 0 0 16px;
+  }
+  section.card p { margin: 0 0 12px; font-size: 15px; }
+  section.card p:last-child { margin-bottom: 0; }
+
+  /* PULL QUOTES */
+  .pull-quote {
+    background: linear-gradient(120deg, var(--burgundy) 0%, var(--dark-gray) 100%);
+    color: var(--cream);
+    text-align: center;
+    font-style: italic;
+    font-size: 17px;
+    padding: 28px 36px;
+    border-radius: 14px;
+    margin: 26px 0;
+  }
+
+  /* CONCEPT GRID */
+  .concept-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .concept-card {
+    background: #f9f6f3;
+    border-top: 4px solid var(--orange);
+    border-radius: 10px;
+    padding: 16px 18px;
+  }
+  .concept-card h3 {
+    margin: 0 0 6px;
+    font-size: 15px;
+    color: var(--burgundy);
+  }
+  .concept-card p {
+    margin: 0;
+    font-size: 13.5px;
+    color: var(--dark-gray);
+  }
+
+  /* PERFORMANCE CURVE SCALE */
+  .perf-scale { margin: 18px 0 6px; }
+  .perf-row {
+    display: flex;
+    height: 52px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .perf-seg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 12px;
+    color: var(--cream);
+    padding: 0 8px;
+  }
+  .perf-seg.build { background: #cbb9a8; flex: 1; }
+  .perf-seg.peak {
+    background: var(--orange);
+    flex: 1.1;
+    font-weight: 700;
+    position: relative;
+  }
+  .perf-seg.decline { background: var(--burgundy); flex: 1.3; }
+  .perf-marker {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+  .perf-labels {
+    display: flex;
+    margin-top: 8px;
+  }
+  .perf-labels div {
+    flex: 1;
+    text-align: center;
+    font-size: 11.5px;
+    font-style: italic;
+    color: var(--dark-gray);
+  }
+  .perf-labels div:nth-child(2) { flex: 1.1; }
+  .perf-labels div:nth-child(3) { flex: 1.3; }
+
+  /* AREAS OF LIFE BAR */
+  .areas-bar {
+    display: flex;
+    height: 44px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 18px 0 6px;
+  }
+  .areas-seg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11.5px;
+    color: var(--cream);
+    text-align: center;
+    padding: 0 4px;
+  }
+  .areas-seg.a1 { background: #4A4A4A; flex: 35; }
+  .areas-seg.a2 { background: #6B2C3A; flex: 20; }
+  .areas-seg.a3 { background: #D67B4A; flex: 20; }
+  .areas-seg.a4 { background: #b98f70; flex: 15; }
+  .areas-seg.a5 { background: #cbb9a8; flex: 10; }
+  .areas-caption {
+    text-align: center;
+    font-size: 12.5px;
+    font-style: italic;
+    color: var(--dark-gray);
+    margin-top: 10px;
+  }
+
+  /* FRAMEWORKS */
+  section.framework {
+    background: #ffffff;
+    border-left: 6px solid var(--burgundy);
+    border-radius: 14px;
+    padding: 26px 30px;
+    margin-bottom: 22px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  section.framework > h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--dark-gray);
+    margin: 0 0 4px;
+  }
+  section.framework > h3 {
+    font-size: 19px;
+    color: var(--burgundy);
+    margin: 0 0 18px;
+  }
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .step {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .step .circle {
+    flex: 0 0 auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--burgundy);
+    color: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .step .step-text { font-size: 14.5px; padding-top: 4px; }
+  .step .step-text strong { color: var(--dark-gray); }
+
+  .application-box {
+    background: linear-gradient(135deg, #f4ede3 0%, #ede0d1 100%);
+    border-left: 4px solid var(--orange);
+    border-radius: 0 10px 10px 0;
+    padding: 14px 18px;
+    font-size: 14px;
+  }
+  .application-box .label {
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--burgundy);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  /* PRACTICAL INSTRUCTIONS */
+  ul.practical {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+  ul.practical li {
+    font-size: 14.5px;
+    padding: 10px 0 10px 30px;
+    position: relative;
+    border-bottom: 1px solid #ece5db;
+  }
+  ul.practical li:last-child { border-bottom: none; }
+  ul.practical li::before {
+    content: "\2192";
+    position: absolute;
+    left: 0;
+    color: var(--orange);
+    font-weight: bold;
+  }
+
+  /* TAKEAWAYS */
+  .takeaway-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .takeaway-card {
+    background: #f9f6f3;
+    border-left: 4px solid var(--orange);
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 13.5px;
+  }
+
+  /* BOTTOM LINE */
+  section.bottom-line {
+    background: linear-gradient(135deg, var(--burgundy) 0%, var(--dark-gray) 100%);
+    color: var(--cream);
+    border-radius: 14px;
+    padding: 30px 32px;
+    margin-bottom: 10px;
+  }
+  section.bottom-line h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--cream);
+    opacity: 0.85;
+    margin: 0 0 16px;
+  }
+  section.bottom-line p {
+    font-size: 15px;
+    margin: 0 0 14px;
+    opacity: 0.97;
+  }
+  section.bottom-line p:last-child { margin-bottom: 0; }
+
+  footer.practice-footer {
+    text-align: center;
+    font-size: 11.5px;
+    color: var(--dark-gray);
+    opacity: 0.7;
+    margin-top: 26px;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 640px) {
+    .concept-grid, .takeaway-grid { grid-template-columns: 1fr; }
+    header h1 { font-size: 21px; }
+    section.card, section.framework, section.bottom-line { padding: 20px 18px; }
+    .perf-seg, .areas-seg { font-size: 10px; padding: 0 3px; }
+  }
+
+  /* PRINT */
+  @media print {
+    body { background: #fff; }
+    header, section.bottom-line { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    section.card, section.framework, .pull-quote, section.bottom-line {
+      break-inside: avoid;
+      page-break-inside: avoid;
+      box-shadow: none;
+    }
+    .page { max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="brand">Alignment Psychiatry</div>
+    <h1>&#128267; Redefining Hard Work: From Overexertion to Strategic Growth</h1>
+    <p class="subtitle">Trading relentless effort for a definition of quality that can actually be measured</p>
+  </header>
+
+  <section class="card">
+    <h2>The Situation</h2>
+    <p>A transition is underway from old habits of pushing to exhaustion &mdash; physically and mentally &mdash; toward a more sustainable approach to growth. A history of being severely overweight built a mindset of "never being satisfied," where self-criticism doubled as motivation.</p>
+    <p>More consistent journaling has brought a calmer, more level-headed baseline recently. A telling data point: taking a few days off from training produced a dramatic improvement in resting heart rate and heart rate variability &mdash; hard evidence of what chronic overexertion had been costing physically.</p>
+    <p>There's active interest now in using a time-blocking app to manage energy and commitments more deliberately.</p>
+  </section>
+
+  <section class="card">
+    <h2>Core Problem</h2>
+    <p>An ingrained belief holds that relentless effort, self-punishment, and extreme consistency are what improvement requires. That belief isn't baseless &mdash; it's behind real past success in weight loss and career progress &mdash; but it's now producing diminishing returns: physical stress, emotional exhaustion, and a hard time recognizing progress that's already happened.</p>
+    <p>The mismatch is between the feeling that more must always be done, and the reality that rest, reflection, and strategic effort now produce better, more sustainable results than pushing harder does.</p>
+  </section>
+
+  <div class="pull-quote">"Double-edged sword&mdash;doing too much starts to backfire."</div>
+
+  <section class="card">
+    <h2>Beyond the Peak</h2>
+    <p>Effort and output don't move together in a straight line forever &mdash; there's a point where more effort starts working against the result:</p>
+    <div class="perf-scale">
+      <div class="perf-row">
+        <div class="perf-seg build">Building effort</div>
+        <div class="perf-seg peak">Peak &mdash; quality zone</div>
+        <div class="perf-seg decline">Beyond the peak &mdash; diminishing returns</div>
+      </div>
+      <div class="perf-labels">
+        <div>Effort is still paying off</div>
+        <div>Purposeful, charged, primed</div>
+        <div>Depleted, defensive, worse results</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Understanding the Dynamics</h2>
+    <div class="concept-grid">
+      <div class="concept-card">
+        <h3>Overexertion</h3>
+        <p>Pushing past healthy limits &mdash; training without rest, feeling depleted, a rising resting heart rate that signals the body hasn't recovered.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Self-Punishment / Negative Self-Talk</h3>
+        <p>Using criticism and dissatisfaction as the engine for motivation &mdash; the sense that the current version of yourself has to be "killed" in order to improve.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Externalization</h3>
+        <p>Viewing your own thoughts and feelings from an outside vantage point to gain objectivity &mdash; journaling as a way to "stare at yourself" and question beliefs that had felt non-negotiable.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Autopilot Living</h3>
+        <p>Acting from habit or unexamined external expectation rather than a deliberate, values-aligned choice.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="framework">
+    <h2>Framework A</h2>
+    <h3>Quality Over Quantity</h3>
+    <div class="steps">
+      <div class="step"><div class="circle">1</div><div class="step-text"><strong>Recognize the limit</strong> &mdash; effort past a certain point starts working against the result.</div></div>
+      <div class="step"><div class="circle">2</div><div class="step-text"><strong>Define quality</strong> concretely for each area &mdash; purposeful movement in training, focused output at work.</div></div>
+      <div class="step"><div class="circle">3</div><div class="step-text"><strong>Build in rest and reflection</strong> &mdash; schedule recovery, and use journaling to consolidate what's been learned.</div></div>
+      <div class="step"><div class="circle">4</div><div class="step-text"><strong>Strategize and optimize</strong> &mdash; use time-blocking to allocate energy toward what actually matters.</div></div>
+    </div>
+    <div class="application-box">
+      <span class="label">Applied</span>
+      Training every day and judging success by hours logged is giving way to rest days, tracked recovery, and a working definition of quality training as sessions that feel "charged and primed" rather than merely completed &mdash; with journaling used to process the shift as it happens.
+    </div>
+  </section>
+
+  <section class="framework">
+    <h2>Framework B</h2>
+    <h3>Rest, Digest, and Process</h3>
+    <div class="steps">
+      <div class="step"><div class="circle">1</div><div class="step-text"><strong>Notice the signals</strong> &mdash; track physical and emotional signs of stress or overload as they show up.</div></div>
+      <div class="step"><div class="circle">2</div><div class="step-text"><strong>Allow real recovery</strong> &mdash; physical and mental breaks, not just a change of activity.</div></div>
+      <div class="step"><div class="circle">3</div><div class="step-text"><strong>Reflect and digest</strong> &mdash; journaling or quiet time to process what was actually learned or felt.</div></div>
+      <div class="step"><div class="circle">4</div><div class="step-text"><strong>Adjust from insight</strong> &mdash; let what reflection reveals actually change the routine.</div></div>
+    </div>
+    <div class="application-box">
+      <span class="label">Applied</span>
+      "Rest and digest" is the body's counterpart to "fight or flight" &mdash; without it, there's no space to assess what's been learned or apply it well. The heart rate and HRV improvement after just a few rest days is that mechanism showing up in measurable form.
+    </div>
+  </section>
+
+  <div class="pull-quote">"Thinking and processing is our greatest strength."</div>
+
+  <section class="card">
+    <h2>Practical Instructions</h2>
+    <ul class="practical">
+      <li>After a workout or work session, ask one question before moving on: did this feel purposeful, or just long?</li>
+      <li>Check resting heart rate or HRV after a true rest day and compare it to a day spent pushing through.</li>
+      <li>Write one journal line most nights, even a short one, rather than skipping when tired.</li>
+      <li>When a plan says "rest," treat it as a scheduled commitment, not an optional slot to fill with more work.</li>
+      <li>Notice when an action is coming from habit or someone else's expectation rather than an actual choice.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Assignment</h2>
+    <p>Use the time-blocking app to map out your main areas of life &mdash; work, training, rest, social, personal growth &mdash; and assign each a rough percentage of your time. Bring a draft version and your reflections on the process to the next session.</p>
+    <div class="areas-bar">
+      <div class="areas-seg a1">Work 35%</div>
+      <div class="areas-seg a2">Training 20%</div>
+      <div class="areas-seg a3">Rest 20%</div>
+      <div class="areas-seg a4">Social 15%</div>
+      <div class="areas-seg a5">Growth 10%</div>
+    </div>
+    <p class="areas-caption">An illustrative starting split &mdash; the real value is in setting your own percentages deliberately, then reviewing where they actually go.</p>
+  </section>
+
+  <section class="card">
+    <h2>Key Takeaways</h2>
+    <div class="takeaway-grid">
+      <div class="takeaway-card">Past success built with relentless effort doesn't guarantee the same strategy still works now.</div>
+      <div class="takeaway-card">A rise in resting heart rate after training is data, not something to push through and ignore.</div>
+      <div class="takeaway-card">Quality has to be defined concretely for each activity, or "do better" stays impossible to measure.</div>
+      <div class="takeaway-card">Self-punishment as motivation and self-improvement as a goal are not actually the same project.</div>
+      <div class="takeaway-card">Reflection turns an experience into something usable; without it, effort alone doesn't compound.</div>
+      <div class="takeaway-card">An action taken on autopilot or from someone else's expectation isn't the same as a deliberate choice.</div>
+      <div class="takeaway-card">Mapping percentages across life areas exposes where energy is actually going, not where it's assumed to go.</div>
+      <div class="takeaway-card">Recovery has a measurable physiological signature, not just a subjective feeling of being "less tired."</div>
+    </div>
+  </section>
+
+  <section class="bottom-line">
+    <h2>Bottom Line</h2>
+    <p>The belief that more effort always produces more improvement was true enough, for long enough, to become load-bearing &mdash; it's part of what got weight lost and a career built. That history is exactly why it's hard to question now, even as it produces worse results than it used to.</p>
+    <p>The heart rate and HRV data from a handful of rest days is a more objective read on what's actually working than years of "push harder" instinct, and it happens to point in the same direction reflection does. Both are describing the same signal from two different angles.</p>
+    <p>The actual work now is defining quality specifically enough that it can be measured, and treating rest as a scheduled part of the plan rather than something to feel guilty about &mdash; without turning that into a new standard to be perfect about either.</p>
+  </section>
+
+  <footer class="practice-footer">Alignment Psychiatry &middot; Clinical Session Insights</footer>
+
+</div>
+</body>
+</html>
