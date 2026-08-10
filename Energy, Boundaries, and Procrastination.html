@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Breaking the Cycle: Energy, Boundaries, and Procrastination in ADHD | Alignment Psychiatry</title>
+<style>
+  :root {
+    --burgundy: #6B2C3A;
+    --orange: #D67B4A;
+    --cream: #E8DFD6;
+    --dark-gray: #4A4A4A;
+    --light-gray: #B8B8B8;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--cream);
+    color: var(--dark-gray);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.65;
+  }
+
+  .page {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+  }
+
+  /* HEADER */
+  header {
+    background: linear-gradient(135deg, var(--burgundy) 0%, var(--dark-gray) 100%);
+    color: var(--cream);
+    text-align: center;
+    padding: 46px 30px 40px;
+    margin: 0 -20px 30px;
+    border-radius: 0 0 20px 20px;
+  }
+  header .brand {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 12px;
+    opacity: 0.85;
+    margin-bottom: 14px;
+  }
+  header h1 {
+    font-size: 26px;
+    margin: 0 0 12px;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+  header p.subtitle {
+    font-style: italic;
+    font-size: 15px;
+    opacity: 0.9;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  /* SECTIONS */
+  section.card {
+    background: #ffffff;
+    border-left: 6px solid var(--orange);
+    border-radius: 14px;
+    padding: 26px 30px;
+    margin-bottom: 22px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  section.card h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--burgundy);
+    margin: 0 0 16px;
+  }
+  section.card p { margin: 0 0 12px; font-size: 15px; }
+  section.card p:last-child { margin-bottom: 0; }
+
+  /* PULL QUOTES */
+  .pull-quote {
+    background: linear-gradient(120deg, var(--burgundy) 0%, var(--dark-gray) 100%);
+    color: var(--cream);
+    text-align: center;
+    font-style: italic;
+    font-size: 17px;
+    padding: 28px 36px;
+    border-radius: 14px;
+    margin: 26px 0;
+  }
+
+  /* CONCEPT GRID */
+  .concept-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .concept-card {
+    background: #f9f6f3;
+    border-top: 4px solid var(--orange);
+    border-radius: 10px;
+    padding: 16px 18px;
+  }
+  .concept-card h3 {
+    margin: 0 0 6px;
+    font-size: 15px;
+    color: var(--burgundy);
+  }
+  .concept-card p {
+    margin: 0;
+    font-size: 13.5px;
+    color: var(--dark-gray);
+  }
+
+  /* ENERGY EXCHANGE BARS */
+  .exchange-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 18px 0 6px;
+  }
+  .exchange-row .row-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--burgundy);
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  .exchange-track {
+    background: #f0e9e0;
+    border-radius: 8px;
+    height: 34px;
+    overflow: hidden;
+  }
+  .exchange-fill {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    color: var(--cream);
+    font-size: 12.5px;
+    border-radius: 8px 0 0 8px;
+  }
+  .exchange-fill.given { background: var(--burgundy); width: 100%; }
+  .exchange-fill.received { background: var(--orange); width: 67%; }
+  .exchange-caption {
+    text-align: center;
+    font-size: 12.5px;
+    font-style: italic;
+    color: var(--dark-gray);
+    margin-top: 10px;
+  }
+
+  /* ENVIRONMENT SHIFT PANELS */
+  .env-shift {
+    display: flex;
+    align-items: stretch;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin: 18px 0 6px;
+  }
+  .env-panel {
+    flex: 1 1 220px;
+    border-radius: 10px;
+    padding: 16px 18px;
+    font-size: 13.5px;
+  }
+  .env-panel.couch {
+    background: #f9f6f3;
+    border-top: 4px solid var(--light-gray);
+  }
+  .env-panel.island {
+    background: linear-gradient(135deg, #f4ede3 0%, #ede0d1 100%);
+    border-top: 4px solid var(--orange);
+  }
+  .env-panel .icon { font-size: 20px; margin-bottom: 8px; }
+  .env-panel .label {
+    display: block;
+    text-transform: uppercase;
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    color: var(--dark-gray);
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  .env-panel ul { margin: 6px 0 0; padding-left: 16px; }
+  .env-panel li { margin-bottom: 4px; }
+  .env-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--orange);
+    font-size: 20px;
+    flex: 0 0 auto;
+  }
+
+  /* FRAMEWORKS */
+  section.framework {
+    background: #ffffff;
+    border-left: 6px solid var(--burgundy);
+    border-radius: 14px;
+    padding: 26px 30px;
+    margin-bottom: 22px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  section.framework > h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--dark-gray);
+    margin: 0 0 4px;
+  }
+  section.framework > h3 {
+    font-size: 19px;
+    color: var(--burgundy);
+    margin: 0 0 18px;
+  }
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .step {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .step .circle {
+    flex: 0 0 auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--burgundy);
+    color: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .step .step-text { font-size: 14.5px; padding-top: 4px; }
+  .step .step-text strong { color: var(--dark-gray); }
+
+  .application-box {
+    background: linear-gradient(135deg, #f4ede3 0%, #ede0d1 100%);
+    border-left: 4px solid var(--orange);
+    border-radius: 0 10px 10px 0;
+    padding: 14px 18px;
+    font-size: 14px;
+  }
+  .application-box .label {
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--burgundy);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  /* PRACTICAL INSTRUCTIONS */
+  ul.practical {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+  ul.practical li {
+    font-size: 14.5px;
+    padding: 10px 0 10px 30px;
+    position: relative;
+    border-bottom: 1px solid #ece5db;
+  }
+  ul.practical li:last-child { border-bottom: none; }
+  ul.practical li::before {
+    content: "\2192";
+    position: absolute;
+    left: 0;
+    color: var(--orange);
+    font-weight: bold;
+  }
+
+  /* MEDICATION TAGS */
+  .med-block { margin-bottom: 14px; }
+  .med-block:last-child { margin-bottom: 0; }
+  .med-block h4 {
+    margin: 0 0 8px;
+    font-size: 14.5px;
+    color: var(--burgundy);
+  }
+  .med-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .tag {
+    font-size: 12.5px;
+    background: #f9f6f3;
+    border: 1px solid var(--light-gray);
+    color: var(--dark-gray);
+    padding: 6px 14px;
+    border-radius: 20px;
+  }
+  .tag.warn {
+    border-color: var(--orange);
+    color: var(--burgundy);
+  }
+
+  /* TAKEAWAYS */
+  .takeaway-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .takeaway-card {
+    background: #f9f6f3;
+    border-left: 4px solid var(--orange);
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 13.5px;
+  }
+
+  /* BOTTOM LINE */
+  section.bottom-line {
+    background: linear-gradient(135deg, var(--burgundy) 0%, var(--dark-gray) 100%);
+    color: var(--cream);
+    border-radius: 14px;
+    padding: 30px 32px;
+    margin-bottom: 10px;
+  }
+  section.bottom-line h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--cream);
+    opacity: 0.85;
+    margin: 0 0 16px;
+  }
+  section.bottom-line p {
+    font-size: 15px;
+    margin: 0 0 14px;
+    opacity: 0.97;
+  }
+  section.bottom-line p:last-child { margin-bottom: 0; }
+
+  footer.practice-footer {
+    text-align: center;
+    font-size: 11.5px;
+    color: var(--dark-gray);
+    opacity: 0.7;
+    margin-top: 26px;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 640px) {
+    .concept-grid, .takeaway-grid { grid-template-columns: 1fr; }
+    header h1 { font-size: 21px; }
+    section.card, section.framework, section.bottom-line { padding: 20px 18px; }
+    .env-shift { flex-direction: column; }
+    .env-arrow { transform: rotate(90deg); }
+  }
+
+  /* PRINT */
+  @media print {
+    body { background: #fff; }
+    header, section.bottom-line { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    section.card, section.framework, .pull-quote, section.bottom-line {
+      break-inside: avoid;
+      page-break-inside: avoid;
+      box-shadow: none;
+    }
+    .page { max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="brand">Alignment Psychiatry</div>
+    <h1>&#128267; Breaking the Cycle: Energy, Boundaries, and Procrastination in ADHD</h1>
+    <p class="subtitle">Treating energy, not willpower, as the actual currency behind getting things done</p>
+  </header>
+
+  <section class="card">
+    <h2>The Situation</h2>
+    <p>Chronic procrastination, persistent anxiety, and exhaustion are showing up together. Tasks routinely get overcomplicated, which leads to avoidance and then guilt. Energy is low &mdash; possibly tied to untreated anemia &mdash; and both work and personal responsibilities feel overwhelming.</p>
+    <p>Relationships, especially with family and friends, tend to run unbalanced: more is given than received, and the result is a persistent drained feeling. The patterns are recognized, and some coping tools already exist, but maintaining boundaries and prioritizing her own needs remains difficult.</p>
+  </section>
+
+  <section class="card">
+    <h2>Core Problem</h2>
+    <p>A cycle of over-giving, poor energy management, and procrastination is running underneath all of this, made harder by ADHD. Prioritizing others' needs and overthinking interactions &mdash; texting, especially &mdash; produces decision fatigue and emotional exhaustion.</p>
+    <p>The mismatch is between awareness of these patterns and the ability to actually change them, which fuels frustration and a sense of being stuck. Self-esteem issues and difficulty setting boundaries keep the cycle running.</p>
+  </section>
+
+  <div class="pull-quote">"If you give 12 hours of work and only get paid for 8, is that a healthy relationship?"</div>
+
+  <section class="card">
+    <h2>The Energy Exchange</h2>
+    <p>Several relationships are currently running at a deficit &mdash; giving consistently outpaces what comes back:</p>
+    <div class="exchange-bars">
+      <div class="exchange-row">
+        <div class="row-label">Given</div>
+        <div class="exchange-track"><div class="exchange-fill given">12 hours</div></div>
+      </div>
+      <div class="exchange-row">
+        <div class="row-label">Received</div>
+        <div class="exchange-track"><div class="exchange-fill received">8 hours</div></div>
+      </div>
+    </div>
+    <p class="exchange-caption">A gap this size doesn't close on its own &mdash; it has to be renegotiated directly.</p>
+  </section>
+
+  <section class="card">
+    <h2>Understanding the Dynamics</h2>
+    <div class="concept-grid">
+      <div class="concept-card">
+        <h3>Procrastination</h3>
+        <p>Delaying a task, often driven by anxiety, perfectionism, or low energy &mdash; frequently linked here to overcomplicating what the task actually requires.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Decision Fatigue</h3>
+        <p>Mental exhaustion from making too many decisions &mdash; especially common when overthinking how others will react, and common in both ADHD and people-pleasing.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Alignment</h3>
+        <p>Living in a way where actions, energy, and relationships stay in sync with actual values and needs, rather than pulled in whatever direction is most urgent.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Over-Giving</h3>
+        <p>A consistent pattern of giving more than is received &mdash; distinct from generosity, and reliably a source of depletion rather than connection.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="framework">
+    <h2>Framework A</h2>
+    <h3>Energy Optimization</h3>
+    <div class="steps">
+      <div class="step"><div class="circle">1</div><div class="step-text"><strong>Monitor physical energy</strong> &mdash; sleep, nutrition, and medical needs like iron and B12.</div></div>
+      <div class="step"><div class="circle">2</div><div class="step-text"><strong>Prioritize high-energy tasks</strong> for when energy is naturally highest, usually mornings.</div></div>
+      <div class="step"><div class="circle">3</div><div class="step-text"><strong>Adjust environmental triggers</strong> &mdash; comfortable spots can quietly encourage inactivity.</div></div>
+      <div class="step"><div class="circle">4</div><div class="step-text"><strong>Replenish regularly</strong> through self-care and relationships that give something back.</div></div>
+    </div>
+    <div class="application-box">
+      <span class="label">Applied</span>
+      Procrastination spikes noticeably when energy is low &mdash; unsurprising after more than a year without iron infusions. Pushing through the exhaustion has been increasing anxiety and avoidance rather than solving either.
+    </div>
+    <div class="env-shift">
+      <div class="env-panel couch">
+        <div class="icon">&#128715;</div>
+        <span class="label">The Couch</span>
+        <ul>
+          <li>Comfortable, low friction to stay</li>
+          <li>Signals rest, not action</li>
+          <li>Procrastination has room to grow</li>
+        </ul>
+      </div>
+      <div class="env-arrow">&#8594;</div>
+      <div class="env-panel island">
+        <div class="icon">&#127869;&#65039;</div>
+        <span class="label">The Kitchen Island</span>
+        <ul>
+          <li>Upright, less comfortable to linger</li>
+          <li>Signals task-readiness</li>
+          <li>Less friction to actually start</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="framework">
+    <h2>Framework B</h2>
+    <h3>Relationship Energy Exchange</h3>
+    <div class="steps">
+      <div class="step"><div class="circle">1</div><div class="step-text"><strong>View each relationship</strong> &mdash; work, family, friends, self &mdash; as an energy exchange.</div></div>
+      <div class="step"><div class="circle">2</div><div class="step-text"><strong>Evaluate the balance</strong> &mdash; is giving matched by receiving?</div></div>
+      <div class="step"><div class="circle">3</div><div class="step-text"><strong>Adjust the boundary</strong> where over-giving or draining is consistent.</div></div>
+      <div class="step"><div class="circle">4</div><div class="step-text"><strong>Communicate directly</strong> &mdash; state the need or the limit plainly.</div></div>
+    </div>
+    <div class="application-box">
+      <span class="label">Applied</span>
+      Solving other people's problems and over-explaining in texts leads to real depletion, and stopping the over-giving is sometimes met with a negative reaction &mdash; which is itself useful information about which relationships are actually reciprocal.
+    </div>
+  </section>
+
+  <section class="framework">
+    <h2>Framework C</h2>
+    <h3>Personal Development Time</h3>
+    <div class="steps">
+      <div class="step"><div class="circle">1</div><div class="step-text"><strong>Schedule 30 minutes daily</strong> for self-reflection and strategic thinking.</div></div>
+      <div class="step"><div class="circle">2</div><div class="step-text"><strong>Use the time deliberately</strong> &mdash; assess needs, plan changes, process what's happened.</div></div>
+      <div class="step"><div class="circle">3</div><div class="step-text"><strong>Treat it as non-negotiable</strong>, the same as a work meeting.</div></div>
+    </div>
+    <div class="application-box">
+      <span class="label">Applied</span>
+      Time set aside just for herself is rare, which has contributed to a loss of identity and direction. A daily block for reflection is what gives the other frameworks somewhere to actually land.
+    </div>
+  </section>
+
+  <div class="pull-quote">"You're the center of your world and have to be the center of your world."</div>
+
+  <section class="card">
+    <h2>Practical Instructions</h2>
+    <ul class="practical">
+      <li>Before responding to a text, send the simple version first instead of drafting three variations in your head.</li>
+      <li>Notice which specific person or task reliably drains you, and shorten your default response time to them by half.</li>
+      <li>Move one high-energy task to the first hour of the day this week and track whether it actually gets finished.</li>
+      <li>When advice-giving starts to feel like a reflex, check whether it was actually requested before continuing.</li>
+      <li>Book the lab follow-up for iron and B12 this week, not once energy improves on its own.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Assignment</h2>
+    <p>Over the next two weeks, keep an ongoing list of personal characteristics &mdash; good, bad, and neutral &mdash; noted in real time via phone or notebook as they show up in daily life. Be specific ("I'm helpful, but I have trouble saying no"). Bring the list to the next session for discussion.</p>
+  </section>
+
+  <section class="card">
+    <h2>Medication Note</h2>
+    <div class="med-block">
+      <h4>Iron / B12 Supplementation</h4>
+      <div class="med-tags">
+        <span class="tag warn">No infusion in 12+ months &mdash; schedule labs</span>
+        <span class="tag">B12 every other month currently</span>
+        <span class="tag">Advocate directly for infusion if indicated</span>
+      </div>
+    </div>
+    <div class="med-block">
+      <h4>ADHD Medication</h4>
+      <div class="med-tags">
+        <span class="tag">Continued, early morning</span>
+        <span class="tag warn">Monitor appetite / sleep disruption</span>
+        <span class="tag">Use medication window for self-care tasks</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Key Takeaways</h2>
+    <div class="takeaway-grid">
+      <div class="takeaway-card">Procrastination spikes track closely with dips in physical energy, not with a lack of motivation.</div>
+      <div class="takeaway-card">A relationship that consistently pays out less than what's given still functions like an unpaid debt.</div>
+      <div class="takeaway-card">The environment a task starts in changes how much friction there is to actually begin it.</div>
+      <div class="takeaway-card">Overthinking a text message is decision fatigue wearing a small, familiar disguise.</div>
+      <div class="takeaway-card">Skipped medical follow-up for anemia has been quietly compounding the energy problem for over a year.</div>
+      <div class="takeaway-card">Time spent alone in reflection isn't idle time &mdash; it's what makes the rest of the plan possible to execute.</div>
+      <div class="takeaway-card">Traits that don't fully change can still be managed once they're named specifically enough to see.</div>
+      <div class="takeaway-card">Being the one who solves everyone else's problems doesn't leave much energy for solving her own.</div>
+    </div>
+  </section>
+
+  <section class="bottom-line">
+    <h2>Bottom Line</h2>
+    <p>Energy, not willpower, is the actual constraint behind the procrastination. ADHD makes that constraint tighter, but it isn't the whole explanation for it &mdash; unmanaged anemia and an unbalanced relationship ledger are doing real work here too.</p>
+    <p>Giving 12 and getting paid for 8 isn't a moral failing on anyone's part. It's an imbalance that will keep draining the account until the terms actually change &mdash; through a boundary, a direct conversation, or both.</p>
+    <p>What changes first is treating medical follow-up, environment, and daily reflection time as non-negotiable inputs &mdash; the same way a paycheck or a scheduled meeting would be treated &mdash; rather than as things to get to once everything else is handled.</p>
+  </section>
+
+  <footer class="practice-footer">Alignment Psychiatry &middot; Clinical Session Insights</footer>
+
+</div>
+</body>
+</html>
