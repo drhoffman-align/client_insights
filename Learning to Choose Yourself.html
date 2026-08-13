@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learning to Choose Yourself: Breaking the Cycle of Over-Responsibility and Embracing Rest | Alignment Psychiatry</title>
+<style>
+  :root {
+    --burgundy: #6B2C3A;
+    --orange: #D67B4A;
+    --cream: #E8DFD6;
+    --dark-gray: #4A4A4A;
+    --light-gray: #B8B8B8;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--cream);
+    color: var(--dark-gray);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.65;
+  }
+
+  .page {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+  }
+
+  /* HEADER */
+  header {
+    background: linear-gradient(135deg, var(--burgundy) 0%, var(--dark-gray) 100%);
+    color: var(--cream);
+    text-align: center;
+    padding: 46px 30px 40px;
+    margin: 0 -20px 30px;
+    border-radius: 0 0 20px 20px;
+  }
+  header .brand {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 12px;
+    opacity: 0.85;
+    margin-bottom: 14px;
+  }
+  header h1 {
+    font-size: 25px;
+    margin: 0 0 12px;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+  header p.subtitle {
+    font-style: italic;
+    font-size: 15px;
+    opacity: 0.9;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  /* SECTIONS */
+  section.card {
+    background: #ffffff;
+    border-left: 6px solid var(--orange);
+    border-radius: 14px;
+    padding: 26px 30px;
+    margin-bottom: 22px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  section.card h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--burgundy);
+    margin: 0 0 16px;
+  }
+  section.card p { margin: 0 0 12px; font-size: 15px; }
+  section.card p:last-child { margin-bottom: 0; }
+
+  /* PULL QUOTES */
+  .pull-quote {
+    background: linear-gradient(120deg, var(--burgundy) 0%, var(--dark-gray) 100%);
+    color: var(--cream);
+    text-align: center;
+    font-style: italic;
+    font-size: 17px;
+    padding: 28px 36px;
+    border-radius: 14px;
+    margin: 26px 0;
+  }
+
+  /* CONCEPT GRID */
+  .concept-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .concept-card {
+    background: #f9f6f3;
+    border-top: 4px solid var(--orange);
+    border-radius: 10px;
+    padding: 16px 18px;
+  }
+  .concept-card h3 {
+    margin: 0 0 6px;
+    font-size: 15px;
+    color: var(--burgundy);
+  }
+  .concept-card p {
+    margin: 0;
+    font-size: 13.5px;
+    color: var(--dark-gray);
+  }
+
+  /* SPARKLE VS UNDERNEATH */
+  .distinction {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 18px 0 6px;
+    border: 1px solid #ece5db;
+  }
+  .distinction .col {
+    padding: 16px 18px;
+    font-size: 13.5px;
+  }
+  .distinction .col.left {
+    background: #f9f6f3;
+    border-right: 1px solid #ece5db;
+  }
+  .distinction .col.right {
+    background: #f4ede3;
+  }
+  .distinction .col h4 {
+    margin: 0 0 10px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .distinction .col.left h4 { color: var(--light-gray); }
+  .distinction .col.right h4 { color: var(--orange); }
+  .distinction .col ul { margin: 0; padding-left: 18px; }
+  .distinction .col li { margin-bottom: 6px; }
+
+  /* BEFORE / AFTER */
+  .role-shift {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin: 18px 0 6px;
+  }
+  .role-shift .box {
+    flex: 1 1 220px;
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-size: 13.5px;
+  }
+  .role-shift .before {
+    background: #f9f6f3;
+    border-top: 4px solid var(--light-gray);
+  }
+  .role-shift .after {
+    background: #f4ede3;
+    border-top: 4px solid var(--orange);
+  }
+  .role-shift .arrow {
+    font-size: 20px;
+    color: var(--orange);
+    flex: 0 0 auto;
+  }
+  .role-shift .label {
+    display: block;
+    text-transform: uppercase;
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    color: var(--dark-gray);
+    margin-bottom: 6px;
+  }
+
+  /* FRAMEWORKS */
+  section.framework {
+    background: #ffffff;
+    border-left: 6px solid var(--burgundy);
+    border-radius: 14px;
+    padding: 26px 30px;
+    margin-bottom: 22px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  section.framework > h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--dark-gray);
+    margin: 0 0 4px;
+  }
+  section.framework > h3 {
+    font-size: 19px;
+    color: var(--burgundy);
+    margin: 0 0 18px;
+  }
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .step {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .step .circle {
+    flex: 0 0 auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--burgundy);
+    color: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .step .step-text { font-size: 14.5px; padding-top: 4px; }
+  .step .step-text strong { color: var(--dark-gray); }
+
+  .application-box {
+    background: linear-gradient(135deg, #f4ede3 0%, #ede0d1 100%);
+    border-left: 4px solid var(--orange);
+    border-radius: 0 10px 10px 0;
+    padding: 14px 18px;
+    font-size: 14px;
+  }
+  .application-box .label {
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--burgundy);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  /* PRACTICAL INSTRUCTIONS */
+  ul.practical {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+  ul.practical li {
+    font-size: 14.5px;
+    padding: 10px 0 10px 30px;
+    position: relative;
+    border-bottom: 1px solid #ece5db;
+  }
+  ul.practical li:last-child { border-bottom: none; }
+  ul.practical li::before {
+    content: "\2192";
+    position: absolute;
+    left: 0;
+    color: var(--orange);
+    font-weight: bold;
+  }
+
+  /* MEDICATION TAGS */
+  .med-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .tag {
+    font-size: 12.5px;
+    background: #f9f6f3;
+    border: 1px solid var(--light-gray);
+    color: var(--dark-gray);
+    padding: 6px 14px;
+    border-radius: 20px;
+  }
+  .tag.warn {
+    border-color: var(--orange);
+    color: var(--burgundy);
+  }
+
+  /* TAKEAWAYS */
+  .takeaway-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .takeaway-card {
+    background: #f9f6f3;
+    border-left: 4px solid var(--orange);
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 13.5px;
+  }
+
+  /* BOTTOM LINE */
+  section.bottom-line {
+    background: linear-gradient(135deg, var(--burgundy) 0%, var(--dark-gray) 100%);
+    color: var(--cream);
+    border-radius: 14px;
+    padding: 30px 32px;
+    margin-bottom: 10px;
+  }
+  section.bottom-line h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--cream);
+    opacity: 0.85;
+    margin: 0 0 16px;
+  }
+  section.bottom-line p {
+    font-size: 15px;
+    margin: 0 0 14px;
+    opacity: 0.97;
+  }
+  section.bottom-line p:last-child { margin-bottom: 0; }
+
+  footer.practice-footer {
+    text-align: center;
+    font-size: 11.5px;
+    color: var(--dark-gray);
+    opacity: 0.7;
+    margin-top: 26px;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 640px) {
+    .concept-grid, .takeaway-grid, .distinction { grid-template-columns: 1fr; }
+    .distinction .col.left { border-right: none; border-bottom: 1px solid #ece5db; }
+    header h1 { font-size: 20px; }
+    section.card, section.framework, section.bottom-line { padding: 20px 18px; }
+    .role-shift { flex-direction: column; }
+    .role-shift .arrow { transform: rotate(90deg); }
+  }
+
+  /* PRINT */
+  @media print {
+    body { background: #fff; }
+    header, section.bottom-line { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    section.card, section.framework, .pull-quote, section.bottom-line {
+      break-inside: avoid;
+      page-break-inside: avoid;
+      box-shadow: none;
+    }
+    .page { max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="brand">Alignment Psychiatry</div>
+    <h1>&#129417; Learning to Choose Yourself: Breaking the Cycle of Over-Responsibility and Embracing Rest</h1>
+    <p class="subtitle">Redirecting the same advocacy given to everyone else toward her own well-being</p>
+  </header>
+
+  <section class="card">
+    <h2>The Situation</h2>
+    <p>Work currently feels overwhelming, with a constant, hypervigilant sense of responsibility for outcomes beyond her control. Communities she feels genuinely compelled to help also leave her feeling taken advantage of, and a new "maxi flex" schedule meant to offer flexibility has instead produced longer hours.</p>
+    <p>Boundaries are hard to hold, and the default is to prioritize others' needs. There's real pressure to make everything look composed despite ongoing crises underneath &mdash; and real conflict about whether taking FMLA is "justified," given that she can still function socially and maintain appearances.</p>
+    <p>A history of over-functioning and perfectionism in professional settings, past traumatic experiences in graduate school, and a learned discomfort with accepting rest as legitimate all sit underneath the current moment &mdash; alongside a tendency to compartmentalize work, family, and social life, and a support system that doesn't always fully understand what's going on.</p>
+  </section>
+
+  <section class="card">
+    <h2>Core Problem</h2>
+    <p>A chronic pattern of prioritizing others' needs and external demands over her own well-being has produced real exhaustion, resentment, and a lack of genuine rest. Decisions that are actually for herself are rare; the default is whatever benefits others or maintains the appearance of having it together.</p>
+    <p>There's a clear mismatch between how she appears &mdash; competent, high-achieving, a "rock star" &mdash; and how she actually feels: overwhelmed, unsafe, depleted. This pattern was learned early and has been reinforced by both professional and family dynamics ever since.</p>
+  </section>
+
+  <div class="pull-quote">"You almost always choose others."</div>
+
+  <section class="card">
+    <h2>The Sparkle vs. What's Underneath</h2>
+    <div class="distinction">
+      <div class="col left">
+        <h4>The Sparkle</h4>
+        <ul>
+          <li>Competent, high-achieving, "rock star"</li>
+          <li>Everything looks handled</li>
+          <li>Crises managed without visible cracks</li>
+        </ul>
+      </div>
+      <div class="col right">
+        <h4>Underneath</h4>
+        <ul>
+          <li>Hypervigilant, always "on"</li>
+          <li>Overwhelmed and unsafe</li>
+          <li>Genuinely depleted</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Understanding the Dynamics</h2>
+    <div class="concept-grid">
+      <div class="concept-card">
+        <h3>Hypervigilance</h3>
+        <p>A state of constant alertness, often built by chronic stress or trauma &mdash; always anticipating problems, always feeling responsible for preventing them.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Boundaries</h3>
+        <p>Limits that protect time, energy, and well-being &mdash; especially difficult to hold at work, where the cost of holding them can feel high.</p>
+      </div>
+      <div class="concept-card">
+        <h3>FMLA</h3>
+        <p>A legal provision allowing job-protected leave for medical or family reasons &mdash; reframed here as a tool for genuine healing, not just a last resort.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Psychological Safety</h3>
+        <p>Feeling mentally and emotionally protected from harm &mdash; distinct from appearing functional, and currently missing even while functioning looks intact.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Minority Tax</h3>
+        <p>The extra burden placed on someone from an underrepresented group to represent or advocate for their community, on top of their actual job.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="framework">
+    <h2>Framework A</h2>
+    <h3>The "Choosing Yourself" Framework</h3>
+    <div class="steps">
+      <div class="step"><div class="circle">1</div><div class="step-text"><strong>Notice the decision point</strong> &mdash; recognize when a choice is forming between your needs and someone else's.</div></div>
+      <div class="step"><div class="circle">2</div><div class="step-text"><strong>Pause and reflect</strong> &mdash; ask, "Who is this decision really for?"</div></div>
+      <div class="step"><div class="circle">3</div><div class="step-text"><strong>Assess safety and needs</strong> &mdash; what would actually feel safe and cared for right now?</div></div>
+      <div class="step"><div class="circle">4</div><div class="step-text"><strong>Experiment with choosing yourself</strong> &mdash; even when it feels uncomfortable or unfamiliar.</div></div>
+      <div class="step"><div class="circle">5</div><div class="step-text"><strong>Observe the outcome</strong> &mdash; notice what actually happens, internally and externally.</div></div>
+    </div>
+    <div class="application-box">
+      <span class="label">Applied</span>
+      Reluctance to take FMLA, and difficulty setting boundaries with colleagues, both trace back to a default of choosing others &mdash; like working extra hours specifically to "make things look good" for the team. The superhero who always falls on the sword is admirable and, eventually, unsustainable.
+    </div>
+  </section>
+
+  <section class="framework">
+    <h2>Framework B</h2>
+    <h3>The "Rest and Integration" Model</h3>
+    <div class="steps">
+      <div class="step"><div class="circle">1</div><div class="step-text"><strong>Acknowledge the need for rest</strong> &mdash; not a luxury, a necessity for healing.</div></div>
+      <div class="step"><div class="circle">2</div><div class="step-text"><strong>Create protected time</strong> &mdash; tools like FMLA can carve out real, uninterrupted space.</div></div>
+      <div class="step"><div class="circle">3</div><div class="step-text"><strong>Allow for discomfort</strong> &mdash; rest will likely feel strange or "unproductive" at first.</div></div>
+      <div class="step"><div class="circle">4</div><div class="step-text"><strong>Engage in reflection</strong> &mdash; use the time to process and reconnect with yourself.</div></div>
+      <div class="step"><div class="circle">5</div><div class="step-text"><strong>Integrate what you learn</strong> &mdash; bring it gradually into daily life.</div></div>
+    </div>
+    <div class="application-box">
+      <span class="label">Applied</span>
+      Previous time off was unplanned and never allowed for true rest or therapeutic work. Planned, intentional rest &mdash; supported by therapy &mdash; is what could actually interrupt the burnout cycle instead of just pausing it temporarily.
+    </div>
+    <div class="role-shift">
+      <div class="box before">
+        <span class="label">Before</span>
+        Works through every crisis, never fully rests, returns to old patterns
+      </div>
+      <div class="arrow">&#8594;</div>
+      <div class="box after">
+        <span class="label">After</span>
+        With intentional rest and reflection, learns boundaries and sustains healthier habits
+      </div>
+    </div>
+  </section>
+
+  <div class="pull-quote">"Only you can provide the protection you need, because only you know what you need, when you need it."</div>
+
+  <section class="card">
+    <h2>Practical Instructions</h2>
+    <ul class="practical">
+      <li>Before agreeing to extra hours "to make things look good," name specifically who benefits from that decision.</li>
+      <li>Track one physical sensation &mdash; jaw, shoulders, stomach &mdash; that shows up during hypervigilant moments, and note when it eases.</li>
+      <li>When guilt shows up about resting, write down what the guilt is actually protecting you from, rather than obeying it.</li>
+      <li>Practice saying "let me check and get back to you" before automatically agreeing to a new request.</li>
+      <li>Notice one moment this week where appearance and reality matched, and one where they didn't, without judging either.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Assignment</h2>
+    <p>Take an inventory of how you advocate for others at work &mdash; fighting for resources, protecting their time, ensuring their needs are met. Write a brief description of "work self": her qualities, strategies, and motivations. Reflect on what it would look like to apply that same advocacy to yourself. Bring your notes to the next session, Monday the 17th.</p>
+  </section>
+
+  <section class="card">
+    <h2>Medication Note</h2>
+    <div class="med-tags">
+      <span class="tag">No changes this session</span>
+      <span class="tag">Client reports feeling stable mentally, physically, emotionally</span>
+      <span class="tag warn">Plan confirmed appropriate &mdash; focus is on behavioral shifts</span>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Key Takeaways</h2>
+    <div class="takeaway-grid">
+      <div class="takeaway-card">A flexible schedule intended to reduce hours can quietly expand them instead, without it ever feeling like a decision was made.</div>
+      <div class="takeaway-card">Advocacy skills used constantly for other people have never been pointed toward herself with the same intensity.</div>
+      <div class="takeaway-card">Unplanned time off in the past didn't function as rest because nothing about it was actually protected or intentional.</div>
+      <div class="takeaway-card">Feeling responsible for a community's outcomes and being personally responsible for them are not the same thing.</div>
+      <div class="takeaway-card">A nervous system can register threat even when the external situation looks entirely manageable from the outside.</div>
+      <div class="takeaway-card">Guilt about taking FMLA is tracking a belief about worthiness, not an accurate read of medical necessity.</div>
+      <div class="takeaway-card">The discomfort of unstructured rest is an expected part of the adjustment, not evidence that rest isn't needed.</div>
+      <div class="takeaway-card">Appearing composed and actually being okay are separate facts that can diverge for a long time before either gets addressed.</div>
+    </div>
+  </section>
+
+  <section class="bottom-line">
+    <h2>Bottom Line</h2>
+    <p>Competence has made real depletion easy to miss &mdash; by colleagues, by family, and by herself &mdash; because the outward signs of struggle keep getting absorbed into an already-high baseline of functioning. Looking fine and being fine have quietly become the same thing on paper, without actually being the same thing underneath.</p>
+    <p>Rest hasn't worked as rest so far because it's never been protected or planned. An unplanned pause just delays the same pattern; it doesn't interrupt it. That distinction is what makes FMLA, used intentionally, different from simply taking time off.</p>
+    <p>Choosing herself requires the same deliberate advocacy already directed at other people's needs, redirected inward &mdash; starting with treating her own well-being as a case worth making, rather than a request that needs an apology attached to it.</p>
+  </section>
+
+  <footer class="practice-footer">Alignment Psychiatry &middot; Clinical Session Insights</footer>
+
+</div>
+</body>
+</html>
