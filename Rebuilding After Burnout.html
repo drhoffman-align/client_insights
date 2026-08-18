@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rebuilding After Burnout: Acceptance, Boundaries, and Self-Compassion in Bipolar Recovery | Alignment Psychiatry</title>
+<style>
+  :root {
+    --burgundy: #6B2C3A;
+    --orange: #D67B4A;
+    --cream: #E8DFD6;
+    --dark-gray: #4A4A4A;
+    --light-gray: #B8B8B8;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--cream);
+    color: var(--dark-gray);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.65;
+  }
+
+  .page {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+  }
+
+  header {
+    background: linear-gradient(135deg, var(--burgundy) 0%, var(--dark-gray) 100%);
+    color: var(--cream);
+    text-align: center;
+    padding: 46px 30px 40px;
+    margin: 0 -20px 30px;
+    border-radius: 0 0 20px 20px;
+  }
+  header .brand {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 12px;
+    opacity: 0.85;
+    margin-bottom: 14px;
+  }
+  header h1 {
+    font-size: 25px;
+    margin: 0 0 12px;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+  header p.subtitle {
+    font-style: italic;
+    font-size: 15px;
+    opacity: 0.9;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  section.card {
+    background: #ffffff;
+    border-left: 6px solid var(--orange);
+    border-radius: 14px;
+    padding: 26px 30px;
+    margin-bottom: 22px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  section.card h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--burgundy);
+    margin: 0 0 16px;
+  }
+  section.card p { margin: 0 0 12px; font-size: 15px; }
+  section.card p:last-child { margin-bottom: 0; }
+
+  .pull-quote {
+    background: linear-gradient(120deg, var(--burgundy) 0%, var(--dark-gray) 100%);
+    color: var(--cream);
+    text-align: center;
+    font-style: italic;
+    font-size: 17px;
+    padding: 28px 36px;
+    border-radius: 14px;
+    margin: 26px 0;
+  }
+
+  .concept-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .concept-card {
+    background: #f9f6f3;
+    border-top: 4px solid var(--orange);
+    border-radius: 10px;
+    padding: 16px 18px;
+  }
+  .concept-card h3 {
+    margin: 0 0 6px;
+    font-size: 15px;
+    color: var(--burgundy);
+  }
+  .concept-card p {
+    margin: 0;
+    font-size: 13.5px;
+    color: var(--dark-gray);
+  }
+
+  /* RUBBER BALL / TRAMPOLINE SHIFT */
+  .role-shift {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin: 18px 0 6px;
+  }
+  .role-shift .box {
+    flex: 1 1 220px;
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-size: 13.5px;
+  }
+  .role-shift .before {
+    background: #f9f6f3;
+    border-top: 4px solid var(--light-gray);
+  }
+  .role-shift .after {
+    background: #f4ede3;
+    border-top: 4px solid var(--orange);
+  }
+  .role-shift .arrow {
+    font-size: 20px;
+    color: var(--orange);
+    flex: 0 0 auto;
+  }
+  .role-shift .label {
+    display: block;
+    text-transform: uppercase;
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    color: var(--dark-gray);
+    margin-bottom: 6px;
+  }
+
+  /* ENERGY CYCLE PHASE STRIP */
+  .cycle-strip {
+    display: flex;
+    gap: 8px;
+    margin: 18px 0 6px;
+    flex-wrap: wrap;
+  }
+  .cycle-strip .phase {
+    flex: 1 1 130px;
+    border-radius: 10px;
+    padding: 14px 12px;
+    font-size: 12.5px;
+  }
+  .cycle-strip .phase .stage {
+    display: block;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 0.07em;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  .cycle-strip .phase.mania { background: var(--burgundy); color: var(--cream); }
+  .cycle-strip .phase.crash { background: #8a3f4f; color: var(--cream); }
+  .cycle-strip .phase.depression { background: #ecd9c7; color: var(--dark-gray); }
+  .cycle-strip .phase.rebuild { background: #f9f6f3; color: var(--dark-gray); border: 1px solid #ece5db; }
+
+  section.framework {
+    background: #ffffff;
+    border-left: 6px solid var(--burgundy);
+    border-radius: 14px;
+    padding: 26px 30px;
+    margin-bottom: 22px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  section.framework > h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--dark-gray);
+    margin: 0 0 4px;
+  }
+  section.framework > h3 {
+    font-size: 19px;
+    color: var(--burgundy);
+    margin: 0 0 18px;
+  }
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .step {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .step .circle {
+    flex: 0 0 auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--burgundy);
+    color: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .step .step-text { font-size: 14.5px; padding-top: 4px; }
+  .step .step-text strong { color: var(--dark-gray); }
+
+  .application-box {
+    background: linear-gradient(135deg, #f4ede3 0%, #ede0d1 100%);
+    border-left: 4px solid var(--orange);
+    border-radius: 0 10px 10px 0;
+    padding: 14px 18px;
+    font-size: 14px;
+  }
+  .application-box .label {
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--burgundy);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  ul.practical {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+  ul.practical li {
+    font-size: 14.5px;
+    padding: 10px 0 10px 30px;
+    position: relative;
+    border-bottom: 1px solid #ece5db;
+  }
+  ul.practical li:last-child { border-bottom: none; }
+  ul.practical li::before {
+    content: "\2192";
+    position: absolute;
+    left: 0;
+    color: var(--orange);
+    font-weight: bold;
+  }
+
+  .takeaway-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .takeaway-card {
+    background: #f9f6f3;
+    border-left: 4px solid var(--orange);
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 13.5px;
+  }
+
+  section.bottom-line {
+    background: linear-gradient(135deg, var(--burgundy) 0%, var(--dark-gray) 100%);
+    color: var(--cream);
+    border-radius: 14px;
+    padding: 30px 32px;
+    margin-bottom: 10px;
+  }
+  section.bottom-line h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--cream);
+    opacity: 0.85;
+    margin: 0 0 16px;
+  }
+  section.bottom-line p {
+    font-size: 15px;
+    margin: 0 0 14px;
+    opacity: 0.97;
+  }
+  section.bottom-line p:last-child { margin-bottom: 0; }
+
+  footer.practice-footer {
+    text-align: center;
+    font-size: 11.5px;
+    color: var(--dark-gray);
+    opacity: 0.7;
+    margin-top: 26px;
+  }
+
+  @media (max-width: 640px) {
+    .concept-grid, .takeaway-grid { grid-template-columns: 1fr; }
+    header h1 { font-size: 20px; }
+    section.card, section.framework, section.bottom-line { padding: 20px 18px; }
+    .role-shift { flex-direction: column; }
+    .role-shift .arrow { transform: rotate(90deg); }
+    .cycle-strip { flex-direction: column; }
+  }
+
+  @media print {
+    body { background: #fff; }
+    header, section.bottom-line, .cycle-strip .phase.mania, .cycle-strip .phase.crash {
+      -webkit-print-color-adjust: exact; print-color-adjust: exact;
+    }
+    section.card, section.framework, .pull-quote, section.bottom-line {
+      break-inside: avoid;
+      page-break-inside: avoid;
+      box-shadow: none;
+    }
+    .page { max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="brand">Alignment Psychiatry</div>
+    <h1>&#127793; Rebuilding After Burnout: Acceptance, Boundaries, and Self-Compassion in Bipolar Recovery</h1>
+    <p class="subtitle">The version of you that could do everything for everyone was never a baseline to get back to</p>
+  </header>
+
+  <section class="card">
+    <h2>The Situation</h2>
+    <p>A profound lack of motivation, energy, and pleasure has set in &mdash; a "blank" feeling that makes creativity, drive, and confidence hard to access. This follows a long period of high achievement and over-functioning, especially in service of others, that ultimately led to burnout and a manic episode. The current depressive phase brings depletion, self-criticism, and pressure from job searching, financial stress, and outside expectations.</p>
+    <p>A history of bipolar disorder, ADHD, PTSD, and anxiety sits alongside longstanding patterns of self-abandonment, people-pleasing, and difficulty setting boundaries &mdash; compounded by past disappointment when others failed to reciprocate effort or took advantage of ideas freely given.</p>
+  </section>
+
+  <section class="card">
+    <h2>Core Problem</h2>
+    <p>A cycle of self-abandonment and overextension, driven by external validation and a "Superman" identity, has resulted in severe burnout and the depressive symptoms now present. Self-worth has been tied to performance and meeting others' needs, leaving little protection against depletion.</p>
+    <p>A persistent mismatch between current capacity and expectations &mdash; fueled by constant comparison to a past self that was unsustainably productive &mdash; produces harsh self-criticism and blocks access to motivation or pleasure.</p>
+  </section>
+
+  <div class="pull-quote">"You were Superman for everybody else, but you weren't there to protect yourself."</div>
+
+  <section class="card">
+    <h2>Understanding the Dynamics</h2>
+    <div class="concept-grid">
+      <div class="concept-card">
+        <h3>Anhedonia</h3>
+        <p>The inability to feel pleasure or joy from things that used to be enjoyable &mdash; showing up here as a persistent, unmotivated "blankness."</p>
+      </div>
+      <div class="concept-card">
+        <h3>Self-Abandonment</h3>
+        <p>Neglecting your own needs in favor of meeting others' expectations &mdash; giving continuously without setting boundaries or protecting your own well-being.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Ego Death</h3>
+        <p>The loss of a previously held identity. The "Superman" identity &mdash; doing everything for everyone &mdash; has collapsed, leaving room to rebuild something more authentic.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Comparison to a Past Self</h3>
+        <p>Measuring current capacity against a prior, high-output version of yourself &mdash; a pattern that reliably produces a sense of falling short.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Self-Forgiveness</h3>
+        <p>Releasing "shoulda, coulda, woulda" thinking about past decisions, made with the knowledge and capacity available at the time.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="framework">
+    <h2>Framework A</h2>
+    <h3>Energy and Bipolar Disorder</h3>
+    <div class="steps">
+      <div class="step"><div class="circle">1</div><div class="step-text"><strong>Understand the cycle</strong> &mdash; mania as high energy, depression as energy depletion.</div></div>
+      <div class="step"><div class="circle">2</div><div class="step-text"><strong>Recognize</strong> that mania and hypomania often overuse energy reserves, making a crash inevitable.</div></div>
+      <div class="step"><div class="circle">3</div><div class="step-text"><strong>Accept</strong> that the "Superman" phase was unsustainable, not a true baseline.</div></div>
+      <div class="step"><div class="circle">4</div><div class="step-text"><strong>Identify the need</strong> for boundaries and self-protection to prevent future depletion.</div></div>
+    </div>
+    <div class="application-box">
+      <span class="label">Applied</span>
+      The "Superman" phase was a prolonged period of overextension, not a sustainable baseline. Current exhaustion is a direct, physiological result of that period &mdash; not a personal flaw.
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>The Bipolar Energy Cycle</h2>
+    <div class="cycle-strip">
+      <div class="phase mania"><span class="stage">Mania</span>High energy, overextension for others</div>
+      <div class="phase crash"><span class="stage">Crash</span>Reserves run out</div>
+      <div class="phase depression"><span class="stage">Depression</span>Depletion, anhedonia, self-criticism</div>
+      <div class="phase rebuild"><span class="stage">Rebuilding</span>Boundaries, acceptance, support</div>
+    </div>
+  </section>
+
+  <section class="framework">
+    <h2>Framework B</h2>
+    <h3>Acceptance vs. Effort Discrepancy</h3>
+    <div class="steps">
+      <div class="step"><div class="circle">1</div><div class="step-text"><strong>Identify</strong> what you're actually capable of right now.</div></div>
+      <div class="step"><div class="circle">2</div><div class="step-text"><strong>Notice the gap</strong> between your expectations and your current reality.</div></div>
+      <div class="step"><div class="circle">3</div><div class="step-text"><strong>Understand</strong> that pushing for effort without acceptance increases suffering and burnout.</div></div>
+      <div class="step"><div class="circle">4</div><div class="step-text"><strong>Use acceptance</strong> to set realistic expectations and reduce self-criticism.</div></div>
+    </div>
+    <div class="application-box">
+      <span class="label">Applied</span>
+      Daily self-criticism ("I should be better") is rooted in comparing to an over-functioning past self. Accepting the current state &mdash; not the old one &mdash; is what makes compassionate, realistic goal-setting possible.
+    </div>
+  </section>
+
+  <section class="framework">
+    <h2>Framework C</h2>
+    <h3>Resource Mapping and Vulnerability Practice</h3>
+    <div class="steps">
+      <div class="step"><div class="circle">1</div><div class="step-text"><strong>List all available resources</strong> &mdash; people, organizations, tangible supports.</div></div>
+      <div class="step"><div class="circle">2</div><div class="step-text"><strong>List "resources to resources"</strong> &mdash; connections that might lead to further help.</div></div>
+      <div class="step"><div class="circle">3</div><div class="step-text"><strong>List your actual needs.</strong></div></div>
+      <div class="step"><div class="circle">4</div><div class="step-text"><strong>Practice vulnerability</strong> by reaching out and explaining your situation honestly.</div></div>
+      <div class="step"><div class="circle">5</div><div class="step-text"><strong>Use written communication</strong> &mdash; letters or emails often land better than verbal requests.</div></div>
+    </div>
+    <div class="application-box">
+      <span class="label">Applied</span>
+      Instead of isolating or assuming rejection, reaching out becomes the practice &mdash; for example, writing a letter requesting more time or support rather than assuming the answer will be no.
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Rubber Ball to Trampoline</h2>
+    <div class="role-shift">
+      <div class="box before">
+        <span class="label">Rubber ball</span>
+        Needs something external to bounce off of &mdash; currently deflated, unable to bounce
+      </div>
+      <div class="arrow">&#8594;</div>
+      <div class="box after">
+        <span class="label">Trampoline</span>
+        Builds its own internal support and boundaries &mdash; doesn't depend on external structure to function
+      </div>
+    </div>
+  </section>
+
+  <div class="pull-quote">"Don't be so quick to tell yourself no before somebody else can."</div>
+
+  <section class="card">
+    <h2>Practical Instructions</h2>
+    <ul class="practical">
+      <li>Before turning down a chance to rest, ask whether you're protecting your recovery or repeating the old pattern of proving you're fine.</li>
+      <li>When drafting a request for help, write the actual ask in one sentence before adding any context or apology around it.</li>
+      <li>Keep a short list of what you completed today, however small, separate from any list of what you didn't get to.</li>
+      <li>Notice which invitations or asks come from people who've reciprocated before, and start there first.</li>
+      <li>When a wave of "I should be doing more" hits, name what phase you're actually in &mdash; manic, crash, depressive, rebuilding &mdash; before deciding what to do about it.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Assignment</h2>
+    <p>Complete a resource map this week &mdash; your supports, who might connect you to more, and your actual needs &mdash; and draft at least one letter or email requesting help from someone on that list. Alongside it, write a brief daily reflection on what you can accept about yourself that day, and use the practice's conflict resolution rubric to structure any difficult conversations. Bring your lists, drafts, and journal notes to the next session.</p>
+  </section>
+
+  <section class="card">
+    <h2>Key Takeaways</h2>
+    <div class="takeaway-grid">
+      <div class="takeaway-card">Depressive symptoms following a manic phase are a physiological consequence of depleted reserves, not a character flaw.</div>
+      <div class="takeaway-card">An identity built around meeting everyone else's needs was never a stable baseline to return to.</div>
+      <div class="takeaway-card">Measuring today's capacity against a past high-output version of yourself guarantees a sense of falling short.</div>
+      <div class="takeaway-card">Accepting your current limits is what makes realistic, compassionate goal-setting possible.</div>
+      <div class="takeaway-card">Asking for help before assuming rejection leaves room for a different answer than the one you expect.</div>
+      <div class="takeaway-card">A written request can carry a case for support more clearly than an in-the-moment conversation.</div>
+      <div class="takeaway-card">Small, completed actions count as progress, even when they don't resemble what used to be possible.</div>
+      <div class="takeaway-card">Rebuilding internal structure is different work than relying on external structure to hold you up.</div>
+    </div>
+  </section>
+
+  <section class="bottom-line">
+    <h2>Bottom Line</h2>
+    <p>The exhaustion and anhedonia here aren't a moral failing or a sign of losing capability. They're the physiological bill coming due after an extended period of running on reserves that were never meant to be sustained indefinitely.</p>
+    <p>The "Superman" self wasn't a truer, better version to get back to &mdash; it was a version built for other people's needs. Holding current capacity against that standard will keep producing a sense of failure no matter what actually gets done.</p>
+    <p>Building a trampoline instead of relying on being a rubber ball means creating internal structure &mdash; boundaries, self-acceptance, the willingness to ask &mdash; that doesn't depend on staying in overdrive. Recovery, done this way, doesn't just mean returning to the same unsustainable bounce.</p>
+  </section>
+
+  <footer class="practice-footer">Alignment Psychiatry &middot; Clinical Session Insights</footer>
+
+</div>
+</body>
+</html>
