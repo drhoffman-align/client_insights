@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Optimizing Energy and Structure: Building Sustainable Routines with Narcolepsy | Alignment Psychiatry</title>
+<style>
+  :root {
+    --burgundy: #6B2C3A;
+    --orange: #D67B4A;
+    --cream: #E8DFD6;
+    --dark-gray: #4A4A4A;
+    --light-gray: #B8B8B8;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--cream);
+    color: var(--dark-gray);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.65;
+  }
+
+  .page {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+  }
+
+  header {
+    background: linear-gradient(135deg, var(--burgundy) 0%, var(--dark-gray) 100%);
+    color: var(--cream);
+    text-align: center;
+    padding: 46px 30px 40px;
+    margin: 0 -20px 30px;
+    border-radius: 0 0 20px 20px;
+  }
+  header .brand {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 12px;
+    opacity: 0.85;
+    margin-bottom: 14px;
+  }
+  header h1 {
+    font-size: 25px;
+    margin: 0 0 12px;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+  header p.subtitle {
+    font-style: italic;
+    font-size: 15px;
+    opacity: 0.9;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  section.card {
+    background: #ffffff;
+    border-left: 6px solid var(--orange);
+    border-radius: 14px;
+    padding: 26px 30px;
+    margin-bottom: 22px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  section.card h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--burgundy);
+    margin: 0 0 16px;
+  }
+  section.card p { margin: 0 0 12px; font-size: 15px; }
+  section.card p:last-child { margin-bottom: 0; }
+
+  .pull-quote {
+    background: linear-gradient(120deg, var(--burgundy) 0%, var(--dark-gray) 100%);
+    color: var(--cream);
+    text-align: center;
+    font-style: italic;
+    font-size: 17px;
+    padding: 28px 36px;
+    border-radius: 14px;
+    margin: 26px 0;
+  }
+
+  .concept-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .concept-card {
+    background: #f9f6f3;
+    border-top: 4px solid var(--orange);
+    border-radius: 10px;
+    padding: 16px 18px;
+  }
+  .concept-card h3 {
+    margin: 0 0 6px;
+    font-size: 15px;
+    color: var(--burgundy);
+  }
+  .concept-card p {
+    margin: 0;
+    font-size: 13.5px;
+    color: var(--dark-gray);
+  }
+
+  /* BEFORE / AFTER */
+  .role-shift {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin: 18px 0 6px;
+  }
+  .role-shift .box {
+    flex: 1 1 220px;
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-size: 13.5px;
+  }
+  .role-shift .before {
+    background: #f9f6f3;
+    border-top: 4px solid var(--light-gray);
+  }
+  .role-shift .after {
+    background: #f4ede3;
+    border-top: 4px solid var(--orange);
+  }
+  .role-shift .arrow {
+    font-size: 20px;
+    color: var(--orange);
+    flex: 0 0 auto;
+  }
+  .role-shift .label {
+    display: block;
+    text-transform: uppercase;
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    color: var(--dark-gray);
+    margin-bottom: 6px;
+  }
+
+  /* DAY ARCHITECTURE TIMELINE */
+  .day-strip {
+    display: flex;
+    gap: 8px;
+    margin: 18px 0 6px;
+    flex-wrap: wrap;
+  }
+  .day-strip .slot {
+    flex: 1 1 150px;
+    border-radius: 10px;
+    padding: 14px 14px;
+    font-size: 12.5px;
+  }
+  .day-strip .slot .time {
+    display: block;
+    text-transform: uppercase;
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  .day-strip .slot.peak {
+    background: var(--burgundy);
+    color: var(--cream);
+  }
+  .day-strip .slot.moderate {
+    background: #ecd9c7;
+    color: var(--dark-gray);
+  }
+  .day-strip .slot.low {
+    background: #f9f6f3;
+    color: var(--dark-gray);
+    border: 1px solid #ece5db;
+  }
+
+  section.framework {
+    background: #ffffff;
+    border-left: 6px solid var(--burgundy);
+    border-radius: 14px;
+    padding: 26px 30px;
+    margin-bottom: 22px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  section.framework > h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--dark-gray);
+    margin: 0 0 4px;
+  }
+  section.framework > h3 {
+    font-size: 19px;
+    color: var(--burgundy);
+    margin: 0 0 18px;
+  }
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .step {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .step .circle {
+    flex: 0 0 auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--burgundy);
+    color: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .step .step-text { font-size: 14.5px; padding-top: 4px; }
+  .step .step-text strong { color: var(--dark-gray); }
+
+  .application-box {
+    background: linear-gradient(135deg, #f4ede3 0%, #ede0d1 100%);
+    border-left: 4px solid var(--orange);
+    border-radius: 0 10px 10px 0;
+    padding: 14px 18px;
+    font-size: 14px;
+  }
+  .application-box .label {
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--burgundy);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  ul.practical {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+  ul.practical li {
+    font-size: 14.5px;
+    padding: 10px 0 10px 30px;
+    position: relative;
+    border-bottom: 1px solid #ece5db;
+  }
+  ul.practical li:last-child { border-bottom: none; }
+  ul.practical li::before {
+    content: "\2192";
+    position: absolute;
+    left: 0;
+    color: var(--orange);
+    font-weight: bold;
+  }
+
+  .med-block {
+    margin-bottom: 16px;
+  }
+  .med-block:last-child { margin-bottom: 0; }
+  .med-block h3 {
+    font-size: 14px;
+    color: var(--burgundy);
+    margin: 0 0 8px;
+  }
+  .med-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .tag {
+    font-size: 12.5px;
+    background: #f9f6f3;
+    border: 1px solid var(--light-gray);
+    color: var(--dark-gray);
+    padding: 6px 14px;
+    border-radius: 20px;
+  }
+  .tag.warn {
+    border-color: var(--orange);
+    color: var(--burgundy);
+  }
+
+  .takeaway-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .takeaway-card {
+    background: #f9f6f3;
+    border-left: 4px solid var(--orange);
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 13.5px;
+  }
+
+  section.bottom-line {
+    background: linear-gradient(135deg, var(--burgundy) 0%, var(--dark-gray) 100%);
+    color: var(--cream);
+    border-radius: 14px;
+    padding: 30px 32px;
+    margin-bottom: 10px;
+  }
+  section.bottom-line h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--cream);
+    opacity: 0.85;
+    margin: 0 0 16px;
+  }
+  section.bottom-line p {
+    font-size: 15px;
+    margin: 0 0 14px;
+    opacity: 0.97;
+  }
+  section.bottom-line p:last-child { margin-bottom: 0; }
+
+  footer.practice-footer {
+    text-align: center;
+    font-size: 11.5px;
+    color: var(--dark-gray);
+    opacity: 0.7;
+    margin-top: 26px;
+  }
+
+  @media (max-width: 640px) {
+    .concept-grid, .takeaway-grid { grid-template-columns: 1fr; }
+    header h1 { font-size: 20px; }
+    section.card, section.framework, section.bottom-line { padding: 20px 18px; }
+    .role-shift { flex-direction: column; }
+    .role-shift .arrow { transform: rotate(90deg); }
+    .day-strip { flex-direction: column; }
+  }
+
+  @media print {
+    body { background: #fff; }
+    header, section.bottom-line, .day-strip .slot.peak {
+      -webkit-print-color-adjust: exact; print-color-adjust: exact;
+    }
+    section.card, section.framework, .pull-quote, section.bottom-line {
+      break-inside: avoid;
+      page-break-inside: avoid;
+      box-shadow: none;
+    }
+    .page { max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="brand">Alignment Psychiatry</div>
+    <h1>&#129530; Optimizing Energy and Structure: Building Sustainable Routines with Narcolepsy</h1>
+    <p class="subtitle">Meaningful projects deserve the energy that's actually available, not just whatever's left over</p>
+  </header>
+
+  <section class="card">
+    <h2>The Situation</h2>
+    <p>Narcolepsy brings significant daytime fatigue that affects both productivity and motivation. Even with medication, tiredness persists and energy is hard to sustain across a full day. Work tasks get done reliably, driven by external incentive, but personal goals like sewing and house projects consistently lose out.</p>
+    <p>Daily tasks bring a real sense of overwhelm, decision-making around meals feels especially draining, and social connection has become harder to maintain &mdash; with a growing default toward doing everything alone.</p>
+  </section>
+
+  <section class="card">
+    <h2>Core Problem</h2>
+    <p>Energy depletion and overwhelm are making it difficult to prioritize and complete anything beyond work. The current medication regimen isn't fully controlling fatigue, and there's a real mismatch between the desire to accomplish personal projects and the energy actually available, especially as the day wears on.</p>
+    <p>Decision fatigue compounds the problem, turning routine tasks like meal planning and cleaning into something burdensome. Social connection keeps getting deprioritized, which reinforces isolation over time.</p>
+  </section>
+
+  <div class="pull-quote">"You only get 100 decisions a day... if you waste five on dinner, that could have gone to something else."</div>
+
+  <section class="card">
+    <h2>Understanding the Dynamics</h2>
+    <div class="concept-grid">
+      <div class="concept-card">
+        <h3>Narcolepsy</h3>
+        <p>A neurological disorder causing excessive daytime sleepiness and sudden sleep attacks &mdash; making energy a precious, carefully managed resource.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Decision Budget</h3>
+        <p>Treating daily decision-making capacity as a literal, finite currency &mdash; every small choice spends from the same limited supply.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Self-Sufficiency as Isolation</h3>
+        <p>A default toward handling everything alone that, over time, can quietly narrow a support network down to no one.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Externally vs. Internally Motivated Tasks</h3>
+        <p>Work gets finished because it's incentivized from outside; personal passions need the same intentional structure to get the same follow-through.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="framework">
+    <h2>Framework A</h2>
+    <h3>Energy Optimization</h3>
+    <div class="steps">
+      <div class="step"><div class="circle">1</div><div class="step-text"><strong>Prioritize high-energy tasks</strong> &mdash; like sewing or projects &mdash; earlier in the day, when medication is most effective.</div></div>
+      <div class="step"><div class="circle">2</div><div class="step-text"><strong>Schedule routine tasks</strong> &mdash; like cleaning &mdash; for later, when energy is lower.</div></div>
+      <div class="step"><div class="circle">3</div><div class="step-text"><strong>Limit repetitive chores</strong> to a set time, such as one hour of cleaning max.</div></div>
+      <div class="step"><div class="circle">4</div><div class="step-text"><strong>Map out larger projects</strong> in advance, broken into smaller, manageable steps.</div></div>
+      <div class="step"><div class="circle">5</div><div class="step-text"><strong>Accept incomplete tasks</strong> when necessary, and plan to revisit them when energy returns.</div></div>
+    </div>
+    <div class="application-box">
+      <span class="label">Applied</span>
+      Sewing is a genuine passion that often gets pushed to the end of the day, when energy is lowest. Moving it to a morning or early-evening slot, while medicated, allows real progress and a real sense of fulfillment.
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Everything at Once vs. Spread Out</h2>
+    <div class="role-shift">
+      <div class="box before">
+        <span class="label">Before</span>
+        Tries to do everything at once, leading to exhaustion and incomplete tasks
+      </div>
+      <div class="arrow">&#8594;</div>
+      <div class="box after">
+        <span class="label">After</span>
+        Tasks spread out and prioritized, reducing stress and increasing satisfaction
+      </div>
+    </div>
+  </section>
+
+  <section class="framework">
+    <h2>Framework B</h2>
+    <h3>Decision Fatigue Reduction</h3>
+    <div class="steps">
+      <div class="step"><div class="circle">1</div><div class="step-text"><strong>Create a master list</strong> of go-to meals and routines.</div></div>
+      <div class="step"><div class="circle">2</div><div class="step-text"><strong>Use the list</strong> to plan meals and grocery shopping, minimizing daily decision-making.</div></div>
+      <div class="step"><div class="circle">3</div><div class="step-text"><strong>Automate or standardize</strong> repetitive choices wherever possible.</div></div>
+    </div>
+    <div class="application-box">
+      <span class="label">Applied</span>
+      Meals currently get "winged," leading to wasted energy and repetitive last-minute choices. A running list of favorites makes planning and shopping easier and frees up mental space for what actually needs a decision.
+    </div>
+  </section>
+
+  <section class="framework">
+    <h2>Framework C</h2>
+    <h3>Block Scheduling</h3>
+    <div class="steps">
+      <div class="step"><div class="circle">1</div><div class="step-text"><strong>Redo the daily schedule</strong> to reflect actual energy peaks and valleys.</div></div>
+      <div class="step"><div class="circle">2</div><div class="step-text"><strong>Block out time</strong> for work, personal projects, cleaning, fitness, and relaxation.</div></div>
+      <div class="step"><div class="circle">3</div><div class="step-text"><strong>Assign specific tasks</strong> to specific time blocks, prioritizing personal goals during high-energy periods.</div></div>
+    </div>
+    <div class="application-box">
+      <span class="label">Applied</span>
+      Instead of letting chores and projects pile up indefinitely, specific times get dedicated to them &mdash; weekends for projects, one hour daily for cleaning &mdash; with tasks broken into smaller, less daunting steps.
+    </div>
+    <div class="day-strip">
+      <div class="slot peak"><span class="time">Morning &mdash; peak</span>Sewing, high-value personal projects</div>
+      <div class="slot moderate"><span class="time">Midday &mdash; moderate</span>Work tasks, already incentivized</div>
+      <div class="slot low"><span class="time">Evening &mdash; low</span>Limited cleaning, fitness, rest</div>
+    </div>
+  </section>
+
+  <div class="pull-quote">"You work your energy, you work with your energy."</div>
+
+  <section class="card">
+    <h2>Practical Instructions</h2>
+    <ul class="practical">
+      <li>Before starting a task, ask which time block it belongs in &mdash; if it doesn't fit the block you're in, note it for later instead of starting now.</li>
+      <li>Pick one small, low-stakes decision each day (what to wear, what route to take) and pre-decide it the night before to save that decision for the morning.</li>
+      <li>When a project gets left unfinished for the day, write down the exact next step before you stop, so restarting doesn't require re-deciding where you left off.</li>
+      <li>Once a week, notice one moment you defaulted to doing something alone that could have been shared or asked for help with.</li>
+      <li>At the end of each day, name one thing that got done during your peak energy window, separate from everything that didn't get to.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Assignment</h2>
+    <p>Redo your daily schedule to align high-energy tasks like sewing with your medicated peak hours, and block out set time for cleaning, projects, and fitness. Build a running list of go-to meals to simplify planning and shopping, and choose one house project to break into steps for this weekend. Bring your schedule, meal list, and project notes to the next session.</p>
+  </section>
+
+  <section class="card">
+    <h2>Medication Note</h2>
+    <div class="med-block">
+      <h3>Modafinil</h3>
+      <div class="med-tags">
+        <span class="tag">Increase to 400mg (two 200mg tablets, morning)</span>
+        <span class="tag">For wakefulness and sustained energy</span>
+        <span class="tag warn">Monitor: headache, nausea, anxiety, insomnia</span>
+      </div>
+    </div>
+    <div class="med-block">
+      <h3>Stimulants (ER / IR)</h3>
+      <div class="med-tags">
+        <span class="tag">Discuss increase to 15mg ER / 10mg IR with neurologist</span>
+        <span class="tag">For continued wakefulness support</span>
+        <span class="tag warn">Monitor: increased heart rate, jitteriness, insomnia, appetite changes</span>
+        <span class="tag warn">Take only as prescribed</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Key Takeaways</h2>
+    <div class="takeaway-grid">
+      <div class="takeaway-card">Energy, not just available time, should determine when a task gets scheduled.</div>
+      <div class="takeaway-card">Work gets finished reliably because it's externally incentivized &mdash; personal passions need the same intentional scheduling to get the same follow-through.</div>
+      <div class="takeaway-card">Every small decision draws from the same limited daily supply, whether it's spent on dinner or on something that matters more.</div>
+      <div class="takeaway-card">Leaving a project unfinished for the day is a plan, not a failure, when the next step is already written down.</div>
+      <div class="takeaway-card">A repeating, minimal cleaning window prevents chores from expanding to fill unlimited time.</div>
+      <div class="takeaway-card">Defaulting to self-sufficiency can quietly narrow a support network down to just yourself.</div>
+      <div class="takeaway-card">Medication timing and task timing work together &mdash; matching the two is part of the treatment plan, not separate from it.</div>
+      <div class="takeaway-card">Feeling accomplished comes from completing what was prioritized, not from completing everything.</div>
+    </div>
+  </section>
+
+  <section class="bottom-line">
+    <h2>Bottom Line</h2>
+    <p>Narcolepsy makes energy a genuinely finite, precious resource. The problem isn't a lack of discipline or motivation &mdash; it's that meaningful personal activities have been getting whatever energy is left over, instead of the energy that's actually available.</p>
+    <p>Every choice, no matter how small, draws from the same limited daily capacity. Removing unnecessary ones &mdash; what to eat, when to clean &mdash; isn't a minor convenience. It's energy redirected toward things that actually matter.</p>
+    <p>Block scheduling and medication adjustments aren't about doing more. They're about making sure the things worth doing get the energy that's actually available for them &mdash; and accepting an unfinished task is part of that plan, not a departure from it.</p>
+  </section>
+
+  <footer class="practice-footer">Alignment Psychiatry &middot; Clinical Session Insights</footer>
+
+</div>
+</body>
+</html>
