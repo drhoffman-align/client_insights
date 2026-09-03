@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finding Freedom: Navigating Anxiety, Authenticity, and Friendship Dynamics | Alignment Psychiatry</title>
+<style>
+  :root {
+    --burgundy: #6B2C3A;
+    --orange: #D67B4A;
+    --cream: #E8DFD6;
+    --dark-gray: #4A4A4A;
+    --light-gray: #B8B8B8;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--cream);
+    color: var(--dark-gray);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.65;
+  }
+
+  .page {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+  }
+
+  header {
+    background: linear-gradient(135deg, var(--burgundy) 0%, var(--dark-gray) 100%);
+    color: var(--cream);
+    text-align: center;
+    padding: 46px 30px 40px;
+    margin: 0 -20px 30px;
+    border-radius: 0 0 20px 20px;
+  }
+  header .brand {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 12px;
+    opacity: 0.85;
+    margin-bottom: 14px;
+  }
+  header h1 {
+    font-size: 25px;
+    margin: 0 0 12px;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+  header p.subtitle {
+    font-style: italic;
+    font-size: 15px;
+    opacity: 0.9;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  section.card {
+    background: #ffffff;
+    border-left: 6px solid var(--orange);
+    border-radius: 14px;
+    padding: 26px 30px;
+    margin-bottom: 22px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  section.card h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--burgundy);
+    margin: 0 0 16px;
+  }
+  section.card p { margin: 0 0 12px; font-size: 15px; }
+  section.card p:last-child { margin-bottom: 0; }
+
+  .pull-quote {
+    background: linear-gradient(120deg, var(--burgundy) 0%, var(--dark-gray) 100%);
+    color: var(--cream);
+    text-align: center;
+    font-style: italic;
+    font-size: 17px;
+    padding: 28px 36px;
+    border-radius: 14px;
+    margin: 26px 0;
+  }
+
+  .concept-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .concept-card {
+    background: #f9f6f3;
+    border-top: 4px solid var(--orange);
+    border-radius: 10px;
+    padding: 16px 18px;
+  }
+  .concept-card h3 {
+    margin: 0 0 6px;
+    font-size: 15px;
+    color: var(--burgundy);
+  }
+  .concept-card p {
+    margin: 0;
+    font-size: 13.5px;
+    color: var(--dark-gray);
+  }
+
+  /* TWO CIRCLES DISTINCTION */
+  .distinction {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 18px 0 6px;
+  }
+  .distinction .col {
+    border-radius: 10px;
+    padding: 16px 18px;
+  }
+  .distinction .col.left {
+    background: #f9f6f3;
+    border-top: 4px solid var(--light-gray);
+  }
+  .distinction .col.right {
+    background: #f4ede3;
+    border-top: 4px solid var(--orange);
+  }
+  .distinction h4 {
+    margin: 0 0 10px;
+    font-size: 14px;
+    color: var(--burgundy);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .distinction ul {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 13.5px;
+  }
+  .distinction li { margin-bottom: 6px; }
+
+  /* COMMUNICATION COMFORT SCALE */
+  .scale-wrap {
+    margin: 20px 0 6px;
+  }
+  .scale-track {
+    position: relative;
+    height: 10px;
+    border-radius: 6px;
+    background: linear-gradient(90deg, var(--light-gray) 0%, var(--orange) 60%, var(--burgundy) 100%);
+    margin: 30px 10px 10px;
+  }
+  .scale-marker {
+    position: absolute;
+    top: -30px;
+    left: 78%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 140px;
+  }
+  .scale-marker .dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--burgundy);
+    border: 2px solid #fff;
+    margin: 0 auto 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  }
+  .scale-marker .note {
+    font-size: 11.5px;
+    color: var(--burgundy);
+    font-weight: 600;
+  }
+  .scale-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: var(--dark-gray);
+    margin: 0 10px;
+  }
+  .scale-labels span { max-width: 45%; }
+  .scale-labels .left-label { text-align: left; }
+  .scale-labels .right-label { text-align: right; }
+
+  section.framework {
+    background: #ffffff;
+    border-left: 6px solid var(--burgundy);
+    border-radius: 14px;
+    padding: 26px 30px;
+    margin-bottom: 22px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  section.framework > h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--dark-gray);
+    margin: 0 0 4px;
+  }
+  section.framework > h3 {
+    font-size: 19px;
+    color: var(--burgundy);
+    margin: 0 0 18px;
+  }
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .step {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .step .circle {
+    flex: 0 0 auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--burgundy);
+    color: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .step .step-text { font-size: 14.5px; padding-top: 4px; }
+  .step .step-text strong { color: var(--dark-gray); }
+
+  .application-box {
+    background: linear-gradient(135deg, #f4ede3 0%, #ede0d1 100%);
+    border-left: 4px solid var(--orange);
+    border-radius: 0 10px 10px 0;
+    padding: 14px 18px;
+    font-size: 14px;
+  }
+  .application-box .label {
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--burgundy);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  ul.practical {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+  ul.practical li {
+    font-size: 14.5px;
+    padding: 10px 0 10px 30px;
+    position: relative;
+    border-bottom: 1px solid #ece5db;
+  }
+  ul.practical li:last-child { border-bottom: none; }
+  ul.practical li::before {
+    content: "\2192";
+    position: absolute;
+    left: 0;
+    color: var(--orange);
+    font-weight: bold;
+  }
+
+  .med-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .tag {
+    font-size: 12.5px;
+    background: #f9f6f3;
+    border: 1px solid var(--light-gray);
+    color: var(--dark-gray);
+    padding: 6px 14px;
+    border-radius: 20px;
+  }
+  .tag.warn {
+    border-color: var(--orange);
+    color: var(--burgundy);
+  }
+
+  .takeaway-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .takeaway-card {
+    background: #f9f6f3;
+    border-left: 4px solid var(--orange);
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 13.5px;
+  }
+
+  section.bottom-line {
+    background: linear-gradient(135deg, var(--burgundy) 0%, var(--dark-gray) 100%);
+    color: var(--cream);
+    border-radius: 14px;
+    padding: 30px 32px;
+    margin-bottom: 10px;
+  }
+  section.bottom-line h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--cream);
+    opacity: 0.85;
+    margin: 0 0 16px;
+  }
+  section.bottom-line p {
+    font-size: 15px;
+    margin: 0 0 14px;
+    opacity: 0.97;
+  }
+  section.bottom-line p:last-child { margin-bottom: 0; }
+
+  footer.practice-footer {
+    text-align: center;
+    font-size: 11.5px;
+    color: var(--dark-gray);
+    opacity: 0.7;
+    margin-top: 26px;
+  }
+
+  @media (max-width: 640px) {
+    .concept-grid, .takeaway-grid, .distinction { grid-template-columns: 1fr; }
+    header h1 { font-size: 20px; }
+    section.card, section.framework, section.bottom-line { padding: 20px 18px; }
+    .scale-marker { left: 50% !important; width: 90%; }
+  }
+
+  @media print {
+    body { background: #fff; }
+    header, section.bottom-line {
+      -webkit-print-color-adjust: exact; print-color-adjust: exact;
+    }
+    section.card, section.framework, .pull-quote, section.bottom-line {
+      break-inside: avoid;
+      page-break-inside: avoid;
+      box-shadow: none;
+    }
+    .page { max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="brand">Alignment Psychiatry</div>
+    <h1>&#128330; Finding Freedom: Navigating Anxiety, Authenticity, and Friendship Dynamics</h1>
+    <p class="subtitle">Anxiety as expectation management: learning whose standards you're actually trying to meet</p>
+  </header>
+
+  <section class="card">
+    <h2>The Situation</h2>
+    <p>Reflection on social circles has surfaced a lack of fulfillment with certain friends within the gay community, compared to deeper connections with close, longtime friends. Some friendships feel energizing and seen; others bring anxiety and defensiveness, particularly when social expectations or surface-level conversation dominate.</p>
+    <p>Social anxiety, people-pleasing tendencies, conflict avoidance, and a felt need to perform in certain groups are current patterns, with a physical and emotional spike in anxiety when contacted by some friends. This is part of a broader period of self-discovery, seeking more meaningful, conscious connection and moving away from ego-driven or surface-level interactions.</p>
+  </section>
+
+  <section class="card">
+    <h2>Core Problem</h2>
+    <p>Anxiety is triggered by the need to meet unspoken expectations within certain friend groups, leading to people-pleasing and suppression of authentic self-expression. Maintaining access and status within the community carries real weight, even when it costs comfort or authenticity.</p>
+    <p>There's a mismatch between wanting deeper, more genuine interaction and the reality that some friendships are more superficial or performative. Avoidance of conflict and discomfort with direct communication feed internalized anxiety and self-doubt about one's own needs and boundaries.</p>
+  </section>
+
+  <div class="pull-quote">"Anxiety is expectation management."</div>
+
+  <section class="card">
+    <h2>Understanding the Dynamics</h2>
+    <div class="concept-grid">
+      <div class="concept-card">
+        <h3>People-Pleasing</h3>
+        <p>Prioritizing others' comfort or approval over your own needs, often to maintain social access or avoid conflict.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Conflict Avoidance</h3>
+        <p>Avoiding disagreement or confrontation out of fear of rejection or difficulty explaining yourself in the moment.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Rumination</h3>
+        <p>Replaying a moment after the fact when the real feeling or objection wasn't voiced in real time.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Ego-Driven vs. Conscious Connection</h3>
+        <p>The difference between relationships maintained by habit or image and those chosen deliberately, for genuine fit.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Access and Status</h3>
+        <p>Staying in a friendship for the social standing or belonging it provides, separate from whether it actually feels good.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="framework">
+    <h2>Framework A</h2>
+    <h3>Anxiety as Expectation Management</h3>
+    <div class="steps">
+      <div class="step"><div class="circle">1</div><div class="step-text"><strong>Recognize</strong> anxiety as the body preparing for expectations, real or perceived.</div></div>
+      <div class="step"><div class="circle">2</div><div class="step-text"><strong>Understand</strong> anxiety as energy meant to help you prepare, which can become overwhelming if unmanaged.</div></div>
+      <div class="step"><div class="circle">3</div><div class="step-text"><strong>Identify</strong> whether the anxiety is keeping you safe or holding you back from growth.</div></div>
+      <div class="step"><div class="circle">4</div><div class="step-text"><strong>Use</strong> anxiety as information about your environment and your needs.</div></div>
+    </div>
+    <div class="application-box">
+      <span class="label">Applied</span>
+      With certain friends, pressure to keep up, stay politically correct, and avoid conflict produces anxiety and exhaustion. Naming that as a signal of mismatched expectations &mdash; not a sign of danger &mdash; separates what's actually unsafe from what's just uncomfortable.
+    </div>
+  </section>
+
+  <section class="framework">
+    <h2>Framework B</h2>
+    <h3>Compartmentalizing Friendships</h3>
+    <div class="steps">
+      <div class="step"><div class="circle">1</div><div class="step-text"><strong>Identify</strong> different types of friends &mdash; "fun friends" versus "deep friends."</div></div>
+      <div class="step"><div class="circle">2</div><div class="step-text"><strong>Match</strong> your needs to the appropriate group.</div></div>
+      <div class="step"><div class="circle">3</div><div class="step-text"><strong>Accept</strong> that not all friends fulfill all roles.</div></div>
+      <div class="step"><div class="circle">4</div><div class="step-text"><strong>Allow</strong> yourself to seek fulfillment from multiple sources.</div></div>
+    </div>
+    <div class="application-box">
+      <span class="label">Applied</span>
+      With longtime close friends, connection feels relaxed and authentic &mdash; room to disagree and feel seen. With some newer friends, the pressure to perform and avoid conflict is real. Neither group has to cover both jobs.
+    </div>
+    <div class="distinction">
+      <div class="col left">
+        <h4>Deep Friends</h4>
+        <ul>
+          <li>Relaxed, able to express disagreement</li>
+          <li>Feels seen, not performed</li>
+          <li>Energizing after time together</li>
+        </ul>
+      </div>
+      <div class="col right">
+        <h4>Fun / Access Friends</h4>
+        <ul>
+          <li>Pressure to keep up, stay politically correct</li>
+          <li>Avoids conflict, watches tone</li>
+          <li>Exhausting, "on edge"</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="framework">
+    <h2>Framework C</h2>
+    <h3>Communication Flexibility</h3>
+    <div class="steps">
+      <div class="step"><div class="circle">1</div><div class="step-text"><strong>Choose</strong> communication methods that fit your comfort and needs &mdash; written versus verbal.</div></div>
+      <div class="step"><div class="circle">2</div><div class="step-text"><strong>Prepare</strong> your thoughts before difficult conversations.</div></div>
+      <div class="step"><div class="circle">3</div><div class="step-text"><strong>Use written communication</strong> to avoid immediate defensiveness.</div></div>
+      <div class="step"><div class="circle">4</div><div class="step-text"><strong>Validate</strong> your own style, even if it differs from social norms.</div></div>
+    </div>
+    <div class="application-box">
+      <span class="label">Applied</span>
+      Texting instead of talking face-to-face for difficult topics isn't avoidance &mdash; it's using the format that actually lets the real message get said, rather than defaulting to verbal because it's the expected norm.
+    </div>
+    <div class="scale-wrap">
+      <div class="scale-labels">
+        <span class="left-label">Verbal &mdash; hits defenses first</span>
+        <span class="right-label">Written &mdash; prepared, comfortable</span>
+      </div>
+      <div class="scale-track">
+        <div class="scale-marker">
+          <div class="dot"></div>
+          <div class="note">Where it lands: written, on your terms</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="pull-quote">"Freedom is energizing. Freedom is free. The anxiety you feel is the cost of having your freedom suppressed."</div>
+
+  <section class="card">
+    <h2>Practical Instructions</h2>
+    <ul class="practical">
+      <li>Before responding to a hard message, draft what you want to say in writing first, even if you'll say it out loud later.</li>
+      <li>Notice which friends you reach out to on impulse versus which ones you have to talk yourself into contacting.</li>
+      <li>When you catch yourself performing agreement, pause and name what you actually think, even just to yourself.</li>
+      <li>Keep a running list of what each friendship actually gives you, so it's visible when deciding where to invest time.</li>
+      <li>After a socially draining interaction, name one expectation you were trying to meet that wasn't actually yours.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Assignment</h2>
+    <p>Reflect on and journal about the expectations felt in different social groups, noting which are yours and which belong to others. After each social interaction, jot down what came up, what expectations were present, and how you responded. Draft any difficult message in writing before responding verbally, and bring reflections to the next session.</p>
+  </section>
+
+  <section class="card">
+    <h2>Medication Note</h2>
+    <div class="med-tags">
+      <span class="tag">Name and dosage not yet specified</span>
+      <span class="tag">Prescription sent &mdash; pick up within 2 days</span>
+      <span class="tag warn">Monitor for new or unusual symptoms</span>
+      <span class="tag warn">Contact provider with any concerns</span>
+      <span class="tag">One part of a broader treatment plan</span>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Key Takeaways</h2>
+    <div class="takeaway-grid">
+      <div class="takeaway-card">Anxiety often signals a mismatch between what you're expected to be and what you actually feel, not that something is wrong with you.</div>
+      <div class="takeaway-card">No single friend group has to carry every kind of connection you need.</div>
+      <div class="takeaway-card">Performing agreement in the moment tends to show up later as rumination.</div>
+      <div class="takeaway-card">Written communication isn't a lesser substitute for a hard conversation &mdash; it can be the more honest version of it.</div>
+      <div class="takeaway-card">Access and status are real motivators for staying in a friendship, and worth naming honestly when weighing whether to keep it.</div>
+      <div class="takeaway-card">Conscious, chosen connection feels different in the body than connection maintained out of habit or obligation.</div>
+      <div class="takeaway-card">Saying no to one group doesn't cost you belonging in the group where you actually feel seen.</div>
+      <div class="takeaway-card">Medication decisions can move forward even while other parts of the picture are still being clarified.</div>
+    </div>
+  </section>
+
+  <section class="bottom-line">
+    <h2>Bottom Line</h2>
+    <p>The anxiety showing up in certain friendships isn't a flaw to fix &mdash; it's information. It's the gap between groups that ask for performance and the ones where none is required, and that gap is worth taking seriously rather than pushing through.</p>
+    <p>Compartmentalizing isn't a failure to find "real" friends. No single group has to hold every kind of connection, and choosing where to invest presence, instead of trying to force one group to do it all, is what actually reduces the exhaustion.</p>
+    <p>The format of a hard conversation matters far less than whether it lets the truth actually get said. That's the real measure &mdash; not how much conflict gets avoided, but whether these friendships still feel worth keeping once the performing stops.</p>
+  </section>
+
+  <footer class="practice-footer">Alignment Psychiatry &middot; Clinical Session Insights</footer>
+
+</div>
+</body>
+</html>
