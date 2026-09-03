@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finding Freedom and Balance: Energy, Connection, and Responsibility in Life and Art | Alignment Psychiatry</title>
+<style>
+  :root {
+    --burgundy: #6B2C3A;
+    --orange: #D67B4A;
+    --cream: #E8DFD6;
+    --dark-gray: #4A4A4A;
+    --light-gray: #B8B8B8;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--cream);
+    color: var(--dark-gray);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.65;
+  }
+
+  .page {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+  }
+
+  header {
+    background: linear-gradient(135deg, var(--burgundy) 0%, var(--dark-gray) 100%);
+    color: var(--cream);
+    text-align: center;
+    padding: 46px 30px 40px;
+    margin: 0 -20px 30px;
+    border-radius: 0 0 20px 20px;
+  }
+  header .brand {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 12px;
+    opacity: 0.85;
+    margin-bottom: 14px;
+  }
+  header h1 {
+    font-size: 25px;
+    margin: 0 0 12px;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+  header p.subtitle {
+    font-style: italic;
+    font-size: 15px;
+    opacity: 0.9;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  section.card {
+    background: #ffffff;
+    border-left: 6px solid var(--orange);
+    border-radius: 14px;
+    padding: 26px 30px;
+    margin-bottom: 22px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  section.card h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--burgundy);
+    margin: 0 0 16px;
+  }
+  section.card p { margin: 0 0 12px; font-size: 15px; }
+  section.card p:last-child { margin-bottom: 0; }
+
+  .pull-quote {
+    background: linear-gradient(120deg, var(--burgundy) 0%, var(--dark-gray) 100%);
+    color: var(--cream);
+    text-align: center;
+    font-style: italic;
+    font-size: 17px;
+    padding: 28px 36px;
+    border-radius: 14px;
+    margin: 26px 0;
+  }
+
+  .concept-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .concept-card {
+    background: #f9f6f3;
+    border-top: 4px solid var(--orange);
+    border-radius: 10px;
+    padding: 16px 18px;
+  }
+  .concept-card h3 {
+    margin: 0 0 6px;
+    font-size: 15px;
+    color: var(--burgundy);
+  }
+  .concept-card p {
+    margin: 0;
+    font-size: 13.5px;
+    color: var(--dark-gray);
+  }
+
+  /* BALLOON AND STONE */
+  .balloon-wrap {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin: 18px 0 6px;
+  }
+  .balloon-wrap .box {
+    flex: 1 1 220px;
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-size: 13.5px;
+    text-align: center;
+  }
+  .balloon-wrap .balloon { background: #f4ede3; border-top: 4px solid var(--orange); }
+  .balloon-wrap .stone { background: #f9f6f3; border-top: 4px solid var(--light-gray); }
+  .balloon-wrap .label {
+    display: block;
+    text-transform: uppercase;
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    color: var(--dark-gray);
+    margin-bottom: 6px;
+  }
+  .balloon-wrap .connector {
+    flex: 0 0 auto;
+    font-size: 16px;
+    color: var(--burgundy);
+  }
+  .balloon-caption {
+    text-align: center;
+    font-size: 12px;
+    color: var(--dark-gray);
+    margin-top: 10px;
+    font-style: italic;
+  }
+
+  /* ENERGY RHYTHM STRIP */
+  .rhythm-strip {
+    display: flex;
+    gap: 8px;
+    margin: 18px 0 6px;
+    flex-wrap: wrap;
+  }
+  .rhythm-strip .slot {
+    flex: 1 1 130px;
+    border-radius: 10px;
+    padding: 14px 12px;
+    font-size: 12.5px;
+  }
+  .rhythm-strip .slot .stage {
+    display: block;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 0.07em;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  .rhythm-strip .up { background: var(--burgundy); color: var(--cream); }
+  .rhythm-strip .down { background: #ecd9c7; color: var(--dark-gray); }
+  .rhythm-strip .rest { background: #f9f6f3; color: var(--dark-gray); border: 1px solid #ece5db; }
+
+  section.framework {
+    background: #ffffff;
+    border-left: 6px solid var(--burgundy);
+    border-radius: 14px;
+    padding: 26px 30px;
+    margin-bottom: 22px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  section.framework > h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--dark-gray);
+    margin: 0 0 4px;
+  }
+  section.framework > h3 {
+    font-size: 19px;
+    color: var(--burgundy);
+    margin: 0 0 18px;
+  }
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .step {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .step .circle {
+    flex: 0 0 auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--burgundy);
+    color: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .step .step-text { font-size: 14.5px; padding-top: 4px; }
+  .step .step-text strong { color: var(--dark-gray); }
+
+  .application-box {
+    background: linear-gradient(135deg, #f4ede3 0%, #ede0d1 100%);
+    border-left: 4px solid var(--orange);
+    border-radius: 0 10px 10px 0;
+    padding: 14px 18px;
+    font-size: 14px;
+  }
+  .application-box .label {
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--burgundy);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  ul.practical {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+  ul.practical li {
+    font-size: 14.5px;
+    padding: 10px 0 10px 30px;
+    position: relative;
+    border-bottom: 1px solid #ece5db;
+  }
+  ul.practical li:last-child { border-bottom: none; }
+  ul.practical li::before {
+    content: "\2192";
+    position: absolute;
+    left: 0;
+    color: var(--orange);
+    font-weight: bold;
+  }
+
+  .takeaway-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .takeaway-card {
+    background: #f9f6f3;
+    border-left: 4px solid var(--orange);
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 13.5px;
+  }
+
+  section.bottom-line {
+    background: linear-gradient(135deg, var(--burgundy) 0%, var(--dark-gray) 100%);
+    color: var(--cream);
+    border-radius: 14px;
+    padding: 30px 32px;
+    margin-bottom: 10px;
+  }
+  section.bottom-line h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--cream);
+    opacity: 0.85;
+    margin: 0 0 16px;
+  }
+  section.bottom-line p {
+    font-size: 15px;
+    margin: 0 0 14px;
+    opacity: 0.97;
+  }
+  section.bottom-line p:last-child { margin-bottom: 0; }
+
+  footer.practice-footer {
+    text-align: center;
+    font-size: 11.5px;
+    color: var(--dark-gray);
+    opacity: 0.7;
+    margin-top: 26px;
+  }
+
+  @media (max-width: 640px) {
+    .concept-grid, .takeaway-grid { grid-template-columns: 1fr; }
+    header h1 { font-size: 20px; }
+    section.card, section.framework, section.bottom-line { padding: 20px 18px; }
+    .balloon-wrap { flex-direction: column; }
+    .rhythm-strip { flex-direction: column; }
+  }
+
+  @media print {
+    body { background: #fff; }
+    header, section.bottom-line, .rhythm-strip .up {
+      -webkit-print-color-adjust: exact; print-color-adjust: exact;
+    }
+    section.card, section.framework, .pull-quote, section.bottom-line {
+      break-inside: avoid;
+      page-break-inside: avoid;
+      box-shadow: none;
+    }
+    .page { max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="brand">Alignment Psychiatry</div>
+    <h1>&#128131; Finding Freedom and Balance: Energy, Connection, and Responsibility in Life and Art</h1>
+    <p class="subtitle">Floating and staying grounded aren't opposites &mdash; one supports the other</p>
+  </header>
+
+  <section class="card">
+    <h2>The Situation</h2>
+    <p>Several threads are running at once: embarrassment about not earning enough to invest in the next stage of a business, wariness about being exploited by expensive support services, and a growing awareness of how energy fluctuates in social and travel contexts &mdash; including how that pattern differs from a partner's.</p>
+    <p>Excitement about learning, especially about Italian heritage, brings real energy, while art and movement &mdash; particularly dance &mdash; remain a primary way of connecting with the unconscious and processing emotion. Deep connection and shared experience are valued, even as social interaction sometimes brings depletion. Journaling and self-reflection continue as an ongoing practice of curiosity about both self and others.</p>
+  </section>
+
+  <section class="card">
+    <h2>Core Problem</h2>
+    <p>A real tension runs between wanting freedom &mdash; to move, create, and connect authentically &mdash; and the responsibilities that come with adult life, especially money, business, and relationships. Feeling pulled between wanting to "float like a feather" and being "tethered to the earth" can produce shame, depletion, or self-doubt, especially when financial reality doesn't match internal aspiration.</p>
+    <p>A pattern of overthinking, of getting "stuck in her head," runs underneath this &mdash; something movement and art reliably interrupt. Assumptions about what's possible ("Can I be free all the time?") are being questioned rather than simply accepted.</p>
+  </section>
+
+  <div class="pull-quote">"You have to have a level of pressure in order to have the freedom you'd like."</div>
+
+  <section class="card">
+    <h2>Understanding the Dynamics</h2>
+    <div class="concept-grid">
+      <div class="concept-card">
+        <h3>Autonomic vs. Somatic Nervous System</h3>
+        <p>Most bodily functions run automatically; only a small portion is under conscious control &mdash; a physical mirror of how much of life sits outside direct control.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Maslow's Hierarchy of Needs</h3>
+        <p>Love and belonging are foundational before self-esteem and self-actualization become fully reachable. Connection comes first.</p>
+      </div>
+      <div class="concept-card">
+        <h3>ADHD as a Natural State</h3>
+        <p>A brain state that's arguably more natural, with later development of planning and responsibility layered on top over time.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Embodiment as an Antidote to Overthinking</h3>
+        <p>Movement and physical experience interrupt rumination in a way that thinking alone rarely can.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Financial Shame</h3>
+        <p>Embarrassment tied specifically to money and business capacity &mdash; common enough to not be mistaken for a personal failing.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="framework">
+    <h2>Framework A</h2>
+    <h3>The Energy-Responsibility Balance Framework</h3>
+    <div class="steps">
+      <div class="step"><div class="circle">1</div><div class="step-text"><strong>Identify what feels natural</strong> &mdash; activities that feel effortless, energizing, and authentic.</div></div>
+      <div class="step"><div class="circle">2</div><div class="step-text"><strong>Identify responsibilities</strong> &mdash; tasks that require planning or meeting external standards.</div></div>
+      <div class="step"><div class="circle">3</div><div class="step-text"><strong>Notice the interplay</strong> &mdash; both freedom and responsibility are necessary; one grounds and supports the other.</div></div>
+      <div class="step"><div class="circle">4</div><div class="step-text"><strong>Seek balance</strong> between energy input and output, rest and action, autonomy and connection.</div></div>
+      <div class="step"><div class="circle">5</div><div class="step-text"><strong>Reframe resourcefulness</strong> &mdash; relationships, creativity, and community are also currencies, not just money.</div></div>
+    </div>
+    <div class="application-box">
+      <span class="label">Applied</span>
+      Dance and movement bring lightness and freedom; business expenses bring heaviness and constraint. Neither has to be resolved away &mdash; both are real, necessary parts of the same life.
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Balloon and Stone</h2>
+    <div class="balloon-wrap">
+      <div class="box balloon">
+        <span class="label">Balloon</span>
+        Freedom &mdash; movement, art, connection, lightness
+      </div>
+      <div class="connector">&#9866;&mdash;&#9866;</div>
+      <div class="box stone">
+        <span class="label">Stone</span>
+        Responsibility &mdash; money, planning, practical needs
+      </div>
+    </div>
+    <div class="balloon-caption">Neither cancels the other &mdash; one lifts, the other keeps it from drifting away entirely.</div>
+  </section>
+
+  <section class="framework">
+    <h2>Framework B</h2>
+    <h3>Experience as Meaning-Maker</h3>
+    <div class="steps">
+      <div class="step"><div class="circle">1</div><div class="step-text"><strong>Value direct experience</strong> &mdash; understanding comes from doing, not just thinking or reading.</div></div>
+      <div class="step"><div class="circle">2</div><div class="step-text"><strong>Let curiosity guide</strong> new experiences and connections.</div></div>
+      <div class="step"><div class="circle">3</div><div class="step-text"><strong>Build connection</strong> through shared experience with others.</div></div>
+    </div>
+    <div class="application-box">
+      <span class="label">Applied</span>
+      A habit of asking deep questions and genuinely seeking to understand others reflects curiosity as a guide. On a recent trip, cycling between excitement and depletion alongside a partner mirrored this same need for balance in real time.
+    </div>
+    <div class="rhythm-strip">
+      <div class="slot up"><span class="stage">Energy up</span>Excitement, new experience</div>
+      <div class="slot down"><span class="stage">Energy down</span>Depletion sets in</div>
+      <div class="slot rest"><span class="stage">Rest</span>Recovery, quiet</div>
+      <div class="slot up"><span class="stage">Energy up</span>Excitement returns</div>
+    </div>
+  </section>
+
+  <div class="pull-quote">"You can't outthink yourself from needing people. We just can't do that."</div>
+
+  <section class="card">
+    <h2>Practical Instructions</h2>
+    <ul class="practical">
+      <li>Before a social gathering, name in advance roughly how much energy you have to give, so leaving early doesn't require an in-the-moment justification.</li>
+      <li>When a business task feels heavy, do five minutes of movement first and notice whether the task feels different afterward.</li>
+      <li>Once a week, name one person in your life who offered support that wasn't about money, and thank them specifically for it.</li>
+      <li>When you catch yourself asking someone a fourth or fifth deep question in a row, pause and offer something about yourself in return.</li>
+      <li>Keep a short list of experiences that taught you something no amount of reading or planning could have.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Assignment</h2>
+    <p>Track your energy and mood daily &mdash; note what energizes you, what depletes you, and any moments you notice both freedom and responsibility being held at once. Use a journal or notes app, and bring your observations to the next session on August 28th.</p>
+  </section>
+
+  <section class="card">
+    <h2>Key Takeaways</h2>
+    <div class="takeaway-grid">
+      <div class="takeaway-card">Feeling light during movement and heavy during business tasks isn't inconsistency &mdash; it's two different, both-necessary modes operating normally.</div>
+      <div class="takeaway-card">A trip cycling between excitement and depletion is evidence of a working rhythm, not a problem to fix.</div>
+      <div class="takeaway-card">Support that isn't transactional &mdash; a friend's advice, a shared skill &mdash; counts as a real resource, not a lesser one.</div>
+      <div class="takeaway-card">Shame about business finances is common enough to not be mistaken for a personal failing.</div>
+      <div class="takeaway-card">A body seeking rest after expending energy is functioning correctly, not falling behind.</div>
+      <div class="takeaway-card">Curiosity directed at others works best paired with occasional openness about yourself.</div>
+      <div class="takeaway-card">Understanding gained through doing something firsthand often can't be replicated by thinking it through in advance.</div>
+      <div class="takeaway-card">A belief about what's possible for you is a belief, not a fixed fact, and can be tested against actual experience.</div>
+    </div>
+  </section>
+
+  <section class="bottom-line">
+    <h2>Bottom Line</h2>
+    <p>The pull between wanting to float and needing to stay grounded isn't a flaw to resolve. It's the actual structure of a full life, where both directions are necessary and neither one cancels the other out.</p>
+    <p>Financial strain and the embarrassment that comes with it are common enough that they say very little about capability. The more useful move is widening what counts as a resource beyond money alone.</p>
+    <p>Tracking energy isn't about eliminating the cycles of excitement and depletion. It's about getting familiar enough with their rhythm that both movement and stillness can be trusted as part of the same, ongoing balance.</p>
+  </section>
+
+  <footer class="practice-footer">Alignment Psychiatry &middot; Clinical Session Insights</footer>
+
+</div>
+</body>
+</html>
