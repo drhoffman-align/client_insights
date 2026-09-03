@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Therapeutic Insights | Alignment Psychiatry</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #E8DFD6;
+    color: #4A4A4A;
+    line-height: 1.75;
+    font-size: 15.5px;
+  }
+  .page-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 0 60px 0;
+  }
+
+  /* HEADER */
+  .header {
+    background: linear-gradient(135deg, #6B2C3A 60%, #4A4A4A 100%);
+    padding: 52px 48px 44px 48px;
+    border-radius: 0 0 22px 22px;
+    margin-bottom: 38px;
+  }
+  .header-practice {
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #E8DFD6;
+    opacity: 0.75;
+    margin-bottom: 14px;
+  }
+  .header-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+    line-height: 1.25;
+  }
+  .header-subtitle {
+    font-style: italic;
+    color: #E8DFD6;
+    font-size: 16px;
+    opacity: 0.88;
+    max-width: 560px;
+  }
+  .header-accent {
+    display: inline-block;
+    margin-top: 22px;
+    height: 4px;
+    width: 64px;
+    background: #D67B4A;
+    border-radius: 4px;
+  }
+
+  /* SECTION WRAPPER */
+  .section {
+    background: #fff;
+    border-left: 5px solid #D67B4A;
+    border-radius: 14px;
+    padding: 32px 36px;
+    margin: 0 24px 28px 24px;
+  }
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #D67B4A;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .section-title {
+    font-size: 21px;
+    font-weight: 700;
+    color: #6B2C3A;
+    margin-bottom: 18px;
+    line-height: 1.3;
+  }
+  .section p {
+    margin-bottom: 14px;
+    color: #4A4A4A;
+  }
+  .section p:last-child { margin-bottom: 0; }
+
+  /* FRAMEWORK SECTION */
+  .framework-wrap {
+    background: #fff;
+    border-left: 5px solid #6B2C3A;
+    border-radius: 14px;
+    padding: 32px 36px;
+    margin: 0 24px 28px 24px;
+  }
+  .framework-item {
+    margin-bottom: 30px;
+  }
+  .framework-item:last-child { margin-bottom: 0; }
+  .framework-name {
+    font-size: 17px;
+    font-weight: 700;
+    color: #6B2C3A;
+    margin-bottom: 8px;
+  }
+  .framework-desc {
+    color: #4A4A4A;
+    margin-bottom: 14px;
+  }
+  .steps-list {
+    list-style: none;
+    margin-bottom: 16px;
+  }
+  .steps-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 11px;
+    color: #4A4A4A;
+  }
+  .step-circle {
+    min-width: 30px;
+    height: 30px;
+    background: #6B2C3A;
+    color: #E8DFD6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .application-box {
+    background: #f9f6f3;
+    border: 1.5px solid #D67B4A;
+    border-radius: 10px;
+    padding: 14px 18px;
+    font-size: 14px;
+    color: #4A4A4A;
+  }
+  .application-box strong {
+    color: #6B2C3A;
+    display: block;
+    margin-bottom: 4px;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+  .framework-divider {
+    height: 1px;
+    background: #E8DFD6;
+    margin: 28px 0;
+  }
+
+  /* CONCEPT / TAKEAWAY CARDS GRID */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 4px;
+  }
+  .card {
+    background: #f9f6f3;
+    border: 1.5px solid #D67B4A;
+    border-radius: 12px;
+    padding: 18px 20px;
+  }
+  .card-title {
+    font-weight: 700;
+    color: #6B2C3A;
+    font-size: 14.5px;
+    margin-bottom: 7px;
+  }
+  .card-body {
+    color: #4A4A4A;
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  /* BULLETS */
+  .action-list {
+    list-style: none;
+    margin-top: 4px;
+  }
+  .action-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 13px;
+    color: #4A4A4A;
+    font-size: 15px;
+  }
+  .bullet-dot {
+    min-width: 10px;
+    height: 10px;
+    background: #D67B4A;
+    border-radius: 50%;
+    margin-top: 7px;
+    flex-shrink: 0;
+  }
+
+  /* BOTTOM LINE */
+  .bottom-line {
+    background: linear-gradient(135deg, #6B2C3A 0%, #4A4A4A 100%);
+    border-radius: 14px;
+    padding: 38px 40px;
+    margin: 0 24px 28px 24px;
+  }
+  .bottom-line .section-label {
+    color: #D67B4A;
+    opacity: 1;
+  }
+  .bottom-line .section-title {
+    color: #fff;
+  }
+  .bottom-line p {
+    color: #E8DFD6;
+    margin-bottom: 16px;
+    line-height: 1.8;
+  }
+  .bottom-line p:last-child { margin-bottom: 0; }
+
+  /* VISUAL: BEFORE / AFTER COMPARISON TABLE */
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .comparison-table th {
+    background: #6B2C3A;
+    color: #E8DFD6;
+    padding: 12px 18px;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-align: left;
+    font-weight: 700;
+  }
+  .comparison-table th:first-child {
+    border-right: 2px solid #E8DFD6;
+  }
+  .comparison-table td {
+    padding: 12px 18px;
+    font-size: 14px;
+    vertical-align: top;
+    color: #4A4A4A;
+    background: #f9f6f3;
+    border-bottom: 1px solid #E8DFD6;
+  }
+  .comparison-table td:first-child {
+    border-right: 2px solid #E8DFD6;
+  }
+  .comparison-table tr:last-child td { border-bottom: none; }
+
+  /* VISUAL: CYCLE DIAGRAM (horizontal phase strip) */
+  .cycle-strip {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    margin-top: 14px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .cycle-phase {
+    flex: 1;
+    background: #f9f6f3;
+    border-top: 3px solid #6B2C3A;
+    padding: 14px 12px 14px 14px;
+    position: relative;
+    font-size: 13.5px;
+    color: #4A4A4A;
+  }
+  .cycle-phase + .cycle-phase {
+    border-left: 2px solid #E8DFD6;
+  }
+  .cycle-phase-num {
+    font-size: 11px;
+    font-weight: 700;
+    color: #D67B4A;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  .cycle-phase-title {
+    font-weight: 700;
+    color: #6B2C3A;
+    font-size: 13.5px;
+    margin-bottom: 5px;
+    line-height: 1.3;
+  }
+
+  /* FOOTER */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #9a8f87;
+    padding: 12px 24px 0 24px;
+    letter-spacing: 0.5px;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 620px) {
+    .header { padding: 36px 22px 32px 22px; }
+    .header-title { font-size: 24px; }
+    .section, .framework-wrap, .bottom-line { margin: 0 10px 22px 10px; padding: 24px 18px; }
+    .cards-grid { grid-template-columns: 1fr; }
+    .cycle-strip { flex-direction: column; }
+    .cycle-phase + .cycle-phase { border-left: none; border-top: 2px solid #E8DFD6; }
+    .comparison-table th, .comparison-table td { padding: 10px 10px; font-size: 13px; }
+  }
+
+  @media print {
+    body { background: #fff; }
+    .page-wrap { max-width: 100%; }
+    .section, .framework-wrap { break-inside: avoid; }
+    .header { border-radius: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-practice">Alignment Psychiatry</div>
+    <div class="header-title">Therapeutic Insights:<br>Reciprocity, Caretaking &amp; Self-Validation</div>
+    <div class="header-subtitle">A personalized summary of themes, frameworks, and next steps from your recent session</div>
+    <div class="header-accent"></div>
+  </div>
+
+  <!-- THE SITUATION -->
+  <div class="section">
+    <div class="section-label">Overview</div>
+    <div class="section-title">The Situation</div>
+    <p>
+      This session centered on two overlapping areas: a recent conflict with a close friend, and the longer arc of a family role that has been in place since childhood. Both threads share a common shape — a pattern of showing up fully for others, often at significant personal cost, while receiving inconsistent or absent support in return.
+    </p>
+    <p>
+      The conflict with the friend brought into sharp focus something that family life had normalized long ago: the experience of investing heavily in a relationship and then finding that investment is not matched. What made this recent conflict particularly difficult was not just the disagreement itself, but the realization that it fits a familiar and exhausting template — one that has been running quietly in the background for years.
+    </p>
+    <p>
+      From an early age, a mediator and caretaker role was assumed within the family. This was not necessarily a conscious choice but a response to the environment — a way of maintaining stability and staying connected to people who were important. While this role carried real meaning, it also came at a cost: the development of an identity that is closely tied to being useful and available to others, sometimes to the exclusion of one's own needs.
+    </p>
+  </div>
+
+  <!-- CORE PROBLEM -->
+  <div class="section">
+    <div class="section-label">Clinical Focus</div>
+    <div class="section-title">Core Problem</div>
+    <p>
+      The central difficulty is not simply that others fail to reciprocate — it is that external validation has become the primary mechanism for feeling secure in one's own decisions. When that validation is absent or delayed, it creates a particular kind of distress: doubt about whether one's perceptions, choices, and needs are legitimate. This places an enormous amount of power in the hands of other people, and it means that internal clarity depends heavily on whether others confirm or challenge it.
+    </p>
+    <p>
+      This dynamic is deeply rooted in the caretaker role established in childhood. When a child is responsible for managing others' emotional states, they rarely receive consistent mirroring — the kind of attentive feedback that teaches a person to trust their own inner experience. Over time, the absence of that mirroring produces an adult who is highly attuned to others but relatively disconnected from her own authority. The exhaustion expressed in session is not just about giving too much — it is about having been in this position so long that it no longer feels optional.
+    </p>
+  </div>
+
+  <!-- UNDERSTANDING THE DYNAMICS -->
+  <div class="section">
+    <div class="section-label">Concepts</div>
+    <div class="section-title">Understanding the Dynamics</div>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-title">The Parentified Child Role</div>
+        <div class="card-body">When children take on emotional or logistical responsibility for family members, they develop sophisticated skills in reading and managing others — but often at the cost of having their own needs recognized or met. This shapes adult relational patterns in lasting ways.</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Validation-Seeking as a Survival Strategy</div>
+        <div class="card-body">Seeking external confirmation is not a character flaw — it was an adaptive response to an environment where internal trust was not sufficiently supported. Understanding it as a learned strategy makes it possible to begin developing something different, rather than simply criticizing the pattern.</div>
+      </div>
+      <div class="card">
+        <div class="card-title">The Cost of One-Sided Caretaking</div>
+        <div class="card-body">Consistent, unreciprocated giving depletes emotional resources over time. It also reinforces the belief that one's value in relationships is contingent on what one provides — making it difficult to simply exist in a relationship without performing a function.</div>
+      </div>
+      <div class="card">
+        <div
