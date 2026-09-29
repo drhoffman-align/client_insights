@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Collaborative Decision-Making Exercise — Alignment Psychiatry</title>
+    <style>
+        :root {
+            --burgundy: #6B2C3A;
+            --orange: #D67B4A;
+            --cream: #E8DFD6;
+            --gray-dark: #4A4A4A;
+            --gray-mid: #B8B8B8;
+            --gray-light: #F2F2F2;
+            --line: #D4CCC6;
+            --white: #ffffff;
+            box-sizing: border-box;
+            padding-top: env(safe-area-inset-top, 0px);
+            padding-bottom: env(safe-area-inset-bottom, 0px);
+        }
+        *, *::before, *::after { box-sizing: inherit; margin: 0; padding: 0; }
+
+        /* Print worksheet — always light, dark mode intentionally disabled */
+
+        @media print {
+            :root {
+                --white: #ffffff;
+                --gray-light: #fafafa;
+                --line: #D4CCC6;
+                --cream: #E8DFD6;
+                --gray-dark: #4A4A4A;
+            }
+            body { background: white; font-size: 11pt; }
+            .page { max-width: none; padding: 0.6in 0.75in; box-shadow: none; }
+            .no-print { display: none !important; }
+            .page-break { page-break-before: always; break-before: page; }
+            .avoid-break { page-break-inside: avoid; break-inside: avoid; }
+            .writing-block { break-inside: avoid; }
+            @page { size: 8.5in 11in; margin: 0; }
+        }
+
+        @media screen {
+            body {
+                background: var(--gray-dark);
+                min-height: 100vh;
+                padding: 24px 16px;
+            }
+            .page {
+                max-width: 780px;
+                margin: 0 auto;
+                background: var(--white);
+                border-radius: 16px;
+                box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+                overflow: hidden;
+            }
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            color: var(--gray-dark);
+            line-height: 1.6;
+        }
+
+        /* ── HEADER ─────────────────────────────────── */
+        .doc-header {
+            background: linear-gradient(135deg, var(--burgundy) 0%, #3a1a22 100%);
+            padding: 28px 40px 24px;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: end;
+            gap: 16px;
+        }
+        .doc-header .practice {
+            font-size: 0.7em;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: rgba(232,223,214,0.6);
+            margin-bottom: 6px;
+        }
+        .doc-header h1 {
+            font-size: 1.45em;
+            font-weight: 700;
+            color: var(--cream);
+            line-height: 1.25;
+        }
+        .doc-header .badge {
+            background: var(--orange);
+            color: #fff;
+            font-size: 0.7em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border-radius: 20px;
+            padding: 5px 14px;
+            white-space: nowrap;
+            align-self: flex-start;
+        }
+
+        /* ── MAIN CONTENT ───────────────────────────── */
+        .page-content { padding: 36px 40px 48px; }
+
+        /* ── PURPOSE BOX ────────────────────────────── */
+        .purpose-box {
+            background: var(--cream);
+            border-left: 4px solid var(--orange);
+            border-radius: 10px;
+            padding: 18px 22px;
+            margin-bottom: 36px;
+        }
+        .purpose-box p { font-size: 0.93em; color: var(--gray-dark); margin-bottom: 8px; }
+        .purpose-box p:last-child { margin-bottom: 0; }
+        .purpose-box strong { color: var(--burgundy); }
+        .print-note {
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid var(--line);
+            font-size: 0.8em;
+            color: var(--burgundy);
+            font-weight: 600;
+        }
+
+        /* ── STEP HEADER ────────────────────────────── */
+        .step-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 14px;
+        }
+        .step-num {
+            flex-shrink: 0;
+            background: var(--burgundy);
+            color: var(--cream);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1em;
+        }
+        .step-header h2 {
+            font-size: 1.15em;
+            font-weight: 700;
+            color: var(--burgundy);
+        }
+        .step-header .step-sub {
+            font-size: 0.8em;
+            color: var(--orange);
+            font-style: italic;
+            font-weight: 400;
+            display: block;
+            margin-top: 2px;
+        }
+
+        /* ── STEP BLOCK ─────────────────────────────── */
+        .step-block {
+            border: 1.5px solid var(--line);
+            border-radius: 12px;
+            padding: 26px 28px;
+            margin-bottom: 32px;
+        }
+        .step-block.highlight { border-color: var(--orange); }
+
+        /* ── INSTRUCTION TEXT ───────────────────────── */
+        .instruction {
+            font-size: 0.9em;
+            color: var(--gray-dark);
+            margin-bottom: 16px;
+            opacity: 0.85;
+        }
+
+        /* ── WRITING AREA ───────────────────────────── */
+        .writing-section {
+            margin-bottom: 22px;
+        }
+        .writing-section:last-child { margin-bottom: 0; }
+        .writing-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+        .writing-label .w-dot {
+            flex-shrink: 0;
+            width: 8px;
+            height: 8px;
+            background: var(--orange);
+            border-radius: 50%;
+        }
+        .writing-label h3 {
+            font-size: 0.88em;
+            font-weight: 700;
+            color: var(--burgundy);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+        .writing-label .w-prompt {
+            font-size: 0.82em;
+            color: var(--gray-dark);
+            font-weight: 400;
+            font-style: italic;
+            opacity: 0.75;
+        }
+        .write-lines {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+        .write-line {
+            height: 34px;
+            border-bottom: 1.5px solid var(--line);
+            background: transparent;
+        }
+        .write-line:first-child { border-top: 1.5px solid var(--line); }
+
+        /* ── CONSIDERATIONS LIST ────────────────────── */
+        .consider-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px 24px;
+            margin: 10px 0 14px;
+            font-size: 0.82em;
+            color: var(--gray-dark);
+        }
+        @media (max-width: 500px) { .consider-list { grid-template-columns: 1fr; } }
+        .consider-list li {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 3px 0;
+        }
+        .consider-list li::before {
+            content: '';
+            flex-shrink: 0;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--gray-mid);
+        }
+
+        /* ── COME BACK QUESTIONS ────────────────────── */
+        .question-group {
+            margin-bottom: 20px;
+        }
+        .question-group:last-child { margin-bottom: 0; }
+        .question-group-label {
+            font-size: 0.72em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--orange);
+            margin-bottom: 8px;
+        }
+        .question-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 7px 0;
+            border-bottom: 1px dashed var(--line);
+            font-size: 0.88em;
+        }
+        .question-item:last-child { border-bottom: none; }
+        .q-mark {
+            flex-shrink: 0;
+            color: var(--burgundy);
+            font-weight: 700;
+            margin-top: 2px;
+        }
+        .question-item .q-text { color: var(--gray-dark); }
+
+        /* ── COMMUNICATION RULE ─────────────────────── */
+        .comm-rule-header {
+            background: var(--burgundy);
+            color: var(--cream);
+            border-radius: 10px 10px 0 0;
+            padding: 14px 22px;
+            margin-bottom: 0;
+        }
+        .comm-rule-header h2 {
+            font-size: 1em;
+            font-weight: 700;
+        }
+        .comm-rule-header p {
+            font-size: 0.82em;
+            opacity: 0.8;
+            margin-top: 3px;
+        }
+        .comm-rule-body {
+            border: 1.5px solid var(--line);
+            border-top: none;
+            border-radius: 0 0 10px 10px;
+            padding: 20px 22px;
+            margin-bottom: 32px;
+        }
+        .example-pair {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+        @media (max-width: 500px) { .example-pair { grid-template-columns: 1fr; } }
+        .example-pair:last-child { margin-bottom: 0; }
+        .ex-card {
+            border-radius: 8px;
+            padding: 12px 14px;
+            font-size: 0.83em;
+        }
+        .ex-card.instead {
+            background: #f3ecec;
+            border-left: 3px solid var(--gray-mid);
+        }
+        .ex-card.try {
+            background: #f0ece8;
+            border-left: 3px solid var(--orange);
+        }
+        .ex-card .ex-label {
+            font-size: 0.72em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 6px;
+        }
+        .ex-card.instead .ex-label { color: var(--gray-mid); }
+        .ex-card.try .ex-label { color: var(--orange); }
+        .ex-card p { color: var(--gray-dark); font-style: italic; line-height: 1.4; }
+
+        /* ── PAUSE RULE ─────────────────────────────── */
+        .pause-box {
+            background: linear-gradient(135deg, var(--burgundy), #3a1a22);
+            color: var(--cream);
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin-bottom: 32px;
+        }
+        .pause-box h2 {
+            font-size: 1em;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--cream);
+        }
+        .pause-box p {
+            font-size: 0.88em;
+            opacity: 0.88;
+            margin-bottom: 10px;
+        }
+        .pause-box p:last-child { margin-bottom: 0; }
+        .pause-script {
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            padding: 12px 16px;
+            font-size: 0.85em;
+            font-style: italic;
+            color: var(--cream);
+            margin-top: 10px;
+        }
+
+        /* ── EXPERIMENT SUMMARY ─────────────────────── */
+        .experiment-box {
+            border: 2px solid var(--orange);
+            border-radius: 12px;
+            padding: 22px 26px;
+            margin-bottom: 32px;
+        }
+        .experiment-box h2 {
+            font-size: 1em;
+            font-weight: 700;
+            color: var(--burgundy);
+            margin-bottom: 14px;
+        }
+        .experiment-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+        @media (max-width: 500px) { .experiment-steps { grid-template-columns: 1fr; } }
+        .exp-step {
+            text-align: center;
+            padding: 14px 10px;
+            background: var(--gray-light);
+            border-radius: 8px;
+        }
+        .exp-step .es-icon { font-size: 1.6em; display: block; margin-bottom: 6px; }
+        .exp-step p { font-size: 0.82em; font-weight: 700; color: var(--burgundy); }
+
+        /* ── BRING BACK ─────────────────────────────── */
+        .bring-back {
+            background: var(--cream);
+            border-radius: 10px;
+            padding: 18px 22px;
+            text-align: center;
+            font-size: 0.88em;
+            color: var(--gray-dark);
+        }
+        .bring-back strong { color: var(--burgundy); }
+
+        /* ── SECTION DIVIDER ────────────────────────── */
+        .divider {
+            height: 1px;
+            background: var(--line);
+            margin: 32px 0;
+        }
+
+        .separator-label {
+            text-align: center;
+            margin: 28px 0;
+            position: relative;
+        }
+        .separator-label::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: var(--line);
+        }
+        .separator-label span {
+            position: relative;
+            background: var(--white);
+            padding: 0 16px;
+            font-size: 0.75em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--gray-mid);
+        }
+    </style>
+</head>
+<body>
+
+<div class="page">
+
+    <!-- HEADER -->
+    <div class="doc-header">
+        <div>
+            <div class="practice">Alignment Psychiatry · Session Assignment</div>
+            <h1>Collaborative Decision-Making<br>Exercise</h1>
+        </div>
+        <div class="badge">Homework</div>
+    </div>
+
+    <div class="page-content">
+
+        <!-- PURPOSE -->
+        <div class="purpose-box avoid-break">
+            <p><strong>The goal is not to determine who is right.</strong> The goal is to practice making decisions as a team — without having to think, process, explain, defend, and decide everything in the same conversation.</p>
+            <p>When an issue affects both of you, instead of immediately debating what should happen, <strong>pause and think separately first.</strong></p>
+            <div class="print-note">⬛ Print two copies of pages 2–3 — one for each of you to complete independently.</div>
+        </div>
+
+        <!-- STEP 1 -->
+        <div class="step-block avoid-break">
+            <div class="step-header">
+                <div class="step-num">1</div>
+                <h2>Define the Shared Goal
+                    <span class="step-sub">Agree on what you're trying to accomplish — not how to accomplish it</span>
+                </h2>
+            </div>
+            <p class="instruction">Before discussing solutions, agree on the question you are trying to answer together. Try to reach agreement on the <em>goal</em>, not the solution.</p>
+
+            <div class="writing-section">
+                <div class="writing-label">
+                    <div class="w-dot"></div>
+                    <h3>Our Shared Goal</h3>
+                    <span class="w-prompt">e.g., "We want to decide what to do next with the house renovation."</span>
+                </div>
+                <div class="write-lines">
+                    <div class="write-line"></div>
+                    <div class="write-line"></div>
+                    <div class="write-line"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="page-break"></div>
+
+        <div class="step-block writing-block">
+            <div class="step-header">
+                <div class="step-num">2</div>
+                <h2>Separate and Think
+                    <span class="step-sub">Each person completes this independently — do not discuss your answers while writing</span>
+                </h2>
+            </div>
+
+            <!-- GOAL -->
+            <div class="writing-section">
+                <div class="writing-label">
+                    <div class="w-dot"></div>
+                    <h3>Goal</h3>
+                    <span class="w-prompt">What do I think we are ultimately trying to accomplish?</span>
+                </div>
+                <div class="write-lines">
+                    <div class="write-line"></div>
+                    <div class="write-line"></div>
+                    <div class="write-line"></div>
+                </div>
+            </div>
+
+            <!-- RESOURCES -->
+            <div class="writing-section">
+                <div class="writing-label">
+                    <div class="w-dot"></div>
+                    <h3>Resources</h3>
+                    <span class="w-prompt">What do we currently have available?</span>
+                </div>
+                <p class="instruction" style="font-size:0.8em; margin-bottom: 8px; margin-left: 18px;">Consider: money · time · people/help · existing plans · skills · available options</p>
+                <div class="write-lines">
+                    <div class="write-line"></div>
+                    <div class="write-line"></div>
+                    <div class="write-line"></div>
+                    <div class="write-line"></div>
+                </div>
+            </div>
+
+            <!-- CONSIDERATIONS -->
+            <div class="writing-section">
+                <div class="writing-label">
+                    <div class="w-dot"></div>
+                    <h3>Considerations</h3>
+                    <span class="w-prompt">What needs to be taken into account before deciding?</span>
+                </div>
+                <ul class="consider-list">
+                    <li>Cost</li>
+                    <li>Stress</li>
+                    <li>Time</li>
+                    <li>Impact on AJ</li>
+                    <li>Convenience</li>
+                    <li>Impact on each other</li>
+                    <li>Safety</li>
+                    <li>Emotional well-being</li>
+                    <li>Previous commitments</li>
+                    <li>Short- &amp; long-term consequences</li>
+                </ul>
+                <p class="instruction" style="font-size: 0.78em; font-style: italic; margin-bottom: 8px;">Don't assume your partner has considered something because it seems obvious. Write it down.</p>
+                <div class="write-lines">
+                    <div class="write-line"></div>
+                    <div class="write-line"></div>
+                    <div class="write-line"></div>
+                    <div class="write-line"></div>
+                    <div class="write-line"></div>
+                </div>
+            </div>
+
+            <!-- NEEDS -->
+            <div class="writing-section">
+                <div class="writing-label">
+                    <div class="w-dot"></div>
+                    <h3>Needs</h3>
+                    <span class="w-prompt">What do I believe we genuinely need from this decision?</span>
+                </div>
+                <div class="write-lines">
+                    <div class="write-line"></div>
+                    <div class="write-line"></div>
+                    <div class="write-line"></div>
+                </div>
+            </div>
+
+            <!-- WANTS -->
+            <div class="writing-section">
+                <div class="writing-label">
+                    <div class="w-dot"></div>
+                    <h3>Wants</h3>
+                    <span class="w-prompt">What would I personally prefer?</span>
+                </div>
+                <p class="instruction" style="font-size: 0.78em; font-style: italic; margin-bottom: 8px;">A want isn't unimportant because it isn't a need. Both people's wants matter — the purpose here is to name them clearly so you can discuss them.</p>
+                <div class="write-lines">
+                    <div class="write-line"></div>
+                    <div class="write-line"></div>
+                    <div class="write-line"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="page-break"></div>
+
+        <div class="step-block avoid-break">
+            <div class="step-header">
+                <div class="step-num">3</div>
+                <h2>Come Back Together
+                    <span class="step-sub">Compare your answers before trying to make the decision</span>
+                </h2>
+            </div>
+
+            <div class="question-group">
+                <div class="question-group-label">Compare first</div>
+                <div class="question-item"><span class="q-mark">→</span><span class="q-text">What did we agree on?</span></div>
+                <div class="question-item"><span class="q-mark">→</span><span class="q-text">What did you think about that I didn't?</span></div>
+                <div class="question-item"><span class="q-mark">→</span><span class="q-text">What did I think about that you didn't?</span></div>
+                <div class="question-item"><span class="q-mark">→</span><span class="q-text">Are there resources or considerations one of us missed?</span></div>
+                <div class="question-item"><span class="q-mark">→</span><span class="q-text">What needs do we share?</span></div>
+                <div class="question-item"><span class="q-mark">→</span><span class="q-text">Where are our wants different?</span></div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="question-group">
+                <div class="question-group-label">Then decide</div>
+                <div class="question-item"><span class="q-mark">→</span><span class="q-text">Now that we can see the whole picture — what makes sense for us to do?</span></div>
+            </div>
+
+            <p class="instruction" style="margin-top: 14px; font-style: italic;">The goal is not for one person to convince the other. The goal is to combine information so that the decision reflects both of you.</p>
+        </div>
+
+        <!-- COMMUNICATION RULE -->
+        <div class="avoid-break">
+            <div class="comm-rule-header">
+                <h2>One Communication Rule</h2>
+                <p>When you disagree with your partner's reasoning — get curious before you respond.</p>
+            </div>
+            <div class="comm-rule-body">
+
+                <div class="example-pair">
+                    <div class="ex-card instead">
+                        <div class="ex-label">Instead of</div>
+                        <p>"We shouldn't stop the basement and start upstairs."</p>
+                    </div>
+                    <div class="ex-card try">
+                        <div class="ex-label">Try</div>
+                        <p>"If we stop the basement and start upstairs, what happens with the unfinished space downstairs?"</p>
+                    </div>
+                </div>
+
+                <div class="example-pair">
+                    <div class="ex-card instead">
+                        <div class="ex-label">Instead of</div>
+                        <p>"You're not considering how this affects AJ."</p>
+                    </div>
+                    <div class="ex-card try">
+                        <div class="ex-label">Try</div>
+                        <p>"How do you think changing contractors or extending the renovation might affect AJ?"</p>
+                    </div>
+                </div>
+
+                <div class="example-pair">
+                    <div class="ex-card instead">
+                        <div class="ex-label">Instead of</div>
+                        <p>"We're going to spend more money doing it that way."</p>
+                    </div>
+                    <div class="ex-card try">
+                        <div class="ex-label">Try</div>
+                        <p>"What do you think the total cost would be if we changed plans now?"</p>
+                    </div>
+                </div>
+
+                <p class="instruction" style="margin-top: 16px; font-style: italic; font-size: 0.82em;">The question should be an actual question — not an accusation with a question mark attached. The purpose is to understand how your partner reached their conclusion and to surface information you may both have missed.</p>
+            </div>
+        </div>
+
+        <!-- PAUSE BOX -->
+        <div class="pause-box avoid-break">
+            <h2>⚠️ Most Importantly</h2>
+            <p>Do not make important collaborative decisions in the middle of an argument.</p>
+            <p>If either of you becomes frustrated, defensive, overwhelmed, or feels the need to prove your point — <strong style="color: var(--cream);">pause.</strong> You do not have to solve the problem right then.</p>
+            <div class="pause-script">
+                "I don't think we're collaborating anymore. Let's pause, think about this separately, and come back to it."
+            </div>
+        </div>
+
+        <!-- EXPERIMENT SUMMARY -->
+        <div class="experiment-box avoid-break">
+            <h2>The Experiment</h2>
+            <div class="experiment-steps">
+                <div class="exp-step">
+                    <span class="es-icon">🧠</span>
+                    <p>Think separately</p>
+                </div>
+                <div class="exp-step">
+                    <span class="es-icon">🤝</span>
+                    <p>Understand together</p>
+                </div>
+                <div class="exp-step">
+                    <span class="es-icon">✅</span>
+                    <p>Decide together</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- BRING BACK -->
+        <div class="bring-back avoid-break">
+            <strong>Bring this back to your next session.</strong> We will review how it went, what felt different, and where the process helped — or didn't.
+        </div>
+
+    </div><!-- end page-content -->
+</div><!-- end page -->
+
+</body>
+</html>
